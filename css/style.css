@@ -161,14 +161,12 @@ a:hover {
 /* div(s) */
 .thetitle {
 	font-family: serif, Times, Georgia, Garamond;
-	font-size: 250%;
+	font-size: 45px;
 	border: 5px solid #151617;
 	border-radius: 15px;
 	background-color: #151617;
 	text-align: center;
-	padding: 10px;
-	padding-left: 25px;
-	padding-right: 25px;
+	padding: 5px;
 	margin-bottom: 6mm;
 	float: center;
 }
