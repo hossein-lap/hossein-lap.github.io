@@ -2,6 +2,31 @@
 	box-sizing: border-box;
 }
 
+.header {
+	padding: 0px;
+	font-size: 20px;
+	font-weight: bold;
+	font-family: sans-serif, Arial, Tahoma, Geneva, Verdana, Helvetica;
+	text-align: center;
+}
+
+.rssfeed {
+	padding-top: 2%;
+	font-size: 15px;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+.footer {
+	text-align: center;
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
 header {
 	font-weight: bold;
 	font-family: sans-serif, Arial, Tahoma, Geneva, Verdana, Helvetica;
@@ -108,11 +133,6 @@ a:hover {
 	background: #fff;
 }
 
-footer {
-	text-align: center;
-	clear: both;
-}
-
 /* For TAGLIST.HTML */
 .taglist {
 	text-align: center;
@@ -145,7 +165,6 @@ footer {
 	border: 5px solid #151617;
 	border-radius: 15px;
 	background-color: #151617;
-	display: inline-block;
 	text-align: center;
 	padding: 10px;
 	padding-left: 25px;
@@ -164,7 +183,6 @@ footer {
 	border: 5px solid #151617;
 	border-radius: 5px;
 	background-color: #151617;
-	display: inline-block;
 	text-align: center;
 	padding: 2px;
 	padding-left: 5px;
@@ -177,7 +195,6 @@ footer {
 	border: 5px solid #151617;
 	border-radius: 5px;
 	background-color: #151617;
-	display: inline-block;
 	text-align: center;
 	padding: 0px;
 	padding-left: 5px;
@@ -196,7 +213,6 @@ footer {
 .theheadings {
 	font-weight: bold;
 	color: #fff;
-	display: inline-block;
 	background-color: #151617;
 	text-align: left;
 	padding: 10px;
@@ -230,6 +246,13 @@ footer {
 } 
 
 .topbar {
+	padding: 0px;
+	font-size: 12px;
+	font-family: sans-serif, Arial, Tahoma, Geneva, Verdana, Helvetica;
+	text-align: left;
+}
+
+.topbaritem {
 	font-weight: normal;
 	text-align: left;
 	padding: 5px;
@@ -245,12 +268,8 @@ footer {
 
 .botbar {
 	font-size: 20px;
-	font-weight: normal;
 	text-align: center;
 	padding: 10px;
-	padding-left: 150px;
-	padding-right: 150px;
-	display: inline-block;
 	background-color: #151617;
 	max-width: 100%;
 	border: 5px solid #151617;
@@ -271,7 +290,6 @@ footer {
 .left {
 	width: 45%;
 	float: left;
-	clear: both;
 }
 .right {
 	width: 45%;
@@ -300,9 +318,8 @@ br {
 
 .serif {
 	font-family: serif, Times, Georgia, Garamond;
-	display: inline-block;
+	/* display: inline-block; */
 }
 .sans {
 	font-family: sans-serif, Arial, Tahoma, Geneva, Verdana, Helvetica;
-	display: inline-block;
 }

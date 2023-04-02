@@ -14,17 +14,26 @@
    <meta charset="utf-8">
 </head>
 <body>
-   <nav>
+   <main>
+   <div class="topbar">
+      <nav>
    
    
-   <div class='topbar'>
+   <div class='topbaritem'>
          <a class="menuactive" href="/">
             <span class=pre></span>
             <span class=menuname>Hossein</span>
          </a>
    </div>
    
-   <div class='topbar'>
+   <div class='topbaritem'>
+         <a href="/index.xml">
+            <span class=pre></span>
+            <span class=menuname>RSS</span>
+         </a>
+   </div>
+   
+   <div class='topbaritem'>
          <a href="/tags">
             <span class=pre></span>
             <span class=menuname>Tags</span>
@@ -32,9 +41,10 @@
    </div>
    
 </nav>
-<main>
+</div>
       <header>
       
+   <div class="header">
          <div class="thetitle">
             Hossein Esmailzadeh
          </div>
@@ -43,10 +53,12 @@
                The first look of my weblog ;)
             </div>
          
+   </div>
       
       </header>
       <article>
 
+   <div class="row">
       <h1 id="who-am-i">Who am I?</h1>
 <div>
 <div class=left>
@@ -110,23 +122,27 @@ or extend.</p>
 
 
    
+   </div>
         
  </article>
-   </main>
 
    <hr>
    
    <footer>
+   <div class="footer">
       <div class='botbar'>
       <a href="https://hossein-lap.github.io/">https://hossein-lap.github.io/</a>
-      <br> <br>
+      <div class="rssfeed">
          <a href="/index.xml">
-            <img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for updates.">
+               Subscribe via RSS for updates.
          </a>
+      </div>
       
 
       </div>
+      </div>
    </footer>
    
+   </main>
 </body>
 </html>
