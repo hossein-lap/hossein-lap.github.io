@@ -279,12 +279,21 @@ footer {
 }
 
 @media screen and (max-width: 800px) {
-  .right, .left {
-    width: 100%;
-    padding: 0;
-  }
+	.right, .left {
+		width: 100%;
+		padding: 0;
+	}
 } 
 
+.lleft {
+	width: 45%;
+	float: left;
+	clear: both;
+}
+.lright {
+	width: 45%;
+	float: right;
+}
 br {
 	clear: both;
 }
