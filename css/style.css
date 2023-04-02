@@ -1,3 +1,7 @@
+* {
+	box-sizing: border-box;
+}
+
 header {
 	font-weight: bold;
 	font-family: sans-serif, Arial, Tahoma, Geneva, Verdana, Helvetica;
@@ -147,6 +151,7 @@ footer {
 	padding-left: 25px;
 	padding-right: 25px;
 	margin-bottom: 6mm;
+	float: center;
 }
 
 .thesubtitle {
@@ -264,14 +269,22 @@ footer {
 }
 
 .left {
-	width: 45% ;
-	float: left ;
-	clear: both ;
+	width: 45%;
+	float: left;
+	clear: both;
 }
 .right {
-	width: 45% ;
-	float: right ;
+	width: 45%;
+	float: right;
 }
+
+@media screen and (max-width: 800px) {
+  .right, .left {
+    width: 100%;
+    padding: 0;
+  }
+} 
+
 br {
 	clear: both;
 }
