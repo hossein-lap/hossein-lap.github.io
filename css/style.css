@@ -34,6 +34,7 @@ header {
 }
 
 h1, h2, h3, h4, h5, h6 {
+	font-family: serif, Times, Georgia, Garamond;
 	margin-bottom: 1%;
 	font-weight: normal;
 	background-color: #151617;
