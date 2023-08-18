@@ -1,13 +1,20 @@
 * {
-	font-size: 26px;
 	box-sizing: border-box;
 }
 
+.header {
+	padding: 0px;
+	font-size: 20px;
+	font-weight: bold;
+	font-family: sans-serif, Arial, Tahoma, Geneva, Verdana, Helvetica;
+	text-align: center;
+}
+
 .rssfeed {
-	padding-top: 0%;
-	font-size: 100%;
-	padding-left: 0%;
-	padding-right: 0%;
+	padding-top: 2%;
+	font-size: 15px;
+	padding-left: 5%;
+	padding-right: 5%;
 }
 
 .footer {
@@ -24,77 +31,77 @@ header {
 	font-weight: bold;
 	font-family: sans-serif, Arial, Tahoma, Geneva, Verdana, Helvetica;
 	text-align: center;
-	padding: 0%;
+}
+
+code {
+	background-color: #555555;
+	border: 5px solid #555555;
+	border-radius: 5px;
 }
 
 h1 {
 	font-size: 200%;
-	color: #ff79c6;
 }
 h2 {
 	font-size: 150%;
-	color: #f1fa8c;
 }
 h3 {
 	font-size: 125%;
-	color: #50fa7b;
 }
 h4 {
 	font-size: 110%;
-	color: #f8f8f2;
 }
 h5 {
 	font-size: 100%;
-	color: #f8f8f2;
 }
 h6 {
 	font-size: 100%;
-	color: #f8f8f2;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-weight: bold;
-	font-family: sans-serif, Arial, Tahoma, Geneva, Verdana, Helvetica;
-	margin-bottom: 0%;
+	font-family: serif, Times, Georgia, Garamond;
+	margin-bottom: 1%;
+	font-weight: normal;
+	background-color: #151617;
+	border: 5px solid #151617;
 	border-radius: 0px;
-	padding-bottom: 0.0%;
-	padding-left: 0%;
-	padding-right: 0%;
+	padding-bottom: 0.5%;
+	padding-left: 1%;
+	padding-right: 1%;
 	display: inline-block;
 	text-align: left;
 }
 
 body {
-	padding: 0px;
-	font-family: serif, Times, Georgia, Garamond;
-	background: #191A21;
-	color: #f8f8f2;
-	margin: 0;
+	padding: 10px;
+	font-family: sans-serif, Arial, Tahoma, Geneva, Verdana, Helvetica;
+	background: #2E3436;
+	color: #cfcfcf;
 }
 
 blockquote, q, abbr, address, cite, bdo {
-	font-family: sans-serif, Arial, Tahoma, Geneva, Verdana, Helvetica;
+	font-family: 1ans-serif, Arial, Tahoma, Geneva, Verdana, Helvetica;
 }
 
 p, ul, li, table {
 	white-space: wrap;
 	font-family: sans-serif, Arial, Tahoma, Geneva, Verdana, Helvetica;
-	color: #f8f8f2;
+	background: #2E3436;
+	color: #cfcfcf;
 }
 
 code {
 	font-family: monospace;
-	font-size: 100%;
+	font-size: 20px;
 	white-space: wrap;
-	color: #aaaaaa;
 }
 
 li {
-	font-size: 100%;
+	font-size: 20px;
 }
 
 li span {
-	font-size: 100%;
+	font-size: 25px;
 }
 
 ul li:before {
@@ -113,12 +120,10 @@ ul li {
 }
 
 main {
-	font-size: 100%;
+	font-size: 20px;
+	max-width: 800px;
 	margin: auto;
-	color: #f8f8f2;
-	-ms-flex: 70%; /* IE10 */
-	flex: 70%;
-	padding: 0px;
+	color: #cfcfcf;
 }
 
 img {
@@ -126,14 +131,13 @@ img {
 }
 
 a {
-	text-decoration: none;
 	font-family: sans-serif, Arial, Tahoma, Geneva, Verdana, Helvetica;
-	color: #8be9fd;
+	color: #fff;
 }
 
 a:hover {
 	color: #000;
-	background: #8be9fd;
+	background: #fff;
 }
 
 /* For TAGLIST.HTML */
@@ -164,33 +168,42 @@ a:hover {
 /* div(s) */
 .thetitle {
 	font-family: serif, Times, Georgia, Garamond;
-	font-size: 250%;
-	border-radius: 0px;
-	color: #bd93f9;
+	font-size: 45px;
+	border: 5px solid #151617;
+	border-radius: 15px;
+	background-color: #151617;
 	text-align: center;
+	padding: 5px;
+	margin-bottom: 6mm;
 	float: center;
-	padding: 1px;
 }
 
 .thesubtitle {
 	font-family: serif, Times, Georgia, Garamond;
-	font-size: 150%;
-	padding: 1px;
+	margin-bottom: 2mm;
 }
 
 .theauthors {
 	font-family: serif, Times, Georgia, Garamond;
+	border: 5px solid #151617;
+	border-radius: 5px;
+	background-color: #151617;
 	text-align: center;
-	padding: 1px;
-	font-style: normal;
-	font-weight: normal;
+	padding: 2px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-top: 5mm;
 }
 
 .thedate {
 	font-family: serif, Times, Georgia, Garamond;
-	padding: 1px;
-	font-style: normal;
-	font-weight: normal;
+	border: 5px solid #151617;
+	border-radius: 5px;
+	background-color: #151617;
+	text-align: center;
+	padding: 0px;
+	padding-left: 5px;
+	padding-right: 5px;
 }
 
 .summary {
@@ -200,28 +213,14 @@ a:hover {
 	text-align: left;
 	font-style: normal;
 	font-weight: normal;
-	padding: 1px;
-}
-
-.header {
-	background-color: #21222c;
-	padding: 1px;
-}
-
-.subheader {
-	padding: 1px;
-	font-size: 100%;
-	font-weight: bold;
-	font-family: sans-serif, Arial, Tahoma, Geneva, Verdana, Helvetica;
-	text-align: center;
 }
 
 .theheadings {
 	font-weight: bold;
 	color: #fff;
-	background-color: #21222c;
+	background-color: #151617;
 	text-align: left;
-	padding: 0px;
+	padding: 10px;
 }
 
 .collapse {
@@ -241,21 +240,19 @@ a:hover {
 	text-align: left;
 	text-indent: 0%;
 	font-family: sans-serif, Arial, Tahoma, Geneva, Verdana, Helvetica;
-	padding: 2%;
 } 
 
 .sitemap {
 	font-weight: normal;
 	text-align: left;
-	padding: 1%;
-	border: 3px solid #21222c;
+	padding: 0.1%;
+	border: 3px solid #151617;
 	border-radius: 5px;
-	color: #ffb86c;
 } 
 
 .topbar {
 	padding: 0px;
-	font-size: 100%;
+	font-size: 12px;
 	font-family: sans-serif, Arial, Tahoma, Geneva, Verdana, Helvetica;
 	text-align: left;
 }
@@ -265,22 +262,22 @@ a:hover {
 	text-align: left;
 	padding: 5px;
 	display: inline-block;
-	background-color: #21222c;
+	background-color: #151617;
 	clear: both;
 	margin-bottom: 5mm;
 	margin-right: 1mm;
 	font-size: 150%;
-	border: 2px solid #21222c;
+	border: 2px solid #151617;
 	border-radius: 5px;
 }
 
 .botbar {
-	font-size: 100%;
+	font-size: 20px;
 	text-align: center;
-	padding: 0px;
-	background-color: #21222c;
-	border: 5px solid #21222c;
+	padding: 10px;
+	background-color: #151617;
 	max-width: 100%;
+	border: 5px solid #151617;
 	border-radius: 5px;
 }
 
@@ -304,41 +301,12 @@ a:hover {
 	float: right;
 }
 
-/* Column container */
-main {  
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-  padding: 0px;
-}
-
-/* Sidebar/left column */
-.mainside {
-  -ms-flex: 25%; /* IE10 */
-  flex: 25%;
-  background-color: #21222c;
-  padding: 00px;
-}
-
-/* Main column */
-.mainmain {   
-  -ms-flex: 75%; /* IE10 */
-  flex: 75%;
-  padding: 00px;
-  padding-left: 0px;
-}
-
-.mainpad {
-  padding: 20px;
-}
-
-@media screen and (max-width: 700px) {
-  .mainrow {   
-    flex-direction: column;
-  }
-}
-
+@media screen and (max-width: 800px) {
+	.right, .left {
+		width: 100%;
+		padding: 0;
+	}
+} 
 
 .lleft {
 	width: 45%;
