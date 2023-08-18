@@ -255,10 +255,13 @@ a:hover {
 } 
 
 .topbar {
+	background-color: #21222c;
 	padding: 0px;
 	font-size: 100%;
 	font-family: sans-serif, Arial, Tahoma, Geneva, Verdana, Helvetica;
 	text-align: left;
+	-ms-flex: 100%; /* IE10 */
+	flex: 100%;
 }
 
 .topbaritem {
