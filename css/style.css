@@ -33,22 +33,22 @@ h1 {
 }
 h2 {
 	font-size: 150%;
-	color: #f1fa8c;
+	color: #50fa7b;
 }
 h3 {
 	font-size: 125%;
-	color: #50fa7b;
+	color: #f1fa8c;
 }
 h4 {
 	font-size: 110%;
-	color: #f8f8f2;
+	color: #ffb86c;
 }
 h5 {
 	font-size: 100%;
 	color: #f8f8f2;
 }
 h6 {
-	font-size: 100%;
+	font-size: 110%;
 	color: #f8f8f2;
 }
 
@@ -144,7 +144,8 @@ a:hover {
 
 /* For NEXTPREV.HTML */
 #nextprev:hover {
-	/* The container for both the previous and next articles. */
+	color: #000;
+	background: #8be9fd;
 }
 #prevart {
 	float: left;
@@ -205,7 +206,7 @@ a:hover {
 
 .header {
 	background-color: #21222c;
-	padding: 1px;
+	padding-bottom: 50px;
 }
 
 .subheader {
@@ -263,15 +264,15 @@ a:hover {
 .topbaritem {
 	font-weight: normal;
 	text-align: left;
-	padding: 5px;
+	padding: 10px;
 	display: inline-block;
 	background-color: #21222c;
 	clear: both;
-	margin-bottom: 5mm;
-	margin-right: 1mm;
+	margin-bottom: 0mm;
+	margin-right: 0mm;
 	font-size: 150%;
-	border: 2px solid #21222c;
-	border-radius: 5px;
+	border: 0px solid #21222c;
+	border-radius: 0px;
 }
 
 .botbar {
@@ -295,48 +296,48 @@ a:hover {
 	border-radius: 15px;
 }
 
-.left {
-	width: 45%;
-	float: left;
-}
-.right {
-	width: 45%;
-	float: right;
-}
-
 /* Column container */
 main {  
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-  padding: 0px;
+	display: -ms-flexbox; /* IE10 */
+	display: flex;
+	-ms-flex-wrap: wrap; /* IE10 */
+	flex-wrap: wrap;
+	padding: 0px;
 }
 
 /* Sidebar/left column */
 .mainside {
-  -ms-flex: 25%; /* IE10 */
-  flex: 25%;
-  background-color: #21222c;
-  padding: 00px;
+	-ms-flex: 25%; /* IE10 */
+	flex: 25%;
+	background-color: #21222c;
+	padding: 00px;
 }
 
 /* Main column */
 .mainmain {   
-  -ms-flex: 75%; /* IE10 */
-  flex: 75%;
-  padding: 00px;
-  padding-left: 0px;
+	-ms-flex: 75%; /* IE10 */
+	flex: 75%;
+	padding: 00px;
+	padding-left: 0px;
 }
 
 .mainpad {
-  padding: 20px;
+	padding: 20px;
 }
 
 @media screen and (max-width: 700px) {
-  .mainrow {   
-    flex-direction: column;
-  }
+	.mainrow {   
+		flex-direction: column;
+	}
+}
+
+.picleft {
+	width: 65%;
+	float: left;
+}
+.picright {
+	width: 30%;
+	float: right;
 }
 
 
@@ -349,6 +350,7 @@ main {
 	width: 45%;
 	float: right;
 }
+
 br {
 	clear: both;
 }
