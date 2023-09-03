@@ -2,36 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://hossein-lap.github.io/languages/lua/</loc>
-    <lastmod>2023-08-18T05:17:00+03:30</lastmod>
+    <loc>https://hossein-lap.github.io/</loc>
+    <lastmod>2023-09-04T00:51:13+03:30</lastmod>
   </url><url>
-    <loc>https://hossein-lap.github.io/languages/</loc>
-    <lastmod>2023-08-18T05:16:56+03:30</lastmod>
+    <loc>https://hossein-lap.github.io/posts/new/</loc>
+    <lastmod>2023-09-04T00:51:13+03:30</lastmod>
   </url><url>
-    <loc>https://hossein-lap.github.io/tags/programming/</loc>
-    <lastmod>2023-08-18T05:16:56+03:30</lastmod>
+    <loc>https://hossein-lap.github.io/tags/post/</loc>
+    <lastmod>2023-09-04T00:51:13+03:30</lastmod>
+  </url><url>
+    <loc>https://hossein-lap.github.io/posts/</loc>
+    <lastmod>2023-09-04T00:51:13+03:30</lastmod>
   </url><url>
     <loc>https://hossein-lap.github.io/tags/</loc>
-    <lastmod>2023-08-18T05:16:56+03:30</lastmod>
+    <lastmod>2023-09-04T00:51:13+03:30</lastmod>
   </url><url>
-    <loc>https://hossein-lap.github.io/tools/groff/</loc>
+    <loc>https://hossein-lap.github.io/tags/template/</loc>
+    <lastmod>2023-09-04T00:51:13+03:30</lastmod>
+  </url><url>
+    <loc>https://hossein-lap.github.io/posts/programming/script/lua/page/</loc>
+    <lastmod>2023-08-18T05:17:00+03:30</lastmod>
+  </url><url>
+    <loc>https://hossein-lap.github.io/posts/programming/compile/go/page/</loc>
     <lastmod>2023-08-18T05:16:45+03:30</lastmod>
   </url><url>
     <loc>https://hossein-lap.github.io/tags/markdown/</loc>
     <lastmod>2023-08-18T03:24:55+03:30</lastmod>
   </url><url>
-    <loc>https://hossein-lap.github.io/tools/pandoc/</loc>
+    <loc>https://hossein-lap.github.io/posts/tools/pandoc/page/</loc>
     <lastmod>2023-08-18T03:24:55+03:30</lastmod>
   </url><url>
     <loc>https://hossein-lap.github.io/tags/writing/</loc>
     <lastmod>2023-08-18T03:24:55+03:30</lastmod>
   </url><url>
-    <loc>https://hossein-lap.github.io/tools/</loc>
-    <lastmod>2023-08-18T03:24:49+04:30</lastmod>
-  </url><url>
-    <loc>https://hossein-lap.github.io/</loc>
+    <loc>https://hossein-lap.github.io/about/</loc>
     <lastmod>2023-03-29T22:14:09+03:30</lastmod>
   </url><url>
+    <loc>https://hossein-lap.github.io/archive/</loc>
+  </url><url>
     <loc>https://hossein-lap.github.io/categories/</loc>
+  </url><url>
+    <loc>https://hossein-lap.github.io/search/</loc>
   </url>
 </urlset>

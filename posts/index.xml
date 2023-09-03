@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Hossein Smail</title>
-    <link>https://hossein-lap.github.io/</link>
-    <description>Recent content on Hossein Smail</description>
+    <title>Posts on Hossein Smail</title>
+    <link>https://hossein-lap.github.io/posts/</link>
+    <description>Recent content in Posts on Hossein Smail</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 04 Sep 2023 00:51:13 +0330</lastBuildDate><atom:link href="https://hossein-lap.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Sep 2023 00:51:13 +0330</lastBuildDate><atom:link href="https://hossein-lap.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>New</title>
       <link>https://hossein-lap.github.io/posts/new/</link>
@@ -44,19 +44,6 @@
 vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida
 mauris.</description>
     </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://hossein-lap.github.io/about/</link>
-      <pubDate>Wed, 29 Mar 2023 22:14:09 +0330</pubDate>
-      
-      <guid>https://hossein-lap.github.io/about/</guid>
-      <description>For a very long time I&amp;#39;ve wanted to create a weblog to write and
-share some stuffs in it. There we go :D
-</description>
-    </item>
-    
-    
     
   </channel>
 </rss>

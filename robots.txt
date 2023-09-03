@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://hossein-lap.github.io/sitemap.xml
