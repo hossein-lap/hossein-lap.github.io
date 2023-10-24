@@ -2,50 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>localhost/blog/</loc>
+    <loc>hossein-lap.github.io/blog/</loc>
     <lastmod>2023-09-04T00:51:13+03:30</lastmod>
   </url><url>
-    <loc>localhost/blog/new/</loc>
+    <loc>hossein-lap.github.io/blog/new/</loc>
     <lastmod>2023-09-04T00:51:13+03:30</lastmod>
   </url><url>
-    <loc>localhost/tags/post/</loc>
+    <loc>hossein-lap.github.io/tags/post/</loc>
     <lastmod>2023-09-04T00:51:13+03:30</lastmod>
   </url><url>
-    <loc>localhost/tags/</loc>
+    <loc>hossein-lap.github.io/tags/</loc>
     <lastmod>2023-09-04T00:51:13+03:30</lastmod>
   </url><url>
-    <loc>localhost/tags/template/</loc>
+    <loc>hossein-lap.github.io/tags/template/</loc>
     <lastmod>2023-09-04T00:51:13+03:30</lastmod>
   </url><url>
-    <loc>localhost/</loc>
-    <lastmod>2023-09-04T00:51:13+03:30</lastmod>
-  </url><url>
-    <loc>localhost/blog/programming/script/lua/page/</loc>
+    <loc>hossein-lap.github.io/blog/programming/script/lua/page/</loc>
     <lastmod>2023-08-18T05:17:00+03:30</lastmod>
   </url><url>
-    <loc>localhost/tags/nil/</loc>
+    <loc>hossein-lap.github.io/tags/nil/</loc>
     <lastmod>2023-08-18T05:17:00+03:30</lastmod>
   </url><url>
-    <loc>localhost/tags/null/</loc>
+    <loc>hossein-lap.github.io/tags/null/</loc>
     <lastmod>2023-08-18T05:17:00+03:30</lastmod>
   </url><url>
-    <loc>localhost/blog/programming/compile/go/page/</loc>
+    <loc>hossein-lap.github.io/blog/programming/compile/go/page/</loc>
     <lastmod>2023-08-18T05:16:45+03:30</lastmod>
   </url><url>
-    <loc>localhost/tags/markdown/</loc>
+    <loc>hossein-lap.github.io/tags/markdown/</loc>
     <lastmod>2023-08-18T03:24:55+03:30</lastmod>
   </url><url>
-    <loc>localhost/blog/tools/pandoc/page/</loc>
+    <loc>hossein-lap.github.io/blog/tools/pandoc/page/</loc>
     <lastmod>2023-08-18T03:24:55+03:30</lastmod>
   </url><url>
-    <loc>localhost/tags/writing/</loc>
+    <loc>hossein-lap.github.io/tags/writing/</loc>
     <lastmod>2023-08-18T03:24:55+03:30</lastmod>
   </url><url>
-    <loc>localhost/about/</loc>
+    <loc>hossein-lap.github.io/about/</loc>
     <lastmod>2023-03-29T22:14:09+03:30</lastmod>
   </url><url>
-    <loc>localhost/categories/</loc>
+    <loc>hossein-lap.github.io/</loc>
+    <lastmod>2022-09-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>localhost/about/test/</loc>
+    <loc>hossein-lap.github.io/categories/</loc>
+  </url><url>
+    <loc>hossein-lap.github.io/about/test/</loc>
   </url>
 </urlset>
