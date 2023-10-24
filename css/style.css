@@ -64,3 +64,21 @@ footer {
 #nextart,#prevart {
 	max-width: 33% ;
 }
+
+.left {
+	max-width: 45%;
+	float: left;
+	clear: both;
+}
+.right {
+	max-width: 45%;
+	float: right;
+}
+
+br {
+	clear: both;
+}
+
+figure {
+	padding: 4px;
+}
