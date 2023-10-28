@@ -1,0 +1,89 @@
+body {
+	background-color: #191A21;
+	color: #f8f8f2;
+}
+
+p, ul, li, table {
+	color: #f8f8f2;
+}
+
+main {
+	color: #f8f8f2;
+}
+
+a {
+	color: #8be9fd;
+}
+
+code {
+	color: #cccccc;
+}
+
+header h1 {
+	color: #ff79c6;
+}
+h1 {
+	color: #ffb86c;
+}
+h2 {
+	color: #f1fa8c;
+}
+h3 {
+	color: #50fa7b;
+}
+h4 {
+	color: #f8f8f2;
+}
+h5 {
+	color: #f8f8f2;
+}
+h6 {
+	color: #f8f8f2;
+}
+
+#nextart:hover,#prevart:hover,a:hover {
+	color: #000;
+	background-color: #8be9fd;
+}
+
+.thetitle {
+	color: #bd93f9;
+}
+
+.theheadings {
+	color: #cccccc;
+	background-color: #21222c;
+}
+
+.header {
+	background-color: #21222c;
+}
+
+.topbar {
+	background-color: #191A21;
+}
+
+.topbaritem {
+	background-color: #191A21;
+	border: 0px solid #21222c;
+}
+
+.topbaritem:hover {
+	background-color: #21222c;
+	border: 0px solid #21222c;
+}
+
+.highlight {
+	color: #f8f8f2;
+	background: #282828;
+}
+
+
+.botbar {
+	background-color: #21222c;
+	border: 20px solid #21222c;
+}
+
+.mainside {
+	background-color: #21222c;
+}

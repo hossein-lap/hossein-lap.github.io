@@ -1,35 +1,35 @@
-body {
-	background: #191A21;
-	color: #f8f8f2;
-}
-
-a {
-	color: #8be9fd;
-}
-
-#nextart:hover,#prevart:hover,a:hover {
-	color: #000;
-	background: #8be9fd;
-}
-
-header h1 {
-	color: #ff79c6;
-}
-h1 {
-	color: #ffb86c;
-}
-h2 {
-	color: #f1fa8c;
-}
-h3 {
-	color: #50fa7b;
-}
-h4 {
-	color: #f8f8f2;
-}
-h5 {
-	color: #f8f8f2;
-}
-h6 {
-	color: #f8f8f2;
-}
+.topbaritem { background-color: #191A21; }
+.topbar { background-color: #191A21; }
+body { background-color: #191A21; }
+.theheadings { background-color: #191A21; }
+p { color: #f8f8f2; }
+body { color: #f8f8f2; }
+ul { color: #f8f8f2; }
+li { color: #f8f8f2; }
+table { color: #f8f8f2; }
+h5 { color: #f8f8f2; }
+h6 { color: #f8f8f2; }
+.highlight { color: #f8f8f2; }
+.theheadings { color: #f8f8f2; }
+a { color: #8be9fd; }
+.topbaritem:hover { background-color: #21222c; }
+.header { background-color: #21222c; }
+.botbar { background-color: #21222c; }
+code { color: #cccccc; }
+.theheadings { color: #cccccc; }
+.topbaritem:hover { border: 0px solid #21222c; }
+.topbaritem { border: 0px solid #21222c; }
+#nextart:hover { color: #000; }
+#prevart:hover { color: #000; }
+a:hover { color: #000; }
+#nextart:hover { background-color: #8be9fd; }
+#prevart:hover { background-color: #8be9fd; }
+a:hover { background-color: #8be9fd; }
+.thetitle { color: #bd93f9; }
+.botbar { border: 20px solid #21222c; }
+.thetitle { background-color: #21222c; }
+h1 { color: #ff79c6; }
+h2 { color: #ffb86c; }
+h3 { color: #f1fa8c; }
+h4 { color: #50fa7b; }
+h5 { color: nil; }
