@@ -2,22 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/blog/</loc>
-    <lastmod>2023-09-04T00:51:13+03:30</lastmod>
+    <loc>/post/linux/</loc>
+    <lastmod>2023-08-18T05:17:00+03:30</lastmod>
   </url><url>
-    <loc>/blog/new/</loc>
-    <lastmod>2023-09-04T00:51:13+03:30</lastmod>
+    <loc>/post/linux/lua/</loc>
+    <lastmod>2023-08-18T05:17:00+03:30</lastmod>
   </url><url>
-    <loc>/tags/post/</loc>
-    <lastmod>2023-09-04T00:51:13+03:30</lastmod>
+    <loc>/post/programming/lua/</loc>
+    <lastmod>2023-08-18T05:17:00+03:30</lastmod>
   </url><url>
-    <loc>/tags/</loc>
-    <lastmod>2023-09-04T00:51:13+03:30</lastmod>
-  </url><url>
-    <loc>/tags/template/</loc>
-    <lastmod>2023-09-04T00:51:13+03:30</lastmod>
-  </url><url>
-    <loc>/blog/programming/script/lua/page/</loc>
+    <loc>/post/writing/lua/</loc>
     <lastmod>2023-08-18T05:17:00+03:30</lastmod>
   </url><url>
     <loc>/tags/nil/</loc>
@@ -26,19 +20,40 @@
     <loc>/tags/null/</loc>
     <lastmod>2023-08-18T05:17:00+03:30</lastmod>
   </url><url>
-    <loc>/blog/programming/compile/go/page/</loc>
+    <loc>/post/</loc>
+    <lastmod>2023-08-18T05:17:00+03:30</lastmod>
+  </url><url>
+    <loc>/post/programming/</loc>
+    <lastmod>2023-08-18T05:17:00+03:30</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2023-08-18T05:17:00+03:30</lastmod>
+  </url><url>
+    <loc>/post/writing/</loc>
+    <lastmod>2023-08-18T05:17:00+03:30</lastmod>
+  </url><url>
+    <loc>/post/linux/go/</loc>
+    <lastmod>2023-08-18T05:16:45+03:30</lastmod>
+  </url><url>
+    <loc>/post/programming/go/</loc>
+    <lastmod>2023-08-18T05:16:45+03:30</lastmod>
+  </url><url>
+    <loc>/post/writing/go/</loc>
     <lastmod>2023-08-18T05:16:45+03:30</lastmod>
   </url><url>
     <loc>/tags/markdown/</loc>
     <lastmod>2023-08-18T03:24:55+03:30</lastmod>
   </url><url>
-    <loc>/blog/tools/pandoc/page/</loc>
+    <loc>/post/tools/pandoc/</loc>
+    <lastmod>2023-08-18T03:24:55+03:30</lastmod>
+  </url><url>
+    <loc>/post/tools/</loc>
     <lastmod>2023-08-18T03:24:55+03:30</lastmod>
   </url><url>
     <loc>/tags/writing/</loc>
     <lastmod>2023-08-18T03:24:55+03:30</lastmod>
   </url><url>
-    <loc>/about/</loc>
+    <loc>/resume/</loc>
     <lastmod>2023-03-29T22:14:09+03:30</lastmod>
   </url><url>
     <loc>/</loc>
@@ -46,6 +61,6 @@
   </url><url>
     <loc>/categories/</loc>
   </url><url>
-    <loc>/about/test/</loc>
+    <loc>/resume/test/</loc>
   </url>
 </urlset>
