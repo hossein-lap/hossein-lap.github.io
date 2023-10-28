@@ -389,7 +389,7 @@ br {
 .right {
 	width: 40%;
 	float: left;
-	text-align: right;
+	/* text-align: right; */
 }
 
 @media only screen and (max-width: 620px) {
