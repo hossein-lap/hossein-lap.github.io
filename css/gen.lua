@@ -59,7 +59,7 @@ local elements = {
 			'table',
 			'h5',
 			'h6',
-			'.highlight',
+			-- '.highlight',
 			'.theheadings',
 		},
 		bg = {
@@ -74,7 +74,7 @@ local elements = {
 			'.botbar',
 		},
 		cf = {
-			'code',
+			-- 'code',
 			'.theheadings',
 		},
 		border = {

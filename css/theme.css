@@ -9,13 +9,11 @@ li { color: #f8f8f2; }
 table { color: #f8f8f2; }
 h5 { color: #f8f8f2; }
 h6 { color: #f8f8f2; }
-.highlight { color: #f8f8f2; }
 .theheadings { color: #f8f8f2; }
 a { color: #8be9fd; }
 .topbaritem:hover { background-color: #21222c; }
 .header { background-color: #21222c; }
 .botbar { background-color: #21222c; }
-code { color: #cccccc; }
 .theheadings { color: #cccccc; }
 .topbaritem:hover { border: 0px solid #21222c; }
 .topbaritem { border: 0px solid #21222c; }

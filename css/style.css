@@ -368,9 +368,9 @@ br {
 	.left, .right {
 		width: 100%;
 	}
-	.right {
-		text-align: center;
-	}
+	/* .right { */
+	/* 	text-align: center; */
+	/* } */
 }
 
 /* * { */
