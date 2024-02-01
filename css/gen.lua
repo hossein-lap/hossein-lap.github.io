@@ -2,6 +2,23 @@
 
 -- palette {{{
 local themes = {
+-- crunchbang {{{
+	crunchbang = {
+		bg = '#26292A',
+		cb = '#181A1B',
+		br = '#151617',
+		-- br = '#282a36',
+		fg = '#bbbbbb',
+		hh = '#ffffff',
+		cf = '#cccccc',
+		h1 = '#ffffff',
+		h2 = '#ffffff',
+		h3 = '#ffffff',
+		h4 = '#ffffff',
+		h5 = '#ffffff',
+		ln = '#ffffff',
+	},
+-- }}}
 -- dracula {{{
 	dracula = {
 		bg = '#191A21',
@@ -9,11 +26,13 @@ local themes = {
 		cb = '#21222c',
 		cf = '#cccccc',
 		hh = '#bd93f9',
-		h1 = '#ff79c6',
-		h2 = '#ffb86c',
+		h1 = '#ffb86c',
+		h2 = '#ff79c6',
 		h3 = '#f1fa8c',
 		h4 = '#50fa7b',
+		h5 = '#bd93f9',
 		ln = '#8be9fd',
+		br = '#282a36',
 	},
 -- }}}
 -- ayu dark {{{
@@ -47,7 +66,7 @@ local themes = {
 }
 -- }}}
 
-local color = themes.dracula
+local color = themes.crunchbang -- all but `dracula` are missing `br` color
 
 local elements = {
 	spec = {
@@ -76,6 +95,9 @@ local elements = {
 		cf = {
 			-- 'code',
 			'.theheadings',
+		},
+		code = {
+			'.highlight',
 		},
 		border = {
 			'.topbaritem:hover',
@@ -114,12 +136,11 @@ write_color(file, elements.spec.bg, color.bg, 'background-color:')
 write_color(file, elements.spec.fg, color.fg, 'color:')
 write_color(file, elements.spec.ln, color.ln, 'color:')
 write_color(file, elements.spec.cb, color.cb, 'background-color:')
+-- write_color(file, elements.spec.code, color.br, 'background-color:')
 write_color(file, elements.spec.cf, color.cf, 'color:')
-write_color(file, elements.spec.border, color.cb, 'border: 0px solid')
 write_color(file, elements.spec.lnhover, '#000', 'color:')
 write_color(file, elements.spec.lnhover, color.ln, 'background-color:')
 file:write(string.format('.thetitle { color: %s; }\n', color.hh))
-file:write(string.format('.botbar { border: 20px solid %s; }\n', color.cb))
 file:write(string.format('.thetitle { background-color: %s; }\n', color.cb))
 for _, value in pairs(elements.auto) do
 	file:write(string.format('%s { color: %s; }\n', value, color[value]))
