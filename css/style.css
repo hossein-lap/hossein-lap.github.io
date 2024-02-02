@@ -1,5 +1,28 @@
 /* ************************************************************************** */
 
+@font-face {
+	font-family: "ubuntu";
+	src: url("/fonts/Ubuntu-R.ttf") format("truetype"),
+		url("/fonts/Ubuntu-B.ttf") format("truetype"),
+		url("/fonts/Ubuntu-I.ttf") format("truetype"),
+		url("/fonts/Ubuntu-BI.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "freeserif";
+	src: url("/fonts/FreeSerif.ttf") format("truetype"),
+		url("/fonts/FreeSerifBold.ttf") format("truetype"),
+		url("/fonts/FreeSerifItalic.ttf") format("truetype"),
+		url("/fonts/FreeSerifBoldItalic.ttf") format("truetype");
+}
+
+/* @font-face { */
+/* 	font-family: 'Ubuntu'; */
+/* 	font-style: normal; */
+/* 	font-weight: 400; */
+/* 	src: local('Ubuntu'), url(https://fonts.googleapis.com/css?family=Ubuntu:regular,bold,italic&subset=Latin) format('woff'); */
+/* } */
+
 * {
 	font-size: 26px;
 	box-sizing: border-box;
