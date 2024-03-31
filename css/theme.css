@@ -23,8 +23,10 @@ a:hover { color: #000; }
 a:hover { background-color: #ffffff; }
 .thetitle { color: #ffffff; }
 .thetitle { background-color: #181A1B; }
+blockquote { border-left: 3px solid #cccccc; }
 h1 { color: #ffffff; }
 h2 { color: #ffffff; }
 h3 { color: #ffffff; }
 h4 { color: #ffffff; }
 h5 { color: #ffffff; }
+.highlight { background-color: #282A36; }

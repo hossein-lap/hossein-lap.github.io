@@ -25,6 +25,7 @@ local themes = {
 		fg = '#f8f8f2',
 		cb = '#21222c',
 		cf = '#cccccc',
+		br = '#282A36',
 		hh = '#bd93f9',
 		h1 = '#ffb86c',
 		h2 = '#ff79c6',
@@ -32,10 +33,9 @@ local themes = {
 		h4 = '#50fa7b',
 		h5 = '#bd93f9',
 		ln = '#8be9fd',
-		br = '#282a36',
 	},
 -- }}}
--- ayu dark {{{
+-- ayu {{{
 	ayu = {
 		bg = '#101521',
 		fg = '#CBCCC6',
@@ -78,10 +78,10 @@ local elements = {
 			'table',
 			'h5',
 			'h6',
-			-- '.highlight',
 			'.theheadings',
 		},
 		bg = {
+			-- '.highlight',
 			'.topbaritem',
 			'.topbar',
 			'body',
@@ -136,13 +136,16 @@ write_color(file, elements.spec.bg, color.bg, 'background-color:')
 write_color(file, elements.spec.fg, color.fg, 'color:')
 write_color(file, elements.spec.ln, color.ln, 'color:')
 write_color(file, elements.spec.cb, color.cb, 'background-color:')
--- write_color(file, elements.spec.code, color.br, 'background-color:')
 write_color(file, elements.spec.cf, color.cf, 'color:')
 write_color(file, elements.spec.lnhover, '#000', 'color:')
 write_color(file, elements.spec.lnhover, color.ln, 'background-color:')
 file:write(string.format('.thetitle { color: %s; }\n', color.hh))
 file:write(string.format('.thetitle { background-color: %s; }\n', color.cb))
+file:write(string.format('blockquote { border-left: 3px solid %s; }\n', color.cf))
 for _, value in pairs(elements.auto) do
 	file:write(string.format('%s { color: %s; }\n', value, color[value]))
 end
+write_color(file, elements.spec.code, "#282A36", 'background-color:')
 file:close()
+
+os.execute(string.format("hugo gen chromastyles --style=%s > syntax.css", "dracula"))

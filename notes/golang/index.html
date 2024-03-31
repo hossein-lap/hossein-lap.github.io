@@ -1,0 +1,2213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Golang | Hossein Esmail</title>
+    <link rel="canonical" href="/">
+    <link rel='alternate' type='application/rss+xml' title="Hossein Esmail RSS" href='/index.xml'>
+    <link rel='stylesheet' type='text/css' href='/css/style.css'>
+    <link rel='stylesheet' type='text/css' href='/css/syntax.css'>
+    <link rel='stylesheet' type='text/css' href='/css/theme.css'>
+    <link rel="icon" href="/favicon">
+    <meta name="description" content="Syntax  A Go file consists of the following parts:
+ Package declaration Import packages Functions Statements and expressions  Example:
+package main import &#34;fmt&#34; func main() { fmt.Println(&#34;Hello World!&#34;) }  Comments  Go supports single-line or multi-line comments.
+Single-line Comments // This is a comment Multi-line Comments /* * This is a Multi-line comment */  Variables  Types  int - stores integers (whole numbers), such as 123 or -123 float32 - stores floating point numbers, with decimals, such as 19.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
+    <meta charset="utf-8">
+  </head>
+  <body>
+
+    <main>
+      <div class="topbar">
+        
+        <nav>
+   
+   
+   <div class='topbaritem'>
+         <a href="/">
+            <span class=pre></span>
+            <span class=menuname>Hos</span>
+         </a>
+   </div>
+   
+   <div class='topbaritem'>
+         <a href="/linux">
+            <span class=pre></span>
+            <span class=menuname>Linux</span>
+         </a>
+   </div>
+   
+   <div class='topbaritem'>
+         <a href="/resume">
+            <span class=pre></span>
+            <span class=menuname>Resume</span>
+         </a>
+   </div>
+   
+   <div class='topbaritem'>
+         <a href="/index.xml">
+            <span class=pre></span>
+            <span class=menuname>RSS</span>
+         </a>
+   </div>
+   
+   <div class='topbaritem'>
+         <a href="/tags">
+            <span class=pre></span>
+            <span class=menuname>Tags</span>
+         </a>
+   </div>
+   
+</nav>
+
+        </div>
+
+    
+      
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  <div class="mainmain">
+      
+
+      <header>
+        
+        <div class="header">
+          <div class="thetitle">
+            Golang
+          </div>
+          
+
+          
+
+          
+            
+            <div class="thedate">
+              February 16, 2024
+            </div>
+            
+          
+        </div>
+
+        
+        
+          <ol>
+            <details>
+              <summary>
+                  <b>Table Of Contents</b>
+              </summary>
+              <div class="tableofcontents">
+              <hr>
+                <nav id="TableOfContents">
+  <ol>
+    <li><a href="#syntax-----">Syntax <!--{{{--></a></li>
+    <li><a href="#comments-----">Comments <!--{{{--></a>
+      <ol>
+        <li><a href="#single-line-comments">Single-line Comments</a></li>
+        <li><a href="#multi-line-comments">Multi-line Comments</a></li>
+      </ol>
+    </li>
+    <li><a href="#variables-----">Variables <!--{{{--></a>
+      <ol>
+        <li><a href="#types">Types</a></li>
+        <li><a href="#declaring-variables">Declaring variables</a></li>
+        <li><a href="#multiple-variable-declaration">Multiple Variable Declaration</a></li>
+        <li><a href="#variable-naming-rules">Variable Naming Rules</a></li>
+      </ol>
+    </li>
+    <li><a href="#constants-----">Constants <!--{{{--></a>
+      <ol>
+        <li><a href="#constant-rules">Constant Rules</a></li>
+        <li><a href="#constant-types">Constant Types</a></li>
+        <li><a href="#multiple-constants-declaration">Multiple Constants Declaration</a></li>
+      </ol>
+    </li>
+    <li><a href="#output-----">Output <!--{{{--></a>
+      <ol>
+        <li><a href="#output-functions-----">Output Functions <!--{{{--></a></li>
+        <li><a href="#formatting-verbs-----">Formatting Verbs <!--{{{--></a></li>
+      </ol>
+    </li>
+    <li><a href="#data-types-----">Data Types <!--{{{--></a>
+      <ol>
+        <li><a href="#basics">Basics</a></li>
+        <li><a href="#boolean">Boolean</a></li>
+        <li><a href="#integer">Integer</a></li>
+        <li><a href="#float">Float</a></li>
+        <li><a href="#string">String</a></li>
+      </ol>
+    </li>
+    <li><a href="#arrays-----">Arrays <!--{{{--></a>
+      <ol>
+        <li><a href="#declare-an-array">Declare an Array</a></li>
+        <li><a href="#access-elements-of-an-array">Access Elements of an Array</a></li>
+        <li><a href="#change-elements-of-an-array">Change Elements of an Array</a></li>
+        <li><a href="#array-initialization">Array Initialization</a></li>
+        <li><a href="#initialize-only-specific-elements">Initialize Only Specific Elements</a></li>
+        <li><a href="#find-the-length-of-an-array">Find the Length of an Array</a></li>
+      </ol>
+    </li>
+    <li><a href="#slices-----">Slices <!--{{{--></a>
+      <ol>
+        <li><a href="#create-a-slice">Create a Slice</a></li>
+        <li><a href="#access-change-append-and-copy-slices">Access, Change, Append and Copy Slices</a></li>
+      </ol>
+    </li>
+    <li><a href="#operators-----">Operators <!--{{{--></a>
+      <ol>
+        <li><a href="#arithmetic-operators">Arithmetic Operators</a></li>
+        <li><a href="#assignment-operators">Assignment Operators</a></li>
+        <li><a href="#comparison-operators">Comparison Operators</a></li>
+        <li><a href="#logical-operators">Logical Operators</a></li>
+        <li><a href="#bitwise-operators">Bitwise Operators</a></li>
+      </ol>
+    </li>
+    <li><a href="#conditions-----">Conditions <!--{{{--></a>
+      <ol>
+        <li><a href="#if-statement">if Statement</a></li>
+        <li><a href="#if-else-statement">if else Statement</a></li>
+        <li><a href="#else-if-statement">else if Statement</a></li>
+        <li><a href="#nested-if-statement">Nested if Statement</a></li>
+      </ol>
+    </li>
+    <li><a href="#switch-statement-----">switch Statement <!--{{{--></a>
+      <ol>
+        <li><a href="#single-case-switch-syntax">Single-Case switch Syntax</a></li>
+        <li><a href="#multi-case-switch-statement">Multi-case switch Statement</a></li>
+      </ol>
+    </li>
+    <li><a href="#loops-----">Loops <!--{{{--></a>
+      <ol>
+        <li><a href="#for-loop">For Loop</a></li>
+        <li><a href="#continue-statement">continue Statement</a></li>
+        <li><a href="#break-statement">break Statement</a></li>
+        <li><a href="#nested-loops">Nested Loops</a></li>
+        <li><a href="#range-keyword">Range Keyword</a></li>
+      </ol>
+    </li>
+    <li><a href="#functions-----">Functions <!--{{{--></a>
+      <ol>
+        <li><a href="#create-a-function">Create a Function</a></li>
+        <li><a href="#call-a-function">Call a Function</a></li>
+        <li><a href="#naming-rules-for-go-functions">Naming Rules for Go Functions</a></li>
+        <li><a href="#parameters-and-arguments">Parameters and Arguments</a></li>
+        <li><a href="#function-returns">Function Returns</a></li>
+        <li><a href="#recursion-functions">Recursion Functions</a></li>
+      </ol>
+    </li>
+    <li><a href="#struct-----">Struct <!--{{{--></a></li>
+    <li><a href="#declare-a-struct">Declare a Struct</a>
+      <ol>
+        <li><a href="#access-struct-members">Access Struct Members</a></li>
+        <li><a href="#pass-struct-as-function-arguments">Pass Struct as Function Arguments</a></li>
+      </ol>
+    </li>
+    <li><a href="#maps-----">Maps <!--{{{--></a>
+      <ol>
+        <li><a href="#creating-maps-using-var-and-">Creating Maps Using <code>var</code> and <code>:=</code></a></li>
+        <li><a href="#creating-maps-using-using-make-function">Creating Maps Using Using <code>make()</code> Function</a></li>
+        <li><a href="#creating-an-empty-map">Creating an Empty Map</a></li>
+        <li><a href="#allowed-key-types">Allowed Key Types</a></li>
+        <li><a href="#allowed-value-types">Allowed Value Types</a></li>
+        <li><a href="#accessing-map-elements">Accessing Map Elements</a></li>
+        <li><a href="#updating-and-adding-map-elements">Updating and Adding Map Elements</a></li>
+        <li><a href="#remove-element-from-map">Remove Element from Map</a></li>
+        <li><a href="#check-for-specific-elements-in-a-map">Check For Specific Elements in a Map</a></li>
+        <li><a href="#maps-are-references">Maps Are References</a></li>
+        <li><a href="#iterating-over-maps">Iterating Over Maps</a></li>
+        <li><a href="#iterate-over-maps-in-a-specific-order">Iterate Over Maps in a Specific Order</a></li>
+      </ol>
+    </li>
+    <li><a href="#source">Source</a></li>
+  </ol>
+</nav>
+              <hr>
+              </div>
+            </details>
+          </ol>
+        
+        
+
+        
+        
+      </header>
+
+      
+
+      <article>
+        <div class="row">
+        <div class="mainpad">
+          <h1 id="syntax-----">Syntax <!--{{{--></h1>
+<p>A Go file consists of the following parts:</p>
+<ul>
+<li>Package declaration</li>
+<li>Import packages</li>
+<li>Functions</li>
+<li>Statements and expressions</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
+<span class="kn">import</span> <span class="s">&#34;fmt&#34;</span>
+
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Hello World!&#34;</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div><!--}}}-->
+<h1 id="comments-----">Comments <!--{{{--></h1>
+<p>Go supports single-line or multi-line comments.</p>
+<h2 id="single-line-comments">Single-line Comments</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// This is a comment
+</span></code></pre></div><h2 id="multi-line-comments">Multi-line Comments</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="cm">/*
+</span><span class="cm"> * This is a Multi-line comment
+</span><span class="cm"> */</span>
+</code></pre></div><!--}}}-->
+<h1 id="variables-----">Variables <!--{{{--></h1>
+<h2 id="types">Types</h2>
+<ul>
+<li><code>int</code> - stores integers (whole numbers), such as 123 or -123</li>
+<li><code>float32</code> - stores floating point numbers, with decimals, such as 19.99 or -19.99</li>
+<li><code>string</code> - stores text, such as &ldquo;Hello World&rdquo;. String values are surrounded
+by double quotes</li>
+<li><code>bool</code> - stores values with two states: true or false</li>
+</ul>
+<h2 id="declaring-variables">Declaring variables</h2>
+<p>In Go, there are two ways to declare a variable:</p>
+<ol>
+<li>
+<p>With the <code>var</code> keyword:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">var</span> <span class="nx">variablename</span> <span class="kd">type</span> <span class="p">=</span> <span class="nx">value</span>
+</code></pre></div><p>``</p>
+<blockquote>
+<p><strong>Note</strong>: You always have to specify either <code>type</code> or <code>value</code> (or both).</p>
+</blockquote>
+</li>
+<li>
+<p>With the <code>:=</code> sign:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="nx">variablename</span> <span class="o">:=</span> <span class="nx">value</span>
+</code></pre></div><p>``</p>
+<blockquote>
+<p><strong>Note</strong>: In this case, the type of the variable is <strong>inferred</strong> from the
+value (means that the compiler decides the type of the variable, based on
+the value).</p>
+</blockquote>
+<blockquote>
+<p><strong>Note</strong>: It is not possible to declare a variable using <code>:=</code> without
+assigning a value to it.</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="variable-declaration-with-initial-value">Variable Declaration With Initial Value</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">var</span> <span class="nx">student1</span> <span class="kt">string</span> <span class="p">=</span> <span class="s">&#34;John&#34;</span> <span class="c1">//type is string
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">student2</span> <span class="p">=</span> <span class="s">&#34;Jane&#34;</span> <span class="c1">//type is inferred
+</span><span class="c1"></span><span class="nx">x</span> <span class="o">:=</span> <span class="mi">2</span> <span class="c1">//type is inferred
+</span></code></pre></div><blockquote>
+<p><strong>Note</strong>: The variable types of <code>student2</code> and <code>x</code> is <strong>inferred</strong> from their
+values.</p>
+</blockquote>
+<h3 id="variable-declaration-without-initial-value">Variable Declaration Without Initial Value</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
+<span class="kn">import</span> <span class="p">(</span><span class="s">&#34;fmt&#34;</span><span class="p">)</span>
+
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="kd">var</span> <span class="nx">a</span> <span class="kt">string</span>
+	<span class="kd">var</span> <span class="nx">b</span> <span class="kt">int</span>
+	<span class="kd">var</span> <span class="nx">c</span> <span class="kt">bool</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">b</span><span class="p">)</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">c</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div><p>By running the code, we can see that they already have the default values of
+their respective types:</p>
+<ul>
+<li><code>a</code> is <code>&quot;&quot;</code></li>
+<li><code>b</code> is <code>0</code></li>
+<li><code>c</code> is <code>false</code></li>
+</ul>
+<h3 id="value-assignment-after-declaration">Value Assignment After Declaration</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="kd">var</span> <span class="nx">student1</span> <span class="kt">string</span>
+	<span class="nx">student1</span> <span class="p">=</span> <span class="s">&#34;John&#34;</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">student1</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div><h3 id="difference-between-var-and-">Difference Between var and :=</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><code>var</code></th>
+<th style="text-align:left"><code>:=</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Can be used <strong>inside</strong> and <strong>outside</strong> of functions</td>
+<td style="text-align:left">Can only be used <strong>inside</strong> functions</td>
+</tr>
+<tr>
+<td style="text-align:left">Variable declaration and value assignment <strong>can be done separately</strong></td>
+<td style="text-align:left">Variable declaration and value assignment <strong>cannot be done separately</strong> (must be done in the same line)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="multiple-variable-declaration">Multiple Variable Declaration</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">var</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">c</span><span class="p">,</span> <span class="nx">d</span> <span class="kt">int</span> <span class="p">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span>
+</code></pre></div><blockquote>
+<p><strong>Note</strong>: If you use the <code>type</code> keyword, it is only possible to declare
+<strong>one type</strong> of variable per line.</p>
+</blockquote>
+<p>If the <code>type</code> keyword is not specified, you can declare different types of
+variables in the same line:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">var</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">b</span> <span class="p">=</span> <span class="mi">6</span><span class="p">,</span> <span class="s">&#34;Hello&#34;</span>
+<span class="nx">c</span><span class="p">,</span> <span class="nx">d</span> <span class="o">:=</span> <span class="mi">7</span><span class="p">,</span> <span class="s">&#34;World!&#34;</span>
+</code></pre></div><h3 id="variable-declaration-in-a-block">Variable Declaration in a Block</h3>
+<p>Multiple variable declarations can also be grouped together into a block for
+greater readability:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">var</span> <span class="p">(</span>
+	<span class="nx">a</span> <span class="kt">int</span>
+	<span class="nx">b</span> <span class="kt">int</span> <span class="p">=</span> <span class="mi">1</span>
+	<span class="nx">c</span> <span class="kt">string</span> <span class="p">=</span> <span class="s">&#34;hello&#34;</span>
+<span class="p">)</span>
+</code></pre></div><h2 id="variable-naming-rules">Variable Naming Rules</h2>
+<p>Go variable naming rules:</p>
+<ul>
+<li>A variable name must start with a letter or an underscore character (<code>_</code>)</li>
+<li>A variable name cannot start with a digit</li>
+<li>A variable name can only contain alpha-numeric characters and underscores
+(<code>a-z</code>, <code>A-Z</code>, <code>0-9</code>, and <code>_</code>)</li>
+<li>Variable names are case-sensitive (age, Age and AGE are three different variables)</li>
+<li>There is no limit on the length of the variable name</li>
+<li>A variable name cannot contain spaces</li>
+<li>The variable name cannot be any Go keywords</li>
+</ul>
+<!--}}}-->
+<h1 id="constants-----">Constants <!--{{{--></h1>
+<p>If a variable should have a fixed value that cannot be changed, you can use the
+<code>const</code> keyword.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">const</span> <span class="nx">CONSTNAME</span> <span class="kd">type</span> <span class="p">=</span> <span class="nx">value</span>
+</code></pre></div><blockquote>
+<p><strong>Note</strong>: The value of a constant must be assigned when you declare it.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">const</span> <span class="nx">PI</span> <span class="p">=</span> <span class="mf">3.14</span>
+</code></pre></div><h2 id="constant-rules">Constant Rules</h2>
+<ul>
+<li>Constant names follow the same naming rules as variables</li>
+<li>Constant names are usually written in uppercase letters (for easy
+identification and differentiation from variables)</li>
+<li>Constants can be declared both inside and outside of a function</li>
+</ul>
+<h2 id="constant-types">Constant Types</h2>
+<p>There are two types of constants:</p>
+<ul>
+<li>Typed constants</li>
+<li>Untyped constants</li>
+</ul>
+<h2 id="multiple-constants-declaration">Multiple Constants Declaration</h2>
+<p>Multiple constants can be grouped together into a block for readability:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">const</span> <span class="p">(</span>
+	<span class="nx">A</span> <span class="kt">int</span> <span class="p">=</span> <span class="mi">1</span>
+	<span class="nx">B</span> <span class="p">=</span> <span class="mf">3.14</span>
+	<span class="nx">C</span> <span class="p">=</span> <span class="s">&#34;Hi!&#34;</span>
+<span class="p">)</span>
+</code></pre></div><!--}}}-->
+<h1 id="output-----">Output <!--{{{--></h1>
+<h2 id="output-functions-----">Output Functions <!--{{{--></h2>
+<p>Go has three functions to output text:</p>
+<ul>
+<li><code>Print()</code></li>
+<li><code>Println()</code></li>
+<li><code>Printf()</code></li>
+</ul>
+<h3 id="the-print-function">The Print() Function</h3>
+<p>The <code>Print()</code> function prints its arguments with their default format.</p>
+<ul>
+<li>If we want to print the arguments in new lines, we need to use <code>\n</code>.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">var</span> <span class="nx">i</span><span class="p">,</span><span class="nx">j</span> <span class="kt">string</span> <span class="p">=</span> <span class="s">&#34;Hello&#34;</span><span class="p">,</span><span class="s">&#34;World&#34;</span>
+<span class="nx">fmt</span><span class="p">.</span><span class="nf">Print</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="s">&#34;\n&#34;</span><span class="p">)</span>
+<span class="nx">fmt</span><span class="p">.</span><span class="nf">Print</span><span class="p">(</span><span class="nx">j</span><span class="p">,</span> <span class="s">&#34;\n&#34;</span><span class="p">)</span>
+</code></pre></div><ul>
+<li><code>Print()</code> inserts a space between the arguments if <strong>neither</strong> are strings.</li>
+</ul>
+<h3 id="the-println-function">The Println() Function</h3>
+<p>The <code>Println()</code> function is similar to <code>Print()</code> with the difference that a
+whitespace is added between the arguments, and a newline is added at the end:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">var</span> <span class="nx">i</span><span class="p">,</span><span class="nx">j</span> <span class="kt">string</span> <span class="p">=</span> <span class="s">&#34;Hello&#34;</span><span class="p">,</span><span class="s">&#34;World&#34;</span>
+<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">j</span><span class="p">)</span>
+</code></pre></div><h3 id="the-printf-function">The Printf() Function</h3>
+<p>The <code>Printf()</code> function first formats its argument based on the given
+formatting verb and then prints them.</p>
+<p>Here we will use two formatting verbs:</p>
+<ul>
+<li><code>%v</code> is used to print the <strong>value</strong> of the arguments</li>
+<li><code>%T</code> is used to print the <strong>type</strong> of the arguments</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">var</span> <span class="nx">i</span> <span class="kt">string</span> <span class="p">=</span> <span class="s">&#34;Hello&#34;</span>
+<span class="kd">var</span> <span class="nx">j</span> <span class="kt">int</span> <span class="p">=</span> <span class="mi">15</span>
+
+<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;i has value: %v and type: %T\n&#34;</span><span class="p">,</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span>
+<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;j has value: %v and type: %T&#34;</span><span class="p">,</span> <span class="nx">j</span><span class="p">,</span> <span class="nx">j</span><span class="p">)</span>
+</code></pre></div><!--}}}-->
+<h2 id="formatting-verbs-----">Formatting Verbs <!--{{{--></h2>
+<p>Go offers several formatting verbs that can be used with the <code>Printf()</code> function.</p>
+<h3 id="general-formatting-verbs">General Formatting Verbs</h3>
+<p>The following verbs can be used with all data types:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>Verb</strong></th>
+<th style="text-align:left"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>%v</code></td>
+<td style="text-align:left">Prints the value in the default format</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>%#v</code></td>
+<td style="text-align:left">Prints the value in Go-syntax format</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>%T</code></td>
+<td style="text-align:left">Prints the type of the value</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>%%</code></td>
+<td style="text-align:left">Prints the % sign</td>
+</tr>
+</tbody>
+</table>
+<h3 id="integer-formatting-verbs">Integer Formatting Verbs</h3>
+<p>The following verbs can be used with the integer data type:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>Verb</strong></th>
+<th style="text-align:left"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>%b</code></td>
+<td style="text-align:left">Base 2</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>%d</code></td>
+<td style="text-align:left">Base 10</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>%+d</code></td>
+<td style="text-align:left">Base 10 and always show sign</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>%o</code></td>
+<td style="text-align:left">Base 8</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>%O</code></td>
+<td style="text-align:left">Base 8, with leading 0o</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>%x</code></td>
+<td style="text-align:left">Base 16, lowercase</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>%X</code></td>
+<td style="text-align:left">Base 16, uppercase</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>%#x</code></td>
+<td style="text-align:left">Base 16, with leading 0x</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>%4d</code></td>
+<td style="text-align:left">Pad with spaces (width 4, right justified)</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>%-4d</code></td>
+<td style="text-align:left">Pad with spaces (width 4, left justified)</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>%04d</code></td>
+<td style="text-align:left">Pad with zeroes (width 4)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="string-formatting-verbs">String Formatting Verbs</h3>
+<p>The following verbs can be used with the string data type:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>Verb</strong></th>
+<th style="text-align:left"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>%s</code></td>
+<td style="text-align:left">Prints the value as plain string</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>%q</code></td>
+<td style="text-align:left">Prints the value as a double-quoted string</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>%8s</code></td>
+<td style="text-align:left">Prints the value as plain string (width 8, right justified)</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>%-8s</code></td>
+<td style="text-align:left">Prints the value as plain string (width 8, left justified)</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>%x</code></td>
+<td style="text-align:left">Prints the value as hex dump of byte values</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>% x</code></td>
+<td style="text-align:left">Prints the value as hex dump with spaces</td>
+</tr>
+</tbody>
+</table>
+<h3 id="boolean-formatting-verbs">Boolean Formatting Verbs</h3>
+<p>The following verb can be used with the boolean data type:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>Verb</strong></th>
+<th style="text-align:left"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>%t</code></td>
+<td style="text-align:left">Value of the boolean operator in true or false</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:left">format (same as using <code>%v</code>)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="float-formatting-verbs">Float Formatting Verbs</h3>
+<p>The following verbs can be used with the float data type:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>Verb</strong></th>
+<th style="text-align:left"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>%e</code></td>
+<td style="text-align:left">Scientific notation with &lsquo;e&rsquo; as exponent</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>%f</code></td>
+<td style="text-align:left">Decimal point, no exponent</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>%.2f</code></td>
+<td style="text-align:left">Default width, precision 2</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>%6.2f</code></td>
+<td style="text-align:left">Width 6, precision 2</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>%g</code></td>
+<td style="text-align:left">Exponent as needed, only necessary digits</td>
+</tr>
+</tbody>
+</table>
+<!--}}}-->
+<!--}}}-->
+<h1 id="data-types-----">Data Types <!--{{{--></h1>
+<p>Data type is an important concept in programming. Data type specifies the size
+and type of variable values.</p>
+<h2 id="basics">Basics</h2>
+<p>Go is statically typed, meaning that once a variable type is defined, it can
+only store data of that type. It has three basic data types:</p>
+<ul>
+<li><strong>bool</strong>: represents a boolean value and is either true or false</li>
+<li><strong>Numeric</strong>: represents integer types, floating point values, and complex types</li>
+<li><strong>string</strong>: represents a string value</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">var</span> <span class="nx">a</span> <span class="kt">bool</span> <span class="p">=</span> <span class="kc">true</span>	 <span class="c1">// Boolean
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">b</span> <span class="kt">int</span> <span class="p">=</span> <span class="mi">5</span>		 <span class="c1">// Integer
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">c</span> <span class="kt">float32</span> <span class="p">=</span> <span class="mf">3.14</span>  <span class="c1">// Floating point number
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">d</span> <span class="kt">string</span> <span class="p">=</span> <span class="s">&#34;Hi!&#34;</span>  <span class="c1">// String
+</span></code></pre></div><h2 id="boolean">Boolean</h2>
+<p>A boolean data type is declared with the <code>bool</code> keyword and can only take the
+values <code>true</code> or <code>false</code>.</p>
+<p>The default value of a boolean data type is <code>false</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">var</span> <span class="nx">b1</span> <span class="kt">bool</span> <span class="p">=</span> <span class="kc">true</span> <span class="c1">// typed declaration with initial value
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">b2</span> <span class="p">=</span> <span class="kc">true</span> <span class="c1">// untyped declaration with initial value
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">b3</span> <span class="kt">bool</span> <span class="c1">// typed declaration without initial value
+</span><span class="c1"></span><span class="nx">b4</span> <span class="o">:=</span> <span class="kc">true</span> <span class="c1">// untyped declaration with initial value
+</span></code></pre></div><blockquote>
+<p><strong>Note</strong>: Boolean values are mostly used for conditional testing.</p>
+</blockquote>
+<h2 id="integer">Integer</h2>
+<p>Integer data types are used to store a whole number without decimals, like 35,
+-50, or 1345000.</p>
+<p>The integer data type has two categories:</p>
+<ul>
+<li><strong>Signed integers</strong> - can store both positive and negative values</li>
+<li><strong>Unsigned integers</strong> - can only store non-negative values</li>
+</ul>
+<blockquote>
+<p><strong>Tip</strong>: The default type for integer is <strong>int</strong>. If you do not specify a type,
+the type will be <strong>int</strong>.</p>
+</blockquote>
+<h3 id="signed-integers">Signed Integers</h3>
+<p>Signed integers, declared with one of the <code>int</code> keywords, can store both
+positive and negative values:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">var</span> <span class="nx">x</span> <span class="kt">int</span> <span class="p">=</span> <span class="mi">500</span>
+<span class="kd">var</span> <span class="nx">y</span> <span class="kt">int</span> <span class="p">=</span> <span class="o">-</span><span class="mi">4500</span>
+</code></pre></div><p>Go has five keywords/types of signed integers:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Type</strong></th>
+<th style="text-align:left"><strong>Size</strong></th>
+<th style="text-align:left"><strong>Range</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>int</code></td>
+<td style="text-align:left">Depends on platform: 32 bits in 32 bit systems and 64 bit in 64 bit systems</td>
+<td style="text-align:left">-2147483648 to 2147483647 in 32 bit systems and -9223372036854775808 to 9223372036854775807 in 64 bit systems</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>int8</code></td>
+<td style="text-align:left">8 bits/1 byte</td>
+<td style="text-align:left">-128 to 127</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>int16</code></td>
+<td style="text-align:left">16 bits/2 byte</td>
+<td style="text-align:left">-32768 to 32767</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>int32</code></td>
+<td style="text-align:left">32 bits/4 byte</td>
+<td style="text-align:left">-2147483648 to 2147483647</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>int64</code></td>
+<td style="text-align:left">64 bits/8 byte</td>
+<td style="text-align:left">-9223372036854775808 to 9223372036854775807</td>
+</tr>
+</tbody>
+</table>
+<h3 id="unsigned-integers">Unsigned Integers</h3>
+<p>Unsigned integers, declared with one of the <code>uint</code> keywords, can only store
+non-negative values:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">var</span> <span class="nx">x</span> <span class="kt">uint</span> <span class="p">=</span> <span class="mi">500</span>
+<span class="kd">var</span> <span class="nx">y</span> <span class="kt">uint</span> <span class="p">=</span> <span class="mi">4500</span>
+</code></pre></div><p>Go has five keywords/types of signed integers:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Type</strong></th>
+<th style="text-align:left"><strong>Size</strong></th>
+<th style="text-align:left"><strong>Range</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>uint</code></td>
+<td style="text-align:left">Depends on platform: 32 bits in 32 bit systems and 64 bit in 64 bit systems</td>
+<td style="text-align:left">0 to 4294967295 in 32 bit systems and 0 to 18446744073709551615 in 64 bit systems</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>uint8</code></td>
+<td style="text-align:left">8 bits/1 byte</td>
+<td style="text-align:left">0 to 255</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>uint16</code></td>
+<td style="text-align:left">16 bits/2 byte</td>
+<td style="text-align:left">0 to 65535</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>uint32</code></td>
+<td style="text-align:left">32 bits/4 byte</td>
+<td style="text-align:left">0 to 4294967295</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>uint64</code></td>
+<td style="text-align:left">64 bits/8 byte</td>
+<td style="text-align:left">0 to 18446744073709551615</td>
+</tr>
+</tbody>
+</table>
+<h2 id="float">Float</h2>
+<p>The float data types are used to store positive and negative numbers with a
+decimal point, like 35.3, -2.34, or 3597.34987.</p>
+<p>The float data type has two keywords:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Type</strong></th>
+<th style="text-align:left"><strong>Size</strong></th>
+<th style="text-align:left"><strong>Range</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>float32</code></td>
+<td style="text-align:left">32 bits</td>
+<td style="text-align:left">-3.4e+38 to 3.4e+38</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>float64</code></td>
+<td style="text-align:left">64 bits</td>
+<td style="text-align:left">-1.7e+308 to +1.7e+308</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Tip</strong>: The default type for float is <code>float64</code>. If you do not specify a type,
+the type will be <code>float64</code>.</p>
+</blockquote>
+<h3 id="the-float32-keyword">The float32 Keyword</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">var</span> <span class="nx">x</span> <span class="kt">float32</span> <span class="p">=</span> <span class="mf">123.78</span>
+<span class="kd">var</span> <span class="nx">y</span> <span class="kt">float32</span> <span class="p">=</span> <span class="mf">3.4e+38</span>
+</code></pre></div><h3 id="the-float64-keyword">The float64 Keyword</h3>
+<p>The <code>float64</code> data type can store a larger set of numbers than <code>float32</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">var</span> <span class="nx">x</span> <span class="kt">float64</span> <span class="p">=</span> <span class="mf">1.7e+308</span>
+</code></pre></div><h2 id="string">String</h2>
+<p>The <code>string</code> data type is used to store a sequence of characters (text). String
+values must be surrounded by double quotes:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">var</span> <span class="nx">txt1</span> <span class="kt">string</span> <span class="p">=</span> <span class="s">&#34;Hello!&#34;</span>
+<span class="kd">var</span> <span class="nx">txt2</span> <span class="kt">string</span>
+<span class="nx">txt3</span> <span class="o">:=</span> <span class="s">&#34;World 1&#34;</span>
+</code></pre></div><!--}}}-->
+<h1 id="arrays-----">Arrays <!--{{{--></h1>
+<p>Arrays are used to store multiple values of the same type in a single variable,
+instead of declaring separate variables for each value.</p>
+<h2 id="declare-an-array">Declare an Array</h2>
+<p>In Go, there are two ways to declare an array:</p>
+<ol>
+<li>
+<p>With the <code>var</code> keyword:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">var</span> <span class="nx">array_name</span> <span class="p">=</span> <span class="p">[</span><span class="nx">length</span><span class="p">]</span><span class="nx">datatype</span><span class="p">{</span><span class="nx">values</span><span class="p">}</span> <span class="c1">// length is defined
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">array_name</span> <span class="p">=</span> <span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="nx">datatype</span><span class="p">{</span><span class="nx">values</span><span class="p">}</span> <span class="c1">// length is inferred
+</span></code></pre></div><p>``</p>
+</li>
+<li>
+<p>With the <code>:=</code> sign:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="nx">array_name</span> <span class="o">:=</span> <span class="p">[</span><span class="nx">length</span><span class="p">]</span><span class="nx">datatype</span><span class="p">{</span><span class="nx">values</span><span class="p">}</span> <span class="c1">// length is defined
+</span><span class="c1"></span><span class="nx">array_name</span> <span class="o">:=</span> <span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="nx">datatype</span><span class="p">{</span><span class="nx">values</span><span class="p">}</span> <span class="c1">// length is inferred
+</span></code></pre></div><p>``</p>
+</li>
+</ol>
+<blockquote>
+<p><strong>Note</strong>: The length specifies the number of elements to store in the array.
+In Go, arrays have a fixed length. The length of the array is either defined
+by a number or is inferred (means that the compiler decides the length of the
+array, based on the number of values).</p>
+</blockquote>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">var</span> <span class="nx">arr1</span> <span class="p">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
+<span class="kd">var</span> <span class="nx">arr1</span> <span class="p">=</span> <span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
+<span class="nx">arr2</span> <span class="o">:=</span> <span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">}</span>
+<span class="nx">arr2</span> <span class="o">:=</span> <span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">}</span>
+</code></pre></div><h2 id="access-elements-of-an-array">Access Elements of an Array</h2>
+<p>You can access a specific array element by referring to the index number.</p>
+<p>In Go, array indexes start at 0. That means that [0] is the first element, [1]
+is the second element, etc.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="nx">prices</span> <span class="o">:=</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">}</span>
+<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">prices</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">prices</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+</code></pre></div><h2 id="change-elements-of-an-array">Change Elements of an Array</h2>
+<p>You can also change the value of a specific array element by referring to the
+index number.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="nx">prices</span> <span class="o">:=</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">}</span>
+<span class="nx">prices</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="p">=</span> <span class="mi">50</span>
+</code></pre></div><h2 id="array-initialization">Array Initialization</h2>
+<p>If an array or one of its elements has not been initialized in the code, it is
+assigned the default value of its type.</p>
+<blockquote>
+<p><strong>Tip</strong>: The default value for int is <code>0</code> and the default value for string is
+<code>&quot;&quot;</code>.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="nx">arr1</span> <span class="o">:=</span> <span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="kt">int</span><span class="p">{}</span> <span class="c1">// not initialized
+</span><span class="c1"></span><span class="nx">arr2</span> <span class="o">:=</span> <span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">}</span> <span class="c1">// partially initialized
+</span><span class="c1"></span><span class="nx">arr3</span> <span class="o">:=</span> <span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span> <span class="c1">// fully initialized
+</span></code></pre></div><h2 id="initialize-only-specific-elements">Initialize Only Specific Elements</h2>
+<p>It is possible to initialize only specific elements in an array.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="nx">arr1</span> <span class="o">:=</span> <span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span><span class="mi">40</span><span class="p">}</span>
+</code></pre></div><p>The array above has 5 elements.</p>
+<ul>
+<li><code>1:10</code> means: assign <code>10</code> to array index <code>1</code> (second element).</li>
+<li><code>2:40</code> means: assign <code>40</code> to array index <code>2</code> (third element).</li>
+</ul>
+<h2 id="find-the-length-of-an-array">Find the Length of an Array</h2>
+<p>The <code>len()</code> function is used to find the length of an array:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="nx">arr1</span> <span class="o">:=</span> <span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="kt">string</span><span class="p">{</span><span class="s">&#34;Volvo&#34;</span><span class="p">,</span> <span class="s">&#34;BMW&#34;</span><span class="p">,</span> <span class="s">&#34;Ford&#34;</span><span class="p">,</span> <span class="s">&#34;Mazda&#34;</span><span class="p">}</span>
+<span class="nx">arr2</span> <span class="o">:=</span> <span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">}</span>
+
+<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="nx">arr1</span><span class="p">))</span>
+<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="nx">arr2</span><span class="p">))</span>
+</code></pre></div><!--}}}-->
+<h1 id="slices-----">Slices <!--{{{--></h1>
+<p>Slices are similar to arrays, but are more powerful and flexible.</p>
+<p>Like arrays, slices are also used to store multiple values of the same type in
+a single variable.</p>
+<p>However, unlike arrays, the length of a slice can grow and shrink as you see
+fit.</p>
+<h2 id="create-a-slice">Create a Slice</h2>
+<p>In Go, there are several ways to create a slice:</p>
+<ul>
+<li>Using the <code>[]datatype{values}</code> format</li>
+<li>Create a slice from an array</li>
+<li>Using the <code>make()</code> function</li>
+</ul>
+<h3 id="datatypevalues">[]datatype{values}</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="nx">slice_name</span> <span class="o">:=</span> <span class="p">[]</span><span class="nx">datatype</span><span class="p">{</span><span class="nx">values</span><span class="p">}</span>
+</code></pre></div><p>A common way of declaring a slice is like this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="nx">myslice</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">int</span><span class="p">{}</span>
+</code></pre></div><p>The code above declares an empty slice of 0 length and 0 capacity.</p>
+<p>To initialize the slice during declaration, use this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="nx">myslice</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
+</code></pre></div><p>The code above declares a slice of integers of length 3 and also the capacity
+of 3.</p>
+<p>In Go, there are two functions that can be used to return the length and
+capacity of a slice:</p>
+<ul>
+<li><strong><code>len()</code> function</strong> - returns the length of the slice (the number of
+elements in the slice)</li>
+<li><strong><code>cap()</code> function</strong> - returns the capacity of the slice (the number of
+elements the slice can grow or shrink to)</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
+<span class="kn">import</span> <span class="p">(</span><span class="s">&#34;fmt&#34;</span><span class="p">)</span>
+
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="nx">myslice1</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">int</span><span class="p">{}</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="nx">myslice1</span><span class="p">))</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nb">cap</span><span class="p">(</span><span class="nx">myslice1</span><span class="p">))</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">myslice1</span><span class="p">)</span>
+
+	<span class="nx">myslice2</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">string</span><span class="p">{</span><span class="s">&#34;Go&#34;</span><span class="p">,</span> <span class="s">&#34;Slices&#34;</span><span class="p">,</span> <span class="s">&#34;Are&#34;</span><span class="p">,</span> <span class="s">&#34;Powerful&#34;</span><span class="p">}</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="nx">myslice2</span><span class="p">))</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nb">cap</span><span class="p">(</span><span class="nx">myslice2</span><span class="p">))</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">myslice2</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div><p>Result:</p>
+<pre><code>0
+0
+[]
+4
+4
+[Go Slices Are Powerful]
+</code></pre>
+<p>In the example above, we see that in the first slice (myslice1), the actual
+elements are not specified, so both the length and capacity of the slice will
+be zero. In the second slice (myslice2), the elements are specified, and both
+length and capacity is equal to the number of actual elements specified.</p>
+<h3 id="create-a-slice-from-an-array">Create a Slice From an Array</h3>
+<p>You can create a slice by slicing an array:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">var</span> <span class="nx">myarray</span> <span class="p">=</span> <span class="p">[</span><span class="nx">length</span><span class="p">]</span><span class="nx">datatype</span><span class="p">{</span><span class="nx">values</span><span class="p">}</span> <span class="c1">// An array
+</span><span class="c1"></span><span class="nx">myslice</span> <span class="o">:=</span> <span class="nx">myarray</span><span class="p">[</span><span class="nx">start</span><span class="p">:</span><span class="nx">end</span><span class="p">]</span> <span class="c1">// A slice made from the array
+</span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="nx">arr1</span> <span class="o">:=</span> <span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span><span class="mi">15</span><span class="p">}</span>
+<span class="nx">myslice</span> <span class="o">:=</span> <span class="nx">arr1</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+
+<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;myslice = %v\n&#34;</span><span class="p">,</span> <span class="nx">myslice</span><span class="p">)</span>
+<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;length = %d\n&#34;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="nx">myslice</span><span class="p">))</span>
+<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;capacity = %d\n&#34;</span><span class="p">,</span> <span class="nb">cap</span><span class="p">(</span><span class="nx">myslice</span><span class="p">))</span>
+</code></pre></div><p>Result:</p>
+<pre><code>myslice = [12 13]
+length = 2
+capacity = 4
+</code></pre>
+<p>In the example above <code>myslice</code> is a slice with length 2. It is made from <code>arr1</code>
+which is an array with length 6.</p>
+<p>The slice starts from the second element of the array which has value 12. The
+slice can grow to the end of the array. This means that the capacity of the
+slice is 4.</p>
+<p>If <code>myslice</code> started from element 0, the slice capacity would be 6.</p>
+<h3 id="create-a-slice-with-the-make-function">Create a Slice With The make() Function</h3>
+<p>The <code>make()</code> function can also be used to create a slice.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="nx">slice_name</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">([]</span><span class="kd">type</span><span class="p">,</span> <span class="nx">length</span><span class="p">,</span> <span class="nx">capacity</span><span class="p">)</span>
+</code></pre></div><blockquote>
+<p><strong>Note</strong>: If the capacity parameter is not defined, it will be equal to <em>length</em></p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
+<span class="kn">import</span> <span class="p">(</span><span class="s">&#34;fmt&#34;</span><span class="p">)</span>
+
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="nx">myslice1</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">([]</span><span class="kt">int</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;myslice1 = %v\n&#34;</span><span class="p">,</span> <span class="nx">myslice1</span><span class="p">)</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;length = %d\n&#34;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="nx">myslice1</span><span class="p">))</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;capacity = %d\n&#34;</span><span class="p">,</span> <span class="nb">cap</span><span class="p">(</span><span class="nx">myslice1</span><span class="p">))</span>
+
+	<span class="c1">// with omitted capacity
+</span><span class="c1"></span>	<span class="nx">myslice2</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">([]</span><span class="kt">int</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;myslice2 = %v\n&#34;</span><span class="p">,</span> <span class="nx">myslice2</span><span class="p">)</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;length = %d\n&#34;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="nx">myslice2</span><span class="p">))</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;capacity = %d\n&#34;</span><span class="p">,</span> <span class="nb">cap</span><span class="p">(</span><span class="nx">myslice2</span><span class="p">))</span>
+<span class="p">}</span>
+</code></pre></div><p>Result:</p>
+<pre><code>myslice1 = [0 0 0 0 0]
+length = 5
+capacity = 10
+myslice2 = [0 0 0 0 0]
+length = 5
+capacity = 5
+</code></pre>
+<h2 id="access-change-append-and-copy-slices">Access, Change, Append and Copy Slices</h2>
+<h3 id="access-elements-of-a-slice">Access Elements of a Slice</h3>
+<p>You can access a specific slice element by referring to the index number.</p>
+<p>In Go, indexes start at 0. That means that [0] is the first element, [1] is the
+second element, etc.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="nx">prices</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">}</span>
+
+<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">prices</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">prices</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+</code></pre></div><h3 id="change-elements-of-a-slice">Change Elements of a Slice</h3>
+<p>You can also change a specific slice element by referring to the index number.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="nx">prices</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">}</span>
+<span class="nx">prices</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="p">=</span> <span class="mi">50</span>
+</code></pre></div><h3 id="append-elements-to-a-slice">Append Elements To a Slice</h3>
+<p>You can append elements to the end of a slice using the <code>append()</code> function:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="nx">slice_name</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">slice_name</span><span class="p">,</span> <span class="nx">element1</span><span class="p">,</span> <span class="nx">element2</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="nx">myslice1</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">}</span>
+<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;myslice1 = %v\n&#34;</span><span class="p">,</span> <span class="nx">myslice1</span><span class="p">)</span>
+<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;length = %d\n&#34;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="nx">myslice1</span><span class="p">))</span>
+<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;capacity = %d\n&#34;</span><span class="p">,</span> <span class="nb">cap</span><span class="p">(</span><span class="nx">myslice1</span><span class="p">))</span>
+
+<span class="nx">myslice1</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">myslice1</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">21</span><span class="p">)</span>
+<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;myslice1 = %v\n&#34;</span><span class="p">,</span> <span class="nx">myslice1</span><span class="p">)</span>
+<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;length = %d\n&#34;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="nx">myslice1</span><span class="p">))</span>
+<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;capacity = %d\n&#34;</span><span class="p">,</span> <span class="nb">cap</span><span class="p">(</span><span class="nx">myslice1</span><span class="p">))</span>
+</code></pre></div><h3 id="append-one-slice-to-another-slice">Append One Slice To Another Slice</h3>
+<p>To append all the elements of one slice to another slice, use the <code>append()</code>
+function:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="nx">slice3</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">slice1</span><span class="p">,</span> <span class="nx">slice2</span><span class="o">...</span><span class="p">)</span>
+</code></pre></div><blockquote>
+<p><strong>Note</strong>: The &lsquo;<code>...</code>&rsquo; after <em>slice2</em> is <strong>necessary</strong> when appending the
+elements of one slice to another.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="nx">myslice1</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
+<span class="nx">myslice2</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">}</span>
+<span class="nx">myslice3</span> <span class="o">:=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">myslice1</span><span class="p">,</span> <span class="nx">myslice2</span><span class="o">...</span><span class="p">)</span>
+</code></pre></div><h3 id="change-the-length-of-a-slice">Change The Length of a Slice</h3>
+<p>Unlike arrays, it is possible to change the length of a slice.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="nx">arr1</span> <span class="o">:=</span> <span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span><span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">}</span> <span class="c1">// An array
+</span><span class="c1"></span><span class="nx">myslice1</span> <span class="o">:=</span> <span class="nx">arr1</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span> <span class="c1">// Slice array
+</span><span class="c1"></span><span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;myslice1 = %v\n&#34;</span><span class="p">,</span> <span class="nx">myslice1</span><span class="p">)</span>
+<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;length = %d\n&#34;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="nx">myslice1</span><span class="p">))</span>
+<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;capacity = %d\n&#34;</span><span class="p">,</span> <span class="nb">cap</span><span class="p">(</span><span class="nx">myslice1</span><span class="p">))</span>
+
+<span class="cm">/* Change length by re-slicing the array */</span>
+<span class="nx">myslice1</span> <span class="p">=</span> <span class="nx">arr1</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;myslice1 = %v\n&#34;</span><span class="p">,</span> <span class="nx">myslice1</span><span class="p">)</span>
+<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;length = %d\n&#34;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="nx">myslice1</span><span class="p">))</span>
+<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;capacity = %d\n&#34;</span><span class="p">,</span> <span class="nb">cap</span><span class="p">(</span><span class="nx">myslice1</span><span class="p">))</span>
+
+<span class="cm">/* Change length by appending items */</span>
+<span class="nx">myslice1</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">myslice1</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">23</span><span class="p">)</span>
+<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;myslice1 = %v\n&#34;</span><span class="p">,</span> <span class="nx">myslice1</span><span class="p">)</span>
+<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;length = %d\n&#34;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="nx">myslice1</span><span class="p">))</span>
+<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;capacity = %d\n&#34;</span><span class="p">,</span> <span class="nb">cap</span><span class="p">(</span><span class="nx">myslice1</span><span class="p">))</span>
+</code></pre></div><h3 id="memory-efficiency">Memory Efficiency</h3>
+<p>When using slices, Go loads all the underlying elements into the memory.</p>
+<p>If the array is large and you need only a few elements, it is better to copy
+those elements using the <code>copy()</code> function.</p>
+<p>The <code>copy()</code> function creates a new underlying array with only the required
+elements for the slice. This will reduce the memory used for the program.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="nb">copy</span><span class="p">(</span><span class="nx">dest</span><span class="p">,</span> <span class="nx">src</span><span class="p">)</span>
+</code></pre></div><p>The <code>copy()</code> function takes in two slices dest and src, and copies data from
+<em>src</em> to <em>dest</em>. It returns the number of elements copied.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="nx">numbers</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">}</span>
+<span class="c1">// Original slice
+</span><span class="c1"></span><span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;numbers = %v\n&#34;</span><span class="p">,</span> <span class="nx">numbers</span><span class="p">)</span>
+<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;length = %d\n&#34;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="nx">numbers</span><span class="p">))</span>
+<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;capacity = %d\n&#34;</span><span class="p">,</span> <span class="nb">cap</span><span class="p">(</span><span class="nx">numbers</span><span class="p">))</span>
+
+<span class="c1">// Create copy with only needed numbers
+</span><span class="c1"></span><span class="nx">neededNumbers</span> <span class="o">:=</span> <span class="nx">numbers</span><span class="p">[:</span><span class="nb">len</span><span class="p">(</span><span class="nx">numbers</span><span class="p">)</span><span class="o">-</span><span class="mi">10</span><span class="p">]</span>
+<span class="nx">numbersCopy</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">([]</span><span class="kt">int</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="nx">neededNumbers</span><span class="p">))</span>
+<span class="nb">copy</span><span class="p">(</span><span class="nx">numbersCopy</span><span class="p">,</span> <span class="nx">neededNumbers</span><span class="p">)</span>
+
+<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;numbersCopy = %v\n&#34;</span><span class="p">,</span> <span class="nx">numbersCopy</span><span class="p">)</span>
+<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;length = %d\n&#34;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="nx">numbersCopy</span><span class="p">))</span>
+<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;capacity = %d\n&#34;</span><span class="p">,</span> <span class="nb">cap</span><span class="p">(</span><span class="nx">numbersCopy</span><span class="p">))</span>
+</code></pre></div><p>Result:</p>
+<pre><code>numbers = [1 2 3 4 5 6 7 8 9 10 11 12 13 14 15]
+length = 15
+capacity = 15
+numbersCopy = [1 2 3 4 5]
+length = 5
+capacity = 5
+</code></pre>
+<p>The capacity of the new slice is now less than the capacity of the original
+slice because the new underlying array is smaller.</p>
+<!--}}}-->
+<h1 id="operators-----">Operators <!--{{{--></h1>
+<p>Operators are used to perform operations on variables and values.</p>
+<p>The <code>+</code> <strong>operator</strong> adds together two values, like in the example below:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">var</span> <span class="nx">a</span> <span class="p">=</span> <span class="mi">15</span> <span class="o">+</span> <span class="mi">25</span>
+</code></pre></div><p>Although the <code>+</code> operator is often used to add together two values, it can also
+be used to add together a variable and a value, or a variable and another
+variable:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">var</span> <span class="p">(</span>
+	<span class="nx">sum1</span> <span class="p">=</span> <span class="mi">100</span> <span class="o">+</span> <span class="mi">50</span> <span class="c1">// 150 (100 + 50)
+</span><span class="c1"></span>	<span class="nx">sum2</span> <span class="p">=</span> <span class="nx">sum1</span> <span class="o">+</span> <span class="mi">250</span> <span class="c1">// 400 (150 + 250)
+</span><span class="c1"></span>	<span class="nx">sum3</span> <span class="p">=</span> <span class="nx">sum2</span> <span class="o">+</span> <span class="nx">sum2</span> <span class="c1">// 800 (400 + 400)
+</span><span class="c1"></span><span class="p">)</span>
+</code></pre></div><p>Go divides the operators into the following groups:</p>
+<ul>
+<li>Arithmetic operators</li>
+<li>Assignment operators</li>
+<li>Comparison operators</li>
+<li>Logical operators</li>
+<li>Bitwise operators</li>
+</ul>
+<h2 id="arithmetic-operators">Arithmetic Operators</h2>
+<p>Arithmetic operators are used to perform common mathematical operations.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>Operator</strong></th>
+<th style="text-align:left"><strong>Name</strong></th>
+<th style="text-align:left"><strong>Description</strong></th>
+<th style="text-align:center"><strong>Example</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>+</code></td>
+<td style="text-align:left">Addition</td>
+<td style="text-align:left">Adds together two values</td>
+<td style="text-align:center"><code>x + y</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>-</code></td>
+<td style="text-align:left">Subtraction</td>
+<td style="text-align:left">Subtracts one value from another</td>
+<td style="text-align:center"><code>x - y</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>*</code></td>
+<td style="text-align:left">Multiplication</td>
+<td style="text-align:left">Multiplies two values</td>
+<td style="text-align:center"><code>x * y</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>/</code></td>
+<td style="text-align:left">Division</td>
+<td style="text-align:left">Divides one value by another</td>
+<td style="text-align:center"><code>x / y</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>%</code></td>
+<td style="text-align:left">Modulus</td>
+<td style="text-align:left">Returns the division remainder</td>
+<td style="text-align:center"><code>x % y</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>++</code></td>
+<td style="text-align:left">Increment</td>
+<td style="text-align:left">Increases the value of a variable by 1</td>
+<td style="text-align:center"><code>x++</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>--</code></td>
+<td style="text-align:left">Decrement</td>
+<td style="text-align:left">Decreases the value of a variable by 1</td>
+<td style="text-align:center"><code>x--</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="assignment-operators">Assignment Operators</h2>
+<p>Assignment operators are used to assign values to variables.</p>
+<p>In the example below, we use the <strong>assignment</strong> operator (<code>=</code>) to assign the
+value <strong>10</strong> to a variable called <strong>x</strong>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">var</span> <span class="nx">x</span> <span class="p">=</span> <span class="mi">10</span>
+</code></pre></div><p>The <strong>addition assignment</strong> operator (<code>+=</code>) adds a value to a variable:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">var</span> <span class="nx">x</span> <span class="p">=</span> <span class="mi">10</span>
+<span class="nx">x</span> <span class="o">+=</span><span class="mi">5</span>
+</code></pre></div><p>A list of all assignment operators:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>Operator</strong></th>
+<th style="text-align:left"><strong>Example</strong></th>
+<th style="text-align:left"><strong>Same As</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>=</code></td>
+<td style="text-align:left"><code>x = 5</code></td>
+<td style="text-align:left"><code>x = 5</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>+=</code></td>
+<td style="text-align:left"><code>x += 3</code></td>
+<td style="text-align:left"><code>x = x + 3</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>-=</code></td>
+<td style="text-align:left"><code>x -= 3</code></td>
+<td style="text-align:left"><code>x = x - 3</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>*=</code></td>
+<td style="text-align:left"><code>x *= 3</code></td>
+<td style="text-align:left"><code>x = x * 3</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>/=</code></td>
+<td style="text-align:left"><code>x /= 3</code></td>
+<td style="text-align:left"><code>x = x / 3</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>%=</code></td>
+<td style="text-align:left"><code>x %= 3</code></td>
+<td style="text-align:left"><code>x = x % 3</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&amp;=</code></td>
+<td style="text-align:left"><code>x &amp;= 3</code></td>
+<td style="text-align:left"><code>x = x &amp; 3</code></td>
+</tr>
+<tr>
+<td style="text-align:center">`</td>
+<td style="text-align:left">=`</td>
+<td style="text-align:left">`x</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>^=</code></td>
+<td style="text-align:left"><code>x ^= 3</code></td>
+<td style="text-align:left"><code>x = x ^ 3</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&gt;&gt;=</code></td>
+<td style="text-align:left"><code>x &gt;&gt;= 3</code></td>
+<td style="text-align:left"><code>x = x &gt;&gt; 3</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;&lt;=</code></td>
+<td style="text-align:left"><code>x &lt;&lt;= 3</code></td>
+<td style="text-align:left"><code>x = x &lt;&lt; 3</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="comparison-operators">Comparison Operators</h2>
+<p>Comparison operators are used to compare two values.</p>
+<blockquote>
+<p><strong>Note</strong>: The return value of a comparison is either true (<code>1</code>) or false
+(<code>0</code>)</p>
+</blockquote>
+<p>In the following example, we use the <strong>greater than</strong> operator (<code>&gt;</code>) to find
+out if 5 is greater than 3:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">var</span> <span class="nx">x</span> <span class="p">=</span> <span class="mi">5</span>
+<span class="kd">var</span> <span class="nx">y</span> <span class="p">=</span> <span class="mi">3</span>
+<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">x</span> <span class="p">&gt;</span> <span class="nx">y</span><span class="p">)</span> <span class="c1">// returns 1 (true) because 5 is greater than 3
+</span></code></pre></div><p>A list of all comparison operators:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>Operator</strong></th>
+<th style="text-align:left"><strong>Name</strong></th>
+<th style="text-align:left"><strong>Example</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>==</code></td>
+<td style="text-align:left">Equal to</td>
+<td style="text-align:left"><code>x == y</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>!=</code></td>
+<td style="text-align:left">Not equal</td>
+<td style="text-align:left"><code>x != y</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&gt;</code></td>
+<td style="text-align:left">Greater than</td>
+<td style="text-align:left"><code>x &gt; y</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;</code></td>
+<td style="text-align:left">Less than</td>
+<td style="text-align:left"><code>x &lt; y</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&gt;=</code></td>
+<td style="text-align:left">Greater than or equal to</td>
+<td style="text-align:left"><code>x &gt;= y</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;=</code></td>
+<td style="text-align:left">Less than or equal to</td>
+<td style="text-align:left"><code>x &lt;= y</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="logical-operators">Logical Operators</h2>
+<p>Logical operators are used to determine the logic between variables or values:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>Operator</strong></th>
+<th style="text-align:left"><strong>Name</strong></th>
+<th style="text-align:left"><strong>Description</strong></th>
+<th style="text-align:left"><strong>Example</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>&amp;&amp; </code></td>
+<td style="text-align:left">Logical <code>and</code></td>
+<td style="text-align:left">Returns true if both statements are true</td>
+<td style="text-align:left"><code>x &lt; 5 &amp;&amp;  x &lt; 10</code></td>
+</tr>
+<tr>
+<td style="text-align:center">`</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">`</td>
+<td style="text-align:left">Logical <code>or</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>!</code></td>
+<td style="text-align:left">Logical <code>not</code></td>
+<td style="text-align:left">Reverse the result, returns false if the result is true</td>
+<td style="text-align:left"><code>!(x &lt; 5 &amp;&amp; x &lt; 10)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="bitwise-operators">Bitwise Operators</h2>
+<p>Bitwise operators are used on (binary) numbers:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>Operator</strong></th>
+<th style="text-align:left"><strong>Name</strong></th>
+<th style="text-align:left"><strong>Description</strong></th>
+<th style="text-align:left"><strong>Example</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>&amp; </code></td>
+<td style="text-align:left">AND</td>
+<td style="text-align:left">Sets each bit to 1 if both bits are 1</td>
+<td style="text-align:left"><code>x &amp; y</code></td>
+</tr>
+<tr>
+<td style="text-align:center">`</td>
+<td style="text-align:left">`</td>
+<td style="text-align:left">OR</td>
+<td style="text-align:left">Sets each bit to 1 if one of two bits is 1</td>
+</tr>
+<tr>
+<td style="text-align:center"><code> ^</code></td>
+<td style="text-align:left">XOR</td>
+<td style="text-align:left">Sets each bit to 1 if only one of two bits is 1</td>
+<td style="text-align:left"><code>x ^ b</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;&lt;</code></td>
+<td style="text-align:left">Zero fill left shift</td>
+<td style="text-align:left">Shift left by pushing zeros in from the right</td>
+<td style="text-align:left"><code>x &lt;&lt; 2</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&gt;&gt;</code></td>
+<td style="text-align:left">Signed right shift</td>
+<td style="text-align:left">Shift right by pushing copies of the leftmost bit in from the left, and let the rightmost bits fall off</td>
+<td style="text-align:left"><code>x &gt;&gt; 2</code></td>
+</tr>
+</tbody>
+</table>
+<!--}}}-->
+<h1 id="conditions-----">Conditions <!--{{{--></h1>
+<p>Conditional statements are used to perform different actions based on different
+conditions.</p>
+<p>A condition can be either <code>true</code> or <code>false</code>.</p>
+<p>Go supports the usual comparison operators from mathematics:</p>
+<ul>
+<li>Less than <code>&lt;</code></li>
+<li>Less than or equal <code>&lt;=</code></li>
+<li>Greater than <code>&gt;</code></li>
+<li>Greater than or equal <code>&gt;=</code></li>
+<li>Equal to <code>==</code></li>
+<li>Not equal to <code>!=</code></li>
+</ul>
+<p>Additionally, Go supports the usual logical operators:</p>
+<ul>
+<li>Logical AND <code>&amp;&amp;</code></li>
+<li>Logical OR  <code>||</code></li>
+<li>Logical NOT <code>!</code></li>
+</ul>
+<p>You can use these operators or their combinations to create conditions for
+different decisions.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Example</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>x &gt; y</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>x != y</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>(x &gt; y) &amp;&amp; (y &gt; z)</code></td>
+</tr>
+<tr>
+<td style="text-align:left">`(x == y)</td>
+</tr>
+</tbody>
+</table>
+<p>Go has the following conditional statements:</p>
+<ul>
+<li><strong><code>if</code></strong> - specify a block of code to be executed, if a specified condition is true</li>
+<li><strong><code>else</code></strong> - specify a block of code to be executed, if the same condition is false</li>
+<li><strong><code>else if</code></strong> - specify a new condition to test, if the first condition is false</li>
+<li><strong><code>switch</code></strong> - specify many alternative blocks of code to be executed</li>
+</ul>
+<h2 id="if-statement">if Statement</h2>
+<p>Use the <code>if</code> statement to specify a block of Go code to be executed if a
+condition is <code>true</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="k">if</span> <span class="nx">condition</span> <span class="p">{</span>
+	<span class="cm">/*
+</span><span class="cm">	 * code to be executed if condition is true 
+</span><span class="cm">	 */</span>
+<span class="p">}</span>
+</code></pre></div><blockquote>
+<p><strong>Note</strong>: <code>if</code> is in lowercase letters. Uppercase letters (If or IF) will
+generate an error.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="k">if</span> <span class="mi">20</span> <span class="p">&gt;</span> <span class="mi">18</span> <span class="p">{</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;20 is greater than 18&#34;</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="nx">x</span><span class="o">:=</span> <span class="mi">20</span>
+<span class="nx">y</span><span class="o">:=</span> <span class="mi">18</span>
+<span class="k">if</span> <span class="nx">x</span> <span class="p">&gt;</span> <span class="nx">y</span> <span class="p">{</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;x is greater than y&#34;</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div><h2 id="if-else-statement">if else Statement</h2>
+<h3 id="else-statement">else Statement</h3>
+<p>Use the <code>else</code> statement to specify a block of code to be executed if the
+condition is <code>false</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="k">if</span> <span class="nx">condition</span> <span class="p">{</span>
+	<span class="c1">// code to be executed if condition is true
+</span><span class="c1"></span><span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+	<span class="c1">// code to be executed if condition is false
+</span><span class="c1"></span><span class="p">}</span> 
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="nx">time</span> <span class="o">:=</span> <span class="mi">20</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">time</span> <span class="p">&lt;</span> <span class="mi">18</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Good day.&#34;</span><span class="p">)</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Good evening.&#34;</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div><blockquote>
+<p><strong>Note</strong>: The brackets in the <code>else</code> statement should be like <code>} else {</code></p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="k">if</span> <span class="p">(</span><span class="nx">temperature</span> <span class="p">&gt;</span> <span class="mi">15</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;It is warm out there.&#34;</span><span class="p">)</span>
+<span class="p">}</span> <span class="cm">/* this raises an error */</span>
+<span class="k">else</span> <span class="p">{</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;It is cold out there.&#34;</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div><h2 id="else-if-statement">else if Statement</h2>
+<p>Use the <code>else if</code> statement to specify a new condition if the first condition
+is <code>false</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="k">if</span> <span class="nx">condition1</span> <span class="p">{</span>
+	<span class="cm">/*
+</span><span class="cm">	 * code to be executed if condition1 is true
+</span><span class="cm">	 */</span>
+<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="nx">condition2</span> <span class="p">{</span>
+	<span class="cm">/*
+</span><span class="cm">	 * code to be executed if condition1 is false and
+</span><span class="cm">	 * condition2 is true
+</span><span class="cm">	 */</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+	<span class="cm">/*
+</span><span class="cm">	 * code to be executed if condition1
+</span><span class="cm">	 * and condition2 are both false
+</span><span class="cm">	 */</span>
+<span class="p">}</span> 
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="nx">time</span> <span class="o">:=</span> <span class="mi">22</span>
+<span class="k">if</span> <span class="nx">time</span> <span class="p">&lt;</span> <span class="mi">10</span> <span class="p">{</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Good morning.&#34;</span><span class="p">)</span>
+<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="nx">time</span> <span class="p">&lt;</span> <span class="mi">20</span> <span class="p">{</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Good day.&#34;</span><span class="p">)</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Good evening.&#34;</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div><blockquote>
+<p><strong>Note</strong>: If condition1 and condition2 are BOTH true, only the code for
+condition1 are executed</p>
+</blockquote>
+<h2 id="nested-if-statement">Nested if Statement</h2>
+<p>You can have <code>if</code> statements inside <code>if</code> statements, this is called a nested if.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="k">if</span> <span class="nx">condition1</span> <span class="p">{</span>
+	<span class="c1">// code to be executed if condition1 is true
+</span><span class="c1"></span>	<span class="k">if</span> <span class="nx">condition2</span> <span class="p">{</span>
+		 <span class="cm">/*
+</span><span class="cm">		  * code to be executed if both condition1
+</span><span class="cm">		  * and condition2 are true
+</span><span class="cm">		  */</span>
+	<span class="p">}</span>
+<span class="p">}</span> 
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="nx">num</span> <span class="o">:=</span> <span class="mi">20</span>
+<span class="k">if</span> <span class="nx">num</span> <span class="o">&gt;=</span> <span class="mi">10</span> <span class="p">{</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Num is more than 10.&#34;</span><span class="p">)</span>
+		<span class="k">if</span> <span class="nx">num</span> <span class="p">&gt;</span> <span class="mi">15</span> <span class="p">{</span>
+			<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Num is also more than 15.&#34;</span><span class="p">)</span>
+		<span class="p">}</span>
+	<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Num is less than 10.&#34;</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div><!--}}}-->
+<h1 id="switch-statement-----">switch Statement <!--{{{--></h1>
+<p>Use the <code>switch</code> statement to select one of many code blocks to be executed.</p>
+<p>The <code>switch</code> statement in Go is similar to the ones in C. The difference is
+that it only runs the matched case so it does not need a <code>break</code> statement.</p>
+<h2 id="single-case-switch-syntax">Single-Case switch Syntax</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="k">switch</span> <span class="nx">expression</span> <span class="p">{</span>
+<span class="k">case</span> <span class="nx">x</span><span class="p">:</span>
+	<span class="c1">// code block
+</span><span class="c1"></span><span class="k">case</span> <span class="nx">y</span><span class="p">:</span>
+<span class="o">...</span>
+<span class="k">default</span><span class="p">:</span>
+	<span class="c1">// code block
+</span><span class="c1"></span><span class="p">}</span> 
+</code></pre></div><p>This is how it works:</p>
+<ul>
+<li>The expression is evaluated once</li>
+<li>The value of the <code>switch</code> expression is compared with the values of each <code>case</code></li>
+<li>If there is a match, the associated block of code is executed</li>
+<li>The <code>default</code> keyword is optional. It specifies some code to run if there is no <code>case</code> match</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="nx">day</span> <span class="o">:=</span> <span class="mi">3</span>
+<span class="k">switch</span> <span class="nx">day</span> <span class="p">{</span>
+<span class="k">case</span> <span class="mi">1</span><span class="p">:</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;One&#34;</span><span class="p">)</span>
+<span class="k">case</span> <span class="mi">2</span><span class="p">:</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Two&#34;</span><span class="p">)</span>
+<span class="k">case</span> <span class="mi">3</span><span class="p">:</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Three&#34;</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div><h3 id="default-keyword">default Keyword</h3>
+<p>The default keyword specifies some code to run if there is no case match:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="nx">day</span> <span class="o">:=</span> <span class="mi">4</span>
+<span class="k">switch</span> <span class="nx">day</span> <span class="p">{</span>
+<span class="k">case</span> <span class="mi">1</span><span class="p">:</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;One&#34;</span><span class="p">)</span>
+<span class="k">case</span> <span class="mi">2</span><span class="p">:</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Two&#34;</span><span class="p">)</span>
+<span class="k">case</span> <span class="mi">3</span><span class="p">:</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Three&#34;</span><span class="p">)</span>
+<span class="k">default</span><span class="p">:</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Not in the [1-3] range&#34;</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div><blockquote>
+<p><strong>Note</strong>: All the <code>case</code> values should have the same type as the <code>switch</code>
+expression. Otherwise, the compiler will raise an error</p>
+</blockquote>
+<h2 id="multi-case-switch-statement">Multi-case switch Statement</h2>
+<p>It is possible to have multiple values for each case in the switch statement:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="k">switch</span> <span class="nx">expression</span> <span class="p">{</span>
+<span class="k">case</span> <span class="nx">x</span><span class="p">,</span><span class="nx">y</span><span class="p">:</span>
+	<span class="c1">// code block if expression is evaluated to x or y
+</span><span class="c1"></span><span class="k">case</span> <span class="nx">v</span><span class="p">,</span><span class="nx">w</span><span class="p">:</span>
+	<span class="c1">// code block if expression is evaluated to v or w
+</span><span class="c1"></span><span class="k">case</span> <span class="nx">z</span><span class="p">:</span>
+<span class="o">...</span>
+<span class="k">default</span><span class="p">:</span>
+	<span class="c1">// code block if expression is not found in any cases
+</span><span class="c1"></span><span class="p">}</span> 
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="nx">day</span> <span class="o">:=</span> <span class="mi">5</span>
+
+<span class="k">switch</span> <span class="nx">day</span> <span class="p">{</span>
+<span class="k">case</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">:</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Odd weekday&#34;</span><span class="p">)</span>
+<span class="k">case</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Even weekday&#34;</span><span class="p">)</span>
+<span class="k">case</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">:</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Weekend&#34;</span><span class="p">)</span>
+<span class="k">default</span><span class="p">:</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Invalid day of day number&#34;</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div><!--}}}-->
+<h1 id="loops-----">Loops <!--{{{--></h1>
+<h2 id="for-loop">For Loop</h2>
+<p>The <code>for</code> loop loops through a block of code a specified number of times.
+And <code>for</code> loop is the only loop available in Go.</p>
+<p>Loops are handy if you want to run the same code over and over again, each time
+with a different value.</p>
+<p>Each execution of a loop is called an <strong>iteration</strong>.</p>
+<p>The <code>for</code> loop can take up to three statements:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="k">for</span> <span class="nx">statement1</span><span class="p">;</span> <span class="nx">statement2</span><span class="p">;</span> <span class="nx">statement3</span> <span class="p">{</span>
+	<span class="c1">// code to be executed for each iteration
+</span><span class="c1"></span><span class="p">}</span> 
+</code></pre></div><ul>
+<li><strong>statement1</strong> - Initializes the loop counter value.</li>
+<li><strong>statement2</strong> - Evaluated for each loop iteration. If it evaluates to TRUE,
+the loop continues. If it evaluates to FALSE, the loop ends.</li>
+<li><strong>statement3</strong> - Increases the loop counter value.</li>
+</ul>
+<blockquote>
+<p><strong>Note</strong>: These statements don&rsquo;t need to be present as loops arguments.
+However, they need to be present in the code in some form.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="k">for</span> <span class="nx">i</span><span class="o">:=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="mi">5</span><span class="p">,</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div><h2 id="continue-statement">continue Statement</h2>
+<p>The <code>continue</code> statement is used to skip one or more iterations in the loop. It
+then continues with the next iteration in the loop.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="k">for</span> <span class="nx">i</span><span class="o">:=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+	<span class="k">if</span> <span class="nx">i</span> <span class="o">==</span> <span class="mi">3</span> <span class="p">{</span>
+		<span class="k">continue</span>
+	<span class="p">}</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div><h2 id="break-statement">break Statement</h2>
+<p>The <code>break</code> statement is used to break/terminate the loop execution.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="k">for</span> <span class="nx">i</span><span class="o">:=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+	<span class="k">if</span> <span class="nx">i</span> <span class="o">==</span> <span class="mi">3</span> <span class="p">{</span>
+		<span class="k">break</span>
+	<span class="p">}</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div><blockquote>
+<p><strong>Note</strong>: <code>continue</code> and <code>break</code> are usually used with conditions.</p>
+</blockquote>
+<h2 id="nested-loops">Nested Loops</h2>
+<p>It is possible to place a loop inside another loop.</p>
+<p>Here, the &ldquo;inner loop&rdquo; will be executed one time for each iteration of the
+&ldquo;outer loop&rdquo;:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="k">for</span> <span class="nx">i</span><span class="o">:=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="mi">5</span><span class="p">,</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+	<span class="k">for</span> <span class="nx">j</span><span class="o">:=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">j</span> <span class="p">&lt;</span> <span class="mi">5</span><span class="p">,</span> <span class="nx">j</span><span class="o">++</span> <span class="p">{</span>
+		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;%d\t&#34;</span><span class="p">,</span><span class="nx">i</span> <span class="o">*</span> <span class="nx">j</span><span class="p">)</span>
+	<span class="p">}</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">()</span>
+<span class="p">}</span>
+</code></pre></div><h2 id="range-keyword">Range Keyword</h2>
+<p>The <code>range</code> keyword is used to more easily iterate over an array, slice or map.
+It returns both the index and the value.</p>
+<p>The <code>range</code> keyword is used like this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="k">for</span> <span class="nx">index</span><span class="p">,</span> <span class="nx">value</span> <span class="o">:=</span> <span class="nx">array</span><span class="p">|</span><span class="nx">slice</span><span class="p">|</span><span class="kd">map</span> <span class="p">{</span>
+	<span class="c1">// code to be executed for each iteration
+</span><span class="c1"></span><span class="p">}</span> 
+</code></pre></div><ul>
+<li>This example uses <code>range</code> to iterate over an array and print both the indexes
+and the values at each (<code>idx</code> stores the index, <code>val</code> stores the value):</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="nx">fruits</span> <span class="o">:=</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="kt">string</span><span class="p">{</span><span class="s">&#34;apple&#34;</span><span class="p">,</span> <span class="s">&#34;orange&#34;</span><span class="p">,</span> <span class="s">&#34;banana&#34;</span><span class="p">}</span>
+<span class="k">for</span> <span class="nx">idx</span><span class="p">,</span> <span class="nx">val</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">fruits</span> <span class="p">{</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;%v\t%v\n&#34;</span><span class="p">,</span> <span class="nx">idx</span><span class="p">,</span> <span class="nx">val</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div><blockquote>
+<p><strong>Tip</strong>: To only show the value or the index, you can omit the other output
+using an underscore (<code>_</code>).</p>
+</blockquote>
+<!--}}}-->
+<h1 id="functions-----">Functions <!--{{{--></h1>
+<p>A function is a block of statements that can be used repeatedly in a program.
+A function will not execute automatically when a page loads.
+A function will be executed by a call to the function.</p>
+<h2 id="create-a-function">Create a Function</h2>
+<p>To create (often referred to as declare) a function, do the following:</p>
+<ul>
+<li>Use the <code>func</code> keyword.</li>
+<li>Specify a name for the function, followed by parentheses ().</li>
+<li>Finally, add code that defines what the function should do, inside curly braces {}.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">FunctionName</span><span class="p">()</span> <span class="p">{</span>
+	<span class="c1">// code to be executed
+</span><span class="c1"></span><span class="p">}</span> 
+</code></pre></div><h2 id="call-a-function">Call a Function</h2>
+<p>Functions are not executed immediately. They are &ldquo;saved for later use&rdquo;, and
+will be executed when they are called.</p>
+<p>In the example below, we create a function named &ldquo;myMessage()&rdquo;. The opening
+curly brace ( { ) indicates the beginning of the function code, and the closing
+curly brace ( } ) indicates the end of the function. The function outputs &ldquo;I
+just got executed!&rdquo;. To call the function, just write its name followed by two
+parentheses ():</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">myMessage</span><span class="p">()</span> <span class="p">{</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;I just got executed!&#34;</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="nf">myMessage</span><span class="p">()</span> <span class="c1">// call the function
+</span><span class="c1"></span><span class="p">}</span> 
+</code></pre></div><ul>
+<li>A function can be called multiple times.</li>
+</ul>
+<h2 id="naming-rules-for-go-functions">Naming Rules for Go Functions</h2>
+<ul>
+<li>A function name must start with a letter</li>
+<li>A function name can only contain alpha-numeric characters and underscores (<code>A-z</code>, <code>0-9</code>, and <code>_</code> )</li>
+<li>Function names are case-sensitive</li>
+<li>A function name cannot contain spaces</li>
+<li>If the function name consists of multiple words, techniques introduced for multi-word variable naming can be used</li>
+</ul>
+<blockquote>
+<p><strong>Tip</strong>: Give the function a name that reflects what the function does!</p>
+</blockquote>
+<h2 id="parameters-and-arguments">Parameters and Arguments</h2>
+<p>Information can be passed to functions as a parameter. Parameters act as
+variables inside the function.</p>
+<p>Parameters and their types are specified after the function name, inside the
+parentheses. You can add as many parameters as you want, just separate them
+with a comma:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">FunctionName</span><span class="p">(</span><span class="nx">param1</span> <span class="kd">type</span><span class="p">,</span> <span class="nx">param2</span> <span class="kd">type</span><span class="p">,</span> <span class="nx">param3</span> <span class="kd">type</span><span class="p">)</span> <span class="p">{</span>
+	<span class="c1">// code to be executed
+</span><span class="c1"></span><span class="p">}</span> 
+</code></pre></div><h3 id="function-with-parameter-example">Function With Parameter Example</h3>
+<p>The following example has a function with one parameter (<code>fname</code>) of type
+<code>string</code>. When the familyName() function is called, we also pass along a name
+(e.g. Liam), and the name is used inside the function, which outputs several
+different first names, but an equal last name:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">familyName</span><span class="p">(</span><span class="nx">fname</span> <span class="kt">string</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Hello&#34;</span><span class="p">,</span> <span class="nx">fname</span><span class="p">,</span> <span class="s">&#34;Refsnes&#34;</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="nf">familyName</span><span class="p">(</span><span class="s">&#34;Liam&#34;</span><span class="p">)</span>
+	<span class="nf">familyName</span><span class="p">(</span><span class="s">&#34;Jenny&#34;</span><span class="p">)</span>
+	<span class="nf">familyName</span><span class="p">(</span><span class="s">&#34;Anja&#34;</span><span class="p">)</span>
+<span class="p">}</span> 
+</code></pre></div><p>Result:</p>
+<pre><code>Hello Liam Refsnes
+Hello Jenny Refsnes
+Hello Anja Refsnes
+</code></pre>
+<blockquote>
+<p><strong>Note</strong>: When a <strong>parameter</strong> is passed to the function, it is called an
+<strong>argument</strong>. So, from the example above: <code>fname</code> is a <strong>parameter</strong>, while
+<code>Liam</code>, <code>Jenny</code> and <code>Anja</code> are <strong>arguments</strong>.</p>
+</blockquote>
+<h3 id="multiple-parameters">Multiple Parameters</h3>
+<p>Inside the function, you can add as many parameters as you want:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">familyName</span><span class="p">(</span><span class="nx">fname</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">age</span> <span class="kt">int</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Hello&#34;</span><span class="p">,</span> <span class="nx">age</span><span class="p">,</span> <span class="s">&#34;year old&#34;</span><span class="p">,</span> <span class="nx">fname</span><span class="p">,</span> <span class="s">&#34;Refsnes&#34;</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div><blockquote>
+<p><strong>Note</strong>: When you are working with multiple parameters, the function call
+must have the same number of arguments as there are parameters, and the
+arguments must be passed in the same order.</p>
+</blockquote>
+<h2 id="function-returns">Function Returns</h2>
+<h3 id="values">Values</h3>
+<p>If you want the function to return a value, you need to define the data type of
+the return value (such as <code>int</code>, <code>string</code>, etc), and also use the <code>return</code>
+keyword inside the function:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">FunctionName</span><span class="p">(</span><span class="nx">param1</span> <span class="kd">type</span><span class="p">,</span> <span class="nx">param2</span> <span class="kd">type</span><span class="p">)</span> <span class="kd">type</span> <span class="p">{</span>
+	<span class="c1">// code to be executed
+</span><span class="c1"></span>	<span class="k">return</span> <span class="nx">output</span>
+<span class="p">}</span> 
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">myFunction</span><span class="p">(</span><span class="nx">x</span> <span class="kt">int</span><span class="p">,</span> <span class="nx">y</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
+	<span class="k">return</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nf">myFunction</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="p">}</span> 
+</code></pre></div><p>In Go, you can name the return values of a function.</p>
+<p>Here, we name the return value as <code>result</code> (of type <code>int</code>), and return the
+value with a naked return (means that we use the <code>return</code> statement without
+specifying the variable name):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">myFunction</span><span class="p">(</span><span class="nx">x</span> <span class="kt">int</span><span class="p">,</span> <span class="nx">y</span> <span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="nx">result</span> <span class="kt">int</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">result</span> <span class="p">=</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span>
+	<span class="k">return</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nf">myFunction</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="p">}</span> 
+</code></pre></div><p>The example above can also be written like this. Here, the return statement
+specifies the variable name:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">myFunction</span><span class="p">(</span><span class="nx">x</span> <span class="kt">int</span><span class="p">,</span> <span class="nx">y</span> <span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="nx">result</span> <span class="kt">int</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">result</span> <span class="p">=</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span>
+	<span class="k">return</span> <span class="nx">result</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nf">myFunction</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="p">}</span> 
+</code></pre></div><h3 id="store-the-return-value-in-a-variable">Store the Return Value in a Variable</h3>
+<p>You can also store the return value in a variable, like this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">myFunction</span><span class="p">(</span><span class="nx">x</span> <span class="kt">int</span><span class="p">,</span> <span class="nx">y</span> <span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="nx">result</span> <span class="kt">int</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">result</span> <span class="p">=</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span>
+	<span class="k">return</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="nx">total</span> <span class="o">:=</span> <span class="nf">myFunction</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">total</span><span class="p">)</span>
+<span class="p">}</span> 
+</code></pre></div><h3 id="multiple-return-values">Multiple Return Values</h3>
+<p>Go functions can also return multiple values.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">myFunction</span><span class="p">(</span><span class="nx">x</span> <span class="kt">int</span><span class="p">,</span> <span class="nx">y</span> <span class="kt">string</span><span class="p">)</span> <span class="p">(</span><span class="nx">result</span> <span class="kt">int</span><span class="p">,</span> <span class="nx">txt1</span> <span class="kt">string</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">result</span> <span class="p">=</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">x</span>
+	<span class="nx">txt1</span> <span class="p">=</span> <span class="nx">y</span> <span class="o">+</span> <span class="s">&#34; World!&#34;</span>
+	<span class="k">return</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nf">myFunction</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s">&#34;Hello&#34;</span><span class="p">))</span>
+<span class="p">}</span> 
+</code></pre></div><p>If we (for some reason) do not want to use some of the returned values, we can
+add an underscore (<code>_</code>) to omit this value.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">myFunction</span><span class="p">(</span><span class="nx">x</span> <span class="kt">int</span><span class="p">,</span> <span class="nx">y</span> <span class="kt">string</span><span class="p">)</span> <span class="p">(</span><span class="nx">result</span> <span class="kt">int</span><span class="p">,</span> <span class="nx">txt1</span> <span class="kt">string</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">result</span> <span class="p">=</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">x</span>
+	<span class="nx">txt1</span> <span class="p">=</span> <span class="nx">y</span> <span class="o">+</span> <span class="s">&#34; World!&#34;</span>
+	<span class="k">return</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	 <span class="nx">_</span><span class="p">,</span> <span class="nx">b</span> <span class="o">:=</span> <span class="nf">myFunction</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s">&#34;Hello&#34;</span><span class="p">)</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">b</span><span class="p">)</span>
+<span class="p">}</span> 
+</code></pre></div><h2 id="recursion-functions">Recursion Functions</h2>
+<p>Go accepts recursion functions. A function is recursive if it calls itself and
+reaches a stop condition.</p>
+<p>In the following example, <code>testcount()</code> is a function that calls itself. We use
+the <code>x</code> variable as the data, which increments with 1 (<code>x + 1</code>) every time we
+recurse. The recursion ends when the <code>x</code> variable equals to 11 (<code>x == 11</code>).</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
+<span class="kn">import</span> <span class="p">(</span><span class="s">&#34;fmt&#34;</span><span class="p">)</span>
+
+<span class="kd">func</span> <span class="nf">testcount</span><span class="p">(</span><span class="nx">x</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
+	<span class="k">if</span> <span class="nx">x</span> <span class="o">==</span> <span class="mi">11</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="mi">0</span>
+	<span class="p">}</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span>
+	<span class="k">return</span> <span class="nf">testcount</span><span class="p">(</span><span class="nx">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">main</span><span class="p">(){</span>
+	<span class="nf">testcount</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="p">}</span> 
+</code></pre></div><p>Recursion is a common mathematical and programming concept. This has the
+benefit of meaning that you can loop through data to reach a result.</p>
+<p>The developer should be careful with recursion functions as it can be quite
+easy to slip into writing a function which never terminates, or one that uses
+excess amounts of memory or processor power. However, when written correctly
+recursion can be a very efficient and mathematically-elegant approach to
+programming.</p>
+<p>In the following example, <code>factorial_recursion()</code> is a function that calls
+itself. We use the <code>x</code> variable as the data, which decrements (-1) every time
+we recurse. The recursion ends when the condition is not greater than 0 (i.e.
+when it is 0).</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
+<span class="kn">import</span> <span class="p">(</span><span class="s">&#34;fmt&#34;</span><span class="p">)</span>
+
+<span class="kd">func</span> <span class="nf">factorial_recursion</span><span class="p">(</span><span class="nx">x</span> <span class="kt">float64</span><span class="p">)</span> <span class="p">(</span><span class="nx">y</span> <span class="kt">float64</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">if</span> <span class="nx">x</span> <span class="p">&gt;</span> <span class="mi">0</span> <span class="p">{</span>
+		 <span class="nx">y</span> <span class="p">=</span> <span class="nx">x</span> <span class="o">*</span> <span class="nf">factorial_recursion</span><span class="p">(</span><span class="nx">x</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+	<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+		 <span class="nx">y</span> <span class="p">=</span> <span class="mi">1</span>
+	<span class="p">}</span>
+	<span class="k">return</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nf">factorial_recursion</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
+<span class="p">}</span> 
+</code></pre></div><p>To a new developer it can take some time to work out how exactly this works,
+best way to find out is by testing and modifying it.</p>
+<!--}}}-->
+<h1 id="struct-----">Struct <!--{{{--></h1>
+<p>A struct (short for structure) is used to create a collection of members of
+different data types, into a single variable.</p>
+<p>While arrays are used to store multiple values of the same data type into a
+single variable, structs are used to store multiple values of different data
+types into a single variable.</p>
+<p>A struct can be useful for grouping data together to create records.</p>
+<h1 id="declare-a-struct">Declare a Struct</h1>
+<p>To declare a structure in Go, use the <code>type</code> and <code>struct</code> keywords:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">struct_name</span> <span class="kd">struct</span> <span class="p">{</span>
+	<span class="nx">member1</span> <span class="nx">datatype</span><span class="p">;</span>
+	<span class="nx">member2</span> <span class="nx">datatype</span><span class="p">;</span>
+	<span class="nx">member3</span> <span class="nx">datatype</span><span class="p">;</span>
+	<span class="o">...</span>
+<span class="p">}</span> 
+</code></pre></div><p>Here we declare a struct type <code>Person</code> with the following members: <code>name</code>,
+<code>age</code>, <code>job</code> and <code>salary</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">Person</span> <span class="kd">struct</span> <span class="p">{</span>
+	<span class="nx">name</span> <span class="kt">string</span>
+	<span class="nx">age</span> <span class="kt">int</span>
+	<span class="nx">job</span> <span class="kt">string</span>
+	<span class="nx">salary</span> <span class="kt">int</span>
+<span class="p">}</span> 
+</code></pre></div><blockquote>
+<p><strong>Tip</strong>: Notice that the struct members above have different data types.
+<code>name</code> and <code>job</code> is of type string, while <code>age</code> and <code>salary</code> is of type int.</p>
+</blockquote>
+<h2 id="access-struct-members">Access Struct Members</h2>
+<p>To access any member of a structure, use the dot operator (.) between the
+structure variable name and the structure member:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">Person</span> <span class="kd">struct</span> <span class="p">{</span>
+	<span class="nx">name</span> <span class="kt">string</span>
+	<span class="nx">age</span> <span class="kt">int</span>
+	<span class="nx">job</span> <span class="kt">string</span>
+	<span class="nx">salary</span> <span class="kt">int</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="kd">var</span> <span class="nx">pers1</span> <span class="nx">Person</span>
+	<span class="kd">var</span> <span class="nx">pers2</span> <span class="nx">Person</span>
+	<span class="cm">/* Pers1 specification */</span>
+	<span class="nx">pers1</span><span class="p">.</span><span class="nx">name</span> <span class="p">=</span> <span class="s">&#34;Hege&#34;</span>
+	<span class="nx">pers1</span><span class="p">.</span><span class="nx">age</span> <span class="p">=</span> <span class="mi">45</span>
+	<span class="nx">pers1</span><span class="p">.</span><span class="nx">job</span> <span class="p">=</span> <span class="s">&#34;Teacher&#34;</span>
+	<span class="nx">pers1</span><span class="p">.</span><span class="nx">salary</span> <span class="p">=</span> <span class="mi">6000</span>
+	<span class="cm">/* Pers2 specification */</span>
+	<span class="nx">pers2</span><span class="p">.</span><span class="nx">name</span> <span class="p">=</span> <span class="s">&#34;Cecilie&#34;</span>
+	<span class="nx">pers2</span><span class="p">.</span><span class="nx">age</span> <span class="p">=</span> <span class="mi">24</span>
+	<span class="nx">pers2</span><span class="p">.</span><span class="nx">job</span> <span class="p">=</span> <span class="s">&#34;Marketing&#34;</span>
+	<span class="nx">pers2</span><span class="p">.</span><span class="nx">salary</span> <span class="p">=</span> <span class="mi">4500</span>
+<span class="p">}</span>
+</code></pre></div><h2 id="pass-struct-as-function-arguments">Pass Struct as Function Arguments</h2>
+<p>You can also pass a structure as a function argument, like this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">Person</span> <span class="kd">struct</span> <span class="p">{</span>
+	<span class="nx">name</span> <span class="kt">string</span>
+	<span class="nx">age</span> <span class="kt">int</span>
+	<span class="nx">job</span> <span class="kt">string</span>
+	<span class="nx">salary</span> <span class="kt">int</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="kd">var</span> <span class="nx">pers1</span> <span class="nx">Person</span>
+	<span class="cm">/* Pers1 specification */</span>
+	<span class="nx">pers1</span><span class="p">.</span><span class="nx">name</span> <span class="p">=</span> <span class="s">&#34;Hege&#34;</span>
+	<span class="nx">pers1</span><span class="p">.</span><span class="nx">age</span> <span class="p">=</span> <span class="mi">45</span>
+	<span class="nx">pers1</span><span class="p">.</span><span class="nx">job</span> <span class="p">=</span> <span class="s">&#34;Teacher&#34;</span>
+	<span class="nx">pers1</span><span class="p">.</span><span class="nx">salary</span> <span class="p">=</span> <span class="mi">6000</span>
+	<span class="cm">/* Print Pers1 info by calling a function */</span>
+	<span class="nf">printPerson</span><span class="p">(</span><span class="nx">pers1</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">printPerson</span><span class="p">(</span><span class="nx">pers</span> <span class="nx">Person</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Name: &#34;</span><span class="p">,</span> <span class="nx">pers</span><span class="p">.</span><span class="nx">name</span><span class="p">)</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Age: &#34;</span><span class="p">,</span> <span class="nx">pers</span><span class="p">.</span><span class="nx">age</span><span class="p">)</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Job: &#34;</span><span class="p">,</span> <span class="nx">pers</span><span class="p">.</span><span class="nx">job</span><span class="p">)</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Salary: &#34;</span><span class="p">,</span> <span class="nx">pers</span><span class="p">.</span><span class="nx">salary</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div><!--}}}-->
+<h1 id="maps-----">Maps <!--{{{--></h1>
+<p>Maps are used to store data values in <code>key:value</code> pairs.
+Each element in a map is a <code>key:value</code> pair.
+A map is an unordered and changeable collection that does not allow duplicates.</p>
+<p>The length of a map is the number of its elements. You can find it using the <code>len()</code> function.
+The default value of a map is nil.
+Maps hold references to an underlying hash table.</p>
+<p>Go has multiple ways for creating maps.</p>
+<h2 id="creating-maps-using-var-and-">Creating Maps Using <code>var</code> and <code>:=</code></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">var</span> <span class="nx">a</span> <span class="p">=</span> <span class="kd">map</span><span class="p">[</span><span class="nx">KeyType</span><span class="p">]</span><span class="nx">ValueType</span><span class="p">{</span><span class="nx">key1</span><span class="p">:</span><span class="nx">value1</span><span class="p">,</span> <span class="nx">key2</span><span class="p">:</span><span class="nx">value2</span><span class="p">,</span><span class="o">...</span><span class="p">}</span>
+<span class="nx">b</span> <span class="o">:=</span> <span class="kd">map</span><span class="p">[</span><span class="nx">KeyType</span><span class="p">]</span><span class="nx">ValueType</span><span class="p">{</span><span class="nx">key1</span><span class="p">:</span><span class="nx">value1</span><span class="p">,</span> <span class="nx">key2</span><span class="p">:</span><span class="nx">value2</span><span class="p">,</span><span class="o">...</span><span class="p">}</span>
+</code></pre></div><ul>
+<li>This example shows how to create maps in Go. Notice the order in the code and in the output</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
+<span class="kn">import</span> <span class="p">(</span><span class="s">&#34;fmt&#34;</span><span class="p">)</span>
+
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="kd">var</span> <span class="nx">a</span> <span class="p">=</span> <span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">string</span><span class="p">{</span><span class="s">&#34;brand&#34;</span><span class="p">:</span> <span class="s">&#34;Ford&#34;</span><span class="p">,</span> <span class="s">&#34;model&#34;</span><span class="p">:</span> <span class="s">&#34;Mustang&#34;</span><span class="p">}</span>
+	<span class="nx">b</span> <span class="o">:=</span> <span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span><span class="s">&#34;Oslo&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s">&#34;Bergen&#34;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s">&#34;Trondheim&#34;</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
+
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;a\t%v\n&#34;</span><span class="p">,</span> <span class="nx">a</span><span class="p">)</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;b\t%v\n&#34;</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span>
+<span class="p">}</span> 
+</code></pre></div><p>Result:</p>
+<pre><code>a       map[brand:Ford model:Mustang]
+b       map[Bergen:2 Oslo:1 Trondheim:3]
+</code></pre>
+<blockquote>
+<p><strong>Note</strong>: The order of the map elements defined in the code is different from
+the way that they are stored. The data are stored in a way to have efficient
+data retrieval from the map.</p>
+</blockquote>
+<h2 id="creating-maps-using-using-make-function">Creating Maps Using Using <code>make()</code> Function</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">var</span> <span class="nx">a</span> <span class="p">=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">map</span><span class="p">[</span><span class="nx">KeyType</span><span class="p">]</span><span class="nx">ValueType</span><span class="p">)</span>
+<span class="nx">b</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">map</span><span class="p">[</span><span class="nx">KeyType</span><span class="p">]</span><span class="nx">ValueType</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="kd">var</span> <span class="nx">a</span> <span class="p">=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">string</span><span class="p">)</span> <span class="c1">// The map is empty now
+</span><span class="c1"></span>	<span class="nx">a</span><span class="p">[</span><span class="s">&#34;brand&#34;</span><span class="p">]</span> <span class="p">=</span> <span class="s">&#34;Ford&#34;</span>
+	<span class="nx">a</span><span class="p">[</span><span class="s">&#34;model&#34;</span><span class="p">]</span> <span class="p">=</span> <span class="s">&#34;Mustang&#34;</span>
+	<span class="nx">a</span><span class="p">[</span><span class="s">&#34;year&#34;</span><span class="p">]</span> <span class="p">=</span> <span class="s">&#34;1964&#34;</span>
+
+	<span class="nx">b</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">int</span><span class="p">)</span>
+	<span class="nx">b</span><span class="p">[</span><span class="s">&#34;Oslo&#34;</span><span class="p">]</span> <span class="p">=</span> <span class="mi">1</span>
+	<span class="nx">b</span><span class="p">[</span><span class="s">&#34;Bergen&#34;</span><span class="p">]</span> <span class="p">=</span> <span class="mi">2</span>
+	<span class="nx">b</span><span class="p">[</span><span class="s">&#34;Trondheim&#34;</span><span class="p">]</span> <span class="p">=</span> <span class="mi">3</span>
+	<span class="nx">b</span><span class="p">[</span><span class="s">&#34;Stavanger&#34;</span><span class="p">]</span> <span class="p">=</span> <span class="mi">4</span>
+<span class="p">}</span>
+</code></pre></div><h2 id="creating-an-empty-map">Creating an Empty Map</h2>
+<p>There are two ways to create an empty map. One is by using the <code>make()</code>
+function and the other is by using the following syntax.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">var</span> <span class="nx">a</span> <span class="kd">map</span><span class="p">[</span><span class="nx">KeyType</span><span class="p">]</span><span class="nx">ValueType</span>
+</code></pre></div><blockquote>
+<p><strong>Note</strong>: The <code>make()</code> function is the right way to create an empty map. If
+you make an empty map in a different way and write to it, it will causes a
+runtime panic.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="kd">var</span> <span class="nx">a</span> <span class="p">=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">string</span><span class="p">)</span>
+	<span class="kd">var</span> <span class="nx">b</span> <span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">string</span>
+
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">a</span> <span class="o">==</span> <span class="kc">nil</span><span class="p">)</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">b</span> <span class="o">==</span> <span class="kc">nil</span><span class="p">)</span>
+<span class="p">}</span> 
+</code></pre></div><p>Result:</p>
+<pre><code>false
+true
+</code></pre>
+<h2 id="allowed-key-types">Allowed Key Types</h2>
+<p>The map key can be of any data type for which the equality operator (<code>==</code>) is defined. These include:</p>
+<ul>
+<li>Booleans</li>
+<li>Numbers</li>
+<li>Strings</li>
+<li>Arrays</li>
+<li>Pointers</li>
+<li>Structs</li>
+<li>Interfaces (as long as the dynamic type supports equality)</li>
+</ul>
+<p>Invalid key types are:</p>
+<ul>
+<li>Slices</li>
+<li>Maps</li>
+<li>Functions</li>
+</ul>
+<p>These types are invalid because the equality operator (<code>==</code>) is not defined for them.</p>
+<h2 id="allowed-value-types">Allowed Value Types</h2>
+<p>The map values can be <strong>any</strong> type.</p>
+<h2 id="accessing-map-elements">Accessing Map Elements</h2>
+<p>You can access map elements by:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="nx">value</span> <span class="p">=</span> <span class="nx">map_name</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">var</span> <span class="nx">a</span> <span class="p">=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">string</span><span class="p">)</span>
+<span class="nx">a</span><span class="p">[</span><span class="s">&#34;brand&#34;</span><span class="p">]</span> <span class="p">=</span> <span class="s">&#34;Ford&#34;</span>
+<span class="nx">a</span><span class="p">[</span><span class="s">&#34;model&#34;</span><span class="p">]</span> <span class="p">=</span> <span class="s">&#34;Mustang&#34;</span>
+<span class="nx">a</span><span class="p">[</span><span class="s">&#34;year&#34;</span><span class="p">]</span> <span class="p">=</span> <span class="s">&#34;1964&#34;</span>
+
+<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="nx">a</span><span class="p">[</span><span class="s">&#34;brand&#34;</span><span class="p">])</span>
+</code></pre></div><h2 id="updating-and-adding-map-elements">Updating and Adding Map Elements</h2>
+<p>Updating or adding an elements are done by:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="nx">map_name</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="p">=</span> <span class="nx">value</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">var</span> <span class="nx">a</span> <span class="p">=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">string</span><span class="p">)</span>
+<span class="nx">a</span><span class="p">[</span><span class="s">&#34;brand&#34;</span><span class="p">]</span> <span class="p">=</span> <span class="s">&#34;Ford&#34;</span>
+<span class="nx">a</span><span class="p">[</span><span class="s">&#34;model&#34;</span><span class="p">]</span> <span class="p">=</span> <span class="s">&#34;Mustang&#34;</span>
+<span class="nx">a</span><span class="p">[</span><span class="s">&#34;year&#34;</span><span class="p">]</span> <span class="p">=</span> <span class="s">&#34;1964&#34;</span>
+
+<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span>
+
+<span class="nx">a</span><span class="p">[</span><span class="s">&#34;year&#34;</span><span class="p">]</span> <span class="p">=</span> <span class="s">&#34;1970&#34;</span> <span class="c1">// Updating an element
+</span><span class="c1"></span><span class="nx">a</span><span class="p">[</span><span class="s">&#34;color&#34;</span><span class="p">]</span> <span class="p">=</span> <span class="s">&#34;red&#34;</span> <span class="c1">// Adding an element
+</span><span class="c1"></span>
+<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span>
+</code></pre></div><h2 id="remove-element-from-map">Remove Element from Map</h2>
+<p>Removing elements is done using the <code>delete()</code> function.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="nb">delete</span><span class="p">(</span><span class="nx">map_name</span><span class="p">,</span> <span class="nx">key</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">var</span> <span class="nx">a</span> <span class="p">=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">string</span><span class="p">)</span>
+<span class="nx">a</span><span class="p">[</span><span class="s">&#34;brand&#34;</span><span class="p">]</span> <span class="p">=</span> <span class="s">&#34;Ford&#34;</span>
+<span class="nx">a</span><span class="p">[</span><span class="s">&#34;model&#34;</span><span class="p">]</span> <span class="p">=</span> <span class="s">&#34;Mustang&#34;</span>
+<span class="nx">a</span><span class="p">[</span><span class="s">&#34;year&#34;</span><span class="p">]</span> <span class="p">=</span> <span class="s">&#34;1964&#34;</span>
+
+<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span>
+
+<span class="nb">delete</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="s">&#34;year&#34;</span><span class="p">)</span>
+
+<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span>
+</code></pre></div><h2 id="check-for-specific-elements-in-a-map">Check For Specific Elements in a Map</h2>
+<p>You can check if a certain key exists in a map using:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="nx">val</span><span class="p">,</span> <span class="nx">ok</span> <span class="o">:=</span><span class="nx">map_name</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span>
+</code></pre></div><p>If you only want to check the existence of a certain key, you can use the blank
+identifier (<code>_</code>) in place of val.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">a</span> <span class="p">=</span> <span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">string</span><span class="p">{</span>
+        <span class="s">&#34;brand&#34;</span><span class="p">:</span> <span class="s">&#34;Ford&#34;</span><span class="p">,</span> <span class="s">&#34;model&#34;</span><span class="p">:</span> <span class="s">&#34;Mustang&#34;</span><span class="p">,</span>
+        <span class="s">&#34;year&#34;</span><span class="p">:</span> <span class="s">&#34;1964&#34;</span><span class="p">,</span> <span class="s">&#34;day&#34;</span><span class="p">:</span><span class="s">&#34;&#34;</span><span class="p">,</span>
+    <span class="p">}</span>
+
+    <span class="cm">/* Checking for existing key and its value */</span>
+    <span class="nx">val1</span><span class="p">,</span> <span class="nx">ok1</span> <span class="o">:=</span> <span class="nx">a</span><span class="p">[</span><span class="s">&#34;brand&#34;</span><span class="p">]</span>
+    <span class="cm">/* Checking for non-existing key and its value */</span>
+    <span class="nx">val2</span><span class="p">,</span> <span class="nx">ok2</span> <span class="o">:=</span> <span class="nx">a</span><span class="p">[</span><span class="s">&#34;color&#34;</span><span class="p">]</span>
+    <span class="cm">/* Checking for existing key and its value */</span>
+    <span class="nx">val3</span><span class="p">,</span> <span class="nx">ok3</span> <span class="o">:=</span> <span class="nx">a</span><span class="p">[</span><span class="s">&#34;day&#34;</span><span class="p">]</span>
+    <span class="cm">/* Only checking for existing key and not its value */</span>
+    <span class="nx">_</span><span class="p">,</span> <span class="nx">ok4</span> <span class="o">:=</span> <span class="nx">a</span><span class="p">[</span><span class="s">&#34;model&#34;</span><span class="p">]</span>
+
+    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">val1</span><span class="p">,</span> <span class="nx">ok1</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">val2</span><span class="p">,</span> <span class="nx">ok2</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">val3</span><span class="p">,</span> <span class="nx">ok3</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">ok4</span><span class="p">)</span>
+<span class="p">}</span> 
+</code></pre></div><p>Result:</p>
+<pre><code>Ford true
+ false
+ true
+true
+</code></pre>
+<h2 id="maps-are-references">Maps Are References</h2>
+<p>Maps are references to hash tables.</p>
+<p>If two map variables refer to the same hash table, changing the content of one
+variable affect the content of the other.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
+<span class="kn">import</span> <span class="p">(</span><span class="s">&#34;fmt&#34;</span><span class="p">)</span>
+
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">a</span> <span class="p">=</span> <span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">string</span><span class="p">{</span>
+        <span class="s">&#34;brand&#34;</span><span class="p">:</span> <span class="s">&#34;Ford&#34;</span><span class="p">,</span> <span class="s">&#34;model&#34;</span><span class="p">:</span> <span class="s">&#34;Mustang&#34;</span><span class="p">,</span>
+        <span class="s">&#34;year&#34;</span><span class="p">:</span> <span class="s">&#34;1964&#34;</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="nx">b</span> <span class="o">:=</span> <span class="nx">a</span>
+
+    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">b</span><span class="p">)</span>
+
+    <span class="nx">b</span><span class="p">[</span><span class="s">&#34;year&#34;</span><span class="p">]</span> <span class="p">=</span> <span class="s">&#34;1970&#34;</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;After change to b:&#34;</span><span class="p">)</span>
+
+    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">b</span><span class="p">)</span>
+<span class="p">}</span> 
+</code></pre></div><p>Result:</p>
+<pre><code>map[brand:Ford model:Mustang year:1964]
+map[brand:Ford model:Mustang year:1964]
+After change to b:
+map[brand:Ford model:Mustang year:1970]
+map[brand:Ford model:Mustang year:1970]
+</code></pre>
+<h2 id="iterating-over-maps">Iterating Over Maps</h2>
+<p>You can use <code>range</code> to iterate over maps.</p>
+<blockquote>
+<p><strong>Note</strong> the order of the elements in the output.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
+<span class="kn">import</span> <span class="p">(</span><span class="s">&#34;fmt&#34;</span><span class="p">)</span>
+
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">a</span> <span class="o">:=</span> <span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span><span class="s">&#34;one&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s">&#34;two&#34;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s">&#34;three&#34;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s">&#34;four&#34;</span><span class="p">:</span> <span class="mi">4</span><span class="p">}</span>
+
+    <span class="k">for</span> <span class="nx">k</span><span class="p">,</span> <span class="nx">v</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">a</span> <span class="p">{</span>
+        <span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;%v : %v, &#34;</span><span class="p">,</span> <span class="nx">k</span><span class="p">,</span> <span class="nx">v</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span> 
+</code></pre></div><p>Result:</p>
+<pre><code>one : 1, two : 2, three : 3, four : 4, 
+</code></pre>
+<h2 id="iterate-over-maps-in-a-specific-order">Iterate Over Maps in a Specific Order</h2>
+<p>Maps are unordered data structures. If you need to iterate over a map in a
+specific order, you must have a separate data structure that specifies that
+order.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="nx">a</span> <span class="o">:=</span> <span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span><span class="s">&#34;one&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s">&#34;two&#34;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s">&#34;three&#34;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s">&#34;four&#34;</span><span class="p">:</span> <span class="mi">4</span><span class="p">}</span>
+<span class="kd">var</span> <span class="nx">b</span> <span class="p">[]</span><span class="kt">string</span>                <span class="c1">// defining the order
+</span><span class="c1"></span><span class="nx">b</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">b</span><span class="p">,</span> <span class="s">&#34;one&#34;</span><span class="p">,</span> <span class="s">&#34;two&#34;</span><span class="p">,</span> <span class="s">&#34;three&#34;</span><span class="p">,</span> <span class="s">&#34;four&#34;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="nx">k</span><span class="p">,</span> <span class="nx">v</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">a</span> <span class="p">{</span>        <span class="c1">// loop with no order
+</span><span class="c1"></span>    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;%v : %v, &#34;</span><span class="p">,</span> <span class="nx">k</span><span class="p">,</span> <span class="nx">v</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">()</span>
+<span class="k">for</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">element</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">b</span> <span class="p">{</span>  <span class="c1">// loop with the defined order
+</span><span class="c1"></span>    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;%v : %v, &#34;</span><span class="p">,</span> <span class="nx">element</span><span class="p">,</span> <span class="nx">a</span><span class="p">[</span><span class="nx">element</span><span class="p">])</span>
+<span class="p">}</span>
+</code></pre></div><!--}}}-->
+<h1 id="source">Source</h1>
+<ul>
+<li><a href="https://www.w3schools.com/go">w3schools.com</a></li>
+</ul>
+
+<br>
+<br>
+
+      
+        <div class="sitemap">
+          
+
+  <details>
+    <summary>
+        <b style="font-size: 150%;">
+          Map
+        </b>
+    </summary>
+
+    <ul></ul>
+  </details>
+
+          
+        </div>
+      
+      
+        </div>
+        </div>
+          
+ </article>
+
+      
+      <br>
+    
+      <footer>
+        <div class="footer">
+          <div class='botbar'>
+
+          <table style="width: 100%;">
+            <tr>
+              <td>
+                <a href="/">Hossein Esmail</a>
+              </td>
+              <td>
+                github?
+              </td>
+            </tr>
+            <tr>
+              <td>
+                    <a href="/index.xml"> Subscribe via RSS for updates. </a>
+                
+              </td>
+              <td>
+                mastodon?!
+              </td>
+            </tr>
+          </table>
+
+          </div>
+        </div>
+      </footer>
+      
+
+
+    </div>
+    </main>
+  </body>
+</html>
