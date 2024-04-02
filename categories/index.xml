@@ -8,9 +8,20 @@
         <language>en-US</language>
         <managingEditor>hosteam01@gmail.com (Hossein Esmailzadeh)</managingEditor>
         <webMaster>hosteam01@gmail.com (Hossein Esmailzadeh)</webMaster>
-        <lastBuildDate>Tue, 02 Apr 2024 22:30:09 +0330</lastBuildDate>
+        <lastBuildDate>Tue, 02 Apr 2024 22:46:29 +0330</lastBuildDate>
         
         <atom:link href="https://hossein-lap.gitgub.io/categories/index.xml" rel="self" type="application/rss+xml" />
+        
+        
+        
+        <item>
+            <title>Dev</title>
+            <link>https://hossein-lap.gitgub.io/categories/dev/</link>
+            <pubDate>Tue, 02 Apr 2024 22:46:29 +0330</pubDate>
+            <author>hosteam01@gmail.com (Hossein Esmailzadeh)</author>
+            <guid>https://hossein-lap.gitgub.io/categories/dev/</guid>
+            <description></description>
+        </item>
         
         
         
@@ -20,17 +31,6 @@
             <pubDate>Tue, 02 Apr 2024 22:30:09 +0330</pubDate>
             <author>hosteam01@gmail.com (Hossein Esmailzadeh)</author>
             <guid>https://hossein-lap.gitgub.io/categories/progamming/</guid>
-            <description></description>
-        </item>
-        
-        
-        
-        <item>
-            <title>Dev</title>
-            <link>https://hossein-lap.gitgub.io/categories/dev/</link>
-            <pubDate>Tue, 02 Apr 2024 22:30:03 +0330</pubDate>
-            <author>hosteam01@gmail.com (Hossein Esmailzadeh)</author>
-            <guid>https://hossein-lap.gitgub.io/categories/dev/</guid>
             <description></description>
         </item>
         

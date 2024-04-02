@@ -4,8 +4,71 @@
     
     
     <url>
+        <loc>https://hossein-lap.gitgub.io/blog/</loc>
+        <lastmod>2024-04-02T22:46:29+03:30</lastmod>
+    </url>
+    
+    
+    
+    <url>
         <loc>https://hossein-lap.gitgub.io/categories/</loc>
-        <lastmod>2024-04-02T22:30:09+03:30</lastmod>
+        <lastmod>2024-04-02T22:46:29+03:30</lastmod>
+    </url>
+    
+    
+    
+    <url>
+        <loc>https://hossein-lap.gitgub.io/tags/cool-tag/</loc>
+        <lastmod>2024-04-02T22:46:29+03:30</lastmod>
+    </url>
+    
+    
+    
+    <url>
+        <loc>https://hossein-lap.gitgub.io/categories/dev/</loc>
+        <lastmod>2024-04-02T22:46:29+03:30</lastmod>
+    </url>
+    
+    
+    
+    <url>
+        <loc>https://hossein-lap.gitgub.io/</loc>
+        <lastmod>2024-04-02T22:46:29+03:30</lastmod>
+    </url>
+    
+    
+    
+    <url>
+        <loc>https://hossein-lap.gitgub.io/blog/sample/</loc>
+        <lastmod>2024-04-02T22:46:29+03:30</lastmod>
+    </url>
+    
+    
+    
+    <url>
+        <loc>https://hossein-lap.gitgub.io/series/</loc>
+        <lastmod>2024-04-02T22:46:29+03:30</lastmod>
+    </url>
+    
+    
+    
+    <url>
+        <loc>https://hossein-lap.gitgub.io/tags/</loc>
+        <lastmod>2024-04-02T22:46:29+03:30</lastmod>
+    </url>
+    
+    
+    
+    <url>
+        <loc>https://hossein-lap.gitgub.io/series/x/</loc>
+        <lastmod>2024-04-02T22:46:29+03:30</lastmod>
+    </url>
+    
+    
+    
+    <url>
+        <loc>https://hossein-lap.gitgub.io/blog/test/</loc>
+        <lastmod>2024-04-02T22:45:38+03:30</lastmod>
     </url>
     
     
@@ -19,13 +82,6 @@
     
     <url>
         <loc>https://hossein-lap.gitgub.io/tags/game/</loc>
-        <lastmod>2024-04-02T22:30:09+03:30</lastmod>
-    </url>
-    
-    
-    
-    <url>
-        <loc>https://hossein-lap.gitgub.io/</loc>
         <lastmod>2024-04-02T22:30:09+03:30</lastmod>
     </url>
     
@@ -67,20 +123,6 @@
     
     
     <url>
-        <loc>https://hossein-lap.gitgub.io/series/</loc>
-        <lastmod>2024-04-02T22:30:09+03:30</lastmod>
-    </url>
-    
-    
-    
-    <url>
-        <loc>https://hossein-lap.gitgub.io/tags/</loc>
-        <lastmod>2024-04-02T22:30:09+03:30</lastmod>
-    </url>
-    
-    
-    
-    <url>
         <loc>https://hossein-lap.gitgub.io/tags/backend/</loc>
         <lastmod>2024-04-02T22:30:03+03:30</lastmod>
     </url>
@@ -89,13 +131,6 @@
     
     <url>
         <loc>https://hossein-lap.gitgub.io/tags/cli/</loc>
-        <lastmod>2024-04-02T22:30:03+03:30</lastmod>
-    </url>
-    
-    
-    
-    <url>
-        <loc>https://hossein-lap.gitgub.io/categories/dev/</loc>
         <lastmod>2024-04-02T22:30:03+03:30</lastmod>
     </url>
     
@@ -151,14 +186,14 @@
     
     
     <url>
-        <loc>https://hossein-lap.gitgub.io/blog/asciidoc/asciidoc/</loc>
+        <loc>https://hossein-lap.gitgub.io/docs/asciidoc/asciidoc/</loc>
         <lastmod>2024-04-02T22:09:44+03:30</lastmod>
     </url>
     
     
     
     <url>
-        <loc>https://hossein-lap.gitgub.io/blog/</loc>
+        <loc>https://hossein-lap.gitgub.io/docs/</loc>
         <lastmod>2024-04-02T22:09:44+03:30</lastmod>
     </url>
     
