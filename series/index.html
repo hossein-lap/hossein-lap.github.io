@@ -1,345 +1,158 @@
 <!DOCTYPE html>
-<html lang="en-US">
-    
-    <head>
-    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
-    <link rel="dns-prefetch" href="https://www.gravatar.com">
-    <link rel="dns-prefetch" href="https://giscus.app">
+<html lang="en">
 
-    <link href="https://gmpg.org/xfn/11" rel="profile">
-    
-    <link rel="canonical" href="https://hossein-lap.gitgub.io/series/">
-    
+    <head><title>Series &ndash; hos</title>
+<meta name="description" content="A [hugo](https://gohugo.io) theme inspired by terminal ricing.">
 
-    <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta http-equiv="Cache-Control" content="public" />
-<!-- Enable responsiveness on mobile devices -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.124.1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8"/>
 
-    
-    
-    
 
-<title>Series • Hossein Esmail</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css" integrity="sha512-IW0nhlW5MgNydsXJO40En2EoCkTTjZhI3yuODrZIc8cQ4h1XcF53PsqDHa09NqnkXuIe0Oiyyj171BqZFwISBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<link rel="stylesheet" href="https://hossein-lap.github.io/css/palettes/hos.css">
+<link rel="stylesheet" href="https://hossein-lap.github.io/css/risotto.css">
+<link rel="stylesheet" href="https://hossein-lap.github.io/css/custom.css">
 
 
 
 
 
 
-
-
-
-
-
-
-
-    
-<meta property="og:locale" content="en_US">
-<meta property="og:site_name" content="Hossein Esmail">
-<meta property="og:title" content="Series">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://hossein-lap.gitgub.io/series/" />
-<meta property="og:description" content="Linux, Vim, Programming stuff">
-<meta property="og:image" content="https://hossein-lap.gitgub.io/images/me/me-circle.png">
-<meta property="og:image:type" content="image/png">
-    
-    
-    
-<meta property="og:image:width" content="799">
-<meta property="og:image:height" content="798">
-    
-
-<meta property="og:updated_time" content="2024-04-02T22:46:29&#43;0330">
-
-
-
-<meta name="twitter:card" content="summary">
-
-<meta name="twitter:title" content="Series">
-
-<meta name="twitter:image" content="https://hossein-lap.gitgub.io/images/me/me-circle.png">
-
-<meta name="twitter:description" content="Linux, Vim, Programming stuff">
-
-    
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/a11y-light.min.css" media="(prefers-color-scheme: light)"><link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/base16/gruvbox-dark-medium.min.css" media="(prefers-color-scheme: dark)">
-
-
-
-
-<link rel="stylesheet" href="https://hossein-lap.gitgub.io/scss/ascii-press.8de5e673fed2b6c0e8335aba945d9a99161d09b493f055785c5e47f9e129411d.css" integrity="sha256-jeXmc/7StsDoM1q6lF2amRYdCbST8FV4XF5H&#43;eEpQR0=">
-
-
-<link rel="stylesheet" href="https://hossein-lap.gitgub.io/scss/ascii-press-dark.6c2ed37b61342606f0d380d3a800a273a4aa0010187e0155de9487bf03ad771d.css" integrity="sha256-bC7Te2E0Jgbw04DTqACic6SqABAYfgFV3pSHvwOtdx0=" media="(prefers-color-scheme: dark)">
-
-
-<link rel="stylesheet" href="https://hossein-lap.gitgub.io/scss/print.2744dcbf8a0b2e74f8a50e4b34e5f441be7cf93cc7de27029121c6a09f9e77bc.css" integrity="sha256-J0Tcv4oLLnT4pQ5LNOX0Qb58&#43;TzH3icCkSHGoJ&#43;ed7w=" media="print">
-
-
-
-
-<link rel="stylesheet" href="https://hossein-lap.gitgub.io/scss/hugo-toc.f44dcd620647796a2cf99d68a804ad4b52dacfcf98383c8344d085949175d65e.css" integrity="sha256-9E3NYgZHeWos&#43;Z1oqAStS1Laz8&#43;YODyDRNCFlJF11l4=">
-
-
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha512-UDJtJXfzfsiPPgnI5S1000FPLBHMhvzAMX15I+qG2E2OAzC9P1JzUwJOfnypXiOH7MRPaqzhPbBGDNNj7zBfoA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha512-qWVvreMuH9i0DrugcOtifxdtZVBBL0X75r9YweXsdCHtXUidlctw7NXg5KVP3ITPtqZ2S575A0wFkvgS2anqSA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <![endif]-->
-
-    <!-- Icons from https://realfavicongenerator.net -->
-<link rel="icon" href="https://hossein-lap.gitgub.io/favicon.svg">
-<link rel="apple-touch-icon" sizes="180x180" href="https://hossein-lap.gitgub.io/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="196x196" href="https://hossein-lap.gitgub.io/favicon-196x196.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://hossein-lap.gitgub.io/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="https://hossein-lap.gitgub.io/favicon-16x16.png">
-<link rel="manifest" href="https://hossein-lap.gitgub.io/manifest.json">
-<meta name="msapplication-TileColor" content="#b64f4f">
-<meta name="theme-color" content="#b64f4f">
-
-
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/v4-shims.min.css" integrity="sha512-fHavkBby/gcFEB2taaBfG0DLdHRGrnvkWQNXVZ5Yb/Fj6LkogecQUd6oyvBVsrWPaHSxs5tNza6LUW/Y6Az9lQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <link rel="alternate" type="application/rss+xml" href="https://hossein-lap.gitgub.io/series/index.xml" title="Hossein Esmail" />
-
-    
 
 </head>
 
+    <body>
+        <div class="page">
 
-    <body class=" ">
+            <header class="page__header"><nav class="page__nav main-nav">
+    <ul>
+    <h1 class="page__logo"><a href="https://hossein-lap.github.io/" class="page__logo-inner">hos</a></h1>
     
-<div class="sidebar">
-  <div class="container ">
-    <div class="sidebar-about">
-      <span class="site__title">
-        <a href="https://hossein-lap.gitgub.io/">Hossein Esmail</a>
-      </span>
-      
-        
-        
-        
-        <div class="author-image">
-          <img src="https://hossein-lap.gitgub.io/images/me/me-circle.png" alt="Author Image" class="img--circle img--headshot element--center">
-        </div>
-        
-      
-      
-      <p class="site__description">
-         Linux, Vim, Programming stuff 
-      </p>
-    </div>
-    <div class="collapsible-menu">
-      <input type="checkbox" id="menuToggle">
-      <label for="menuToggle">Hossein Esmail</label>
-      <div class="menu-content">
-        <div>
-	<ul class="sidebar-nav">
-		 
-		 
-			 
-				<li>
-					<a href="https://hossein-lap.gitgub.io/"><span class='fa-icon'><i class='fas fa-home'></i></span><code>home</code>
-						<span></span>
-					</a>
-				</li>
-			 
-		 
-			 
-				<li>
-					<a href="https://hossein-lap.gitgub.io/docs/"><span class='fa-icon'><i class='fas fa-stream'></i></span><code>blog</code>
-						<span></span>
-					</a>
-				</li>
-			 
-		 
-			 
-				<li>
-					<a href="https://hossein-lap.gitgub.io/notes/"><span class='fa-icon'><i class='fas fa-thumbtack'></i></span><code>notes</code>
-						<span></span>
-					</a>
-				</li>
-			 
-		 
-			 
-				<li>
-					<a href="https://hossein-lap.gitgub.io/series/"><span class='fa-icon'><i class='fas fa-list-alt'></i></span><code>series</code>
-						<span></span>
-					</a>
-				</li>
-			 
-		 
-			 
-				<li>
-					<a href="https://hossein-lap.gitgub.io/tags/"><span class='fa-icon'><i class='fas fa-tags'></i></span><code>tags</code>
-						<span></span>
-					</a>
-				</li>
-			 
-		 
-			 
-				<li>
-					<a href="https://hossein-lap.gitgub.io/me/"><span class='fa-icon'><i class='fas fa-id-card'></i></span><code>Me</code>
-						<span></span>
-					</a>
-				</li>
-			 
-		
-	</ul>
+    
+    <li class="main-nav__item"><a class="nav-main-item" href="https://hossein-lap.github.io/about/" title="">About</a></li>
+    
+    <li class="main-nav__item"><a class="nav-main-item" href="https://hossein-lap.github.io/me/" title=""></a></li>
+    
+    <li class="main-nav__item"><a class="nav-main-item" href="https://hossein-lap.github.io/blog/" title="Blogs">Blogs</a></li>
+    
+    <li class="main-nav__item"><a class="nav-main-item" href="https://hossein-lap.github.io/docs/" title="Docs">Docs</a></li>
+    
+    <li class="main-nav__item"><a class="nav-main-item" href="https://hossein-lap.github.io/notes/" title="Notes">Notes</a></li>
+    
+    </ul>
+</nav>
+
+</header>
+
+            <section class="page__body">
+    <h1 id="series">Series</h1>
+
+    
+
+    <ul>
+    
+        <li><a href="https://hossein-lap.github.io/series/x/">X</a></li>
+
+    
+        <li><a href="https://hossein-lap.github.io/series/lua/">Lua</a></li>
+
+    
+        <li><a href="https://hossein-lap.github.io/series/go/">Go</a></li>
+
+    
+        <li><a href="https://hossein-lap.github.io/series/golang/">Golang</a></li>
+
+    
+        <li><a href="https://hossein-lap.github.io/series/asciidoc/">Asciidoc</a></li>
+
+    
+        <li><a href="https://hossein-lap.github.io/series/elixir/">Elixir</a></li>
+
+    
+    </ul>
+
+
+            </section>
+
+            <section class="page__aside">
+                <div class="aside__about">
+<div class="aside__about">
+    <img class="about__logo" src="https://hossein-lap.github.io/images/me/me-circle.png" alt="Logo">
+<h1 class="about__title">Hossein Esmail</h1>
+<p class="about__description">A <a href="https://gohugo.io">hugo</a> theme inspired by terminal ricing.</p>
 </div>
 
-        <section class="social">
-	
-	
-	<a href="https://mastodon.xyz/@BriceDutheil" rel="me"><i class="fa-w-16" aria-hidden="true"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="jumbo" class="svg-inline--fa fa-jumbo fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="currentColor" d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"/></svg></i></a>
-	
-	
-	
-	<a href="https://github.com/hossein-lap" rel="me"><i class="fab fa-github" aria-hidden="true"></i></a>
-	
-	
-	
-	
-	
-	
-	
-	
-	<a href="https://linkedin.com/in/hossein-esmail" rel="me"><i class="fa-w-16" aria-hidden="true"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="pro-network" class="svg-inline--fa fa-pro-network fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></i></a>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<a href="mailto:hosteam01@gmail.com" rel="me"><i class="fas fa-at" aria-hidden="true"></i></a>
-	
-</section>
 
-      </div>
-    </div>
-
-  </div>
-  <div class="container fixed-container">
+<ul class="aside__social-links">
     
-
-
-  </div>
-</div>
-
-        <div class="content container">
-            
-    <span class="section__title">Series</span>
-<div id="taxonomy-nav" class="character-container">
+    <li>
+        <a href="https://github.com/joeroe/risotto" rel="me" aria-label="GitLab" title="GitLab"><i class="fa-brands fa-gitlab" aria-hidden="true"></i></a>&nbsp;
+    </li>
     
+    <li>
+        <a href="https://github.com/joeroe/risotto" rel="me" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>&nbsp;
+    </li>
     
-
+    <li>
+        <a href="mailto:example@example.com" rel="me" aria-label="Email" title="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>&nbsp;
+    </li>
     
-    
-    
-    
-    
-</div>
-
-<ul class="taxonomies">
-    
-    
-
-        
-        
-
-        
-        
-                <li class="taxonomy-item">
-                    <span class="list__title--small">
-                        <a href="https://hossein-lap.gitgub.io/series/asciidoc/">Asciidoc</a>
-                    </span>
-                </li>
-    
-
-        
-        
-
-        
-        
-                <li class="taxonomy-item">
-                    <span class="list__title--small">
-                        <a href="https://hossein-lap.gitgub.io/series/elixir/">Elixir</a>
-                    </span>
-                </li>
-    
-
-        
-        
-
-        
-        
-                <li class="taxonomy-item">
-                    <span class="list__title--small">
-                        <a href="https://hossein-lap.gitgub.io/series/go/">Go</a>
-                    </span>
-                </li>
-    
-
-        
-        
-
-        
-        
-                <li class="taxonomy-item">
-                    <span class="list__title--small">
-                        <a href="https://hossein-lap.gitgub.io/series/golang/">Golang</a>
-                    </span>
-                </li>
-    
-
-        
-        
-
-        
-        
-                <li class="taxonomy-item">
-                    <span class="list__title--small">
-                        <a href="https://hossein-lap.gitgub.io/series/lua/">Lua</a>
-                    </span>
-                </li>
-    
-
-        
-        
-
-        
-        
-                <li class="taxonomy-item">
-                    <span class="list__title--small">
-                        <a href="https://hossein-lap.gitgub.io/series/x/">X</a>
-                    </span>
-                </li>
+    <li>
+        <a href="https://orcid.org/0000-0001-2345-6789" rel="me" aria-label="ORCID" title="ORCID"><i class="ai ai-orcid" aria-hidden="true"></i></a>&nbsp;
+    </li>
     
 </ul>
-
-
-        </div>
-        
+</div>
+                <hr>
+                <div class="aside__content">
     
 
+                </div>
+            </section>
 
+            <footer class="page__footer"><p>
+    
+    
+    
+    
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+    
+      
+      
+          
+            
+            
+                <br/><span class="active">$ echo $LANG<br/><b></b></span><br/>
 
+            
+          
+      
+    
+</p>
+<br /><br />
+<p class="copyright"></p>
+<p class="advertisement">Powered by <a href="https://gohugo.io/">hugo</a> and <a href="https://github.com/joeroe/risotto">risotto</a>.</p>
+</footer>
 
-
-
-
-
-
-
-
+        </div>
     </body>
+
 </html>

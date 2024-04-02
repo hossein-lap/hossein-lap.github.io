@@ -1,54 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>Dev on Hossein Esmail</title>
-        <link>https://hossein-lap.gitgub.io/categories/dev/</link>
-        <description>Recent content in Dev on Hossein Esmail</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>en-US</language>
-        <managingEditor>hosteam01@gmail.com (Hossein Esmailzadeh)</managingEditor>
-        <webMaster>hosteam01@gmail.com (Hossein Esmailzadeh)</webMaster>
-        <lastBuildDate>Tue, 02 Apr 2024 22:46:29 +0330</lastBuildDate>
-        
-        <atom:link href="https://hossein-lap.gitgub.io/categories/dev/index.xml" rel="self" type="application/rss+xml" />
-        
-        
-        
-        <item>
-            <title>Sample</title>
-            <link>https://hossein-lap.gitgub.io/blog/sample/</link>
-            <pubDate>Tue, 02 Apr 2024 22:46:29 +0330</pubDate>
-            <author>hosteam01@gmail.com (Hossein Esmailzadeh)</author>
-            <guid>https://hossein-lap.gitgub.io/blog/sample/</guid>
-            <description> Insert Lead paragraph here.
-1. New stuff </description>
-        </item>
-        
-        
-        
-        <item>
-            <title>Test</title>
-            <link>https://hossein-lap.gitgub.io/blog/test/</link>
-            <pubDate>Tue, 02 Apr 2024 22:45:38 +0330</pubDate>
-            <author>hosteam01@gmail.com (Hossein Esmailzadeh)</author>
-            <guid>https://hossein-lap.gitgub.io/blog/test/</guid>
-            <description> Insert Lead paragraph here.
-1. New stuff </description>
-        </item>
-        
-        
-        
-        <item>
-            <title>Go Programming Language</title>
-            <link>https://hossein-lap.gitgub.io/notes/go/golang/</link>
-            <pubDate>Tue, 02 Apr 2024 22:30:03 +0330</pubDate>
-            <author>hosteam01@gmail.com (Hossein Esmailzadeh)</author>
-            <guid>https://hossein-lap.gitgub.io/notes/go/golang/</guid>
-            <description> Insert Lead paragraph here.
-1. New stuff very versile
-2. more stuff </description>
-        </item>
-        
-        
-    </channel>
+  <channel>
+    <title>Dev on hos</title>
+    <link>https://hossein-lap.github.io/categories/dev/</link>
+    <description>Recent content in Dev on hos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 02 Apr 2024 22:46:29 +0330</lastBuildDate>
+    <atom:link href="https://hossein-lap.github.io/categories/dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sample</title>
+      <link>https://hossein-lap.github.io/blog/sample/</link>
+      <pubDate>Tue, 02 Apr 2024 22:46:29 +0330</pubDate>
+      <guid>https://hossein-lap.github.io/blog/sample/</guid>
+      <description> Insert Lead paragraph here.&#xA;1. New stuff </description>
+    </item>
+    <item>
+      <title>Test</title>
+      <link>https://hossein-lap.github.io/blog/test/</link>
+      <pubDate>Tue, 02 Apr 2024 22:45:38 +0330</pubDate>
+      <guid>https://hossein-lap.github.io/blog/test/</guid>
+      <description> Insert Lead paragraph here.&#xA;1. New stuff </description>
+    </item>
+    <item>
+      <title>Go Programming Language</title>
+      <link>https://hossein-lap.github.io/notes/go/golang/</link>
+      <pubDate>Tue, 02 Apr 2024 22:30:03 +0330</pubDate>
+      <guid>https://hossein-lap.github.io/notes/go/golang/</guid>
+      <description> Insert Lead paragraph here.&#xA;1. New stuff very versile&#xA;2. more stuff package main import ( &amp;#34;fmt&amp;#34; ) func main() { fmt.Printf(&amp;#34;This is a simple test!\n&amp;#34;) } </description>
+    </item>
+  </channel>
 </rss>

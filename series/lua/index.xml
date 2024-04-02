@@ -1,29 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>Lua on Hossein Esmail</title>
-        <link>https://hossein-lap.gitgub.io/series/lua/</link>
-        <description>Recent content in Lua on Hossein Esmail</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>en-US</language>
-        <managingEditor>hosteam01@gmail.com (Hossein Esmailzadeh)</managingEditor>
-        <webMaster>hosteam01@gmail.com (Hossein Esmailzadeh)</webMaster>
-        <lastBuildDate>Tue, 02 Apr 2024 22:30:09 +0330</lastBuildDate>
-        
-        <atom:link href="https://hossein-lap.gitgub.io/series/lua/index.xml" rel="self" type="application/rss+xml" />
-        
-        
-        
-        <item>
-            <title>Lua Progamming Language</title>
-            <link>https://hossein-lap.gitgub.io/notes/lua/lua/</link>
-            <pubDate>Tue, 02 Apr 2024 22:30:09 +0330</pubDate>
-            <author>hosteam01@gmail.com (Hossein Esmailzadeh)</author>
-            <guid>https://hossein-lap.gitgub.io/notes/lua/lua/</guid>
-            <description> Insert Lead paragraph here.
-1. New stuff </description>
-        </item>
-        
-        
-    </channel>
+  <channel>
+    <title>Lua on hos</title>
+    <link>https://hossein-lap.github.io/series/lua/</link>
+    <description>Recent content in Lua on hos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 02 Apr 2024 22:30:09 +0330</lastBuildDate>
+    <atom:link href="https://hossein-lap.github.io/series/lua/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lua Progamming Language</title>
+      <link>https://hossein-lap.github.io/notes/lua/lua/</link>
+      <pubDate>Tue, 02 Apr 2024 22:30:09 +0330</pubDate>
+      <guid>https://hossein-lap.github.io/notes/lua/lua/</guid>
+      <description> Insert Lead paragraph here.&#xA;1. New stuff </description>
+    </item>
+  </channel>
 </rss>
