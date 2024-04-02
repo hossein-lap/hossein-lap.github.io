@@ -1,69 +1,29 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Blogs on hos@primejade:dev</title>
-    <link>https://hossein-lap.github.io/blog/</link>
-    <description>Recent content in Blogs on hos@primejade:dev</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Mon, 04 Sep 2023 00:51:13 +0330</lastBuildDate><atom:link href="https://hossein-lap.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>New</title>
-      <link>https://hossein-lap.github.io/blog/new/</link>
-      <pubDate>Mon, 04 Sep 2023 00:51:13 +0330</pubDate>
-      
-      <guid>https://hossein-lap.github.io/blog/new/</guid>
-      <description>Desc Text.</description>
-    </item>
-    
-    <item>
-      <title>Lua</title>
-      <link>https://hossein-lap.github.io/blog/programming/script/lua/page/</link>
-      <pubDate>Fri, 18 Aug 2023 05:17:00 +0330</pubDate>
-      
-      <guid>https://hossein-lap.github.io/blog/programming/script/lua/page/</guid>
-      <description>This is a template for now.</description>
-    </item>
-    
-    <item>
-      <title>Go</title>
-      <link>https://hossein-lap.github.io/blog/programming/compile/go/page/</link>
-      <pubDate>Fri, 18 Aug 2023 05:16:45 +0330</pubDate>
-      
-      <guid>https://hossein-lap.github.io/blog/programming/compile/go/page/</guid>
-      <description>This is a template for now.</description>
-    </item>
-    
-    <item>
-      <title>Pandoc</title>
-      <link>https://hossein-lap.github.io/blog/tools/pandoc/page/</link>
-      <pubDate>Fri, 18 Aug 2023 03:24:55 +0330</pubDate>
-      
-      <guid>https://hossein-lap.github.io/blog/tools/pandoc/page/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit,
-vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida
-mauris.</description>
-    </item>
-    
-    <item>
-      <title>Elixir</title>
-      <link>https://hossein-lap.github.io/blog/test/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://hossein-lap.github.io/blog/test/</guid>
-      <description>Elixir is a dynamically-typed functional programming language.
-   1. Intractive elixir environment $ iex     2. Hello World! intro.exs #!/bin/elixir IO.puts(&amp;#34;Hello&amp;#34; &amp;lt;&amp;gt; &amp;#34; Elixir!!&amp;#34;)     3. Build Tool mix help mix new mix compile mix test mix run   Create mix new example     </description>
-    </item>
-    
-    <item>
-      <title>ttr</title>
-      <link>https://hossein-lap.github.io/blog/ttr/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://hossein-lap.github.io/blog/ttr/</guid>
-      <description>1. Intro Okay, let’s do it.
- Test const char *colorname[] = { /* 8 normal colors */ [0] = &amp;#34;#0a0c0d&amp;#34;, /* black */ [1] = &amp;#34;#504F45&amp;#34;, /* red */ [2] = &amp;#34;#64604F&amp;#34;, /* green */ [3] = &amp;#34;#70694D&amp;#34;, /* yellow */ [4] = &amp;#34;#8B7651&amp;#34;, /* blue */ [5] = &amp;#34;#AA9853&amp;#34;, /* magenta */ [6] = &amp;#34;#B2A354&amp;#34;, /* cyan */ [7] = &amp;#34;#ded0a7&amp;#34;, /* white */ /* 8 bright colors */ [8] = &amp;#34;#9b9174&amp;#34;, /* black */ [9] = &amp;#34;#504F45&amp;#34;, /* red */ [10] = &amp;#34;#64604F&amp;#34;, /* green */ [11] = &amp;#34;#70694D&amp;#34;, /* yellow */ [12] = &amp;#34;#8B7651&amp;#34;, /* blue */ [13] = &amp;#34;#AA9853&amp;#34;, /* magenta */ [14] = &amp;#34;#B2A354&amp;#34;, /* cyan */ [15] = &amp;#34;#ded0a7&amp;#34;, /* white */ /* special colors */ [256] = &amp;#34;#0a0c0d&amp;#34;, /* background */ [257] = &amp;#34;#ded0a7&amp;#34;, /* foreground */ [258] = &amp;#34;#ded0a7&amp;#34;, /* cursor */ }; /* Default colors (colorname index) * foreground, background, cursor */ unsigned int defaultbg = 0; unsigned int defaultfg = 257; unsigned int defaultcs = 258; unsigned int defaultrcs= 258;     2.</description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>Blogs on Hossein Esmail</title>
+        <link>https://hossein-lap.gitgub.io/blog/</link>
+        <description>Recent content in Blogs on Hossein Esmail</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-US</language>
+        <managingEditor>hosteam01@gmail.com (Hossein Esmailzadeh)</managingEditor>
+        <webMaster>hosteam01@gmail.com (Hossein Esmailzadeh)</webMaster>
+        <lastBuildDate>Tue, 02 Apr 2024 22:09:44 +0330</lastBuildDate>
+        
+        <atom:link href="https://hossein-lap.gitgub.io/blog/index.xml" rel="self" type="application/rss+xml" />
+        
+        
+        
+        <item>
+            <title>AsciiDoc(tor): Yo Dawg!</title>
+            <link>https://hossein-lap.gitgub.io/blog/asciidoc/asciidoc/</link>
+            <pubDate>Tue, 02 Apr 2024 22:09:44 +0330</pubDate>
+            <author>hosteam01@gmail.com (Hossein Esmailzadeh)</author>
+            <guid>https://hossein-lap.gitgub.io/blog/asciidoc/asciidoc/</guid>
+            <description>1. Intro Okay, let’s do it.
+Test Unresolved directive in &amp;lt;stdin&amp;gt; - include::{home}/.cache/wal/colors-wal-st.h[] 2. Lists 2.1. Unordered lists * level 1 ** level 2 *** level 3 **** level 4 ***** level 5 * level 1 Example 1.</description>
+        </item>
+        
+        
+    </channel>
 </rss>
