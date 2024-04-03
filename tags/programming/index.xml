@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Programming on hos</title>
-    <link>https://hossein-lap.github.io/tags/programming/</link>
+    <link>http://localhost:1313/tags/programming/</link>
     <description>Recent content in Programming on hos</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 02 Apr 2024 22:09:44 +0330</lastBuildDate>
-    <atom:link href="https://hossein-lap.github.io/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/programming/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Elixir Programming Language</title>
-      <link>https://hossein-lap.github.io/notes/elixir/elixir/</link>
+      <link>http://localhost:1313/notes/elixir/elixir/</link>
       <pubDate>Tue, 02 Apr 2024 22:09:44 +0330</pubDate>
-      <guid>https://hossein-lap.github.io/notes/elixir/elixir/</guid>
+      <guid>http://localhost:1313/notes/elixir/elixir/</guid>
       <description> Elixir is a dynamically-typed functional programming language.&#xA;1. Intractive elixir environment $ iex 2. Hello World! intro.exs #!/bin/elixir IO.puts(&amp;#34;Hello&amp;#34; &amp;lt;&amp;gt; &amp;#34; Elixir!!&amp;#34;) 3. Build Tool mix help mix new mix compile mix test mix run Create mix new example </description>
     </item>
   </channel>
