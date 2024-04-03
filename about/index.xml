@@ -1,26 +1,144 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/feed_style.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="https://www.rssboard.org/media-rss">
   <channel>
-    <title>Abouts on hos</title>
+    <title>Abouts on Hossein Esmail</title>
     <link>https://hossein-lap.github.io/about/</link>
-    <description>Recent content in Abouts on hos</description>
+    <description>Recent content in Abouts on Hossein Esmail</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 29 Mar 2023 22:14:09 +0330</lastBuildDate>
-    <atom:link href="https://hossein-lap.github.io/about/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Hos Es</copyright>
+    <lastBuildDate>Wed, 29 Mar 2023 22:14:09 +0330</lastBuildDate><atom:link href="https://hossein-lap.github.io/about/index.xml" rel="self" type="application/rss+xml" /><icon>https://hossein-lap.github.io/images/me/me-circle.png</icon>
+    
+    
     <item>
       <title>About</title>
       <link>https://hossein-lap.github.io/about/about/</link>
       <pubDate>Wed, 29 Mar 2023 22:14:09 +0330</pubDate>
+      
       <guid>https://hossein-lap.github.io/about/about/</guid>
-      <description>Hi I’m Hossein&#xA;#include &amp;lt;stdio.h&amp;gt; int main(int argc, char *argv[]) { printf(&amp;#34;Hello world!\n&amp;#34;); return 0; } Lua programmer, (Xe)LaTeX writer, SysAdmin and Linux user. Yet another minimalist person with a passion about Open Source Software.&#xA;I was a Computer guy from my early days back in my 1st and 2nd grade. But all I did was playing video games. Until my dad came to me and said:&#xA;Don’t just play video games kiddo, it can do much more than that.</description>
+      <description><![CDATA[<div class="paragraph">
+<p>Hi I’m Hossein</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="c"><span style="color: #f4bf75">#include</span> <span style="color: #505050">&lt;stdio.h&gt;</span><span style="color: #f4bf75">
+</span><span style="color: #d28445">int</span>
+<span style="color: #d0d0d0;background-color: #151515">main</span><span style="color: #d0d0d0">(</span><span style="color: #d28445">int</span> <span style="color: #d0d0d0;background-color: #151515">argc</span><span style="color: #d0d0d0">,</span> <span style="color: #d28445">char</span> <span style="color: #d0d0d0">*</span><span style="color: #d0d0d0;background-color: #151515">argv</span><span style="color: #d0d0d0">[])</span>
+<span style="color: #d0d0d0">{</span>
+	<span style="color: #d0d0d0;background-color: #151515">printf</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;Hello world!</span><span style="color: #8f5536">\n</span><span style="color: #90a959">&#34;</span><span style="color: #d0d0d0">);</span>
+	<span style="color: #aa759f">return</span> <span style="color: #90a959">0</span><span style="color: #d0d0d0">;</span>
+<span style="color: #d0d0d0">}</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>Lua</code> programmer, (Xe)LaTeX writer, SysAdmin and Linux user.
+Yet another minimalist person with a passion about Open Source Software.</p>
+</div>
+<div class="paragraph">
+<p>I was a Computer guy from my early days back in my 1st and 2nd grade.
+But all I did was playing video games. Until my dad came to me and said:</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>Don’t just play video games kiddo, it can do much more than that. try to
+learn it.</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>And that was it. It became the goal of my life :)</p>
+</div>
+<div class="sect1">
+<h2 id="_what_i_know">What I know?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>I have happen to gain some knowledge in programming languages such as:</p>
+</div>
+<div class="paragraph">
+<p>I happened to learn programming languages such as:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;"/>
+<col style="width: 50%;"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Lua</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Python</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bash</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>By using tools that required a little programming knowledge to modify/configure
+or extend.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tools">Tools</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>These tools mostly were <a href="https://suckless.org">suckless</a> tools:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;"/>
+<col style="width: 50%;"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://dwm.suckless.org">dwm</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://st.suckless.org">st</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://tools.suckless.org/dmenu">dmenu</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://tools.suckless.org/sent">sent</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+]]></description>
+      
     </item>
+    
+    
+    
     <item>
       <title>YEAH!</title>
       <link>https://hossein-lap.github.io/about/test/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
       <guid>https://hossein-lap.github.io/about/test/</guid>
-      <description>What now? This is a very simple test! Nam arcu libero, nonummy eget, consectetuer id, vulputate a, magna. Donec vehicula augue eu neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris ut leo. Cras viverra metus rhoncus sem. Nulla et lectus vestibulum urna fringilla ultrices. Phasellus eu tellus sit amet tortor gravida placerat. Integer sapien est, iaculis in, pretium quis, viverra ac, nunc. Praesent eget sem vel leo ultrices bibendum.</description>
+      <description><![CDATA[<div class="sect1">
+<h2 id="_what_now">What now?</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_this_is_a_very_simple_test">This is a very simple test!</h3>
+<div class="paragraph">
+<p>Nam arcu libero, nonummy eget, consectetuer id, vulputate a, magna. Donec
+vehicula augue eu neque. Pellentesque habitant morbi tristique senectus et
+netus et malesuada fames ac turpis egestas. Mauris ut leo. Cras viverra metus
+rhoncus sem. Nulla et lectus vestibulum urna fringilla ultrices. Phasellus eu
+tellus sit amet tortor gravida placerat. Integer sapien est, iaculis in,
+pretium quis, viverra ac, nunc. Praesent eget sem vel leo ultrices bibendum.
+Aenean faucibus. Morbi dolor nulla, malesuada eu, pulvinar at, mollis ac,
+nulla. Curabitur auctor semper nulla. Donec varius orci eget risus. Duis nibh
+mi, congue eu, accumsan eleifend, sagittis quis, diam. Duis eget orci sit amet
+orci dignissim rutrum.</p>
+</div>
+</div>
+</div>
+</div>
+]]></description>
+      
     </item>
+    
+    
   </channel>
 </rss>

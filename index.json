@@ -1,0 +1,28 @@
+
+{
+    
+    
+    
+    
+    
+    
+    
+    
+        
+        
+        
+    
+        
+        
+        
+    
+        
+        
+        
+    
+    "articles": [{"date":"2024-04-02","image":"","imageAlt":"","link":"https://hossein-lap.github.io/posts/asciidoc/asciidoc/","summary":"AsciiDoc is a markup language similar to markdown but vay more standardized\nand with more features/elements.\n","tags":["writing"],"title":"AsciiDoc(tor): Yo Dawg!"},{"date":"0001-01-01","image":"","imageAlt":"","link":"https://hossein-lap.github.io/manifest/index.json","summary":"","tags":[],"title":"Manifest"},{"date":"0001-01-01","image":"","imageAlt":"","link":"https://hossein-lap.github.io/search/","summary":"","tags":[],"title":"Search"}],
+    "test": "AsciiDoc(tor): Yo Dawg!   Manifest   Search   ",
+    "page": "1",
+    "next": ""
+}
+
