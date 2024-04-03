@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Go on hos</title>
-    <link>http://localhost:1313/series/go/</link>
+    <link>https://hossein-lap.github.io/series/go/</link>
     <description>Recent content in Go on hos</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 02 Apr 2024 22:30:03 +0330</lastBuildDate>
-    <atom:link href="http://localhost:1313/series/go/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://hossein-lap.github.io/series/go/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Go Programming Language</title>
-      <link>http://localhost:1313/notes/go/golang/</link>
+      <link>https://hossein-lap.github.io/notes/go/golang/</link>
       <pubDate>Tue, 02 Apr 2024 22:30:03 +0330</pubDate>
-      <guid>http://localhost:1313/notes/go/golang/</guid>
+      <guid>https://hossein-lap.github.io/notes/go/golang/</guid>
       <description> Insert Lead paragraph here.&#xA;1. New stuff very versile&#xA;2. more stuff package main import ( &amp;#34;fmt&amp;#34; ) func main() { fmt.Printf(&amp;#34;This is a simple test!\n&amp;#34;) } </description>
     </item>
   </channel>

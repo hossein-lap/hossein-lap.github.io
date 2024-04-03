@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Notes on hos</title>
-    <link>http://localhost:1313/notes/</link>
+    <link>https://hossein-lap.github.io/notes/</link>
     <description>Recent content in Notes on hos</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 02 Apr 2024 22:30:09 +0330</lastBuildDate>
-    <atom:link href="http://localhost:1313/notes/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://hossein-lap.github.io/notes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Lua Progamming Language</title>
-      <link>http://localhost:1313/notes/lua/lua/</link>
+      <link>https://hossein-lap.github.io/notes/lua/lua/</link>
       <pubDate>Tue, 02 Apr 2024 22:30:09 +0330</pubDate>
-      <guid>http://localhost:1313/notes/lua/lua/</guid>
+      <guid>https://hossein-lap.github.io/notes/lua/lua/</guid>
       <description> Insert Lead paragraph here.&#xA;1. New stuff </description>
     </item>
     <item>
       <title>Go Programming Language</title>
-      <link>http://localhost:1313/notes/go/golang/</link>
+      <link>https://hossein-lap.github.io/notes/go/golang/</link>
       <pubDate>Tue, 02 Apr 2024 22:30:03 +0330</pubDate>
-      <guid>http://localhost:1313/notes/go/golang/</guid>
+      <guid>https://hossein-lap.github.io/notes/go/golang/</guid>
       <description> Insert Lead paragraph here.&#xA;1. New stuff very versile&#xA;2. more stuff package main import ( &amp;#34;fmt&amp;#34; ) func main() { fmt.Printf(&amp;#34;This is a simple test!\n&amp;#34;) } </description>
     </item>
     <item>
       <title>Elixir Programming Language</title>
-      <link>http://localhost:1313/notes/elixir/elixir/</link>
+      <link>https://hossein-lap.github.io/notes/elixir/elixir/</link>
       <pubDate>Tue, 02 Apr 2024 22:09:44 +0330</pubDate>
-      <guid>http://localhost:1313/notes/elixir/elixir/</guid>
+      <guid>https://hossein-lap.github.io/notes/elixir/elixir/</guid>
       <description> Elixir is a dynamically-typed functional programming language.&#xA;1. Intractive elixir environment $ iex 2. Hello World! intro.exs #!/bin/elixir IO.puts(&amp;#34;Hello&amp;#34; &amp;lt;&amp;gt; &amp;#34; Elixir!!&amp;#34;) 3. Build Tool mix help mix new mix compile mix test mix run Create mix new example </description>
     </item>
   </channel>

@@ -2,80 +2,80 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on hos</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://hossein-lap.github.io/tags/</link>
     <description>Recent content in Tags on hos</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 02 Apr 2024 22:46:29 +0330</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://hossein-lap.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cool-Tag</title>
-      <link>http://localhost:1313/tags/cool-tag/</link>
+      <link>https://hossein-lap.github.io/tags/cool-tag/</link>
       <pubDate>Tue, 02 Apr 2024 22:46:29 +0330</pubDate>
-      <guid>http://localhost:1313/tags/cool-tag/</guid>
+      <guid>https://hossein-lap.github.io/tags/cool-tag/</guid>
       <description></description>
     </item>
     <item>
       <title>Embedded</title>
-      <link>http://localhost:1313/tags/embedded/</link>
+      <link>https://hossein-lap.github.io/tags/embedded/</link>
       <pubDate>Tue, 02 Apr 2024 22:30:09 +0330</pubDate>
-      <guid>http://localhost:1313/tags/embedded/</guid>
+      <guid>https://hossein-lap.github.io/tags/embedded/</guid>
       <description></description>
     </item>
     <item>
       <title>Game</title>
-      <link>http://localhost:1313/tags/game/</link>
+      <link>https://hossein-lap.github.io/tags/game/</link>
       <pubDate>Tue, 02 Apr 2024 22:30:09 +0330</pubDate>
-      <guid>http://localhost:1313/tags/game/</guid>
+      <guid>https://hossein-lap.github.io/tags/game/</guid>
       <description></description>
     </item>
     <item>
       <title>Lua</title>
-      <link>http://localhost:1313/tags/lua/</link>
+      <link>https://hossein-lap.github.io/tags/lua/</link>
       <pubDate>Tue, 02 Apr 2024 22:30:09 +0330</pubDate>
-      <guid>http://localhost:1313/tags/lua/</guid>
+      <guid>https://hossein-lap.github.io/tags/lua/</guid>
       <description></description>
     </item>
     <item>
       <title>Backend</title>
-      <link>http://localhost:1313/tags/backend/</link>
+      <link>https://hossein-lap.github.io/tags/backend/</link>
       <pubDate>Tue, 02 Apr 2024 22:30:03 +0330</pubDate>
-      <guid>http://localhost:1313/tags/backend/</guid>
+      <guid>https://hossein-lap.github.io/tags/backend/</guid>
       <description></description>
     </item>
     <item>
       <title>Cli</title>
-      <link>http://localhost:1313/tags/cli/</link>
+      <link>https://hossein-lap.github.io/tags/cli/</link>
       <pubDate>Tue, 02 Apr 2024 22:30:03 +0330</pubDate>
-      <guid>http://localhost:1313/tags/cli/</guid>
+      <guid>https://hossein-lap.github.io/tags/cli/</guid>
       <description></description>
     </item>
     <item>
       <title>Go</title>
-      <link>http://localhost:1313/tags/go/</link>
+      <link>https://hossein-lap.github.io/tags/go/</link>
       <pubDate>Tue, 02 Apr 2024 22:30:03 +0330</pubDate>
-      <guid>http://localhost:1313/tags/go/</guid>
+      <guid>https://hossein-lap.github.io/tags/go/</guid>
       <description></description>
     </item>
     <item>
       <title>Tools</title>
-      <link>http://localhost:1313/tags/tools/</link>
+      <link>https://hossein-lap.github.io/tags/tools/</link>
       <pubDate>Tue, 02 Apr 2024 22:30:03 +0330</pubDate>
-      <guid>http://localhost:1313/tags/tools/</guid>
+      <guid>https://hossein-lap.github.io/tags/tools/</guid>
       <description></description>
     </item>
     <item>
       <title>Programming</title>
-      <link>http://localhost:1313/tags/programming/</link>
+      <link>https://hossein-lap.github.io/tags/programming/</link>
       <pubDate>Tue, 02 Apr 2024 22:09:44 +0330</pubDate>
-      <guid>http://localhost:1313/tags/programming/</guid>
+      <guid>https://hossein-lap.github.io/tags/programming/</guid>
       <description></description>
     </item>
     <item>
       <title>Writing</title>
-      <link>http://localhost:1313/tags/writing/</link>
+      <link>https://hossein-lap.github.io/tags/writing/</link>
       <pubDate>Tue, 02 Apr 2024 22:09:44 +0330</pubDate>
-      <guid>http://localhost:1313/tags/writing/</guid>
+      <guid>https://hossein-lap.github.io/tags/writing/</guid>
       <description></description>
     </item>
   </channel>

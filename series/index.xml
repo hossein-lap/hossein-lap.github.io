@@ -2,52 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Series on hos</title>
-    <link>http://localhost:1313/series/</link>
+    <link>https://hossein-lap.github.io/series/</link>
     <description>Recent content in Series on hos</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 02 Apr 2024 22:46:29 +0330</lastBuildDate>
-    <atom:link href="http://localhost:1313/series/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://hossein-lap.github.io/series/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>X</title>
-      <link>http://localhost:1313/series/x/</link>
+      <link>https://hossein-lap.github.io/series/x/</link>
       <pubDate>Tue, 02 Apr 2024 22:46:29 +0330</pubDate>
-      <guid>http://localhost:1313/series/x/</guid>
+      <guid>https://hossein-lap.github.io/series/x/</guid>
       <description></description>
     </item>
     <item>
       <title>Lua</title>
-      <link>http://localhost:1313/series/lua/</link>
+      <link>https://hossein-lap.github.io/series/lua/</link>
       <pubDate>Tue, 02 Apr 2024 22:30:09 +0330</pubDate>
-      <guid>http://localhost:1313/series/lua/</guid>
+      <guid>https://hossein-lap.github.io/series/lua/</guid>
       <description></description>
     </item>
     <item>
       <title>Go</title>
-      <link>http://localhost:1313/series/go/</link>
+      <link>https://hossein-lap.github.io/series/go/</link>
       <pubDate>Tue, 02 Apr 2024 22:30:03 +0330</pubDate>
-      <guid>http://localhost:1313/series/go/</guid>
+      <guid>https://hossein-lap.github.io/series/go/</guid>
       <description></description>
     </item>
     <item>
       <title>Golang</title>
-      <link>http://localhost:1313/series/golang/</link>
+      <link>https://hossein-lap.github.io/series/golang/</link>
       <pubDate>Tue, 02 Apr 2024 22:30:03 +0330</pubDate>
-      <guid>http://localhost:1313/series/golang/</guid>
+      <guid>https://hossein-lap.github.io/series/golang/</guid>
       <description></description>
     </item>
     <item>
       <title>Asciidoc</title>
-      <link>http://localhost:1313/series/asciidoc/</link>
+      <link>https://hossein-lap.github.io/series/asciidoc/</link>
       <pubDate>Tue, 02 Apr 2024 22:09:44 +0330</pubDate>
-      <guid>http://localhost:1313/series/asciidoc/</guid>
+      <guid>https://hossein-lap.github.io/series/asciidoc/</guid>
       <description></description>
     </item>
     <item>
       <title>Elixir</title>
-      <link>http://localhost:1313/series/elixir/</link>
+      <link>https://hossein-lap.github.io/series/elixir/</link>
       <pubDate>Tue, 02 Apr 2024 22:09:44 +0330</pubDate>
-      <guid>http://localhost:1313/series/elixir/</guid>
+      <guid>https://hossein-lap.github.io/series/elixir/</guid>
       <description></description>
     </item>
   </channel>

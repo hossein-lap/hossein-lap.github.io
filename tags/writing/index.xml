@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Writing on hos</title>
-    <link>http://localhost:1313/tags/writing/</link>
+    <link>https://hossein-lap.github.io/tags/writing/</link>
     <description>Recent content in Writing on hos</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 02 Apr 2024 22:09:44 +0330</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/writing/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://hossein-lap.github.io/tags/writing/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AsciiDoc(tor): Yo Dawg!</title>
-      <link>http://localhost:1313/docs/asciidoc/asciidoc/</link>
+      <link>https://hossein-lap.github.io/docs/asciidoc/asciidoc/</link>
       <pubDate>Tue, 02 Apr 2024 22:09:44 +0330</pubDate>
-      <guid>http://localhost:1313/docs/asciidoc/asciidoc/</guid>
+      <guid>https://hossein-lap.github.io/docs/asciidoc/asciidoc/</guid>
       <description>1. Intro Okay, let’s do it.&#xA;Test // include::{home}/.cache/wal/colors-wal-st.h[] 2. Lists 2.1. Unordered lists * level 1 ** level 2 *** level 3 **** level 4 ***** level 5 * level 1 Example 1. Output level 1&#xA;level 2&#xA;level 3&#xA;level 4&#xA;level 5&#xA;level 1&#xA;2.2. Ordered lists . level 1 .. level 2 ... level 3 .... level 4 ..... level 5 . level 1 Example 2.</description>
     </item>
   </channel>
