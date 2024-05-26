@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/feed_style.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="https://www.rssboard.org/media-rss">
   <channel>
     <title>Go on Hossein Esmail</title>
     <link>https://hossein-lap.github.io/tags/go/</link>
@@ -7,14 +6,53 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Hos Es</copyright>
-    <lastBuildDate>Tue, 02 Apr 2024 22:30:03 +0330</lastBuildDate>
-    <atom:link href="https://hossein-lap.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 02 Apr 2024 22:30:03 +0330</lastBuildDate><atom:link href="https://hossein-lap.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" /><icon>https://hossein-lap.github.io/images/me/me-circle.png</icon>
+    
+    
     <item>
       <title>Go Programming Language</title>
       <link>https://hossein-lap.github.io/docs/go/go/</link>
       <pubDate>Tue, 02 Apr 2024 22:30:03 +0330</pubDate>
+      
       <guid>https://hossein-lap.github.io/docs/go/go/</guid>
-      <description> Insert Lead paragraph here.&#xA;New stuff very versile&#xA;more stuff package main import ( &amp;#34;fmt&amp;#34; ) func main() { fmt.Printf(&amp;#34;This is a simple test!\n&amp;#34;) } </description>
+      <description><![CDATA[
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Insert Lead paragraph here.</strong></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_new_stuff">New stuff</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>very versile</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_more_stuff">more stuff</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">package</span> <span style="color: #d0d0d0;background-color: #151515">main</span>
+
+<span style="color: #aa759f">import</span> <span style="color: #d0d0d0">(</span>
+    <span style="color: #90a959">&#34;fmt&#34;</span>
+<span style="color: #d0d0d0">)</span>
+
+<span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">main</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
+    <span style="color: #d0d0d0;background-color: #151515">fmt</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Printf</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;This is a simple test!</span><span style="color: #8f5536">\n</span><span style="color: #90a959">&#34;</span><span style="color: #d0d0d0">)</span>
+<span style="color: #d0d0d0">}</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+]]></description>
+      
     </item>
+    
+    
   </channel>
 </rss>

@@ -97,5 +97,9 @@
   </url><url>
     <loc>https://hossein-lap.github.io/about/</loc>
     <lastmod>2023-03-29T22:14:09+03:30</lastmod>
+  </url><url>
+    <loc>https://hossein-lap.github.io/manifest/index.json</loc>
+  </url><url>
+    <loc>https://hossein-lap.github.io/search/</loc>
   </url>
 </urlset>

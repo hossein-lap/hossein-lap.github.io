@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+  "name": "Hossein Esmail",
+  "short_name": "Hossein Esmail",
+  "start_url": "/",
+  "display": "standalone",
+  
+  
+  
+  "background_color": "#1a1a1a",
+  "theme_color": "#ffaa00"
+  
+    ,
+    "description": "Personal blog"
+  
+  
+    ,
+    "icons": [
+      {
+        "src": "/images/me/H.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "maskable"
+      },
+      {
+        "src": "/images/me/H.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "any"
+      }
+    ]
+  
+}
+

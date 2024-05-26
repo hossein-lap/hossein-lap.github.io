@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/feed_style.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="https://www.rssboard.org/media-rss">
   <channel>
     <title>Notes on Hossein Esmail</title>
     <link>https://hossein-lap.github.io/notes/</link>
@@ -7,14 +6,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Hos Es</copyright>
-    <lastBuildDate>Sun, 26 May 2024 21:22:44 +0330</lastBuildDate>
-    <atom:link href="https://hossein-lap.github.io/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 May 2024 21:22:44 +0330</lastBuildDate><atom:link href="https://hossein-lap.github.io/notes/index.xml" rel="self" type="application/rss+xml" /><icon>https://hossein-lap.github.io/images/me/me-circle.png</icon>
+    
+    
     <item>
       <title>Simple</title>
       <link>https://hossein-lap.github.io/notes/simple/simple/</link>
       <pubDate>Sun, 26 May 2024 21:22:44 +0330</pubDate>
+      
       <guid>https://hossein-lap.github.io/notes/simple/simple/</guid>
-      <description>New stuff Simple test!</description>
+      <description><![CDATA[<div class="sect1">
+<h2 id="_new_stuff">New stuff</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Simple test!</p>
+</div>
+</div>
+</div>
+]]></description>
+      
     </item>
+    
+    
   </channel>
 </rss>

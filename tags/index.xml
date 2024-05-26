@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/feed_style.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="https://www.rssboard.org/media-rss">
   <channel>
     <title>Tags on Hossein Esmail</title>
     <link>https://hossein-lap.github.io/tags/</link>
@@ -7,112 +6,187 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Hos Es</copyright>
-    <lastBuildDate>Sun, 26 May 2024 21:22:44 +0330</lastBuildDate>
-    <atom:link href="https://hossein-lap.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 May 2024 21:22:44 +0330</lastBuildDate><atom:link href="https://hossein-lap.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><icon>https://hossein-lap.github.io/images/me/me-circle.png</icon>
+    
+    
     <item>
       <title>Cool-Tag</title>
       <link>https://hossein-lap.github.io/tags/cool-tag/</link>
       <pubDate>Sun, 26 May 2024 21:22:44 +0330</pubDate>
+      
       <guid>https://hossein-lap.github.io/tags/cool-tag/</guid>
-      <description></description>
+      <description><![CDATA[]]></description>
+      
     </item>
+    
+    
+    
     <item>
       <title>Embedded</title>
       <link>https://hossein-lap.github.io/tags/embedded/</link>
       <pubDate>Tue, 02 Apr 2024 22:30:09 +0330</pubDate>
+      
       <guid>https://hossein-lap.github.io/tags/embedded/</guid>
-      <description></description>
+      <description><![CDATA[]]></description>
+      
     </item>
+    
+    
+    
     <item>
       <title>Game</title>
       <link>https://hossein-lap.github.io/tags/game/</link>
       <pubDate>Tue, 02 Apr 2024 22:30:09 +0330</pubDate>
+      
       <guid>https://hossein-lap.github.io/tags/game/</guid>
-      <description></description>
+      <description><![CDATA[]]></description>
+      
     </item>
+    
+    
+    
     <item>
       <title>Lua</title>
       <link>https://hossein-lap.github.io/tags/lua/</link>
       <pubDate>Tue, 02 Apr 2024 22:30:09 +0330</pubDate>
+      
       <guid>https://hossein-lap.github.io/tags/lua/</guid>
-      <description></description>
+      <description><![CDATA[]]></description>
+      
     </item>
+    
+    
+    
     <item>
       <title>Plugin</title>
       <link>https://hossein-lap.github.io/tags/plugin/</link>
       <pubDate>Tue, 02 Apr 2024 22:30:09 +0330</pubDate>
+      
       <guid>https://hossein-lap.github.io/tags/plugin/</guid>
-      <description></description>
+      <description><![CDATA[]]></description>
+      
     </item>
+    
+    
+    
     <item>
       <title>Backend</title>
       <link>https://hossein-lap.github.io/tags/backend/</link>
       <pubDate>Tue, 02 Apr 2024 22:30:03 +0330</pubDate>
+      
       <guid>https://hossein-lap.github.io/tags/backend/</guid>
-      <description></description>
+      <description><![CDATA[]]></description>
+      
     </item>
+    
+    
+    
     <item>
       <title>CLI</title>
       <link>https://hossein-lap.github.io/tags/cli/</link>
       <pubDate>Tue, 02 Apr 2024 22:30:03 +0330</pubDate>
+      
       <guid>https://hossein-lap.github.io/tags/cli/</guid>
-      <description></description>
+      <description><![CDATA[]]></description>
+      
     </item>
+    
+    
+    
     <item>
       <title>Go</title>
       <link>https://hossein-lap.github.io/tags/go/</link>
       <pubDate>Tue, 02 Apr 2024 22:30:03 +0330</pubDate>
+      
       <guid>https://hossein-lap.github.io/tags/go/</guid>
-      <description></description>
+      <description><![CDATA[]]></description>
+      
     </item>
+    
+    
+    
     <item>
       <title>Programming</title>
       <link>https://hossein-lap.github.io/tags/programming/</link>
       <pubDate>Tue, 02 Apr 2024 22:30:03 +0330</pubDate>
+      
       <guid>https://hossein-lap.github.io/tags/programming/</guid>
-      <description></description>
+      <description><![CDATA[]]></description>
+      
     </item>
+    
+    
+    
     <item>
       <title>Tools</title>
       <link>https://hossein-lap.github.io/tags/tools/</link>
       <pubDate>Tue, 02 Apr 2024 22:30:03 +0330</pubDate>
+      
       <guid>https://hossein-lap.github.io/tags/tools/</guid>
-      <description></description>
+      <description><![CDATA[]]></description>
+      
     </item>
+    
+    
+    
     <item>
       <title>AsciiDoc</title>
       <link>https://hossein-lap.github.io/tags/asciidoc/</link>
       <pubDate>Tue, 02 Apr 2024 22:09:44 +0330</pubDate>
+      
       <guid>https://hossein-lap.github.io/tags/asciidoc/</guid>
-      <description></description>
+      <description><![CDATA[]]></description>
+      
     </item>
+    
+    
+    
     <item>
       <title>Documentation</title>
       <link>https://hossein-lap.github.io/tags/documentation/</link>
       <pubDate>Tue, 02 Apr 2024 22:09:44 +0330</pubDate>
+      
       <guid>https://hossein-lap.github.io/tags/documentation/</guid>
-      <description></description>
+      <description><![CDATA[]]></description>
+      
     </item>
+    
+    
+    
     <item>
       <title>Elixir</title>
       <link>https://hossein-lap.github.io/tags/elixir/</link>
       <pubDate>Tue, 02 Apr 2024 22:09:44 +0330</pubDate>
+      
       <guid>https://hossein-lap.github.io/tags/elixir/</guid>
-      <description></description>
+      <description><![CDATA[]]></description>
+      
     </item>
+    
+    
+    
     <item>
       <title>Functional</title>
       <link>https://hossein-lap.github.io/tags/functional/</link>
       <pubDate>Tue, 02 Apr 2024 22:09:44 +0330</pubDate>
+      
       <guid>https://hossein-lap.github.io/tags/functional/</guid>
-      <description></description>
+      <description><![CDATA[]]></description>
+      
     </item>
+    
+    
+    
     <item>
       <title>Writing</title>
       <link>https://hossein-lap.github.io/tags/writing/</link>
       <pubDate>Tue, 02 Apr 2024 22:09:44 +0330</pubDate>
+      
       <guid>https://hossein-lap.github.io/tags/writing/</guid>
-      <description></description>
+      <description><![CDATA[]]></description>
+      
     </item>
+    
+    
   </channel>
 </rss>
