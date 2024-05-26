@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hossein Esmail</title>
+    <link>https://hossein-lap.github.io/</link>
+    <description>Recent content on Hossein Esmail</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Hos Es</copyright>
+    <lastBuildDate>Sun, 26 May 2024 22:08:49 +0330</lastBuildDate>
+    <atom:link href="https://hossein-lap.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Welcome</title>
+      <link>https://hossein-lap.github.io/welcome/</link>
+      <pubDate>Sun, 26 May 2024 22:08:49 +0330</pubDate>
+      <guid>https://hossein-lap.github.io/welcome/</guid>
+      <description>This is my personal weblog. I’ll be posting myown notes, ideas, programs.&#xA;image::/images/me/me-square.png[Me]</description>
+    </item>
+    <item>
+      <title>Simple</title>
+      <link>https://hossein-lap.github.io/notes/simple/simple/</link>
+      <pubDate>Sun, 26 May 2024 21:22:44 +0330</pubDate>
+      <guid>https://hossein-lap.github.io/notes/simple/simple/</guid>
+      <description>New stuff Simple test!</description>
+    </item>
+    <item>
+      <title>Time</title>
+      <link>https://hossein-lap.github.io/blog/time/time/</link>
+      <pubDate>Fri, 17 May 2024 22:42:43 +0330</pubDate>
+      <guid>https://hossein-lap.github.io/blog/time/time/</guid>
+      <description>Insert Lead paragraph here.&#xA;1. New stuff We are new here ;) Unresolved directive in &amp;lt;stdin&amp;gt; - include::nah.txt[]</description>
+    </item>
+    <item>
+      <title>Sample</title>
+      <link>https://hossein-lap.github.io/blog/sample/</link>
+      <pubDate>Tue, 02 Apr 2024 22:46:29 +0330</pubDate>
+      <guid>https://hossein-lap.github.io/blog/sample/</guid>
+      <description> Insert Lead paragraph here.&#xA;1. New stuff </description>
+    </item>
+    <item>
+      <title>Test</title>
+      <link>https://hossein-lap.github.io/blog/test/</link>
+      <pubDate>Tue, 02 Apr 2024 22:45:38 +0330</pubDate>
+      <guid>https://hossein-lap.github.io/blog/test/</guid>
+      <description> Insert Lead paragraph here.&#xA;1. New stuff </description>
+    </item>
+    <item>
+      <title>Lua Progamming Language</title>
+      <link>https://hossein-lap.github.io/docs/lua/lua/</link>
+      <pubDate>Tue, 02 Apr 2024 22:30:09 +0330</pubDate>
+      <guid>https://hossein-lap.github.io/docs/lua/lua/</guid>
+      <description> Insert Lead paragraph here.&#xA;New stuff </description>
+    </item>
+    <item>
+      <title>Go Programming Language</title>
+      <link>https://hossein-lap.github.io/docs/go/go/</link>
+      <pubDate>Tue, 02 Apr 2024 22:30:03 +0330</pubDate>
+      <guid>https://hossein-lap.github.io/docs/go/go/</guid>
+      <description> Insert Lead paragraph here.&#xA;New stuff very versile&#xA;more stuff package main import ( &amp;#34;fmt&amp;#34; ) func main() { fmt.Printf(&amp;#34;This is a simple test!\n&amp;#34;) } </description>
+    </item>
+    <item>
+      <title>AsciiDoc(tor): Yo Dawg!</title>
+      <link>https://hossein-lap.github.io/docs/asciidoc/asciidoc/</link>
+      <pubDate>Tue, 02 Apr 2024 22:09:44 +0330</pubDate>
+      <guid>https://hossein-lap.github.io/docs/asciidoc/asciidoc/</guid>
+      <description>Intro Okay, let’s do it.&#xA;Test // include::{home}/.cache/wal/colors-wal-st.h[] Lists Unordered lists * level 1 ** level 2 *** level 3 **** level 4 ***** level 5 * level 1 Example 1. Output level 1&#xA;level 2&#xA;level 3&#xA;level 4&#xA;level 5&#xA;level 1&#xA;Ordered lists . level 1 .. level 2 ... level 3 .... level 4 ..... level 5 . level 1 Example 2. Output level 1</description>
+    </item>
+    <item>
+      <title>Elixir Programming Language</title>
+      <link>https://hossein-lap.github.io/docs/elixir/elixir/</link>
+      <pubDate>Tue, 02 Apr 2024 22:09:44 +0330</pubDate>
+      <guid>https://hossein-lap.github.io/docs/elixir/elixir/</guid>
+      <description> Elixir is a dynamically-typed functional programming language.&#xA;Intractive elixir environment $ iex Hello World! intro.exs #!/bin/elixir IO.puts(&amp;#34;Hello&amp;#34; &amp;lt;&amp;gt; &amp;#34; Elixir!!&amp;#34;) Build Tool mix help mix new mix compile mix test mix run Create mix new example </description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>https://hossein-lap.github.io/about/</link>
+      <pubDate>Wed, 29 Mar 2023 22:14:09 +0330</pubDate>
+      <guid>https://hossein-lap.github.io/about/</guid>
+      <description>Hi I’m Hossein&#xA;#include &amp;lt;stdio.h&amp;gt; int main(int argc, char *argv[]) { printf(&amp;#34;Hello world!\n&amp;#34;); return 0; } Lua programmer, (Xe)LaTeX writer, SysAdmin and Linux user. Yet another minimalist person with a passion about Open Source Software.&#xA;I was a Computer guy from my early days back in my 1st and 2nd grade. But all I did was playing video games. Until my dad came to me and said:&#xA;Don’t just play video games kiddo, it can do much more than that.</description>
+    </item>
+  </channel>
+</rss>

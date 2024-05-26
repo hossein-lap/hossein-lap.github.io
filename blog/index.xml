@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/feed_style.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="https://www.rssboard.org/media-rss">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blogs on Hossein Esmail</title>
     <link>https://hossein-lap.github.io/blog/</link>
@@ -6,59 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Hos Es</copyright>
-    <lastBuildDate>Tue, 02 Apr 2024 22:46:29 +0330</lastBuildDate><atom:link href="https://hossein-lap.github.io/blog/index.xml" rel="self" type="application/rss+xml" /><icon>https://hossein-lap.github.io/images/me/me-circle.png</icon>
-    
-    
+    <lastBuildDate>Fri, 17 May 2024 22:42:43 +0330</lastBuildDate>
+    <atom:link href="https://hossein-lap.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Time</title>
+      <link>https://hossein-lap.github.io/blog/time/time/</link>
+      <pubDate>Fri, 17 May 2024 22:42:43 +0330</pubDate>
+      <guid>https://hossein-lap.github.io/blog/time/time/</guid>
+      <description>Insert Lead paragraph here.&#xA;1. New stuff We are new here ;) Unresolved directive in &amp;lt;stdin&amp;gt; - include::nah.txt[]</description>
+    </item>
     <item>
       <title>Sample</title>
       <link>https://hossein-lap.github.io/blog/sample/</link>
       <pubDate>Tue, 02 Apr 2024 22:46:29 +0330</pubDate>
-      
       <guid>https://hossein-lap.github.io/blog/sample/</guid>
-      <description><![CDATA[
-<div id="preamble">
-<div class="sectionbody">
-<div class="paragraph">
-<p><strong>Insert Lead paragraph here.</strong></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_new_stuff">1. New stuff</h2>
-<div class="sectionbody">
-
-</div>
-</div>
-]]></description>
-      
+      <description> Insert Lead paragraph here.&#xA;1. New stuff </description>
     </item>
-    
-    
-    
     <item>
       <title>Test</title>
       <link>https://hossein-lap.github.io/blog/test/</link>
       <pubDate>Tue, 02 Apr 2024 22:45:38 +0330</pubDate>
-      
       <guid>https://hossein-lap.github.io/blog/test/</guid>
-      <description><![CDATA[
-<div id="preamble">
-<div class="sectionbody">
-<div class="paragraph">
-<p><strong>Insert Lead paragraph here.</strong></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_new_stuff">1. New stuff</h2>
-<div class="sectionbody">
-
-</div>
-</div>
-]]></description>
-      
+      <description> Insert Lead paragraph here.&#xA;1. New stuff </description>
     </item>
-    
-    
   </channel>
 </rss>
