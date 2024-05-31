@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/feed_style.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="https://www.rssboard.org/media-rss">
   <channel>
-    <title>Dev on Hossein Esmail</title>
+    <title>dev on Hossein Esmail</title>
     <link>https://hossein-lap.github.io/categories/dev/</link>
-    <description>Recent content in Dev on Hossein Esmail</description>
+    <description>Recent content in dev on Hossein Esmail</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Hos Es</copyright>
-    <lastBuildDate>Fri, 17 May 2024 22:42:43 +0330</lastBuildDate><atom:link href="https://hossein-lap.github.io/categories/dev/index.xml" rel="self" type="application/rss+xml" /><icon>https://hossein-lap.github.io/images/me/H.png</icon>
+    <lastBuildDate>Fri, 17 May 2024 22:42:43 +0330</lastBuildDate><atom:link href="https://hossein-lap.github.io/categories/dev/index.xml" rel="self" type="application/rss+xml" /><icon>https://hossein-lap.github.io/images/ed/foo.png</icon>
     
     
     <item>

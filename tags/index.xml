@@ -6,13 +6,145 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Hos Es</copyright>
-    <lastBuildDate>Sun, 26 May 2024 21:22:44 +0330</lastBuildDate><atom:link href="https://hossein-lap.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><icon>https://hossein-lap.github.io/images/me/H.png</icon>
+    <lastBuildDate>Fri, 31 May 2024 18:50:32 +0330</lastBuildDate><atom:link href="https://hossein-lap.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><icon>https://hossein-lap.github.io/images/ed/foo.png</icon>
     
     
     <item>
-      <title>Cool-Tag</title>
+      <title>ingress</title>
+      <link>https://hossein-lap.github.io/tags/ingress/</link>
+      <pubDate>Fri, 31 May 2024 18:50:32 +0330</pubDate>
+      
+      <guid>https://hossein-lap.github.io/tags/ingress/</guid>
+      <description><![CDATA[]]></description>
+      
+    </item>
+    
+    
+    
+    <item>
+      <title>K8S</title>
+      <link>https://hossein-lap.github.io/tags/k8s/</link>
+      <pubDate>Fri, 31 May 2024 18:50:32 +0330</pubDate>
+      
+      <guid>https://hossein-lap.github.io/tags/k8s/</guid>
+      <description><![CDATA[]]></description>
+      
+    </item>
+    
+    
+    
+    <item>
+      <title>LoadBalancer</title>
+      <link>https://hossein-lap.github.io/tags/loadbalancer/</link>
+      <pubDate>Fri, 31 May 2024 18:50:32 +0330</pubDate>
+      
+      <guid>https://hossein-lap.github.io/tags/loadbalancer/</guid>
+      <description><![CDATA[]]></description>
+      
+    </item>
+    
+    
+    
+    <item>
+      <title>nginx</title>
+      <link>https://hossein-lap.github.io/tags/nginx/</link>
+      <pubDate>Fri, 31 May 2024 18:50:32 +0330</pubDate>
+      
+      <guid>https://hossein-lap.github.io/tags/nginx/</guid>
+      <description><![CDATA[]]></description>
+      
+    </item>
+    
+    
+    
+    <item>
+      <title>NodePort</title>
+      <link>https://hossein-lap.github.io/tags/nodeport/</link>
+      <pubDate>Fri, 31 May 2024 18:50:32 +0330</pubDate>
+      
+      <guid>https://hossein-lap.github.io/tags/nodeport/</guid>
+      <description><![CDATA[]]></description>
+      
+    </item>
+    
+    
+    
+    <item>
+      <title>Go</title>
+      <link>https://hossein-lap.github.io/tags/go/</link>
+      <pubDate>Fri, 31 May 2024 16:47:17 +0330</pubDate>
+      
+      <guid>https://hossein-lap.github.io/tags/go/</guid>
+      <description><![CDATA[]]></description>
+      
+    </item>
+    
+    
+    
+    <item>
+      <title>HTTP</title>
+      <link>https://hossein-lap.github.io/tags/http/</link>
+      <pubDate>Fri, 31 May 2024 16:47:17 +0330</pubDate>
+      
+      <guid>https://hossein-lap.github.io/tags/http/</guid>
+      <description><![CDATA[]]></description>
+      
+    </item>
+    
+    
+    
+    <item>
+      <title>JSON</title>
+      <link>https://hossein-lap.github.io/tags/json/</link>
+      <pubDate>Fri, 31 May 2024 16:47:17 +0330</pubDate>
+      
+      <guid>https://hossein-lap.github.io/tags/json/</guid>
+      <description><![CDATA[]]></description>
+      
+    </item>
+    
+    
+    
+    <item>
+      <title>Redis</title>
+      <link>https://hossein-lap.github.io/tags/redis/</link>
+      <pubDate>Fri, 31 May 2024 16:47:17 +0330</pubDate>
+      
+      <guid>https://hossein-lap.github.io/tags/redis/</guid>
+      <description><![CDATA[]]></description>
+      
+    </item>
+    
+    
+    
+    <item>
+      <title>RESTFul</title>
+      <link>https://hossein-lap.github.io/tags/restful/</link>
+      <pubDate>Fri, 31 May 2024 16:47:17 +0330</pubDate>
+      
+      <guid>https://hossein-lap.github.io/tags/restful/</guid>
+      <description><![CDATA[]]></description>
+      
+    </item>
+    
+    
+    
+    <item>
+      <title>SQL</title>
+      <link>https://hossein-lap.github.io/tags/sql/</link>
+      <pubDate>Fri, 31 May 2024 16:47:17 +0330</pubDate>
+      
+      <guid>https://hossein-lap.github.io/tags/sql/</guid>
+      <description><![CDATA[]]></description>
+      
+    </item>
+    
+    
+    
+    <item>
+      <title>cool-tag</title>
       <link>https://hossein-lap.github.io/tags/cool-tag/</link>
-      <pubDate>Sun, 26 May 2024 21:22:44 +0330</pubDate>
+      <pubDate>Fri, 17 May 2024 22:42:43 +0330</pubDate>
       
       <guid>https://hossein-lap.github.io/tags/cool-tag/</guid>
       <description><![CDATA[]]></description>
@@ -87,18 +219,6 @@
       <pubDate>Tue, 02 Apr 2024 22:30:03 +0330</pubDate>
       
       <guid>https://hossein-lap.github.io/tags/cli/</guid>
-      <description><![CDATA[]]></description>
-      
-    </item>
-    
-    
-    
-    <item>
-      <title>Go</title>
-      <link>https://hossein-lap.github.io/tags/go/</link>
-      <pubDate>Tue, 02 Apr 2024 22:30:03 +0330</pubDate>
-      
-      <guid>https://hossein-lap.github.io/tags/go/</guid>
       <description><![CDATA[]]></description>
       
     </item>

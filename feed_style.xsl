@@ -9,7 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
         <meta charset="UTF-8"/>
         
-        <link type="text/css" rel="stylesheet" href="https://hossein-lap.github.io/css/styles.b8597a4daf81aa74312fbd03686cd850dae68ab4565d8a654f40635c47a5ecad87626bc55e5afa640d51fbccfdc4b87b52e18fc1f366d9dfb986a17e300cbd60.css" integrity="sha512-uFl6Ta+BqnQxL70DaGzYUNrmirRWXYplT0BjXEel7K2HYmvFXlr6ZA1R+8z9xLh7UuGPwfNm2d+5hqF+MAy9YA==" />
+        <link type="text/css" rel="stylesheet" href="https://hossein-lap.github.io/css/styles.e8ca776c407c7c1fa444a299ec278adc27f5f94c4365fca18f92279e629bae28edbd56aa77c5accf66f7a25aeac053901a7bab84fb730aad6b358d476e91c474.css" integrity="sha512-6Mp3bEB8fB+kRKKZ7CeK3Cf1+UxDZfyhj5InnmKbrijtvVaqd8Wsz2b3olrqwFOQGnurhPtzCq1rNY1HbpHEdA==" />
         <style>
           .aboutfeeds {
             margin: 24px 0; padding: 12px;
@@ -59,7 +59,7 @@
           </div>
           <div class="head">
             <div class="avatar">
-              <img class="logo" src="/images/me/H.png" alt="Site Logo"/>
+              <img class="logo" src="/images/ed/foo.png" alt="Site Logo"/>
             </div>
             <div class="description">
               <p><xsl:value-of select="/rss/channel/description"/></p>
