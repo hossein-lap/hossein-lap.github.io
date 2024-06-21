@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/feed_style.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="https://www.rssboard.org/media-rss">
   <channel>
     <title>Cool-Tag on Hossein Esmail</title>
-    <link>https://hossein-lap.github.io/tags/cool-tag/</link>
+    <link>http://localhost:1313/tags/cool-tag/</link>
     <description>Recent content in Cool-Tag on Hossein Esmail</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Hos Es</copyright>
-    <lastBuildDate>Fri, 17 May 2024 22:42:43 +0330</lastBuildDate><atom:link href="https://hossein-lap.github.io/tags/cool-tag/index.xml" rel="self" type="application/rss+xml" /><icon>https://hossein-lap.github.io/images/me/H.png</icon>
+    <lastBuildDate>Fri, 17 May 2024 22:42:43 +0330</lastBuildDate><atom:link href="http://localhost:1313/tags/cool-tag/index.xml" rel="self" type="application/rss+xml" /><icon>http://localhost:1313/images/ed/foo.png</icon>
     
     
     <item>
       <title>Time</title>
-      <link>https://hossein-lap.github.io/blog/time/time/</link>
+      <link>http://localhost:1313/blog/time/time/</link>
       <pubDate>Fri, 17 May 2024 22:42:43 +0330</pubDate>
       
-      <guid>https://hossein-lap.github.io/blog/time/time/</guid>
+      <guid>http://localhost:1313/blog/time/time/</guid>
       <description><![CDATA[
 <div id="preamble">
 <div class="sectionbody">
