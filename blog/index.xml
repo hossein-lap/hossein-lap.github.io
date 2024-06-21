@@ -6,7 +6,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Hos Es</copyright>
-    <lastBuildDate>Fri, 17 May 2024 22:42:43 +0330</lastBuildDate><atom:link href="https://hossein-lap.github.io/blog/index.xml" rel="self" type="application/rss+xml" /><icon>https://hossein-lap.github.io/images/ed/foo.png</icon>
+    <lastBuildDate>Fri, 17 May 2024 22:42:43 +0330</lastBuildDate><atom:link href="https://hossein-lap.github.io/blog/index.xml" rel="self" type="application/rss+xml" /><icon>https://hossein-lap.github.io/images/me/H.png</icon>
     
     
     <item>
@@ -34,58 +34,6 @@
 <div class="paragraph">
 <p>Unresolved directive in &lt;stdin&gt; - include::nah.txt[]</p>
 </div>
-</div>
-</div>
-]]></description>
-      
-    </item>
-    
-    
-    
-    <item>
-      <title>Sample</title>
-      <link>https://hossein-lap.github.io/blog/sample/</link>
-      <pubDate>Tue, 02 Apr 2024 22:46:29 +0330</pubDate>
-      
-      <guid>https://hossein-lap.github.io/blog/sample/</guid>
-      <description><![CDATA[
-<div id="preamble">
-<div class="sectionbody">
-<div class="paragraph">
-<p><strong>Insert Lead paragraph here.</strong></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_new_stuff">1. New stuff</h2>
-<div class="sectionbody">
-
-</div>
-</div>
-]]></description>
-      
-    </item>
-    
-    
-    
-    <item>
-      <title>Test</title>
-      <link>https://hossein-lap.github.io/blog/test/</link>
-      <pubDate>Tue, 02 Apr 2024 22:45:38 +0330</pubDate>
-      
-      <guid>https://hossein-lap.github.io/blog/test/</guid>
-      <description><![CDATA[
-<div id="preamble">
-<div class="sectionbody">
-<div class="paragraph">
-<p><strong>Insert Lead paragraph here.</strong></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_new_stuff">1. New stuff</h2>
-<div class="sectionbody">
-
 </div>
 </div>
 ]]></description>

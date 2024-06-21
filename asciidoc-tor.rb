@@ -1,4 +1,4 @@
-#!/bin/ruby
+#!/usr/bin/env ruby
 require 'asciidoctor-pdf'
 require 'asciidoctor/extensions'
 
@@ -27,77 +27,107 @@ output_file ||= input_file.sub('.adoc', '.pdf')
 # puts "Output file: #{output_file}"
 # }}}
 
-doc_author = "Hos Es"
-doc_theme = "light"
-doc_name = input_file
-
-# # def lists {{{
-# Asciidoctor::Extensions.register do
-#     treeprocessor do
-#         process do |doc_name|
-#             (doc_name.find_by context: :dlist).each do |dlist|
-#                 dlist.style = 'horizontal'
-#             end
-#             nil
-#         end
-#     end
-# end
-# # }}}
-
-# template {{{
 settings = {
-    font_main: 'FreeSerif',
-    font_code: 'FreeMono',
-    font_size_main: 10.5,
-    font_size_code: 8,
-    font_size_caption: 9,
+  font_main: 'LiberationSans',
+  font_title: 'LiberationSerif',
+  font_code: 'UbuntuMono',
+  font_size_main: 10.5,
+  font_size_code: 8,
+  font_size_caption: 9,
+  doc_author: "Hos Es",
+  doc_syntax: "algol", # pygments
+  # doc_lang: "lua",
+  doc_name: input_file,
+  h_dlist: false,
 }
 
+
+# def lists {{{
+if settings[:h_dlist]
+  Asciidoctor::Extensions.register do
+      treeprocessor do
+          process do |doc_name|
+              (doc_name.find_by context: :dlist).each do |dlist|
+                  dlist.style = 'horizontal'
+              end
+              nil
+          end
+      end
+  end
+end
+# }}}
+
+# fonts settings {{{
 # list of fonts {{{
 font_catalog = {
-    'FreeSerif': {
+    'FreeSerif' => {
         normal:      '/home/hos/.local/share/fonts/gnu-freefonts/serif/FreeSerif.ttf',
         bold:        '/home/hos/.local/share/fonts/gnu-freefonts/serif/FreeSerifBold.ttf',
         italic:      '/home/hos/.local/share/fonts/gnu-freefonts/serif/FreeSerifItalic.ttf',
         bold_italic: '/home/hos/.local/share/fonts/gnu-freefonts/serif/FreeSerifBoldItalic.ttf',
     },
-    'FreeSans': {
+    'FreeSans' => {
         normal:      '/home/hos/.local/share/fonts/gnu-freefonts/sans/FreeSans.ttf',
         bold:        '/home/hos/.local/share/fonts/gnu-freefonts/sans/FreeSansBold.ttf',
         italic:      '/home/hos/.local/share/fonts/gnu-freefonts/sans/FreeSansOblique.ttf',
         bold_italic: '/home/hos/.local/share/fonts/gnu-freefonts/sans/FreeSansBoldOblique.ttf',
     },
-    'FreeMono': {
+    'FreeMono' => {
         normal:      '/home/hos/.local/share/fonts/gnu-freefonts/mono/FreeMono.ttf',
         bold:        '/home/hos/.local/share/fonts/gnu-freefonts/mono/FreeMonoBold.ttf',
         italic:      '/home/hos/.local/share/fonts/gnu-freefonts/mono/FreeMonoOblique.ttf',
         bold_italic: '/home/hos/.local/share/fonts/gnu-freefonts/mono/FreeMonoBoldOblique.ttf',
     },
-    'LiberationSerif': {
-        normal:      '/home/hos/.local/share/fonts/liberation/LiberationSerif-Regular.ttf',
-        bold:        '/home/hos/.local/share/fonts/liberation/LiberationSerif-Bold.ttf',
-        italic:      '/home/hos/.local/share/fonts/liberation/LiberationSerif-Italic.ttf',
-        bold_italic: '/home/hos/.local/share/fonts/liberation/LiberationSerif-BoldItalic.ttf',
+    'LiberationSerif' => {
+        normal:      '/usr/share/fonts/truetype/liberation/LiberationSerif-Regular.ttf',
+        bold:        '/usr/share/fonts/truetype/liberation/LiberationSerif-Bold.ttf',
+        italic:      '/usr/share/fonts/truetype/liberation/LiberationSerif-Italic.ttf',
+        bold_italic: '/usr/share/fonts/truetype/liberation/LiberationSerif-BoldItalic.ttf',
     },
-    'UbuntuMono': {
-        normal:      '/home/hos/.local/share/fonts/ubuntu/UbuntuMono-R.ttf',
-        bold:        '/home/hos/.local/share/fonts/ubuntu/UbuntuMono-B.ttf',
-        italic:      '/home/hos/.local/share/fonts/ubuntu/UbuntuMono-RI.ttf',
-        bold_italic: '/home/hos/.local/share/fonts/ubuntu/UbuntuMono-BI.ttf',
+    'LiberationSans' => {
+        normal:      '/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf',
+        bold:        '/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf',
+        italic:      '/usr/share/fonts/truetype/liberation/LiberationSans-Italic.ttf',
+        bold_italic: '/usr/share/fonts/truetype/liberation/LiberationSans-BoldItalic.ttf',
     },
-    'CMUSerif': {
+    'LiberationMono' => {
+        normal:      '/usr/share/fonts/truetype/liberation/LiberationMono-Regular.ttf',
+        bold:        '/usr/share/fonts/truetype/liberation/LiberationMono-Bold.ttf',
+        italic:      '/usr/share/fonts/truetype/liberation/LiberationMono-Italic.ttf',
+        bold_italic: '/usr/share/fonts/truetype/liberation/LiberationMono-BoldItalic.ttf',
+    },
+    'UbuntuMono' => {
+        normal:      '/usr/share/fonts/truetype/ubuntu/UbuntuMono-R.ttf',
+        bold:        '/usr/share/fonts/truetype/ubuntu/UbuntuMono-B.ttf',
+        italic:      '/usr/share/fonts/truetype/ubuntu/UbuntuMono-RI.ttf',
+        bold_italic: '/usr/share/fonts/truetype/ubuntu/UbuntuMono-BI.ttf',
+    },
+    'Ubuntu' => {
+        normal:      '/usr/share/fonts/truetype/ubuntu/Ubuntu-R.ttf',
+        bold:        '/usr/share/fonts/truetype/ubuntu/Ubuntu-B.ttf',
+        italic:      '/usr/share/fonts/truetype/ubuntu/Ubuntu-RI.ttf',
+        bold_italic: '/usr/share/fonts/truetype/ubuntu/Ubuntu-BI.ttf',
+    },
+    'CMUSerif' => {
         normal:      '/usr/share/fonts/truetype/cmu/cmunrm.ttf',
         bold:        '/usr/share/fonts/truetype/cmu/cmunbx.ttf',
         italic:      '/usr/share/fonts/truetype/cmu/cmunti.ttf',
         bold_italic: '/usr/share/fonts/truetype/cmu/cmunbi.ttf',
     },
-    'CMUMono': {
+    'CMUMono' => {
         normal:      '/usr/share/fonts/truetype/cmu/cmuntt.ttf',
         bold:        '/usr/share/fonts/truetype/cmu/cmuntb.ttf',
         italic:      '/usr/share/fonts/truetype/cmu/cmunit.ttf',
         bold_italic: '/usr/share/fonts/truetype/cmu/cmuntx.ttf',
     },
 }
+
+font_main = settings[:font_main]
+font_title = settings[:font_title]
+font_code = settings[:font_code]
+current_font_main = font_catalog[font_main]
+current_font_title = font_catalog[font_title]
+current_font_code = font_catalog[font_code]
 # }}}
 
 # yaml {{{
@@ -106,15 +136,20 @@ extends: default
 font:
   catalog:
     Noto Serif:
-      normal:      #{font_catalog[:LiberationSerif][:normal]}
-      bold:        #{font_catalog[:LiberationSerif][:bold]}
-      italic:      #{font_catalog[:LiberationSerif][:italic]}
-      bold_italic: #{font_catalog[:LiberationSerif][:bold_italic]}
+      normal:      #{current_font_main[:normal]}
+      bold:        #{current_font_main[:bold]}
+      italic:      #{current_font_main[:italic]}
+      bold_italic: #{current_font_main[:bold_italic]}
     M+ 1mn:
-      normal:      #{font_catalog[:UbuntuMono][:normal]}
-      bold:        #{font_catalog[:UbuntuMono][:bold]}
-      italic:      #{font_catalog[:UbuntuMono][:italic]}
-      bold_italic: #{font_catalog[:UbuntuMono][:bold_italic]}
+      normal:      #{current_font_code[:normal]}
+      bold:        #{current_font_code[:bold]}
+      italic:      #{current_font_code[:italic]}
+      bold_italic: #{current_font_code[:bold_italic]}
+    Title Sans:
+      normal:      #{current_font_title[:normal]}
+      bold:        #{current_font_title[:bold]}
+      italic:      #{current_font_title[:italic]}
+      bold_italic: #{current_font_title[:bold_italic]}
 base:
   #font-family: #{settings[:font_main]}
   font-size: #{settings[:font_size_main]}
@@ -122,16 +157,22 @@ code:
   #font-family: #{settings[:font_code]}
   font-size: #{settings[:font_size_code]}
 codespan:
-  #font-family: #{settings[:font_code]} 
+  #font-family: #{settings[:font_code]}
   font-size: #{settings[:font_size_caption]}
 kbd:
-  #font-family: #{settings[:font_code]} 
+  #font-family: #{settings[:font_code]}
 button:
-  #font-family: #{settings[:font_main]} 
+  #font-family: #{settings[:font_main]}
 caption:
   font-color: #7a2518
   font-size: #{settings[:font_size_caption]}
 heading:
+  h1-font-family: "Title Sans"
+  h2-font-family: "Title Sans"
+  h3-font-family: "Title Sans"
+  h4-font-family: "Title Sans"
+  h5-font-family: "Title Sans"
+  h6-font-family: "Title Sans"
   h1-font-size: floor($base_font_size * 2.6)
   h2-font-size: floor($base_font_size * 2.15)
   h3-font-size: round($base_font_size * 1.7)
@@ -161,15 +202,16 @@ options = {
     attributes: {
         "imagesdir" => "images",
         "skip-front-matter" => true,
-        "author" => doc_author,
+        "author" => settings[:doc_author],
         "icons" => "font",
         "icon-set" => "fi",
         'toc' => false,
-        'sectnums' => false,
-        # 'source-highlighter' => 'pygments',
-        # 'pygments-style' => 'tango',
-        'source-highlighter' => 'rouge',
-        'rouge-style' => 'github',
+        'sectnums' => true,
+        'linenums' => false,
+        'source-highlighter' => 'pygments',
+        'pygments-style' => settings[:doc_syntax],
+        # 'source-highlighter' => 'rouge',
+        # 'rouge-style' => settings[:doc_syntax],
         'pdf-themedir' => '.',  # Use the current directory for the styles
         'pdf-theme' => theme_file_path,  # The name of the custom theme file without the extension
     }
@@ -178,7 +220,7 @@ options = {
 
 options[:to_file] = output_file
 
-Asciidoctor.convert_file doc_name, **options
+Asciidoctor.convert_file settings[:doc_name], **options
 
-File.delete(theme_file_path)
+# File.delete(theme_file_path)
 

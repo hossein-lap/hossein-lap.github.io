@@ -17,13 +17,13 @@
     ,
     "icons": [
       {
-        "src": "/images/ed/foo.png",
+        "src": "/images/me/H.png",
         "sizes": "512x512",
         "type": "image/png",
         "purpose": "maskable"
       },
       {
-        "src": "/images/ed/foo.png",
+        "src": "/images/me/H.png",
         "sizes": "512x512",
         "type": "image/png",
         "purpose": "any"

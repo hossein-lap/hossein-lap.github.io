@@ -6,15 +6,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Hos Es</copyright>
-    <lastBuildDate>Fri, 31 May 2024 18:50:32 +0330</lastBuildDate><atom:link href="https://hossein-lap.github.io/tags/loadbalancer/index.xml" rel="self" type="application/rss+xml" /><icon>https://hossein-lap.github.io/images/ed/foo.png</icon>
+    <lastBuildDate>Fri, 31 May 2024 18:50:32 +0330</lastBuildDate><atom:link href="https://hossein-lap.github.io/tags/loadbalancer/index.xml" rel="self" type="application/rss+xml" /><icon>https://hossein-lap.github.io/images/me/H.png</icon>
     
     
     <item>
       <title>K8s Ingress LoadBalancer</title>
-      <link>https://hossein-lap.github.io/notes/kubernetes/k8s-ingress-loadbalancer/</link>
+      <link>https://hossein-lap.github.io/notes/k8s-ingress-loadbalancer/</link>
       <pubDate>Fri, 31 May 2024 18:50:32 +0330</pubDate>
       
-      <guid>https://hossein-lap.github.io/notes/kubernetes/k8s-ingress-loadbalancer/</guid>
+      <guid>https://hossein-lap.github.io/notes/k8s-ingress-loadbalancer/</guid>
       <description><![CDATA[<div id="preamble">
 <div class="sectionbody">
 <div class="admonitionblock warning">

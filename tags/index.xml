@@ -6,11 +6,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Hos Es</copyright>
-    <lastBuildDate>Fri, 31 May 2024 18:50:32 +0330</lastBuildDate><atom:link href="https://hossein-lap.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><icon>https://hossein-lap.github.io/images/ed/foo.png</icon>
+    <lastBuildDate>Fri, 31 May 2024 18:50:32 +0330</lastBuildDate><atom:link href="https://hossein-lap.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><icon>https://hossein-lap.github.io/images/me/H.png</icon>
     
     
     <item>
-      <title>ingress</title>
+      <title>Ingress</title>
       <link>https://hossein-lap.github.io/tags/ingress/</link>
       <pubDate>Fri, 31 May 2024 18:50:32 +0330</pubDate>
       
@@ -46,7 +46,7 @@
     
     
     <item>
-      <title>nginx</title>
+      <title>Nginx</title>
       <link>https://hossein-lap.github.io/tags/nginx/</link>
       <pubDate>Fri, 31 May 2024 18:50:32 +0330</pubDate>
       
@@ -142,7 +142,7 @@
     
     
     <item>
-      <title>cool-tag</title>
+      <title>Cool-Tag</title>
       <link>https://hossein-lap.github.io/tags/cool-tag/</link>
       <pubDate>Fri, 17 May 2024 22:42:43 +0330</pubDate>
       
