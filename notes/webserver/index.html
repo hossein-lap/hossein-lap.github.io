@@ -43,7 +43,7 @@
 
     
     
-    <link type="text/css" rel="stylesheet" href=https://hossein-lap.github.io/css/styles.3df1073eb9a21eba9eaaeb47e10d9bd5d8c095c8db74169a474a16d072f75e43dfc135f4c91e5a8351e55a9df51d729e199dd7136ece1d945fee215e15a428ab.css integrity="sha512-PfEHPrmiHrqequtH4Q2b1djAlcjbdBaaR0oW0HL3XkPfwTX0yR5ag1HlWp31HXKeGZ3XE27OHZRf7iFeFaQoqw==" />
+    <link type="text/css" rel="stylesheet" href=https://hossein-lap.github.io/css/styles.a506a9eff4ee159163928a9c18d67715835303669cc007e3d239006b50040b89e8b19810f76a3991be15f1d0ba0800ff0b715610e8d06c82051be74a0ebe7999.css integrity="sha512-pQap7/TuFZFjkoqcGNZ3FYNTA2acwAfj0jkAa1AEC4nosZgQ92o5kb4V8dC6CAD/C3FWEOjQbIIFG&#43;dKDr55mQ==" />
 <meta name="author" content="Hossein Esmail" />
 
     
@@ -350,7 +350,7 @@ that needs to be handled (HTTP requests goes to the specified paths)</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_redis_handler">Redis Handler</h2>
+<h2 id="_redis_handler">1. Redis Handler</h2>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
@@ -366,7 +366,7 @@ that needs to be handled (HTTP requests goes to the specified paths)</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_mysql_handler">MySQL Handler</h2>
+<h2 id="_mysql_handler">2. MySQL Handler</h2>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
@@ -384,7 +384,7 @@ that needs to be handled (HTTP requests goes to the specified paths)</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_json_parser_unmarshal">JSON Parser - Unmarshal</h2>
+<h2 id="_json_parser_unmarshal">3. JSON Parser - Unmarshal</h2>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
@@ -422,7 +422,7 @@ that needs to be handled (HTTP requests goes to the specified paths)</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_complex_json">Complex JSON</h3>
+<h3 id="_complex_json">3.1. Complex JSON</h3>
 <div class="listingblock">
 <div class="title"><code>assets/complex.json</code></div>
 <div class="content">
@@ -496,7 +496,7 @@ that needs to be handled (HTTP requests goes to the specified paths)</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_common_pitfalls_with_json_unmarshalling_in_go">Common pitfalls with JSON unmarshalling in Go</h3>
+<h3 id="_common_pitfalls_with_json_unmarshalling_in_go">3.2. Common pitfalls with JSON unmarshalling in Go</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -520,7 +520,7 @@ that needs to be handled (HTTP requests goes to the specified paths)</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_json_parser_marshal">JSON Parser - Marshal</h2>
+<h2 id="_json_parser_marshal">4. JSON Parser - Marshal</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The <code>json.Marshal()</code> method does the opposite of <code>Unmarshal()</code> by converting
@@ -555,7 +555,7 @@ a given data structure into a JSON.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_structs">structs</h3>
+<h3 id="_structs">4.1. structs</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">main</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
@@ -595,7 +595,7 @@ format the output.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_customizing_json_field_names_with_struct_tags">Customizing JSON field names with struct tags</h3>
+<h3 id="_customizing_json_field_names_with_struct_tags">4.2. Customizing JSON field names with struct tags</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">type</span> <span style="color: #d0d0d0;background-color: #151515">Dog</span> <span style="color: #aa759f">struct</span> <span style="color: #d0d0d0">{</span>
@@ -646,7 +646,7 @@ format the output.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_other_uses_of_struct_tags">Other uses of struct tags</h3>
+<h3 id="_other_uses_of_struct_tags">4.3. Other uses of struct tags</h3>
 <div class="listingblock">
 <div class="title">Omit an empty field (one with its zero value in Go)</div>
 <div class="content">
@@ -663,7 +663,7 @@ format the output.
 </div>
 </div>
 <div class="sect1">
-<h2 id="_validating_json_data">Validating JSON data</h2>
+<h2 id="_validating_json_data">5. Validating JSON data</h2>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
@@ -679,7 +679,7 @@ format the output.
 </div>
 </div>
 <div class="sect1">
-<h2 id="_defining_custom_behavior_marshal_unmarshal_data">Defining custom behavior - Marshal / Unmarshal data</h2>
+<h2 id="_defining_custom_behavior_marshal_unmarshal_data">6. Defining custom behavior - Marshal / Unmarshal data</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>In Go, you can define custom behavior for marshalling data by implementing the

@@ -48,7 +48,7 @@ vocabulary in English.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_hello_world">Hello World!</h2>
+<h2 id="_hello_world">1. Hello World!</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Lua can either be used embedded in an application or by itself. The first
@@ -78,7 +78,7 @@ calling the print function with the string &#34;Hello, world!&#34; as an argumen
 </div>
 </div>
 <div class="sect1">
-<h2 id="_syntax">Syntax</h2>
+<h2 id="_syntax">2. Syntax</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Syntax of a programming language defines how statements and expressions must be
@@ -111,7 +111,7 @@ that sets the value of variable to that expression.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_obtaining_lua">Obtaining Lua</h2>
+<h2 id="_obtaining_lua">3. Obtaining Lua</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Lua can be obtained on the official Lua website,
@@ -120,7 +120,7 @@ on the <a href="http://www.lua.org/download.html">download page</a>.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_basics">Basics</h2>
+<h2 id="_basics">4. Basics</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>If you are using the stand-alone Lua interpreter, all you have to do
@@ -159,7 +159,7 @@ and prints its factorial:</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_chuncks">Chuncks</h2>
+<h2 id="_chuncks">5. Chuncks</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>We call each piece of code that Lua executes, such as a file or a single line
@@ -289,7 +289,7 @@ load the new code; then we can exercise the new code, calling its functions and
 printing the results.</p>
 </div>
 <div class="sect2">
-<h3 id="_some_lexical_conventions">Some Lexical Conventions</h3>
+<h3 id="_some_lexical_conventions">5.1. Some Lexical Conventions</h3>
 <div class="paragraph">
 <p>Identifiers (or names) in Lua can be any string of letters, digits, and underscores,
 not beginning with a digit; for instance</p>
@@ -342,7 +342,7 @@ Usually, I reserve the identifier <code>_</code> (a single underscore) for dummy
 </div>
 </div>
 <div class="sect1">
-<h2 id="_comments">Comments</h2>
+<h2 id="_comments">6. Comments</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>A comment is a code annotation that is ignored by the programming language.
@@ -410,7 +410,7 @@ the section called &#34;Long Strings&#34;.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_expressions">Expressions</h2>
+<h2 id="_expressions">7. Expressions</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Expressions are pieces of code that have a value and that can be
@@ -456,7 +456,7 @@ four chunks are all valid and equivalent:</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_global_variables">Global Variables</h2>
+<h2 id="_global_variables">8. Global Variables</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Global variables do not need declarations; we simply use them. It is not an error
@@ -485,7 +485,7 @@ After the assignment, Lua can eventually reclaim the memory used by the variable
 </div>
 </div>
 <div class="sect1">
-<h2 id="_types_and_values">Types and Values</h2>
+<h2 id="_types_and_values">9. Types and Values</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Lua is a dynamically-typed language. There are no type definitions in the language;
@@ -628,7 +628,7 @@ or initialized.</p>
 <p>We will discuss now the simple types nil and Boolean.</p>
 </div>
 <div class="sect2">
-<h3 id="_nil">Nil</h3>
+<h3 id="_nil">9.1. Nil</h3>
 <div class="paragraph">
 <p>Nil is a type with a single value, nil, whose main property is to be different
 from any other value. Lua uses nil as a kind of non-value, to represent the
@@ -638,7 +638,7 @@ variable to delete it.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_booleans">Booleans</h3>
+<h3 id="_booleans">9.2. Booleans</h3>
 <div class="paragraph">
 <p>The Boolean type has two values, <code>false</code> and <code>true</code>, which represent the
 traditional Boolean values. However, Booleans do not hold a monopoly of
@@ -763,7 +763,7 @@ and the <code>or</code> operator returns true if either of arguments is true and
 </div>
 </div>
 <div class="sect2">
-<h3 id="_numbers">Numbers</h3>
+<h3 id="_numbers">9.3. Numbers</h3>
 <div class="paragraph">
 <p>Numbers generally represent quantities, but they can be used for many other things. The
 number type in Lua works mostly in the same way as real numbers.</p>
@@ -826,7 +826,7 @@ even in hexadecimal. Here are some valid numbers:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_arithmetic_operations">Arithmetic operations</h4>
+<h4 id="_arithmetic_operations">9.3.1. Arithmetic operations</h4>
 <div class="paragraph">
 <p>The operators for numbers in Lua are the following:</p>
 </div>
@@ -892,7 +892,7 @@ even in hexadecimal. Here are some valid numbers:</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_integers">Integers</h4>
+<h4 id="_integers">9.3.2. Integers</h4>
 <div class="paragraph">
 <p>A new subtype of numbers, integers, was added in Lua 5.3. Numbers can be either
 integers or floats.  Floats are similar to numbers as described above, while
@@ -908,7 +908,7 @@ integers.  In other cases, with the exception of the floor division operator
 </div>
 </div>
 <div class="sect2">
-<h3 id="_strings">Strings</h3>
+<h3 id="_strings">9.4. Strings</h3>
 <div class="paragraph">
 <p>Strings are sequences of characters that can be used to represent text. They can be written
 in Lua by being contained in double quotes, single quotes or long brackets
@@ -1076,7 +1076,7 @@ interpretation of characters.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_concatenation">Concatenation</h4>
+<h4 id="_concatenation">9.4.1. Concatenation</h4>
 <div class="quoteblock">
 <blockquote>
 <div class="paragraph">
@@ -1099,7 +1099,7 @@ end-to-end.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_other_types">Other types</h3>
+<h3 id="_other_types">9.5. Other types</h3>
 <div class="paragraph">
 <p>The four basic types in Lua (numbers, booleans, nil and strings) have been described in
 the previous sections, but four types are missing:
@@ -1147,7 +1147,7 @@ Threads
 </div>
 </div>
 <div class="sect1">
-<h2 id="_literals">Literals</h2>
+<h2 id="_literals">10. Literals</h2>
 <div class="sectionbody">
 
 </div>
@@ -1173,7 +1173,7 @@ Threads
 </div>
 </div>
 <div class="sect1">
-<h2 id="_new_stuff">New stuff</h2>
+<h2 id="_new_stuff">1. New stuff</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>very versile</p>
@@ -1181,7 +1181,7 @@ Threads
 </div>
 </div>
 <div class="sect1">
-<h2 id="_more_stuff">more stuff</h2>
+<h2 id="_more_stuff">2. more stuff</h2>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
@@ -1212,7 +1212,7 @@ Threads
       <guid>https://hossein-lap.github.io/docs/asciidoc/asciidoc/</guid>
       <description><![CDATA[
 <div class="sect1">
-<h2 id="_intro">Intro</h2>
+<h2 id="_intro">1. Intro</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Okay, let’s do it.</p>
@@ -1226,10 +1226,10 @@ Threads
 </div>
 </div>
 <div class="sect1">
-<h2 id="_lists">Lists</h2>
+<h2 id="_lists">2. Lists</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_unordered_lists">Unordered lists</h3>
+<h3 id="_unordered_lists">2.1. Unordered lists</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -1289,7 +1289,7 @@ Threads
 </div>
 </div>
 <div class="sect2">
-<h3 id="_ordered_lists">Ordered lists</h3>
+<h3 id="_ordered_lists">2.2. Ordered lists</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -1349,7 +1349,7 @@ Threads
 </div>
 </div>
 <div class="sect2">
-<h3 id="_todo_lists">TODO lists</h3>
+<h3 id="_todo_lists">2.3. TODO lists</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -1385,7 +1385,7 @@ Threads
 </div>
 </div>
 <div class="sect2">
-<h3 id="_separating_lists">Separating lists</h3>
+<h3 id="_separating_lists">2.4. Separating lists</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -1430,10 +1430,10 @@ Threads
 </div>
 </div>
 <div class="sect1">
-<h2 id="_definitions">Definitions</h2>
+<h2 id="_definitions">3. Definitions</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_normal_definition_list">Normal definition list</h3>
+<h3 id="_normal_definition_list">3.1. Normal definition list</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -1463,7 +1463,7 @@ section term:: definition of second term</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_horizontal_definition_list">Horizontal definition list</h3>
+<h3 id="_horizontal_definition_list">3.2. Horizontal definition list</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -1502,7 +1502,7 @@ section term
 </div>
 </div>
 <div class="sect2">
-<h3 id="_multi_line_definition_list">Multi-line definition list</h3>
+<h3 id="_multi_line_definition_list">3.3. Multi-line definition list</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -1534,7 +1534,7 @@ definition of second term</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_qa">Q&amp;A</h3>
+<h3 id="_qa">3.4. Q&amp;A</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -1566,7 +1566,7 @@ What is the answer to the Ultimate Question?:: 42</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_mixed">Mixed</h3>
+<h3 id="_mixed">3.5. Mixed</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -1698,7 +1698,7 @@ Note that the indentation is optional
 </div>
 </div>
 <div class="sect2">
-<h3 id="_complex_content_in_outline_lists">Complex content in outline lists</h3>
+<h3 id="_complex_content_in_outline_lists">3.6. Complex content in outline lists</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -1792,10 +1792,10 @@ a list continuation on a line adjacent to both blocks.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_links">Links</h2>
+<h2 id="_links">4. Links</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_external">External</h3>
+<h3 id="_external">4.1. External</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -1825,7 +1825,7 @@ https://github.com/asciidoctor[Asciidoctor @ *GitHub*]</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_relative">Relative</h3>
+<h3 id="_relative">4.2. Relative</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -1845,7 +1845,7 @@ https://github.com/asciidoctor[Asciidoctor @ *GitHub*]</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_email_and_irc">Email and IRC</h3>
+<h3 id="_email_and_irc">4.3. Email and IRC</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -1880,7 +1880,7 @@ irc://irc.freenode.org/#asciidoctor</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_inline_anchors">Inline anchors</h3>
+<h3 id="_inline_anchors">4.4. Inline anchors</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -1905,7 +1905,7 @@ anchor:bookmark-b[]Use a cross reference to link to this location.</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_internal_cross_references">Internal cross references</h3>
+<h3 id="_internal_cross_references">4.5. Internal cross references</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -1930,7 +1930,7 @@ Learn how to organize the document into &lt;&lt;section-titles,sections&gt;&gt;.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_images">Images</h3>
+<h3 id="_images">4.6. Images</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -1978,10 +1978,10 @@ image::http://asciidoctor.org/images/octocat.jpg[GitHub mascot]</code></pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_admonition_paragraph">Admonition paragraph</h2>
+<h2 id="_admonition_paragraph">5. Admonition paragraph</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_note">NOTE</h3>
+<h3 id="_note">5.1. NOTE</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -2010,7 +2010,7 @@ This is a NOTE!
 </div>
 </div>
 <div class="sect2">
-<h3 id="_tip">TIP</h3>
+<h3 id="_tip">5.2. TIP</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -2039,7 +2039,7 @@ This is a TIP!
 </div>
 </div>
 <div class="sect2">
-<h3 id="_warning">WARNING</h3>
+<h3 id="_warning">5.3. WARNING</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -2068,7 +2068,7 @@ This is a WARNING!
 </div>
 </div>
 <div class="sect2">
-<h3 id="_caution">CAUTION</h3>
+<h3 id="_caution">5.4. CAUTION</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -2097,7 +2097,7 @@ This is a CAUTION!
 </div>
 </div>
 <div class="sect2">
-<h3 id="_important">IMPORTANT</h3>
+<h3 id="_important">5.5. IMPORTANT</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -2126,7 +2126,7 @@ This is a IMPORTANT!
 </div>
 </div>
 <div class="sect2">
-<h3 id="_admonition_blocks">Admonition blocks</h3>
+<h3 id="_admonition_blocks">5.6. Admonition blocks</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -2191,10 +2191,10 @@ The style can be any one of the admonition labels:</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_blocks">Blocks</h2>
+<h2 id="_blocks">6. Blocks</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_listing_block">Listing block</h3>
+<h3 id="_listing_block">6.1. Listing block</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -2218,7 +2218,7 @@ This is a **_listing block_**
 </div>
 </div>
 <div class="sect2">
-<h3 id="_example_block">Example block</h3>
+<h3 id="_example_block">6.2. Example block</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -2244,7 +2244,7 @@ This is a **_example block_**
 </div>
 </div>
 <div class="sect2">
-<h3 id="_comment_block">Comment block</h3>
+<h3 id="_comment_block">6.3. Comment block</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -2264,7 +2264,7 @@ This is a **_comment block_**
 </div>
 </div>
 <div class="sect2">
-<h3 id="_literal_block">Literal block</h3>
+<h3 id="_literal_block">6.4. Literal block</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -2288,7 +2288,7 @@ This is a **_literal block_**
 </div>
 </div>
 <div class="sect2">
-<h3 id="_pass_block">Pass block</h3>
+<h3 id="_pass_block">6.5. Pass block</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -2308,7 +2308,7 @@ This is a **_literal block_**
 </div>
 </div>
 <div class="sect2">
-<h3 id="_quoteverse_block">Quote/Verse block</h3>
+<h3 id="_quoteverse_block">6.6. Quote/Verse block</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -2333,7 +2333,7 @@ ____</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_blockqoutes">blockqoutes</h4>
+<h4 id="_blockqoutes">6.6.1. blockqoutes</h4>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -2363,7 +2363,7 @@ Everybody remember where we parked.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_sidebar_block">Sidebar block</h3>
+<h3 id="_sidebar_block">6.7. Sidebar block</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -2391,7 +2391,7 @@ This is a Sidebar block -- I have no idea why it&#39;s called `sidebar`
 </div>
 </div>
 <div class="sect2">
-<h3 id="_block_metadata">Block metadata</h3>
+<h3 id="_block_metadata">6.8. Block metadata</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -2429,13 +2429,13 @@ can long endure. ...</pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_customization_wip">Customization (WIP)</h2>
+<h2 id="_customization_wip">7. Customization (WIP)</h2>
 <div class="sectionbody">
 
 </div>
 </div>
 <div class="sect1">
-<h2 id="_render_wip">Render (WIP)</h2>
+<h2 id="_render_wip">8. Render (WIP)</h2>
 <div class="sectionbody">
 
 </div>
@@ -2460,7 +2460,7 @@ can long endure. ...</pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_intractive_elixir_environment">Intractive elixir environment</h2>
+<h2 id="_intractive_elixir_environment">1. Intractive elixir environment</h2>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
@@ -2470,7 +2470,7 @@ can long endure. ...</pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_hello_world">Hello World!</h2>
+<h2 id="_hello_world">2. Hello World!</h2>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="title">intro.exs</div>
@@ -2482,7 +2482,7 @@ can long endure. ...</pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_build_tool">Build Tool</h2>
+<h2 id="_build_tool">3. Build Tool</h2>
 <div class="sectionbody">
 <div class="literalblock">
 <div class="content">

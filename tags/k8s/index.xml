@@ -10,7 +10,7 @@
     
     
     <item>
-      <title>K8s Ingress LoadBalancer</title>
+      <title>Accessing K8S pods</title>
       <link>https://hossein-lap.github.io/notes/k8s-ingress-loadbalancer/</link>
       <pubDate>Fri, 31 May 2024 18:50:32 +0330</pubDate>
       
@@ -32,7 +32,7 @@ This is some note, nothing serious.
 </div>
 </div>
 <div class="sect1">
-<h2 id="_exposing_services_to_external_clients">Exposing services to external clients</h2>
+<h2 id="_exposing_services_to_external_clients">1. Exposing services to external clients</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Few ways to make a service accessible externally:</p>
@@ -40,15 +40,106 @@ This is some note, nothing serious.
 <div class="ulist">
 <ul>
 <li>
-<p><code>NodePort</code> service type</p>
+<p>Port-forwarding</p>
 </li>
 <li>
-<p><code>LoadBalancer</code> service type</p>
+<p><code>NodePort</code> Service Type</p>
 </li>
 <li>
-<p>Create <code>Ingress</code> resource, <em>radically different mechanism</em></p>
+<p>Service Object (<code>LoadBalancer</code> Service Type)</p>
+</li>
+<li>
+<p>Create <code>Ingress</code> Resource (Radically Different Mechanism)</p>
 </li>
 </ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_forwarding_a_local_network_port_to_a_port_in_the_pod">2. Forwarding a Local Network Port to a Port in The Pod</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When you want to talk to a specific pod without going through a service (for
+debugging or other reasons), Kubernetes allows you to configure port forwarding
+to the pod.</p>
+</div>
+<div class="paragraph">
+<p>This is done through the <code>kubectl port-forward</code> command. The following command
+will forward your machine’s local port <code>8888</code> to port <code>8080</code> of your
+<code>kubia-manual</code> pod:</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>kubectl port-forward kubia-manual 8888:8080</code></pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>... Forwarding from 127.0.0.1:8888 -&gt; 8080
+... Forwarding from [::1]:8888 -&gt; 8080</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_connecting_to_the_pod_through_the_port_forwarder">2.1. Connecting to The Pod Through the Port Forwarder</h3>
+<div class="paragraph">
+<p>In a different terminal, you can now use curl to send an HTTP request to your pod
+through the <code>kubectl port-forward</code> proxy running on <code>localhost:8888</code>:</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>curl localhost:8888</code></pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>You&#39;ve hit kubia-manual</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_service_object">3. Service Object</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Each pod gets its own IP address, but this address is internal to the cluster
+and isn’t accessible from outside of it. To make the pod accessible from the
+outside, you’ll expose it through a Service object. You’ll create a special
+service of type <code>LoadBalancer</code>, because if you create a regular service (a
+<code>ClusterIP</code> service), like the pod, it would also only be accessible from
+inside the cluster. By creating a <code>LoadBalancer</code> type service, an external load
+balancer will be created and you can connect to the pod through the load
+balancer’s public IP.</p>
+</div>
+<div class="sect2">
+<h3 id="_creating_a_service_object">3.1. Creating a Service Object</h3>
+<div class="paragraph">
+<p>To create the service, you’ll tell Kubernetes to expose the ReplicationController you
+created:</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>kubectl expose rc &lt;rep-controller-name&gt; <span style="color: #f4bf75">--type</span><span style="color: #d0d0d0">=</span>LoadBalancer <span style="color: #f4bf75">--name</span> &lt;lb-name&gt;
+<span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>kubectl expose rc kubia <span style="color: #f4bf75">--type</span><span style="color: #d0d0d0">=</span>LoadBalancer <span style="color: #f4bf75">--name</span> kubia-http</code></pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>service &#34;kubia-http&#34; exposed</pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
