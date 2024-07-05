@@ -36,12 +36,12 @@ settings = {
   font_size_main: 11.5,
   font_size_code: 10,
   font_size_caption: 10,
-  number: false,
+  number: true,
   # cap_color: "#ff7700",
   cap_color:	"#7a2518",
   code_color:	"#25187a",
   doc_author: "Hos Es",
-  doc_syntax: "bw", # pygments: algol
+  doc_syntax: "bw", # pygments: algol, friendly_grayscale; rouge: base16.solarized.light
   # doc_lang: "lua",
   doc_name: input_file,
   h_dlist: false,
@@ -221,10 +221,10 @@ options = {
         'toc' => false,
         'sectnums' => settings[:number],
         'linenums' => false,
-        # 'source-highlighter' => 'pygments',
-        # 'pygments-style' => settings[:doc_syntax],
-        'source-highlighter' => 'rouge',
-        'rouge-style' => settings[:doc_syntax],
+        'source-highlighter' => 'pygments',
+        'pygments-style' => settings[:doc_syntax],
+        # 'source-highlighter' => 'rouge',
+        # 'rouge-style' => settings[:doc_syntax],
         'pdf-themedir' => '.',  # Use the current directory for the styles
         'pdf-theme' => theme_file_path,  # The name of the custom theme file without the extension
     }

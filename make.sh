@@ -2,11 +2,13 @@
 
 [ -d "pdfs" ] || mkdir -v "pdfs"
 
+[ $# -gt 0 ] && ./asciidoc-tor.rb -i ../content/notes/k8s-ingress-loadbalancer.adoc -o _test.pdf && exit 0
+
 adoc2pdf() {
     if [ $# -eq 2 ]; then
         inputfile="../content/${1}/${2}"
         outputdir="pdfs/${1}"
-        outputfile="pdfs/${1}/${2}"
+        outputfile="$(echo pdfs/${1}/${2} | sed 's/adoc$/pdf/')"
 
         [ -d ${outputdir} ] || mkdir -v ${outputdir}
 
@@ -15,7 +17,7 @@ adoc2pdf() {
         inputfile="../content/${1}/${2}/${3}"
         outputdir1="pdfs/${1}"
         outputdir2="pdfs/${1}/${2}"
-        outputfile="pdfs/${1}/${2}/${3}"
+        outputfile="$(echo pdfs/${1}/${2}/${3} | sed 's/adoc$/pdf/')"
 
         [ -d ${outputdir1} ] || mkdir -v ${outputdir1}
         [ -d ${outputdir2} ] || mkdir -v ${outputdir2}
