@@ -6,7 +6,67 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Hos Es</copyright>
-    <lastBuildDate>Fri, 31 May 2024 18:50:32 +0330</lastBuildDate><atom:link href="https://hossein-lap.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><icon>https://hossein-lap.github.io/images/ed/foo.png</icon>
+    <lastBuildDate>Sat, 06 Jul 2024 13:24:36 +0330</lastBuildDate><atom:link href="https://hossein-lap.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><icon>https://hossein-lap.github.io/images/ed/foo.png</icon>
+    
+    
+    <item>
+      <title>Grafana</title>
+      <link>https://hossein-lap.github.io/tags/grafana/</link>
+      <pubDate>Sat, 06 Jul 2024 13:24:36 +0330</pubDate>
+      
+      <guid>https://hossein-lap.github.io/tags/grafana/</guid>
+      <description><![CDATA[]]></description>
+      
+    </item>
+    
+    
+    
+    <item>
+      <title>Infrastructure</title>
+      <link>https://hossein-lap.github.io/tags/infrastructure/</link>
+      <pubDate>Sat, 06 Jul 2024 13:24:36 +0330</pubDate>
+      
+      <guid>https://hossein-lap.github.io/tags/infrastructure/</guid>
+      <description><![CDATA[]]></description>
+      
+    </item>
+    
+    
+    
+    <item>
+      <title>Logging</title>
+      <link>https://hossein-lap.github.io/tags/logging/</link>
+      <pubDate>Sat, 06 Jul 2024 13:24:36 +0330</pubDate>
+      
+      <guid>https://hossein-lap.github.io/tags/logging/</guid>
+      <description><![CDATA[]]></description>
+      
+    </item>
+    
+    
+    
+    <item>
+      <title>Monitoring</title>
+      <link>https://hossein-lap.github.io/tags/monitoring/</link>
+      <pubDate>Sat, 06 Jul 2024 13:24:36 +0330</pubDate>
+      
+      <guid>https://hossein-lap.github.io/tags/monitoring/</guid>
+      <description><![CDATA[]]></description>
+      
+    </item>
+    
+    
+    
+    <item>
+      <title>Telemetry</title>
+      <link>https://hossein-lap.github.io/tags/telemetry/</link>
+      <pubDate>Sat, 06 Jul 2024 13:24:36 +0330</pubDate>
+      
+      <guid>https://hossein-lap.github.io/tags/telemetry/</guid>
+      <description><![CDATA[]]></description>
+      
+    </item>
+    
     
     
     <item>
@@ -39,18 +99,6 @@
       <pubDate>Fri, 31 May 2024 18:50:32 +0330</pubDate>
       
       <guid>https://hossein-lap.github.io/tags/loadbalancer/</guid>
-      <description><![CDATA[]]></description>
-      
-    </item>
-    
-    
-    
-    <item>
-      <title>Nginx</title>
-      <link>https://hossein-lap.github.io/tags/nginx/</link>
-      <pubDate>Fri, 31 May 2024 18:50:32 +0330</pubDate>
-      
-      <guid>https://hossein-lap.github.io/tags/nginx/</guid>
       <description><![CDATA[]]></description>
       
     </item>

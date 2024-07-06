@@ -43,14 +43,14 @@
 
     
     
-    <link type="text/css" rel="stylesheet" href=https://hossein-lap.github.io/css/styles.a506a9eff4ee159163928a9c18d67715835303669cc007e3d239006b50040b89e8b19810f76a3991be15f1d0ba0800ff0b715610e8d06c82051be74a0ebe7999.css integrity="sha512-pQap7/TuFZFjkoqcGNZ3FYNTA2acwAfj0jkAa1AEC4nosZgQ92o5kb4V8dC6CAD/C3FWEOjQbIIFG&#43;dKDr55mQ==" />
+    <link type="text/css" rel="stylesheet" href=https://hossein-lap.github.io/css/styles.dcd903d900c2ab8d78f15e71742bb809a5561cfc90b43dd43896d93c9a749e21ba7a92af14f294077d26323376452f6cd5b62c47f6a303e1f8ece7e007d7d13d.css integrity="sha512-3NkD2QDCq4148V5xdCu4CaVWHPyQtD3UOJbZPJp0niG6epKvFPKUB30mMjN2RS9s1bYsR/ajA&#43;H47OfgB9fRPQ==" />
 <meta name="author" content="Hossein Esmail" />
 
     
-        <meta name="keywords" content='ingress, K8S, LoadBalancer, nginx, NodePort' />
+        <meta name="keywords" content='infrastructure, Ingress, K8S, LoadBalancer, NodePort' />
     
     
-        <meta name="description" content="Configure kubernetes infrastructre with NodePort, ClusterIP, Ingress, nginx load-balancer
+        <meta name="description" content="Configure kubernetes infrastructure with NodePort, ClusterIP, Ingress, nginx load-balancer
 " />
     
 
@@ -67,13 +67,13 @@
         content='2024-05-31T18:50:32Z&#43;0330' />
     
         
-            <meta property="article:tag" content="ingress" />
+            <meta property="article:tag" content="infrastructure" />
+        
+            <meta property="article:tag" content="Ingress" />
         
             <meta property="article:tag" content="K8S" />
         
             <meta property="article:tag" content="LoadBalancer" />
-        
-            <meta property="article:tag" content="nginx" />
         
             <meta property="article:tag" content="NodePort" />
         
@@ -84,7 +84,7 @@
     <meta property="og:image"
         content="https://hossein-lap.github.io/images/ed/foo.png" />
     
-        <meta property="og:description" content="Configure kubernetes infrastructre with NodePort, ClusterIP, Ingress, nginx load-balancer
+        <meta property="og:description" content="Configure kubernetes infrastructure with NodePort, ClusterIP, Ingress, nginx load-balancer
 " />
     
 
@@ -102,7 +102,7 @@
     <meta name="twitter:image"
         content="https://hossein-lap.github.io/images/ed/foo.png" />
     
-        <meta name="twitter:description" content="Configure kubernetes infrastructre with NodePort, ClusterIP, Ingress, nginx load-balancer
+        <meta name="twitter:description" content="Configure kubernetes infrastructure with NodePort, ClusterIP, Ingress, nginx load-balancer
 " />
     
 
@@ -245,6 +245,74 @@
 
     </div>
     
+        <div id="sidebar_nav"><nav>
+    
+    <ul id="main-nav">
+        <li><a href="/">Home</a></li>
+        
+        
+            <li><a href="/docs/">Docs</a></li>
+        
+            <li><a href="/notes/">Notes</a></li>
+        
+            <li><a href="/about/">About</a></li>
+        
+        
+        
+        
+        
+        
+            <li><a href="/tags/">Tags</a></li>
+        
+        
+    </ul>
+</nav>
+</div>
+        
+            <div class="sidebarToc">
+                <hr />
+                <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#_forwarding_a_local_network_port_to_a_port_in_the_pod">1. Forwarding a Local Network Port to a Port in The Pod</a>
+          <ul>
+            <li><a href="#_connecting_to_the_pod_through_the_port_forwarder">1.1. Connecting to The Pod Through the Port Forwarder</a></li>
+          </ul>
+        </li>
+        <li><a href="#_service_object">2. Service Object</a>
+          <ul>
+            <li><a href="#_creating_a_service_object">2.1. Creating a Service Object</a></li>
+            <li><a href="#_session_affinity_on_the_service">2.2. Session Affinity on the Service</a></li>
+            <li><a href="#_exposing_multiple_ports_in_the_same_service">2.3. Exposing Multiple Ports in the Same Service</a></li>
+            <li><a href="#_using_named_ports">2.4. Using Named Ports</a></li>
+          </ul>
+        </li>
+        <li><a href="#_connecting_to_services_living_outside_the_cluster">3. Connecting to services living outside the cluster</a>
+          <ul>
+            <li><a href="#_service_endpoints">3.1. Service Endpoints</a></li>
+          </ul>
+        </li>
+        <li><a href="#_exposing_services_to_external_clients">4. Exposing services to external clients</a>
+          <ul>
+            <li><a href="#_using_a_nodeport_service">4.1. Using a NodePort service</a></li>
+            <li><a href="#_exposing_a_service_through_an_external_load_balancer">4.2. Exposing a service through an external load balancer</a></li>
+            <li><a href="#_understanding_the_peculiarities_of_external_connections">4.3. Understanding the peculiarities of external connections</a></li>
+          </ul>
+        </li>
+        <li><a href="#_exposing_services_externally_through_an_ingress_resource">5. Exposing services externally through an Ingress resource</a>
+          <ul>
+            <li><a href="#_creating_an_ingress_resource">5.1. Creating an Ingress resource</a></li>
+            <li><a href="#_accessing_the_service_through_the_ingress">5.2. Accessing the service through the Ingress</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+            </div>
+        
+    
 
 </header>
 <div id="contentContainer">
@@ -263,8 +331,51 @@
     
     
     
-    
-    <div><div id="preamble">
+    <div class="articleToc">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#_forwarding_a_local_network_port_to_a_port_in_the_pod">1. Forwarding a Local Network Port to a Port in The Pod</a>
+          <ul>
+            <li><a href="#_connecting_to_the_pod_through_the_port_forwarder">1.1. Connecting to The Pod Through the Port Forwarder</a></li>
+          </ul>
+        </li>
+        <li><a href="#_service_object">2. Service Object</a>
+          <ul>
+            <li><a href="#_creating_a_service_object">2.1. Creating a Service Object</a></li>
+            <li><a href="#_session_affinity_on_the_service">2.2. Session Affinity on the Service</a></li>
+            <li><a href="#_exposing_multiple_ports_in_the_same_service">2.3. Exposing Multiple Ports in the Same Service</a></li>
+            <li><a href="#_using_named_ports">2.4. Using Named Ports</a></li>
+          </ul>
+        </li>
+        <li><a href="#_connecting_to_services_living_outside_the_cluster">3. Connecting to services living outside the cluster</a>
+          <ul>
+            <li><a href="#_service_endpoints">3.1. Service Endpoints</a></li>
+          </ul>
+        </li>
+        <li><a href="#_exposing_services_to_external_clients">4. Exposing services to external clients</a>
+          <ul>
+            <li><a href="#_using_a_nodeport_service">4.1. Using a NodePort service</a></li>
+            <li><a href="#_exposing_a_service_through_an_external_load_balancer">4.2. Exposing a service through an external load balancer</a></li>
+            <li><a href="#_understanding_the_peculiarities_of_external_connections">4.3. Understanding the peculiarities of external connections</a></li>
+          </ul>
+        </li>
+        <li><a href="#_exposing_services_externally_through_an_ingress_resource">5. Exposing services externally through an Ingress resource</a>
+          <ul>
+            <li><a href="#_creating_an_ingress_resource">5.1. Creating an Ingress resource</a></li>
+            <li><a href="#_accessing_the_service_through_the_ingress">5.2. Accessing the service through the Ingress</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    <hr />
+</div>
+
+    <div>
+<div id="preamble">
 <div class="sectionbody">
 <div class="admonitionblock warning">
 <table>
@@ -273,7 +384,10 @@
 <div class="title">Warning</div>
 </td>
 <td class="content">
-This is some note, nothing serious.
+<div class="paragraph">
+<p>This is some note, nothing serious.
+<strong>DO NOT</strong> cite from this article.</p>
+</div>
 </td>
 </tr>
 </tbody></table>
@@ -1064,7 +1178,13 @@ because the Ingress controller provisions a load balancer behind the scenes.
                 
                 class="buttonTag"
                 
-                href="/tags/ingress/">#ingress</a>
+                href="/tags/infrastructure/">#infrastructure</a>
+        
+            <a
+                
+                class="buttonTag"
+                
+                href="/tags/ingress/">#Ingress</a>
         
             <a
                 
@@ -1077,12 +1197,6 @@ because the Ingress controller provisions a load balancer behind the scenes.
                 class="buttonTag"
                 
                 href="/tags/loadbalancer/">#LoadBalancer</a>
-        
-            <a
-                
-                class="buttonTag"
-                
-                href="/tags/nginx/">#nginx</a>
         
             <a
                 
