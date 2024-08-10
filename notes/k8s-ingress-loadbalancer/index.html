@@ -43,7 +43,7 @@
 
     
     
-    <link type="text/css" rel="stylesheet" href=https://hossein-lap.github.io/css/styles.36ff197d1bd7d754c9c620bf3fca7692f368ab3621d83b90837c906c89a2ace8ad28c2ec88e40e6772bbf838774b2ab187288ac1114caa166330755726391f30.css integrity="sha512-Nv8ZfRvX11TJxiC/P8p2kvNoqzYh2DuQg3yQbImirOitKMLsiOQOZ3K7&#43;Dh3SyqxhyiKwRFMqhZjMHVXJjkfMA==" />
+    <link type="text/css" rel="stylesheet" href=https://hossein-lap.github.io/css/styles.0fae48468fcdbfb0e4e43f8bd7a7a4bc2ed57d3ec070c8ddfaf92699466bf178f65d01ac7f559a832f4c2feec3cd91464557d74635929d08f778a3b797ee0ef4.css integrity="sha512-D65IRo/Nv7Dk5D&#43;L16ekvC7VfT7AcMjd&#43;vkmmUZr8Xj2XQGsf1Wagy9ML&#43;7DzZFGRVfXRjWSnQj3eKO3l&#43;4O9A==" />
 <meta name="author" content="Hossein Esmail" />
 
     
@@ -245,74 +245,6 @@
 
     </div>
     
-        <div id="sidebar_nav"><nav>
-    
-    <ul id="main-nav">
-        <li><a href="/">Home</a></li>
-        
-        
-            <li><a href="/docs/">Docs</a></li>
-        
-            <li><a href="/notes/">Notes</a></li>
-        
-            <li><a href="/about/">About</a></li>
-        
-        
-        
-        
-        
-        
-            <li><a href="/tags/">Tags</a></li>
-        
-        
-    </ul>
-</nav>
-</div>
-        
-            <div class="sidebarToc">
-                <hr />
-                <nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#_forwarding_a_local_network_port_to_a_port_in_the_pod">1. Forwarding a Local Network Port to a Port in The Pod</a>
-          <ul>
-            <li><a href="#_connecting_to_the_pod_through_the_port_forwarder">1.1. Connecting to The Pod Through the Port Forwarder</a></li>
-          </ul>
-        </li>
-        <li><a href="#_service_object">2. Service Object</a>
-          <ul>
-            <li><a href="#_creating_a_service_object">2.1. Creating a Service Object</a></li>
-            <li><a href="#_session_affinity_on_the_service">2.2. Session Affinity on the Service</a></li>
-            <li><a href="#_exposing_multiple_ports_in_the_same_service">2.3. Exposing Multiple Ports in the Same Service</a></li>
-            <li><a href="#_using_named_ports">2.4. Using Named Ports</a></li>
-          </ul>
-        </li>
-        <li><a href="#_connecting_to_services_living_outside_the_cluster">3. Connecting to services living outside the cluster</a>
-          <ul>
-            <li><a href="#_service_endpoints">3.1. Service Endpoints</a></li>
-          </ul>
-        </li>
-        <li><a href="#_exposing_services_to_external_clients">4. Exposing services to external clients</a>
-          <ul>
-            <li><a href="#_using_a_nodeport_service">4.1. Using a NodePort service</a></li>
-            <li><a href="#_exposing_a_service_through_an_external_load_balancer">4.2. Exposing a service through an external load balancer</a></li>
-            <li><a href="#_understanding_the_peculiarities_of_external_connections">4.3. Understanding the peculiarities of external connections</a></li>
-          </ul>
-        </li>
-        <li><a href="#_exposing_services_externally_through_an_ingress_resource">5. Exposing services externally through an Ingress resource</a>
-          <ul>
-            <li><a href="#_creating_an_ingress_resource">5.1. Creating an Ingress resource</a></li>
-            <li><a href="#_accessing_the_service_through_the_ingress">5.2. Accessing the service through the Ingress</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-            </div>
-        
-    
 
 </header>
 <div id="contentContainer">
@@ -332,46 +264,76 @@
     
     
     <div class="articleToc">
-    <nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#_forwarding_a_local_network_port_to_a_port_in_the_pod">1. Forwarding a Local Network Port to a Port in The Pod</a>
-          <ul>
-            <li><a href="#_connecting_to_the_pod_through_the_port_forwarder">1.1. Connecting to The Pod Through the Port Forwarder</a></li>
-          </ul>
-        </li>
-        <li><a href="#_service_object">2. Service Object</a>
-          <ul>
-            <li><a href="#_creating_a_service_object">2.1. Creating a Service Object</a></li>
-            <li><a href="#_session_affinity_on_the_service">2.2. Session Affinity on the Service</a></li>
-            <li><a href="#_exposing_multiple_ports_in_the_same_service">2.3. Exposing Multiple Ports in the Same Service</a></li>
-            <li><a href="#_using_named_ports">2.4. Using Named Ports</a></li>
-          </ul>
-        </li>
-        <li><a href="#_connecting_to_services_living_outside_the_cluster">3. Connecting to services living outside the cluster</a>
-          <ul>
-            <li><a href="#_service_endpoints">3.1. Service Endpoints</a></li>
-          </ul>
-        </li>
-        <li><a href="#_exposing_services_to_external_clients">4. Exposing services to external clients</a>
-          <ul>
-            <li><a href="#_using_a_nodeport_service">4.1. Using a NodePort service</a></li>
-            <li><a href="#_exposing_a_service_through_an_external_load_balancer">4.2. Exposing a service through an external load balancer</a></li>
-            <li><a href="#_understanding_the_peculiarities_of_external_connections">4.3. Understanding the peculiarities of external connections</a></li>
-          </ul>
-        </li>
-        <li><a href="#_exposing_services_externally_through_an_ingress_resource">5. Exposing services externally through an Ingress resource</a>
-          <ul>
-            <li><a href="#_creating_an_ingress_resource">5.1. Creating an Ingress resource</a></li>
-            <li><a href="#_accessing_the_service_through_the_ingress">5.2. Accessing the service through the Ingress</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-    <hr />
+    <details>
+        <hr/>
+        <summary>
+            <b>Table of Content</b>
+        </summary>
+        <ul>
+                <li>
+                    <a href="#_forwarding_a_local_network_port_to_a_port_in_the_pod">1. Forwarding a Local Network Port to a Port in The Pod</a>
+                </li>
+                <ul>
+                    <li>
+                        <a href="#_connecting_to_the_pod_through_the_port_forwarder">1.1. Connecting to The Pod Through the Port Forwarder</a>
+                    </li>
+                </ul>
+                <li>
+                    <a href="#_service_object">2. Service Object</a>
+                </li>
+                <ul>
+                    <li>
+                        <a href="#_creating_a_service_object">2.1. Creating a Service Object</a>
+                    </li>
+                    <li>
+                        <a href="#_session_affinity_on_the_service">2.2. Session Affinity on the Service</a>
+                    </li>
+                    <li>
+                        <a href="#_exposing_multiple_ports_in_the_same_service">2.3. Exposing Multiple Ports in the Same Service</a>
+                    </li>
+                    <li>
+                        <a href="#_using_named_ports">2.4. Using Named Ports</a>
+                    </li>
+                </ul>
+                <li>
+                    <a href="#_connecting_to_services_living_outside_the_cluster">3. Connecting to services living outside the cluster</a>
+                </li>
+                <ul>
+                    <li>
+                        <a href="#_service_endpoints">3.1. Service Endpoints</a>
+                    </li>
+                </ul>
+                <li>
+                    <a href="#_exposing_services_to_external_clients">4. Exposing services to external clients</a>
+                </li>
+                <ul>
+                    <li>
+                        <a href="#_using_a_nodeport_service">4.1. Using a NodePort service</a>
+                    </li>
+                    <li>
+                        <a href="#_exposing_a_service_through_an_external_load_balancer">4.2. Exposing a service through an external load balancer</a>
+                    </li>
+                    <li>
+                        <a href="#_understanding_the_peculiarities_of_external_connections">4.3. Understanding the peculiarities of external connections</a>
+                    </li>
+                </ul>
+                <li>
+                    <a href="#_exposing_services_externally_through_an_ingress_resource">5. Exposing services externally through an Ingress resource</a>
+                </li>
+                <ul>
+                    <li>
+                        <a href="#_creating_an_ingress_resource">5.1. Creating an Ingress resource</a>
+                    </li>
+                    <li>
+                        <a href="#_accessing_the_service_through_the_ingress">5.2. Accessing the service through the Ingress</a>
+                    </li>
+                    <li>
+                        <a href="#_exposing_multiple_services_through_the_same_ingress">5.3. Exposing multiple services through the same Ingress</a>
+                    </li>
+                </ul>
+        </ul>
+        <hr/>
+    </details>
 </div>
 
     <div>
@@ -1150,8 +1112,10 @@ kubia     kubia.example.com    192.168.99.100     80          29m</pre>
 <div class="title">Note</div>
 </td>
 <td class="content">
-When running on cloud providers, the address may take time to appear,
-because the Ingress controller provisions a load balancer behind the scenes.
+<div class="paragraph">
+<p>When running on cloud providers, the address may take time to appear,
+because the Ingress controller provisions a load balancer behind the scenes.</p>
+</div>
 </td>
 </tr>
 </tbody></table>
@@ -1162,6 +1126,81 @@ because the Ingress controller provisions a load balancer behind the scenes.
 <p>The IP is shown in the <code>ADDRESS</code> column.</p>
 </li>
 </ul>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tbody><tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Once you know the IP, you can then either configure your DNS servers to resolve
+kubia.example.com to that IP or you can setup hosts: add the following line to
+<code>/etc/hosts</code> (or <code>C:\windows\system32\drivers\etc\hosts</code> on Windows):</p>
+</div>
+<div class="listingblock">
+<div class="title"><code>/etc/hosts</code></div>
+<div class="content">
+<pre>192.168.99.100		kubia.example.com</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>So you can access the service at <a href="http://kubia.example.com" class="bare">http://kubia.example.com</a> using a browser or
+<code>curl</code></p>
+</div>
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="sect3">
+<h4 id="_understading_how_ingress_work">5.2.1. Understading how Ingress work</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>The client first performed a DNS lookup of kubia.example.com, and the DNS
+server (or the local operating system) returned the IP of the Ingress
+controller</p>
+</li>
+<li>
+<p>The client then sent an HTTP request to the Ingress controller and specified
+<code>kubia.example.com</code> in the <code>Host</code> header</p>
+<div class="ulist">
+<ul>
+<li>
+<p>From that header, the controller determined which service the client is
+trying to access, looked up the pod IPs through the Endpoints object
+associated with the service, and forwarded the client’s request to one of
+the pods.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>The Ingress controller don’t forward the request to the service</p>
+<div class="ulist">
+<ul>
+<li>
+<p>It only use it to select a pod</p>
+</li>
+<li>
+<p>Most, if not all, controllers work like this</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_exposing_multiple_services_through_the_same_ingress">5.3. Exposing multiple services through the same Ingress</h3>
+<div class="paragraph">
+<p>Both <code>rules</code> and <code>paths</code> are arrays, so they can contain multiple items</p>
+</div>
+<div class="sect3">
+<h4 id="_mapping_different_services_to_different_paths_of_the_same_host">5.3.1. Mapping different services to different paths of the same host</h4>
+
 </div>
 </div>
 </div>

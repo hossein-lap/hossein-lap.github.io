@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html class="" lang="en"><head>
+    
+        <script>
+            if (location.host != new URL("https:\/\/hossein-lap.github.io\/").host) location.href = "https:\/\/hossein-lap.github.io\/"
+        </script>
+    
+    <meta name="robots" content="noai, noimageai">
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+
+    <link
+    rel="icon"
+    href='/images/ed/foo.png'
+/>
+<link
+    rel="shortcut icon"
+    href='/images/ed/foo.png'
+    type="image/x-icon"
+/>
+<link
+    rel="apple-touch-icon"
+    href='/images/ed/foo.png'
+/>
+
+    <link
+        rel="icon"
+        href='/images/ed/foo.png'
+        type="image/svg+xml"
+    />
+
+<title>
+        
+            Vim  &ndash;
+        
+        Hossein Esmail
+    </title>
+
+    
+    <link href="/symbols-nerd-font/symbols-nerd-font.css" rel="stylesheet" integrity="sha512-lydow8GLOLlYNOtHlksNCmGWWCBsbIEtikXpHzfWqx78HLlyQZHOzyLwPpKol4Th6aCwLUXOfODVYgwrd3nwKQ=="/>
+    <link href="/jetbrains-mono/jetbrains-mono.css" rel="stylesheet" integrity="sha512-tJxlgL6v1Y7kFf+qB8SloaAMKnOAw6WouknxXtIjkBux9Y/9aX81EUWOJO8c/3l98DmjG8brr4to7zaez606Fg=="/>
+
+    
+    
+    <link type="text/css" rel="stylesheet" href=https://hossein-lap.github.io/css/styles.0fae48468fcdbfb0e4e43f8bd7a7a4bc2ed57d3ec070c8ddfaf92699466bf178f65d01ac7f559a832f4c2feec3cd91464557d74635929d08f778a3b797ee0ef4.css integrity="sha512-D65IRo/Nv7Dk5D&#43;L16ekvC7VfT7AcMjd&#43;vkmmUZr8Xj2XQGsf1Wagy9ML&#43;7DzZFGRVfXRjWSnQj3eKO3l&#43;4O9A==" />
+<meta name="author" content="Hossein Esmail" />
+
+    
+        <meta name="keywords" content='config, Vim, vim-lang, vimscript' />
+    
+    
+        <meta name="description" content="" />
+    
+
+<meta property="og:site_name"
+    content='Hossein Esmail' />
+
+    <meta property="og:title" content="Vim" />
+    <meta property="og:type" content="article" />
+    
+    <meta
+        property="article:author" content="Hossein Esmail" />
+    <meta
+        property="article:published_time"
+        content='2024-07-14T14:42:49Z&#43;0330' />
+    
+        
+            <meta property="article:tag" content="config" />
+        
+            <meta property="article:tag" content="Vim" />
+        
+            <meta property="article:tag" content="vim-lang" />
+        
+            <meta property="article:tag" content="vimscript" />
+        
+    
+    <meta property="og:url" content="https://hossein-lap.github.io/docs/vim/vim/" />
+    
+    
+    <meta property="og:image"
+        content="https://hossein-lap.github.io/images/ed/foo.png" />
+    
+        <meta property="og:description" content="" />
+    
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:domain"
+      content='ossein-lap.github.io'
+/>
+<meta property="twitter:url" content="https://hossein-lap.github.io/docs/vim/vim/" />
+
+
+    <meta name="twitter:title" content="Vim" />
+    
+    
+    
+    <meta name="twitter:image"
+        content="https://hossein-lap.github.io/images/ed/foo.png" />
+    
+        <meta name="twitter:description" content="" />
+    
+
+<link rel="manifest" href="/manifest/index.json" />
+</head>
+
+
+<body>
+        <div id="baseContainer"><header class="">
+<div class="titleAndSearchContainer">
+        <div id="titleContainer">
+            
+            <div class="rightOfLogo">
+                <div class="titleAndHamburger">
+                    <h1>
+                        <a class="unstyledLink" href="/">Hossein Esmail</a>
+                        
+                            <img src='/images/ed/foo.png' alt='Logo'/>
+                        
+                    </h1>
+                    
+                </div>
+                <div id="wide_nav"><nav>
+    
+    <ul id="main-nav">
+        <li><a href="/">Home</a></li>
+        
+        
+            <li><a href="/docs/">Docs</a></li>
+        
+            <li><a href="/notes/">Notes</a></li>
+        
+            <li><a href="/about/">About</a></li>
+        
+        
+        
+        
+        
+        
+            <li><a href="/tags/">Tags</a></li>
+        
+        
+    </ul>
+</nav>
+</div>
+            </div>
+        </div>
+        <div class="search">
+    <input id="searchbar" type="text" placeholder='Search' />
+    <span class="nerdlink" onclick="newSearch();">&#xf002;</span>
+</div>
+<script>
+    function newSearch() {
+        let term = searchbar.value.trim();
+        if (!term) return;
+        location.href = `/search/?q=${term}`;
+    }
+    searchbar.onkeyup = (ev) => {if (ev.keyCode == 13) newSearch()};
+</script>
+
+    </div>
+    <div id="links">
+        <a
+    
+        rel="noreferrer"
+    
+    target="_blank"
+    class="nerdlink"
+    href="/index.xml">
+    
+    
+        &#xf09e;
+    
+    <span>
+        RSS
+    </span>
+</a>
+
+        
+        <a
+    
+        rel="noreferrer"
+    
+    target="_blank"
+    class="nerdlink"
+    href="https://github.com/hossein-lap">
+    
+    
+        &#xf09b;
+    
+    <span>
+        GitHub
+    </span>
+</a>
+<a
+    
+        rel="noreferrer"
+    
+    target="_blank"
+    class="nerdlink"
+    href="https://gitlab.com/primejade">
+    
+    
+        &#xf296;
+    
+    <span>
+        GitLab
+    </span>
+</a>
+<a
+    
+        rel="noreferrer"
+    
+    target="_blank"
+    class="nerdlink"
+    href="mailto://hosteam01@gmail.com">
+    
+    
+        &#xf6ed;
+    
+    <span>
+        Gmail
+    </span>
+</a>
+<a
+    
+        rel="noreferrer"
+    
+    target="_blank"
+    class="nerdlink"
+    href="https://linkedin.com/in/hossein-smail">
+    
+    
+        &#xf0e1;
+    
+    <span>
+        LinkedIn
+    </span>
+</a>
+
+    </div>
+    
+
+</header>
+<div id="contentContainer">
+                <div id="content">
+                    <main>
+<article class="card single">
+    
+        <h1>Vim</h1>
+    
+    
+        <p class="date">
+            <span title='Date'> </span>
+    2024-07-14
+
+</p>
+    
+    
+    
+    
+    <div></div>
+</article>
+
+    
+    <p class="articleTagsContainer">
+        <span> </span>
+        <strong>Tags:</strong>
+        
+            <a
+                
+                class="buttonTag"
+                
+                href="/tags/config/">#config</a>
+        
+            <a
+                
+                class="buttonTag"
+                
+                href="/tags/vim/">#Vim</a>
+        
+            <a
+                
+                class="buttonTag"
+                
+                href="/tags/vim-lang/">#vim-lang</a>
+        
+            <a
+                
+                class="buttonTag"
+                
+                href="/tags/vimscript/">#vimscript</a>
+        
+    </p>
+
+
+
+
+
+    
+    
+
+
+                    </main><footer>
+    <hr />
+
+<p><small>
+        2024 &copy; Hos Es
+    </small></p>
+    <p><small>
+        <a href='https://gitlab.com/gabmus/hugo-ficurinia'>Ficurinia theme</a> for <a href='https://gohugo.io'>Hugo</a> by <a href='https://gabmus.org'>Gabriele Musco</a>. Licensed under <a href='https://www.gnu.org/licenses/agpl-3.0.html'>GNU AGPLv3</a>.
+    </small></p>
+</footer>
+</div>
+            </div>
+        </div>
+
+
+</body>
+</html>

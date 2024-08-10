@@ -791,8 +791,10 @@ kubia     kubia.example.com    192.168.99.100     80          29m</pre>
 <div class="title">Note</div>
 </td>
 <td class="content">
-When running on cloud providers, the address may take time to appear,
-because the Ingress controller provisions a load balancer behind the scenes.
+<div class="paragraph">
+<p>When running on cloud providers, the address may take time to appear,
+because the Ingress controller provisions a load balancer behind the scenes.</p>
+</div>
 </td>
 </tr>
 </tbody></table>
@@ -803,6 +805,81 @@ because the Ingress controller provisions a load balancer behind the scenes.
 <p>The IP is shown in the <code>ADDRESS</code> column.</p>
 </li>
 </ul>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tbody><tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Once you know the IP, you can then either configure your DNS servers to resolve
+kubia.example.com to that IP or you can setup hosts: add the following line to
+<code>/etc/hosts</code> (or <code>C:\windows\system32\drivers\etc\hosts</code> on Windows):</p>
+</div>
+<div class="listingblock">
+<div class="title"><code>/etc/hosts</code></div>
+<div class="content">
+<pre>192.168.99.100		kubia.example.com</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>So you can access the service at <a href="http://kubia.example.com" class="bare">http://kubia.example.com</a> using a browser or
+<code>curl</code></p>
+</div>
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="sect3">
+<h4 id="_understading_how_ingress_work">5.2.1. Understading how Ingress work</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>The client first performed a DNS lookup of kubia.example.com, and the DNS
+server (or the local operating system) returned the IP of the Ingress
+controller</p>
+</li>
+<li>
+<p>The client then sent an HTTP request to the Ingress controller and specified
+<code>kubia.example.com</code> in the <code>Host</code> header</p>
+<div class="ulist">
+<ul>
+<li>
+<p>From that header, the controller determined which service the client is
+trying to access, looked up the pod IPs through the Endpoints object
+associated with the service, and forwarded the client’s request to one of
+the pods.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>The Ingress controller don’t forward the request to the service</p>
+<div class="ulist">
+<ul>
+<li>
+<p>It only use it to select a pod</p>
+</li>
+<li>
+<p>Most, if not all, controllers work like this</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_exposing_multiple_services_through_the_same_ingress">5.3. Exposing multiple services through the same Ingress</h3>
+<div class="paragraph">
+<p>Both <code>rules</code> and <code>paths</code> are arrays, so they can contain multiple items</p>
+</div>
+<div class="sect3">
+<h4 id="_mapping_different_services_to_different_paths_of_the_same_host">5.3.1. Mapping different services to different paths of the same host</h4>
+
 </div>
 </div>
 </div>
