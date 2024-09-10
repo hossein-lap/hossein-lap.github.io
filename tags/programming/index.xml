@@ -24,7 +24,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_new_stuff">1. New stuff</h2>
+<h2 id="_new_stuff">New stuff</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>very versile</p>
@@ -32,19 +32,19 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_more_stuff">2. more stuff</h2>
+<h2 id="_more_stuff">more stuff</h2>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="go">package main
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">package</span> <span style="color: #d0d0d0;background-color: #151515">main</span>
 
-import (
-    &#34;fmt&#34;
-)
+<span style="color: #aa759f">import</span> <span style="color: #d0d0d0">(</span>
+    <span style="color: #90a959">&#34;fmt&#34;</span>
+<span style="color: #d0d0d0">)</span>
 
-func main() {
-    fmt.Printf(&#34;This is a simple test!\n&#34;)
-}</code></pre>
+<span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">main</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
+    <span style="color: #d0d0d0;background-color: #151515">fmt</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Printf</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;This is a simple test!</span><span style="color: #8f5536">\n</span><span style="color: #90a959">&#34;</span><span style="color: #d0d0d0">)</span>
+<span style="color: #d0d0d0">}</span></code></pre>
 </div>
 </div>
 </div>
@@ -61,8 +61,7 @@ func main() {
       <pubDate>Tue, 02 Apr 2024 22:09:44 +0330</pubDate>
       
       <guid>https://hossein-lap.github.io/docs/elixir/elixir/</guid>
-      <description><![CDATA[
-<div id="preamble">
+      <description><![CDATA[<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
 <p>Elixir is a dynamically-typed functional programming language.</p>
@@ -70,29 +69,29 @@ func main() {
 </div>
 </div>
 <div class="sect1">
-<h2 id="_intractive_elixir_environment">1. Intractive elixir environment</h2>
+<h2 id="_intractive_elixir_environment">Intractive elixir environment</h2>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="bash">$ iex</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="bash"><span style="color: #d0d0d0;background-color: #151515">$ </span>iex</code></pre>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_hello_world">2. Hello World!</h2>
+<h2 id="_hello_world">Hello World!</h2>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="title">intro.exs</div>
 <div class="content">
-<pre class="rouge highlight"><code data-lang="elixir">#!/bin/elixir
-IO.puts(&#34;Hello&#34; &lt;&gt; &#34; Elixir!!&#34;)</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="elixir"><span style="color: #505050">#!/bin/elixir</span>
+<span style="color: #f4bf75">IO</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">puts</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;Hello&#34;</span> <span style="color: #d0d0d0">&lt;&gt;</span> <span style="color: #90a959">&#34; Elixir!!&#34;</span><span style="color: #d0d0d0">)</span></code></pre>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_build_tool">3. Build Tool</h2>
+<h2 id="_build_tool">Build Tool</h2>
 <div class="sectionbody">
 <div class="literalblock">
 <div class="content">
@@ -106,7 +105,7 @@ mix run</pre>
 <div class="listingblock">
 <div class="title">Create</div>
 <div class="content">
-<pre class="rouge highlight"><code data-lang="bash">mix new example</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="bash">mix new example</code></pre>
 </div>
 </div>
 </div>

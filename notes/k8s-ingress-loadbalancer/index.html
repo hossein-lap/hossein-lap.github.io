@@ -43,7 +43,7 @@
 
     
     
-    <link type="text/css" rel="stylesheet" href=https://hossein-lap.github.io/css/styles.0fae48468fcdbfb0e4e43f8bd7a7a4bc2ed57d3ec070c8ddfaf92699466bf178f65d01ac7f559a832f4c2feec3cd91464557d74635929d08f778a3b797ee0ef4.css integrity="sha512-D65IRo/Nv7Dk5D&#43;L16ekvC7VfT7AcMjd&#43;vkmmUZr8Xj2XQGsf1Wagy9ML&#43;7DzZFGRVfXRjWSnQj3eKO3l&#43;4O9A==" />
+    <link type="text/css" rel="stylesheet" href=https://hossein-lap.github.io/css/styles.3be40fe3dabfc979e366a02ffae72be8fb13abdf3b4106f6a1b5f0c315ff16ceb789c50b9f4dc1b80b6a2b11732e660e88d64571fa3ef3459b13294e292fcd00.css integrity="sha512-O&#43;QP49q/yXnjZqAv&#43;ucr6PsTq987QQb2obXwwxX/Fs63icULn03BuAtqKxFzLmYOiNZFcfo&#43;80WbEylOKS/NAA==" />
 <meta name="author" content="Hossein Esmail" />
 
     
@@ -264,80 +264,11 @@
     
     
     <div class="articleToc">
-    <details>
-        <hr/>
-        <summary>
-            <b>Table of Content</b>
-        </summary>
-        <ul>
-                <li>
-                    <a href="#_forwarding_a_local_network_port_to_a_port_in_the_pod">1. Forwarding a Local Network Port to a Port in The Pod</a>
-                </li>
-                <ul>
-                    <li>
-                        <a href="#_connecting_to_the_pod_through_the_port_forwarder">1.1. Connecting to The Pod Through the Port Forwarder</a>
-                    </li>
-                </ul>
-                <li>
-                    <a href="#_service_object">2. Service Object</a>
-                </li>
-                <ul>
-                    <li>
-                        <a href="#_creating_a_service_object">2.1. Creating a Service Object</a>
-                    </li>
-                    <li>
-                        <a href="#_session_affinity_on_the_service">2.2. Session Affinity on the Service</a>
-                    </li>
-                    <li>
-                        <a href="#_exposing_multiple_ports_in_the_same_service">2.3. Exposing Multiple Ports in the Same Service</a>
-                    </li>
-                    <li>
-                        <a href="#_using_named_ports">2.4. Using Named Ports</a>
-                    </li>
-                </ul>
-                <li>
-                    <a href="#_connecting_to_services_living_outside_the_cluster">3. Connecting to services living outside the cluster</a>
-                </li>
-                <ul>
-                    <li>
-                        <a href="#_service_endpoints">3.1. Service Endpoints</a>
-                    </li>
-                </ul>
-                <li>
-                    <a href="#_exposing_services_to_external_clients">4. Exposing services to external clients</a>
-                </li>
-                <ul>
-                    <li>
-                        <a href="#_using_a_nodeport_service">4.1. Using a NodePort service</a>
-                    </li>
-                    <li>
-                        <a href="#_exposing_a_service_through_an_external_load_balancer">4.2. Exposing a service through an external load balancer</a>
-                    </li>
-                    <li>
-                        <a href="#_understanding_the_peculiarities_of_external_connections">4.3. Understanding the peculiarities of external connections</a>
-                    </li>
-                </ul>
-                <li>
-                    <a href="#_exposing_services_externally_through_an_ingress_resource">5. Exposing services externally through an Ingress resource</a>
-                </li>
-                <ul>
-                    <li>
-                        <a href="#_creating_an_ingress_resource">5.1. Creating an Ingress resource</a>
-                    </li>
-                    <li>
-                        <a href="#_accessing_the_service_through_the_ingress">5.2. Accessing the service through the Ingress</a>
-                    </li>
-                    <li>
-                        <a href="#_exposing_multiple_services_through_the_same_ingress">5.3. Exposing multiple services through the same Ingress</a>
-                    </li>
-                </ul>
-        </ul>
-        <hr/>
-    </details>
+    
+    <hr />
 </div>
 
-    <div>
-<div id="preamble">
+    <div><div id="preamble">
 <div class="sectionbody">
 <div class="admonitionblock warning">
 <table>
@@ -360,7 +291,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_forwarding_a_local_network_port_to_a_port_in_the_pod">1. Forwarding a Local Network Port to a Port in The Pod</h2>
+<h2 id="_forwarding_a_local_network_port_to_a_port_in_the_pod">Forwarding a Local Network Port to a Port in The Pod</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>When you want to talk to a specific pod without going through a service (for
@@ -375,7 +306,7 @@ e.g <code>kubia-manual</code> pod.</p>
 <div class="listingblock">
 <div class="title">Example:</div>
 <div class="content">
-<pre class="rouge highlight"><code data-lang="console">$ kubectl port-forward kubia-manual 8888:8080</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>kubectl port-forward kubia-manual 8888:8080</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -386,7 +317,7 @@ e.g <code>kubia-manual</code> pod.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_connecting_to_the_pod_through_the_port_forwarder">1.1. Connecting to The Pod Through the Port Forwarder</h3>
+<h3 id="_connecting_to_the_pod_through_the_port_forwarder">Connecting to The Pod Through the Port Forwarder</h3>
 <div class="paragraph">
 <p>In a different terminal, you can now use curl to send an HTTP request to your pod
 through the <code>kubectl port-forward</code> proxy running on <code>localhost:8888</code>.</p>
@@ -394,7 +325,7 @@ through the <code>kubectl port-forward</code> proxy running on <code>localhost:8
 <div class="listingblock">
 <div class="title">Example:</div>
 <div class="content">
-<pre class="rouge highlight"><code data-lang="console">$ curl localhost:8888</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>curl localhost:8888</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -407,7 +338,7 @@ through the <code>kubectl port-forward</code> proxy running on <code>localhost:8
 </div>
 </div>
 <div class="sect1">
-<h2 id="_service_object">2. Service Object</h2>
+<h2 id="_service_object">Service Object</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Each pod gets its own IP address, but this address is internal to the cluster
@@ -420,7 +351,7 @@ balancer will be created and you can connect to the pod through the load
 balancer’s public IP.</p>
 </div>
 <div class="sect2">
-<h3 id="_creating_a_service_object">2.1. Creating a Service Object</h3>
+<h3 id="_creating_a_service_object">Creating a Service Object</h3>
 <div class="paragraph">
 <p>To create the service, you’ll tell Kubernetes to expose the ReplicationController you
 created:</p>
@@ -431,22 +362,22 @@ created:</p>
 <div class="listingblock">
 <div class="title">Manifest:</div>
 <div class="content">
-<pre class="rouge highlight"><code data-lang="yaml">apiVersion: v1
-kind: Service
-metadata:
-  name: kubia
-spec:
-  ports:
-  - port: 80 # service&#39;s port
-    targetPort: 8080 # the forward-to port by service
-  selector: # all pods labeled `kubia` will follow/select this service
-    app: kubia</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="yaml"><span style="color: #6a9fb5">apiVersion</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">v1</span>
+<span style="color: #6a9fb5">kind</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">Service</span>
+<span style="color: #6a9fb5">metadata</span><span style="color: #d0d0d0">:</span>
+  <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">kubia</span>
+<span style="color: #6a9fb5">spec</span><span style="color: #d0d0d0">:</span>
+  <span style="color: #6a9fb5">ports</span><span style="color: #d0d0d0">:</span>
+  <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">port</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">80</span> <span style="color: #505050"># service&#39;s port</span>
+    <span style="color: #6a9fb5">targetPort</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">8080</span> <span style="color: #505050"># the forward-to port by service</span>
+  <span style="color: #6a9fb5">selector</span><span style="color: #d0d0d0">:</span> <span style="color: #505050"># all pods labeled `kubia` will follow/select this service</span>
+    <span style="color: #6a9fb5">app</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">kubia</span></code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="title">Apply the service:</div>
 <div class="content">
-<pre class="rouge highlight"><code data-lang="console">$ kubectl create -f kubia-srv.yaml</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>kubectl create <span style="color: #f4bf75">-f</span> kubia-srv.yaml</code></pre>
 </div>
 </div>
 </div>
@@ -457,13 +388,13 @@ spec:
 <div class="listingblock">
 <div class="title">Template:</div>
 <div class="content">
-<pre class="rouge highlight"><code data-lang="console">$ kubectl expose rc &lt;rep-controller-name&gt; --type=LoadBalancer --name &lt;lb-name&gt;</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>kubectl expose rc &lt;rep-controller-name&gt; <span style="color: #f4bf75">--type</span><span style="color: #d0d0d0">=</span>LoadBalancer <span style="color: #f4bf75">--name</span> &lt;lb-name&gt;</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="title">Expose:</div>
 <div class="content">
-<pre class="rouge highlight"><code data-lang="console">$ kubectl expose rc kubia --type=LoadBalancer --name kubia-http</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>kubectl expose rc kubia <span style="color: #f4bf75">--type</span><span style="color: #d0d0d0">=</span>LoadBalancer <span style="color: #f4bf75">--name</span> kubia-http</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -485,7 +416,7 @@ spec:
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="console">$ kubectl exec kubia-7nog1 -- curl -s http://10.111.249.153</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>kubectl <span style="color: #d0d0d0;background-color: #151515">exec </span>kubia-7nog1 <span style="color: #f4bf75">--</span> curl <span style="color: #f4bf75">-s</span> http://10.111.249.153</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -496,7 +427,7 @@ spec:
 </div>
 </div>
 <div class="sect2">
-<h3 id="_session_affinity_on_the_service">2.2. Session Affinity on the Service</h3>
+<h3 id="_session_affinity_on_the_service">Session Affinity on the Service</h3>
 <div class="paragraph">
 <p>If you execute the same command a few more times, you should hit a different
 pod with every invocation, because the service proxy normally forwards each
@@ -512,11 +443,11 @@ default), as shown in the following listing.</p>
 <div class="listingblock">
 <div class="title">Service with <code>ClientIP</code> Session Affinity Manifest</div>
 <div class="content">
-<pre class="rouge highlight"><code data-lang="yaml">apiVersion: v1
-kind: Service
-spec:
-  sessionAffinity: ClientIP
-  ...</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="yaml"><span style="color: #6a9fb5">apiVersion</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">v1</span>
+<span style="color: #6a9fb5">kind</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">Service</span>
+<span style="color: #6a9fb5">spec</span><span style="color: #d0d0d0">:</span>
+  <span style="color: #6a9fb5">sessionAffinity</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">ClientIP</span>
+  <span style="color: #90a959">...</span></code></pre>
 </div>
 </div>
 <div class="ulist">
@@ -535,66 +466,66 @@ explains why session affinity cannot be based on cookies.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_exposing_multiple_ports_in_the_same_service">2.3. Exposing Multiple Ports in the Same Service</h3>
+<h3 id="_exposing_multiple_ports_in_the_same_service">Exposing Multiple Ports in the Same Service</h3>
 <div class="listingblock">
 <div class="title">Manifest</div>
 <div class="content">
-<pre class="rouge highlight"><code data-lang="yaml">apiVersion: v1
-kind: Service
-metadata:
-  name: kubia
-spec:
-  ports:
-  - name: http
-    port: 80
-    targetPort: 8080
-  - name: https
-    port: 443
-    targetPort: 8443
-  selector:
-    app: kubia</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="yaml"><span style="color: #6a9fb5">apiVersion</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">v1</span>
+<span style="color: #6a9fb5">kind</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">Service</span>
+<span style="color: #6a9fb5">metadata</span><span style="color: #d0d0d0">:</span>
+  <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">kubia</span>
+<span style="color: #6a9fb5">spec</span><span style="color: #d0d0d0">:</span>
+  <span style="color: #6a9fb5">ports</span><span style="color: #d0d0d0">:</span>
+  <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">http</span>
+    <span style="color: #6a9fb5">port</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">80</span>
+    <span style="color: #6a9fb5">targetPort</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">8080</span>
+  <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">https</span>
+    <span style="color: #6a9fb5">port</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">443</span>
+    <span style="color: #6a9fb5">targetPort</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">8443</span>
+  <span style="color: #6a9fb5">selector</span><span style="color: #d0d0d0">:</span>
+    <span style="color: #6a9fb5">app</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">kubia</span></code></pre>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_using_named_ports">2.4. Using Named Ports</h3>
+<h3 id="_using_named_ports">Using Named Ports</h3>
 <div class="paragraph">
 <p>You can give a name to each pod’s port and refer to it by name in the service spec.</p>
 </div>
 <div class="listingblock">
 <div class="title">Specifying port names in a pod definition Manifest:</div>
 <div class="content">
-<pre class="rouge highlight"><code data-lang="yaml">kind: Pod
-spec:
-  containers:
-  - name: kubia
-    ports:
-    - name: http
-      containerPort: 8080
-    - name: https
-      containerPort: 8443</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="yaml"><span style="color: #6a9fb5">kind</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">Pod</span>
+<span style="color: #6a9fb5">spec</span><span style="color: #d0d0d0">:</span>
+  <span style="color: #6a9fb5">containers</span><span style="color: #d0d0d0">:</span>
+  <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">kubia</span>
+    <span style="color: #6a9fb5">ports</span><span style="color: #d0d0d0">:</span>
+    <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">http</span>
+      <span style="color: #6a9fb5">containerPort</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">8080</span>
+    <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">https</span>
+      <span style="color: #6a9fb5">containerPort</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">8443</span></code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="title">Referring to named ports in a service Manifest:</div>
 <div class="content">
-<pre class="rouge highlight"><code data-lang="yaml">apiVersion: v1
-kind: Service
-spec:
-  ports:
-  - name: http
-    port: 80
-    targetPort: http
-  - name: https
-    port: 443
-    targetPort: https</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="yaml"><span style="color: #6a9fb5">apiVersion</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">v1</span>
+<span style="color: #6a9fb5">kind</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">Service</span>
+<span style="color: #6a9fb5">spec</span><span style="color: #d0d0d0">:</span>
+  <span style="color: #6a9fb5">ports</span><span style="color: #d0d0d0">:</span>
+  <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">http</span>
+    <span style="color: #6a9fb5">port</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">80</span>
+    <span style="color: #6a9fb5">targetPort</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">http</span>
+  <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">https</span>
+    <span style="color: #6a9fb5">port</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">443</span>
+    <span style="color: #6a9fb5">targetPort</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">https</span></code></pre>
 </div>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_connecting_to_services_living_outside_the_cluster">3. Connecting to services living outside the cluster</h2>
+<h2 id="_connecting_to_services_living_outside_the_cluster">Connecting to services living outside the cluster</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Instead of having the service redirect connections to pods in the cluster, you
@@ -606,7 +537,7 @@ discovery. Client pods running in the cluster can connect to the external
 service like they connect to internal services.</p>
 </div>
 <div class="sect2">
-<h3 id="_service_endpoints">3.1. Service Endpoints</h3>
+<h3 id="_service_endpoints">Service Endpoints</h3>
 <div class="paragraph">
 <p>Services don’t link to pods directly. Instead, a resource sits in between—the
 Endpoints resource. You may have already noticed endpoints if you used the
@@ -615,7 +546,7 @@ Endpoints resource. You may have already noticed endpoints if you used the
 <div class="listingblock">
 <div class="title">Full details of a service:</div>
 <div class="content">
-<pre class="rouge highlight"><code data-lang="console">$ kubectl describe svc kubia</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>kubectl describe svc kubia</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -640,7 +571,7 @@ resource, so you can display its basic info with kubectl get.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="console">$ kubectl get endpoints kubia</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>kubectl get endpoints kubia</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -680,13 +611,13 @@ a Service and an Endpoints resource</p>
 <div class="listingblock">
 <div class="title">A service without a pod selector: <code>external-service.yaml</code></div>
 <div class="content">
-<pre class="rouge highlight"><code data-lang="yaml">apiVersion: v1
-kind: Service
-metadata:
-  name: external-service # must match the endpoints name
-spec:
-  ports:
-  - port: 80</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="yaml"><span style="color: #6a9fb5">apiVersion</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">v1</span>
+<span style="color: #6a9fb5">kind</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">Service</span>
+<span style="color: #6a9fb5">metadata</span><span style="color: #d0d0d0">:</span>
+  <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">external-service</span> <span style="color: #505050"># must match the endpoints name</span>
+<span style="color: #6a9fb5">spec</span><span style="color: #d0d0d0">:</span>
+  <span style="color: #6a9fb5">ports</span><span style="color: #d0d0d0">:</span>
+  <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">port</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">80</span></code></pre>
 </div>
 </div>
 <div class="ulist">
@@ -703,16 +634,16 @@ Endpoints resource hasn’t been created automatically</p>
 <div class="listingblock">
 <div class="title">A manually created Endpoints resource: <code>external-service-endpoints.yaml</code></div>
 <div class="content">
-<pre class="rouge highlight"><code data-lang="yaml">apiVersion: v1
-kind: Endpoints
-metadata:
-  name: external-service # must match the service name
-subsets:
-  - addresses:
-    - ip: 11.11.11.11
-    - ip: 22.22.22.22
-    ports:
-    - port: 80 # target port of endpoints</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="yaml"><span style="color: #6a9fb5">apiVersion</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">v1</span>
+<span style="color: #6a9fb5">kind</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">Endpoints</span>
+<span style="color: #6a9fb5">metadata</span><span style="color: #d0d0d0">:</span>
+  <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">external-service</span> <span style="color: #505050"># must match the service name</span>
+<span style="color: #6a9fb5">subsets</span><span style="color: #d0d0d0">:</span>
+  <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">addresses</span><span style="color: #d0d0d0">:</span>
+    <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">ip</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">11.11.11.11</span>
+    <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">ip</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">22.22.22.22</span>
+    <span style="color: #6a9fb5">ports</span><span style="color: #d0d0d0">:</span>
+    <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">port</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">80</span> <span style="color: #505050"># target port of endpoints</span></code></pre>
 </div>
 </div>
 </div>
@@ -721,7 +652,7 @@ subsets:
 </div>
 </div>
 <div class="sect1">
-<h2 id="_exposing_services_to_external_clients">4. Exposing services to external clients</h2>
+<h2 id="_exposing_services_to_external_clients">Exposing services to external clients</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Few ways to make a service accessible externally.</p>
@@ -773,7 +704,7 @@ features than layer 4 services can</p>
 </ul>
 </div>
 <div class="sect2">
-<h3 id="_using_a_nodeport_service">4.1. Using a NodePort service</h3>
+<h3 id="_using_a_nodeport_service">Using a NodePort service</h3>
 <div class="paragraph">
 <p>By creating a <code>NodePort</code> service, you make Kubernetes reserve a port on all its
 nodes (the same port number is used across all of them) and forward incoming
@@ -790,24 +721,24 @@ cluster IP, but also through any node’s IP and the reserved node port.</p>
 <div class="listingblock">
 <div class="title">A NodePort service definition: <code>kubia-svc-nodeport.yaml</code></div>
 <div class="content">
-<pre class="rouge highlight"><code data-lang="yaml">apiVersion: v1
-kind: Service
-metadata:
-  name: kubia-nodeport
-spec:
-  type: NodePort # service type
-  ports:
-  - port: 80 # service&#39;s internal cluster IP port
-    targetPort: 8080 # target port of the backing pods
-    nodePort: 30123 # service will listen on port 30123, each cluster nodes
-  selector:
-    app: kubia</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="yaml"><span style="color: #6a9fb5">apiVersion</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">v1</span>
+<span style="color: #6a9fb5">kind</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">Service</span>
+<span style="color: #6a9fb5">metadata</span><span style="color: #d0d0d0">:</span>
+  <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">kubia-nodeport</span>
+<span style="color: #6a9fb5">spec</span><span style="color: #d0d0d0">:</span>
+  <span style="color: #6a9fb5">type</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">NodePort</span> <span style="color: #505050"># service type</span>
+  <span style="color: #6a9fb5">ports</span><span style="color: #d0d0d0">:</span>
+  <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">port</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">80</span> <span style="color: #505050"># service&#39;s internal cluster IP port</span>
+    <span style="color: #6a9fb5">targetPort</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">8080</span> <span style="color: #505050"># target port of the backing pods</span>
+    <span style="color: #6a9fb5">nodePort</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">30123</span> <span style="color: #505050"># service will listen on port 30123, each cluster nodes</span>
+  <span style="color: #6a9fb5">selector</span><span style="color: #d0d0d0">:</span>
+    <span style="color: #6a9fb5">app</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">kubia</span></code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="title">Examine the NodePort Service:</div>
 <div class="content">
-<pre class="rouge highlight"><code data-lang="console">$ kubectl get svc kubia-nodeport</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>kubectl get svc kubia-nodeport</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -847,8 +778,8 @@ out only the node IP instead of the whole service definition</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="console">$ kubectl get nodes -o \
-  jsonpath=&#39;{.items[*].status.addresses[?(@.type==&#34;ExternalIP&#34;)].address}&#39;</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>kubectl get nodes <span style="color: #f4bf75">-o</span> <span style="color: #8f5536">\</span>
+<span style="color: #d0d0d0;background-color: #151515">  jsonpath=&#39;{.items[*].status.addresses[?(@.type==&#34;ExternalIP&#34;)].address}&#39;</span></code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -863,7 +794,7 @@ them.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="console">$ curl http://130.211.97.55:30123</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>curl http://130.211.97.55:30123</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -874,7 +805,7 @@ them.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="console">$ curl http://130.211.99.206:30123</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>curl http://130.211.99.206:30123</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -885,7 +816,7 @@ them.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_exposing_a_service_through_an_external_load_balancer">4.2. Exposing a service through an external load balancer</h3>
+<h3 id="_exposing_a_service_through_an_external_load_balancer">Exposing a service through an external load balancer</h3>
 <div class="paragraph">
 <p>Kubernetes clusters running on cloud providers usually support the automatic
 provision of a load balancer from the cloud infrastructure. All you need to do
@@ -908,17 +839,17 @@ as of this writing.</p>
 <div class="listingblock">
 <div class="title">A LoadBalancer-type service: <code>kubia-svc-loadbalancer.yaml</code></div>
 <div class="content">
-<pre class="rouge highlight"><code data-lang="yaml">apiVersion: v1
-kind: Service
-metadata:
-  name: kubia-loadbalancer
-spec:
-  type: LoadBalancer
-  ports:
-  - port: 80
-    targetPort: 8080
-  selector:
-    app: kubia</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="yaml"><span style="color: #6a9fb5">apiVersion</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">v1</span>
+<span style="color: #6a9fb5">kind</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">Service</span>
+<span style="color: #6a9fb5">metadata</span><span style="color: #d0d0d0">:</span>
+  <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">kubia-loadbalancer</span>
+<span style="color: #6a9fb5">spec</span><span style="color: #d0d0d0">:</span>
+  <span style="color: #6a9fb5">type</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">LoadBalancer</span>
+  <span style="color: #6a9fb5">ports</span><span style="color: #d0d0d0">:</span>
+  <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">port</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">80</span>
+    <span style="color: #6a9fb5">targetPort</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">8080</span>
+  <span style="color: #6a9fb5">selector</span><span style="color: #d0d0d0">:</span>
+    <span style="color: #6a9fb5">app</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">kubia</span></code></pre>
 </div>
 </div>
 <div class="ulist">
@@ -933,7 +864,7 @@ Kubernetes choose one instead).</p>
 <div class="listingblock">
 <div class="title">Connecting to the Service Through the Load Balancer</div>
 <div class="content">
-<pre class="rouge highlight"><code data-lang="console">$ kubectl get svc kubia-loadbalancer</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>kubectl get svc kubia-loadbalancer</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -969,7 +900,7 @@ Even if session affinity is set to <code>None</code>, users will always hit the 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_understanding_the_peculiarities_of_external_connections">4.3. Understanding the peculiarities of external connections</h3>
+<h3 id="_understanding_the_peculiarities_of_external_connections">Understanding the peculiarities of external connections</h3>
 <div class="paragraph">
 <p>You must be aware of several things related to externally originating connections to
 services.</p>
@@ -989,9 +920,9 @@ setting the <code>externalTrafficPolicy</code> field in the service’s <code>sp
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="yaml">spec:
-  externalTrafficPolicy: Local
-  ...</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="yaml"><span style="color: #6a9fb5">spec</span><span style="color: #d0d0d0">:</span>
+  <span style="color: #6a9fb5">externalTrafficPolicy</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">Local</span>
+  <span style="color: #90a959">...</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1016,7 +947,7 @@ isn’t performed).</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_exposing_services_externally_through_an_ingress_resource">5. Exposing services externally through an Ingress resource</h2>
+<h2 id="_exposing_services_externally_through_an_ingress_resource">Exposing services externally through an Ingress resource</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>You must be aware of several things related to externally originating
@@ -1047,23 +978,23 @@ which services can’t</p>
 the cluster.</p>
 </div>
 <div class="sect2">
-<h3 id="_creating_an_ingress_resource">5.1. Creating an Ingress resource</h3>
+<h3 id="_creating_an_ingress_resource">Creating an Ingress resource</h3>
 <div class="listingblock">
 <div class="title">An Ingress resource definition: <code>kubia-ingress.yaml</code></div>
 <div class="content">
-<pre class="rouge highlight"><code data-lang="yaml">apiVersion: extensions/v1beta1
-kind: Ingress
-metadata:
-  name: kubia
-spec:
-  rules:
-  - host: kubia.example.com #  maps the domain name to your service
-  http:
-    paths:
-    - path: /                        # All requests will be sent to port 80
-      backend:                       # of the kubia-nodeport service.
-        serviceName: kubia-nodeport  #
-        servicePort: 80              #</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="yaml"><span style="color: #6a9fb5">apiVersion</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">extensions/v1beta1</span>
+<span style="color: #6a9fb5">kind</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">Ingress</span>
+<span style="color: #6a9fb5">metadata</span><span style="color: #d0d0d0">:</span>
+  <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">kubia</span>
+<span style="color: #6a9fb5">spec</span><span style="color: #d0d0d0">:</span>
+  <span style="color: #6a9fb5">rules</span><span style="color: #d0d0d0">:</span>
+  <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">host</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">kubia.example.com</span> <span style="color: #505050">#  maps the domain name to your service</span>
+  <span style="color: #6a9fb5">http</span><span style="color: #d0d0d0">:</span>
+    <span style="color: #6a9fb5">paths</span><span style="color: #d0d0d0">:</span>
+    <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">path</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">/</span>                        <span style="color: #505050"># All requests will be sent to port 80</span>
+      <span style="color: #6a9fb5">backend</span><span style="color: #d0d0d0">:</span>                       <span style="color: #505050"># of the kubia-nodeport service.</span>
+        <span style="color: #6a9fb5">serviceName</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">kubia-nodeport</span>  <span style="color: #505050">#</span>
+        <span style="color: #6a9fb5">servicePort</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">80</span>              <span style="color: #505050">#</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1087,7 +1018,7 @@ Kubernetes itself.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_accessing_the_service_through_the_ingress">5.2. Accessing the service through the Ingress</h3>
+<h3 id="_accessing_the_service_through_the_ingress">Accessing the service through the Ingress</h3>
 <div class="paragraph">
 <p>To access your service through <a href="http://kubia.example.com" class="bare">http://kubia.example.com</a>, you’ll need to make sure
 the domain name resolves to the IP of the Ingress controller</p>
@@ -1095,7 +1026,7 @@ the domain name resolves to the IP of the Ingress controller</p>
 <div class="listingblock">
 <div class="title">Obtaining the ip Address of the Ingress:</div>
 <div class="content">
-<pre class="rouge highlight"><code data-lang="console">$ kubectl get ingresses</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>kubectl get ingresses</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -1154,7 +1085,7 @@ kubia.example.com to that IP or you can setup hosts: add the following line to
 </tbody></table>
 </div>
 <div class="sect3">
-<h4 id="_understading_how_ingress_work">5.2.1. Understading how Ingress work</h4>
+<h4 id="_understading_how_ingress_work">Understading how Ingress work</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1194,12 +1125,12 @@ the pods.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_exposing_multiple_services_through_the_same_ingress">5.3. Exposing multiple services through the same Ingress</h3>
+<h3 id="_exposing_multiple_services_through_the_same_ingress">Exposing multiple services through the same Ingress</h3>
 <div class="paragraph">
 <p>Both <code>rules</code> and <code>paths</code> are arrays, so they can contain multiple items</p>
 </div>
 <div class="sect3">
-<h4 id="_mapping_different_services_to_different_paths_of_the_same_host">5.3.1. Mapping different services to different paths of the same host</h4>
+<h4 id="_mapping_different_services_to_different_paths_of_the_same_host">Mapping different services to different paths of the same host</h4>
 
 </div>
 </div>

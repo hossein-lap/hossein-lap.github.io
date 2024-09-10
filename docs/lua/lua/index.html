@@ -43,7 +43,7 @@
 
     
     
-    <link type="text/css" rel="stylesheet" href=https://hossein-lap.github.io/css/styles.0fae48468fcdbfb0e4e43f8bd7a7a4bc2ed57d3ec070c8ddfaf92699466bf178f65d01ac7f559a832f4c2feec3cd91464557d74635929d08f778a3b797ee0ef4.css integrity="sha512-D65IRo/Nv7Dk5D&#43;L16ekvC7VfT7AcMjd&#43;vkmmUZr8Xj2XQGsf1Wagy9ML&#43;7DzZFGRVfXRjWSnQj3eKO3l&#43;4O9A==" />
+    <link type="text/css" rel="stylesheet" href=https://hossein-lap.github.io/css/styles.3be40fe3dabfc979e366a02ffae72be8fb13abdf3b4106f6a1b5f0c315ff16ceb789c50b9f4dc1b80b6a2b11732e660e88d64571fa3ef3459b13294e292fcd00.css integrity="sha512-O&#43;QP49q/yXnjZqAv&#43;ucr6PsTq987QQb2obXwwxX/Fs63icULn03BuAtqKxFzLmYOiNZFcfo&#43;80WbEylOKS/NAA==" />
 <meta name="author" content="Hossein Esmail" />
 
     
@@ -265,71 +265,11 @@ It is used by many frameworks, games and other applications.
     
     
     <div class="articleToc">
-    <details>
-        <hr/>
-        <summary>
-            <b>Table of Content</b>
-        </summary>
-        <ul>
-                <li>
-                    <a href="#_hello_world">1. Hello World!</a>
-                </li>
-                <li>
-                    <a href="#_syntax">2. Syntax</a>
-                </li>
-                <li>
-                    <a href="#_obtaining_lua">3. Obtaining Lua</a>
-                </li>
-                <li>
-                    <a href="#_basics">4. Basics</a>
-                </li>
-                <li>
-                    <a href="#_chuncks">5. Chuncks</a>
-                </li>
-                <ul>
-                    <li>
-                        <a href="#_some_lexical_conventions">5.1. Some Lexical Conventions</a>
-                    </li>
-                </ul>
-                <li>
-                    <a href="#_comments">6. Comments</a>
-                </li>
-                <li>
-                    <a href="#_expressions">7. Expressions</a>
-                </li>
-                <li>
-                    <a href="#_global_variables">8. Global Variables</a>
-                </li>
-                <li>
-                    <a href="#_types_and_values">9. Types and Values</a>
-                </li>
-                <ul>
-                    <li>
-                        <a href="#_nil">9.1. Nil</a>
-                    </li>
-                    <li>
-                        <a href="#_booleans">9.2. Booleans</a>
-                    </li>
-                    <li>
-                        <a href="#_numbers">9.3. Numbers</a>
-                    </li>
-                    <li>
-                        <a href="#_strings">9.4. Strings</a>
-                    </li>
-                    <li>
-                        <a href="#_other_types">9.5. Other types</a>
-                    </li>
-                </ul>
-                <li>
-                    <a href="#_literals">10. Literals</a>
-                </li>
-        </ul>
-        <hr/>
-    </details>
+    
+    <hr />
 </div>
 
-    <div>
-<div id="preamble">
+    <div><div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
 <p>Lua is a powerful, fast, lightweight and embeddable programming language. It is
@@ -362,7 +302,7 @@ vocabulary in English.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_hello_world">1. Hello World!</h2>
+<h2 id="_hello_world">Hello World!</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Lua can either be used embedded in an application or by itself. The first
@@ -382,7 +322,7 @@ language or system is operating correctly.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="lua">print(&#34;Hello World!&#34;)</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;Hello World!&#34;</span><span style="color: #d0d0d0">)</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -392,7 +332,7 @@ calling the print function with the string &#34;Hello, world!&#34; as an argumen
 </div>
 </div>
 <div class="sect1">
-<h2 id="_syntax">2. Syntax</h2>
+<h2 id="_syntax">Syntax</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Syntax of a programming language defines how statements and expressions must be
@@ -415,17 +355,17 @@ that sets the value of variable to that expression.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="lua">-- Different types
-local x = 10 -- number
-local name = &#34;Neo&#34; -- string
-local is_alive = false -- boolean
-local a = nil -- no value or invalid value</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #505050">-- Different types</span>
+<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">x</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">10</span> <span style="color: #505050">-- number</span>
+<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">name</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#34;Neo&#34;</span> <span style="color: #505050">-- string</span>
+<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">is_alive</span> <span style="color: #d0d0d0">=</span> <span style="color: #d28445">false</span> <span style="color: #505050">-- boolean</span>
+<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">=</span> <span style="color: #d28445">nil</span> <span style="color: #505050">-- no value or invalid value</span></code></pre>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_obtaining_lua">3. Obtaining Lua</h2>
+<h2 id="_obtaining_lua">Obtaining Lua</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Lua can be obtained on the official Lua website,
@@ -434,7 +374,7 @@ on the <a href="http://www.lua.org/download.html">download page</a>.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_basics">4. Basics</h2>
+<h2 id="_basics">Basics</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>If you are using the stand-alone Lua interpreter, all you have to do
@@ -456,24 +396,24 @@ and prints its factorial:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="lua">-- defines a factorial function
-function fact (n)
-    if n == 0 then
-        return 1
-    else
-        return n * fact(n - 1)
-    end
-end
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #505050">-- defines a factorial function</span>
+<span style="color: #aa759f">function</span> <span style="color: #d0d0d0;background-color: #151515">fact</span> <span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">n</span><span style="color: #d0d0d0">)</span>
+    <span style="color: #aa759f">if</span> <span style="color: #d0d0d0;background-color: #151515">n</span> <span style="color: #d0d0d0">==</span> <span style="color: #90a959">0</span> <span style="color: #aa759f">then</span>
+        <span style="color: #aa759f">return</span> <span style="color: #90a959">1</span>
+    <span style="color: #aa759f">else</span>
+        <span style="color: #aa759f">return</span> <span style="color: #d0d0d0;background-color: #151515">n</span> <span style="color: #d0d0d0">*</span> <span style="color: #d0d0d0;background-color: #151515">fact</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">n</span> <span style="color: #d0d0d0">-</span> <span style="color: #90a959">1</span><span style="color: #d0d0d0">)</span>
+    <span style="color: #aa759f">end</span>
+<span style="color: #aa759f">end</span>
 
-print(&#34;enter a number:&#34;)
-a = io.read(&#34;*n&#34;)       -- reads a number
-print(fact(a))</code></pre>
+<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;enter a number:&#34;</span><span style="color: #d0d0d0">)</span>
+<span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">io.read</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;*n&#34;</span><span style="color: #d0d0d0">)</span>       <span style="color: #505050">-- reads a number</span>
+<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">fact</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">a</span><span style="color: #d0d0d0">))</span></code></pre>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_chuncks">5. Chuncks</h2>
+<h2 id="_chuncks">Chuncks</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>We call each piece of code that Lua executes, such as a file or a single line
@@ -537,10 +477,10 @@ the expressions inside calls to <code>print</code>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="lua">print(math.pi / 4)  --&gt; 0.78539816339745
-a = 15
-print(a ^ 2)        --&gt; 225
-print(a + 2)        --&gt; 17</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">math.pi</span> <span style="color: #d0d0d0">/</span> <span style="color: #90a959">4</span><span style="color: #d0d0d0">)</span>  <span style="color: #505050">--&gt; 0.78539816339745</span>
+<span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">15</span>
+<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">^</span> <span style="color: #90a959">2</span><span style="color: #d0d0d0">)</span>        <span style="color: #505050">--&gt; 225</span>
+<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">+</span> <span style="color: #90a959">2</span><span style="color: #d0d0d0">)</span>        <span style="color: #505050">--&gt; 17</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -575,13 +515,13 @@ a file. For instance, suppose we have a file <code>lib1.lua</code> with the foll
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="lua">function norm (x, y)
-    return math.sqrt(x^2 + y^2)
-end
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #aa759f">function</span> <span style="color: #d0d0d0;background-color: #151515">norm</span> <span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">x</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">y</span><span style="color: #d0d0d0">)</span>
+    <span style="color: #aa759f">return</span> <span style="color: #d0d0d0;background-color: #151515">math.sqrt</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">x</span><span style="color: #d0d0d0">^</span><span style="color: #90a959">2</span> <span style="color: #d0d0d0">+</span> <span style="color: #d0d0d0;background-color: #151515">y</span><span style="color: #d0d0d0">^</span><span style="color: #90a959">2</span><span style="color: #d0d0d0">)</span>
+<span style="color: #aa759f">end</span>
 
-function twice (x)
-    return 2.0 * x
-end</code></pre>
+<span style="color: #aa759f">function</span> <span style="color: #d0d0d0;background-color: #151515">twice</span> <span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">x</span><span style="color: #d0d0d0">)</span>
+    <span style="color: #aa759f">return</span> <span style="color: #90a959">2</span><span style="color: #d0d0d0">.</span><span style="color: #90a959">0</span> <span style="color: #d0d0d0">*</span> <span style="color: #d0d0d0;background-color: #151515">x</span>
+<span style="color: #aa759f">end</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -603,7 +543,7 @@ load the new code; then we can exercise the new code, calling its functions and
 printing the results.</p>
 </div>
 <div class="sect2">
-<h3 id="_some_lexical_conventions">5.1. Some Lexical Conventions</h3>
+<h3 id="_some_lexical_conventions">Some Lexical Conventions</h3>
 <div class="paragraph">
 <p>Identifiers (or names) in Lua can be any string of letters, digits, and underscores,
 not beginning with a digit; for instance</p>
@@ -640,8 +580,8 @@ Usually, I reserve the identifier <code>_</code> (a single underscore) for dummy
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="lua">and end if or until break false in repeat while do for local
-return else function nil then elseif goto not true</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #d0d0d0">and</span> <span style="color: #aa759f">end</span> <span style="color: #aa759f">if</span> <span style="color: #d0d0d0">or</span> <span style="color: #aa759f">until</span> <span style="color: #aa759f">break</span> <span style="color: #d28445">false</span> <span style="color: #aa759f">in</span> <span style="color: #aa759f">repeat</span> <span style="color: #aa759f">while</span> <span style="color: #aa759f">do</span> <span style="color: #aa759f">for</span> <span style="color: #d28445">local</span>
+<span style="color: #aa759f">return</span> <span style="color: #aa759f">else</span> <span style="color: #aa759f">function</span> <span style="color: #d0d0d0;background-color: #151515">nil</span> <span style="color: #aa759f">then</span> <span style="color: #aa759f">elseif</span> <span style="color: #d0d0d0;background-color: #151515">goto</span> <span style="color: #d0d0d0">not</span> <span style="color: #d28445">true</span></code></pre>
 </div>
 </div>
 <div class="sidebarblock">
@@ -656,7 +596,7 @@ return else function nil then elseif goto not true</code></pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_comments">6. Comments</h2>
+<h2 id="_comments">Comments</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>A comment is a code annotation that is ignored by the programming language.
@@ -670,9 +610,9 @@ or at the end of another line:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="lua">print(&#34;This is normal code.&#34;)
--- This is a comment
-print(&#34;This is still normal code.&#34;) -- Comment at the end of a line of code.</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;This is normal code.&#34;</span><span style="color: #d0d0d0">)</span>
+<span style="color: #505050">-- This is a comment</span>
+<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;This is still normal code.&#34;</span><span style="color: #d0d0d0">)</span> <span style="color: #505050">-- Comment at the end of a line of code.</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -681,10 +621,10 @@ which start with a long bracket and can continue on many lines:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="lua">print(&#34;This is normal code&#34;)
---[[Line 1
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;This is normal code&#34;</span><span style="color: #d0d0d0">)</span>
+<span style="color: #505050">--[[Line 1
 Line 2
-]]</code></pre>
+]]</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -700,13 +640,13 @@ It is often useful to do this when using comments to disable blocks of code.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="lua">--[==[
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #505050">--[==[
 This is a comment that contains a closing long bracket of level 0 which is here:
  ]]
 However, the closing double bracket doesn&#39;t make the comment end, because the
   comment was opened with an opening long bracket of level 2, and only a closing
   long bracket of level 2 can close it.
-]==]</code></pre>
+]==]</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -724,7 +664,7 @@ the section called &#34;Long Strings&#34;.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_expressions">7. Expressions</h2>
+<h2 id="_expressions">Expressions</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Expressions are pieces of code that have a value and that can be
@@ -734,7 +674,7 @@ would be erroneous:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="lua">3 + 5</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #90a959">3</span> <span style="color: #d0d0d0">+</span> <span style="color: #90a959">5</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -757,20 +697,20 @@ four chunks are all valid and equivalent:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="lua">a = 1
-b = a * 2
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">1</span>
+<span style="color: #d0d0d0;background-color: #151515">b</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">*</span> <span style="color: #90a959">2</span>
 
-a = 1;
-b = a * 2;
+<span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">1</span><span style="color: #d0d0d0">;</span>
+<span style="color: #d0d0d0;background-color: #151515">b</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">*</span> <span style="color: #90a959">2</span><span style="color: #d0d0d0">;</span>
 
-a = 1; b = a * 2
-a = 1 b = a * 2 -- ugly, but valid</code></pre>
+<span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">1</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0;background-color: #151515">b</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">*</span> <span style="color: #90a959">2</span>
+<span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">1</span> <span style="color: #d0d0d0;background-color: #151515">b</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">*</span> <span style="color: #90a959">2</span> <span style="color: #505050">-- ugly, but valid</span></code></pre>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_global_variables">8. Global Variables</h2>
+<h2 id="_global_variables">Global Variables</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Global variables do not need declarations; we simply use them. It is not an error
@@ -799,7 +739,7 @@ After the assignment, Lua can eventually reclaim the memory used by the variable
 </div>
 </div>
 <div class="sect1">
-<h2 id="_types_and_values">9. Types and Values</h2>
+<h2 id="_types_and_values">Types and Values</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Lua is a dynamically-typed language. There are no type definitions in the language;
@@ -942,7 +882,7 @@ or initialized.</p>
 <p>We will discuss now the simple types nil and Boolean.</p>
 </div>
 <div class="sect2">
-<h3 id="_nil">9.1. Nil</h3>
+<h3 id="_nil">Nil</h3>
 <div class="paragraph">
 <p>Nil is a type with a single value, nil, whose main property is to be different
 from any other value. Lua uses nil as a kind of non-value, to represent the
@@ -952,7 +892,7 @@ variable to delete it.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_booleans">9.2. Booleans</h3>
+<h3 id="_booleans">Booleans</h3>
 <div class="paragraph">
 <p>The Boolean type has two values, <code>false</code> and <code>true</code>, which represent the
 traditional Boolean values. However, Booleans do not hold a monopoly of
@@ -995,7 +935,7 @@ not try to evaluate <code>a / i</code> when <code>i</code> is zero.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="lua">if not x then x = v end</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #aa759f">if</span> <span style="color: #d0d0d0">not</span> <span style="color: #d0d0d0;background-color: #151515">x</span> <span style="color: #aa759f">then</span> <span style="color: #d0d0d0;background-color: #151515">x</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">v</span> <span style="color: #aa759f">end</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1068,16 +1008,16 @@ and the <code>or</code> operator returns true if either of arguments is true and
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="lua">local is_alive = true
-print(is_alive) -- true
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">is_alive</span> <span style="color: #d0d0d0">=</span> <span style="color: #d28445">true</span>
+<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">is_alive</span><span style="color: #d0d0d0">)</span> <span style="color: #505050">-- true</span>
 
-local is_alive = false
-print(is_alive) -- false</code></pre>
+<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">is_alive</span> <span style="color: #d0d0d0">=</span> <span style="color: #d28445">false</span>
+<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">is_alive</span><span style="color: #d0d0d0">)</span> <span style="color: #505050">-- false</span></code></pre>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_numbers">9.3. Numbers</h3>
+<h3 id="_numbers">Numbers</h3>
 <div class="paragraph">
 <p>Numbers generally represent quantities, but they can be used for many other things. The
 number type in Lua works mostly in the same way as real numbers.</p>
@@ -1113,34 +1053,34 @@ even in hexadecimal. Here are some valid numbers:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="lua">-- The Lua
-local a = 1
-local b = 2
-local c = a + b
-print(c) -- 3
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #505050">-- The Lua</span>
+<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">1</span>
+<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">b</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">2</span>
+<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">c</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">+</span> <span style="color: #d0d0d0;background-color: #151515">b</span>
+<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">c</span><span style="color: #d0d0d0">)</span> <span style="color: #505050">-- 3</span>
 
-local d = b - a
-print(d)
+<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">d</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">b</span> <span style="color: #d0d0d0">-</span> <span style="color: #d0d0d0;background-color: #151515">a</span>
+<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">d</span><span style="color: #d0d0d0">)</span>
 
-local x = 1 * 3 * 4 -- 12
-print(x)
+<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">x</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">1</span> <span style="color: #d0d0d0">*</span> <span style="color: #90a959">3</span> <span style="color: #d0d0d0">*</span> <span style="color: #90a959">4</span> <span style="color: #505050">-- 12</span>
+<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">x</span><span style="color: #d0d0d0">)</span>
 
-local y = (1+3) * 2 -- 8
-print(y)
+<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">y</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">(</span><span style="color: #90a959">1</span><span style="color: #d0d0d0">+</span><span style="color: #90a959">3</span><span style="color: #d0d0d0">)</span> <span style="color: #d0d0d0">*</span> <span style="color: #90a959">2</span> <span style="color: #505050">-- 8</span>
+<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">y</span><span style="color: #d0d0d0">)</span>
 
-print(10 / 2) -- 5
-print(2 ^ 2) -- 4
-print(5 % 2) -- 1
-print(-b) -- -2
+<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">10</span> <span style="color: #d0d0d0">/</span> <span style="color: #90a959">2</span><span style="color: #d0d0d0">)</span> <span style="color: #505050">-- 5</span>
+<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">2</span> <span style="color: #d0d0d0">^</span> <span style="color: #90a959">2</span><span style="color: #d0d0d0">)</span> <span style="color: #505050">-- 4</span>
+<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">5</span> <span style="color: #d0d0d0">%</span> <span style="color: #90a959">2</span><span style="color: #d0d0d0">)</span> <span style="color: #505050">-- 1</span>
+<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0">-</span><span style="color: #d0d0d0;background-color: #151515">b</span><span style="color: #d0d0d0">)</span> <span style="color: #505050">-- -2</span>
 
--- Incerment
-local level = 1
-level = level + 1
-print(level)</code></pre>
+<span style="color: #505050">-- Incerment</span>
+<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">level</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">1</span>
+<span style="color: #d0d0d0;background-color: #151515">level</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">level</span> <span style="color: #d0d0d0">+</span> <span style="color: #90a959">1</span>
+<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">level</span><span style="color: #d0d0d0">)</span></code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_arithmetic_operations">9.3.1. Arithmetic operations</h4>
+<h4 id="_arithmetic_operations">Arithmetic operations</h4>
 <div class="paragraph">
 <p>The operators for numbers in Lua are the following:</p>
 </div>
@@ -1206,7 +1146,7 @@ print(level)</code></pre>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_integers">9.3.2. Integers</h4>
+<h4 id="_integers">Integers</h4>
 <div class="paragraph">
 <p>A new subtype of numbers, integers, was added in Lua 5.3. Numbers can be either
 integers or floats.  Floats are similar to numbers as described above, while
@@ -1222,7 +1162,7 @@ integers.  In other cases, with the exception of the floor division operator
 </div>
 </div>
 <div class="sect2">
-<h3 id="_strings">9.4. Strings</h3>
+<h3 id="_strings">Strings</h3>
 <div class="paragraph">
 <p>Strings are sequences of characters that can be used to represent text. They can be written
 in Lua by being contained in double quotes, single quotes or long brackets
@@ -1251,14 +1191,14 @@ is also the only way to insert single or double quotes in certain cases.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="lua">local phrase = [[My name is ]]
-local name = &#39;P J&#39;
-print(phrase .. name) -- My name is P J
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">phrase</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">[[My name is ]]</span>
+<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">name</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#39;P J&#39;</span>
+<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">phrase</span> <span style="color: #d0d0d0">..</span> <span style="color: #d0d0d0;background-color: #151515">name</span><span style="color: #d0d0d0">)</span> <span style="color: #505050">-- My name is P J</span>
 
--- Strings and Numbers
-local age = 21
-local name = &#34;Billy&#34;
-print(name .. &#34; is &#34; .. age .. &#34; Years old&#34;)</code></pre>
+<span style="color: #505050">-- Strings and Numbers</span>
+<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">age</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">21</span>
+<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">name</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#34;Billy&#34;</span>
+<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">name</span> <span style="color: #d0d0d0">..</span> <span style="color: #90a959">&#34; is &#34;</span> <span style="color: #d0d0d0">..</span> <span style="color: #d0d0d0;background-color: #151515">age</span> <span style="color: #d0d0d0">..</span> <span style="color: #90a959">&#34; Years old&#34;</span><span style="color: #d0d0d0">)</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1386,11 +1326,11 @@ interpretation of characters.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="lua">print(#(&#34;This is a string&#34;)) --&gt; 16</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0">#</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;This is a string&#34;</span><span style="color: #d0d0d0">))</span> <span style="color: #505050">--&gt; 16</span></code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_concatenation">9.4.1. Concatenation</h4>
+<h4 id="_concatenation">Concatenation</h4>
 <div class="quoteblock">
 <blockquote>
 <div class="paragraph">
@@ -1413,7 +1353,7 @@ end-to-end.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_other_types">9.5. Other types</h3>
+<h3 id="_other_types">Other types</h3>
 <div class="paragraph">
 <p>The four basic types in Lua (numbers, booleans, nil and strings) have been described in
 the previous sections, but four types are missing:
@@ -1461,7 +1401,7 @@ Threads
 </div>
 </div>
 <div class="sect1">
-<h2 id="_literals">10. Literals</h2>
+<h2 id="_literals">Literals</h2>
 <div class="sectionbody">
 
 </div>

@@ -43,7 +43,7 @@
 
     
     
-    <link type="text/css" rel="stylesheet" href=https://hossein-lap.github.io/css/styles.0fae48468fcdbfb0e4e43f8bd7a7a4bc2ed57d3ec070c8ddfaf92699466bf178f65d01ac7f559a832f4c2feec3cd91464557d74635929d08f778a3b797ee0ef4.css integrity="sha512-D65IRo/Nv7Dk5D&#43;L16ekvC7VfT7AcMjd&#43;vkmmUZr8Xj2XQGsf1Wagy9ML&#43;7DzZFGRVfXRjWSnQj3eKO3l&#43;4O9A==" />
+    <link type="text/css" rel="stylesheet" href=https://hossein-lap.github.io/css/styles.3be40fe3dabfc979e366a02ffae72be8fb13abdf3b4106f6a1b5f0c315ff16ceb789c50b9f4dc1b80b6a2b11732e660e88d64571fa3ef3459b13294e292fcd00.css integrity="sha512-O&#43;QP49q/yXnjZqAv&#43;ucr6PsTq987QQb2obXwwxX/Fs63icULn03BuAtqKxFzLmYOiNZFcfo&#43;80WbEylOKS/NAA==" />
 <meta name="author" content="Hossein Esmail" />
 
     
@@ -266,56 +266,11 @@
     
     
     <div class="articleToc">
-    <details>
-        <hr/>
-        <summary>
-            <b>Table of Content</b>
-        </summary>
-        <ul>
-                <li>
-                    <a href="#_redis_handler">1. Redis Handler</a>
-                </li>
-                <li>
-                    <a href="#_mysql_handler">2. MySQL Handler</a>
-                </li>
-                <li>
-                    <a href="#_json_parser_unmarshal">3. JSON Parser - Unmarshal</a>
-                </li>
-                <ul>
-                    <li>
-                        <a href="#_complex_json">3.1. Complex JSON</a>
-                    </li>
-                    <li>
-                        <a href="#_common_pitfalls_with_json_unmarshalling_in_go">3.2. Common pitfalls with JSON unmarshalling in Go</a>
-                    </li>
-                </ul>
-                <li>
-                    <a href="#_json_parser_marshal">4. JSON Parser - Marshal</a>
-                </li>
-                <ul>
-                    <li>
-                        <a href="#_structs">4.1. structs</a>
-                    </li>
-                    <li>
-                        <a href="#_customizing_json_field_names_with_struct_tags">4.2. Customizing JSON field names with struct tags</a>
-                    </li>
-                    <li>
-                        <a href="#_other_uses_of_struct_tags">4.3. Other uses of struct tags</a>
-                    </li>
-                </ul>
-                <li>
-                    <a href="#_validating_json_data">5. Validating JSON data</a>
-                </li>
-                <li>
-                    <a href="#_defining_custom_behavior_marshal_unmarshal_data">6. Defining custom behavior - Marshal / Unmarshal data</a>
-                </li>
-        </ul>
-        <hr/>
-    </details>
+    
+    <hr />
 </div>
 
-    <div>
-<div id="preamble">
+    <div><div id="preamble">
 <div class="sectionbody">
 <div class="admonitionblock warning">
 <table>
@@ -337,9 +292,9 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="go">import (
-    &#34;net/http&#34;
-)</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">import</span> <span style="color: #d0d0d0">(</span>
+    <span style="color: #90a959">&#34;net/http&#34;</span>
+<span style="color: #d0d0d0">)</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -363,7 +318,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="go">type RequestHandler struct {}</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">type</span> <span style="color: #d0d0d0;background-color: #151515">RequestHandler</span> <span style="color: #aa759f">struct</span> <span style="color: #d0d0d0">{}</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -373,182 +328,182 @@ that needs to be handled (HTTP requests goes to the specified paths)</p>
 <div class="listingblock">
 <div class="title">main funcion</div>
 <div class="content">
-<pre class="rouge highlight"><code data-lang="go">func main() {
-    mux := http.NewServeMx()
-    mux.Handle(&#34;/path1&#34;, &amp;RequestHandler{})
-    mux.Handle(&#34;/path1/&#34;, &amp;RequestHandler{})
-    mux.Handle(&#34;/path2&#34;, &amp;RequestHandler{})
-    mux.Handle(&#34;/path2/&#34;, &amp;RequestHandler{})
-    /* continue */
-    http.ListenAndServe(&#34;:8080&#34;, mux)
-}</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">main</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
+    <span style="color: #d0d0d0;background-color: #151515">mux</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">http</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">NewServeMx</span><span style="color: #d0d0d0">()</span>
+    <span style="color: #d0d0d0;background-color: #151515">mux</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Handle</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;/path1&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&amp;</span><span style="color: #d0d0d0;background-color: #151515">RequestHandler</span><span style="color: #d0d0d0">{})</span>
+    <span style="color: #d0d0d0;background-color: #151515">mux</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Handle</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;/path1/&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&amp;</span><span style="color: #d0d0d0;background-color: #151515">RequestHandler</span><span style="color: #d0d0d0">{})</span>
+    <span style="color: #d0d0d0;background-color: #151515">mux</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Handle</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;/path2&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&amp;</span><span style="color: #d0d0d0;background-color: #151515">RequestHandler</span><span style="color: #d0d0d0">{})</span>
+    <span style="color: #d0d0d0;background-color: #151515">mux</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Handle</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;/path2/&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&amp;</span><span style="color: #d0d0d0;background-color: #151515">RequestHandler</span><span style="color: #d0d0d0">{})</span>
+    <span style="color: #505050">/* continue */</span>
+    <span style="color: #d0d0d0;background-color: #151515">http</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">ListenAndServe</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;:8080&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">mux</span><span style="color: #d0d0d0">)</span>
+<span style="color: #d0d0d0">}</span></code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="title">serve function</div>
 <div class="content">
-<pre class="rouge highlight"><code data-lang="go">func (h *RequestHandler) ServeHTTP(w http.ResponseWriter, r *http.Requset) {
-    request_type := r.Method
-    tmp := strings.SplitN(r.URL.String(), &#34;/&#34;, 3)
-    section := tmp[1] // path
-    key := tmp[2] // add data after the path
-    params := r.URL.Query()
-    value := params.Get(key)
-    body, err := io.ReadAll(r.Body) // values from curl&#39;s `--data` flag (spected to be JSON)
-    /* continue */
-}</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">func</span> <span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">h</span> <span style="color: #d0d0d0">*</span><span style="color: #d0d0d0;background-color: #151515">RequestHandler</span><span style="color: #d0d0d0">)</span> <span style="color: #d0d0d0;background-color: #151515">ServeHTTP</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">w</span> <span style="color: #d0d0d0;background-color: #151515">http</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">ResponseWriter</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">r</span> <span style="color: #d0d0d0">*</span><span style="color: #d0d0d0;background-color: #151515">http</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Requset</span><span style="color: #d0d0d0">)</span> <span style="color: #d0d0d0">{</span>
+    <span style="color: #d0d0d0;background-color: #151515">request_type</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">r</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Method</span>
+    <span style="color: #d0d0d0;background-color: #151515">tmp</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">strings</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">SplitN</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">r</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">URL</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">String</span><span style="color: #d0d0d0">(),</span> <span style="color: #90a959">&#34;/&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #90a959">3</span><span style="color: #d0d0d0">)</span>
+    <span style="color: #d0d0d0;background-color: #151515">section</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">tmp</span><span style="color: #d0d0d0">[</span><span style="color: #90a959">1</span><span style="color: #d0d0d0">]</span> <span style="color: #505050">// path</span>
+    <span style="color: #d0d0d0;background-color: #151515">key</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">tmp</span><span style="color: #d0d0d0">[</span><span style="color: #90a959">2</span><span style="color: #d0d0d0">]</span> <span style="color: #505050">// add data after the path</span>
+    <span style="color: #d0d0d0;background-color: #151515">params</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">r</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">URL</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Query</span><span style="color: #d0d0d0">()</span>
+    <span style="color: #d0d0d0;background-color: #151515">value</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">params</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Get</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">key</span><span style="color: #d0d0d0">)</span>
+    <span style="color: #d0d0d0;background-color: #151515">body</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">io</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">ReadAll</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">r</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Body</span><span style="color: #d0d0d0">)</span> <span style="color: #505050">// values from curl&#39;s `--data` flag (spected to be JSON)</span>
+    <span style="color: #505050">/* continue */</span>
+<span style="color: #d0d0d0">}</span></code></pre>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_redis_handler">1. Redis Handler</h2>
+<h2 id="_redis_handler">Redis Handler</h2>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="go">func cache_handler() {
-    client := redis.NewClient(&amp;redis.Options{
-        Addr: &#34;localhost:6349&#34;
-        Password: &#34;&#34; // No password, to get it from env variables use: `os.Getenv(&#34;ENV&#34;)`
-        DB: 0 // default db
-    })
-}</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">cache_handler</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
+    <span style="color: #d0d0d0;background-color: #151515">client</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">redis</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">NewClient</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0">&amp;</span><span style="color: #d0d0d0;background-color: #151515">redis</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Options</span><span style="color: #d0d0d0">{</span>
+        <span style="color: #d0d0d0;background-color: #151515">Addr</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">&#34;localhost:6349&#34;</span>
+        <span style="color: #d0d0d0;background-color: #151515">Password</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">&#34;&#34;</span> <span style="color: #505050">// No password, to get it from env variables use: `os.Getenv(&#34;ENV&#34;)`</span>
+        <span style="color: #d0d0d0;background-color: #151515">DB</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">0</span> <span style="color: #505050">// default db</span>
+    <span style="color: #d0d0d0">})</span>
+<span style="color: #d0d0d0">}</span></code></pre>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_mysql_handler">2. MySQL Handler</h2>
+<h2 id="_mysql_handler">MySQL Handler</h2>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="go">func database_handler() {
-    sql_url := &#34;root@localhost:3360&#34;
-    db, err := sql.Open(&#34;mysql&#34;, sql_url)
-    if err != nil {
-        pandic(err.Error())
-    }
-    defer db.Close()
-    /* continue */
-}</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">database_handler</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
+    <span style="color: #d0d0d0;background-color: #151515">sql_url</span> <span style="color: #d0d0d0">:=</span> <span style="color: #90a959">&#34;root@localhost:3360&#34;</span>
+    <span style="color: #d0d0d0;background-color: #151515">db</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">sql</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Open</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;mysql&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">sql_url</span><span style="color: #d0d0d0">)</span>
+    <span style="color: #aa759f">if</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">!=</span> <span style="color: #f4bf75">nil</span> <span style="color: #d0d0d0">{</span>
+        <span style="color: #d0d0d0;background-color: #151515">pandic</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">err</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Error</span><span style="color: #d0d0d0">())</span>
+    <span style="color: #d0d0d0">}</span>
+    <span style="color: #aa759f">defer</span> <span style="color: #d0d0d0;background-color: #151515">db</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Close</span><span style="color: #d0d0d0">()</span>
+    <span style="color: #505050">/* continue */</span>
+<span style="color: #d0d0d0">}</span></code></pre>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_json_parser_unmarshal">3. JSON Parser - Unmarshal</h2>
+<h2 id="_json_parser_unmarshal">JSON Parser - Unmarshal</h2>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="go">type Movie struct {
-    Name string `json:&#34;name&#34;`
-    Publisher string `json:&#34;publisher&#34;`
-    Year int `json:&#34;year&#34;`
-}
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">type</span> <span style="color: #d0d0d0;background-color: #151515">Movie</span> <span style="color: #aa759f">struct</span> <span style="color: #d0d0d0">{</span>
+    <span style="color: #d0d0d0;background-color: #151515">Name</span> <span style="color: #d28445">string</span> <span style="color: #90a959">`json:&#34;name&#34;`</span>
+    <span style="color: #d0d0d0;background-color: #151515">Publisher</span> <span style="color: #d28445">string</span> <span style="color: #90a959">`json:&#34;publisher&#34;`</span>
+    <span style="color: #d0d0d0;background-color: #151515">Year</span> <span style="color: #d28445">int</span> <span style="color: #90a959">`json:&#34;year&#34;`</span>
+<span style="color: #d0d0d0">}</span>
 
-func HandleMovie() {
-    // var target map[string]any /* not optimal */
-    var movie Movie
+<span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">HandleMovie</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
+    <span style="color: #505050">// var target map[string]any /* not optimal */</span>
+    <span style="color: #aa759f">var</span> <span style="color: #d0d0d0;background-color: #151515">movie</span> <span style="color: #d0d0d0;background-color: #151515">Movie</span>
 
-    input := `{
+    <span style="color: #d0d0d0;background-color: #151515">input</span> <span style="color: #d0d0d0">:=</span> <span style="color: #90a959">`{
         &#34;name&#34;: &#34;Jocker&#34;,
         &#34;publisher&#34;: &#34;WB&#34;,
         &#34;year&#34;: 2019
-    }`
+    }`</span>
 
-    // err := json.Unmarshal([]byte(input), &amp;target) /* not optimal */
-    err := json.Unmarshal([]byte(input), &amp;movie) /* not optimal */
-    if err != nil {
-        log.Fatalf(&#34;Unable to marshal JSON due to %s&#34;, err)
-    }
+    <span style="color: #505050">// err := json.Unmarshal([]byte(input), &amp;target) /* not optimal */</span>
+    <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">json</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Unmarshal</span><span style="color: #d0d0d0">([]</span><span style="color: #d28445">byte</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">input</span><span style="color: #d0d0d0">),</span> <span style="color: #d0d0d0">&amp;</span><span style="color: #d0d0d0;background-color: #151515">movie</span><span style="color: #d0d0d0">)</span> <span style="color: #505050">/* not optimal */</span>
+    <span style="color: #aa759f">if</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">!=</span> <span style="color: #f4bf75">nil</span> <span style="color: #d0d0d0">{</span>
+        <span style="color: #d0d0d0;background-color: #151515">log</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Fatalf</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;Unable to marshal JSON due to %s&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span><span style="color: #d0d0d0">)</span>
+    <span style="color: #d0d0d0">}</span>
 
-    /* not optimal */
-    // for k, v := range target {
-    //    fmt.Printf(&#34;k: %s, v: %v\n&#34;, k, v)
-    // }
-    fmt.Printf(
-        &#34;Name: %s, Publisher: %s, Year: %d\n&#34;,
-        movie.Name, movie.Publisher, movie.Year,
-    )
-}</code></pre>
+    <span style="color: #505050">/* not optimal */</span>
+    <span style="color: #505050">// for k, v := range target {</span>
+    <span style="color: #505050">//    fmt.Printf(&#34;k: %s, v: %v\n&#34;, k, v)</span>
+    <span style="color: #505050">// }</span>
+    <span style="color: #d0d0d0;background-color: #151515">fmt</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Printf</span><span style="color: #d0d0d0">(</span>
+        <span style="color: #90a959">&#34;Name: %s, Publisher: %s, Year: %d</span><span style="color: #8f5536">\n</span><span style="color: #90a959">&#34;</span><span style="color: #d0d0d0">,</span>
+        <span style="color: #d0d0d0;background-color: #151515">movie</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Name</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">movie</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Publisher</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">movie</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Year</span><span style="color: #d0d0d0">,</span>
+    <span style="color: #d0d0d0">)</span>
+<span style="color: #d0d0d0">}</span></code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_complex_json">3.1. Complex JSON</h3>
+<h3 id="_complex_json">Complex JSON</h3>
 <div class="listingblock">
 <div class="title"><code>assets/complex.json</code></div>
 <div class="content">
-<pre class="rouge highlight"><code data-lang="json">{
-  &#34;name&#34;: &#34;James Peterson&#34;,
-  &#34;age&#34;: 37,
-  &#34;address&#34;: {
-    &#34;line1&#34;: &#34;Block 78 Woodgrove Avenue 5&#34;,
-    &#34;line2&#34;: &#34;Unit #05-111&#34;,
-    &#34;postal&#34;: &#34;654378&#34;
-  },
-  &#34;pets&#34;: [
-    {
-      &#34;name&#34;: &#34;Lex&#34;,
-      &#34;kind&#34;: &#34;Dog&#34;,
-      &#34;age&#34;: 4,
-      &#34;color&#34;: &#34;Gray&#34;
-    },
-    {
-      &#34;name&#34;: &#34;Faye&#34;,
-      &#34;kind&#34;: &#34;Cat&#34;,
-      &#34;age&#34;: 6,
-      &#34;color&#34;: &#34;Orange&#34;
-    }
-  ]
-}</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="json"><span style="color: #d0d0d0">{</span><span style="color: #d0d0d0;background-color: #151515">
+  </span><span style="color: #d0d0d0;background-color: #151515">&#34;name&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">&#34;James Peterson&#34;</span><span style="color: #d0d0d0">,</span><span style="color: #d0d0d0;background-color: #151515">
+  </span><span style="color: #d0d0d0;background-color: #151515">&#34;age&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">37</span><span style="color: #d0d0d0">,</span><span style="color: #d0d0d0;background-color: #151515">
+  </span><span style="color: #d0d0d0;background-color: #151515">&#34;address&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #d0d0d0">{</span><span style="color: #d0d0d0;background-color: #151515">
+    </span><span style="color: #d0d0d0;background-color: #151515">&#34;line1&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">&#34;Block 78 Woodgrove Avenue 5&#34;</span><span style="color: #d0d0d0">,</span><span style="color: #d0d0d0;background-color: #151515">
+    </span><span style="color: #d0d0d0;background-color: #151515">&#34;line2&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">&#34;Unit #05-111&#34;</span><span style="color: #d0d0d0">,</span><span style="color: #d0d0d0;background-color: #151515">
+    </span><span style="color: #d0d0d0;background-color: #151515">&#34;postal&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">&#34;654378&#34;</span><span style="color: #d0d0d0;background-color: #151515">
+  </span><span style="color: #d0d0d0">},</span><span style="color: #d0d0d0;background-color: #151515">
+  </span><span style="color: #d0d0d0;background-color: #151515">&#34;pets&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #d0d0d0">[</span><span style="color: #d0d0d0;background-color: #151515">
+    </span><span style="color: #d0d0d0">{</span><span style="color: #d0d0d0;background-color: #151515">
+      </span><span style="color: #d0d0d0;background-color: #151515">&#34;name&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">&#34;Lex&#34;</span><span style="color: #d0d0d0">,</span><span style="color: #d0d0d0;background-color: #151515">
+      </span><span style="color: #d0d0d0;background-color: #151515">&#34;kind&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">&#34;Dog&#34;</span><span style="color: #d0d0d0">,</span><span style="color: #d0d0d0;background-color: #151515">
+      </span><span style="color: #d0d0d0;background-color: #151515">&#34;age&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">4</span><span style="color: #d0d0d0">,</span><span style="color: #d0d0d0;background-color: #151515">
+      </span><span style="color: #d0d0d0;background-color: #151515">&#34;color&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">&#34;Gray&#34;</span><span style="color: #d0d0d0;background-color: #151515">
+    </span><span style="color: #d0d0d0">},</span><span style="color: #d0d0d0;background-color: #151515">
+    </span><span style="color: #d0d0d0">{</span><span style="color: #d0d0d0;background-color: #151515">
+      </span><span style="color: #d0d0d0;background-color: #151515">&#34;name&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">&#34;Faye&#34;</span><span style="color: #d0d0d0">,</span><span style="color: #d0d0d0;background-color: #151515">
+      </span><span style="color: #d0d0d0;background-color: #151515">&#34;kind&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">&#34;Cat&#34;</span><span style="color: #d0d0d0">,</span><span style="color: #d0d0d0;background-color: #151515">
+      </span><span style="color: #d0d0d0;background-color: #151515">&#34;age&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">6</span><span style="color: #d0d0d0">,</span><span style="color: #d0d0d0;background-color: #151515">
+      </span><span style="color: #d0d0d0;background-color: #151515">&#34;color&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">&#34;Orange&#34;</span><span style="color: #d0d0d0;background-color: #151515">
+    </span><span style="color: #d0d0d0">}</span><span style="color: #d0d0d0;background-color: #151515">
+  </span><span style="color: #d0d0d0">]</span><span style="color: #d0d0d0;background-color: #151515">
+</span><span style="color: #d0d0d0">}</span></code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="title"><code>examples/complex_json/main.go</code></div>
 <div class="content">
-<pre class="rouge highlight"><code data-lang="go">type (
-    FullPerson struct {
-        Address Address
-        Name    string
-        Pets    []Pet
-        Age     int
-    }
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">type</span> <span style="color: #d0d0d0">(</span>
+    <span style="color: #d0d0d0;background-color: #151515">FullPerson</span> <span style="color: #aa759f">struct</span> <span style="color: #d0d0d0">{</span>
+        <span style="color: #d0d0d0;background-color: #151515">Address</span> <span style="color: #d0d0d0;background-color: #151515">Address</span>
+        <span style="color: #d0d0d0;background-color: #151515">Name</span>    <span style="color: #d28445">string</span>
+        <span style="color: #d0d0d0;background-color: #151515">Pets</span>    <span style="color: #d0d0d0">[]</span><span style="color: #d0d0d0;background-color: #151515">Pet</span>
+        <span style="color: #d0d0d0;background-color: #151515">Age</span>     <span style="color: #d28445">int</span>
+    <span style="color: #d0d0d0">}</span>
 
-    Pet struct {
-        Name  string
-        Kind  string
-        Color string
-        Age   int
-    }
+    <span style="color: #d0d0d0;background-color: #151515">Pet</span> <span style="color: #aa759f">struct</span> <span style="color: #d0d0d0">{</span>
+        <span style="color: #d0d0d0;background-color: #151515">Name</span>  <span style="color: #d28445">string</span>
+        <span style="color: #d0d0d0;background-color: #151515">Kind</span>  <span style="color: #d28445">string</span>
+        <span style="color: #d0d0d0;background-color: #151515">Color</span> <span style="color: #d28445">string</span>
+        <span style="color: #d0d0d0;background-color: #151515">Age</span>   <span style="color: #d28445">int</span>
+    <span style="color: #d0d0d0">}</span>
 
-    Address struct {
-        Line1  string
-        Line2  string
-        Postal string
-    }
-)
+    <span style="color: #d0d0d0;background-color: #151515">Address</span> <span style="color: #aa759f">struct</span> <span style="color: #d0d0d0">{</span>
+        <span style="color: #d0d0d0;background-color: #151515">Line1</span>  <span style="color: #d28445">string</span>
+        <span style="color: #d0d0d0;background-color: #151515">Line2</span>  <span style="color: #d28445">string</span>
+        <span style="color: #d0d0d0;background-color: #151515">Postal</span> <span style="color: #d28445">string</span>
+    <span style="color: #d0d0d0">}</span>
+<span style="color: #d0d0d0">)</span>
 
 
-func main() {
-    b, err := os.ReadFile(&#34;assets/complex.json&#34;)
-    if err != nil {
-        log.Fatalf(&#34;Unable to read file due to %s\n&#34;, err)
-    }
+<span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">main</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
+    <span style="color: #d0d0d0;background-color: #151515">b</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">os</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">ReadFile</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;assets/complex.json&#34;</span><span style="color: #d0d0d0">)</span>
+    <span style="color: #aa759f">if</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">!=</span> <span style="color: #f4bf75">nil</span> <span style="color: #d0d0d0">{</span>
+        <span style="color: #d0d0d0;background-color: #151515">log</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Fatalf</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;Unable to read file due to %s</span><span style="color: #8f5536">\n</span><span style="color: #90a959">&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span><span style="color: #d0d0d0">)</span>
+    <span style="color: #d0d0d0">}</span>
 
-    var person FullPerson
+    <span style="color: #aa759f">var</span> <span style="color: #d0d0d0;background-color: #151515">person</span> <span style="color: #d0d0d0;background-color: #151515">FullPerson</span>
 
-    err = json.Unmarshal(b, &amp;person)
-    if err != nil {
-        log.Fatalf(&#34;Unable to marshal JSON due to %s&#34;, err)
-    }
+    <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">json</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Unmarshal</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">b</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&amp;</span><span style="color: #d0d0d0;background-color: #151515">person</span><span style="color: #d0d0d0">)</span>
+    <span style="color: #aa759f">if</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">!=</span> <span style="color: #f4bf75">nil</span> <span style="color: #d0d0d0">{</span>
+        <span style="color: #d0d0d0;background-color: #151515">log</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Fatalf</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;Unable to marshal JSON due to %s&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span><span style="color: #d0d0d0">)</span>
+    <span style="color: #d0d0d0">}</span>
 
-    litter.Dump(person)
-}</code></pre>
+    <span style="color: #d0d0d0;background-color: #151515">litter</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Dump</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">person</span><span style="color: #d0d0d0">)</span>
+<span style="color: #d0d0d0">}</span></code></pre>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_common_pitfalls_with_json_unmarshalling_in_go">3.2. Common pitfalls with JSON unmarshalling in Go</h3>
+<h3 id="_common_pitfalls_with_json_unmarshalling_in_go">Common pitfalls with JSON unmarshalling in Go</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -572,7 +527,7 @@ func main() {
 </div>
 </div>
 <div class="sect1">
-<h2 id="_json_parser_marshal">4. JSON Parser - Marshal</h2>
+<h2 id="_json_parser_marshal">JSON Parser - Marshal</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The <code>json.Marshal()</code> method does the opposite of <code>Unmarshal()</code> by converting
@@ -581,54 +536,54 @@ a given data structure into a JSON.</p>
 <div class="listingblock">
 <div class="title">examples/basic_marshal/main.go</div>
 <div class="content">
-<pre class="rouge highlight"><code data-lang="go">func marshal(in any) []byte {
-    out, err := json.Marshal(in)
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">marshal</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">in</span> <span style="color: #d0d0d0;background-color: #151515">any</span><span style="color: #d0d0d0">)</span> <span style="color: #d0d0d0">[]</span><span style="color: #d28445">byte</span> <span style="color: #d0d0d0">{</span>
+    <span style="color: #d0d0d0;background-color: #151515">out</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">json</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Marshal</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">in</span><span style="color: #d0d0d0">)</span>
 
-    if err != nil {
-        log.Fatalf(&#34;Unable to marshal due to %s\n&#34;, err)
-    }
+    <span style="color: #aa759f">if</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">!=</span> <span style="color: #f4bf75">nil</span> <span style="color: #d0d0d0">{</span>
+        <span style="color: #d0d0d0;background-color: #151515">log</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Fatalf</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;Unable to marshal due to %s</span><span style="color: #8f5536">\n</span><span style="color: #90a959">&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span><span style="color: #d0d0d0">)</span>
+    <span style="color: #d0d0d0">}</span>
 
-    return out
-}
+    <span style="color: #aa759f">return</span> <span style="color: #d0d0d0;background-color: #151515">out</span>
+<span style="color: #d0d0d0">}</span>
 
-func main() {
-    first := marshal(14)
-    second := marshal(&#34;Hello world&#34;)
-    third := marshal([]float32{1.66, 6.86, 10.1})
-    fourth := marshal(map[string]int{&#34;num&#34;: 15, &#34;other&#34;: 17})
-    fmt.Printf(
-        &#34;first: %s\nsecond: %s\nthird: %s\nfourth: %s\n&#34;,
-        first,
-        second,
-        third,
-        fourth,
-    )
-}</code></pre>
+<span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">main</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
+    <span style="color: #d0d0d0;background-color: #151515">first</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">marshal</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">14</span><span style="color: #d0d0d0">)</span>
+    <span style="color: #d0d0d0;background-color: #151515">second</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">marshal</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;Hello world&#34;</span><span style="color: #d0d0d0">)</span>
+    <span style="color: #d0d0d0;background-color: #151515">third</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">marshal</span><span style="color: #d0d0d0">([]</span><span style="color: #d28445">float32</span><span style="color: #d0d0d0">{</span><span style="color: #90a959">1.66</span><span style="color: #d0d0d0">,</span> <span style="color: #90a959">6.86</span><span style="color: #d0d0d0">,</span> <span style="color: #90a959">10.1</span><span style="color: #d0d0d0">})</span>
+    <span style="color: #d0d0d0;background-color: #151515">fourth</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">marshal</span><span style="color: #d0d0d0">(</span><span style="color: #aa759f">map</span><span style="color: #d0d0d0">[</span><span style="color: #d28445">string</span><span style="color: #d0d0d0">]</span><span style="color: #d28445">int</span><span style="color: #d0d0d0">{</span><span style="color: #90a959">&#34;num&#34;</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">15</span><span style="color: #d0d0d0">,</span> <span style="color: #90a959">&#34;other&#34;</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">17</span><span style="color: #d0d0d0">})</span>
+    <span style="color: #d0d0d0;background-color: #151515">fmt</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Printf</span><span style="color: #d0d0d0">(</span>
+        <span style="color: #90a959">&#34;first: %s</span><span style="color: #8f5536">\n</span><span style="color: #90a959">second: %s</span><span style="color: #8f5536">\n</span><span style="color: #90a959">third: %s</span><span style="color: #8f5536">\n</span><span style="color: #90a959">fourth: %s</span><span style="color: #8f5536">\n</span><span style="color: #90a959">&#34;</span><span style="color: #d0d0d0">,</span>
+        <span style="color: #d0d0d0;background-color: #151515">first</span><span style="color: #d0d0d0">,</span>
+        <span style="color: #d0d0d0;background-color: #151515">second</span><span style="color: #d0d0d0">,</span>
+        <span style="color: #d0d0d0;background-color: #151515">third</span><span style="color: #d0d0d0">,</span>
+        <span style="color: #d0d0d0;background-color: #151515">fourth</span><span style="color: #d0d0d0">,</span>
+    <span style="color: #d0d0d0">)</span>
+<span style="color: #d0d0d0">}</span></code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_structs">4.1. structs</h3>
+<h3 id="_structs">structs</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="go">func main() {
-    p := Person{
-        Name:  &#34;John Jones&#34;,
-        Age:   26,
-        Email: &#34;johnjones@email.com&#34;,
-        Phone: &#34;89910119&#34;,
-        Hobbies: []string{
-            &#34;Swimming&#34;,
-            &#34;Badminton&#34;,
-        },
-    }
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">main</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
+    <span style="color: #d0d0d0;background-color: #151515">p</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">Person</span><span style="color: #d0d0d0">{</span>
+        <span style="color: #d0d0d0;background-color: #151515">Name</span><span style="color: #d0d0d0">:</span>  <span style="color: #90a959">&#34;John Jones&#34;</span><span style="color: #d0d0d0">,</span>
+        <span style="color: #d0d0d0;background-color: #151515">Age</span><span style="color: #d0d0d0">:</span>   <span style="color: #90a959">26</span><span style="color: #d0d0d0">,</span>
+        <span style="color: #d0d0d0;background-color: #151515">Email</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">&#34;johnjones@email.com&#34;</span><span style="color: #d0d0d0">,</span>
+        <span style="color: #d0d0d0;background-color: #151515">Phone</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">&#34;89910119&#34;</span><span style="color: #d0d0d0">,</span>
+        <span style="color: #d0d0d0;background-color: #151515">Hobbies</span><span style="color: #d0d0d0">:</span> <span style="color: #d0d0d0">[]</span><span style="color: #d28445">string</span><span style="color: #d0d0d0">{</span>
+            <span style="color: #90a959">&#34;Swimming&#34;</span><span style="color: #d0d0d0">,</span>
+            <span style="color: #90a959">&#34;Badminton&#34;</span><span style="color: #d0d0d0">,</span>
+        <span style="color: #d0d0d0">},</span>
+    <span style="color: #d0d0d0">}</span>
 
-    b, err := json.Marshal(p)
-    if err != nil {
-        log.Fatalf(&#34;Unable to marshal due to %s\n&#34;, err)
-    }
+    <span style="color: #d0d0d0;background-color: #151515">b</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">json</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Marshal</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">p</span><span style="color: #d0d0d0">)</span>
+    <span style="color: #aa759f">if</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">!=</span> <span style="color: #f4bf75">nil</span> <span style="color: #d0d0d0">{</span>
+        <span style="color: #d0d0d0;background-color: #151515">log</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Fatalf</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;Unable to marshal due to %s</span><span style="color: #8f5536">\n</span><span style="color: #90a959">&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span><span style="color: #d0d0d0">)</span>
+    <span style="color: #d0d0d0">}</span>
 
-    fmt.Println(string(b))
-}</code></pre>
+    <span style="color: #d0d0d0;background-color: #151515">fmt</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Println</span><span style="color: #d0d0d0">(</span><span style="color: #d28445">string</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">b</span><span style="color: #d0d0d0">))</span>
+<span style="color: #d0d0d0">}</span></code></pre>
 </div>
 </div>
 <div class="admonitionblock note">
@@ -647,91 +602,91 @@ format the output.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_customizing_json_field_names_with_struct_tags">4.2. Customizing JSON field names with struct tags</h3>
+<h3 id="_customizing_json_field_names_with_struct_tags">Customizing JSON field names with struct tags</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="go">type Dog struct {
-    Breed         string
-    Name          string
-    FavoriteTreat string
-    Age           int
-}
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">type</span> <span style="color: #d0d0d0;background-color: #151515">Dog</span> <span style="color: #aa759f">struct</span> <span style="color: #d0d0d0">{</span>
+    <span style="color: #d0d0d0;background-color: #151515">Breed</span>         <span style="color: #d28445">string</span>
+    <span style="color: #d0d0d0;background-color: #151515">Name</span>          <span style="color: #d28445">string</span>
+    <span style="color: #d0d0d0;background-color: #151515">FavoriteTreat</span> <span style="color: #d28445">string</span>
+    <span style="color: #d0d0d0;background-color: #151515">Age</span>           <span style="color: #d28445">int</span>
+<span style="color: #d0d0d0">}</span>
 
-var dog = Dog{
-  Breed: &#34;Golden Retriever&#34;,
-  Age: 8,
-  Name: &#34;Paws&#34;,
-  FavoriteTreat: &#34;Kibble&#34;,
-}</code></pre>
+<span style="color: #aa759f">var</span> <span style="color: #d0d0d0;background-color: #151515">dog</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">Dog</span><span style="color: #d0d0d0">{</span>
+  <span style="color: #d0d0d0;background-color: #151515">Breed</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">&#34;Golden Retriever&#34;</span><span style="color: #d0d0d0">,</span>
+  <span style="color: #d0d0d0;background-color: #151515">Age</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">8</span><span style="color: #d0d0d0">,</span>
+  <span style="color: #d0d0d0;background-color: #151515">Name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">&#34;Paws&#34;</span><span style="color: #d0d0d0">,</span>
+  <span style="color: #d0d0d0;background-color: #151515">FavoriteTreat</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">&#34;Kibble&#34;</span><span style="color: #d0d0d0">,</span>
+<span style="color: #d0d0d0">}</span></code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="go">type Dog struct {
-    Breed         string `json:&#34;breed&#34;`
-    Name          string `json:&#34;name&#34;`
-    FavoriteTreat string `json:&#34;favorite_treat&#34;`
-    Age           int    `json:&#34;age&#34;`
-}</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">type</span> <span style="color: #d0d0d0;background-color: #151515">Dog</span> <span style="color: #aa759f">struct</span> <span style="color: #d0d0d0">{</span>
+    <span style="color: #d0d0d0;background-color: #151515">Breed</span>         <span style="color: #d28445">string</span> <span style="color: #90a959">`json:&#34;breed&#34;`</span>
+    <span style="color: #d0d0d0;background-color: #151515">Name</span>          <span style="color: #d28445">string</span> <span style="color: #90a959">`json:&#34;name&#34;`</span>
+    <span style="color: #d0d0d0;background-color: #151515">FavoriteTreat</span> <span style="color: #d28445">string</span> <span style="color: #90a959">`json:&#34;favorite_treat&#34;`</span>
+    <span style="color: #d0d0d0;background-color: #151515">Age</span>           <span style="color: #d28445">int</span>    <span style="color: #90a959">`json:&#34;age&#34;`</span>
+<span style="color: #d0d0d0">}</span></code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="go">func main() {
-    input := `{
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">main</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
+    <span style="color: #d0d0d0;background-color: #151515">input</span> <span style="color: #d0d0d0">:=</span> <span style="color: #90a959">`{
       &#34;name&#34;: &#34;Coffee&#34;,
       &#34;breed&#34;: &#34;Toy Poodle&#34;,
       &#34;age&#34;: 5,
       &#34;favorite_treat&#34;: &#34;Kibble&#34;
-    }`
+    }`</span>
 
-    var coffee Dog
+    <span style="color: #aa759f">var</span> <span style="color: #d0d0d0;background-color: #151515">coffee</span> <span style="color: #d0d0d0;background-color: #151515">Dog</span>
 
-    err := json.Unmarshal([]byte(input), &amp;coffee)
-    if err != nil {
-        log.Fatalf(&#34;Unable to marshal JSON due to %s&#34;, err)
-    }
+    <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">json</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Unmarshal</span><span style="color: #d0d0d0">([]</span><span style="color: #d28445">byte</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">input</span><span style="color: #d0d0d0">),</span> <span style="color: #d0d0d0">&amp;</span><span style="color: #d0d0d0;background-color: #151515">coffee</span><span style="color: #d0d0d0">)</span>
+    <span style="color: #aa759f">if</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">!=</span> <span style="color: #f4bf75">nil</span> <span style="color: #d0d0d0">{</span>
+        <span style="color: #d0d0d0;background-color: #151515">log</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Fatalf</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;Unable to marshal JSON due to %s&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span><span style="color: #d0d0d0">)</span>
+    <span style="color: #d0d0d0">}</span>
 
-    litter.Dump(coffee)
-}</code></pre>
+    <span style="color: #d0d0d0;background-color: #151515">litter</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Dump</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">coffee</span><span style="color: #d0d0d0">)</span>
+<span style="color: #d0d0d0">}</span></code></pre>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_other_uses_of_struct_tags">4.3. Other uses of struct tags</h3>
+<h3 id="_other_uses_of_struct_tags">Other uses of struct tags</h3>
 <div class="listingblock">
 <div class="title">Omit an empty field (one with its zero value in Go)</div>
 <div class="content">
-<pre class="rouge highlight"><code data-lang="go">type User struct {
-    Username string   `json:&#34;username&#34;`
-    Password string   `json:&#34;-&#34;`
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">type</span> <span style="color: #d0d0d0;background-color: #151515">User</span> <span style="color: #aa759f">struct</span> <span style="color: #d0d0d0">{</span>
+    <span style="color: #d0d0d0;background-color: #151515">Username</span> <span style="color: #d28445">string</span>   <span style="color: #90a959">`json:&#34;username&#34;`</span>
+    <span style="color: #d0d0d0;background-color: #151515">Password</span> <span style="color: #d28445">string</span>   <span style="color: #90a959">`json:&#34;-&#34;`</span>
 
-    Email    string   `json:&#34;email&#34;`
-    Hobbies  []string `json:&#34;hobbies,omitempty&#34;`
-}</code></pre>
+    <span style="color: #d0d0d0;background-color: #151515">Email</span>    <span style="color: #d28445">string</span>   <span style="color: #90a959">`json:&#34;email&#34;`</span>
+    <span style="color: #d0d0d0;background-color: #151515">Hobbies</span>  <span style="color: #d0d0d0">[]</span><span style="color: #d28445">string</span> <span style="color: #90a959">`json:&#34;hobbies,omitempty&#34;`</span>
+<span style="color: #d0d0d0">}</span></code></pre>
 </div>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_validating_json_data">5. Validating JSON data</h2>
+<h2 id="_validating_json_data">Validating JSON data</h2>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="go">func main() {
-    good := `{&#34;name&#34;: &#34;John Doe&#34;}`
-    bad := `{name: &#34;John Doe&#34;}`
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">main</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
+    <span style="color: #d0d0d0;background-color: #151515">good</span> <span style="color: #d0d0d0">:=</span> <span style="color: #90a959">`{&#34;name&#34;: &#34;John Doe&#34;}`</span>
+    <span style="color: #d0d0d0;background-color: #151515">bad</span> <span style="color: #d0d0d0">:=</span> <span style="color: #90a959">`{name: &#34;John Doe&#34;}`</span>
 
-    fmt.Println(json.Valid([]byte(good)))
-    fmt.Println(json.Valid([]byte(bad)))
-}</code></pre>
+    <span style="color: #d0d0d0;background-color: #151515">fmt</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Println</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">json</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Valid</span><span style="color: #d0d0d0">([]</span><span style="color: #d28445">byte</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">good</span><span style="color: #d0d0d0">)))</span>
+    <span style="color: #d0d0d0;background-color: #151515">fmt</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Println</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">json</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Valid</span><span style="color: #d0d0d0">([]</span><span style="color: #d28445">byte</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">bad</span><span style="color: #d0d0d0">)))</span>
+<span style="color: #d0d0d0">}</span></code></pre>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_defining_custom_behavior_marshal_unmarshal_data">6. Defining custom behavior - Marshal / Unmarshal data</h2>
+<h2 id="_defining_custom_behavior_marshal_unmarshal_data">Defining custom behavior - Marshal / Unmarshal data</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>In Go, you can define custom behavior for marshalling data by implementing the
@@ -747,17 +702,17 @@ named <code>MarshalJSON()</code> that returns a byte slice and an error.</p>
 <div class="listingblock">
 <div class="title">examples/custom_timestamp/main.go</div>
 <div class="content">
-<pre class="rouge highlight"><code data-lang="go">type (
-    CustomTime struct {
-        time.Time
-    }
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">type</span> <span style="color: #d0d0d0">(</span>
+    <span style="color: #d0d0d0;background-color: #151515">CustomTime</span> <span style="color: #aa759f">struct</span> <span style="color: #d0d0d0">{</span>
+        <span style="color: #d0d0d0;background-color: #151515">time</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Time</span>
+    <span style="color: #d0d0d0">}</span>
 
-    Baby struct {
-        BirthDate CustomTime `json:&#34;birth_date&#34;`
-        Name      string    `json:&#34;name&#34;`
-        Gender    string    `json:&#34;gender&#34;`
-    }
-)</code></pre>
+    <span style="color: #d0d0d0;background-color: #151515">Baby</span> <span style="color: #aa759f">struct</span> <span style="color: #d0d0d0">{</span>
+        <span style="color: #d0d0d0;background-color: #151515">BirthDate</span> <span style="color: #d0d0d0;background-color: #151515">CustomTime</span> <span style="color: #90a959">`json:&#34;birth_date&#34;`</span>
+        <span style="color: #d0d0d0;background-color: #151515">Name</span>      <span style="color: #d28445">string</span>    <span style="color: #90a959">`json:&#34;name&#34;`</span>
+        <span style="color: #d0d0d0;background-color: #151515">Gender</span>    <span style="color: #d28445">string</span>    <span style="color: #90a959">`json:&#34;gender&#34;`</span>
+    <span style="color: #d0d0d0">}</span>
+<span style="color: #d0d0d0">)</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -770,22 +725,22 @@ the <code>BirthDate</code> value.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="go">func main() {
-    baby := Baby{
-        Name:   &#34;johnny&#34;,
-        Gender: &#34;male&#34;,
-        BirthDate: CustomTime{
-            time.Date(2023, 1, 1, 12, 0, 0, 0, time.Now().Location()),
-        },
-    }
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">main</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
+    <span style="color: #d0d0d0;background-color: #151515">baby</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">Baby</span><span style="color: #d0d0d0">{</span>
+        <span style="color: #d0d0d0;background-color: #151515">Name</span><span style="color: #d0d0d0">:</span>   <span style="color: #90a959">&#34;johnny&#34;</span><span style="color: #d0d0d0">,</span>
+        <span style="color: #d0d0d0;background-color: #151515">Gender</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">&#34;male&#34;</span><span style="color: #d0d0d0">,</span>
+        <span style="color: #d0d0d0;background-color: #151515">BirthDate</span><span style="color: #d0d0d0">:</span> <span style="color: #d0d0d0;background-color: #151515">CustomTime</span><span style="color: #d0d0d0">{</span>
+            <span style="color: #d0d0d0;background-color: #151515">time</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Date</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">2023</span><span style="color: #d0d0d0">,</span> <span style="color: #90a959">1</span><span style="color: #d0d0d0">,</span> <span style="color: #90a959">1</span><span style="color: #d0d0d0">,</span> <span style="color: #90a959">12</span><span style="color: #d0d0d0">,</span> <span style="color: #90a959">0</span><span style="color: #d0d0d0">,</span> <span style="color: #90a959">0</span><span style="color: #d0d0d0">,</span> <span style="color: #90a959">0</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">time</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Now</span><span style="color: #d0d0d0">()</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Location</span><span style="color: #d0d0d0">()),</span>
+        <span style="color: #d0d0d0">},</span>
+    <span style="color: #d0d0d0">}</span>
 
-    b, err := json.Marshal(baby)
-    if err != nil {
-        log.Fatalf(&#34;Unable to marshal due to %s\n&#34;, err)
-    }
+    <span style="color: #d0d0d0;background-color: #151515">b</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">json</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Marshal</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">baby</span><span style="color: #d0d0d0">)</span>
+    <span style="color: #aa759f">if</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">!=</span> <span style="color: #f4bf75">nil</span> <span style="color: #d0d0d0">{</span>
+        <span style="color: #d0d0d0;background-color: #151515">log</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Fatalf</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;Unable to marshal due to %s</span><span style="color: #8f5536">\n</span><span style="color: #90a959">&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span><span style="color: #d0d0d0">)</span>
+    <span style="color: #d0d0d0">}</span>
 
-    fmt.Println(string(b))
-}</code></pre>
+    <span style="color: #d0d0d0;background-color: #151515">fmt</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Println</span><span style="color: #d0d0d0">(</span><span style="color: #d28445">string</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">b</span><span style="color: #d0d0d0">))</span>
+<span style="color: #d0d0d0">}</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -800,9 +755,9 @@ timestamp format.</p>
 <div class="listingblock">
 <div class="title">examples/custom_timestamp/main.go</div>
 <div class="content">
-<pre class="rouge highlight"><code data-lang="go">func (ct CustomTime) MarshalJSON() ([]byte, error) {
-    return []byte(fmt.Sprintf(`%q`, ct.Time.Format(&#34;02-01-2006&#34;))), nil
-}</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">func</span> <span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">ct</span> <span style="color: #d0d0d0;background-color: #151515">CustomTime</span><span style="color: #d0d0d0">)</span> <span style="color: #d0d0d0;background-color: #151515">MarshalJSON</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">([]</span><span style="color: #d28445">byte</span><span style="color: #d0d0d0">,</span> <span style="color: #d28445">error</span><span style="color: #d0d0d0">)</span> <span style="color: #d0d0d0">{</span>
+    <span style="color: #aa759f">return</span> <span style="color: #d0d0d0">[]</span><span style="color: #d28445">byte</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">fmt</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Sprintf</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">`%q`</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">ct</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Time</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Format</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;02-01-2006&#34;</span><span style="color: #d0d0d0">))),</span> <span style="color: #f4bf75">nil</span>
+<span style="color: #d0d0d0">}</span></code></pre>
 </div>
 </div>
 </div>
