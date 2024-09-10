@@ -717,7 +717,7 @@ e.g <code>kubia-manual</code> pod.</p>
 <div class="listingblock">
 <div class="title">Example:</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>kubectl port-forward kubia-manual 8888:8080</code></pre>
+<pre class="rouge highlight"><code data-lang="console">$ kubectl port-forward kubia-manual 8888:8080</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -736,7 +736,7 @@ through the <code>kubectl port-forward</code> proxy running on <code>localhost:8
 <div class="listingblock">
 <div class="title">Example:</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>curl localhost:8888</code></pre>
+<pre class="rouge highlight"><code data-lang="console">$ curl localhost:8888</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -773,22 +773,22 @@ created:</p>
 <div class="listingblock">
 <div class="title">Manifest:</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="yaml"><span style="color: #6a9fb5">apiVersion</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">v1</span>
-<span style="color: #6a9fb5">kind</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">Service</span>
-<span style="color: #6a9fb5">metadata</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">kubia</span>
-<span style="color: #6a9fb5">spec</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">ports</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">port</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">80</span> <span style="color: #505050"># service&#39;s port</span>
-    <span style="color: #6a9fb5">targetPort</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">8080</span> <span style="color: #505050"># the forward-to port by service</span>
-  <span style="color: #6a9fb5">selector</span><span style="color: #d0d0d0">:</span> <span style="color: #505050"># all pods labeled `kubia` will follow/select this service</span>
-    <span style="color: #6a9fb5">app</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">kubia</span></code></pre>
+<pre class="rouge highlight"><code data-lang="yaml">apiVersion: v1
+kind: Service
+metadata:
+  name: kubia
+spec:
+  ports:
+  - port: 80 # service&#39;s port
+    targetPort: 8080 # the forward-to port by service
+  selector: # all pods labeled `kubia` will follow/select this service
+    app: kubia</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="title">Apply the service:</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>kubectl create <span style="color: #f4bf75">-f</span> kubia-srv.yaml</code></pre>
+<pre class="rouge highlight"><code data-lang="console">$ kubectl create -f kubia-srv.yaml</code></pre>
 </div>
 </div>
 </div>
@@ -799,13 +799,13 @@ created:</p>
 <div class="listingblock">
 <div class="title">Template:</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>kubectl expose rc &lt;rep-controller-name&gt; <span style="color: #f4bf75">--type</span><span style="color: #d0d0d0">=</span>LoadBalancer <span style="color: #f4bf75">--name</span> &lt;lb-name&gt;</code></pre>
+<pre class="rouge highlight"><code data-lang="console">$ kubectl expose rc &lt;rep-controller-name&gt; --type=LoadBalancer --name &lt;lb-name&gt;</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="title">Expose:</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>kubectl expose rc kubia <span style="color: #f4bf75">--type</span><span style="color: #d0d0d0">=</span>LoadBalancer <span style="color: #f4bf75">--name</span> kubia-http</code></pre>
+<pre class="rouge highlight"><code data-lang="console">$ kubectl expose rc kubia --type=LoadBalancer --name kubia-http</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -827,7 +827,7 @@ created:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>kubectl <span style="color: #d0d0d0;background-color: #151515">exec </span>kubia-7nog1 <span style="color: #f4bf75">--</span> curl <span style="color: #f4bf75">-s</span> http://10.111.249.153</code></pre>
+<pre class="rouge highlight"><code data-lang="console">$ kubectl exec kubia-7nog1 -- curl -s http://10.111.249.153</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -854,11 +854,11 @@ default), as shown in the following listing.</p>
 <div class="listingblock">
 <div class="title">Service with <code>ClientIP</code> Session Affinity Manifest</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="yaml"><span style="color: #6a9fb5">apiVersion</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">v1</span>
-<span style="color: #6a9fb5">kind</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">Service</span>
-<span style="color: #6a9fb5">spec</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">sessionAffinity</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">ClientIP</span>
-  <span style="color: #90a959">...</span></code></pre>
+<pre class="rouge highlight"><code data-lang="yaml">apiVersion: v1
+kind: Service
+spec:
+  sessionAffinity: ClientIP
+  ...</code></pre>
 </div>
 </div>
 <div class="ulist">
@@ -881,20 +881,20 @@ explains why session affinity cannot be based on cookies.</p>
 <div class="listingblock">
 <div class="title">Manifest</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="yaml"><span style="color: #6a9fb5">apiVersion</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">v1</span>
-<span style="color: #6a9fb5">kind</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">Service</span>
-<span style="color: #6a9fb5">metadata</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">kubia</span>
-<span style="color: #6a9fb5">spec</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">ports</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">http</span>
-    <span style="color: #6a9fb5">port</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">80</span>
-    <span style="color: #6a9fb5">targetPort</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">8080</span>
-  <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">https</span>
-    <span style="color: #6a9fb5">port</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">443</span>
-    <span style="color: #6a9fb5">targetPort</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">8443</span>
-  <span style="color: #6a9fb5">selector</span><span style="color: #d0d0d0">:</span>
-    <span style="color: #6a9fb5">app</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">kubia</span></code></pre>
+<pre class="rouge highlight"><code data-lang="yaml">apiVersion: v1
+kind: Service
+metadata:
+  name: kubia
+spec:
+  ports:
+  - name: http
+    port: 80
+    targetPort: 8080
+  - name: https
+    port: 443
+    targetPort: 8443
+  selector:
+    app: kubia</code></pre>
 </div>
 </div>
 </div>
@@ -906,30 +906,30 @@ explains why session affinity cannot be based on cookies.</p>
 <div class="listingblock">
 <div class="title">Specifying port names in a pod definition Manifest:</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="yaml"><span style="color: #6a9fb5">kind</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">Pod</span>
-<span style="color: #6a9fb5">spec</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">containers</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">kubia</span>
-    <span style="color: #6a9fb5">ports</span><span style="color: #d0d0d0">:</span>
-    <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">http</span>
-      <span style="color: #6a9fb5">containerPort</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">8080</span>
-    <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">https</span>
-      <span style="color: #6a9fb5">containerPort</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">8443</span></code></pre>
+<pre class="rouge highlight"><code data-lang="yaml">kind: Pod
+spec:
+  containers:
+  - name: kubia
+    ports:
+    - name: http
+      containerPort: 8080
+    - name: https
+      containerPort: 8443</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="title">Referring to named ports in a service Manifest:</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="yaml"><span style="color: #6a9fb5">apiVersion</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">v1</span>
-<span style="color: #6a9fb5">kind</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">Service</span>
-<span style="color: #6a9fb5">spec</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">ports</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">http</span>
-    <span style="color: #6a9fb5">port</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">80</span>
-    <span style="color: #6a9fb5">targetPort</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">http</span>
-  <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">https</span>
-    <span style="color: #6a9fb5">port</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">443</span>
-    <span style="color: #6a9fb5">targetPort</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">https</span></code></pre>
+<pre class="rouge highlight"><code data-lang="yaml">apiVersion: v1
+kind: Service
+spec:
+  ports:
+  - name: http
+    port: 80
+    targetPort: http
+  - name: https
+    port: 443
+    targetPort: https</code></pre>
 </div>
 </div>
 </div>
@@ -957,7 +957,7 @@ Endpoints resource. You may have already noticed endpoints if you used the
 <div class="listingblock">
 <div class="title">Full details of a service:</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>kubectl describe svc kubia</code></pre>
+<pre class="rouge highlight"><code data-lang="console">$ kubectl describe svc kubia</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -982,7 +982,7 @@ resource, so you can display its basic info with kubectl get.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>kubectl get endpoints kubia</code></pre>
+<pre class="rouge highlight"><code data-lang="console">$ kubectl get endpoints kubia</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -1022,13 +1022,13 @@ a Service and an Endpoints resource</p>
 <div class="listingblock">
 <div class="title">A service without a pod selector: <code>external-service.yaml</code></div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="yaml"><span style="color: #6a9fb5">apiVersion</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">v1</span>
-<span style="color: #6a9fb5">kind</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">Service</span>
-<span style="color: #6a9fb5">metadata</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">external-service</span> <span style="color: #505050"># must match the endpoints name</span>
-<span style="color: #6a9fb5">spec</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">ports</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">port</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">80</span></code></pre>
+<pre class="rouge highlight"><code data-lang="yaml">apiVersion: v1
+kind: Service
+metadata:
+  name: external-service # must match the endpoints name
+spec:
+  ports:
+  - port: 80</code></pre>
 </div>
 </div>
 <div class="ulist">
@@ -1045,16 +1045,16 @@ Endpoints resource hasn’t been created automatically</p>
 <div class="listingblock">
 <div class="title">A manually created Endpoints resource: <code>external-service-endpoints.yaml</code></div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="yaml"><span style="color: #6a9fb5">apiVersion</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">v1</span>
-<span style="color: #6a9fb5">kind</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">Endpoints</span>
-<span style="color: #6a9fb5">metadata</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">external-service</span> <span style="color: #505050"># must match the service name</span>
-<span style="color: #6a9fb5">subsets</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">addresses</span><span style="color: #d0d0d0">:</span>
-    <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">ip</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">11.11.11.11</span>
-    <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">ip</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">22.22.22.22</span>
-    <span style="color: #6a9fb5">ports</span><span style="color: #d0d0d0">:</span>
-    <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">port</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">80</span> <span style="color: #505050"># target port of endpoints</span></code></pre>
+<pre class="rouge highlight"><code data-lang="yaml">apiVersion: v1
+kind: Endpoints
+metadata:
+  name: external-service # must match the service name
+subsets:
+  - addresses:
+    - ip: 11.11.11.11
+    - ip: 22.22.22.22
+    ports:
+    - port: 80 # target port of endpoints</code></pre>
 </div>
 </div>
 </div>
@@ -1132,24 +1132,24 @@ cluster IP, but also through any node’s IP and the reserved node port.</p>
 <div class="listingblock">
 <div class="title">A NodePort service definition: <code>kubia-svc-nodeport.yaml</code></div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="yaml"><span style="color: #6a9fb5">apiVersion</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">v1</span>
-<span style="color: #6a9fb5">kind</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">Service</span>
-<span style="color: #6a9fb5">metadata</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">kubia-nodeport</span>
-<span style="color: #6a9fb5">spec</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">type</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">NodePort</span> <span style="color: #505050"># service type</span>
-  <span style="color: #6a9fb5">ports</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">port</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">80</span> <span style="color: #505050"># service&#39;s internal cluster IP port</span>
-    <span style="color: #6a9fb5">targetPort</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">8080</span> <span style="color: #505050"># target port of the backing pods</span>
-    <span style="color: #6a9fb5">nodePort</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">30123</span> <span style="color: #505050"># service will listen on port 30123, each cluster nodes</span>
-  <span style="color: #6a9fb5">selector</span><span style="color: #d0d0d0">:</span>
-    <span style="color: #6a9fb5">app</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">kubia</span></code></pre>
+<pre class="rouge highlight"><code data-lang="yaml">apiVersion: v1
+kind: Service
+metadata:
+  name: kubia-nodeport
+spec:
+  type: NodePort # service type
+  ports:
+  - port: 80 # service&#39;s internal cluster IP port
+    targetPort: 8080 # target port of the backing pods
+    nodePort: 30123 # service will listen on port 30123, each cluster nodes
+  selector:
+    app: kubia</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="title">Examine the NodePort Service:</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>kubectl get svc kubia-nodeport</code></pre>
+<pre class="rouge highlight"><code data-lang="console">$ kubectl get svc kubia-nodeport</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -1189,8 +1189,8 @@ out only the node IP instead of the whole service definition</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>kubectl get nodes <span style="color: #f4bf75">-o</span> <span style="color: #8f5536">\</span>
-<span style="color: #d0d0d0;background-color: #151515">  jsonpath=&#39;{.items[*].status.addresses[?(@.type==&#34;ExternalIP&#34;)].address}&#39;</span></code></pre>
+<pre class="rouge highlight"><code data-lang="console">$ kubectl get nodes -o \
+  jsonpath=&#39;{.items[*].status.addresses[?(@.type==&#34;ExternalIP&#34;)].address}&#39;</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -1205,7 +1205,7 @@ them.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>curl http://130.211.97.55:30123</code></pre>
+<pre class="rouge highlight"><code data-lang="console">$ curl http://130.211.97.55:30123</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -1216,7 +1216,7 @@ them.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>curl http://130.211.99.206:30123</code></pre>
+<pre class="rouge highlight"><code data-lang="console">$ curl http://130.211.99.206:30123</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -1250,17 +1250,17 @@ as of this writing.</p>
 <div class="listingblock">
 <div class="title">A LoadBalancer-type service: <code>kubia-svc-loadbalancer.yaml</code></div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="yaml"><span style="color: #6a9fb5">apiVersion</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">v1</span>
-<span style="color: #6a9fb5">kind</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">Service</span>
-<span style="color: #6a9fb5">metadata</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">kubia-loadbalancer</span>
-<span style="color: #6a9fb5">spec</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">type</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">LoadBalancer</span>
-  <span style="color: #6a9fb5">ports</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">port</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">80</span>
-    <span style="color: #6a9fb5">targetPort</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">8080</span>
-  <span style="color: #6a9fb5">selector</span><span style="color: #d0d0d0">:</span>
-    <span style="color: #6a9fb5">app</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">kubia</span></code></pre>
+<pre class="rouge highlight"><code data-lang="yaml">apiVersion: v1
+kind: Service
+metadata:
+  name: kubia-loadbalancer
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 8080
+  selector:
+    app: kubia</code></pre>
 </div>
 </div>
 <div class="ulist">
@@ -1275,7 +1275,7 @@ Kubernetes choose one instead).</p>
 <div class="listingblock">
 <div class="title">Connecting to the Service Through the Load Balancer</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>kubectl get svc kubia-loadbalancer</code></pre>
+<pre class="rouge highlight"><code data-lang="console">$ kubectl get svc kubia-loadbalancer</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -1331,9 +1331,9 @@ setting the <code>externalTrafficPolicy</code> field in the service’s <code>sp
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="yaml"><span style="color: #6a9fb5">spec</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">externalTrafficPolicy</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">Local</span>
-  <span style="color: #90a959">...</span></code></pre>
+<pre class="rouge highlight"><code data-lang="yaml">spec:
+  externalTrafficPolicy: Local
+  ...</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1393,19 +1393,19 @@ the cluster.</p>
 <div class="listingblock">
 <div class="title">An Ingress resource definition: <code>kubia-ingress.yaml</code></div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="yaml"><span style="color: #6a9fb5">apiVersion</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">extensions/v1beta1</span>
-<span style="color: #6a9fb5">kind</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">Ingress</span>
-<span style="color: #6a9fb5">metadata</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">kubia</span>
-<span style="color: #6a9fb5">spec</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">rules</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">host</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">kubia.example.com</span> <span style="color: #505050">#  maps the domain name to your service</span>
-  <span style="color: #6a9fb5">http</span><span style="color: #d0d0d0">:</span>
-    <span style="color: #6a9fb5">paths</span><span style="color: #d0d0d0">:</span>
-    <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">path</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">/</span>                        <span style="color: #505050"># All requests will be sent to port 80</span>
-      <span style="color: #6a9fb5">backend</span><span style="color: #d0d0d0">:</span>                       <span style="color: #505050"># of the kubia-nodeport service.</span>
-        <span style="color: #6a9fb5">serviceName</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">kubia-nodeport</span>  <span style="color: #505050">#</span>
-        <span style="color: #6a9fb5">servicePort</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">80</span>              <span style="color: #505050">#</span></code></pre>
+<pre class="rouge highlight"><code data-lang="yaml">apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: kubia
+spec:
+  rules:
+  - host: kubia.example.com #  maps the domain name to your service
+  http:
+    paths:
+    - path: /                        # All requests will be sent to port 80
+      backend:                       # of the kubia-nodeport service.
+        serviceName: kubia-nodeport  #
+        servicePort: 80              #</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1437,7 +1437,7 @@ the domain name resolves to the IP of the Ingress controller</p>
 <div class="listingblock">
 <div class="title">Obtaining the ip Address of the Ingress:</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>kubectl get ingresses</code></pre>
+<pre class="rouge highlight"><code data-lang="console">$ kubectl get ingresses</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -1582,9 +1582,9 @@ the pods.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">import</span> <span style="color: #d0d0d0">(</span>
-    <span style="color: #90a959">&#34;net/http&#34;</span>
-<span style="color: #d0d0d0">)</span></code></pre>
+<pre class="rouge highlight"><code data-lang="go">import (
+    &#34;net/http&#34;
+)</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1608,7 +1608,7 @@ the pods.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">type</span> <span style="color: #d0d0d0;background-color: #151515">RequestHandler</span> <span style="color: #aa759f">struct</span> <span style="color: #d0d0d0">{}</span></code></pre>
+<pre class="rouge highlight"><code data-lang="go">type RequestHandler struct {}</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1618,30 +1618,30 @@ that needs to be handled (HTTP requests goes to the specified paths)</p>
 <div class="listingblock">
 <div class="title">main funcion</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">main</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #d0d0d0;background-color: #151515">mux</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">http</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">NewServeMx</span><span style="color: #d0d0d0">()</span>
-    <span style="color: #d0d0d0;background-color: #151515">mux</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Handle</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;/path1&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&amp;</span><span style="color: #d0d0d0;background-color: #151515">RequestHandler</span><span style="color: #d0d0d0">{})</span>
-    <span style="color: #d0d0d0;background-color: #151515">mux</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Handle</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;/path1/&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&amp;</span><span style="color: #d0d0d0;background-color: #151515">RequestHandler</span><span style="color: #d0d0d0">{})</span>
-    <span style="color: #d0d0d0;background-color: #151515">mux</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Handle</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;/path2&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&amp;</span><span style="color: #d0d0d0;background-color: #151515">RequestHandler</span><span style="color: #d0d0d0">{})</span>
-    <span style="color: #d0d0d0;background-color: #151515">mux</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Handle</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;/path2/&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&amp;</span><span style="color: #d0d0d0;background-color: #151515">RequestHandler</span><span style="color: #d0d0d0">{})</span>
-    <span style="color: #505050">/* continue */</span>
-    <span style="color: #d0d0d0;background-color: #151515">http</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">ListenAndServe</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;:8080&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">mux</span><span style="color: #d0d0d0">)</span>
-<span style="color: #d0d0d0">}</span></code></pre>
+<pre class="rouge highlight"><code data-lang="go">func main() {
+    mux := http.NewServeMx()
+    mux.Handle(&#34;/path1&#34;, &amp;RequestHandler{})
+    mux.Handle(&#34;/path1/&#34;, &amp;RequestHandler{})
+    mux.Handle(&#34;/path2&#34;, &amp;RequestHandler{})
+    mux.Handle(&#34;/path2/&#34;, &amp;RequestHandler{})
+    /* continue */
+    http.ListenAndServe(&#34;:8080&#34;, mux)
+}</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="title">serve function</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">func</span> <span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">h</span> <span style="color: #d0d0d0">*</span><span style="color: #d0d0d0;background-color: #151515">RequestHandler</span><span style="color: #d0d0d0">)</span> <span style="color: #d0d0d0;background-color: #151515">ServeHTTP</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">w</span> <span style="color: #d0d0d0;background-color: #151515">http</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">ResponseWriter</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">r</span> <span style="color: #d0d0d0">*</span><span style="color: #d0d0d0;background-color: #151515">http</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Requset</span><span style="color: #d0d0d0">)</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #d0d0d0;background-color: #151515">request_type</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">r</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Method</span>
-    <span style="color: #d0d0d0;background-color: #151515">tmp</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">strings</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">SplitN</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">r</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">URL</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">String</span><span style="color: #d0d0d0">(),</span> <span style="color: #90a959">&#34;/&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #90a959">3</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #d0d0d0;background-color: #151515">section</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">tmp</span><span style="color: #d0d0d0">[</span><span style="color: #90a959">1</span><span style="color: #d0d0d0">]</span> <span style="color: #505050">// path</span>
-    <span style="color: #d0d0d0;background-color: #151515">key</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">tmp</span><span style="color: #d0d0d0">[</span><span style="color: #90a959">2</span><span style="color: #d0d0d0">]</span> <span style="color: #505050">// add data after the path</span>
-    <span style="color: #d0d0d0;background-color: #151515">params</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">r</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">URL</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Query</span><span style="color: #d0d0d0">()</span>
-    <span style="color: #d0d0d0;background-color: #151515">value</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">params</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Get</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">key</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #d0d0d0;background-color: #151515">body</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">io</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">ReadAll</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">r</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Body</span><span style="color: #d0d0d0">)</span> <span style="color: #505050">// values from curl&#39;s `--data` flag (spected to be JSON)</span>
-    <span style="color: #505050">/* continue */</span>
-<span style="color: #d0d0d0">}</span></code></pre>
+<pre class="rouge highlight"><code data-lang="go">func (h *RequestHandler) ServeHTTP(w http.ResponseWriter, r *http.Requset) {
+    request_type := r.Method
+    tmp := strings.SplitN(r.URL.String(), &#34;/&#34;, 3)
+    section := tmp[1] // path
+    key := tmp[2] // add data after the path
+    params := r.URL.Query()
+    value := params.Get(key)
+    body, err := io.ReadAll(r.Body) // values from curl&#39;s `--data` flag (spected to be JSON)
+    /* continue */
+}</code></pre>
 </div>
 </div>
 </div>
@@ -1651,13 +1651,13 @@ that needs to be handled (HTTP requests goes to the specified paths)</p>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">cache_handler</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #d0d0d0;background-color: #151515">client</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">redis</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">NewClient</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0">&amp;</span><span style="color: #d0d0d0;background-color: #151515">redis</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Options</span><span style="color: #d0d0d0">{</span>
-        <span style="color: #d0d0d0;background-color: #151515">Addr</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">&#34;localhost:6349&#34;</span>
-        <span style="color: #d0d0d0;background-color: #151515">Password</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">&#34;&#34;</span> <span style="color: #505050">// No password, to get it from env variables use: `os.Getenv(&#34;ENV&#34;)`</span>
-        <span style="color: #d0d0d0;background-color: #151515">DB</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">0</span> <span style="color: #505050">// default db</span>
-    <span style="color: #d0d0d0">})</span>
-<span style="color: #d0d0d0">}</span></code></pre>
+<pre class="rouge highlight"><code data-lang="go">func cache_handler() {
+    client := redis.NewClient(&amp;redis.Options{
+        Addr: &#34;localhost:6349&#34;
+        Password: &#34;&#34; // No password, to get it from env variables use: `os.Getenv(&#34;ENV&#34;)`
+        DB: 0 // default db
+    })
+}</code></pre>
 </div>
 </div>
 </div>
@@ -1667,15 +1667,15 @@ that needs to be handled (HTTP requests goes to the specified paths)</p>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">database_handler</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #d0d0d0;background-color: #151515">sql_url</span> <span style="color: #d0d0d0">:=</span> <span style="color: #90a959">&#34;root@localhost:3360&#34;</span>
-    <span style="color: #d0d0d0;background-color: #151515">db</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">sql</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Open</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;mysql&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">sql_url</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #aa759f">if</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">!=</span> <span style="color: #f4bf75">nil</span> <span style="color: #d0d0d0">{</span>
-        <span style="color: #d0d0d0;background-color: #151515">pandic</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">err</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Error</span><span style="color: #d0d0d0">())</span>
-    <span style="color: #d0d0d0">}</span>
-    <span style="color: #aa759f">defer</span> <span style="color: #d0d0d0;background-color: #151515">db</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Close</span><span style="color: #d0d0d0">()</span>
-    <span style="color: #505050">/* continue */</span>
-<span style="color: #d0d0d0">}</span></code></pre>
+<pre class="rouge highlight"><code data-lang="go">func database_handler() {
+    sql_url := &#34;root@localhost:3360&#34;
+    db, err := sql.Open(&#34;mysql&#34;, sql_url)
+    if err != nil {
+        pandic(err.Error())
+    }
+    defer db.Close()
+    /* continue */
+}</code></pre>
 </div>
 </div>
 </div>
@@ -1685,37 +1685,37 @@ that needs to be handled (HTTP requests goes to the specified paths)</p>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">type</span> <span style="color: #d0d0d0;background-color: #151515">Movie</span> <span style="color: #aa759f">struct</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #d0d0d0;background-color: #151515">Name</span> <span style="color: #d28445">string</span> <span style="color: #90a959">`json:&#34;name&#34;`</span>
-    <span style="color: #d0d0d0;background-color: #151515">Publisher</span> <span style="color: #d28445">string</span> <span style="color: #90a959">`json:&#34;publisher&#34;`</span>
-    <span style="color: #d0d0d0;background-color: #151515">Year</span> <span style="color: #d28445">int</span> <span style="color: #90a959">`json:&#34;year&#34;`</span>
-<span style="color: #d0d0d0">}</span>
+<pre class="rouge highlight"><code data-lang="go">type Movie struct {
+    Name string `json:&#34;name&#34;`
+    Publisher string `json:&#34;publisher&#34;`
+    Year int `json:&#34;year&#34;`
+}
 
-<span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">HandleMovie</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #505050">// var target map[string]any /* not optimal */</span>
-    <span style="color: #aa759f">var</span> <span style="color: #d0d0d0;background-color: #151515">movie</span> <span style="color: #d0d0d0;background-color: #151515">Movie</span>
+func HandleMovie() {
+    // var target map[string]any /* not optimal */
+    var movie Movie
 
-    <span style="color: #d0d0d0;background-color: #151515">input</span> <span style="color: #d0d0d0">:=</span> <span style="color: #90a959">`{
+    input := `{
         &#34;name&#34;: &#34;Jocker&#34;,
         &#34;publisher&#34;: &#34;WB&#34;,
         &#34;year&#34;: 2019
-    }`</span>
+    }`
 
-    <span style="color: #505050">// err := json.Unmarshal([]byte(input), &amp;target) /* not optimal */</span>
-    <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">json</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Unmarshal</span><span style="color: #d0d0d0">([]</span><span style="color: #d28445">byte</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">input</span><span style="color: #d0d0d0">),</span> <span style="color: #d0d0d0">&amp;</span><span style="color: #d0d0d0;background-color: #151515">movie</span><span style="color: #d0d0d0">)</span> <span style="color: #505050">/* not optimal */</span>
-    <span style="color: #aa759f">if</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">!=</span> <span style="color: #f4bf75">nil</span> <span style="color: #d0d0d0">{</span>
-        <span style="color: #d0d0d0;background-color: #151515">log</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Fatalf</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;Unable to marshal JSON due to %s&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #d0d0d0">}</span>
+    // err := json.Unmarshal([]byte(input), &amp;target) /* not optimal */
+    err := json.Unmarshal([]byte(input), &amp;movie) /* not optimal */
+    if err != nil {
+        log.Fatalf(&#34;Unable to marshal JSON due to %s&#34;, err)
+    }
 
-    <span style="color: #505050">/* not optimal */</span>
-    <span style="color: #505050">// for k, v := range target {</span>
-    <span style="color: #505050">//    fmt.Printf(&#34;k: %s, v: %v\n&#34;, k, v)</span>
-    <span style="color: #505050">// }</span>
-    <span style="color: #d0d0d0;background-color: #151515">fmt</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Printf</span><span style="color: #d0d0d0">(</span>
-        <span style="color: #90a959">&#34;Name: %s, Publisher: %s, Year: %d</span><span style="color: #8f5536">\n</span><span style="color: #90a959">&#34;</span><span style="color: #d0d0d0">,</span>
-        <span style="color: #d0d0d0;background-color: #151515">movie</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Name</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">movie</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Publisher</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">movie</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Year</span><span style="color: #d0d0d0">,</span>
-    <span style="color: #d0d0d0">)</span>
-<span style="color: #d0d0d0">}</span></code></pre>
+    /* not optimal */
+    // for k, v := range target {
+    //    fmt.Printf(&#34;k: %s, v: %v\n&#34;, k, v)
+    // }
+    fmt.Printf(
+        &#34;Name: %s, Publisher: %s, Year: %d\n&#34;,
+        movie.Name, movie.Publisher, movie.Year,
+    )
+}</code></pre>
 </div>
 </div>
 <div class="sect2">
@@ -1723,72 +1723,72 @@ that needs to be handled (HTTP requests goes to the specified paths)</p>
 <div class="listingblock">
 <div class="title"><code>assets/complex.json</code></div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="json"><span style="color: #d0d0d0">{</span><span style="color: #d0d0d0;background-color: #151515">
-  </span><span style="color: #d0d0d0;background-color: #151515">&#34;name&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">&#34;James Peterson&#34;</span><span style="color: #d0d0d0">,</span><span style="color: #d0d0d0;background-color: #151515">
-  </span><span style="color: #d0d0d0;background-color: #151515">&#34;age&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">37</span><span style="color: #d0d0d0">,</span><span style="color: #d0d0d0;background-color: #151515">
-  </span><span style="color: #d0d0d0;background-color: #151515">&#34;address&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #d0d0d0">{</span><span style="color: #d0d0d0;background-color: #151515">
-    </span><span style="color: #d0d0d0;background-color: #151515">&#34;line1&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">&#34;Block 78 Woodgrove Avenue 5&#34;</span><span style="color: #d0d0d0">,</span><span style="color: #d0d0d0;background-color: #151515">
-    </span><span style="color: #d0d0d0;background-color: #151515">&#34;line2&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">&#34;Unit #05-111&#34;</span><span style="color: #d0d0d0">,</span><span style="color: #d0d0d0;background-color: #151515">
-    </span><span style="color: #d0d0d0;background-color: #151515">&#34;postal&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">&#34;654378&#34;</span><span style="color: #d0d0d0;background-color: #151515">
-  </span><span style="color: #d0d0d0">},</span><span style="color: #d0d0d0;background-color: #151515">
-  </span><span style="color: #d0d0d0;background-color: #151515">&#34;pets&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #d0d0d0">[</span><span style="color: #d0d0d0;background-color: #151515">
-    </span><span style="color: #d0d0d0">{</span><span style="color: #d0d0d0;background-color: #151515">
-      </span><span style="color: #d0d0d0;background-color: #151515">&#34;name&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">&#34;Lex&#34;</span><span style="color: #d0d0d0">,</span><span style="color: #d0d0d0;background-color: #151515">
-      </span><span style="color: #d0d0d0;background-color: #151515">&#34;kind&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">&#34;Dog&#34;</span><span style="color: #d0d0d0">,</span><span style="color: #d0d0d0;background-color: #151515">
-      </span><span style="color: #d0d0d0;background-color: #151515">&#34;age&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">4</span><span style="color: #d0d0d0">,</span><span style="color: #d0d0d0;background-color: #151515">
-      </span><span style="color: #d0d0d0;background-color: #151515">&#34;color&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">&#34;Gray&#34;</span><span style="color: #d0d0d0;background-color: #151515">
-    </span><span style="color: #d0d0d0">},</span><span style="color: #d0d0d0;background-color: #151515">
-    </span><span style="color: #d0d0d0">{</span><span style="color: #d0d0d0;background-color: #151515">
-      </span><span style="color: #d0d0d0;background-color: #151515">&#34;name&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">&#34;Faye&#34;</span><span style="color: #d0d0d0">,</span><span style="color: #d0d0d0;background-color: #151515">
-      </span><span style="color: #d0d0d0;background-color: #151515">&#34;kind&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">&#34;Cat&#34;</span><span style="color: #d0d0d0">,</span><span style="color: #d0d0d0;background-color: #151515">
-      </span><span style="color: #d0d0d0;background-color: #151515">&#34;age&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">6</span><span style="color: #d0d0d0">,</span><span style="color: #d0d0d0;background-color: #151515">
-      </span><span style="color: #d0d0d0;background-color: #151515">&#34;color&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">&#34;Orange&#34;</span><span style="color: #d0d0d0;background-color: #151515">
-    </span><span style="color: #d0d0d0">}</span><span style="color: #d0d0d0;background-color: #151515">
-  </span><span style="color: #d0d0d0">]</span><span style="color: #d0d0d0;background-color: #151515">
-</span><span style="color: #d0d0d0">}</span></code></pre>
+<pre class="rouge highlight"><code data-lang="json">{
+  &#34;name&#34;: &#34;James Peterson&#34;,
+  &#34;age&#34;: 37,
+  &#34;address&#34;: {
+    &#34;line1&#34;: &#34;Block 78 Woodgrove Avenue 5&#34;,
+    &#34;line2&#34;: &#34;Unit #05-111&#34;,
+    &#34;postal&#34;: &#34;654378&#34;
+  },
+  &#34;pets&#34;: [
+    {
+      &#34;name&#34;: &#34;Lex&#34;,
+      &#34;kind&#34;: &#34;Dog&#34;,
+      &#34;age&#34;: 4,
+      &#34;color&#34;: &#34;Gray&#34;
+    },
+    {
+      &#34;name&#34;: &#34;Faye&#34;,
+      &#34;kind&#34;: &#34;Cat&#34;,
+      &#34;age&#34;: 6,
+      &#34;color&#34;: &#34;Orange&#34;
+    }
+  ]
+}</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="title"><code>examples/complex_json/main.go</code></div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">type</span> <span style="color: #d0d0d0">(</span>
-    <span style="color: #d0d0d0;background-color: #151515">FullPerson</span> <span style="color: #aa759f">struct</span> <span style="color: #d0d0d0">{</span>
-        <span style="color: #d0d0d0;background-color: #151515">Address</span> <span style="color: #d0d0d0;background-color: #151515">Address</span>
-        <span style="color: #d0d0d0;background-color: #151515">Name</span>    <span style="color: #d28445">string</span>
-        <span style="color: #d0d0d0;background-color: #151515">Pets</span>    <span style="color: #d0d0d0">[]</span><span style="color: #d0d0d0;background-color: #151515">Pet</span>
-        <span style="color: #d0d0d0;background-color: #151515">Age</span>     <span style="color: #d28445">int</span>
-    <span style="color: #d0d0d0">}</span>
+<pre class="rouge highlight"><code data-lang="go">type (
+    FullPerson struct {
+        Address Address
+        Name    string
+        Pets    []Pet
+        Age     int
+    }
 
-    <span style="color: #d0d0d0;background-color: #151515">Pet</span> <span style="color: #aa759f">struct</span> <span style="color: #d0d0d0">{</span>
-        <span style="color: #d0d0d0;background-color: #151515">Name</span>  <span style="color: #d28445">string</span>
-        <span style="color: #d0d0d0;background-color: #151515">Kind</span>  <span style="color: #d28445">string</span>
-        <span style="color: #d0d0d0;background-color: #151515">Color</span> <span style="color: #d28445">string</span>
-        <span style="color: #d0d0d0;background-color: #151515">Age</span>   <span style="color: #d28445">int</span>
-    <span style="color: #d0d0d0">}</span>
+    Pet struct {
+        Name  string
+        Kind  string
+        Color string
+        Age   int
+    }
 
-    <span style="color: #d0d0d0;background-color: #151515">Address</span> <span style="color: #aa759f">struct</span> <span style="color: #d0d0d0">{</span>
-        <span style="color: #d0d0d0;background-color: #151515">Line1</span>  <span style="color: #d28445">string</span>
-        <span style="color: #d0d0d0;background-color: #151515">Line2</span>  <span style="color: #d28445">string</span>
-        <span style="color: #d0d0d0;background-color: #151515">Postal</span> <span style="color: #d28445">string</span>
-    <span style="color: #d0d0d0">}</span>
-<span style="color: #d0d0d0">)</span>
+    Address struct {
+        Line1  string
+        Line2  string
+        Postal string
+    }
+)
 
 
-<span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">main</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #d0d0d0;background-color: #151515">b</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">os</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">ReadFile</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;assets/complex.json&#34;</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #aa759f">if</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">!=</span> <span style="color: #f4bf75">nil</span> <span style="color: #d0d0d0">{</span>
-        <span style="color: #d0d0d0;background-color: #151515">log</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Fatalf</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;Unable to read file due to %s</span><span style="color: #8f5536">\n</span><span style="color: #90a959">&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #d0d0d0">}</span>
+func main() {
+    b, err := os.ReadFile(&#34;assets/complex.json&#34;)
+    if err != nil {
+        log.Fatalf(&#34;Unable to read file due to %s\n&#34;, err)
+    }
 
-    <span style="color: #aa759f">var</span> <span style="color: #d0d0d0;background-color: #151515">person</span> <span style="color: #d0d0d0;background-color: #151515">FullPerson</span>
+    var person FullPerson
 
-    <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">json</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Unmarshal</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">b</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&amp;</span><span style="color: #d0d0d0;background-color: #151515">person</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #aa759f">if</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">!=</span> <span style="color: #f4bf75">nil</span> <span style="color: #d0d0d0">{</span>
-        <span style="color: #d0d0d0;background-color: #151515">log</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Fatalf</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;Unable to marshal JSON due to %s&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #d0d0d0">}</span>
+    err = json.Unmarshal(b, &amp;person)
+    if err != nil {
+        log.Fatalf(&#34;Unable to marshal JSON due to %s&#34;, err)
+    }
 
-    <span style="color: #d0d0d0;background-color: #151515">litter</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Dump</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">person</span><span style="color: #d0d0d0">)</span>
-<span style="color: #d0d0d0">}</span></code></pre>
+    litter.Dump(person)
+}</code></pre>
 </div>
 </div>
 </div>
@@ -1826,54 +1826,54 @@ a given data structure into a JSON.</p>
 <div class="listingblock">
 <div class="title">examples/basic_marshal/main.go</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">marshal</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">in</span> <span style="color: #d0d0d0;background-color: #151515">any</span><span style="color: #d0d0d0">)</span> <span style="color: #d0d0d0">[]</span><span style="color: #d28445">byte</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #d0d0d0;background-color: #151515">out</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">json</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Marshal</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">in</span><span style="color: #d0d0d0">)</span>
+<pre class="rouge highlight"><code data-lang="go">func marshal(in any) []byte {
+    out, err := json.Marshal(in)
 
-    <span style="color: #aa759f">if</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">!=</span> <span style="color: #f4bf75">nil</span> <span style="color: #d0d0d0">{</span>
-        <span style="color: #d0d0d0;background-color: #151515">log</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Fatalf</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;Unable to marshal due to %s</span><span style="color: #8f5536">\n</span><span style="color: #90a959">&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #d0d0d0">}</span>
+    if err != nil {
+        log.Fatalf(&#34;Unable to marshal due to %s\n&#34;, err)
+    }
 
-    <span style="color: #aa759f">return</span> <span style="color: #d0d0d0;background-color: #151515">out</span>
-<span style="color: #d0d0d0">}</span>
+    return out
+}
 
-<span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">main</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #d0d0d0;background-color: #151515">first</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">marshal</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">14</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #d0d0d0;background-color: #151515">second</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">marshal</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;Hello world&#34;</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #d0d0d0;background-color: #151515">third</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">marshal</span><span style="color: #d0d0d0">([]</span><span style="color: #d28445">float32</span><span style="color: #d0d0d0">{</span><span style="color: #90a959">1.66</span><span style="color: #d0d0d0">,</span> <span style="color: #90a959">6.86</span><span style="color: #d0d0d0">,</span> <span style="color: #90a959">10.1</span><span style="color: #d0d0d0">})</span>
-    <span style="color: #d0d0d0;background-color: #151515">fourth</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">marshal</span><span style="color: #d0d0d0">(</span><span style="color: #aa759f">map</span><span style="color: #d0d0d0">[</span><span style="color: #d28445">string</span><span style="color: #d0d0d0">]</span><span style="color: #d28445">int</span><span style="color: #d0d0d0">{</span><span style="color: #90a959">&#34;num&#34;</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">15</span><span style="color: #d0d0d0">,</span> <span style="color: #90a959">&#34;other&#34;</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">17</span><span style="color: #d0d0d0">})</span>
-    <span style="color: #d0d0d0;background-color: #151515">fmt</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Printf</span><span style="color: #d0d0d0">(</span>
-        <span style="color: #90a959">&#34;first: %s</span><span style="color: #8f5536">\n</span><span style="color: #90a959">second: %s</span><span style="color: #8f5536">\n</span><span style="color: #90a959">third: %s</span><span style="color: #8f5536">\n</span><span style="color: #90a959">fourth: %s</span><span style="color: #8f5536">\n</span><span style="color: #90a959">&#34;</span><span style="color: #d0d0d0">,</span>
-        <span style="color: #d0d0d0;background-color: #151515">first</span><span style="color: #d0d0d0">,</span>
-        <span style="color: #d0d0d0;background-color: #151515">second</span><span style="color: #d0d0d0">,</span>
-        <span style="color: #d0d0d0;background-color: #151515">third</span><span style="color: #d0d0d0">,</span>
-        <span style="color: #d0d0d0;background-color: #151515">fourth</span><span style="color: #d0d0d0">,</span>
-    <span style="color: #d0d0d0">)</span>
-<span style="color: #d0d0d0">}</span></code></pre>
+func main() {
+    first := marshal(14)
+    second := marshal(&#34;Hello world&#34;)
+    third := marshal([]float32{1.66, 6.86, 10.1})
+    fourth := marshal(map[string]int{&#34;num&#34;: 15, &#34;other&#34;: 17})
+    fmt.Printf(
+        &#34;first: %s\nsecond: %s\nthird: %s\nfourth: %s\n&#34;,
+        first,
+        second,
+        third,
+        fourth,
+    )
+}</code></pre>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_structs">4.1. structs</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">main</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #d0d0d0;background-color: #151515">p</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">Person</span><span style="color: #d0d0d0">{</span>
-        <span style="color: #d0d0d0;background-color: #151515">Name</span><span style="color: #d0d0d0">:</span>  <span style="color: #90a959">&#34;John Jones&#34;</span><span style="color: #d0d0d0">,</span>
-        <span style="color: #d0d0d0;background-color: #151515">Age</span><span style="color: #d0d0d0">:</span>   <span style="color: #90a959">26</span><span style="color: #d0d0d0">,</span>
-        <span style="color: #d0d0d0;background-color: #151515">Email</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">&#34;johnjones@email.com&#34;</span><span style="color: #d0d0d0">,</span>
-        <span style="color: #d0d0d0;background-color: #151515">Phone</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">&#34;89910119&#34;</span><span style="color: #d0d0d0">,</span>
-        <span style="color: #d0d0d0;background-color: #151515">Hobbies</span><span style="color: #d0d0d0">:</span> <span style="color: #d0d0d0">[]</span><span style="color: #d28445">string</span><span style="color: #d0d0d0">{</span>
-            <span style="color: #90a959">&#34;Swimming&#34;</span><span style="color: #d0d0d0">,</span>
-            <span style="color: #90a959">&#34;Badminton&#34;</span><span style="color: #d0d0d0">,</span>
-        <span style="color: #d0d0d0">},</span>
-    <span style="color: #d0d0d0">}</span>
+<pre class="rouge highlight"><code data-lang="go">func main() {
+    p := Person{
+        Name:  &#34;John Jones&#34;,
+        Age:   26,
+        Email: &#34;johnjones@email.com&#34;,
+        Phone: &#34;89910119&#34;,
+        Hobbies: []string{
+            &#34;Swimming&#34;,
+            &#34;Badminton&#34;,
+        },
+    }
 
-    <span style="color: #d0d0d0;background-color: #151515">b</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">json</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Marshal</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">p</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #aa759f">if</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">!=</span> <span style="color: #f4bf75">nil</span> <span style="color: #d0d0d0">{</span>
-        <span style="color: #d0d0d0;background-color: #151515">log</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Fatalf</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;Unable to marshal due to %s</span><span style="color: #8f5536">\n</span><span style="color: #90a959">&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #d0d0d0">}</span>
+    b, err := json.Marshal(p)
+    if err != nil {
+        log.Fatalf(&#34;Unable to marshal due to %s\n&#34;, err)
+    }
 
-    <span style="color: #d0d0d0;background-color: #151515">fmt</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Println</span><span style="color: #d0d0d0">(</span><span style="color: #d28445">string</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">b</span><span style="color: #d0d0d0">))</span>
-<span style="color: #d0d0d0">}</span></code></pre>
+    fmt.Println(string(b))
+}</code></pre>
 </div>
 </div>
 <div class="admonitionblock note">
@@ -1895,50 +1895,50 @@ format the output.
 <h3 id="_customizing_json_field_names_with_struct_tags">4.2. Customizing JSON field names with struct tags</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">type</span> <span style="color: #d0d0d0;background-color: #151515">Dog</span> <span style="color: #aa759f">struct</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #d0d0d0;background-color: #151515">Breed</span>         <span style="color: #d28445">string</span>
-    <span style="color: #d0d0d0;background-color: #151515">Name</span>          <span style="color: #d28445">string</span>
-    <span style="color: #d0d0d0;background-color: #151515">FavoriteTreat</span> <span style="color: #d28445">string</span>
-    <span style="color: #d0d0d0;background-color: #151515">Age</span>           <span style="color: #d28445">int</span>
-<span style="color: #d0d0d0">}</span>
+<pre class="rouge highlight"><code data-lang="go">type Dog struct {
+    Breed         string
+    Name          string
+    FavoriteTreat string
+    Age           int
+}
 
-<span style="color: #aa759f">var</span> <span style="color: #d0d0d0;background-color: #151515">dog</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">Dog</span><span style="color: #d0d0d0">{</span>
-  <span style="color: #d0d0d0;background-color: #151515">Breed</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">&#34;Golden Retriever&#34;</span><span style="color: #d0d0d0">,</span>
-  <span style="color: #d0d0d0;background-color: #151515">Age</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">8</span><span style="color: #d0d0d0">,</span>
-  <span style="color: #d0d0d0;background-color: #151515">Name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">&#34;Paws&#34;</span><span style="color: #d0d0d0">,</span>
-  <span style="color: #d0d0d0;background-color: #151515">FavoriteTreat</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">&#34;Kibble&#34;</span><span style="color: #d0d0d0">,</span>
-<span style="color: #d0d0d0">}</span></code></pre>
+var dog = Dog{
+  Breed: &#34;Golden Retriever&#34;,
+  Age: 8,
+  Name: &#34;Paws&#34;,
+  FavoriteTreat: &#34;Kibble&#34;,
+}</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">type</span> <span style="color: #d0d0d0;background-color: #151515">Dog</span> <span style="color: #aa759f">struct</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #d0d0d0;background-color: #151515">Breed</span>         <span style="color: #d28445">string</span> <span style="color: #90a959">`json:&#34;breed&#34;`</span>
-    <span style="color: #d0d0d0;background-color: #151515">Name</span>          <span style="color: #d28445">string</span> <span style="color: #90a959">`json:&#34;name&#34;`</span>
-    <span style="color: #d0d0d0;background-color: #151515">FavoriteTreat</span> <span style="color: #d28445">string</span> <span style="color: #90a959">`json:&#34;favorite_treat&#34;`</span>
-    <span style="color: #d0d0d0;background-color: #151515">Age</span>           <span style="color: #d28445">int</span>    <span style="color: #90a959">`json:&#34;age&#34;`</span>
-<span style="color: #d0d0d0">}</span></code></pre>
+<pre class="rouge highlight"><code data-lang="go">type Dog struct {
+    Breed         string `json:&#34;breed&#34;`
+    Name          string `json:&#34;name&#34;`
+    FavoriteTreat string `json:&#34;favorite_treat&#34;`
+    Age           int    `json:&#34;age&#34;`
+}</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">main</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #d0d0d0;background-color: #151515">input</span> <span style="color: #d0d0d0">:=</span> <span style="color: #90a959">`{
+<pre class="rouge highlight"><code data-lang="go">func main() {
+    input := `{
       &#34;name&#34;: &#34;Coffee&#34;,
       &#34;breed&#34;: &#34;Toy Poodle&#34;,
       &#34;age&#34;: 5,
       &#34;favorite_treat&#34;: &#34;Kibble&#34;
-    }`</span>
+    }`
 
-    <span style="color: #aa759f">var</span> <span style="color: #d0d0d0;background-color: #151515">coffee</span> <span style="color: #d0d0d0;background-color: #151515">Dog</span>
+    var coffee Dog
 
-    <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">json</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Unmarshal</span><span style="color: #d0d0d0">([]</span><span style="color: #d28445">byte</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">input</span><span style="color: #d0d0d0">),</span> <span style="color: #d0d0d0">&amp;</span><span style="color: #d0d0d0;background-color: #151515">coffee</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #aa759f">if</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">!=</span> <span style="color: #f4bf75">nil</span> <span style="color: #d0d0d0">{</span>
-        <span style="color: #d0d0d0;background-color: #151515">log</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Fatalf</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;Unable to marshal JSON due to %s&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #d0d0d0">}</span>
+    err := json.Unmarshal([]byte(input), &amp;coffee)
+    if err != nil {
+        log.Fatalf(&#34;Unable to marshal JSON due to %s&#34;, err)
+    }
 
-    <span style="color: #d0d0d0;background-color: #151515">litter</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Dump</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">coffee</span><span style="color: #d0d0d0">)</span>
-<span style="color: #d0d0d0">}</span></code></pre>
+    litter.Dump(coffee)
+}</code></pre>
 </div>
 </div>
 </div>
@@ -1947,13 +1947,13 @@ format the output.
 <div class="listingblock">
 <div class="title">Omit an empty field (one with its zero value in Go)</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">type</span> <span style="color: #d0d0d0;background-color: #151515">User</span> <span style="color: #aa759f">struct</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #d0d0d0;background-color: #151515">Username</span> <span style="color: #d28445">string</span>   <span style="color: #90a959">`json:&#34;username&#34;`</span>
-    <span style="color: #d0d0d0;background-color: #151515">Password</span> <span style="color: #d28445">string</span>   <span style="color: #90a959">`json:&#34;-&#34;`</span>
+<pre class="rouge highlight"><code data-lang="go">type User struct {
+    Username string   `json:&#34;username&#34;`
+    Password string   `json:&#34;-&#34;`
 
-    <span style="color: #d0d0d0;background-color: #151515">Email</span>    <span style="color: #d28445">string</span>   <span style="color: #90a959">`json:&#34;email&#34;`</span>
-    <span style="color: #d0d0d0;background-color: #151515">Hobbies</span>  <span style="color: #d0d0d0">[]</span><span style="color: #d28445">string</span> <span style="color: #90a959">`json:&#34;hobbies,omitempty&#34;`</span>
-<span style="color: #d0d0d0">}</span></code></pre>
+    Email    string   `json:&#34;email&#34;`
+    Hobbies  []string `json:&#34;hobbies,omitempty&#34;`
+}</code></pre>
 </div>
 </div>
 </div>
@@ -1964,13 +1964,13 @@ format the output.
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">main</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #d0d0d0;background-color: #151515">good</span> <span style="color: #d0d0d0">:=</span> <span style="color: #90a959">`{&#34;name&#34;: &#34;John Doe&#34;}`</span>
-    <span style="color: #d0d0d0;background-color: #151515">bad</span> <span style="color: #d0d0d0">:=</span> <span style="color: #90a959">`{name: &#34;John Doe&#34;}`</span>
+<pre class="rouge highlight"><code data-lang="go">func main() {
+    good := `{&#34;name&#34;: &#34;John Doe&#34;}`
+    bad := `{name: &#34;John Doe&#34;}`
 
-    <span style="color: #d0d0d0;background-color: #151515">fmt</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Println</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">json</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Valid</span><span style="color: #d0d0d0">([]</span><span style="color: #d28445">byte</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">good</span><span style="color: #d0d0d0">)))</span>
-    <span style="color: #d0d0d0;background-color: #151515">fmt</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Println</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">json</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Valid</span><span style="color: #d0d0d0">([]</span><span style="color: #d28445">byte</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">bad</span><span style="color: #d0d0d0">)))</span>
-<span style="color: #d0d0d0">}</span></code></pre>
+    fmt.Println(json.Valid([]byte(good)))
+    fmt.Println(json.Valid([]byte(bad)))
+}</code></pre>
 </div>
 </div>
 </div>
@@ -1992,17 +1992,17 @@ named <code>MarshalJSON()</code> that returns a byte slice and an error.</p>
 <div class="listingblock">
 <div class="title">examples/custom_timestamp/main.go</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">type</span> <span style="color: #d0d0d0">(</span>
-    <span style="color: #d0d0d0;background-color: #151515">CustomTime</span> <span style="color: #aa759f">struct</span> <span style="color: #d0d0d0">{</span>
-        <span style="color: #d0d0d0;background-color: #151515">time</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Time</span>
-    <span style="color: #d0d0d0">}</span>
+<pre class="rouge highlight"><code data-lang="go">type (
+    CustomTime struct {
+        time.Time
+    }
 
-    <span style="color: #d0d0d0;background-color: #151515">Baby</span> <span style="color: #aa759f">struct</span> <span style="color: #d0d0d0">{</span>
-        <span style="color: #d0d0d0;background-color: #151515">BirthDate</span> <span style="color: #d0d0d0;background-color: #151515">CustomTime</span> <span style="color: #90a959">`json:&#34;birth_date&#34;`</span>
-        <span style="color: #d0d0d0;background-color: #151515">Name</span>      <span style="color: #d28445">string</span>    <span style="color: #90a959">`json:&#34;name&#34;`</span>
-        <span style="color: #d0d0d0;background-color: #151515">Gender</span>    <span style="color: #d28445">string</span>    <span style="color: #90a959">`json:&#34;gender&#34;`</span>
-    <span style="color: #d0d0d0">}</span>
-<span style="color: #d0d0d0">)</span></code></pre>
+    Baby struct {
+        BirthDate CustomTime `json:&#34;birth_date&#34;`
+        Name      string    `json:&#34;name&#34;`
+        Gender    string    `json:&#34;gender&#34;`
+    }
+)</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2015,22 +2015,22 @@ the <code>BirthDate</code> value.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">main</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #d0d0d0;background-color: #151515">baby</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">Baby</span><span style="color: #d0d0d0">{</span>
-        <span style="color: #d0d0d0;background-color: #151515">Name</span><span style="color: #d0d0d0">:</span>   <span style="color: #90a959">&#34;johnny&#34;</span><span style="color: #d0d0d0">,</span>
-        <span style="color: #d0d0d0;background-color: #151515">Gender</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">&#34;male&#34;</span><span style="color: #d0d0d0">,</span>
-        <span style="color: #d0d0d0;background-color: #151515">BirthDate</span><span style="color: #d0d0d0">:</span> <span style="color: #d0d0d0;background-color: #151515">CustomTime</span><span style="color: #d0d0d0">{</span>
-            <span style="color: #d0d0d0;background-color: #151515">time</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Date</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">2023</span><span style="color: #d0d0d0">,</span> <span style="color: #90a959">1</span><span style="color: #d0d0d0">,</span> <span style="color: #90a959">1</span><span style="color: #d0d0d0">,</span> <span style="color: #90a959">12</span><span style="color: #d0d0d0">,</span> <span style="color: #90a959">0</span><span style="color: #d0d0d0">,</span> <span style="color: #90a959">0</span><span style="color: #d0d0d0">,</span> <span style="color: #90a959">0</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">time</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Now</span><span style="color: #d0d0d0">()</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Location</span><span style="color: #d0d0d0">()),</span>
-        <span style="color: #d0d0d0">},</span>
-    <span style="color: #d0d0d0">}</span>
+<pre class="rouge highlight"><code data-lang="go">func main() {
+    baby := Baby{
+        Name:   &#34;johnny&#34;,
+        Gender: &#34;male&#34;,
+        BirthDate: CustomTime{
+            time.Date(2023, 1, 1, 12, 0, 0, 0, time.Now().Location()),
+        },
+    }
 
-    <span style="color: #d0d0d0;background-color: #151515">b</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">json</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Marshal</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">baby</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #aa759f">if</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">!=</span> <span style="color: #f4bf75">nil</span> <span style="color: #d0d0d0">{</span>
-        <span style="color: #d0d0d0;background-color: #151515">log</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Fatalf</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;Unable to marshal due to %s</span><span style="color: #8f5536">\n</span><span style="color: #90a959">&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #d0d0d0">}</span>
+    b, err := json.Marshal(baby)
+    if err != nil {
+        log.Fatalf(&#34;Unable to marshal due to %s\n&#34;, err)
+    }
 
-    <span style="color: #d0d0d0;background-color: #151515">fmt</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Println</span><span style="color: #d0d0d0">(</span><span style="color: #d28445">string</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">b</span><span style="color: #d0d0d0">))</span>
-<span style="color: #d0d0d0">}</span></code></pre>
+    fmt.Println(string(b))
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2045,9 +2045,9 @@ timestamp format.</p>
 <div class="listingblock">
 <div class="title">examples/custom_timestamp/main.go</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">func</span> <span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">ct</span> <span style="color: #d0d0d0;background-color: #151515">CustomTime</span><span style="color: #d0d0d0">)</span> <span style="color: #d0d0d0;background-color: #151515">MarshalJSON</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">([]</span><span style="color: #d28445">byte</span><span style="color: #d0d0d0">,</span> <span style="color: #d28445">error</span><span style="color: #d0d0d0">)</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #aa759f">return</span> <span style="color: #d0d0d0">[]</span><span style="color: #d28445">byte</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">fmt</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Sprintf</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">`%q`</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">ct</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Time</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Format</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;02-01-2006&#34;</span><span style="color: #d0d0d0">))),</span> <span style="color: #f4bf75">nil</span>
-<span style="color: #d0d0d0">}</span></code></pre>
+<pre class="rouge highlight"><code data-lang="go">func (ct CustomTime) MarshalJSON() ([]byte, error) {
+    return []byte(fmt.Sprintf(`%q`, ct.Time.Format(&#34;02-01-2006&#34;))), nil
+}</code></pre>
 </div>
 </div>
 </div>
@@ -2174,7 +2174,7 @@ language or system is operating correctly.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;Hello World!&#34;</span><span style="color: #d0d0d0">)</span></code></pre>
+<pre class="rouge highlight"><code data-lang="lua">print(&#34;Hello World!&#34;)</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2207,11 +2207,11 @@ that sets the value of variable to that expression.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #505050">-- Different types</span>
-<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">x</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">10</span> <span style="color: #505050">-- number</span>
-<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">name</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#34;Neo&#34;</span> <span style="color: #505050">-- string</span>
-<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">is_alive</span> <span style="color: #d0d0d0">=</span> <span style="color: #d28445">false</span> <span style="color: #505050">-- boolean</span>
-<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">=</span> <span style="color: #d28445">nil</span> <span style="color: #505050">-- no value or invalid value</span></code></pre>
+<pre class="rouge highlight"><code data-lang="lua">-- Different types
+local x = 10 -- number
+local name = &#34;Neo&#34; -- string
+local is_alive = false -- boolean
+local a = nil -- no value or invalid value</code></pre>
 </div>
 </div>
 </div>
@@ -2248,18 +2248,18 @@ and prints its factorial:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #505050">-- defines a factorial function</span>
-<span style="color: #aa759f">function</span> <span style="color: #d0d0d0;background-color: #151515">fact</span> <span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">n</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #aa759f">if</span> <span style="color: #d0d0d0;background-color: #151515">n</span> <span style="color: #d0d0d0">==</span> <span style="color: #90a959">0</span> <span style="color: #aa759f">then</span>
-        <span style="color: #aa759f">return</span> <span style="color: #90a959">1</span>
-    <span style="color: #aa759f">else</span>
-        <span style="color: #aa759f">return</span> <span style="color: #d0d0d0;background-color: #151515">n</span> <span style="color: #d0d0d0">*</span> <span style="color: #d0d0d0;background-color: #151515">fact</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">n</span> <span style="color: #d0d0d0">-</span> <span style="color: #90a959">1</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #aa759f">end</span>
-<span style="color: #aa759f">end</span>
+<pre class="rouge highlight"><code data-lang="lua">-- defines a factorial function
+function fact (n)
+    if n == 0 then
+        return 1
+    else
+        return n * fact(n - 1)
+    end
+end
 
-<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;enter a number:&#34;</span><span style="color: #d0d0d0">)</span>
-<span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">io.read</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;*n&#34;</span><span style="color: #d0d0d0">)</span>       <span style="color: #505050">-- reads a number</span>
-<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">fact</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">a</span><span style="color: #d0d0d0">))</span></code></pre>
+print(&#34;enter a number:&#34;)
+a = io.read(&#34;*n&#34;)       -- reads a number
+print(fact(a))</code></pre>
 </div>
 </div>
 </div>
@@ -2329,10 +2329,10 @@ the expressions inside calls to <code>print</code>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">math.pi</span> <span style="color: #d0d0d0">/</span> <span style="color: #90a959">4</span><span style="color: #d0d0d0">)</span>  <span style="color: #505050">--&gt; 0.78539816339745</span>
-<span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">15</span>
-<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">^</span> <span style="color: #90a959">2</span><span style="color: #d0d0d0">)</span>        <span style="color: #505050">--&gt; 225</span>
-<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">+</span> <span style="color: #90a959">2</span><span style="color: #d0d0d0">)</span>        <span style="color: #505050">--&gt; 17</span></code></pre>
+<pre class="rouge highlight"><code data-lang="lua">print(math.pi / 4)  --&gt; 0.78539816339745
+a = 15
+print(a ^ 2)        --&gt; 225
+print(a + 2)        --&gt; 17</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2367,13 +2367,13 @@ a file. For instance, suppose we have a file <code>lib1.lua</code> with the foll
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #aa759f">function</span> <span style="color: #d0d0d0;background-color: #151515">norm</span> <span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">x</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">y</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #aa759f">return</span> <span style="color: #d0d0d0;background-color: #151515">math.sqrt</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">x</span><span style="color: #d0d0d0">^</span><span style="color: #90a959">2</span> <span style="color: #d0d0d0">+</span> <span style="color: #d0d0d0;background-color: #151515">y</span><span style="color: #d0d0d0">^</span><span style="color: #90a959">2</span><span style="color: #d0d0d0">)</span>
-<span style="color: #aa759f">end</span>
+<pre class="rouge highlight"><code data-lang="lua">function norm (x, y)
+    return math.sqrt(x^2 + y^2)
+end
 
-<span style="color: #aa759f">function</span> <span style="color: #d0d0d0;background-color: #151515">twice</span> <span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">x</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #aa759f">return</span> <span style="color: #90a959">2</span><span style="color: #d0d0d0">.</span><span style="color: #90a959">0</span> <span style="color: #d0d0d0">*</span> <span style="color: #d0d0d0;background-color: #151515">x</span>
-<span style="color: #aa759f">end</span></code></pre>
+function twice (x)
+    return 2.0 * x
+end</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2432,8 +2432,8 @@ Usually, I reserve the identifier <code>_</code> (a single underscore) for dummy
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #d0d0d0">and</span> <span style="color: #aa759f">end</span> <span style="color: #aa759f">if</span> <span style="color: #d0d0d0">or</span> <span style="color: #aa759f">until</span> <span style="color: #aa759f">break</span> <span style="color: #d28445">false</span> <span style="color: #aa759f">in</span> <span style="color: #aa759f">repeat</span> <span style="color: #aa759f">while</span> <span style="color: #aa759f">do</span> <span style="color: #aa759f">for</span> <span style="color: #d28445">local</span>
-<span style="color: #aa759f">return</span> <span style="color: #aa759f">else</span> <span style="color: #aa759f">function</span> <span style="color: #d0d0d0;background-color: #151515">nil</span> <span style="color: #aa759f">then</span> <span style="color: #aa759f">elseif</span> <span style="color: #d0d0d0;background-color: #151515">goto</span> <span style="color: #d0d0d0">not</span> <span style="color: #d28445">true</span></code></pre>
+<pre class="rouge highlight"><code data-lang="lua">and end if or until break false in repeat while do for local
+return else function nil then elseif goto not true</code></pre>
 </div>
 </div>
 <div class="sidebarblock">
@@ -2462,9 +2462,9 @@ or at the end of another line:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;This is normal code.&#34;</span><span style="color: #d0d0d0">)</span>
-<span style="color: #505050">-- This is a comment</span>
-<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;This is still normal code.&#34;</span><span style="color: #d0d0d0">)</span> <span style="color: #505050">-- Comment at the end of a line of code.</span></code></pre>
+<pre class="rouge highlight"><code data-lang="lua">print(&#34;This is normal code.&#34;)
+-- This is a comment
+print(&#34;This is still normal code.&#34;) -- Comment at the end of a line of code.</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2473,10 +2473,10 @@ which start with a long bracket and can continue on many lines:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;This is normal code&#34;</span><span style="color: #d0d0d0">)</span>
-<span style="color: #505050">--[[Line 1
+<pre class="rouge highlight"><code data-lang="lua">print(&#34;This is normal code&#34;)
+--[[Line 1
 Line 2
-]]</span></code></pre>
+]]</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2492,13 +2492,13 @@ It is often useful to do this when using comments to disable blocks of code.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #505050">--[==[
+<pre class="rouge highlight"><code data-lang="lua">--[==[
 This is a comment that contains a closing long bracket of level 0 which is here:
  ]]
 However, the closing double bracket doesn&#39;t make the comment end, because the
   comment was opened with an opening long bracket of level 2, and only a closing
   long bracket of level 2 can close it.
-]==]</span></code></pre>
+]==]</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2526,7 +2526,7 @@ would be erroneous:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #90a959">3</span> <span style="color: #d0d0d0">+</span> <span style="color: #90a959">5</span></code></pre>
+<pre class="rouge highlight"><code data-lang="lua">3 + 5</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2549,14 +2549,14 @@ four chunks are all valid and equivalent:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">1</span>
-<span style="color: #d0d0d0;background-color: #151515">b</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">*</span> <span style="color: #90a959">2</span>
+<pre class="rouge highlight"><code data-lang="lua">a = 1
+b = a * 2
 
-<span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">1</span><span style="color: #d0d0d0">;</span>
-<span style="color: #d0d0d0;background-color: #151515">b</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">*</span> <span style="color: #90a959">2</span><span style="color: #d0d0d0">;</span>
+a = 1;
+b = a * 2;
 
-<span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">1</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0;background-color: #151515">b</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">*</span> <span style="color: #90a959">2</span>
-<span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">1</span> <span style="color: #d0d0d0;background-color: #151515">b</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">*</span> <span style="color: #90a959">2</span> <span style="color: #505050">-- ugly, but valid</span></code></pre>
+a = 1; b = a * 2
+a = 1 b = a * 2 -- ugly, but valid</code></pre>
 </div>
 </div>
 </div>
@@ -2787,7 +2787,7 @@ not try to evaluate <code>a / i</code> when <code>i</code> is zero.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #aa759f">if</span> <span style="color: #d0d0d0">not</span> <span style="color: #d0d0d0;background-color: #151515">x</span> <span style="color: #aa759f">then</span> <span style="color: #d0d0d0;background-color: #151515">x</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">v</span> <span style="color: #aa759f">end</span></code></pre>
+<pre class="rouge highlight"><code data-lang="lua">if not x then x = v end</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2860,11 +2860,11 @@ and the <code>or</code> operator returns true if either of arguments is true and
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">is_alive</span> <span style="color: #d0d0d0">=</span> <span style="color: #d28445">true</span>
-<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">is_alive</span><span style="color: #d0d0d0">)</span> <span style="color: #505050">-- true</span>
+<pre class="rouge highlight"><code data-lang="lua">local is_alive = true
+print(is_alive) -- true
 
-<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">is_alive</span> <span style="color: #d0d0d0">=</span> <span style="color: #d28445">false</span>
-<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">is_alive</span><span style="color: #d0d0d0">)</span> <span style="color: #505050">-- false</span></code></pre>
+local is_alive = false
+print(is_alive) -- false</code></pre>
 </div>
 </div>
 </div>
@@ -2905,30 +2905,30 @@ even in hexadecimal. Here are some valid numbers:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #505050">-- The Lua</span>
-<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">1</span>
-<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">b</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">2</span>
-<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">c</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">+</span> <span style="color: #d0d0d0;background-color: #151515">b</span>
-<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">c</span><span style="color: #d0d0d0">)</span> <span style="color: #505050">-- 3</span>
+<pre class="rouge highlight"><code data-lang="lua">-- The Lua
+local a = 1
+local b = 2
+local c = a + b
+print(c) -- 3
 
-<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">d</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">b</span> <span style="color: #d0d0d0">-</span> <span style="color: #d0d0d0;background-color: #151515">a</span>
-<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">d</span><span style="color: #d0d0d0">)</span>
+local d = b - a
+print(d)
 
-<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">x</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">1</span> <span style="color: #d0d0d0">*</span> <span style="color: #90a959">3</span> <span style="color: #d0d0d0">*</span> <span style="color: #90a959">4</span> <span style="color: #505050">-- 12</span>
-<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">x</span><span style="color: #d0d0d0">)</span>
+local x = 1 * 3 * 4 -- 12
+print(x)
 
-<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">y</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">(</span><span style="color: #90a959">1</span><span style="color: #d0d0d0">+</span><span style="color: #90a959">3</span><span style="color: #d0d0d0">)</span> <span style="color: #d0d0d0">*</span> <span style="color: #90a959">2</span> <span style="color: #505050">-- 8</span>
-<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">y</span><span style="color: #d0d0d0">)</span>
+local y = (1+3) * 2 -- 8
+print(y)
 
-<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">10</span> <span style="color: #d0d0d0">/</span> <span style="color: #90a959">2</span><span style="color: #d0d0d0">)</span> <span style="color: #505050">-- 5</span>
-<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">2</span> <span style="color: #d0d0d0">^</span> <span style="color: #90a959">2</span><span style="color: #d0d0d0">)</span> <span style="color: #505050">-- 4</span>
-<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">5</span> <span style="color: #d0d0d0">%</span> <span style="color: #90a959">2</span><span style="color: #d0d0d0">)</span> <span style="color: #505050">-- 1</span>
-<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0">-</span><span style="color: #d0d0d0;background-color: #151515">b</span><span style="color: #d0d0d0">)</span> <span style="color: #505050">-- -2</span>
+print(10 / 2) -- 5
+print(2 ^ 2) -- 4
+print(5 % 2) -- 1
+print(-b) -- -2
 
-<span style="color: #505050">-- Incerment</span>
-<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">level</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">1</span>
-<span style="color: #d0d0d0;background-color: #151515">level</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">level</span> <span style="color: #d0d0d0">+</span> <span style="color: #90a959">1</span>
-<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">level</span><span style="color: #d0d0d0">)</span></code></pre>
+-- Incerment
+local level = 1
+level = level + 1
+print(level)</code></pre>
 </div>
 </div>
 <div class="sect3">
@@ -3043,14 +3043,14 @@ is also the only way to insert single or double quotes in certain cases.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">phrase</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">[[My name is ]]</span>
-<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">name</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#39;P J&#39;</span>
-<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">phrase</span> <span style="color: #d0d0d0">..</span> <span style="color: #d0d0d0;background-color: #151515">name</span><span style="color: #d0d0d0">)</span> <span style="color: #505050">-- My name is P J</span>
+<pre class="rouge highlight"><code data-lang="lua">local phrase = [[My name is ]]
+local name = &#39;P J&#39;
+print(phrase .. name) -- My name is P J
 
-<span style="color: #505050">-- Strings and Numbers</span>
-<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">age</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">21</span>
-<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">name</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#34;Billy&#34;</span>
-<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">name</span> <span style="color: #d0d0d0">..</span> <span style="color: #90a959">&#34; is &#34;</span> <span style="color: #d0d0d0">..</span> <span style="color: #d0d0d0;background-color: #151515">age</span> <span style="color: #d0d0d0">..</span> <span style="color: #90a959">&#34; Years old&#34;</span><span style="color: #d0d0d0">)</span></code></pre>
+-- Strings and Numbers
+local age = 21
+local name = &#34;Billy&#34;
+print(name .. &#34; is &#34; .. age .. &#34; Years old&#34;)</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3178,7 +3178,7 @@ interpretation of characters.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0">#</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;This is a string&#34;</span><span style="color: #d0d0d0">))</span> <span style="color: #505050">--&gt; 16</span></code></pre>
+<pre class="rouge highlight"><code data-lang="lua">print(#(&#34;This is a string&#34;)) --&gt; 16</code></pre>
 </div>
 </div>
 <div class="sect3">
@@ -3291,15 +3291,15 @@ Threads
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">package</span> <span style="color: #d0d0d0;background-color: #151515">main</span>
+<pre class="rouge highlight"><code data-lang="go">package main
 
-<span style="color: #aa759f">import</span> <span style="color: #d0d0d0">(</span>
-    <span style="color: #90a959">&#34;fmt&#34;</span>
-<span style="color: #d0d0d0">)</span>
+import (
+    &#34;fmt&#34;
+)
 
-<span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">main</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #d0d0d0;background-color: #151515">fmt</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Printf</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;This is a simple test!</span><span style="color: #8f5536">\n</span><span style="color: #90a959">&#34;</span><span style="color: #d0d0d0">)</span>
-<span style="color: #d0d0d0">}</span></code></pre>
+func main() {
+    fmt.Printf(&#34;This is a simple test!\n&#34;)
+}</code></pre>
 </div>
 </div>
 </div>
@@ -3326,7 +3326,7 @@ Threads
 <div class="listingblock">
 <div class="title">Test</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="c"><span style="color: #505050">// include::{home}/.cache/wal/colors-wal-st.h[]</span></code></pre>
+<pre class="rouge highlight"><code data-lang="c">// include::{home}/.cache/wal/colors-wal-st.h[]</code></pre>
 </div>
 </div>
 </div>
@@ -3340,7 +3340,7 @@ Threads
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">* level 1
+<pre class="rouge highlight"><code data-lang="asciidoc">* level 1
 ** level 2
 *** level 3
 **** level 4
@@ -3400,7 +3400,7 @@ Threads
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">. level 1
+<pre class="rouge highlight"><code data-lang="asciidoc">. level 1
 .. level 2
 ... level 3
 .... level 4
@@ -3460,7 +3460,7 @@ Threads
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">- [*] checked
+<pre class="rouge highlight"><code data-lang="asciidoc">- [*] checked
 - [x] also checked
 - [ ] not checked
 - normal list item</code></pre>
@@ -3496,7 +3496,7 @@ Threads
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">. Apples
+<pre class="rouge highlight"><code data-lang="asciidoc">. Apples
 . Oranges
 
 //-
@@ -3544,7 +3544,7 @@ Threads
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">first term:: definition of first term
+<pre class="rouge highlight"><code data-lang="asciidoc">first term:: definition of first term
 section term:: definition of second term</code></pre>
 </div>
 </div>
@@ -3574,7 +3574,7 @@ section term:: definition of second term</code></pre>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">[horizontal]
+<pre class="rouge highlight"><code data-lang="asciidoc">[horizontal]
 first term:: definition of first term
 section term:: definition of second term</code></pre>
 </div>
@@ -3613,7 +3613,7 @@ section term
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">first term::
+<pre class="rouge highlight"><code data-lang="asciidoc">first term::
 definition of first term
 section term::
 definition of second term</code></pre>
@@ -3645,7 +3645,7 @@ definition of second term</code></pre>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">[qanda]
+<pre class="rouge highlight"><code data-lang="asciidoc">[qanda]
 What is Asciidoctor?::
 An implementation of the AsciiDoc processor in Ruby.
 What is the answer to the Ultimate Question?:: 42</code></pre>
@@ -3677,7 +3677,7 @@ What is the answer to the Ultimate Question?:: 42</code></pre>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">Operating Systems::
+<pre class="rouge highlight"><code data-lang="asciidoc">Operating Systems::
     Linux:::
         . Fedora
             * Desktop
@@ -3809,7 +3809,7 @@ Note that the indentation is optional
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">* Every list item has at least one paragraph of content,
+<pre class="rouge highlight"><code data-lang="asciidoc">* Every list item has at least one paragraph of content,
   which may be wrapped, even using a hanging indent.
 +
 Additional paragraphs or blocks are adjoined by putting
@@ -3906,7 +3906,7 @@ a list continuation on a line adjacent to both blocks.</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">http://asciidoctor.org - automatic!
+<pre class="rouge highlight"><code data-lang="asciidoc">http://asciidoctor.org - automatic!
 
 http://asciidoctor.org[Asciidoctor]
 
@@ -3936,7 +3936,7 @@ https://github.com/asciidoctor[Asciidoctor @ *GitHub*]</code></pre>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">link:test.adoc[Docs]</code></pre>
+<pre class="rouge highlight"><code data-lang="asciidoc">link:test.adoc[Docs]</code></pre>
 </div>
 </div>
 <div class="exampleblock">
@@ -3956,7 +3956,7 @@ https://github.com/asciidoctor[Asciidoctor @ *GitHub*]</code></pre>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">devel@discuss.arquillian.org
+<pre class="rouge highlight"><code data-lang="asciidoc">devel@discuss.arquillian.org
 
 mailto:devel@discuss.arquillian.org[Discuss Arquillian]
 
@@ -3991,7 +3991,7 @@ irc://irc.freenode.org/#asciidoctor</code></pre>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">[[bookmark-a]]Inline anchors make arbitrary content referenceable.
+<pre class="rouge highlight"><code data-lang="asciidoc">[[bookmark-a]]Inline anchors make arbitrary content referenceable.
 
 anchor:bookmark-b[]Use a cross reference to link to this location.</code></pre>
 </div>
@@ -4016,7 +4016,7 @@ anchor:bookmark-b[]Use a cross reference to link to this location.</code></pre>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">See &lt;&lt;paragraphs&gt;&gt; to learn how to write paragraphs.
+<pre class="rouge highlight"><code data-lang="asciidoc">See &lt;&lt;paragraphs&gt;&gt; to learn how to write paragraphs.
 
 Learn how to organize the document into &lt;&lt;section-titles,sections&gt;&gt;.</code></pre>
 </div>
@@ -4041,7 +4041,7 @@ Learn how to organize the document into &lt;&lt;section-titles,sections&gt;&gt;.
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">image::/images/asciidoc/rose.png[]
+<pre class="rouge highlight"><code data-lang="asciidoc">image::/images/asciidoc/rose.png[]
 
 image::/images/asciidoc/rose.png[Rose]
 
@@ -4092,7 +4092,7 @@ image::http://asciidoctor.org/images/octocat.jpg[GitHub mascot]</code></pre>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">NOTE: This is a NOTE!</code></pre>
+<pre class="rouge highlight"><code data-lang="asciidoc">NOTE: This is a NOTE!</code></pre>
 </div>
 </div>
 <div class="exampleblock">
@@ -4121,7 +4121,7 @@ This is a NOTE!
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">TIP: This is a TIP!</code></pre>
+<pre class="rouge highlight"><code data-lang="asciidoc">TIP: This is a TIP!</code></pre>
 </div>
 </div>
 <div class="exampleblock">
@@ -4150,7 +4150,7 @@ This is a TIP!
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">WARNING: This is a WARNING!</code></pre>
+<pre class="rouge highlight"><code data-lang="asciidoc">WARNING: This is a WARNING!</code></pre>
 </div>
 </div>
 <div class="exampleblock">
@@ -4179,7 +4179,7 @@ This is a WARNING!
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">CAUTION: This is a CAUTION!</code></pre>
+<pre class="rouge highlight"><code data-lang="asciidoc">CAUTION: This is a CAUTION!</code></pre>
 </div>
 </div>
 <div class="exampleblock">
@@ -4208,7 +4208,7 @@ This is a CAUTION!
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">IMPORTANT: This is a IMPORTANT!</code></pre>
+<pre class="rouge highlight"><code data-lang="asciidoc">IMPORTANT: This is a IMPORTANT!</code></pre>
 </div>
 </div>
 <div class="exampleblock">
@@ -4237,7 +4237,7 @@ This is a IMPORTANT!
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">[NOTE]
+<pre class="rouge highlight"><code data-lang="asciidoc">[NOTE]
 ====
 This is an example of an admonition block.
 Unlike an admonition paragraph, it may contain any AsciiDoc content.
@@ -4305,7 +4305,7 @@ The style can be any one of the admonition labels:</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">-----
+<pre class="rouge highlight"><code data-lang="asciidoc">-----
 This is a **_listing block_**
 -----</code></pre>
 </div>
@@ -4329,7 +4329,7 @@ This is a **_listing block_**
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">=====
+<pre class="rouge highlight"><code data-lang="asciidoc">=====
 This is a **_example block_**
 =====</code></pre>
 </div>
@@ -4355,7 +4355,7 @@ This is a **_example block_**
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">////
+<pre class="rouge highlight"><code data-lang="asciidoc">////
 This is a **_comment block_**
 ////</code></pre>
 </div>
@@ -4375,7 +4375,7 @@ This is a **_comment block_**
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">....
+<pre class="rouge highlight"><code data-lang="asciidoc">....
 This is a **_literal block_**
 ....</code></pre>
 </div>
@@ -4399,7 +4399,7 @@ This is a **_literal block_**
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">++++
+<pre class="rouge highlight"><code data-lang="asciidoc">++++
 == This is raw text
 ++++</code></pre>
 </div>
@@ -4419,7 +4419,7 @@ This is a **_literal block_**
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">____
+<pre class="rouge highlight"><code data-lang="asciidoc">____
 This is a very very simple quote
 ____</code></pre>
 </div>
@@ -4444,7 +4444,7 @@ ____</code></pre>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">.After landing the cloaked Klingon bird of prey in Golden Gate park:
+<pre class="rouge highlight"><code data-lang="asciidoc">.After landing the cloaked Klingon bird of prey in Golden Gate park:
 [quote,Captain James T. Kirk,Star Trek IV: The Voyage Home]
 Everybody remember where we parked.</code></pre>
 </div>
@@ -4474,7 +4474,7 @@ Everybody remember where we parked.
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">.Some Title
+<pre class="rouge highlight"><code data-lang="asciidoc">.Some Title
 ****
 This is a Sidebar block -- I have no idea why it&#39;s called `sidebar`
 ****</code></pre>
@@ -4502,7 +4502,7 @@ This is a Sidebar block -- I have no idea why it&#39;s called `sidebar`
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">.Gettysburg Address
+<pre class="rouge highlight"><code data-lang="asciidoc">.Gettysburg Address
 [[gettysburg]]
 [quote, Abraham Lincoln, Soldiers&#39; National Cemetery Dedication]
 ----
@@ -4571,7 +4571,7 @@ can long endure. ...</pre>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="bash"><span style="color: #d0d0d0;background-color: #151515">$ </span>iex</code></pre>
+<pre class="rouge highlight"><code data-lang="bash">$ iex</code></pre>
 </div>
 </div>
 </div>
@@ -4582,8 +4582,8 @@ can long endure. ...</pre>
 <div class="listingblock">
 <div class="title">intro.exs</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="elixir"><span style="color: #505050">#!/bin/elixir</span>
-<span style="color: #f4bf75">IO</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">puts</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;Hello&#34;</span> <span style="color: #d0d0d0">&lt;&gt;</span> <span style="color: #90a959">&#34; Elixir!!&#34;</span><span style="color: #d0d0d0">)</span></code></pre>
+<pre class="rouge highlight"><code data-lang="elixir">#!/bin/elixir
+IO.puts(&#34;Hello&#34; &lt;&gt; &#34; Elixir!!&#34;)</code></pre>
 </div>
 </div>
 </div>
@@ -4603,7 +4603,7 @@ mix run</pre>
 <div class="listingblock">
 <div class="title">Create</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="bash">mix new example</code></pre>
+<pre class="rouge highlight"><code data-lang="bash">mix new example</code></pre>
 </div>
 </div>
 </div>

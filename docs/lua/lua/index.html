@@ -382,7 +382,7 @@ language or system is operating correctly.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;Hello World!&#34;</span><span style="color: #d0d0d0">)</span></code></pre>
+<pre class="rouge highlight"><code data-lang="lua">print(&#34;Hello World!&#34;)</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -415,11 +415,11 @@ that sets the value of variable to that expression.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #505050">-- Different types</span>
-<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">x</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">10</span> <span style="color: #505050">-- number</span>
-<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">name</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#34;Neo&#34;</span> <span style="color: #505050">-- string</span>
-<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">is_alive</span> <span style="color: #d0d0d0">=</span> <span style="color: #d28445">false</span> <span style="color: #505050">-- boolean</span>
-<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">=</span> <span style="color: #d28445">nil</span> <span style="color: #505050">-- no value or invalid value</span></code></pre>
+<pre class="rouge highlight"><code data-lang="lua">-- Different types
+local x = 10 -- number
+local name = &#34;Neo&#34; -- string
+local is_alive = false -- boolean
+local a = nil -- no value or invalid value</code></pre>
 </div>
 </div>
 </div>
@@ -456,18 +456,18 @@ and prints its factorial:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #505050">-- defines a factorial function</span>
-<span style="color: #aa759f">function</span> <span style="color: #d0d0d0;background-color: #151515">fact</span> <span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">n</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #aa759f">if</span> <span style="color: #d0d0d0;background-color: #151515">n</span> <span style="color: #d0d0d0">==</span> <span style="color: #90a959">0</span> <span style="color: #aa759f">then</span>
-        <span style="color: #aa759f">return</span> <span style="color: #90a959">1</span>
-    <span style="color: #aa759f">else</span>
-        <span style="color: #aa759f">return</span> <span style="color: #d0d0d0;background-color: #151515">n</span> <span style="color: #d0d0d0">*</span> <span style="color: #d0d0d0;background-color: #151515">fact</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">n</span> <span style="color: #d0d0d0">-</span> <span style="color: #90a959">1</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #aa759f">end</span>
-<span style="color: #aa759f">end</span>
+<pre class="rouge highlight"><code data-lang="lua">-- defines a factorial function
+function fact (n)
+    if n == 0 then
+        return 1
+    else
+        return n * fact(n - 1)
+    end
+end
 
-<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;enter a number:&#34;</span><span style="color: #d0d0d0">)</span>
-<span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">io.read</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;*n&#34;</span><span style="color: #d0d0d0">)</span>       <span style="color: #505050">-- reads a number</span>
-<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">fact</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">a</span><span style="color: #d0d0d0">))</span></code></pre>
+print(&#34;enter a number:&#34;)
+a = io.read(&#34;*n&#34;)       -- reads a number
+print(fact(a))</code></pre>
 </div>
 </div>
 </div>
@@ -537,10 +537,10 @@ the expressions inside calls to <code>print</code>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">math.pi</span> <span style="color: #d0d0d0">/</span> <span style="color: #90a959">4</span><span style="color: #d0d0d0">)</span>  <span style="color: #505050">--&gt; 0.78539816339745</span>
-<span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">15</span>
-<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">^</span> <span style="color: #90a959">2</span><span style="color: #d0d0d0">)</span>        <span style="color: #505050">--&gt; 225</span>
-<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">+</span> <span style="color: #90a959">2</span><span style="color: #d0d0d0">)</span>        <span style="color: #505050">--&gt; 17</span></code></pre>
+<pre class="rouge highlight"><code data-lang="lua">print(math.pi / 4)  --&gt; 0.78539816339745
+a = 15
+print(a ^ 2)        --&gt; 225
+print(a + 2)        --&gt; 17</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -575,13 +575,13 @@ a file. For instance, suppose we have a file <code>lib1.lua</code> with the foll
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #aa759f">function</span> <span style="color: #d0d0d0;background-color: #151515">norm</span> <span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">x</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">y</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #aa759f">return</span> <span style="color: #d0d0d0;background-color: #151515">math.sqrt</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">x</span><span style="color: #d0d0d0">^</span><span style="color: #90a959">2</span> <span style="color: #d0d0d0">+</span> <span style="color: #d0d0d0;background-color: #151515">y</span><span style="color: #d0d0d0">^</span><span style="color: #90a959">2</span><span style="color: #d0d0d0">)</span>
-<span style="color: #aa759f">end</span>
+<pre class="rouge highlight"><code data-lang="lua">function norm (x, y)
+    return math.sqrt(x^2 + y^2)
+end
 
-<span style="color: #aa759f">function</span> <span style="color: #d0d0d0;background-color: #151515">twice</span> <span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">x</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #aa759f">return</span> <span style="color: #90a959">2</span><span style="color: #d0d0d0">.</span><span style="color: #90a959">0</span> <span style="color: #d0d0d0">*</span> <span style="color: #d0d0d0;background-color: #151515">x</span>
-<span style="color: #aa759f">end</span></code></pre>
+function twice (x)
+    return 2.0 * x
+end</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -640,8 +640,8 @@ Usually, I reserve the identifier <code>_</code> (a single underscore) for dummy
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #d0d0d0">and</span> <span style="color: #aa759f">end</span> <span style="color: #aa759f">if</span> <span style="color: #d0d0d0">or</span> <span style="color: #aa759f">until</span> <span style="color: #aa759f">break</span> <span style="color: #d28445">false</span> <span style="color: #aa759f">in</span> <span style="color: #aa759f">repeat</span> <span style="color: #aa759f">while</span> <span style="color: #aa759f">do</span> <span style="color: #aa759f">for</span> <span style="color: #d28445">local</span>
-<span style="color: #aa759f">return</span> <span style="color: #aa759f">else</span> <span style="color: #aa759f">function</span> <span style="color: #d0d0d0;background-color: #151515">nil</span> <span style="color: #aa759f">then</span> <span style="color: #aa759f">elseif</span> <span style="color: #d0d0d0;background-color: #151515">goto</span> <span style="color: #d0d0d0">not</span> <span style="color: #d28445">true</span></code></pre>
+<pre class="rouge highlight"><code data-lang="lua">and end if or until break false in repeat while do for local
+return else function nil then elseif goto not true</code></pre>
 </div>
 </div>
 <div class="sidebarblock">
@@ -670,9 +670,9 @@ or at the end of another line:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;This is normal code.&#34;</span><span style="color: #d0d0d0">)</span>
-<span style="color: #505050">-- This is a comment</span>
-<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;This is still normal code.&#34;</span><span style="color: #d0d0d0">)</span> <span style="color: #505050">-- Comment at the end of a line of code.</span></code></pre>
+<pre class="rouge highlight"><code data-lang="lua">print(&#34;This is normal code.&#34;)
+-- This is a comment
+print(&#34;This is still normal code.&#34;) -- Comment at the end of a line of code.</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -681,10 +681,10 @@ which start with a long bracket and can continue on many lines:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;This is normal code&#34;</span><span style="color: #d0d0d0">)</span>
-<span style="color: #505050">--[[Line 1
+<pre class="rouge highlight"><code data-lang="lua">print(&#34;This is normal code&#34;)
+--[[Line 1
 Line 2
-]]</span></code></pre>
+]]</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -700,13 +700,13 @@ It is often useful to do this when using comments to disable blocks of code.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #505050">--[==[
+<pre class="rouge highlight"><code data-lang="lua">--[==[
 This is a comment that contains a closing long bracket of level 0 which is here:
  ]]
 However, the closing double bracket doesn&#39;t make the comment end, because the
   comment was opened with an opening long bracket of level 2, and only a closing
   long bracket of level 2 can close it.
-]==]</span></code></pre>
+]==]</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -734,7 +734,7 @@ would be erroneous:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #90a959">3</span> <span style="color: #d0d0d0">+</span> <span style="color: #90a959">5</span></code></pre>
+<pre class="rouge highlight"><code data-lang="lua">3 + 5</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -757,14 +757,14 @@ four chunks are all valid and equivalent:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">1</span>
-<span style="color: #d0d0d0;background-color: #151515">b</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">*</span> <span style="color: #90a959">2</span>
+<pre class="rouge highlight"><code data-lang="lua">a = 1
+b = a * 2
 
-<span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">1</span><span style="color: #d0d0d0">;</span>
-<span style="color: #d0d0d0;background-color: #151515">b</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">*</span> <span style="color: #90a959">2</span><span style="color: #d0d0d0">;</span>
+a = 1;
+b = a * 2;
 
-<span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">1</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0;background-color: #151515">b</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">*</span> <span style="color: #90a959">2</span>
-<span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">1</span> <span style="color: #d0d0d0;background-color: #151515">b</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">*</span> <span style="color: #90a959">2</span> <span style="color: #505050">-- ugly, but valid</span></code></pre>
+a = 1; b = a * 2
+a = 1 b = a * 2 -- ugly, but valid</code></pre>
 </div>
 </div>
 </div>
@@ -995,7 +995,7 @@ not try to evaluate <code>a / i</code> when <code>i</code> is zero.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #aa759f">if</span> <span style="color: #d0d0d0">not</span> <span style="color: #d0d0d0;background-color: #151515">x</span> <span style="color: #aa759f">then</span> <span style="color: #d0d0d0;background-color: #151515">x</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">v</span> <span style="color: #aa759f">end</span></code></pre>
+<pre class="rouge highlight"><code data-lang="lua">if not x then x = v end</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1068,11 +1068,11 @@ and the <code>or</code> operator returns true if either of arguments is true and
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">is_alive</span> <span style="color: #d0d0d0">=</span> <span style="color: #d28445">true</span>
-<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">is_alive</span><span style="color: #d0d0d0">)</span> <span style="color: #505050">-- true</span>
+<pre class="rouge highlight"><code data-lang="lua">local is_alive = true
+print(is_alive) -- true
 
-<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">is_alive</span> <span style="color: #d0d0d0">=</span> <span style="color: #d28445">false</span>
-<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">is_alive</span><span style="color: #d0d0d0">)</span> <span style="color: #505050">-- false</span></code></pre>
+local is_alive = false
+print(is_alive) -- false</code></pre>
 </div>
 </div>
 </div>
@@ -1113,30 +1113,30 @@ even in hexadecimal. Here are some valid numbers:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #505050">-- The Lua</span>
-<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">1</span>
-<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">b</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">2</span>
-<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">c</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">+</span> <span style="color: #d0d0d0;background-color: #151515">b</span>
-<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">c</span><span style="color: #d0d0d0">)</span> <span style="color: #505050">-- 3</span>
+<pre class="rouge highlight"><code data-lang="lua">-- The Lua
+local a = 1
+local b = 2
+local c = a + b
+print(c) -- 3
 
-<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">d</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">b</span> <span style="color: #d0d0d0">-</span> <span style="color: #d0d0d0;background-color: #151515">a</span>
-<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">d</span><span style="color: #d0d0d0">)</span>
+local d = b - a
+print(d)
 
-<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">x</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">1</span> <span style="color: #d0d0d0">*</span> <span style="color: #90a959">3</span> <span style="color: #d0d0d0">*</span> <span style="color: #90a959">4</span> <span style="color: #505050">-- 12</span>
-<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">x</span><span style="color: #d0d0d0">)</span>
+local x = 1 * 3 * 4 -- 12
+print(x)
 
-<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">y</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">(</span><span style="color: #90a959">1</span><span style="color: #d0d0d0">+</span><span style="color: #90a959">3</span><span style="color: #d0d0d0">)</span> <span style="color: #d0d0d0">*</span> <span style="color: #90a959">2</span> <span style="color: #505050">-- 8</span>
-<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">y</span><span style="color: #d0d0d0">)</span>
+local y = (1+3) * 2 -- 8
+print(y)
 
-<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">10</span> <span style="color: #d0d0d0">/</span> <span style="color: #90a959">2</span><span style="color: #d0d0d0">)</span> <span style="color: #505050">-- 5</span>
-<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">2</span> <span style="color: #d0d0d0">^</span> <span style="color: #90a959">2</span><span style="color: #d0d0d0">)</span> <span style="color: #505050">-- 4</span>
-<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">5</span> <span style="color: #d0d0d0">%</span> <span style="color: #90a959">2</span><span style="color: #d0d0d0">)</span> <span style="color: #505050">-- 1</span>
-<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0">-</span><span style="color: #d0d0d0;background-color: #151515">b</span><span style="color: #d0d0d0">)</span> <span style="color: #505050">-- -2</span>
+print(10 / 2) -- 5
+print(2 ^ 2) -- 4
+print(5 % 2) -- 1
+print(-b) -- -2
 
-<span style="color: #505050">-- Incerment</span>
-<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">level</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">1</span>
-<span style="color: #d0d0d0;background-color: #151515">level</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">level</span> <span style="color: #d0d0d0">+</span> <span style="color: #90a959">1</span>
-<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">level</span><span style="color: #d0d0d0">)</span></code></pre>
+-- Incerment
+local level = 1
+level = level + 1
+print(level)</code></pre>
 </div>
 </div>
 <div class="sect3">
@@ -1251,14 +1251,14 @@ is also the only way to insert single or double quotes in certain cases.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">phrase</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">[[My name is ]]</span>
-<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">name</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#39;P J&#39;</span>
-<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">phrase</span> <span style="color: #d0d0d0">..</span> <span style="color: #d0d0d0;background-color: #151515">name</span><span style="color: #d0d0d0">)</span> <span style="color: #505050">-- My name is P J</span>
+<pre class="rouge highlight"><code data-lang="lua">local phrase = [[My name is ]]
+local name = &#39;P J&#39;
+print(phrase .. name) -- My name is P J
 
-<span style="color: #505050">-- Strings and Numbers</span>
-<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">age</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">21</span>
-<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">name</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#34;Billy&#34;</span>
-<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">name</span> <span style="color: #d0d0d0">..</span> <span style="color: #90a959">&#34; is &#34;</span> <span style="color: #d0d0d0">..</span> <span style="color: #d0d0d0;background-color: #151515">age</span> <span style="color: #d0d0d0">..</span> <span style="color: #90a959">&#34; Years old&#34;</span><span style="color: #d0d0d0">)</span></code></pre>
+-- Strings and Numbers
+local age = 21
+local name = &#34;Billy&#34;
+print(name .. &#34; is &#34; .. age .. &#34; Years old&#34;)</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1386,7 +1386,7 @@ interpretation of characters.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0">#</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;This is a string&#34;</span><span style="color: #d0d0d0">))</span> <span style="color: #505050">--&gt; 16</span></code></pre>
+<pre class="rouge highlight"><code data-lang="lua">print(#(&#34;This is a string&#34;)) --&gt; 16</code></pre>
 </div>
 </div>
 <div class="sect3">
