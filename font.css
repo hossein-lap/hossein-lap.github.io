@@ -3,6 +3,7 @@
 @font-face {
 font-family: "CMU Sans Serif";
   src: url('/font.d/cmu.sans-serif-medium.ttf') format('truetype'), url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunss.otf') format('opentype');
+  font-weight: normal;
   font-style: normal;
 }
 
@@ -31,6 +32,7 @@ font-family: "CMU Sans Serif";
   font-family: "CMU Serif";
   src: url('/font.d/cmu.serif-roman.ttf') format('truetype'), url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunrm.otf') format('opentype');
   font-style: normal;
+  font-weight: normal;
 }
 
 @font-face {
@@ -58,6 +60,7 @@ font-family: "CMU Sans Serif";
   font-family: "CMU Typewriter Text";
   src: url('/font.d/cmu.typewriter-text-regular.ttf') format('truetype'), url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmuntt.otf') format('opentype');
   font-style: normal;
+  font-weight: normal;
 }
 
 @font-face {
