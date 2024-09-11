@@ -1,0 +1,79 @@
+
+/* Sans {{{ */
+@font-face {
+font-family: "CMU Sans Serif";
+  src: local("CMU Sans Serif"), local("Computer Modern Sans Serif"), url('/font.d/cmu.sans-serif-medium.ttf') format('truetype'), url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/nss.otf') format('opentype');
+}
+
+@font-face {
+  font-family: "CMU Sans Serif";
+  src: local("CMU Sans Serif"), local("Computer Modern Sans Serif"), url('/font.d/cmu.sans-serif-bold'), url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/nsx.otf') format('opentype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "CMU Sans Serif";
+  src: local("CMU Sans Serif") url('/font.d/cmu.sans-serif-oblique.ttf') format('truetype'), url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/nsi.otf') format('opentype');
+  font-style: italic, oblique;
+}
+
+@font-face {
+  font-family: "CMU Sans Serif";
+  src: local("CMU Sans Serif") url('/font.d/cmu.sans-serif-boldoblique.ttf') format('truetype'), url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/nbxo.otf') format('opentype');
+  font-weight: bold;
+  font-style: italic, oblique;
+}
+/* }}} */
+
+/* Serif {{{ */
+@font-face {
+  font-family: "CMU Serif";
+  src: local("CMU Serif") url('/font.d/cmu.serif-roman.ttf') format('truetype'), url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/nrm.otf') format('opentype');
+}
+
+@font-face {
+  font-family: "CMU Serif";
+  src: local("CMU Serif") url('/font.d/cmu.serif-bold.ttf') format('truetype'), url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/nbx.otf') format('opentype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "CMU Serif";
+  src: local("CMU Serif") url('/font.d/cmu.serif-italic.ttf') format('truetype'), url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/nci.otf') format('opentype');
+  font-style: italic, oblique;
+}
+
+@font-face {
+  font-family: "CMU Serif";
+  src: local("CMU Serif") url('/font.d/cmu.serif-bolditalic.ttf') format('truetype'), url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/nbi.otf') format('opentype');
+  font-weight: bold;
+  font-style: italic, oblique;
+}
+/* }}} */
+
+/* Mono / Typewriter {{{ */
+@font-face {
+  font-family: "CMU Typewriter Text";
+  src: local("CMU Typewriter Text"), local("CMU Typewriter"), url('/font.d/cmu.typewriter-text-regular.ttf') format('truetype'), url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/ntt.otf') format('opentype');
+}
+
+@font-face {
+  font-family: "CMU Typewriter Text";
+  src: local("CMU Typewriter Text"), local("CMU Typewriter"), url('/font.d/cmu.typewriter-text-bold.ttf') format('truetype'), url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/ntb.otf') format('opentype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "CMU Typewriter Text";
+  src: local("CMU Typewriter Text"), local("CMU Typewriter"), url('/font.d/cmu.typewriter-text-italic.ttf') format('truetype'), url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/nit.otf') format('opentype');
+  font-style: italic, oblique;
+}
+
+@font-face {
+  font-family: "CMU Typewriter Text";
+  src: local("CMU Typewriter Text"), local("CMU Typewriter"), url('/font.d/cmu.typewriter-text-bolditalic.ttf') format('truetype'), url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/ntx.otf') format('opentype');
+  font-weight: bold;
+  font-style: italic, oblique;
+}
+/* }}} */
+
