@@ -1,0 +1,1403 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/feed_style.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="https://www.rssboard.org/media-rss">
+  <channel>
+    <title>Perl on Hossein Esmailzadeh</title>
+    <link>https://hossein-lap.github.io/tags/perl/</link>
+    <description>Recent content in Perl on Hossein Esmailzadeh</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Hos Es</copyright>
+    <lastBuildDate>Wed, 11 Sep 2024 15:04:10 +0330</lastBuildDate><atom:link href="https://hossein-lap.github.io/tags/perl/index.xml" rel="self" type="application/rss+xml" /><icon>https://hossein-lap.github.io/images/ed/foo.png</icon>
+    
+    
+    <item>
+      <title>Perl</title>
+      <link>https://hossein-lap.github.io/notes/perl/</link>
+      <pubDate>Wed, 11 Sep 2024 15:04:10 +0330</pubDate>
+      
+      <guid>https://hossein-lap.github.io/notes/perl/</guid>
+      <description><![CDATA[<div id="preamble">
+<div class="sectionbody">
+<div class="listingblock">
+<div class="title">Hello World!</div>
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="perl"><span style="color: #505050">#!/bin/perl</span>
+<span style="color: #aa759f">use</span> <span style="color: #d0d0d0;background-color: #151515">warnings</span><span style="color: #d0d0d0">;</span>
+<span style="color: #aa759f">print</span><span style="color: #d0d0d0">(&#34;</span><span style="color: #90a959">Hello world!</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;);</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<div class="title">Note</div>
+<p><code>use warnings;</code> is called <em>pragma</em> in Perl. This pragma instructs Perl to turn
+on additional warning reporting.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_perl_syntax">Perl Syntax</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Basic <strong>Perl syntax</strong> to get started with Perl language quickly including
+variables, expressions, statements, block, comments, whitespaces, and keywords.</p>
+</div>
+<div class="sect2">
+<h3 id="_values_and_variables">Values and Variables</h3>
+<div class="paragraph">
+<p>You develop Perl programs to manipulate some kinds of data. The data can be
+either <a href="doc/03-perl-numbers.html#_Perl_numbers">numbers</a>,
+<a href="doc/04-perl-strings.html#_Perl_strings">strings</a>, or more complex such as a
+<a href="doc/06-perl-list.html#_Perl_list">list</a>. Data is held as value.</p>
+</div>
+<div class="listingblock">
+<div class="title">Some values</div>
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="perl"><span style="color: #90a959">10</span>
+<span style="color: #90a959">20.2</span>
+<span style="color: #d0d0d0">&#34;</span><span style="color: #90a959">Perl Syntax</span><span style="color: #d0d0d0">&#34;</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To hold a piece of data, you need <strong>variables</strong>. You use a variable to store a
+value. And through the name of the variable, you can process the value.</p>
+</div>
+<div class="paragraph">
+<p>The following illustrates some variables in Perl:</p>
+</div>
+<div class="listingblock">
+<div class="title">Define variables</div>
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="perl"><span style="color: #d0d0d0;background-color: #151515">$x</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">10</span><span style="color: #d0d0d0">;</span>
+<span style="color: #d0d0d0;background-color: #151515">$y</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">20</span><span style="color: #d0d0d0">;</span>
+<span style="color: #d0d0d0;background-color: #151515">$s</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #90a959">Perl string</span><span style="color: #d0d0d0">&#34;;</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>We have two integer variables (<code>$x</code> and <code>$y</code>) and one string variable (<code>$s</code>).
+For more information on Perl variables, check it out the
+<a href="doc/02-perl-variables.html#_Perl_variables">Perl variables</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_expressions">Expressions</h3>
+<div class="paragraph">
+<p>In Perl, an expression is anything that returns a value.</p>
+</div>
+<div class="paragraph">
+<p>The expression can be used in a larger expression or a statement. The expression can be a literal
+<a href="doc/03-perl-numbers.html#_Perl_numbers">number</a>, complex expression with
+<a href="doc/05-perl-operators.html#_Perl_operators">operators</a>, or a
+<a href="doc/20-perl-subroutine.html#_Perl_subroutine">function (aka subroutine)</a>, call.</p>
+</div>
+<div class="paragraph">
+<p>For example, 3 is an expression that returns a value of 3. The <code>$a + $b</code> is an
+expression that returns the sum of two variables: <code>$a</code> and <code>$b</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_statements">Statements</h3>
+<div class="paragraph">
+<p>A statement is made up of expressions. A statement is executed by Perl at run-time.</p>
+</div>
+<div class="paragraph">
+<p>Each Perl statement must end with a semicolon (<code>;</code>). The following example
+shows the statements in Perl:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="perl"><span style="color: #d0d0d0;background-color: #151515">$c</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">$a</span> <span style="color: #d0d0d0">+</span> <span style="color: #d0d0d0;background-color: #151515">$b</span><span style="color: #d0d0d0">;</span>
+<span style="color: #aa759f">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">$c</span><span style="color: #d0d0d0">);</span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_blocks">Blocks</h3>
+<div class="paragraph">
+<p>A block is made up of statements wrapped in curly braces <code>{}</code>. You use blocks
+to organize statements in the program.</p>
+</div>
+<div class="paragraph">
+<p>The following example illustrates a block in Perl:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="perl"><span style="color: #d0d0d0">{</span>
+	<span style="color: #d0d0d0;background-color: #151515">$a</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">1</span><span style="color: #d0d0d0">;</span>
+	<span style="color: #d0d0d0;background-color: #151515">$a</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">$a</span> <span style="color: #d0d0d0">+</span> <span style="color: #90a959">1</span><span style="color: #d0d0d0">;</span>
+	<span style="color: #aa759f">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">$a</span><span style="color: #d0d0d0">);</span>
+<span style="color: #d0d0d0">}</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Any variable declared inside a block has its own scope.</p>
+</div>
+<div class="paragraph">
+<p>It means the variables declared inside a block only last as long as the block
+is executed.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_comments">Comments</h3>
+<div class="paragraph">
+<p>In Perl, a comment begins with a hash (<code>#</code>) character. Perl interpreter ignores
+comments at both compile-time and runtime.</p>
+</div>
+<div class="paragraph">
+<p>Typically, you use comments to document the logic of your code. The code tells
+you what it does however comments provides information on why the code does so.</p>
+</div>
+<div class="paragraph">
+<p>Comments are very important and useful to you as a programmer in order to
+understand the code later. They’re also useful to other programmers who will
+read and maintain your programs in the future.</p>
+</div>
+<div class="paragraph">
+<p>Let’s take a look at the following example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="perl"><span style="color: #d0d0d0;background-color: #151515">$salary</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">$salary</span> <span style="color: #d0d0d0">+</span> <span style="color: #90a959">1.05</span><span style="color: #d0d0d0">;</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>What the code does is to increase the value of the variable <code>$salary</code> 5%.
+However, why it does so was not documented.</p>
+</div>
+<div class="paragraph">
+<p>Therefore the following code with comment is much clearer.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="perl"><span style="color: #505050"># increase salary %5 for employees who achieve KPI</span>
+<span style="color: #d0d0d0;background-color: #151515">$salary</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">$salary</span> <span style="color: #d0d0d0">+</span> <span style="color: #90a959">1.05</span><span style="color: #d0d0d0">;</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Perl also allows you to place a comment on the same line as the statement. See
+the following example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="perl"><span style="color: #d0d0d0;background-color: #151515">$counter</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">0</span><span style="color: #d0d0d0">;</span> <span style="color: #505050"># reset the counter</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>It is important to use comments properly to make your code easier to
+understand.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_whitespace">Whitespace</h3>
+<div class="paragraph">
+<p>Whitespaces are spaces, tabs, and newlines. Perl is very flexible in terms of
+whitespaces usages. Consider the following example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="perl"><span style="color: #d0d0d0;background-color: #151515">$x</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">20</span><span style="color: #d0d0d0">;</span>
+<span style="color: #d0d0d0;background-color: #151515">$y</span><span style="color: #d0d0d0">=</span><span style="color: #90a959">20</span><span style="color: #d0d0d0">;</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Both lines of code work perfectly. We surrounded the assignment operator (<code>=</code>)
+with whitespace in the first statement, but not in the second one.</p>
+</div>
+<div class="paragraph">
+<p>Perl really doesn’t care about the whitespace. However, it is a good practice
+to use whitespace to make the code more readable.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_keywords">Keywords</h3>
+<div class="paragraph">
+<p>Perl has a set of keywords that have special meanings to its language.</p>
+</div>
+<div class="paragraph">
+<p>Perl keywords fall into some categories such as built-in function and control
+keywords.</p>
+</div>
+<div class="paragraph">
+<p>You should always avoid using keywords to name variables, functions,
+<a href="doc/21-perl-modules.html#_Perl_modules">modules</a>, and other objects. Check it
+out the <a href="http://learn.perl.org/docs/keywords.html">Perl keywords</a>.</p>
+</div>
+<div class="paragraph">
+<p>Sometimes, it is fine to use a variable name such as <code>$print</code>, which is similar
+to the built-in <code>print()</code> function. However, this may lead to confusion. In
+addition, if the program has an issue, it’s more difficult to troubleshoot.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_perl_variables">Perl Variables</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To manipulate data in your program, you use variables.</p>
+</div>
+<div class="paragraph">
+<p>Perl provides three types of variables: scalars, lists, and hashes to help you
+manipulate the corresponding data types including scalars, lists, and hashes.</p>
+</div>
+<div class="paragraph">
+<p>We’ll focus on the scalar variable in this section.</p>
+</div>
+<div class="sect2">
+<h3 id="_naming_variables">Naming variables</h3>
+<div class="paragraph">
+<p>You use scalar variables to manipulate scalar data such as
+<a href="doc/03-perl-numbers.html#_Perl_numbers">numbers</a> and
+<a href="doc/04-perl-strings.html#_Perl_strings">strings</a>,</p>
+</div>
+<div class="paragraph">
+<p>A scalar variable starts with a dollar sign (<code>$</code>), followed by a letter or
+underscore, after that, any combination of numbers, letters, and underscores.
+The name of a variable can be up to 255 characters.</p>
+</div>
+<div class="paragraph">
+<p>Perl is case-sensitive. The <code>$variable</code> and <code>$Variable</code> are different variables.</p>
+</div>
+<div class="paragraph">
+<p>Perl uses the dollar sign (<code>$</code>) as a prefix for the scalar variables because of
+the <code>$</code> looks like the character S in the scalar. You can use this tip to
+remember when you want to declare a scalar variable.</p>
+</div>
+<div class="listingblock">
+<div class="title">Valid variables:</div>
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="perl]">$gate = 10;
+$_port = 20;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Invalid variables:</div>
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="perl]">$4whatever = 20; # no letter or underscore found after dollar sign ($)
+$email-address = &#34;zen@example.com&#34;; # special character (-) found
+$home url = &#34;http://localhost/perltutorial&#34;; # space is not allowed</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_declaring_variables">Declaring variables</h3>
+<div class="paragraph">
+<p>Perl doesn’t require you to declare a variable before using it.</p>
+</div>
+<div class="paragraph">
+<p>For example, you can introduce a variable in your program and use it right away
+as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="perl"><span style="color: #d0d0d0;background-color: #151515">$a</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">10</span><span style="color: #d0d0d0">;</span>
+<span style="color: #d0d0d0;background-color: #151515">$b</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">20</span><span style="color: #d0d0d0">;</span>
+<span style="color: #d0d0d0;background-color: #151515">$c</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">$a</span> <span style="color: #d0d0d0">+</span> <span style="color: #d0d0d0;background-color: #151515">$b</span><span style="color: #d0d0d0">;</span>
+<span style="color: #aa759f">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">$c</span><span style="color: #d0d0d0">);</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In some cases, using a variable without declaring it explicitly may lead to
+problems. Let’s take a look at the following example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="perl"><span style="color: #d0d0d0;background-color: #151515">$color</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">&#39;</span><span style="color: #90a959">red</span><span style="color: #d0d0d0">&#39;;</span>
+<span style="color: #aa759f">print</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #90a959">Your favorite color is </span><span style="color: #d0d0d0">&#34;</span> <span style="color: #d0d0d0">.</span> <span style="color: #d0d0d0;background-color: #151515">$colour</span> <span style="color: #d0d0d0">.</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;;</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The expected output was <code>Your favorite color is red</code>.</p>
+</div>
+<div class="paragraph">
+<p>However, in this case, you got <code>Your favorite color is</code>, because the <code>$color</code>
+and <code>$colour</code> are different variables. The mistake was made because of the
+<em>different variable names</em>.</p>
+</div>
+<div class="paragraph">
+<p>To prevent such cases, Perl provides a <em>pragma</em> called <code>strict</code> that requires you
+to declare variable explicitly before using it.</p>
+</div>
+<div class="paragraph">
+<p>In this case, if you use the <code>my</code> keyword to declare a variable and try to run
+the script, Perl will issue an error message indicating that a compilation
+error occurred due to the <code>$colour</code> variable must be declared explicitly.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="perl"><span style="color: #505050">#!/usr/bin/perl</span>
+<span style="color: #aa759f">use</span> <span style="color: #d0d0d0;background-color: #151515">strict</span><span style="color: #d0d0d0">;</span>
+<span style="color: #aa759f">my</span> <span style="color: #d0d0d0;background-color: #151515">$color</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">&#39;</span><span style="color: #90a959">red</span><span style="color: #d0d0d0">&#39;;</span>
+<span style="color: #aa759f">print</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #90a959">Your favorite color is </span><span style="color: #d0d0d0">&#34;</span> <span style="color: #d0d0d0">.</span> <span style="color: #d0d0d0;background-color: #151515">$colour</span> <span style="color: #d0d0d0">.</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A variable declared with the <code>my</code> keyword is a <em>lexically scoped</em> variable.</p>
+</div>
+<div class="paragraph">
+<p>It means the variable is only accessible inside the enclosing block or all
+blocks nested inside the enclosing block. In other words, the variable is local
+to the enclosing block.</p>
+</div>
+<div class="paragraph">
+<p>Now, you’ll learn a very important concept in programming called variable
+scopes.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_perl_variable_scopes">Perl variable scopes</h3>
+<div class="paragraph">
+<p>Let’s take a look at the following example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="perl"><span style="color: #505050">#!/usr/bin/perl</span>
+<span style="color: #aa759f">use</span> <span style="color: #d0d0d0;background-color: #151515">warnings</span><span style="color: #d0d0d0">;</span>
+<span style="color: #d0d0d0;background-color: #151515">$color</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">&#39;</span><span style="color: #90a959">red</span><span style="color: #d0d0d0">&#39;;</span>
+<span style="color: #aa759f">print</span><span style="color: #d0d0d0">(&#34;</span><span style="color: #90a959">my favorite #1 color is </span><span style="color: #d0d0d0">&#34;</span> <span style="color: #d0d0d0">.</span> <span style="color: #d0d0d0;background-color: #151515">$color</span> <span style="color: #d0d0d0">.</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;);</span>
+<span style="color: #505050"># another block</span>
+<span style="color: #d0d0d0">{</span>
+	<span style="color: #aa759f">my</span> <span style="color: #d0d0d0;background-color: #151515">$color</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">&#39;</span><span style="color: #90a959">blue</span><span style="color: #d0d0d0">&#39;;</span>
+	<span style="color: #aa759f">print</span><span style="color: #d0d0d0">(&#34;</span><span style="color: #90a959">my favorite #2 color is </span><span style="color: #d0d0d0">&#34;</span> <span style="color: #d0d0d0">.</span> <span style="color: #d0d0d0;background-color: #151515">$color</span> <span style="color: #d0d0d0">.</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;);</span><span style="color: #151515;background-color: #ac4142">  </span>
+<span style="color: #d0d0d0">}</span>
+<span style="color: #505050"># for checking</span>
+<span style="color: #aa759f">print</span><span style="color: #d0d0d0">(&#34;</span><span style="color: #90a959">my favorite #1 color is </span><span style="color: #d0d0d0">&#34;</span> <span style="color: #d0d0d0">.</span> <span style="color: #d0d0d0;background-color: #151515">$color</span> <span style="color: #d0d0d0">.</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;);</span></code></pre>
+</div>
+</div>
+<div class="quoteblock">
+<div class="title">In the example above:</div>
+<blockquote>
+<div class="ulist">
+<ul>
+<li>
+<p>First, declared a global variable named <code>$color</code>.</p>
+</li>
+<li>
+<p>Then, displayed the favorite color by referring to the <code>$color</code> variable. As
+expected, we get the red color in this case.</p>
+</li>
+<li>
+<p>Next, created a new block and declared a variable with the same name <code>$color</code>
+using the <code>my</code> keyword. The <code>$color</code> variable is lexical. It is a local
+variable and only visible inside the enclosing block.</p>
+</li>
+<li>
+<p>After that, inside the block, we displayed the favorite color and we got the
+<code>blue</code> color. The local variable takes priority in this case.</p>
+</li>
+<li>
+<p>Finally, following the block, we referred to the <code>$color</code> variable and Perl
+referred to the <code>$color</code> global variable.</p>
+</li>
+</ul>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>If you want to declare global variables that are visible throughout your
+program or from external packages, you can use <code>our</code> keyword as shown in the
+following code:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="perl"><span style="color: #aa759f">our</span> <span style="color: #d0d0d0;background-color: #151515">$color</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">&#39;</span><span style="color: #90a959">red</span><span style="color: #d0d0d0">&#39;;</span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_perl_variable_interpolation">Perl variable interpolation</h3>
+<div class="paragraph">
+<p>Perl interpolates variables in double-quoted strings. It means if you place a
+variable inside a double-quoted string, you’ll get the value of the variable
+instead of its name.</p>
+</div>
+<div class="paragraph">
+<p>Let’s take a look at the following example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="perl"><span style="color: #505050">#!/usr/bin/perl</span>
+<span style="color: #aa759f">use</span> <span style="color: #d0d0d0;background-color: #151515">strict</span><span style="color: #d0d0d0">;</span>
+<span style="color: #aa759f">use</span> <span style="color: #d0d0d0;background-color: #151515">warnings</span><span style="color: #d0d0d0">;</span>
+
+<span style="color: #aa759f">my</span> <span style="color: #d0d0d0;background-color: #151515">$amount</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">20</span><span style="color: #d0d0d0">;</span>
+<span style="color: #aa759f">my</span> <span style="color: #d0d0d0;background-color: #151515">$s</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #90a959">The amount is </span><span style="color: #8f5536">$amount</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;;</span>
+<span style="color: #aa759f">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">$s</span><span style="color: #d0d0d0">);</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Perl interpolates the value of <code>$amount</code> into the string which is 20.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tbody><tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Note that Perl only interpolates scalar variables and
+<a href="doc/07-perl-array.html#_Perl_array">array</a>, not
+<a href="doc/07-perl-hash.html#_Perl_hash">hashes</a>. In addition, the interpolation is
+only applied to the double-quoted string, but not the single-quoted string.</p>
+</div>
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_perl_numbers">Perl Numbers</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Perl has two kinds of numbers: integer and floating-point numbers.</p>
+</div>
+<div class="sect2">
+<h3 id="_perl_integers">Perl integers</h3>
+<div class="paragraph">
+<p>Integers are whole numbers that have no digits after the decimal points i.e
+<code>10</code>, <code>-20</code> or <code>100</code>.</p>
+</div>
+<div class="paragraph">
+<p>In Perl, integers are often expressed as decimal integers, base 10. The
+following illustrates some integer numbers:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="perl"><span style="color: #505050">#!/usr/bin/perl</span>
+<span style="color: #aa759f">use</span> <span style="color: #d0d0d0;background-color: #151515">warnings</span><span style="color: #d0d0d0">;</span>
+<span style="color: #aa759f">use</span> <span style="color: #d0d0d0;background-color: #151515">strict</span><span style="color: #d0d0d0">;</span>
+
+<span style="color: #d0d0d0;background-color: #151515">$x</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">20</span><span style="color: #d0d0d0">;</span>
+<span style="color: #d0d0d0;background-color: #151515">$y</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">100</span><span style="color: #d0d0d0">;</span>
+<span style="color: #d0d0d0;background-color: #151515">$z</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">-</span><span style="color: #90a959">200</span><span style="color: #d0d0d0">;</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When the integer number is big, you often use a comma as a separator to make it
+easier to read e.g., 123,763,213.</p>
+</div>
+<div class="paragraph">
+<p>However, Perl already uses a comma (<code>,</code>) as a separator in the list so for
+integer numbers Perl uses an underscore character (<code>_</code>) instead. In this case,
+<code>123,763,213</code> is written in Perl as <code>123_763_213</code>.</p>
+</div>
+<div class="paragraph">
+<p>Take a look at the following example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="perl"><span style="color: #aa759f">my</span> <span style="color: #d0d0d0;background-color: #151515">$a</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">123_763_213</span><span style="color: #d0d0d0">;</span>
+<span style="color: #aa759f">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">$a</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;);</span> <span style="color: #505050"># 123763213</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the output of the example above, Perl uses no comma or underscore as the
+separator.</p>
+</div>
+<div class="paragraph">
+<p>Besides the decimal format, Perl also supports other formats including binary,
+octal, and hexadecimal.</p>
+</div>
+<div class="paragraph">
+<p>The following table shows you prefixes for formatting with binary, octal, and
+hexadecimal integers.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;"/>
+<col style="width: 50%;"/>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Number</th>
+<th class="tableblock halign-left valign-top">Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0b123</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Binary integer using a prefix of 0b</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0255</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Octal integer using a prefix of 0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0xABC</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hexadecimal integer using a prefix of 0x</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>All the following integer numbers are 12 in Perl:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>12
+0b1100
+014
+0xC</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_perl_floating_point_numbers">Perl floating-point numbers</h3>
+<div class="paragraph">
+<p>You use floating-point numbers to store real numbers. Perl represents
+floating-point numbers in two forms:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Fixed point</strong>: the decimal point is fixed in the number to denote fractional
+part starts e.g., <code>100.25</code></p>
+</li>
+<li>
+<p><strong>Scientific</strong>: consists of a significand with the actual number value and an
+exponent representing the power of 10 that the significand is multiplied by,
+for example, <code>+1.0025e2</code> or  <code>-1.0025E2</code> is <code>100.25.</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The floating-point number holds 8 bytes, with 11 bits reserved for the exponent
+and 53 bits for significand.</p>
+</div>
+<div class="paragraph">
+<p>The range of floating-point numbers is essentially determined by the standard C
+library of the underlying platform where Perl is running.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_perl_string">Perl String</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Perl’s built-in string functions to manipulate strings.</p>
+</div>
+<div class="sect2">
+<h3 id="_introduction_to_perl_strings">Introduction to Perl strings</h3>
+<div class="paragraph">
+<p>In Perl, a string is a sequence of characters surrounded by some kind of
+quotation marks. A string can contain ASCII, UNICODE, and escape sequences
+characters such as <code>\n</code>.</p>
+</div>
+<div class="paragraph">
+<p>A Perl string has a length that depends on the amount of memory in your system,
+which is theoretically unlimited.</p>
+</div>
+<div class="paragraph">
+<p>The following example demonstrates single and double-quoted strings.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="perl"><span style="color: #aa759f">my</span> <span style="color: #d0d0d0;background-color: #151515">$s1</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #90a959">string with doubled-quotes</span><span style="color: #d0d0d0">&#34;;</span>
+<span style="color: #aa759f">my</span> <span style="color: #d0d0d0;background-color: #151515">$s2</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">&#39;</span><span style="color: #90a959">string with single quote</span><span style="color: #d0d0d0">&#39;;</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>It is important to remember that the double-quoted string replaces variables
+inside it by their values, while the single-quoted string treats them as text.
+This is known as variable interpolation in Perl.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_perl_string_alternative_delimiters">Perl string alternative delimiters</h3>
+<div class="paragraph">
+<p>Besides the single and double quotes, Perl also allows you to use quote-like
+operators such as:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>q//</code> acts like a single-quoted string.</p>
+</li>
+<li>
+<p>The <code>qq//</code> acts like double-quoted string.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You can choose any non-alphabetic and non-numeric characters as the delimiters,
+not only just characters <code>//</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="perl"><span style="color: #505050">#!/usr/bin/perl</span>
+<span style="color: #aa759f">use</span> <span style="color: #d0d0d0;background-color: #151515">warnings</span><span style="color: #d0d0d0">;</span>
+<span style="color: #aa759f">use</span> <span style="color: #d0d0d0;background-color: #151515">strict</span><span style="color: #d0d0d0">;</span>
+
+<span style="color: #aa759f">my</span> <span style="color: #d0d0d0;background-color: #151515">$s</span><span style="color: #d0d0d0">=</span> <span style="color: #90a959">q/&#34;Are you learning Perl String today?&#34; We asked./</span><span style="color: #d0d0d0">;</span>
+<span style="color: #aa759f">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">$s</span> <span style="color: #d0d0d0">,&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;);</span>
+
+<span style="color: #aa759f">my</span> <span style="color: #d0d0d0;background-color: #151515">$name</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">&#39;</span><span style="color: #90a959">Jack</span><span style="color: #d0d0d0">&#39;;</span>
+<span style="color: #aa759f">my</span> <span style="color: #d0d0d0;background-color: #151515">$s2</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">qq/&#34;Are you learning Perl String today?&#34;$name asked./</span><span style="color: #d0d0d0">;</span>
+<span style="color: #aa759f">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">$s2</span> <span style="color: #d0d0d0">,&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;);</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>How it works.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>First, defined a single-quoted string variable with the quote-like operator
+<code>q/</code>. The string  <code>$s</code> ends with <code>/</code>.</p>
+</li>
+<li>
+<p>Second, defined a double-quoted string with the quote-like operator <code>qq/</code>. In
+this case, we used the <code>$name</code> variable inside a string and it is replaced by
+its value, <code>Jack</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following example demonstrates string with the <code>^</code> delimiter.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="perl"><span style="color: #505050">#!/usr/bin/perl</span>
+<span style="color: #aa759f">use</span> <span style="color: #d0d0d0;background-color: #151515">warnings</span><span style="color: #d0d0d0">;</span>
+<span style="color: #aa759f">use</span> <span style="color: #d0d0d0;background-color: #151515">strict</span><span style="color: #d0d0d0">;</span>
+
+<span style="color: #aa759f">my</span> <span style="color: #d0d0d0;background-color: #151515">$s</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">q^A string with different delimiter ^</span><span style="color: #d0d0d0">;</span>
+<span style="color: #aa759f">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">$s</span><span style="color: #d0d0d0">,&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;);</span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_perl_string_functions">Perl string functions</h3>
+<div class="paragraph">
+<p>Perl provides a set of functions that allow you to manipulate strings
+effectively. We cover the most commonly used string functions in the following
+section for your reference.</p>
+</div>
+<div class="sect3">
+<h4 id="_perl_string_length">Perl string length</h4>
+<div class="paragraph">
+<p>To find the number of characters in a string, you use the <code>length()</code> function.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="perl"><span style="color: #aa759f">my</span> <span style="color: #d0d0d0;background-color: #151515">$s</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #90a959">This is a string</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;;</span>
+<span style="color: #aa759f">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">length</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">$s</span><span style="color: #d0d0d0">),&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;);</span> <span style="color: #505050">#17</span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_changing_cases_of_string">Changing cases of string</h4>
+<div class="paragraph">
+<p>To change the cases of a string you use a pair of functions <code>lc()</code> and <code>uc()</code>
+that returns the lowercase and uppercase versions of a string.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="perl"><span style="color: #aa759f">my</span> <span style="color: #d0d0d0;background-color: #151515">$s</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #90a959">Change cases of a string</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;;</span>
+<span style="color: #aa759f">print</span><span style="color: #d0d0d0">(&#34;</span><span style="color: #90a959">To upper case:</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;);</span>
+<span style="color: #aa759f">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">uc</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">$s</span><span style="color: #d0d0d0">),&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;);</span>
+
+<span style="color: #aa759f">print</span><span style="color: #d0d0d0">(&#34;</span><span style="color: #90a959">To lower case:</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;);</span>
+<span style="color: #aa759f">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">lc</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">$s</span><span style="color: #d0d0d0">),&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;);</span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_search_for_a_substring_inside_a_string">Search for a substring inside a string</h4>
+<div class="paragraph">
+<p>To search for a substring inside a string, you use <code>index()</code> and <code>rindex()</code>
+functions.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>index()</code> function searches for a substring inside a string from a
+specified position and returns the position of the first occurrence of the
+substring in the searched string. If the position is omitted, it searches
+from the beginning of the string.</p>
+</li>
+<li>
+<p>The <code>rindex()</code> function works like the <code>index()</code> function except it searches
+from the end of the string instead of from the beginning.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following example demonstrates how to use the <code>index()</code> and <code>rindex()</code>
+functions:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="perl"><span style="color: #505050">#!/usr/bin/perl</span>
+<span style="color: #aa759f">use</span> <span style="color: #d0d0d0;background-color: #151515">warnings</span><span style="color: #d0d0d0">;</span>
+<span style="color: #aa759f">use</span> <span style="color: #d0d0d0;background-color: #151515">strict</span><span style="color: #d0d0d0">;</span>
+
+<span style="color: #aa759f">my</span> <span style="color: #d0d0d0;background-color: #151515">$s</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #90a959">Learning Perl is easy</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;;</span>
+<span style="color: #aa759f">my</span> <span style="color: #d0d0d0;background-color: #151515">$sub</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #90a959">Perl</span><span style="color: #d0d0d0">&#34;;</span>
+<span style="color: #aa759f">my</span> <span style="color: #d0d0d0;background-color: #151515">$p</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">index</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">$s</span><span style="color: #d0d0d0">,</span><span style="color: #d0d0d0;background-color: #151515">$sub</span><span style="color: #d0d0d0">);</span> <span style="color: #505050"># rindex($s,$sub);</span>
+<span style="color: #aa759f">print</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">qq\The substring &#34;$sub&#34; found at position &#34;$p&#34; in string &#34;$s&#34;\</span><span style="color: #d0d0d0">,&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;);</span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_get_or_modify_substring_inside_a_string">Get or modify substring inside a string</h4>
+<div class="paragraph">
+<p>To extract a substring out of a string, you use the <code>substr()</code> function.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="perl"><span style="color: #505050">#!/usr/bin/perl</span>
+<span style="color: #aa759f">use</span> <span style="color: #d0d0d0;background-color: #151515">warnings</span><span style="color: #d0d0d0">;</span>
+<span style="color: #aa759f">use</span> <span style="color: #d0d0d0;background-color: #151515">strict</span><span style="color: #d0d0d0">;</span>
+<span style="color: #505050"># extract substring</span>
+<span style="color: #aa759f">my</span> <span style="color: #d0d0d0;background-color: #151515">$s</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #90a959">Green is my favorite color</span><span style="color: #d0d0d0">&#34;;</span>
+<span style="color: #aa759f">my</span> <span style="color: #d0d0d0;background-color: #151515">$color</span><span style="color: #151515;background-color: #ac4142"> </span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">substr</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">$s</span><span style="color: #d0d0d0">,</span> <span style="color: #90a959">0</span><span style="color: #d0d0d0">,</span> <span style="color: #90a959">5</span><span style="color: #d0d0d0">);</span><span style="color: #151515;background-color: #ac4142">     </span> <span style="color: #505050"># Green</span>
+<span style="color: #aa759f">my</span> <span style="color: #d0d0d0;background-color: #151515">$end</span><span style="color: #151515;background-color: #ac4142">   </span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">substr</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">$s</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">-</span><span style="color: #90a959">5</span><span style="color: #d0d0d0">);</span><span style="color: #151515;background-color: #ac4142">       </span> <span style="color: #505050"># color</span>
+
+<span style="color: #aa759f">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">$end</span><span style="color: #d0d0d0">,&#34;</span><span style="color: #90a959">:</span><span style="color: #d0d0d0">&#34;,</span><span style="color: #d0d0d0;background-color: #151515">$color</span><span style="color: #d0d0d0">,&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;);</span>
+
+<span style="color: #505050"># replace substring</span>
+<span style="color: #d0d0d0;background-color: #151515">substr</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">$s</span><span style="color: #d0d0d0">,</span> <span style="color: #90a959">0</span><span style="color: #d0d0d0">,</span> <span style="color: #90a959">5</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #90a959">Red</span><span style="color: #d0d0d0">&#34;);</span> <span style="color: #505050">#Red is my favorite color</span>
+<span style="color: #aa759f">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">$s</span><span style="color: #d0d0d0">,&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;);</span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_other_useful_perl_string_functions">Other useful Perl string functions</h4>
+<div class="paragraph">
+<p>The following table illustrates other useful Perl string functions with their
+descriptions:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;"/>
+<col style="width: 50%;"/>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Function</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>chr</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Return ASCII or UNICODE character of a number</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>crypt</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Encrypts passwords in one way fashion</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hex</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Converts a hexadecimal string to the corresponding value</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>index</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Searches for a substring inside a string returns position where the first occurrence of the substring found</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>lc</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns a lowercase version of the string</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>length</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns the number of characters of a string</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>oct</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Converts a string to an octal number</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ord</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns the numeric value of the first character of a string</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>q/string/</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Creates single-quoted strings</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>qq/string/</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Creates double-quoted strings</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>reverse</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reverses a string</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rindex</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Searches for a substring from right to left</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sprintf</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Formats string to be used with print()</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>substr</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gets or modifies a substring in a string</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>uc</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns the uppercase version of the string</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_perl_operator">Perl Operator</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Perl operators including numeric operators, string operators, and logical operators.</p>
+</div>
+<div class="sect2">
+<h3 id="_numeric_operators">Numeric operators</h3>
+<div class="paragraph">
+<p>Perl provides numeric operators to help you operate on numbers including
+arithmetic, Boolean and bitwise operations. Let’s examine the different kinds
+of operators in more detail.</p>
+</div>
+<div class="sect3">
+<h4 id="_arithmetic_operators">Arithmetic operators</h4>
+<div class="paragraph">
+<p>Perl arithmetic operators deal with basic math such as adding, subtracting,
+multiplying, diving, etc. To add (<code>+</code>) or subtract (<code>-</code>) numbers, you would do
+something as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="perl"><span style="color: #505050">#!/usr/bin/perl</span>
+<span style="color: #aa759f">use</span> <span style="color: #d0d0d0;background-color: #151515">warnings</span><span style="color: #d0d0d0">;</span>
+<span style="color: #aa759f">use</span> <span style="color: #d0d0d0;background-color: #151515">strict</span><span style="color: #d0d0d0">;</span>
+
+<span style="color: #aa759f">print</span> <span style="color: #90a959">10</span> <span style="color: #d0d0d0">+</span> <span style="color: #90a959">20</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;;</span> <span style="color: #505050"># 30</span>
+<span style="color: #aa759f">print</span> <span style="color: #90a959">20</span> <span style="color: #d0d0d0">-</span> <span style="color: #90a959">10</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;;</span> <span style="color: #505050"># 10</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To multiply or divide numbers, you use divide (<code>/</code>) and multiply (<code>*</code>) operators as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="perl"><span style="color: #505050">#!/usr/bin/perl</span>
+<span style="color: #aa759f">use</span> <span style="color: #d0d0d0;background-color: #151515">warnings</span><span style="color: #d0d0d0">;</span>
+<span style="color: #aa759f">use</span> <span style="color: #d0d0d0;background-color: #151515">strict</span><span style="color: #d0d0d0">;</span>
+
+<span style="color: #aa759f">print</span> <span style="color: #90a959">10</span> <span style="color: #d0d0d0">*</span> <span style="color: #90a959">20</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;;</span> <span style="color: #505050"># 200</span>
+<span style="color: #aa759f">print</span> <span style="color: #90a959">20</span> <span style="color: #d0d0d0">/</span> <span style="color: #90a959">10</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;;</span> <span style="color: #505050"># 2</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When you combine adding, subtracting, multiplying, and dividing operators
+together, Perl will perform the calculation in an order, which is known as
+operator precedence.</p>
+</div>
+<div class="paragraph">
+<p>The multiply and divide operators have higher precedence than add and subtract
+operators, therefore, Perl performs multiplying and dividing before adding and
+subtracting. See the following example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="perl"><span style="color: #aa759f">print</span> <span style="color: #90a959">10</span> <span style="color: #d0d0d0">+</span> <span style="color: #90a959">20</span><span style="color: #d0d0d0">/</span><span style="color: #90a959">2</span> <span style="color: #d0d0d0">-</span> <span style="color: #90a959">5</span> <span style="color: #d0d0d0">*</span> <span style="color: #90a959">2</span> <span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;;</span> <span style="color: #505050"># 10</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Perl performs 20/2 and 5*2 first, therefore you will get 10 + 10 – 10 = 10.</p>
+</div>
+<div class="paragraph">
+<p>You can use brackets <code>()</code> to force Perl to perform calculations based on the
+precedence you want as shown in the following example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="perl"><span style="color: #aa759f">print</span> <span style="color: #d0d0d0">(((</span><span style="color: #90a959">10</span> <span style="color: #d0d0d0">+</span> <span style="color: #90a959">20</span><span style="color: #d0d0d0">)</span> <span style="color: #d0d0d0">/</span> <span style="color: #90a959">2</span> <span style="color: #d0d0d0">-</span> <span style="color: #90a959">5</span><span style="color: #d0d0d0">)</span> <span style="color: #d0d0d0">*</span> <span style="color: #90a959">2</span><span style="color: #d0d0d0">);</span> <span style="color: #505050"># 20;</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To raise one number to the power of another number, you use the exponentiation
+operator.</p>
+</div>
+<div class="listingblock">
+<div class="title">Exponentiation operators:</div>
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="perl"><span style="color: #505050">#!/usr/bin/perl</span>
+<span style="color: #aa759f">use</span> <span style="color: #d0d0d0;background-color: #151515">warnings</span><span style="color: #d0d0d0">;</span>
+<span style="color: #aa759f">use</span> <span style="color: #d0d0d0;background-color: #151515">strict</span><span style="color: #d0d0d0">;</span>
+
+<span style="color: #aa759f">print</span> <span style="color: #90a959">2</span><span style="color: #d0d0d0">**</span><span style="color: #90a959">3</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;;</span> <span style="color: #505050"># = 2 * 2 * 2 = 8.</span>
+<span style="color: #aa759f">print</span> <span style="color: #90a959">3</span><span style="color: #d0d0d0">**</span><span style="color: #90a959">4</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;;</span> <span style="color: #505050"># = 3 * 3 * 3 * 3 = 81.</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To get the remainder of the division of one number by another, you use the modulo operator (<code>%</code>).</p>
+</div>
+<div class="paragraph">
+<p>It is handy to use the modulo operator (<code>%</code>) to check if a number is odd or even
+by dividing it by 2 to get the remainder. If the remainder is zero, the number
+is even, otherwise, the number is odd. See the following example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="perl"><span style="color: #505050">#!/usr/bin/perl</span>
+<span style="color: #aa759f">use</span> <span style="color: #d0d0d0;background-color: #151515">warnings</span><span style="color: #d0d0d0">;</span>
+<span style="color: #aa759f">use</span> <span style="color: #d0d0d0;background-color: #151515">strict</span><span style="color: #d0d0d0">;</span>
+
+<span style="color: #aa759f">print</span> <span style="color: #90a959">4</span> <span style="color: #d0d0d0">%</span> <span style="color: #90a959">2</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;;</span> <span style="color: #505050"># 0 even</span>
+<span style="color: #aa759f">print</span> <span style="color: #90a959">5</span> <span style="color: #d0d0d0">%</span> <span style="color: #90a959">2</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;;</span> <span style="color: #505050"># 1 odd</span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_bitwise_operators">Bitwise Operators</h4>
+<div class="paragraph">
+<p>Bitwise operators allow you to operate on numbers one bit at a time. Think of a
+number as a series of bits e.g., <code>125</code> can be represented in binary form as
+<code>1111101</code>. Perl provides all basic bitwise operators including and (<code>&amp;</code>), or
+(<code>|</code>), exclusive or (<code>^</code>) , not (<code>~</code>) operators, shift right (<code>&gt;&gt;</code>), and shift
+left (<code>&lt;&lt;</code>) operators.</p>
+</div>
+<div class="paragraph">
+<p>The bitwise operators perform from right to left. In other words, bitwise
+operators perform from the rightmost bit to the leftmost bit.</p>
+</div>
+<div class="listingblock">
+<div class="title">Bitwise operations</div>
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="perl"><span style="color: #505050">#!/usr/bin/perl</span>
+<span style="color: #aa759f">use</span> <span style="color: #d0d0d0;background-color: #151515">warnings</span><span style="color: #d0d0d0">;</span>
+<span style="color: #aa759f">use</span> <span style="color: #d0d0d0;background-color: #151515">strict</span><span style="color: #d0d0d0">;</span>
+
+<span style="color: #aa759f">my</span> <span style="color: #d0d0d0;background-color: #151515">$a</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">0b0101</span><span style="color: #d0d0d0">;</span> <span style="color: #505050"># 5</span>
+<span style="color: #aa759f">my</span> <span style="color: #d0d0d0;background-color: #151515">$b</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">0b0011</span><span style="color: #d0d0d0">;</span> <span style="color: #505050"># 3</span>
+
+<span style="color: #aa759f">my</span> <span style="color: #d0d0d0;background-color: #151515">$c</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">$a</span> <span style="color: #d0d0d0">&amp;</span> <span style="color: #d0d0d0;background-color: #151515">$b</span><span style="color: #d0d0d0">;</span> <span style="color: #505050"># 0001 or 1</span>
+<span style="color: #aa759f">print</span> <span style="color: #d0d0d0;background-color: #151515">$c</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;;</span>
+
+<span style="color: #d0d0d0;background-color: #151515">$c</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">$a</span> <span style="color: #d0d0d0">|</span> <span style="color: #d0d0d0;background-color: #151515">$b</span><span style="color: #d0d0d0">;</span> <span style="color: #505050"># 0111 or 7</span>
+<span style="color: #aa759f">print</span> <span style="color: #d0d0d0;background-color: #151515">$c</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;;</span>
+
+<span style="color: #d0d0d0;background-color: #151515">$c</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">$a</span> <span style="color: #d0d0d0">^</span> <span style="color: #d0d0d0;background-color: #151515">$b</span><span style="color: #d0d0d0">;</span> <span style="color: #505050"># 0110 or 6</span>
+<span style="color: #aa759f">print</span> <span style="color: #d0d0d0;background-color: #151515">$c</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;;</span>
+
+<span style="color: #d0d0d0;background-color: #151515">$c</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">~</span><span style="color: #d0d0d0;background-color: #151515">$a</span><span style="color: #d0d0d0">;</span> <span style="color: #505050"># 11111111111111111111111111111010 (64bits computer) or 4294967290</span>
+<span style="color: #aa759f">print</span> <span style="color: #d0d0d0;background-color: #151515">$c</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;;</span>
+
+<span style="color: #d0d0d0;background-color: #151515">$c</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">$a</span> <span style="color: #d0d0d0">&gt;&gt;</span> <span style="color: #90a959">1</span><span style="color: #d0d0d0">;</span> <span style="color: #505050"># 0101 shift right 1 bit, 010 or 2</span>
+<span style="color: #aa759f">print</span> <span style="color: #d0d0d0;background-color: #151515">$c</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;;</span>
+
+<span style="color: #d0d0d0;background-color: #151515">$c</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">$a</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #90a959">1</span><span style="color: #d0d0d0">;</span> <span style="color: #505050"># 0101 shift left 1 bit, 1010 or 10</span>
+<span style="color: #aa759f">print</span> <span style="color: #d0d0d0;background-color: #151515">$c</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;;</span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_comparison_operators_for_numbers">Comparison operators for numbers</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;"/>
+<col style="width: 50%;"/>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Equality</th>
+<th class="tableblock halign-left valign-top">Operators</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Equal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>==</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Not Equal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>!=</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comparison</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;⇒</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Less than</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Greater than</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&gt;</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Less than or equal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>⇐</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Greater than or equal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&gt;=</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>All the operators in the table above are obvious except the number comparison
+operator <code>&lt;⇒</code> which is also known as spaceship operator.</p>
+</div>
+<div class="paragraph">
+<p>The number comparison operator is often used in sorting numbers. See the code
+below:</p>
+</div>
+$a &lt;=&gt; $b
+<div class="ulist">
+<ul>
+<li>
+<p><strong>1</strong> if <code>$a</code> is greater than <code>$b</code></p>
+</li>
+<li>
+<p><strong>0</strong> if <code>$a</code> and <code>$b</code> are equal</p>
+</li>
+<li>
+<p><strong>-1</strong> if <code>$a</code> is lower than <code>$b</code></p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="perl"><span style="color: #505050">#!/usr/bin/perl</span>
+<span style="color: #aa759f">use</span> <span style="color: #d0d0d0;background-color: #151515">warnings</span><span style="color: #d0d0d0">;</span>
+<span style="color: #aa759f">use</span> <span style="color: #d0d0d0;background-color: #151515">strict</span><span style="color: #d0d0d0">;</span>
+
+<span style="color: #aa759f">my</span> <span style="color: #d0d0d0;background-color: #151515">$a</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">10</span><span style="color: #d0d0d0">;</span>
+<span style="color: #aa759f">my</span> <span style="color: #d0d0d0;background-color: #151515">$b</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">20</span><span style="color: #d0d0d0">;</span>
+
+<span style="color: #aa759f">print</span> <span style="color: #d0d0d0;background-color: #151515">$a</span> <span style="color: #d0d0d0">&lt;=&gt;</span> <span style="color: #d0d0d0;background-color: #151515">$b</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;;</span>
+
+<span style="color: #d0d0d0;background-color: #151515">$b</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">10</span><span style="color: #d0d0d0">;</span>
+<span style="color: #aa759f">print</span> <span style="color: #d0d0d0;background-color: #151515">$a</span> <span style="color: #d0d0d0">&lt;=&gt;</span> <span style="color: #d0d0d0;background-color: #151515">$b</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;;</span>
+
+<span style="color: #d0d0d0;background-color: #151515">$b</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">5</span><span style="color: #d0d0d0">;</span>
+<span style="color: #aa759f">print</span> <span style="color: #d0d0d0;background-color: #151515">$a</span> <span style="color: #d0d0d0">&lt;=&gt;</span> <span style="color: #d0d0d0;background-color: #151515">$b</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;;</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_string_operators">String operators</h3>
+<div class="sect3">
+<h4 id="_comparison_operators">Comparison operators</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;"/>
+<col style="width: 50%;"/>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Equality</th>
+<th class="tableblock halign-left valign-top">Operators</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Equal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>eq</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Not Equal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ne</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comparison</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cmp</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Less than</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>lt</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Greater than</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>gt</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Less than or equal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>le</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Greater than or equal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ge</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_concatenation_operators">Concatenation operators</h4>
+<div class="paragraph">
+<p>Perl provides the concatenation (<code>.</code>) and repetition (<code>x</code>) operators that allow
+you to manipulate strings</p>
+</div>
+<div class="listingblock">
+<div class="title">Concatenation operator (<code>.</code>)</div>
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="perl"><span style="color: #aa759f">print</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #90a959">This is</span><span style="color: #d0d0d0">&#34;</span> <span style="color: #d0d0d0">.</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #90a959"> concatenation operator</span><span style="color: #d0d0d0">&#34;</span> <span style="color: #d0d0d0">.</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;;</span></code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Repetition operators (<code>x</code>)</div>
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="perl"><span style="color: #aa759f">print</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #90a959">a message </span><span style="color: #d0d0d0">&#34;</span> <span style="color: #d0d0d0;background-color: #151515">x</span> <span style="color: #90a959">4</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;;</span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_the_chomp_operator">The chomp() operator</h4>
+<div class="paragraph">
+<p>The <code>chomp()</code> operator (or function) removes the last character in a string and
+returns a number of characters that were removed. The <code>chomp()</code> operator is
+very useful when dealing with the user’s input because it helps you remove the
+new line character \n from the string that the user entered.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="perl"><span style="color: #505050">#!/usr/bin/perl</span>
+<span style="color: #aa759f">use</span> <span style="color: #d0d0d0;background-color: #151515">warnings</span><span style="color: #d0d0d0">;</span>
+<span style="color: #aa759f">use</span> <span style="color: #d0d0d0;background-color: #151515">strict</span><span style="color: #d0d0d0">;</span>
+
+<span style="color: #aa759f">my</span> <span style="color: #d0d0d0;background-color: #151515">$s</span><span style="color: #d0d0d0">;</span>
+<span style="color: #d0d0d0;background-color: #151515">chomp</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">$s</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">&lt;</span><span style="color: #d0d0d0;background-color: #151515">STDIN</span><span style="color: #d0d0d0">&gt;</span><span style="color: #d0d0d0">);</span>
+<span style="color: #aa759f">print</span> <span style="color: #d0d0d0;background-color: #151515">$s</span><span style="color: #d0d0d0">;</span></code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tbody><tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+The <code>&lt;STDIN&gt;</code> is used to get input from users.
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_logical_operators">Logical operators</h3>
+<div class="paragraph">
+<p>Logical operators are often used in control statements such as
+<a href="doc/09-perl-if-statement.html#_Perl_if_Statement">if</a>,
+<a href="doc/13-perl-while-loop.html#_Perl_while_Loop">while</a>,
+<a href="doc/11-perl-given.html#_Perl_given">given</a>,
+etc., to control the flow of the program. The following are logical operators in Perl:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>$a &amp;&amp; $b</code> performs the logic <code>AND</code> of two variables or expressions. The
+logical <code>&amp;&amp;</code> operator checks if both variables or expressions are true.</p>
+</li>
+<li>
+<p><code>$a || $b</code> performs the logic <code>OR</code> of two variables or expressions. The
+logical <code>||</code> operator checks whether a variable or expression is true.</p>
+</li>
+<li>
+<p><code>!$a</code> performs the logic <code>NOT</code> of the variable or expression. The logic <code>!</code>
+operator inverts the value of the following variable or expression. In the
+other words, it converts <code>true</code> to <code>false</code> or <code>false</code> to <code>true</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_perl_list">Perl List</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Perl list and how to manipulate list elements using various techniques such as
+list slicing, ranging and qw() function.</p>
+</div>
+<div class="paragraph">
+<p>A Perl list is a sequence of
+<a href="doc/02-perl-variables.html#_Perl_Variables">scalar</a>
+values. You use parenthesis and comma operators to construct a list. Each value
+is the list is called list element. List elements are indexed and ordered. You
+can refer to each element by its position.</p>
+</div>
+<div class="sect2">
+<h3 id="_simple_perl_list">Simple Perl list</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="perl"><span style="color: #d0d0d0">();</span>
+<span style="color: #d0d0d0">(</span><span style="color: #90a959">10</span><span style="color: #d0d0d0">,</span><span style="color: #90a959">20</span><span style="color: #d0d0d0">,</span><span style="color: #90a959">30</span><span style="color: #d0d0d0">);</span>
+<span style="color: #d0d0d0">(&#34;</span><span style="color: #90a959">this</span><span style="color: #d0d0d0">&#34;,</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #90a959">is</span><span style="color: #d0d0d0">&#34;,</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #90a959">a</span><span style="color: #d0d0d0">&#34;,&#34;</span><span style="color: #90a959">list</span><span style="color: #d0d0d0">&#34;);</span></code></pre>
+</div>
+</div>
+<div class="ulist">
+<div class="title">In the example above:</div>
+<ul>
+<li>
+<p>The first list <code>()</code> is an empty list.</p>
+</li>
+<li>
+<p>The second list <code>(10,20,30)</code> is a list of integers.</p>
+</li>
+<li>
+<p>The third list <code>(&#34;this&#34;, &#34;is&#34;, &#34;a&#34;,&#34;list&#34;)</code> is a list of strings.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Each element in the list is separated by a comma <code>(,)</code>. The print` operator is
+a list operator. So let’s display our lists above with the <code>print</code> operator to
+see how it works:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="perl"><span style="color: #505050">#!/usr/bin/perl</span>
+<span style="color: #aa759f">use</span> <span style="color: #d0d0d0;background-color: #151515">warnings</span><span style="color: #d0d0d0">;</span>
+<span style="color: #aa759f">use</span> <span style="color: #d0d0d0;background-color: #151515">strict</span><span style="color: #d0d0d0">;</span>
+
+<span style="color: #aa759f">print</span><span style="color: #d0d0d0">(());</span> <span style="color: #505050"># display nothing</span>
+<span style="color: #aa759f">print</span><span style="color: #d0d0d0">(&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;);</span>
+<span style="color: #aa759f">print</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">10</span><span style="color: #d0d0d0">,</span><span style="color: #90a959">20</span><span style="color: #d0d0d0">,</span><span style="color: #90a959">30</span><span style="color: #d0d0d0">);</span> <span style="color: #505050"># display 102030</span>
+<span style="color: #aa759f">print</span><span style="color: #d0d0d0">(&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;);</span>
+<span style="color: #aa759f">print</span><span style="color: #d0d0d0">(&#34;</span><span style="color: #90a959">this</span><span style="color: #d0d0d0">&#34;,</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #90a959">is</span><span style="color: #d0d0d0">&#34;,</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #90a959">a</span><span style="color: #d0d0d0">&#34;,&#34;</span><span style="color: #90a959">list</span><span style="color: #d0d0d0">&#34;);</span> <span style="color: #505050"># display: thisisalist</span>
+<span style="color: #aa759f">print</span><span style="color: #d0d0d0">(&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;);</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>We passed several lists to the <code>print</code> operator to display their elements. All
+the lists that we have seen so far contain an element with the same data type.
+These lists are called simple lists.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_complex_perl_list">Complex Perl list</h3>
+<div class="paragraph">
+<p>A Perl list may contain elements that have different data types. This kind of
+list is called a complex list. Let’s take a look at the following example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="perl"><span style="color: #505050">#!/usr/bin/perl</span>
+<span style="color: #aa759f">use</span> <span style="color: #d0d0d0;background-color: #151515">warnings</span><span style="color: #d0d0d0">;</span>
+<span style="color: #aa759f">use</span> <span style="color: #d0d0d0;background-color: #151515">strict</span><span style="color: #d0d0d0">;</span>
+
+<span style="color: #aa759f">my</span> <span style="color: #d0d0d0;background-color: #151515">$x</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">10</span><span style="color: #d0d0d0">;</span>
+<span style="color: #aa759f">my</span> <span style="color: #d0d0d0;background-color: #151515">$s</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #90a959">a string</span><span style="color: #d0d0d0">&#34;;</span>
+<span style="color: #aa759f">print</span><span style="color: #d0d0d0">(&#34;</span><span style="color: #90a959">complex list</span><span style="color: #d0d0d0">&#34;,</span> <span style="color: #d0d0d0;background-color: #151515">$x</span> <span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">$s</span> <span style="color: #d0d0d0">,&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;);</span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_using_qw_function">Using qw function</h3>
+<div class="paragraph">
+<p>Perl provides the <code>qw()</code> function that allows you to get a list by extracting
+words out of a string using the space as a delimiter. The <code>qw</code> stands for quote
+word. The two lists below are the same:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="perl"><span style="color: #505050">#!/usr/bin/perl</span>
+<span style="color: #aa759f">use</span> <span style="color: #d0d0d0;background-color: #151515">warnings</span><span style="color: #d0d0d0">;</span>
+<span style="color: #aa759f">use</span> <span style="color: #d0d0d0;background-color: #151515">strict</span><span style="color: #d0d0d0">;</span>
+
+<span style="color: #aa759f">print</span><span style="color: #d0d0d0">(&#39;</span><span style="color: #90a959">red</span><span style="color: #d0d0d0">&#39;,&#39;</span><span style="color: #90a959">green</span><span style="color: #d0d0d0">&#39;,&#39;</span><span style="color: #90a959">blue</span><span style="color: #d0d0d0">&#39;);</span> <span style="color: #505050"># redgreenblue</span>
+<span style="color: #aa759f">print</span><span style="color: #d0d0d0">(&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;);</span>
+
+<span style="color: #aa759f">print</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">qw(red green blue)</span><span style="color: #d0d0d0">);</span> <span style="color: #505050"># redgreenblue</span>
+<span style="color: #aa759f">print</span><span style="color: #d0d0d0">(&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;);</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Similar to the <code>q/</code> and <code>q//</code> operators, you can use any non-alphanumeric
+character as a delimiter. The following lists are the same:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="perl"><span style="color: #90a959">qw\this is a list\</span><span style="color: #d0d0d0">;</span>
+<span style="color: #90a959">qw{this is a list}</span><span style="color: #d0d0d0">;</span>
+<span style="color: #90a959">qw[this is a list]</span><span style="color: #d0d0d0">;</span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_flattening_list">Flattening list</h3>
+<div class="paragraph">
+<p>If you put a list, called an internal list, inside another list, Perl
+automatically flattens the internal list. The following lists are the same:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="perl"><span style="color: #d0d0d0">(</span><span style="color: #90a959">2</span><span style="color: #d0d0d0">,</span><span style="color: #90a959">3</span><span style="color: #d0d0d0">,</span><span style="color: #90a959">4</span><span style="color: #d0d0d0">,(</span><span style="color: #90a959">5</span><span style="color: #d0d0d0">,</span><span style="color: #90a959">6</span><span style="color: #d0d0d0">))</span>
+<span style="color: #d0d0d0">(</span><span style="color: #90a959">2</span><span style="color: #d0d0d0">,</span><span style="color: #90a959">3</span><span style="color: #d0d0d0">,</span><span style="color: #90a959">4</span><span style="color: #d0d0d0">,</span><span style="color: #90a959">5</span><span style="color: #d0d0d0">,</span><span style="color: #90a959">6</span><span style="color: #d0d0d0">)</span>
+<span style="color: #d0d0d0">((</span><span style="color: #90a959">2</span><span style="color: #d0d0d0">,</span><span style="color: #90a959">3</span><span style="color: #d0d0d0">,</span><span style="color: #90a959">4</span><span style="color: #d0d0d0">),</span><span style="color: #90a959">5</span><span style="color: #d0d0d0">,</span><span style="color: #90a959">6</span><span style="color: #d0d0d0">)</span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_accessing_list_element">Accessing list element</h3>
+<div class="paragraph">
+<p>You can access elements of a list by using the zero-based index. To access the
+n<sup>th</sup> element, you put (n – 1) index inside square brackets.</p>
+</div>
+<div class="listingblock">
+<div class="title">Let’s take a look at the following example:</div>
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="perl"><span style="color: #505050">#!/usr/bin/perl</span>
+<span style="color: #aa759f">use</span> <span style="color: #d0d0d0;background-color: #151515">warnings</span><span style="color: #d0d0d0">;</span>
+<span style="color: #aa759f">use</span> <span style="color: #d0d0d0;background-color: #151515">strict</span><span style="color: #d0d0d0">;</span>
+
+<span style="color: #aa759f">print</span><span style="color: #d0d0d0">(</span>
+     <span style="color: #d0d0d0">(</span><span style="color: #90a959">1</span><span style="color: #d0d0d0">,</span><span style="color: #90a959">2</span><span style="color: #d0d0d0">,</span><span style="color: #90a959">3</span><span style="color: #d0d0d0">)[</span><span style="color: #90a959">0</span><span style="color: #d0d0d0">]</span> <span style="color: #505050"># 1 first element</span>
+<span style="color: #d0d0d0">);</span>
+<span style="color: #aa759f">print</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;;</span> <span style="color: #505050"># new line</span>
+
+<span style="color: #aa759f">print</span><span style="color: #d0d0d0">(</span>
+     <span style="color: #d0d0d0">(</span><span style="color: #90a959">1</span><span style="color: #d0d0d0">,</span><span style="color: #90a959">2</span><span style="color: #d0d0d0">,</span><span style="color: #90a959">3</span><span style="color: #d0d0d0">)[</span><span style="color: #90a959">2</span><span style="color: #d0d0d0">]</span> <span style="color: #505050"># 3 third element</span>
+<span style="color: #d0d0d0">);</span>
+<span style="color: #aa759f">print</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;;</span> <span style="color: #505050"># new line</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To get multiple elements of a list at a time, you can put a list inside square
+brackets. This feature is called list slice. You can omit the parenthesis of
+the list inside the square bracket.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="perl"><span style="color: #d0d0d0">(</span><span style="color: #90a959">1</span><span style="color: #d0d0d0">,</span><span style="color: #90a959">2</span><span style="color: #d0d0d0">,</span><span style="color: #90a959">3</span><span style="color: #d0d0d0">,</span><span style="color: #90a959">4</span><span style="color: #d0d0d0">,</span><span style="color: #90a959">5</span><span style="color: #d0d0d0">)[</span><span style="color: #90a959">0</span><span style="color: #d0d0d0">,</span><span style="color: #90a959">2</span><span style="color: #d0d0d0">,</span><span style="color: #90a959">3</span><span style="color: #d0d0d0">]</span> <span style="color: #505050"># (1,3,4)</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The above code returns a list of three elements <code>(1, 3, 4)</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ranges">Ranges</h3>
+<div class="paragraph">
+<p>Perl allows you to build a list based on a range of numbers or characters e.g.,
+a list of numbers from 1 to 100, a list of characters from a to z. The
+following example defines two lists:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="perl"><span style="color: #d0d0d0">(</span><span style="color: #90a959">1</span><span style="color: #d0d0d0">..</span><span style="color: #90a959">100</span><span style="color: #d0d0d0">)</span>
+<span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">a</span><span style="color: #d0d0d0">..</span><span style="color: #d0d0d0;background-color: #151515">z</span><span style="color: #d0d0d0">)</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_wip">WIP</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+]]></description>
+      
+    </item>
+    
+    
+  </channel>
+</rss>
