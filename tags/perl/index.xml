@@ -5,7 +5,7 @@
     <description>Recent content in Perl on Hossein Esmailzadeh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>Hos Es</copyright>
+    <copyright>Hossein Esmail</copyright>
     <lastBuildDate>Wed, 11 Sep 2024 15:04:10 +0330</lastBuildDate><atom:link href="https://hossein-lap.github.io/tags/perl/index.xml" rel="self" type="application/rss+xml" /><icon>https://hossein-lap.github.io/images/ed/foo.png</icon>
     
     
@@ -15,7 +15,8 @@
       <pubDate>Wed, 11 Sep 2024 15:04:10 +0330</pubDate>
       
       <guid>https://hossein-lap.github.io/notes/perl/</guid>
-      <description><![CDATA[<div id="preamble">
+      <description><![CDATA[
+<div id="preamble">
 <div class="sectionbody">
 <div class="listingblock">
 <div class="title">Hello World!</div>
@@ -33,14 +34,14 @@ on additional warning reporting.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_perl_syntax">Perl Syntax</h2>
+<h2 id="_perl_syntax">1. Perl Syntax</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Basic <strong>Perl syntax</strong> to get started with Perl language quickly including
 variables, expressions, statements, block, comments, whitespaces, and keywords.</p>
 </div>
 <div class="sect2">
-<h3 id="_values_and_variables">Values and Variables</h3>
+<h3 id="_values_and_variables">1.1. Values and Variables</h3>
 <div class="paragraph">
 <p>You develop Perl programs to manipulate some kinds of data. The data can be
 either <a href="doc/03-perl-numbers.html#_Perl_numbers">numbers</a>,
@@ -77,7 +78,7 @@ For more information on Perl variables, check it out the
 </div>
 </div>
 <div class="sect2">
-<h3 id="_expressions">Expressions</h3>
+<h3 id="_expressions">1.2. Expressions</h3>
 <div class="paragraph">
 <p>In Perl, an expression is anything that returns a value.</p>
 </div>
@@ -93,7 +94,7 @@ expression that returns the sum of two variables: <code>$a</code> and <code>$b</
 </div>
 </div>
 <div class="sect2">
-<h3 id="_statements">Statements</h3>
+<h3 id="_statements">1.3. Statements</h3>
 <div class="paragraph">
 <p>A statement is made up of expressions. A statement is executed by Perl at run-time.</p>
 </div>
@@ -109,7 +110,7 @@ shows the statements in Perl:</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_blocks">Blocks</h3>
+<h3 id="_blocks">1.4. Blocks</h3>
 <div class="paragraph">
 <p>A block is made up of statements wrapped in curly braces <code>{}</code>. You use blocks
 to organize statements in the program.</p>
@@ -135,7 +136,7 @@ is executed.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_comments">Comments</h3>
+<h3 id="_comments">1.5. Comments</h3>
 <div class="paragraph">
 <p>In Perl, a comment begins with a hash (<code>#</code>) character. Perl interpreter ignores
 comments at both compile-time and runtime.</p>
@@ -185,7 +186,7 @@ understand.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_whitespace">Whitespace</h3>
+<h3 id="_whitespace">1.6. Whitespace</h3>
 <div class="paragraph">
 <p>Whitespaces are spaces, tabs, and newlines. Perl is very flexible in terms of
 whitespaces usages. Consider the following example:</p>
@@ -206,7 +207,7 @@ to use whitespace to make the code more readable.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_keywords">Keywords</h3>
+<h3 id="_keywords">1.7. Keywords</h3>
 <div class="paragraph">
 <p>Perl has a set of keywords that have special meanings to its language.</p>
 </div>
@@ -228,7 +229,7 @@ addition, if the program has an issue, it’s more difficult to troubleshoot.</p
 </div>
 </div>
 <div class="sect1">
-<h2 id="_perl_variables">Perl Variables</h2>
+<h2 id="_perl_variables">2. Perl Variables</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>To manipulate data in your program, you use variables.</p>
@@ -241,7 +242,7 @@ manipulate the corresponding data types including scalars, lists, and hashes.</p
 <p>We’ll focus on the scalar variable in this section.</p>
 </div>
 <div class="sect2">
-<h3 id="_naming_variables">Naming variables</h3>
+<h3 id="_naming_variables">2.1. Naming variables</h3>
 <div class="paragraph">
 <p>You use scalar variables to manipulate scalar data such as
 <a href="doc/03-perl-numbers.html#_Perl_numbers">numbers</a> and
@@ -277,7 +278,7 @@ $home url = &#34;http://localhost/perltutorial&#34;; # space is not allowed</cod
 </div>
 </div>
 <div class="sect2">
-<h3 id="_declaring_variables">Declaring variables</h3>
+<h3 id="_declaring_variables">2.2. Declaring variables</h3>
 <div class="paragraph">
 <p>Perl doesn’t require you to declare a variable before using it.</p>
 </div>
@@ -342,7 +343,7 @@ scopes.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_perl_variable_scopes">Perl variable scopes</h3>
+<h3 id="_perl_variable_scopes">2.3. Perl variable scopes</h3>
 <div class="paragraph">
 <p>Let’s take a look at the following example:</p>
 </div>
@@ -402,7 +403,7 @@ following code:</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_perl_variable_interpolation">Perl variable interpolation</h3>
+<h3 id="_perl_variable_interpolation">2.4. Perl variable interpolation</h3>
 <div class="paragraph">
 <p>Perl interpolates variables in double-quoted strings. It means if you place a
 variable inside a double-quoted string, you’ll get the value of the variable
@@ -446,13 +447,13 @@ only applied to the double-quoted string, but not the single-quoted string.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_perl_numbers">Perl Numbers</h2>
+<h2 id="_perl_numbers">3. Perl Numbers</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Perl has two kinds of numbers: integer and floating-point numbers.</p>
 </div>
 <div class="sect2">
-<h3 id="_perl_integers">Perl integers</h3>
+<h3 id="_perl_integers">3.1. Perl integers</h3>
 <div class="paragraph">
 <p>Integers are whole numbers that have no digits after the decimal points i.e
 <code>10</code>, <code>-20</code> or <code>100</code>.</p>
@@ -541,7 +542,7 @@ hexadecimal integers.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_perl_floating_point_numbers">Perl floating-point numbers</h3>
+<h3 id="_perl_floating_point_numbers">3.2. Perl floating-point numbers</h3>
 <div class="paragraph">
 <p>You use floating-point numbers to store real numbers. Perl represents
 floating-point numbers in two forms:</p>
@@ -571,13 +572,13 @@ library of the underlying platform where Perl is running.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_perl_string">Perl String</h2>
+<h2 id="_perl_string">4. Perl String</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Perl’s built-in string functions to manipulate strings.</p>
 </div>
 <div class="sect2">
-<h3 id="_introduction_to_perl_strings">Introduction to Perl strings</h3>
+<h3 id="_introduction_to_perl_strings">4.1. Introduction to Perl strings</h3>
 <div class="paragraph">
 <p>In Perl, a string is a sequence of characters surrounded by some kind of
 quotation marks. A string can contain ASCII, UNICODE, and escape sequences
@@ -603,7 +604,7 @@ This is known as variable interpolation in Perl.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_perl_string_alternative_delimiters">Perl string alternative delimiters</h3>
+<h3 id="_perl_string_alternative_delimiters">4.2. Perl string alternative delimiters</h3>
 <div class="paragraph">
 <p>Besides the single and double quotes, Perl also allows you to use quote-like
 operators such as:</p>
@@ -667,14 +668,14 @@ its value, <code>Jack</code>.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_perl_string_functions">Perl string functions</h3>
+<h3 id="_perl_string_functions">4.3. Perl string functions</h3>
 <div class="paragraph">
 <p>Perl provides a set of functions that allow you to manipulate strings
 effectively. We cover the most commonly used string functions in the following
 section for your reference.</p>
 </div>
 <div class="sect3">
-<h4 id="_perl_string_length">Perl string length</h4>
+<h4 id="_perl_string_length">4.3.1. Perl string length</h4>
 <div class="paragraph">
 <p>To find the number of characters in a string, you use the <code>length()</code> function.</p>
 </div>
@@ -686,7 +687,7 @@ section for your reference.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_changing_cases_of_string">Changing cases of string</h4>
+<h4 id="_changing_cases_of_string">4.3.2. Changing cases of string</h4>
 <div class="paragraph">
 <p>To change the cases of a string you use a pair of functions <code>lc()</code> and <code>uc()</code>
 that returns the lowercase and uppercase versions of a string.</p>
@@ -703,7 +704,7 @@ that returns the lowercase and uppercase versions of a string.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_search_for_a_substring_inside_a_string">Search for a substring inside a string</h4>
+<h4 id="_search_for_a_substring_inside_a_string">4.3.3. Search for a substring inside a string</h4>
 <div class="paragraph">
 <p>To search for a substring inside a string, you use <code>index()</code> and <code>rindex()</code>
 functions.</p>
@@ -740,7 +741,7 @@ functions:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_get_or_modify_substring_inside_a_string">Get or modify substring inside a string</h4>
+<h4 id="_get_or_modify_substring_inside_a_string">4.3.4. Get or modify substring inside a string</h4>
 <div class="paragraph">
 <p>To extract a substring out of a string, you use the <code>substr()</code> function.</p>
 </div>
@@ -763,7 +764,7 @@ functions:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_other_useful_perl_string_functions">Other useful Perl string functions</h4>
+<h4 id="_other_useful_perl_string_functions">4.3.5. Other useful Perl string functions</h4>
 <div class="paragraph">
 <p>The following table illustrates other useful Perl string functions with their
 descriptions:</p>
@@ -847,20 +848,20 @@ descriptions:</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_perl_operator">Perl Operator</h2>
+<h2 id="_perl_operator">5. Perl Operator</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Perl operators including numeric operators, string operators, and logical operators.</p>
 </div>
 <div class="sect2">
-<h3 id="_numeric_operators">Numeric operators</h3>
+<h3 id="_numeric_operators">5.1. Numeric operators</h3>
 <div class="paragraph">
 <p>Perl provides numeric operators to help you operate on numbers including
 arithmetic, Boolean and bitwise operations. Let’s examine the different kinds
 of operators in more detail.</p>
 </div>
 <div class="sect3">
-<h4 id="_arithmetic_operators">Arithmetic operators</h4>
+<h4 id="_arithmetic_operators">5.1.1. Arithmetic operators</h4>
 <div class="paragraph">
 <p>Perl arithmetic operators deal with basic math such as adding, subtracting,
 multiplying, diving, etc. To add (<code>+</code>) or subtract (<code>-</code>) numbers, you would do
@@ -951,7 +952,7 @@ is even, otherwise, the number is odd. See the following example:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_bitwise_operators">Bitwise Operators</h4>
+<h4 id="_bitwise_operators">5.1.2. Bitwise Operators</h4>
 <div class="paragraph">
 <p>Bitwise operators allow you to operate on numbers one bit at a time. Think of a
 number as a series of bits e.g., <code>125</code> can be represented in binary form as
@@ -994,7 +995,7 @@ operators perform from the rightmost bit to the leftmost bit.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_comparison_operators_for_numbers">Comparison operators for numbers</h4>
+<h4 id="_comparison_operators_for_numbers">5.1.3. Comparison operators for numbers</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;"/>
@@ -1081,9 +1082,9 @@ $a &lt;=&gt; $b
 </div>
 </div>
 <div class="sect2">
-<h3 id="_string_operators">String operators</h3>
+<h3 id="_string_operators">5.2. String operators</h3>
 <div class="sect3">
-<h4 id="_comparison_operators">Comparison operators</h4>
+<h4 id="_comparison_operators">5.2.1. Comparison operators</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;"/>
@@ -1128,7 +1129,7 @@ $a &lt;=&gt; $b
 </table>
 </div>
 <div class="sect3">
-<h4 id="_concatenation_operators">Concatenation operators</h4>
+<h4 id="_concatenation_operators">5.2.2. Concatenation operators</h4>
 <div class="paragraph">
 <p>Perl provides the concatenation (<code>.</code>) and repetition (<code>x</code>) operators that allow
 you to manipulate strings</p>
@@ -1147,7 +1148,7 @@ you to manipulate strings</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_the_chomp_operator">The chomp() operator</h4>
+<h4 id="_the_chomp_operator">5.2.3. The chomp() operator</h4>
 <div class="paragraph">
 <p>The <code>chomp()</code> operator (or function) removes the last character in a string and
 returns a number of characters that were removed. The <code>chomp()</code> operator is
@@ -1180,7 +1181,7 @@ The <code>&lt;STDIN&gt;</code> is used to get input from users.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_logical_operators">Logical operators</h3>
+<h3 id="_logical_operators">5.3. Logical operators</h3>
 <div class="paragraph">
 <p>Logical operators are often used in control statements such as
 <a href="doc/09-perl-if-statement.html#_Perl_if_Statement">if</a>,
@@ -1209,7 +1210,7 @@ other words, it converts <code>true</code> to <code>false</code> or <code>false<
 </div>
 </div>
 <div class="sect1">
-<h2 id="_perl_list">Perl List</h2>
+<h2 id="_perl_list">6. Perl List</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Perl list and how to manipulate list elements using various techniques such as
@@ -1223,7 +1224,7 @@ is the list is called list element. List elements are indexed and ordered. You
 can refer to each element by its position.</p>
 </div>
 <div class="sect2">
-<h3 id="_simple_perl_list">Simple Perl list</h3>
+<h3 id="_simple_perl_list">6.1. Simple Perl list</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="perl"><span style="color: #d0d0d0">();</span>
@@ -1271,7 +1272,7 @@ These lists are called simple lists.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_complex_perl_list">Complex Perl list</h3>
+<h3 id="_complex_perl_list">6.2. Complex Perl list</h3>
 <div class="paragraph">
 <p>A Perl list may contain elements that have different data types. This kind of
 list is called a complex list. Let’s take a look at the following example:</p>
@@ -1289,7 +1290,7 @@ list is called a complex list. Let’s take a look at the following example:</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_using_qw_function">Using qw function</h3>
+<h3 id="_using_qw_function">6.3. Using qw function</h3>
 <div class="paragraph">
 <p>Perl provides the <code>qw()</code> function that allows you to get a list by extracting
 words out of a string using the space as a delimiter. The <code>qw</code> stands for quote
@@ -1321,7 +1322,7 @@ character as a delimiter. The following lists are the same:</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_flattening_list">Flattening list</h3>
+<h3 id="_flattening_list">6.4. Flattening list</h3>
 <div class="paragraph">
 <p>If you put a list, called an internal list, inside another list, Perl
 automatically flattens the internal list. The following lists are the same:</p>
@@ -1335,7 +1336,7 @@ automatically flattens the internal list. The following lists are the same:</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_accessing_list_element">Accessing list element</h3>
+<h3 id="_accessing_list_element">6.5. Accessing list element</h3>
 <div class="paragraph">
 <p>You can access elements of a list by using the zero-based index. To access the
 n<sup>th</sup> element, you put (n – 1) index inside square brackets.</p>
@@ -1373,7 +1374,7 @@ the list inside the square bracket.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_ranges">Ranges</h3>
+<h3 id="_ranges">6.6. Ranges</h3>
 <div class="paragraph">
 <p>Perl allows you to build a list based on a range of numbers or characters e.g.,
 a list of numbers from 1 to 100, a list of characters from a to z. The
@@ -1389,7 +1390,7 @@ following example defines two lists:</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_wip">WIP</h2>
+<h2 id="_wip">7. WIP</h2>
 <div class="sectionbody">
 
 </div>

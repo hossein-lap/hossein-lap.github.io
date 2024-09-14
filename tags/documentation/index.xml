@@ -5,7 +5,7 @@
     <description>Recent content in Documentation on Hossein Esmailzadeh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>Hos Es</copyright>
+    <copyright>Hossein Esmail</copyright>
     <lastBuildDate>Tue, 02 Apr 2024 22:09:44 +0330</lastBuildDate><atom:link href="https://hossein-lap.github.io/tags/documentation/index.xml" rel="self" type="application/rss+xml" /><icon>https://hossein-lap.github.io/images/ed/foo.png</icon>
     
     
@@ -17,7 +17,7 @@
       <guid>https://hossein-lap.github.io/docs/asciidoc/</guid>
       <description><![CDATA[
 <div class="sect1">
-<h2 id="_intro">Intro</h2>
+<h2 id="_intro">1. Intro</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Okay, let’s do it.</p>
@@ -31,10 +31,10 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_lists">Lists</h2>
+<h2 id="_lists">2. Lists</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_unordered_lists">Unordered lists</h3>
+<h3 id="_unordered_lists">2.1. Unordered lists</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -94,7 +94,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="_ordered_lists">Ordered lists</h3>
+<h3 id="_ordered_lists">2.2. Ordered lists</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -154,7 +154,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="_todo_lists">TODO lists</h3>
+<h3 id="_todo_lists">2.3. TODO lists</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -190,7 +190,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="_separating_lists">Separating lists</h3>
+<h3 id="_separating_lists">2.4. Separating lists</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -235,10 +235,10 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_definitions">Definitions</h2>
+<h2 id="_definitions">3. Definitions</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_normal_definition_list">Normal definition list</h3>
+<h3 id="_normal_definition_list">3.1. Normal definition list</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -268,7 +268,7 @@ section term:: definition of second term</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_horizontal_definition_list">Horizontal definition list</h3>
+<h3 id="_horizontal_definition_list">3.2. Horizontal definition list</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -307,7 +307,7 @@ section term
 </div>
 </div>
 <div class="sect2">
-<h3 id="_multi_line_definition_list">Multi-line definition list</h3>
+<h3 id="_multi_line_definition_list">3.3. Multi-line definition list</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -339,7 +339,7 @@ definition of second term</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_qa">Q&amp;A</h3>
+<h3 id="_qa">3.4. Q&amp;A</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -371,7 +371,7 @@ What is the answer to the Ultimate Question?:: 42</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_mixed">Mixed</h3>
+<h3 id="_mixed">3.5. Mixed</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -503,7 +503,7 @@ Note that the indentation is optional
 </div>
 </div>
 <div class="sect2">
-<h3 id="_complex_content_in_outline_lists">Complex content in outline lists</h3>
+<h3 id="_complex_content_in_outline_lists">3.6. Complex content in outline lists</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -597,10 +597,10 @@ a list continuation on a line adjacent to both blocks.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_links">Links</h2>
+<h2 id="_links">4. Links</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_external">External</h3>
+<h3 id="_external">4.1. External</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -630,7 +630,7 @@ https://github.com/asciidoctor[Asciidoctor @ *GitHub*]</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_relative">Relative</h3>
+<h3 id="_relative">4.2. Relative</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -650,7 +650,7 @@ https://github.com/asciidoctor[Asciidoctor @ *GitHub*]</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_email_and_irc">Email and IRC</h3>
+<h3 id="_email_and_irc">4.3. Email and IRC</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -685,7 +685,7 @@ irc://irc.freenode.org/#asciidoctor</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_inline_anchors">Inline anchors</h3>
+<h3 id="_inline_anchors">4.4. Inline anchors</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -710,7 +710,7 @@ anchor:bookmark-b[]Use a cross reference to link to this location.</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_internal_cross_references">Internal cross references</h3>
+<h3 id="_internal_cross_references">4.5. Internal cross references</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -735,7 +735,7 @@ Learn how to organize the document into &lt;&lt;section-titles,sections&gt;&gt;.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_images">Images</h3>
+<h3 id="_images">4.6. Images</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -783,10 +783,10 @@ image::http://asciidoctor.org/images/octocat.jpg[GitHub mascot]</code></pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_admonition_paragraph">Admonition paragraph</h2>
+<h2 id="_admonition_paragraph">5. Admonition paragraph</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_note">NOTE</h3>
+<h3 id="_note">5.1. NOTE</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -815,7 +815,7 @@ This is a NOTE!
 </div>
 </div>
 <div class="sect2">
-<h3 id="_tip">TIP</h3>
+<h3 id="_tip">5.2. TIP</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -844,7 +844,7 @@ This is a TIP!
 </div>
 </div>
 <div class="sect2">
-<h3 id="_warning">WARNING</h3>
+<h3 id="_warning">5.3. WARNING</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -873,7 +873,7 @@ This is a WARNING!
 </div>
 </div>
 <div class="sect2">
-<h3 id="_caution">CAUTION</h3>
+<h3 id="_caution">5.4. CAUTION</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -902,7 +902,7 @@ This is a CAUTION!
 </div>
 </div>
 <div class="sect2">
-<h3 id="_important">IMPORTANT</h3>
+<h3 id="_important">5.5. IMPORTANT</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -931,7 +931,7 @@ This is a IMPORTANT!
 </div>
 </div>
 <div class="sect2">
-<h3 id="_admonition_blocks">Admonition blocks</h3>
+<h3 id="_admonition_blocks">5.6. Admonition blocks</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -996,10 +996,10 @@ The style can be any one of the admonition labels:</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_blocks">Blocks</h2>
+<h2 id="_blocks">6. Blocks</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_listing_block">Listing block</h3>
+<h3 id="_listing_block">6.1. Listing block</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -1023,7 +1023,7 @@ This is a **_listing block_**
 </div>
 </div>
 <div class="sect2">
-<h3 id="_example_block">Example block</h3>
+<h3 id="_example_block">6.2. Example block</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -1049,7 +1049,7 @@ This is a **_example block_**
 </div>
 </div>
 <div class="sect2">
-<h3 id="_comment_block">Comment block</h3>
+<h3 id="_comment_block">6.3. Comment block</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -1069,7 +1069,7 @@ This is a **_comment block_**
 </div>
 </div>
 <div class="sect2">
-<h3 id="_literal_block">Literal block</h3>
+<h3 id="_literal_block">6.4. Literal block</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -1093,7 +1093,7 @@ This is a **_literal block_**
 </div>
 </div>
 <div class="sect2">
-<h3 id="_pass_block">Pass block</h3>
+<h3 id="_pass_block">6.5. Pass block</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -1113,7 +1113,7 @@ This is a **_literal block_**
 </div>
 </div>
 <div class="sect2">
-<h3 id="_quoteverse_block">Quote/Verse block</h3>
+<h3 id="_quoteverse_block">6.6. Quote/Verse block</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -1138,7 +1138,7 @@ ____</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_blockqoutes">blockqoutes</h4>
+<h4 id="_blockqoutes">6.6.1. blockqoutes</h4>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -1168,7 +1168,7 @@ Everybody remember where we parked.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_sidebar_block">Sidebar block</h3>
+<h3 id="_sidebar_block">6.7. Sidebar block</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -1196,7 +1196,7 @@ This is a Sidebar block -- I have no idea why it&#39;s called `sidebar`
 </div>
 </div>
 <div class="sect2">
-<h3 id="_block_metadata">Block metadata</h3>
+<h3 id="_block_metadata">6.8. Block metadata</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -1234,13 +1234,13 @@ can long endure. ...</pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_customization_wip">Customization (WIP)</h2>
+<h2 id="_customization_wip">7. Customization (WIP)</h2>
 <div class="sectionbody">
 
 </div>
 </div>
 <div class="sect1">
-<h2 id="_render_wip">Render (WIP)</h2>
+<h2 id="_render_wip">8. Render (WIP)</h2>
 <div class="sectionbody">
 
 </div>

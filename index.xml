@@ -5,7 +5,7 @@
     <description>Recent content on Hossein Esmailzadeh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>Hos Es</copyright>
+    <copyright>Hossein Esmail</copyright>
     <lastBuildDate>Wed, 11 Sep 2024 15:04:10 +0330</lastBuildDate><atom:link href="https://hossein-lap.github.io/index.xml" rel="self" type="application/rss+xml" /><icon>https://hossein-lap.github.io/images/ed/foo.png</icon>
     
     
@@ -15,7 +15,8 @@
       <pubDate>Wed, 11 Sep 2024 15:04:10 +0330</pubDate>
       
       <guid>https://hossein-lap.github.io/notes/perl/</guid>
-      <description><![CDATA[<div id="preamble">
+      <description><![CDATA[
+<div id="preamble">
 <div class="sectionbody">
 <div class="listingblock">
 <div class="title">Hello World!</div>
@@ -33,14 +34,14 @@ on additional warning reporting.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_perl_syntax">Perl Syntax</h2>
+<h2 id="_perl_syntax">1. Perl Syntax</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Basic <strong>Perl syntax</strong> to get started with Perl language quickly including
 variables, expressions, statements, block, comments, whitespaces, and keywords.</p>
 </div>
 <div class="sect2">
-<h3 id="_values_and_variables">Values and Variables</h3>
+<h3 id="_values_and_variables">1.1. Values and Variables</h3>
 <div class="paragraph">
 <p>You develop Perl programs to manipulate some kinds of data. The data can be
 either <a href="doc/03-perl-numbers.html#_Perl_numbers">numbers</a>,
@@ -77,7 +78,7 @@ For more information on Perl variables, check it out the
 </div>
 </div>
 <div class="sect2">
-<h3 id="_expressions">Expressions</h3>
+<h3 id="_expressions">1.2. Expressions</h3>
 <div class="paragraph">
 <p>In Perl, an expression is anything that returns a value.</p>
 </div>
@@ -93,7 +94,7 @@ expression that returns the sum of two variables: <code>$a</code> and <code>$b</
 </div>
 </div>
 <div class="sect2">
-<h3 id="_statements">Statements</h3>
+<h3 id="_statements">1.3. Statements</h3>
 <div class="paragraph">
 <p>A statement is made up of expressions. A statement is executed by Perl at run-time.</p>
 </div>
@@ -109,7 +110,7 @@ shows the statements in Perl:</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_blocks">Blocks</h3>
+<h3 id="_blocks">1.4. Blocks</h3>
 <div class="paragraph">
 <p>A block is made up of statements wrapped in curly braces <code>{}</code>. You use blocks
 to organize statements in the program.</p>
@@ -135,7 +136,7 @@ is executed.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_comments">Comments</h3>
+<h3 id="_comments">1.5. Comments</h3>
 <div class="paragraph">
 <p>In Perl, a comment begins with a hash (<code>#</code>) character. Perl interpreter ignores
 comments at both compile-time and runtime.</p>
@@ -185,7 +186,7 @@ understand.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_whitespace">Whitespace</h3>
+<h3 id="_whitespace">1.6. Whitespace</h3>
 <div class="paragraph">
 <p>Whitespaces are spaces, tabs, and newlines. Perl is very flexible in terms of
 whitespaces usages. Consider the following example:</p>
@@ -206,7 +207,7 @@ to use whitespace to make the code more readable.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_keywords">Keywords</h3>
+<h3 id="_keywords">1.7. Keywords</h3>
 <div class="paragraph">
 <p>Perl has a set of keywords that have special meanings to its language.</p>
 </div>
@@ -228,7 +229,7 @@ addition, if the program has an issue, it’s more difficult to troubleshoot.</p
 </div>
 </div>
 <div class="sect1">
-<h2 id="_perl_variables">Perl Variables</h2>
+<h2 id="_perl_variables">2. Perl Variables</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>To manipulate data in your program, you use variables.</p>
@@ -241,7 +242,7 @@ manipulate the corresponding data types including scalars, lists, and hashes.</p
 <p>We’ll focus on the scalar variable in this section.</p>
 </div>
 <div class="sect2">
-<h3 id="_naming_variables">Naming variables</h3>
+<h3 id="_naming_variables">2.1. Naming variables</h3>
 <div class="paragraph">
 <p>You use scalar variables to manipulate scalar data such as
 <a href="doc/03-perl-numbers.html#_Perl_numbers">numbers</a> and
@@ -277,7 +278,7 @@ $home url = &#34;http://localhost/perltutorial&#34;; # space is not allowed</cod
 </div>
 </div>
 <div class="sect2">
-<h3 id="_declaring_variables">Declaring variables</h3>
+<h3 id="_declaring_variables">2.2. Declaring variables</h3>
 <div class="paragraph">
 <p>Perl doesn’t require you to declare a variable before using it.</p>
 </div>
@@ -342,7 +343,7 @@ scopes.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_perl_variable_scopes">Perl variable scopes</h3>
+<h3 id="_perl_variable_scopes">2.3. Perl variable scopes</h3>
 <div class="paragraph">
 <p>Let’s take a look at the following example:</p>
 </div>
@@ -402,7 +403,7 @@ following code:</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_perl_variable_interpolation">Perl variable interpolation</h3>
+<h3 id="_perl_variable_interpolation">2.4. Perl variable interpolation</h3>
 <div class="paragraph">
 <p>Perl interpolates variables in double-quoted strings. It means if you place a
 variable inside a double-quoted string, you’ll get the value of the variable
@@ -446,13 +447,13 @@ only applied to the double-quoted string, but not the single-quoted string.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_perl_numbers">Perl Numbers</h2>
+<h2 id="_perl_numbers">3. Perl Numbers</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Perl has two kinds of numbers: integer and floating-point numbers.</p>
 </div>
 <div class="sect2">
-<h3 id="_perl_integers">Perl integers</h3>
+<h3 id="_perl_integers">3.1. Perl integers</h3>
 <div class="paragraph">
 <p>Integers are whole numbers that have no digits after the decimal points i.e
 <code>10</code>, <code>-20</code> or <code>100</code>.</p>
@@ -541,7 +542,7 @@ hexadecimal integers.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_perl_floating_point_numbers">Perl floating-point numbers</h3>
+<h3 id="_perl_floating_point_numbers">3.2. Perl floating-point numbers</h3>
 <div class="paragraph">
 <p>You use floating-point numbers to store real numbers. Perl represents
 floating-point numbers in two forms:</p>
@@ -571,13 +572,13 @@ library of the underlying platform where Perl is running.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_perl_string">Perl String</h2>
+<h2 id="_perl_string">4. Perl String</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Perl’s built-in string functions to manipulate strings.</p>
 </div>
 <div class="sect2">
-<h3 id="_introduction_to_perl_strings">Introduction to Perl strings</h3>
+<h3 id="_introduction_to_perl_strings">4.1. Introduction to Perl strings</h3>
 <div class="paragraph">
 <p>In Perl, a string is a sequence of characters surrounded by some kind of
 quotation marks. A string can contain ASCII, UNICODE, and escape sequences
@@ -603,7 +604,7 @@ This is known as variable interpolation in Perl.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_perl_string_alternative_delimiters">Perl string alternative delimiters</h3>
+<h3 id="_perl_string_alternative_delimiters">4.2. Perl string alternative delimiters</h3>
 <div class="paragraph">
 <p>Besides the single and double quotes, Perl also allows you to use quote-like
 operators such as:</p>
@@ -667,14 +668,14 @@ its value, <code>Jack</code>.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_perl_string_functions">Perl string functions</h3>
+<h3 id="_perl_string_functions">4.3. Perl string functions</h3>
 <div class="paragraph">
 <p>Perl provides a set of functions that allow you to manipulate strings
 effectively. We cover the most commonly used string functions in the following
 section for your reference.</p>
 </div>
 <div class="sect3">
-<h4 id="_perl_string_length">Perl string length</h4>
+<h4 id="_perl_string_length">4.3.1. Perl string length</h4>
 <div class="paragraph">
 <p>To find the number of characters in a string, you use the <code>length()</code> function.</p>
 </div>
@@ -686,7 +687,7 @@ section for your reference.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_changing_cases_of_string">Changing cases of string</h4>
+<h4 id="_changing_cases_of_string">4.3.2. Changing cases of string</h4>
 <div class="paragraph">
 <p>To change the cases of a string you use a pair of functions <code>lc()</code> and <code>uc()</code>
 that returns the lowercase and uppercase versions of a string.</p>
@@ -703,7 +704,7 @@ that returns the lowercase and uppercase versions of a string.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_search_for_a_substring_inside_a_string">Search for a substring inside a string</h4>
+<h4 id="_search_for_a_substring_inside_a_string">4.3.3. Search for a substring inside a string</h4>
 <div class="paragraph">
 <p>To search for a substring inside a string, you use <code>index()</code> and <code>rindex()</code>
 functions.</p>
@@ -740,7 +741,7 @@ functions:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_get_or_modify_substring_inside_a_string">Get or modify substring inside a string</h4>
+<h4 id="_get_or_modify_substring_inside_a_string">4.3.4. Get or modify substring inside a string</h4>
 <div class="paragraph">
 <p>To extract a substring out of a string, you use the <code>substr()</code> function.</p>
 </div>
@@ -763,7 +764,7 @@ functions:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_other_useful_perl_string_functions">Other useful Perl string functions</h4>
+<h4 id="_other_useful_perl_string_functions">4.3.5. Other useful Perl string functions</h4>
 <div class="paragraph">
 <p>The following table illustrates other useful Perl string functions with their
 descriptions:</p>
@@ -847,20 +848,20 @@ descriptions:</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_perl_operator">Perl Operator</h2>
+<h2 id="_perl_operator">5. Perl Operator</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Perl operators including numeric operators, string operators, and logical operators.</p>
 </div>
 <div class="sect2">
-<h3 id="_numeric_operators">Numeric operators</h3>
+<h3 id="_numeric_operators">5.1. Numeric operators</h3>
 <div class="paragraph">
 <p>Perl provides numeric operators to help you operate on numbers including
 arithmetic, Boolean and bitwise operations. Let’s examine the different kinds
 of operators in more detail.</p>
 </div>
 <div class="sect3">
-<h4 id="_arithmetic_operators">Arithmetic operators</h4>
+<h4 id="_arithmetic_operators">5.1.1. Arithmetic operators</h4>
 <div class="paragraph">
 <p>Perl arithmetic operators deal with basic math such as adding, subtracting,
 multiplying, diving, etc. To add (<code>+</code>) or subtract (<code>-</code>) numbers, you would do
@@ -951,7 +952,7 @@ is even, otherwise, the number is odd. See the following example:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_bitwise_operators">Bitwise Operators</h4>
+<h4 id="_bitwise_operators">5.1.2. Bitwise Operators</h4>
 <div class="paragraph">
 <p>Bitwise operators allow you to operate on numbers one bit at a time. Think of a
 number as a series of bits e.g., <code>125</code> can be represented in binary form as
@@ -994,7 +995,7 @@ operators perform from the rightmost bit to the leftmost bit.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_comparison_operators_for_numbers">Comparison operators for numbers</h4>
+<h4 id="_comparison_operators_for_numbers">5.1.3. Comparison operators for numbers</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;"/>
@@ -1081,9 +1082,9 @@ $a &lt;=&gt; $b
 </div>
 </div>
 <div class="sect2">
-<h3 id="_string_operators">String operators</h3>
+<h3 id="_string_operators">5.2. String operators</h3>
 <div class="sect3">
-<h4 id="_comparison_operators">Comparison operators</h4>
+<h4 id="_comparison_operators">5.2.1. Comparison operators</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;"/>
@@ -1128,7 +1129,7 @@ $a &lt;=&gt; $b
 </table>
 </div>
 <div class="sect3">
-<h4 id="_concatenation_operators">Concatenation operators</h4>
+<h4 id="_concatenation_operators">5.2.2. Concatenation operators</h4>
 <div class="paragraph">
 <p>Perl provides the concatenation (<code>.</code>) and repetition (<code>x</code>) operators that allow
 you to manipulate strings</p>
@@ -1147,7 +1148,7 @@ you to manipulate strings</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_the_chomp_operator">The chomp() operator</h4>
+<h4 id="_the_chomp_operator">5.2.3. The chomp() operator</h4>
 <div class="paragraph">
 <p>The <code>chomp()</code> operator (or function) removes the last character in a string and
 returns a number of characters that were removed. The <code>chomp()</code> operator is
@@ -1180,7 +1181,7 @@ The <code>&lt;STDIN&gt;</code> is used to get input from users.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_logical_operators">Logical operators</h3>
+<h3 id="_logical_operators">5.3. Logical operators</h3>
 <div class="paragraph">
 <p>Logical operators are often used in control statements such as
 <a href="doc/09-perl-if-statement.html#_Perl_if_Statement">if</a>,
@@ -1209,7 +1210,7 @@ other words, it converts <code>true</code> to <code>false</code> or <code>false<
 </div>
 </div>
 <div class="sect1">
-<h2 id="_perl_list">Perl List</h2>
+<h2 id="_perl_list">6. Perl List</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Perl list and how to manipulate list elements using various techniques such as
@@ -1223,7 +1224,7 @@ is the list is called list element. List elements are indexed and ordered. You
 can refer to each element by its position.</p>
 </div>
 <div class="sect2">
-<h3 id="_simple_perl_list">Simple Perl list</h3>
+<h3 id="_simple_perl_list">6.1. Simple Perl list</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="perl"><span style="color: #d0d0d0">();</span>
@@ -1271,7 +1272,7 @@ These lists are called simple lists.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_complex_perl_list">Complex Perl list</h3>
+<h3 id="_complex_perl_list">6.2. Complex Perl list</h3>
 <div class="paragraph">
 <p>A Perl list may contain elements that have different data types. This kind of
 list is called a complex list. Let’s take a look at the following example:</p>
@@ -1289,7 +1290,7 @@ list is called a complex list. Let’s take a look at the following example:</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_using_qw_function">Using qw function</h3>
+<h3 id="_using_qw_function">6.3. Using qw function</h3>
 <div class="paragraph">
 <p>Perl provides the <code>qw()</code> function that allows you to get a list by extracting
 words out of a string using the space as a delimiter. The <code>qw</code> stands for quote
@@ -1321,7 +1322,7 @@ character as a delimiter. The following lists are the same:</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_flattening_list">Flattening list</h3>
+<h3 id="_flattening_list">6.4. Flattening list</h3>
 <div class="paragraph">
 <p>If you put a list, called an internal list, inside another list, Perl
 automatically flattens the internal list. The following lists are the same:</p>
@@ -1335,7 +1336,7 @@ automatically flattens the internal list. The following lists are the same:</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_accessing_list_element">Accessing list element</h3>
+<h3 id="_accessing_list_element">6.5. Accessing list element</h3>
 <div class="paragraph">
 <p>You can access elements of a list by using the zero-based index. To access the
 n<sup>th</sup> element, you put (n – 1) index inside square brackets.</p>
@@ -1373,7 +1374,7 @@ the list inside the square bracket.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_ranges">Ranges</h3>
+<h3 id="_ranges">6.6. Ranges</h3>
 <div class="paragraph">
 <p>Perl allows you to build a list based on a range of numbers or characters e.g.,
 a list of numbers from 1 to 100, a list of characters from a to z. The
@@ -1389,7 +1390,7 @@ following example defines two lists:</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_wip">WIP</h2>
+<h2 id="_wip">7. WIP</h2>
 <div class="sectionbody">
 
 </div>
@@ -1418,7 +1419,8 @@ following example defines two lists:</p>
       <pubDate>Sat, 06 Jul 2024 13:24:36 +0330</pubDate>
       
       <guid>https://hossein-lap.github.io/notes/grafana/</guid>
-      <description><![CDATA[<div id="preamble">
+      <description><![CDATA[
+<div id="preamble">
 <div class="sectionbody">
 <div class="admonitionblock warning">
 <table>
@@ -1438,7 +1440,7 @@ following example defines two lists:</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_grafana_stack">Grafana stack</h2>
+<h2 id="_grafana_stack">1. Grafana stack</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Grafana offers many tools, which we’ve grouped into the following categories:</p>
@@ -1460,7 +1462,7 @@ following example defines two lists:</p>
 </ul>
 </div>
 <div class="sect2">
-<h3 id="_the_core_grafana_stack">The core Grafana stack</h3>
+<h3 id="_the_core_grafana_stack">1.1. The core Grafana stack</h3>
 <div class="paragraph">
 <p>The core Grafana stack consists of <strong>Mimir</strong>, <strong>Loki</strong>, <strong>Tempo</strong>, and <strong>Grafana</strong>; the
 acronym <strong>LGTM</strong> is often used to refer to this tech stack.</p>
@@ -1529,7 +1531,7 @@ with.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_grafana_enterprise_plugins">Grafana Enterprise plugins</h3>
+<h3 id="_grafana_enterprise_plugins">1.2. Grafana Enterprise plugins</h3>
 <div class="paragraph">
 <p>These are part of any paid subscription to Grafana.</p>
 </div>
@@ -1544,7 +1546,7 @@ use.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_grafana_incident_response_and_management">Grafana incident response and management</h3>
+<h3 id="_grafana_incident_response_and_management">1.3. Grafana incident response and management</h3>
 <div class="paragraph">
 <p>Grafana offers three products in the <strong>incident response and management</strong> (<strong>IRM</strong>)
 space:</p>
@@ -1568,7 +1570,7 @@ even manage the incident directly from a messaging service</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_other_grafana_tools">Other Grafana tools</h3>
+<h3 id="_other_grafana_tools">1.4. Other Grafana tools</h3>
 <div class="paragraph">
 <p>Grafana Labs continues to be a leader in observability and has acquired several
 companies in this space to release new products that complement the tools we’ve
@@ -1607,7 +1609,7 @@ project started in 2022, and the two projects have now merged.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_common_log_formats">Common log formats</h2>
+<h2 id="_common_log_formats">2. Common log formats</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Logs support performance and capacity monitoring in infrastructure, bug
@@ -1620,7 +1622,7 @@ analyze logs.</p>
 types used in them, and if any encoding or delimitation is being used.</p>
 </div>
 <div class="sect2">
-<h3 id="_structured_semi_structured_and_unstructured_logging">Structured, semi-structured, and unstructured logging</h3>
+<h3 id="_structured_semi_structured_and_unstructured_logging">2.1. Structured, semi-structured, and unstructured logging</h3>
 <div class="paragraph">
 <p>It does not matter what your logs look like and they can come in structured,
 semi-structured, or unstructured formats.</p>
@@ -1646,7 +1648,7 @@ they will be used by and for what purpose.</p>
 </tbody></table>
 </div>
 <div class="sect3">
-<h4 id="_structured_logging">Structured logging</h4>
+<h4 id="_structured_logging">2.1.1. Structured logging</h4>
 <div class="paragraph">
 <p><strong>Structured logs</strong> have a predetermined message format that allows them to be
 treated as datasets rather than text. The idea of structured logging is to
@@ -1685,7 +1687,7 @@ where logs and event bus technology overlap.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_semi_structured_logging">Semi-structured logging</h4>
+<h4 id="_semi_structured_logging">2.1.2. Semi-structured logging</h4>
 <div class="paragraph">
 <p><strong>Semi-structured</strong> logs aim to bridge the gap between unstructured and structured
 and, as a result, can be quite complicated. They are designed to be easy for
@@ -1696,7 +1698,7 @@ done using regular expressions or other code.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_unstructured_logging">Unstructured logging</h4>
+<h4 id="_unstructured_logging">2.1.3. Unstructured logging</h4>
 <div class="paragraph">
 <p><strong>Unstructured logging</strong> typically refers to log entries that are presented in a
 textual format that can easily be read by humans but is difficult for machines
@@ -1738,14 +1740,14 @@ be stored correctly for searching.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_sample_log_formats">Sample log formats</h3>
+<h3 id="_sample_log_formats">2.2. Sample log formats</h3>
 <div class="paragraph">
 <p>Many log formats have been used in computer systems. All of these formats have
 a common goal of presenting a standard structure or set of fields for recording
 important information about the activity of a computer system.</p>
 </div>
 <div class="sect3">
-<h4 id="_common_event_format_cef">Common Event Format (CEF)</h4>
+<h4 id="_common_event_format_cef">2.2.1. Common Event Format (CEF)</h4>
 <div class="paragraph">
 <p>Developed by ArcSight to fulfill the <strong>Security Information and Event Management</strong>
 (SIEM) use case, the CEF is a structured text-based log format. Using UTF-8
@@ -1815,7 +1817,7 @@ authenticated from 1001:db7::5</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_ncsa_common_log_format_clf">NCSA Common Log Format (CLF)</h4>
+<h4 id="_ncsa_common_log_format_clf">2.2.2. NCSA Common Log Format (CLF)</h4>
 <div class="paragraph">
 <p>As one of the oldest log formats used by web servers, the NCSA CLF has for a
 long time been the most common and well-known log formats. It has a fixed
@@ -1860,7 +1862,7 @@ apache_pb.gif HTTP/1.1&#34; 200 2326</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_w3c_extended_log_file_format">W3C Extended Log File Format</h4>
+<h4 id="_w3c_extended_log_file_format">2.2.3. W3C Extended Log File Format</h4>
 <div class="paragraph">
 <p>The Microsoft Internet Information Server log format known as W3C is a
 structured yet configurable format. Full control over the included fields
@@ -1912,7 +1914,7 @@ client ©, server to client (SC), and client to server (CS).</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_windows_event_log">Windows Event Log</h4>
+<h4 id="_windows_event_log">2.2.4. Windows Event Log</h4>
 <div class="paragraph">
 <p>The Microsoft Windows operating system comes with a built-in complex structured
 logging system that captures data related to specific events on the operating
@@ -1951,7 +1953,7 @@ Workstation Name: DESKTOP-TMC369</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_javascript_object_notation_json">JavaScript Object Notation (JSON)</h4>
+<h4 id="_javascript_object_notation_json">2.2.5. JavaScript Object Notation (JSON)</h4>
 <div class="paragraph">
 <p>As one of the newer yet most commonly used log formats today, JSON is a
 structured format constructed from multiple key-value pairs. Using JSON, data
@@ -1982,7 +1984,7 @@ Boolean, null, object, and array.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_syslog">Syslog</h4>
+<h4 id="_syslog">2.2.6. Syslog</h4>
 <div class="paragraph">
 <p>The go-to log format for many years and still widely used, Syslog is a defined
 standard for creating and transmitting logs. The <strong>Syslog transport protocol</strong>
@@ -2003,7 +2005,7 @@ the body of the log.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_logfmt">Logfmt</h4>
+<h4 id="_logfmt">2.2.7. Logfmt</h4>
 <div class="paragraph">
 <p>Logfmt is a widely used log format that fits as human readable and structured
 so that computers and people can both read it. A Logfmt-formatted log line
@@ -2023,7 +2025,7 @@ service=4ms status=200</pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_exploring_metric_types_and_best_practices">Exploring metric types and best practices</h2>
+<h2 id="_exploring_metric_types_and_best_practices">3. Exploring metric types and best practices</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Metrics, along with logs, are an essential tool for software developers and
@@ -2051,7 +2053,7 @@ usual.</p>
 </ul>
 </div>
 <div class="sect2">
-<h3 id="_wip">WIP</h3>
+<h3 id="_wip">3.1. WIP</h3>
 
 </div>
 </div>
@@ -2068,7 +2070,8 @@ usual.</p>
       <pubDate>Fri, 31 May 2024 18:50:32 +0330</pubDate>
       
       <guid>https://hossein-lap.github.io/notes/k8s-ingress-loadbalancer/</guid>
-      <description><![CDATA[<div id="preamble">
+      <description><![CDATA[
+<div id="preamble">
 <div class="sectionbody">
 <div class="admonitionblock warning">
 <table>
@@ -2091,7 +2094,7 @@ usual.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_forwarding_a_local_network_port_to_a_port_in_the_pod">Forwarding a Local Network Port to a Port in The Pod</h2>
+<h2 id="_forwarding_a_local_network_port_to_a_port_in_the_pod">1. Forwarding a Local Network Port to a Port in The Pod</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>When you want to talk to a specific pod without going through a service (for
@@ -2117,7 +2120,7 @@ e.g <code>kubia-manual</code> pod.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_connecting_to_the_pod_through_the_port_forwarder">Connecting to The Pod Through the Port Forwarder</h3>
+<h3 id="_connecting_to_the_pod_through_the_port_forwarder">1.1. Connecting to The Pod Through the Port Forwarder</h3>
 <div class="paragraph">
 <p>In a different terminal, you can now use curl to send an HTTP request to your pod
 through the <code>kubectl port-forward</code> proxy running on <code>localhost:8888</code>.</p>
@@ -2138,7 +2141,7 @@ through the <code>kubectl port-forward</code> proxy running on <code>localhost:8
 </div>
 </div>
 <div class="sect1">
-<h2 id="_service_object">Service Object</h2>
+<h2 id="_service_object">2. Service Object</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Each pod gets its own IP address, but this address is internal to the cluster
@@ -2151,7 +2154,7 @@ balancer will be created and you can connect to the pod through the load
 balancer’s public IP.</p>
 </div>
 <div class="sect2">
-<h3 id="_creating_a_service_object">Creating a Service Object</h3>
+<h3 id="_creating_a_service_object">2.1. Creating a Service Object</h3>
 <div class="paragraph">
 <p>To create the service, you’ll tell Kubernetes to expose the ReplicationController you
 created:</p>
@@ -2227,7 +2230,7 @@ created:</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_session_affinity_on_the_service">Session Affinity on the Service</h3>
+<h3 id="_session_affinity_on_the_service">2.2. Session Affinity on the Service</h3>
 <div class="paragraph">
 <p>If you execute the same command a few more times, you should hit a different
 pod with every invocation, because the service proxy normally forwards each
@@ -2266,7 +2269,7 @@ explains why session affinity cannot be based on cookies.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_exposing_multiple_ports_in_the_same_service">Exposing Multiple Ports in the Same Service</h3>
+<h3 id="_exposing_multiple_ports_in_the_same_service">2.3. Exposing Multiple Ports in the Same Service</h3>
 <div class="listingblock">
 <div class="title">Manifest</div>
 <div class="content">
@@ -2288,7 +2291,7 @@ explains why session affinity cannot be based on cookies.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_using_named_ports">Using Named Ports</h3>
+<h3 id="_using_named_ports">2.4. Using Named Ports</h3>
 <div class="paragraph">
 <p>You can give a name to each pod’s port and refer to it by name in the service spec.</p>
 </div>
@@ -2325,7 +2328,7 @@ explains why session affinity cannot be based on cookies.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_connecting_to_services_living_outside_the_cluster">Connecting to services living outside the cluster</h2>
+<h2 id="_connecting_to_services_living_outside_the_cluster">3. Connecting to services living outside the cluster</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Instead of having the service redirect connections to pods in the cluster, you
@@ -2337,7 +2340,7 @@ discovery. Client pods running in the cluster can connect to the external
 service like they connect to internal services.</p>
 </div>
 <div class="sect2">
-<h3 id="_service_endpoints">Service Endpoints</h3>
+<h3 id="_service_endpoints">3.1. Service Endpoints</h3>
 <div class="paragraph">
 <p>Services don’t link to pods directly. Instead, a resource sits in between—the
 Endpoints resource. You may have already noticed endpoints if you used the
@@ -2452,7 +2455,7 @@ Endpoints resource hasn’t been created automatically</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_exposing_services_to_external_clients">Exposing services to external clients</h2>
+<h2 id="_exposing_services_to_external_clients">4. Exposing services to external clients</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Few ways to make a service accessible externally.</p>
@@ -2504,7 +2507,7 @@ features than layer 4 services can</p>
 </ul>
 </div>
 <div class="sect2">
-<h3 id="_using_a_nodeport_service">Using a NodePort service</h3>
+<h3 id="_using_a_nodeport_service">4.1. Using a NodePort service</h3>
 <div class="paragraph">
 <p>By creating a <code>NodePort</code> service, you make Kubernetes reserve a port on all its
 nodes (the same port number is used across all of them) and forward incoming
@@ -2616,7 +2619,7 @@ them.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_exposing_a_service_through_an_external_load_balancer">Exposing a service through an external load balancer</h3>
+<h3 id="_exposing_a_service_through_an_external_load_balancer">4.2. Exposing a service through an external load balancer</h3>
 <div class="paragraph">
 <p>Kubernetes clusters running on cloud providers usually support the automatic
 provision of a load balancer from the cloud infrastructure. All you need to do
@@ -2700,7 +2703,7 @@ Even if session affinity is set to <code>None</code>, users will always hit the 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_understanding_the_peculiarities_of_external_connections">Understanding the peculiarities of external connections</h3>
+<h3 id="_understanding_the_peculiarities_of_external_connections">4.3. Understanding the peculiarities of external connections</h3>
 <div class="paragraph">
 <p>You must be aware of several things related to externally originating connections to
 services.</p>
@@ -2747,7 +2750,7 @@ isn’t performed).</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_exposing_services_externally_through_an_ingress_resource">Exposing services externally through an Ingress resource</h2>
+<h2 id="_exposing_services_externally_through_an_ingress_resource">5. Exposing services externally through an Ingress resource</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>You must be aware of several things related to externally originating
@@ -2778,7 +2781,7 @@ which services can’t</p>
 the cluster.</p>
 </div>
 <div class="sect2">
-<h3 id="_creating_an_ingress_resource">Creating an Ingress resource</h3>
+<h3 id="_creating_an_ingress_resource">5.1. Creating an Ingress resource</h3>
 <div class="listingblock">
 <div class="title">An Ingress resource definition: <code>kubia-ingress.yaml</code></div>
 <div class="content">
@@ -2818,7 +2821,7 @@ Kubernetes itself.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_accessing_the_service_through_the_ingress">Accessing the service through the Ingress</h3>
+<h3 id="_accessing_the_service_through_the_ingress">5.2. Accessing the service through the Ingress</h3>
 <div class="paragraph">
 <p>To access your service through <a href="http://kubia.example.com" class="bare">http://kubia.example.com</a>, you’ll need to make sure
 the domain name resolves to the IP of the Ingress controller</p>
@@ -2885,7 +2888,7 @@ kubia.example.com to that IP or you can setup hosts: add the following line to
 </tbody></table>
 </div>
 <div class="sect3">
-<h4 id="_understading_how_ingress_work">Understading how Ingress work</h4>
+<h4 id="_understading_how_ingress_work">5.2.1. Understading how Ingress work</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -2925,12 +2928,12 @@ the pods.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_exposing_multiple_services_through_the_same_ingress">Exposing multiple services through the same Ingress</h3>
+<h3 id="_exposing_multiple_services_through_the_same_ingress">5.3. Exposing multiple services through the same Ingress</h3>
 <div class="paragraph">
 <p>Both <code>rules</code> and <code>paths</code> are arrays, so they can contain multiple items</p>
 </div>
 <div class="sect3">
-<h4 id="_mapping_different_services_to_different_paths_of_the_same_host">Mapping different services to different paths of the same host</h4>
+<h4 id="_mapping_different_services_to_different_paths_of_the_same_host">5.3.1. Mapping different services to different paths of the same host</h4>
 
 </div>
 </div>
@@ -2948,7 +2951,8 @@ the pods.</p>
       <pubDate>Fri, 31 May 2024 16:47:17 +0330</pubDate>
       
       <guid>https://hossein-lap.github.io/notes/webserver/</guid>
-      <description><![CDATA[<div id="preamble">
+      <description><![CDATA[
+<div id="preamble">
 <div class="sectionbody">
 <div class="admonitionblock warning">
 <table>
@@ -3035,7 +3039,7 @@ that needs to be handled (HTTP requests goes to the specified paths)</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_redis_handler">Redis Handler</h2>
+<h2 id="_redis_handler">1. Redis Handler</h2>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
@@ -3051,7 +3055,7 @@ that needs to be handled (HTTP requests goes to the specified paths)</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_mysql_handler">MySQL Handler</h2>
+<h2 id="_mysql_handler">2. MySQL Handler</h2>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
@@ -3069,7 +3073,7 @@ that needs to be handled (HTTP requests goes to the specified paths)</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_json_parser_unmarshal">JSON Parser - Unmarshal</h2>
+<h2 id="_json_parser_unmarshal">3. JSON Parser - Unmarshal</h2>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
@@ -3107,7 +3111,7 @@ that needs to be handled (HTTP requests goes to the specified paths)</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_complex_json">Complex JSON</h3>
+<h3 id="_complex_json">3.1. Complex JSON</h3>
 <div class="listingblock">
 <div class="title"><code>assets/complex.json</code></div>
 <div class="content">
@@ -3181,7 +3185,7 @@ that needs to be handled (HTTP requests goes to the specified paths)</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_common_pitfalls_with_json_unmarshalling_in_go">Common pitfalls with JSON unmarshalling in Go</h3>
+<h3 id="_common_pitfalls_with_json_unmarshalling_in_go">3.2. Common pitfalls with JSON unmarshalling in Go</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -3205,7 +3209,7 @@ that needs to be handled (HTTP requests goes to the specified paths)</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_json_parser_marshal">JSON Parser - Marshal</h2>
+<h2 id="_json_parser_marshal">4. JSON Parser - Marshal</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The <code>json.Marshal()</code> method does the opposite of <code>Unmarshal()</code> by converting
@@ -3240,7 +3244,7 @@ a given data structure into a JSON.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_structs">structs</h3>
+<h3 id="_structs">4.1. structs</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">main</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
@@ -3280,7 +3284,7 @@ format the output.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_customizing_json_field_names_with_struct_tags">Customizing JSON field names with struct tags</h3>
+<h3 id="_customizing_json_field_names_with_struct_tags">4.2. Customizing JSON field names with struct tags</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">type</span> <span style="color: #d0d0d0;background-color: #151515">Dog</span> <span style="color: #aa759f">struct</span> <span style="color: #d0d0d0">{</span>
@@ -3331,7 +3335,7 @@ format the output.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_other_uses_of_struct_tags">Other uses of struct tags</h3>
+<h3 id="_other_uses_of_struct_tags">4.3. Other uses of struct tags</h3>
 <div class="listingblock">
 <div class="title">Omit an empty field (one with its zero value in Go)</div>
 <div class="content">
@@ -3348,7 +3352,7 @@ format the output.
 </div>
 </div>
 <div class="sect1">
-<h2 id="_validating_json_data">Validating JSON data</h2>
+<h2 id="_validating_json_data">5. Validating JSON data</h2>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
@@ -3364,7 +3368,7 @@ format the output.
 </div>
 </div>
 <div class="sect1">
-<h2 id="_defining_custom_behavior_marshal_unmarshal_data">Defining custom behavior - Marshal / Unmarshal data</h2>
+<h2 id="_defining_custom_behavior_marshal_unmarshal_data">6. Defining custom behavior - Marshal / Unmarshal data</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>In Go, you can define custom behavior for marshalling data by implementing the
@@ -3447,7 +3451,7 @@ timestamp format.</p>
     
     
     <item>
-      <title>:)</title>
+      <title>This is P J :)</title>
       <link>https://hossein-lap.github.io/welcome/</link>
       <pubDate>Sun, 26 May 2024 22:08:49 +0330</pubDate>
       
@@ -3460,41 +3464,54 @@ software and trees.</p>
 <div class="paragraph">
 <p>Also, I use vim btw ;)</p>
 </div>
-<div class="hdlist">
-<table>
-<tbody><tr>
-<td class="hdlist1">
-<strong>Programming:</strong>
-</td>
-<td class="hdlist2">
-<p>Lua, Go, C, Bash</p>
-</td>
-</tr>
-<tr>
-<td class="hdlist1">
-<strong>Tools:</strong>
-</td>
-<td class="hdlist2">
-<p>Linux, Git, QEMU/KVM, Docker, K8S, Ansible, tmux</p>
-</td>
-</tr>
-<tr>
-<td class="hdlist1">
-<strong>Writing:</strong>
-</td>
-<td class="hdlist2">
-<p>LaTeX, Groff, Asciidoc(tor), Markdown</p>
-</td>
-</tr>
-<tr>
-<td class="hdlist1">
-<strong>Hobbies:</strong>
-</td>
-<td class="hdlist2">
-<p>Coding, Biking, Volleyball, Fishing</p>
-</td>
-</tr>
-</tbody></table>
+<div class="quoteblock">
+<div class="title"><strong>Bookshelf</strong></div>
+<blockquote>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Programming Languages</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Lua</code> <code>Go</code> <code>C</code> <code>Bash</code></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Tools that I know or use</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Linux</code> <code>Git</code> <code>Docker</code> <code>Kubernetes</code> <code>Ansible</code> <code>QEMU/KVM</code> <code>Vim</code> <code>tmux</code></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Writing / Typestting</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p><code>LaTeX</code> <code>Groff</code> <code>Asciidoc</code> <code>Markdown</code></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Hobbies</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Coding</code> <code>Writing</code> <code>Biking</code> <code>Volleyball</code> <code>Fishing</code> <code>Music</code> <code>Movies</code></p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</blockquote>
 </div>
 ]]></description>
       
@@ -3508,7 +3525,8 @@ software and trees.</p>
       <pubDate>Tue, 02 Apr 2024 22:30:09 +0330</pubDate>
       
       <guid>https://hossein-lap.github.io/docs/lua/</guid>
-      <description><![CDATA[<div id="preamble">
+      <description><![CDATA[
+<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
 <p>Lua is a powerful, fast, lightweight and embeddable programming language. It is
@@ -3541,7 +3559,7 @@ vocabulary in English.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_hello_world">Hello World!</h2>
+<h2 id="_hello_world">1. Hello World!</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Lua can either be used embedded in an application or by itself. The first
@@ -3571,7 +3589,7 @@ calling the print function with the string &#34;Hello, world!&#34; as an argumen
 </div>
 </div>
 <div class="sect1">
-<h2 id="_syntax">Syntax</h2>
+<h2 id="_syntax">2. Syntax</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Syntax of a programming language defines how statements and expressions must be
@@ -3604,7 +3622,7 @@ that sets the value of variable to that expression.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_obtaining_lua">Obtaining Lua</h2>
+<h2 id="_obtaining_lua">3. Obtaining Lua</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Lua can be obtained on the official Lua website,
@@ -3613,7 +3631,7 @@ on the <a href="http://www.lua.org/download.html">download page</a>.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_basics">Basics</h2>
+<h2 id="_basics">4. Basics</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>If you are using the stand-alone Lua interpreter, all you have to do
@@ -3652,7 +3670,7 @@ and prints its factorial:</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_chuncks">Chuncks</h2>
+<h2 id="_chuncks">5. Chuncks</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>We call each piece of code that Lua executes, such as a file or a single line
@@ -3782,7 +3800,7 @@ load the new code; then we can exercise the new code, calling its functions and
 printing the results.</p>
 </div>
 <div class="sect2">
-<h3 id="_some_lexical_conventions">Some Lexical Conventions</h3>
+<h3 id="_some_lexical_conventions">5.1. Some Lexical Conventions</h3>
 <div class="paragraph">
 <p>Identifiers (or names) in Lua can be any string of letters, digits, and underscores,
 not beginning with a digit; for instance</p>
@@ -3835,7 +3853,7 @@ Usually, I reserve the identifier <code>_</code> (a single underscore) for dummy
 </div>
 </div>
 <div class="sect1">
-<h2 id="_comments">Comments</h2>
+<h2 id="_comments">6. Comments</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>A comment is a code annotation that is ignored by the programming language.
@@ -3903,7 +3921,7 @@ the section called &#34;Long Strings&#34;.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_expressions">Expressions</h2>
+<h2 id="_expressions">7. Expressions</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Expressions are pieces of code that have a value and that can be
@@ -3949,7 +3967,7 @@ four chunks are all valid and equivalent:</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_global_variables">Global Variables</h2>
+<h2 id="_global_variables">8. Global Variables</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Global variables do not need declarations; we simply use them. It is not an error
@@ -3978,7 +3996,7 @@ After the assignment, Lua can eventually reclaim the memory used by the variable
 </div>
 </div>
 <div class="sect1">
-<h2 id="_types_and_values">Types and Values</h2>
+<h2 id="_types_and_values">9. Types and Values</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Lua is a dynamically-typed language. There are no type definitions in the language;
@@ -4121,7 +4139,7 @@ or initialized.</p>
 <p>We will discuss now the simple types nil and Boolean.</p>
 </div>
 <div class="sect2">
-<h3 id="_nil">Nil</h3>
+<h3 id="_nil">9.1. Nil</h3>
 <div class="paragraph">
 <p>Nil is a type with a single value, nil, whose main property is to be different
 from any other value. Lua uses nil as a kind of non-value, to represent the
@@ -4131,7 +4149,7 @@ variable to delete it.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_booleans">Booleans</h3>
+<h3 id="_booleans">9.2. Booleans</h3>
 <div class="paragraph">
 <p>The Boolean type has two values, <code>false</code> and <code>true</code>, which represent the
 traditional Boolean values. However, Booleans do not hold a monopoly of
@@ -4256,7 +4274,7 @@ and the <code>or</code> operator returns true if either of arguments is true and
 </div>
 </div>
 <div class="sect2">
-<h3 id="_numbers">Numbers</h3>
+<h3 id="_numbers">9.3. Numbers</h3>
 <div class="paragraph">
 <p>Numbers generally represent quantities, but they can be used for many other things. The
 number type in Lua works mostly in the same way as real numbers.</p>
@@ -4319,7 +4337,7 @@ even in hexadecimal. Here are some valid numbers:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_arithmetic_operations">Arithmetic operations</h4>
+<h4 id="_arithmetic_operations">9.3.1. Arithmetic operations</h4>
 <div class="paragraph">
 <p>The operators for numbers in Lua are the following:</p>
 </div>
@@ -4385,7 +4403,7 @@ even in hexadecimal. Here are some valid numbers:</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_integers">Integers</h4>
+<h4 id="_integers">9.3.2. Integers</h4>
 <div class="paragraph">
 <p>A new subtype of numbers, integers, was added in Lua 5.3. Numbers can be either
 integers or floats.  Floats are similar to numbers as described above, while
@@ -4401,7 +4419,7 @@ integers.  In other cases, with the exception of the floor division operator
 </div>
 </div>
 <div class="sect2">
-<h3 id="_strings">Strings</h3>
+<h3 id="_strings">9.4. Strings</h3>
 <div class="paragraph">
 <p>Strings are sequences of characters that can be used to represent text. They can be written
 in Lua by being contained in double quotes, single quotes or long brackets
@@ -4569,7 +4587,7 @@ interpretation of characters.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_concatenation">Concatenation</h4>
+<h4 id="_concatenation">9.4.1. Concatenation</h4>
 <div class="quoteblock">
 <blockquote>
 <div class="paragraph">
@@ -4592,7 +4610,7 @@ end-to-end.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_other_types">Other types</h3>
+<h3 id="_other_types">9.5. Other types</h3>
 <div class="paragraph">
 <p>The four basic types in Lua (numbers, booleans, nil and strings) have been described in
 the previous sections, but four types are missing:
@@ -4640,7 +4658,7 @@ Threads
 </div>
 </div>
 <div class="sect1">
-<h2 id="_literals">Literals</h2>
+<h2 id="_literals">10. Literals</h2>
 <div class="sectionbody">
 
 </div>
@@ -4705,7 +4723,7 @@ Threads
       <guid>https://hossein-lap.github.io/docs/asciidoc/</guid>
       <description><![CDATA[
 <div class="sect1">
-<h2 id="_intro">Intro</h2>
+<h2 id="_intro">1. Intro</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Okay, let’s do it.</p>
@@ -4719,10 +4737,10 @@ Threads
 </div>
 </div>
 <div class="sect1">
-<h2 id="_lists">Lists</h2>
+<h2 id="_lists">2. Lists</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_unordered_lists">Unordered lists</h3>
+<h3 id="_unordered_lists">2.1. Unordered lists</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -4782,7 +4800,7 @@ Threads
 </div>
 </div>
 <div class="sect2">
-<h3 id="_ordered_lists">Ordered lists</h3>
+<h3 id="_ordered_lists">2.2. Ordered lists</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -4842,7 +4860,7 @@ Threads
 </div>
 </div>
 <div class="sect2">
-<h3 id="_todo_lists">TODO lists</h3>
+<h3 id="_todo_lists">2.3. TODO lists</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -4878,7 +4896,7 @@ Threads
 </div>
 </div>
 <div class="sect2">
-<h3 id="_separating_lists">Separating lists</h3>
+<h3 id="_separating_lists">2.4. Separating lists</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -4923,10 +4941,10 @@ Threads
 </div>
 </div>
 <div class="sect1">
-<h2 id="_definitions">Definitions</h2>
+<h2 id="_definitions">3. Definitions</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_normal_definition_list">Normal definition list</h3>
+<h3 id="_normal_definition_list">3.1. Normal definition list</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -4956,7 +4974,7 @@ section term:: definition of second term</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_horizontal_definition_list">Horizontal definition list</h3>
+<h3 id="_horizontal_definition_list">3.2. Horizontal definition list</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -4995,7 +5013,7 @@ section term
 </div>
 </div>
 <div class="sect2">
-<h3 id="_multi_line_definition_list">Multi-line definition list</h3>
+<h3 id="_multi_line_definition_list">3.3. Multi-line definition list</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -5027,7 +5045,7 @@ definition of second term</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_qa">Q&amp;A</h3>
+<h3 id="_qa">3.4. Q&amp;A</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -5059,7 +5077,7 @@ What is the answer to the Ultimate Question?:: 42</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_mixed">Mixed</h3>
+<h3 id="_mixed">3.5. Mixed</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -5191,7 +5209,7 @@ Note that the indentation is optional
 </div>
 </div>
 <div class="sect2">
-<h3 id="_complex_content_in_outline_lists">Complex content in outline lists</h3>
+<h3 id="_complex_content_in_outline_lists">3.6. Complex content in outline lists</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -5285,10 +5303,10 @@ a list continuation on a line adjacent to both blocks.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_links">Links</h2>
+<h2 id="_links">4. Links</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_external">External</h3>
+<h3 id="_external">4.1. External</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -5318,7 +5336,7 @@ https://github.com/asciidoctor[Asciidoctor @ *GitHub*]</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_relative">Relative</h3>
+<h3 id="_relative">4.2. Relative</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -5338,7 +5356,7 @@ https://github.com/asciidoctor[Asciidoctor @ *GitHub*]</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_email_and_irc">Email and IRC</h3>
+<h3 id="_email_and_irc">4.3. Email and IRC</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -5373,7 +5391,7 @@ irc://irc.freenode.org/#asciidoctor</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_inline_anchors">Inline anchors</h3>
+<h3 id="_inline_anchors">4.4. Inline anchors</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -5398,7 +5416,7 @@ anchor:bookmark-b[]Use a cross reference to link to this location.</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_internal_cross_references">Internal cross references</h3>
+<h3 id="_internal_cross_references">4.5. Internal cross references</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -5423,7 +5441,7 @@ Learn how to organize the document into &lt;&lt;section-titles,sections&gt;&gt;.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_images">Images</h3>
+<h3 id="_images">4.6. Images</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -5471,10 +5489,10 @@ image::http://asciidoctor.org/images/octocat.jpg[GitHub mascot]</code></pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_admonition_paragraph">Admonition paragraph</h2>
+<h2 id="_admonition_paragraph">5. Admonition paragraph</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_note">NOTE</h3>
+<h3 id="_note">5.1. NOTE</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -5503,7 +5521,7 @@ This is a NOTE!
 </div>
 </div>
 <div class="sect2">
-<h3 id="_tip">TIP</h3>
+<h3 id="_tip">5.2. TIP</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -5532,7 +5550,7 @@ This is a TIP!
 </div>
 </div>
 <div class="sect2">
-<h3 id="_warning">WARNING</h3>
+<h3 id="_warning">5.3. WARNING</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -5561,7 +5579,7 @@ This is a WARNING!
 </div>
 </div>
 <div class="sect2">
-<h3 id="_caution">CAUTION</h3>
+<h3 id="_caution">5.4. CAUTION</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -5590,7 +5608,7 @@ This is a CAUTION!
 </div>
 </div>
 <div class="sect2">
-<h3 id="_important">IMPORTANT</h3>
+<h3 id="_important">5.5. IMPORTANT</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -5619,7 +5637,7 @@ This is a IMPORTANT!
 </div>
 </div>
 <div class="sect2">
-<h3 id="_admonition_blocks">Admonition blocks</h3>
+<h3 id="_admonition_blocks">5.6. Admonition blocks</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -5684,10 +5702,10 @@ The style can be any one of the admonition labels:</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_blocks">Blocks</h2>
+<h2 id="_blocks">6. Blocks</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_listing_block">Listing block</h3>
+<h3 id="_listing_block">6.1. Listing block</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -5711,7 +5729,7 @@ This is a **_listing block_**
 </div>
 </div>
 <div class="sect2">
-<h3 id="_example_block">Example block</h3>
+<h3 id="_example_block">6.2. Example block</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -5737,7 +5755,7 @@ This is a **_example block_**
 </div>
 </div>
 <div class="sect2">
-<h3 id="_comment_block">Comment block</h3>
+<h3 id="_comment_block">6.3. Comment block</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -5757,7 +5775,7 @@ This is a **_comment block_**
 </div>
 </div>
 <div class="sect2">
-<h3 id="_literal_block">Literal block</h3>
+<h3 id="_literal_block">6.4. Literal block</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -5781,7 +5799,7 @@ This is a **_literal block_**
 </div>
 </div>
 <div class="sect2">
-<h3 id="_pass_block">Pass block</h3>
+<h3 id="_pass_block">6.5. Pass block</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -5801,7 +5819,7 @@ This is a **_literal block_**
 </div>
 </div>
 <div class="sect2">
-<h3 id="_quoteverse_block">Quote/Verse block</h3>
+<h3 id="_quoteverse_block">6.6. Quote/Verse block</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -5826,7 +5844,7 @@ ____</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_blockqoutes">blockqoutes</h4>
+<h4 id="_blockqoutes">6.6.1. blockqoutes</h4>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -5856,7 +5874,7 @@ Everybody remember where we parked.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_sidebar_block">Sidebar block</h3>
+<h3 id="_sidebar_block">6.7. Sidebar block</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -5884,7 +5902,7 @@ This is a Sidebar block -- I have no idea why it&#39;s called `sidebar`
 </div>
 </div>
 <div class="sect2">
-<h3 id="_block_metadata">Block metadata</h3>
+<h3 id="_block_metadata">6.8. Block metadata</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="listingblock">
@@ -5922,13 +5940,13 @@ can long endure. ...</pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_customization_wip">Customization (WIP)</h2>
+<h2 id="_customization_wip">7. Customization (WIP)</h2>
 <div class="sectionbody">
 
 </div>
 </div>
 <div class="sect1">
-<h2 id="_render_wip">Render (WIP)</h2>
+<h2 id="_render_wip">8. Render (WIP)</h2>
 <div class="sectionbody">
 
 </div>
@@ -6019,7 +6037,7 @@ But all I did was playing video games. Until my dad came to me and said:</p>
 <div class="quoteblock">
 <blockquote>
 <div class="paragraph">
-<p>Don’t just play video games kiddo, it can do much more than that. try to
+<p>Don’t just play video games kid, it can do much more than that. try to
 learn it.</p>
 </div>
 </blockquote>
@@ -6032,35 +6050,13 @@ learn it.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>I have a solid background with writing and patching softwares in some
-programming languages like</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 16.6666%;"/>
-<col style="width: 16.6666%;"/>
-<col style="width: 16.6666%;"/>
-<col style="width: 16.6666%;"/>
-<col style="width: 16.6666%;"/>
-<col style="width: 16.667%;"/>
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">C</th>
-<th class="tableblock halign-left valign-top">Lua</th>
-<th class="tableblock halign-left valign-top">Go</th>
-<th class="tableblock halign-left valign-top">Bash</th>
-<th class="tableblock halign-left valign-top">Python</th>
-<th class="tableblock halign-left valign-top">…​</th>
-</tr>
-</thead>
-</table>
-<div class="paragraph">
-<p>by <em>mostly</em> using some tools that required a little programming knowledge to
-modify / configure or extend.</p>
+programming languages (<code>C</code> <code>Lua</code> <code>Go</code> <code>Bash</code> <code>Python</code>) by <em>mostly</em> using some
+tools that required a little programming knowledge to modify / configure or
+extend.</p>
 </div>
 <div class="sidebarblock">
 <div class="content">
-<div class="title">Let me give you an example</div>
+<div class="title">Let me give you an example:</div>
 <div class="paragraph">
 <p>I wanted to learn Python language so I needed to take some notes, I decided to
 use LaTeX for that matter and my notes were getting dirty, I was losing some of
@@ -6070,8 +6066,8 @@ them.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>I learned <code>C</code> by patching / configuring the <a href="http://suckless.org">suckless</a>
-tools, <code>Lua</code> by configuring neovim and writing plugins for it, <code>Bash</code> by using
+<p>I learned <code>C</code> by patching / configuring the <a href="https://suckless.org">suckless</a>
+tools, <code>Lua</code> by configuring <a href="https://neovim.io">neovim</a> and writing plugins for it, <code>Bash</code> by using
 it daily with &#34;Live inside terminal&#34; approach. of cource I’ve also read books
 and documentations for them eventually. <code>Python</code> and <code>Go</code> are the ones that I
 really sat-down and read books / docs about them from the beginning of the
@@ -6083,7 +6079,7 @@ journey.</p>
 <h2 id="_workflow">Workflow</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>I’m a simple guy so I like simplicity.</p>
+<p>A simple guy likes simplicity.</p>
 </div>
 <div class="paragraph">
 <p>I use <a href="https://st.suckless.org">st</a> as my terminal emulator.
@@ -6091,21 +6087,27 @@ I have <a href="https://vim.org">vim</a> (or <a href="https://neovim.io">neovim<
 as my text editor in my pocket, <a href="https://github.com/tmux/tmux/wiki">tmux</a> as
 multiplexer / session-manager by my side, I have a home in any window manger
 (but I perfer it to be inside <a href="https://dwm.suckless.org">dwm</a> over the other).
-Also for some BiDi papers and documents I’ve let the little evil in,
-<a href="https://github.com/doomemacs/doomemacs">doom emacs</a>.</p>
+Also for some bidirectional papers and documents I’ve let the little evil in,
+<a href="https://github.com/doomemacs/doomemacs">(doom) emacs</a>.</p>
 </div>
 <div class="paragraph">
 <p>To be honest, I just need a POSIX-complaint shell, tmux, vim and git.
-All of these can be repleaced and I’m fine wit their alternatives.</p>
+All of these can be repleaced and I’m fine with their alternatives.</p>
 </div>
 <div class="sect2">
 <h3 id="_operating_system">Operating System</h3>
 <div class="paragraph">
-<p>Currently (as of June 21, 2024) I’m using NixOS as my daily-driver OS.
-I love NixOS’s approach and its reproducability, just starting to like Nix
-language / packages manager, I’ve wanted to learn a functional programming
+<p>Currently (as of June 21, 2024) I’m using NixOS as my daily-driver OS.</p>
+</div>
+<div class="paragraph">
+<p>I enjoy NixOS’s approach and its reproducability, just starting to like Nix
+language / packages manager. I’ve wanted to learn a functional programming
 language anyway (I still might go for Elixir) so, that’s might be it,
 who knows ;)</p>
+</div>
+<div class="paragraph">
+<p>Update (September 14, 2024): Back to my good old
+<a href="https://voidlinux.org">Void Linux</a> for a while now.</p>
 </div>
 <div class="paragraph">
 <p>I’m very fine and comfortable with most of other Linux Distributions out there.

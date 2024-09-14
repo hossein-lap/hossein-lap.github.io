@@ -43,7 +43,7 @@
 
     
     
-    <link type="text/css" rel="stylesheet" href=https://hossein-lap.github.io/css/styles.3a9ea32e2f432e8fbcca56a5c98fba3d0e9f58de1c6cad4ea0d8e9153633f545d70dfb34620e38581b50c41004150276e17efdaa349a73d527017789cfb1d8be.css integrity="sha512-Op6jLi9DLo&#43;8ylalyY&#43;6PQ6fWN4cbK1OoNjpFTYz9UXXDfs0Yg44WBtQxBAEFQJ24X79qjSac9UnAXeJz7HYvg==" />
+    <link type="text/css" rel="stylesheet" href=https://hossein-lap.github.io/css/styles.9df605938c7ca64bee6c1b5e897b1844b252b9274d7249986445e2f87570a132d1177432092cfb4a3794822f46454e3828f3a1c04962c66ec4ce483c77715941.css integrity="sha512-nfYFk4x8pkvubBteiXsYRLJSuSdNckmYZEXi&#43;HVwoTLRF3QyCSz7SjeUgi9GRU44KPOhwElixm7Ezkg8d3FZQQ==" />
 <meta name="author" content="Hossein Esmailzadeh" />
 
     
@@ -265,11 +265,53 @@ It is used by many frameworks, games and other applications.
     
     
     <div class="articleToc">
-    
-    <hr />
+  
+  
+  <hr/>
+  <aside>
+  <div class="tableofcontents">
+    <ol>
+      <details>
+        <summary>
+            <b>Table Of Contents</b>
+        </summary>
+          <nav id="TableOfContents">
+  <ul>
+    <li><a href="#_hello_world">1. Hello World!</a></li>
+    <li><a href="#_syntax">2. Syntax</a></li>
+    <li><a href="#_obtaining_lua">3. Obtaining Lua</a></li>
+    <li><a href="#_basics">4. Basics</a></li>
+    <li><a href="#_chuncks">5. Chuncks</a>
+      <ul>
+        <li><a href="#_some_lexical_conventions">5.1. Some Lexical Conventions</a></li>
+      </ul>
+    </li>
+    <li><a href="#_comments">6. Comments</a></li>
+    <li><a href="#_expressions">7. Expressions</a></li>
+    <li><a href="#_global_variables">8. Global Variables</a></li>
+    <li><a href="#_types_and_values">9. Types and Values</a>
+      <ul>
+        <li><a href="#_nil">9.1. Nil</a></li>
+        <li><a href="#_booleans">9.2. Booleans</a></li>
+        <li><a href="#_numbers">9.3. Numbers</a></li>
+        <li><a href="#_strings">9.4. Strings</a></li>
+        <li><a href="#_other_types">9.5. Other types</a></li>
+      </ul>
+    </li>
+    <li><a href="#_literals">10. Literals</a></li>
+  </ul>
+</nav>
+      </details>
+    </ol>
+  </div>
+  </aside>
+  
+  
+  <hr/>
 </div>
 
-    <div><div id="preamble">
+    <div>
+<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
 <p>Lua is a powerful, fast, lightweight and embeddable programming language. It is
@@ -302,7 +344,7 @@ vocabulary in English.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_hello_world">Hello World!</h2>
+<h2 id="_hello_world">1. Hello World!</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Lua can either be used embedded in an application or by itself. The first
@@ -332,7 +374,7 @@ calling the print function with the string &#34;Hello, world!&#34; as an argumen
 </div>
 </div>
 <div class="sect1">
-<h2 id="_syntax">Syntax</h2>
+<h2 id="_syntax">2. Syntax</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Syntax of a programming language defines how statements and expressions must be
@@ -365,7 +407,7 @@ that sets the value of variable to that expression.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_obtaining_lua">Obtaining Lua</h2>
+<h2 id="_obtaining_lua">3. Obtaining Lua</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Lua can be obtained on the official Lua website,
@@ -374,7 +416,7 @@ on the <a href="http://www.lua.org/download.html">download page</a>.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_basics">Basics</h2>
+<h2 id="_basics">4. Basics</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>If you are using the stand-alone Lua interpreter, all you have to do
@@ -413,7 +455,7 @@ and prints its factorial:</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_chuncks">Chuncks</h2>
+<h2 id="_chuncks">5. Chuncks</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>We call each piece of code that Lua executes, such as a file or a single line
@@ -543,7 +585,7 @@ load the new code; then we can exercise the new code, calling its functions and
 printing the results.</p>
 </div>
 <div class="sect2">
-<h3 id="_some_lexical_conventions">Some Lexical Conventions</h3>
+<h3 id="_some_lexical_conventions">5.1. Some Lexical Conventions</h3>
 <div class="paragraph">
 <p>Identifiers (or names) in Lua can be any string of letters, digits, and underscores,
 not beginning with a digit; for instance</p>
@@ -596,7 +638,7 @@ Usually, I reserve the identifier <code>_</code> (a single underscore) for dummy
 </div>
 </div>
 <div class="sect1">
-<h2 id="_comments">Comments</h2>
+<h2 id="_comments">6. Comments</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>A comment is a code annotation that is ignored by the programming language.
@@ -664,7 +706,7 @@ the section called &#34;Long Strings&#34;.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_expressions">Expressions</h2>
+<h2 id="_expressions">7. Expressions</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Expressions are pieces of code that have a value and that can be
@@ -710,7 +752,7 @@ four chunks are all valid and equivalent:</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_global_variables">Global Variables</h2>
+<h2 id="_global_variables">8. Global Variables</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Global variables do not need declarations; we simply use them. It is not an error
@@ -739,7 +781,7 @@ After the assignment, Lua can eventually reclaim the memory used by the variable
 </div>
 </div>
 <div class="sect1">
-<h2 id="_types_and_values">Types and Values</h2>
+<h2 id="_types_and_values">9. Types and Values</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Lua is a dynamically-typed language. There are no type definitions in the language;
@@ -882,7 +924,7 @@ or initialized.</p>
 <p>We will discuss now the simple types nil and Boolean.</p>
 </div>
 <div class="sect2">
-<h3 id="_nil">Nil</h3>
+<h3 id="_nil">9.1. Nil</h3>
 <div class="paragraph">
 <p>Nil is a type with a single value, nil, whose main property is to be different
 from any other value. Lua uses nil as a kind of non-value, to represent the
@@ -892,7 +934,7 @@ variable to delete it.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_booleans">Booleans</h3>
+<h3 id="_booleans">9.2. Booleans</h3>
 <div class="paragraph">
 <p>The Boolean type has two values, <code>false</code> and <code>true</code>, which represent the
 traditional Boolean values. However, Booleans do not hold a monopoly of
@@ -1017,7 +1059,7 @@ and the <code>or</code> operator returns true if either of arguments is true and
 </div>
 </div>
 <div class="sect2">
-<h3 id="_numbers">Numbers</h3>
+<h3 id="_numbers">9.3. Numbers</h3>
 <div class="paragraph">
 <p>Numbers generally represent quantities, but they can be used for many other things. The
 number type in Lua works mostly in the same way as real numbers.</p>
@@ -1080,7 +1122,7 @@ even in hexadecimal. Here are some valid numbers:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_arithmetic_operations">Arithmetic operations</h4>
+<h4 id="_arithmetic_operations">9.3.1. Arithmetic operations</h4>
 <div class="paragraph">
 <p>The operators for numbers in Lua are the following:</p>
 </div>
@@ -1146,7 +1188,7 @@ even in hexadecimal. Here are some valid numbers:</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_integers">Integers</h4>
+<h4 id="_integers">9.3.2. Integers</h4>
 <div class="paragraph">
 <p>A new subtype of numbers, integers, was added in Lua 5.3. Numbers can be either
 integers or floats.  Floats are similar to numbers as described above, while
@@ -1162,7 +1204,7 @@ integers.  In other cases, with the exception of the floor division operator
 </div>
 </div>
 <div class="sect2">
-<h3 id="_strings">Strings</h3>
+<h3 id="_strings">9.4. Strings</h3>
 <div class="paragraph">
 <p>Strings are sequences of characters that can be used to represent text. They can be written
 in Lua by being contained in double quotes, single quotes or long brackets
@@ -1330,7 +1372,7 @@ interpretation of characters.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_concatenation">Concatenation</h4>
+<h4 id="_concatenation">9.4.1. Concatenation</h4>
 <div class="quoteblock">
 <blockquote>
 <div class="paragraph">
@@ -1353,7 +1395,7 @@ end-to-end.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_other_types">Other types</h3>
+<h3 id="_other_types">9.5. Other types</h3>
 <div class="paragraph">
 <p>The four basic types in Lua (numbers, booleans, nil and strings) have been described in
 the previous sections, but four types are missing:
@@ -1401,7 +1443,7 @@ Threads
 </div>
 </div>
 <div class="sect1">
-<h2 id="_literals">Literals</h2>
+<h2 id="_literals">10. Literals</h2>
 <div class="sectionbody">
 
 </div>
@@ -1452,7 +1494,7 @@ Threads
     <hr />
 
 <p><small>
-        2024 &copy; Hos Es
+        2024 &copy; Hossein Esmail
     </small></p>
     <p><small>
         <a href='https://gitlab.com/gabmus/hugo-ficurinia'>Ficurinia theme</a> for <a href='https://gohugo.io'>Hugo</a> by <a href='https://gabmus.org'>Gabriele Musco</a>. Licensed under <a href='https://www.gnu.org/licenses/agpl-3.0.html'>GNU AGPLv3</a>.

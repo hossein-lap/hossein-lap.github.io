@@ -5,7 +5,7 @@
     <description>Recent content in K8S on Hossein Esmailzadeh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>Hos Es</copyright>
+    <copyright>Hossein Esmail</copyright>
     <lastBuildDate>Fri, 31 May 2024 18:50:32 +0330</lastBuildDate><atom:link href="https://hossein-lap.github.io/tags/k8s/index.xml" rel="self" type="application/rss+xml" /><icon>https://hossein-lap.github.io/images/ed/foo.png</icon>
     
     
@@ -15,7 +15,8 @@
       <pubDate>Fri, 31 May 2024 18:50:32 +0330</pubDate>
       
       <guid>https://hossein-lap.github.io/notes/k8s-ingress-loadbalancer/</guid>
-      <description><![CDATA[<div id="preamble">
+      <description><![CDATA[
+<div id="preamble">
 <div class="sectionbody">
 <div class="admonitionblock warning">
 <table>
@@ -38,7 +39,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_forwarding_a_local_network_port_to_a_port_in_the_pod">Forwarding a Local Network Port to a Port in The Pod</h2>
+<h2 id="_forwarding_a_local_network_port_to_a_port_in_the_pod">1. Forwarding a Local Network Port to a Port in The Pod</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>When you want to talk to a specific pod without going through a service (for
@@ -64,7 +65,7 @@ e.g <code>kubia-manual</code> pod.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_connecting_to_the_pod_through_the_port_forwarder">Connecting to The Pod Through the Port Forwarder</h3>
+<h3 id="_connecting_to_the_pod_through_the_port_forwarder">1.1. Connecting to The Pod Through the Port Forwarder</h3>
 <div class="paragraph">
 <p>In a different terminal, you can now use curl to send an HTTP request to your pod
 through the <code>kubectl port-forward</code> proxy running on <code>localhost:8888</code>.</p>
@@ -85,7 +86,7 @@ through the <code>kubectl port-forward</code> proxy running on <code>localhost:8
 </div>
 </div>
 <div class="sect1">
-<h2 id="_service_object">Service Object</h2>
+<h2 id="_service_object">2. Service Object</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Each pod gets its own IP address, but this address is internal to the cluster
@@ -98,7 +99,7 @@ balancer will be created and you can connect to the pod through the load
 balancer’s public IP.</p>
 </div>
 <div class="sect2">
-<h3 id="_creating_a_service_object">Creating a Service Object</h3>
+<h3 id="_creating_a_service_object">2.1. Creating a Service Object</h3>
 <div class="paragraph">
 <p>To create the service, you’ll tell Kubernetes to expose the ReplicationController you
 created:</p>
@@ -174,7 +175,7 @@ created:</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_session_affinity_on_the_service">Session Affinity on the Service</h3>
+<h3 id="_session_affinity_on_the_service">2.2. Session Affinity on the Service</h3>
 <div class="paragraph">
 <p>If you execute the same command a few more times, you should hit a different
 pod with every invocation, because the service proxy normally forwards each
@@ -213,7 +214,7 @@ explains why session affinity cannot be based on cookies.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_exposing_multiple_ports_in_the_same_service">Exposing Multiple Ports in the Same Service</h3>
+<h3 id="_exposing_multiple_ports_in_the_same_service">2.3. Exposing Multiple Ports in the Same Service</h3>
 <div class="listingblock">
 <div class="title">Manifest</div>
 <div class="content">
@@ -235,7 +236,7 @@ explains why session affinity cannot be based on cookies.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_using_named_ports">Using Named Ports</h3>
+<h3 id="_using_named_ports">2.4. Using Named Ports</h3>
 <div class="paragraph">
 <p>You can give a name to each pod’s port and refer to it by name in the service spec.</p>
 </div>
@@ -272,7 +273,7 @@ explains why session affinity cannot be based on cookies.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_connecting_to_services_living_outside_the_cluster">Connecting to services living outside the cluster</h2>
+<h2 id="_connecting_to_services_living_outside_the_cluster">3. Connecting to services living outside the cluster</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Instead of having the service redirect connections to pods in the cluster, you
@@ -284,7 +285,7 @@ discovery. Client pods running in the cluster can connect to the external
 service like they connect to internal services.</p>
 </div>
 <div class="sect2">
-<h3 id="_service_endpoints">Service Endpoints</h3>
+<h3 id="_service_endpoints">3.1. Service Endpoints</h3>
 <div class="paragraph">
 <p>Services don’t link to pods directly. Instead, a resource sits in between—the
 Endpoints resource. You may have already noticed endpoints if you used the
@@ -399,7 +400,7 @@ Endpoints resource hasn’t been created automatically</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_exposing_services_to_external_clients">Exposing services to external clients</h2>
+<h2 id="_exposing_services_to_external_clients">4. Exposing services to external clients</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Few ways to make a service accessible externally.</p>
@@ -451,7 +452,7 @@ features than layer 4 services can</p>
 </ul>
 </div>
 <div class="sect2">
-<h3 id="_using_a_nodeport_service">Using a NodePort service</h3>
+<h3 id="_using_a_nodeport_service">4.1. Using a NodePort service</h3>
 <div class="paragraph">
 <p>By creating a <code>NodePort</code> service, you make Kubernetes reserve a port on all its
 nodes (the same port number is used across all of them) and forward incoming
@@ -563,7 +564,7 @@ them.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_exposing_a_service_through_an_external_load_balancer">Exposing a service through an external load balancer</h3>
+<h3 id="_exposing_a_service_through_an_external_load_balancer">4.2. Exposing a service through an external load balancer</h3>
 <div class="paragraph">
 <p>Kubernetes clusters running on cloud providers usually support the automatic
 provision of a load balancer from the cloud infrastructure. All you need to do
@@ -647,7 +648,7 @@ Even if session affinity is set to <code>None</code>, users will always hit the 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_understanding_the_peculiarities_of_external_connections">Understanding the peculiarities of external connections</h3>
+<h3 id="_understanding_the_peculiarities_of_external_connections">4.3. Understanding the peculiarities of external connections</h3>
 <div class="paragraph">
 <p>You must be aware of several things related to externally originating connections to
 services.</p>
@@ -694,7 +695,7 @@ isn’t performed).</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_exposing_services_externally_through_an_ingress_resource">Exposing services externally through an Ingress resource</h2>
+<h2 id="_exposing_services_externally_through_an_ingress_resource">5. Exposing services externally through an Ingress resource</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>You must be aware of several things related to externally originating
@@ -725,7 +726,7 @@ which services can’t</p>
 the cluster.</p>
 </div>
 <div class="sect2">
-<h3 id="_creating_an_ingress_resource">Creating an Ingress resource</h3>
+<h3 id="_creating_an_ingress_resource">5.1. Creating an Ingress resource</h3>
 <div class="listingblock">
 <div class="title">An Ingress resource definition: <code>kubia-ingress.yaml</code></div>
 <div class="content">
@@ -765,7 +766,7 @@ Kubernetes itself.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_accessing_the_service_through_the_ingress">Accessing the service through the Ingress</h3>
+<h3 id="_accessing_the_service_through_the_ingress">5.2. Accessing the service through the Ingress</h3>
 <div class="paragraph">
 <p>To access your service through <a href="http://kubia.example.com" class="bare">http://kubia.example.com</a>, you’ll need to make sure
 the domain name resolves to the IP of the Ingress controller</p>
@@ -832,7 +833,7 @@ kubia.example.com to that IP or you can setup hosts: add the following line to
 </tbody></table>
 </div>
 <div class="sect3">
-<h4 id="_understading_how_ingress_work">Understading how Ingress work</h4>
+<h4 id="_understading_how_ingress_work">5.2.1. Understading how Ingress work</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -872,12 +873,12 @@ the pods.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_exposing_multiple_services_through_the_same_ingress">Exposing multiple services through the same Ingress</h3>
+<h3 id="_exposing_multiple_services_through_the_same_ingress">5.3. Exposing multiple services through the same Ingress</h3>
 <div class="paragraph">
 <p>Both <code>rules</code> and <code>paths</code> are arrays, so they can contain multiple items</p>
 </div>
 <div class="sect3">
-<h4 id="_mapping_different_services_to_different_paths_of_the_same_host">Mapping different services to different paths of the same host</h4>
+<h4 id="_mapping_different_services_to_different_paths_of_the_same_host">5.3.1. Mapping different services to different paths of the same host</h4>
 
 </div>
 </div>

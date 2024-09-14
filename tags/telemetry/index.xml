@@ -5,7 +5,7 @@
     <description>Recent content in Telemetry on Hossein Esmailzadeh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>Hos Es</copyright>
+    <copyright>Hossein Esmail</copyright>
     <lastBuildDate>Sat, 06 Jul 2024 13:24:36 +0330</lastBuildDate><atom:link href="https://hossein-lap.github.io/tags/telemetry/index.xml" rel="self" type="application/rss+xml" /><icon>https://hossein-lap.github.io/images/ed/foo.png</icon>
     
     
@@ -15,7 +15,8 @@
       <pubDate>Sat, 06 Jul 2024 13:24:36 +0330</pubDate>
       
       <guid>https://hossein-lap.github.io/notes/grafana/</guid>
-      <description><![CDATA[<div id="preamble">
+      <description><![CDATA[
+<div id="preamble">
 <div class="sectionbody">
 <div class="admonitionblock warning">
 <table>
@@ -35,7 +36,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_grafana_stack">Grafana stack</h2>
+<h2 id="_grafana_stack">1. Grafana stack</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Grafana offers many tools, which we’ve grouped into the following categories:</p>
@@ -57,7 +58,7 @@
 </ul>
 </div>
 <div class="sect2">
-<h3 id="_the_core_grafana_stack">The core Grafana stack</h3>
+<h3 id="_the_core_grafana_stack">1.1. The core Grafana stack</h3>
 <div class="paragraph">
 <p>The core Grafana stack consists of <strong>Mimir</strong>, <strong>Loki</strong>, <strong>Tempo</strong>, and <strong>Grafana</strong>; the
 acronym <strong>LGTM</strong> is often used to refer to this tech stack.</p>
@@ -126,7 +127,7 @@ with.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_grafana_enterprise_plugins">Grafana Enterprise plugins</h3>
+<h3 id="_grafana_enterprise_plugins">1.2. Grafana Enterprise plugins</h3>
 <div class="paragraph">
 <p>These are part of any paid subscription to Grafana.</p>
 </div>
@@ -141,7 +142,7 @@ use.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_grafana_incident_response_and_management">Grafana incident response and management</h3>
+<h3 id="_grafana_incident_response_and_management">1.3. Grafana incident response and management</h3>
 <div class="paragraph">
 <p>Grafana offers three products in the <strong>incident response and management</strong> (<strong>IRM</strong>)
 space:</p>
@@ -165,7 +166,7 @@ even manage the incident directly from a messaging service</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_other_grafana_tools">Other Grafana tools</h3>
+<h3 id="_other_grafana_tools">1.4. Other Grafana tools</h3>
 <div class="paragraph">
 <p>Grafana Labs continues to be a leader in observability and has acquired several
 companies in this space to release new products that complement the tools we’ve
@@ -204,7 +205,7 @@ project started in 2022, and the two projects have now merged.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_common_log_formats">Common log formats</h2>
+<h2 id="_common_log_formats">2. Common log formats</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Logs support performance and capacity monitoring in infrastructure, bug
@@ -217,7 +218,7 @@ analyze logs.</p>
 types used in them, and if any encoding or delimitation is being used.</p>
 </div>
 <div class="sect2">
-<h3 id="_structured_semi_structured_and_unstructured_logging">Structured, semi-structured, and unstructured logging</h3>
+<h3 id="_structured_semi_structured_and_unstructured_logging">2.1. Structured, semi-structured, and unstructured logging</h3>
 <div class="paragraph">
 <p>It does not matter what your logs look like and they can come in structured,
 semi-structured, or unstructured formats.</p>
@@ -243,7 +244,7 @@ they will be used by and for what purpose.</p>
 </tbody></table>
 </div>
 <div class="sect3">
-<h4 id="_structured_logging">Structured logging</h4>
+<h4 id="_structured_logging">2.1.1. Structured logging</h4>
 <div class="paragraph">
 <p><strong>Structured logs</strong> have a predetermined message format that allows them to be
 treated as datasets rather than text. The idea of structured logging is to
@@ -282,7 +283,7 @@ where logs and event bus technology overlap.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_semi_structured_logging">Semi-structured logging</h4>
+<h4 id="_semi_structured_logging">2.1.2. Semi-structured logging</h4>
 <div class="paragraph">
 <p><strong>Semi-structured</strong> logs aim to bridge the gap between unstructured and structured
 and, as a result, can be quite complicated. They are designed to be easy for
@@ -293,7 +294,7 @@ done using regular expressions or other code.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_unstructured_logging">Unstructured logging</h4>
+<h4 id="_unstructured_logging">2.1.3. Unstructured logging</h4>
 <div class="paragraph">
 <p><strong>Unstructured logging</strong> typically refers to log entries that are presented in a
 textual format that can easily be read by humans but is difficult for machines
@@ -335,14 +336,14 @@ be stored correctly for searching.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_sample_log_formats">Sample log formats</h3>
+<h3 id="_sample_log_formats">2.2. Sample log formats</h3>
 <div class="paragraph">
 <p>Many log formats have been used in computer systems. All of these formats have
 a common goal of presenting a standard structure or set of fields for recording
 important information about the activity of a computer system.</p>
 </div>
 <div class="sect3">
-<h4 id="_common_event_format_cef">Common Event Format (CEF)</h4>
+<h4 id="_common_event_format_cef">2.2.1. Common Event Format (CEF)</h4>
 <div class="paragraph">
 <p>Developed by ArcSight to fulfill the <strong>Security Information and Event Management</strong>
 (SIEM) use case, the CEF is a structured text-based log format. Using UTF-8
@@ -412,7 +413,7 @@ authenticated from 1001:db7::5</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_ncsa_common_log_format_clf">NCSA Common Log Format (CLF)</h4>
+<h4 id="_ncsa_common_log_format_clf">2.2.2. NCSA Common Log Format (CLF)</h4>
 <div class="paragraph">
 <p>As one of the oldest log formats used by web servers, the NCSA CLF has for a
 long time been the most common and well-known log formats. It has a fixed
@@ -457,7 +458,7 @@ apache_pb.gif HTTP/1.1&#34; 200 2326</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_w3c_extended_log_file_format">W3C Extended Log File Format</h4>
+<h4 id="_w3c_extended_log_file_format">2.2.3. W3C Extended Log File Format</h4>
 <div class="paragraph">
 <p>The Microsoft Internet Information Server log format known as W3C is a
 structured yet configurable format. Full control over the included fields
@@ -509,7 +510,7 @@ client ©, server to client (SC), and client to server (CS).</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_windows_event_log">Windows Event Log</h4>
+<h4 id="_windows_event_log">2.2.4. Windows Event Log</h4>
 <div class="paragraph">
 <p>The Microsoft Windows operating system comes with a built-in complex structured
 logging system that captures data related to specific events on the operating
@@ -548,7 +549,7 @@ Workstation Name: DESKTOP-TMC369</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_javascript_object_notation_json">JavaScript Object Notation (JSON)</h4>
+<h4 id="_javascript_object_notation_json">2.2.5. JavaScript Object Notation (JSON)</h4>
 <div class="paragraph">
 <p>As one of the newer yet most commonly used log formats today, JSON is a
 structured format constructed from multiple key-value pairs. Using JSON, data
@@ -579,7 +580,7 @@ Boolean, null, object, and array.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_syslog">Syslog</h4>
+<h4 id="_syslog">2.2.6. Syslog</h4>
 <div class="paragraph">
 <p>The go-to log format for many years and still widely used, Syslog is a defined
 standard for creating and transmitting logs. The <strong>Syslog transport protocol</strong>
@@ -600,7 +601,7 @@ the body of the log.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_logfmt">Logfmt</h4>
+<h4 id="_logfmt">2.2.7. Logfmt</h4>
 <div class="paragraph">
 <p>Logfmt is a widely used log format that fits as human readable and structured
 so that computers and people can both read it. A Logfmt-formatted log line
@@ -620,7 +621,7 @@ service=4ms status=200</pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_exploring_metric_types_and_best_practices">Exploring metric types and best practices</h2>
+<h2 id="_exploring_metric_types_and_best_practices">3. Exploring metric types and best practices</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Metrics, along with logs, are an essential tool for software developers and
@@ -648,7 +649,7 @@ usual.</p>
 </ul>
 </div>
 <div class="sect2">
-<h3 id="_wip">WIP</h3>
+<h3 id="_wip">3.1. WIP</h3>
 
 </div>
 </div>
