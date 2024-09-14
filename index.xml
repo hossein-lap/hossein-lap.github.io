@@ -3447,15 +3447,15 @@ timestamp format.</p>
     
     
     <item>
-      <title>WIP</title>
+      <title>:)</title>
       <link>https://hossein-lap.github.io/welcome/</link>
       <pubDate>Sun, 26 May 2024 22:08:49 +0330</pubDate>
       
       <guid>https://hossein-lap.github.io/welcome/</guid>
       <description><![CDATA[<div class="paragraph">
 <p>Welcome to my blog. I’m Hossein and I’ll be posting myown notes, ideas,
-programs. A programmer / DevOps engineer with passions about
-open-source software and trees.</p>
+programs. A Programmer / DevOps Engineer with passions about open-source
+software and trees.</p>
 </div>
 <div class="paragraph">
 <p>Also, I use vim btw ;)</p>
@@ -3464,7 +3464,7 @@ open-source software and trees.</p>
 <table>
 <tbody><tr>
 <td class="hdlist1">
-<strong>Programming Languages</strong>
+<strong>Programming:</strong>
 </td>
 <td class="hdlist2">
 <p>Lua, Go, C, Bash</p>
@@ -3472,7 +3472,7 @@ open-source software and trees.</p>
 </tr>
 <tr>
 <td class="hdlist1">
-<strong>Tools</strong>
+<strong>Tools:</strong>
 </td>
 <td class="hdlist2">
 <p>Linux, Git, QEMU/KVM, Docker, K8S, Ansible, tmux</p>
@@ -3480,7 +3480,7 @@ open-source software and trees.</p>
 </tr>
 <tr>
 <td class="hdlist1">
-<strong>Markup / Typesetting Languages</strong>
+<strong>Writing:</strong>
 </td>
 <td class="hdlist2">
 <p>LaTeX, Groff, Asciidoc(tor), Markdown</p>
@@ -3488,7 +3488,7 @@ open-source software and trees.</p>
 </tr>
 <tr>
 <td class="hdlist1">
-<strong>Hobbies</strong>
+<strong>Hobbies:</strong>
 </td>
 <td class="hdlist2">
 <p>Coding, Biking, Volleyball, Fishing</p>
