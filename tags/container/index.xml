@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/feed_style.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="https://www.rssboard.org/media-rss">
+  <channel>
+    <title>Container on Hossein Esmailzadeh</title>
+    <link>https://hossein-lap.github.io/tags/container/</link>
+    <description>Recent content in Container on Hossein Esmailzadeh</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Hossein Esmail</copyright>
+    <lastBuildDate>Sat, 14 Sep 2024 15:53:26 +0330</lastBuildDate><atom:link href="https://hossein-lap.github.io/tags/container/index.xml" rel="self" type="application/rss+xml" /><icon>https://hossein-lap.github.io/images/ed/foo.png</icon>
+    
+    
+    <item>
+      <title>Docker</title>
+      <link>https://hossein-lap.github.io/notes/docker/</link>
+      <pubDate>Sat, 14 Sep 2024 15:53:26 +0330</pubDate>
+      
+      <guid>https://hossein-lap.github.io/notes/docker/</guid>
+      <description><![CDATA[
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>WIP</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_multi_stageimage_docker_file">1. Multi stage/image docker file</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="docker"><span style="color: #aa759f">FROM</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">golang:alpine</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #aa759f">as</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">builder</span>
+<span style="color: #aa759f">LABEL</span><span style="color: #90a959"> maintainer=&#34;Hossein Esmailzadeh &lt;hosteam01@gmail.com&gt;&#34;</span>
+
+<span style="color: #aa759f">WORKDIR</span><span style="color: #90a959"> /app</span>
+
+<span style="color: #aa759f">COPY</span><span style="color: #90a959"> go.mod go.sum ./</span>
+<span style="color: #aa759f">RUN </span>go mod download
+<span style="color: #aa759f">COPY</span><span style="color: #90a959"> . .</span>
+
+<span style="color: #aa759f">RUN </span><span style="color: #d0d0d0;background-color: #151515">CGO_ENABLED</span><span style="color: #d0d0d0">=</span>0 <span style="color: #d0d0d0;background-color: #151515">GOOS</span><span style="color: #d0d0d0">=</span>linux go build <span style="color: #f4bf75">-a</span> <span style="color: #f4bf75">-installsuffix</span> cgo <span style="color: #f4bf75">-o</span> main .
+
+<span style="color: #505050">## runner</span>
+<span style="color: #aa759f">FROM</span><span style="color: #90a959"> alpine:latest</span>
+
+<span style="color: #aa759f">RUN </span>apk <span style="color: #f4bf75">--no-cache</span> add ca-certificates
+<span style="color: #aa759f">WORKDIR</span><span style="color: #90a959"> /root/</span>
+<span style="color: #aa759f">COPY</span><span style="color: #90a959"> --from=builder /app/main .</span>
+
+<span style="color: #aa759f">EXPOSE</span><span style="color: #90a959"> 9090</span>
+
+<span style="color: #aa759f">CMD</span><span style="color: #90a959"> [&#34;./main&#34;]</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+]]></description>
+      
+    </item>
+    
+    
+  </channel>
+</rss>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/feed_style.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="https://www.rssboard.org/media-rss">
   <channel>
-    <title>Vimscript on Hossein Esmailzadeh</title>
-    <link>https://hossein-lap.github.io/tags/vimscript/</link>
-    <description>Recent content in Vimscript on Hossein Esmailzadeh</description>
+    <title>Vim-Motions on Hossein Esmailzadeh</title>
+    <link>https://hossein-lap.github.io/tags/vim-motions/</link>
+    <description>Recent content in Vim-Motions on Hossein Esmailzadeh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Hossein Esmail</copyright>
-    <lastBuildDate>Sun, 14 Jul 2024 14:42:49 +0330</lastBuildDate><atom:link href="https://hossein-lap.github.io/tags/vimscript/index.xml" rel="self" type="application/rss+xml" /><icon>https://hossein-lap.github.io/images/ed/foo.png</icon>
+    <lastBuildDate>Sun, 14 Jul 2024 14:42:49 +0330</lastBuildDate><atom:link href="https://hossein-lap.github.io/tags/vim-motions/index.xml" rel="self" type="application/rss+xml" /><icon>https://hossein-lap.github.io/images/ed/foo.png</icon>
     
     
     <item>

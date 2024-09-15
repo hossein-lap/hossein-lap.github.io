@@ -6,7 +6,57 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Hossein Esmail</copyright>
-    <lastBuildDate>Wed, 11 Sep 2024 15:04:10 +0330</lastBuildDate><atom:link href="https://hossein-lap.github.io/index.xml" rel="self" type="application/rss+xml" /><icon>https://hossein-lap.github.io/images/ed/foo.png</icon>
+    <lastBuildDate>Sat, 14 Sep 2024 15:53:26 +0330</lastBuildDate><atom:link href="https://hossein-lap.github.io/index.xml" rel="self" type="application/rss+xml" /><icon>https://hossein-lap.github.io/images/ed/foo.png</icon>
+    
+    
+    <item>
+      <title>Docker</title>
+      <link>https://hossein-lap.github.io/notes/docker/</link>
+      <pubDate>Sat, 14 Sep 2024 15:53:26 +0330</pubDate>
+      
+      <guid>https://hossein-lap.github.io/notes/docker/</guid>
+      <description><![CDATA[
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>WIP</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_multi_stageimage_docker_file">1. Multi stage/image docker file</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="docker"><span style="color: #aa759f">FROM</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">golang:alpine</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #aa759f">as</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">builder</span>
+<span style="color: #aa759f">LABEL</span><span style="color: #90a959"> maintainer=&#34;Hossein Esmailzadeh &lt;hosteam01@gmail.com&gt;&#34;</span>
+
+<span style="color: #aa759f">WORKDIR</span><span style="color: #90a959"> /app</span>
+
+<span style="color: #aa759f">COPY</span><span style="color: #90a959"> go.mod go.sum ./</span>
+<span style="color: #aa759f">RUN </span>go mod download
+<span style="color: #aa759f">COPY</span><span style="color: #90a959"> . .</span>
+
+<span style="color: #aa759f">RUN </span><span style="color: #d0d0d0;background-color: #151515">CGO_ENABLED</span><span style="color: #d0d0d0">=</span>0 <span style="color: #d0d0d0;background-color: #151515">GOOS</span><span style="color: #d0d0d0">=</span>linux go build <span style="color: #f4bf75">-a</span> <span style="color: #f4bf75">-installsuffix</span> cgo <span style="color: #f4bf75">-o</span> main .
+
+<span style="color: #505050">## runner</span>
+<span style="color: #aa759f">FROM</span><span style="color: #90a959"> alpine:latest</span>
+
+<span style="color: #aa759f">RUN </span>apk <span style="color: #f4bf75">--no-cache</span> add ca-certificates
+<span style="color: #aa759f">WORKDIR</span><span style="color: #90a959"> /root/</span>
+<span style="color: #aa759f">COPY</span><span style="color: #90a959"> --from=builder /app/main .</span>
+
+<span style="color: #aa759f">EXPOSE</span><span style="color: #90a959"> 9090</span>
+
+<span style="color: #aa759f">CMD</span><span style="color: #90a959"> [&#34;./main&#34;]</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+]]></description>
+      
+    </item>
+    
     
     
     <item>
@@ -1407,7 +1457,202 @@ following example defines two lists:</p>
       <pubDate>Sun, 14 Jul 2024 14:42:49 +0330</pubDate>
       
       <guid>https://hossein-lap.github.io/docs/vim/</guid>
-      <description><![CDATA[]]></description>
+      <description><![CDATA[
+<div class="sect1">
+<h2 id="_simulating_vim_on_the_page">1. Simulating Vim on the Page</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code>ctrl</code>-<code>s</code> is a common convention for representing chordal commands. It means
+&#34;Press the Control key and the <code>s</code> key at the same time.&#34; But this convention
+isn’t well suited to describing Vim’s modal command set.</p>
+</div>
+<div class="sect2">
+<h3 id="_playing_melodies">1.1. Playing Melodies</h3>
+<div class="paragraph">
+<p>In Normal mode, we compose commands by typing one or more keystrokes in
+sequence. There commands appear as follows:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;"/>
+<col style="width: 50%;"/>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Notation</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Meaning</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>x</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Press <code>x</code> once</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dw</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">In sequence, pres <code>d</code>, then <code>w</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dap</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">In sequence, pres <code>d</code>, <code>a</code>, then <code>p</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Most of these sequences involve two or three keystrokes, but some are longer.
+Deciphering the meaning of Vim’s Normal mode command sequences can be
+challenging, but you’ll get better at it with practice.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_playing_chords">1.2. Playing Chords</h3>
+<div class="paragraph">
+<p>When you see a keystroke such as <code>&lt;C-p&gt;</code>, it doesn’t mean &#34;Press <code>&lt;</code>, then <code>C</code>,
+then <code>-</code>, and so on.&#34; The <code>&lt;C-p&gt;</code> notation is equivalent to <code>Ctrl</code>-<code>p</code>, which
+means &#34;Press the <code>Ctrl</code> and <code>p</code> keys at the same time&#34;
+Some of Vim’s commands are formed by combining chords and keystrokes in
+sequence, and this notation handles them well. Consider these examples:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;"/>
+<col style="width: 50%;"/>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Notation</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Meaning</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;C-n&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Press <code>&lt;Ctrl&gt;</code> and <code>n</code> at the same time</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>g&lt;C-]&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Press <code>g</code>, followed by <code>&lt;Ctrl&gt;</code> and <code>]</code> at the same time</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;C-r&gt;0</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Press <code>&lt;Ctrl&gt;</code> and <code>r</code> at the same tile, then <code>0</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;C-w&gt;&lt;C-=&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Press <code>&lt;Ctrl&gt;</code> and <code>w</code> at the same time, then <code>&lt;Ctrl&gt;</code> and <code>=</code> at the same time</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_placeholders">1.3. Placeholders</h3>
+<div class="paragraph">
+<p>Some commands must be followed by a particular kind of keystroke, while other
+command can be followed by any key on the keyboard. I use curly braces to
+denote the set of valid keystrokes that can follow a command.</p>
+</div>
+<div class="paragraph">
+<p>Here are some examples:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;"/>
+<col style="width: 50%;"/>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Notation</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Meaning</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>f{char}</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Press <code>f</code>, followed by any other character</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>`{a-z}</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Press <code>`</code>, followed by any lowercase letter</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>m{a-zA-Z}</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Press <code>m</code>, followed by any lowercase or upper case letter</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>d{motion}</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Press <code>d</code>, followed by any motion command</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;C-r&gt;{register}</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Press <code>&lt;Ctrl&gt;</code> and <code>r</code> at the same time, followed by the address of a
+  register</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_showing_special_keys">1.4. Showing Special Keys</h3>
+<div class="paragraph">
+<p>Some keys are called by name. This table shows a selection of them:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;"/>
+<col style="width: 50%;"/>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Notation</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Meaning</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;Esc&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Press the Escape key</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;CR&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Press the carriage return key (aka <code>&lt;Enter&gt;</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;Ctrl&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Press the Control key</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;Tab&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Press the Tab key</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;Shift&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Press the Shift key</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;S-Tab&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Press the <code>&lt;Shift&gt;</code> and <code>&lt;Tab&gt;</code> key at the same time</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;Up&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Press the up-arrow key</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;Down&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Press the down-arrow key</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code> </code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Press the space bar</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Note that the space bar is represented as <code> </code>. This could be combined with the
+<code>f{char}</code> command to form <code>f </code>.</p>
+</div>
+</div>
+</div>
+</div>
+]]></description>
       
     </item>
     
@@ -3469,7 +3714,7 @@ software and trees.</p>
 <blockquote>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">Programming Languages</dt>
+<dt class="hdlist1">Languages</dt>
 <dd>
 <div class="ulist">
 <ul>
@@ -3479,7 +3724,7 @@ software and trees.</p>
 </ul>
 </div>
 </dd>
-<dt class="hdlist1">Tools that I know or use</dt>
+<dt class="hdlist1">Tools</dt>
 <dd>
 <div class="ulist">
 <ul>
@@ -3489,7 +3734,7 @@ software and trees.</p>
 </ul>
 </div>
 </dd>
-<dt class="hdlist1">Writing / Typestting</dt>
+<dt class="hdlist1">Writing</dt>
 <dd>
 <div class="ulist">
 <ul>
