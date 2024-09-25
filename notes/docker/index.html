@@ -43,7 +43,7 @@
 
     
     
-    <link type="text/css" rel="stylesheet" href=https://hossein-lap.github.io/css/styles.5dedf025f2d554d1f1af67b4d485089505e504427a25bec4caa75460f2e0c5b512db58616e24b8e92fbe68cec5a25fd1d42a1d6d43328fe665ff136e67c7ae22.css integrity="sha512-Xe3wJfLVVNHxr2e01IUIlQXlBEJ6Jb7EyqdUYPLgxbUS21hhbiS46S&#43;&#43;aM7Fol/R1CodbUMyj&#43;Zl/xNuZ8euIg==" />
+    <link type="text/css" rel="stylesheet" href=https://hossein-lap.github.io/css/styles.09576dc4634d64a40e98082ee89bb40217c156d6d97276ac1f4018dee15f3501a3ab7658a179746b43cf0e4f63fb55afcbe69d8b9f9a71e7357a7ba252542302.css integrity="sha512-CVdtxGNNZKQOmAgu6Ju0AhfBVtbZcnasH0AY3uFfNQGjq3ZYoXl0a0PPDk9j&#43;1Wvy&#43;adi5&#43;acec1enuiUlQjAg==" />
 <meta name="author" content="Hossein Esmailzadeh" />
 
     
@@ -270,7 +270,8 @@
         </summary>
           <nav id="TableOfContents">
   <ul>
-    <li><a href="#_multi_stageimage_docker_file">1. Multi stage/image docker file</a></li>
+    <li><a href="#_basics">1. Basics</a></li>
+    <li><a href="#_multi_stage_dockerfile">2. Multi-stage Dockerfile</a></li>
   </ul>
 </nav>
       </details>
@@ -291,7 +292,142 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_multi_stageimage_docker_file">1. Multi stage/image docker file</h2>
+<h2 id="_basics">1. Basics</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="title">Dockerfile — Simple webapp</div>
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="dockerfile"><span style="color: #aa759f">FROM</span><span style="color: #90a959"> alpine</span>
+<span style="color: #aa759f">LABEL</span><span style="color: #90a959"> maintainer=&#34;example@mail.com&#34;</span>
+<span style="color: #aa759f">RUN </span>apk add <span style="color: #f4bf75">--update</span> nodejs nodejs-npm
+<span style="color: #aa759f">COPY</span><span style="color: #90a959"> . /src</span>
+<span style="color: #aa759f">WORKDIR</span><span style="color: #90a959"> /src</span>
+<span style="color: #aa759f">RUN </span>npm <span style="color: #d0d0d0;background-color: #151515">install</span>
+<span style="color: #aa759f">EXPOSE</span><span style="color: #90a959"> 8080</span>
+<span style="color: #aa759f">ENTRYPOINT</span><span style="color: #90a959"> [&#34;node&#34;, &#34;./app.js&#34;]</span></code></pre>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 1. Keywords</div>
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><code>FROM</code>: The <strong>base</strong> image to use</p>
+</li>
+<li>
+<p><code>LABEL</code>: Image’s metadata</p>
+</li>
+<li>
+<p><code>RUN</code>: Command to run inside the image at build time</p>
+</li>
+<li>
+<p><code>COPY</code>: Copy files from <code>&lt;local&gt;</code> to <code>&lt;image&gt;</code></p>
+</li>
+<li>
+<p><code>WORKDIR</code>: Change the working directory</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Note that if the directory does not exists, it will be created</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>EXPOSE</code>: The port that will be exposed</p>
+<div class="ulist">
+<ul>
+<li>
+<p>available to the host/other images</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>ENTRYPOINT</code>: The command that will be run at the end</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The actual app; all the previous commands are just a preperation for this command/section</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Dockerfile — Build image</div>
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="bash">docker buildx build <span style="color: #f4bf75">-f</span> Dockerfile <span style="color: #f4bf75">-t</span> test-name .</code></pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>[+] Building 35.5s (10/10) FINISHED                                                  docker:default
+ =&gt; [internal] load build definition from Dockerfile                                           0.0s
+ =&gt; =&gt; transferring dockerfile: 363B                                                           0.0s
+ =&gt; [internal] load .dockerignore                                                              0.0s
+ =&gt; =&gt; transferring context: 2B                                                                0.0s
+ =&gt; [internal] load metadata for docker.io/library/alpine:latest                               0.0s
+ =&gt; [1/5] FROM docker.io/library/alpine                                                        0.0s
+ =&gt; [internal] load build context                                                              0.0s
+ =&gt; =&gt; transferring context: 36.77kB                                                           0.0s
+ =&gt; [2/5] RUN apk add --update nodejs npm curl                                                 9.2s
+ =&gt; [3/5] COPY . /src                                                                          0.0s
+ =&gt; [4/5] WORKDIR /src                                                                         0.0s
+ =&gt; [5/5] RUN npm install                                                                     26.0s
+ =&gt; exporting to image                                                                         0.2s
+ =&gt; =&gt; exporting layers                                                                        0.2s
+ =&gt; =&gt; writing image sha256:1825da98372a937a095e523f71f59dcd6a4c41f6f0f573ed1bfe118fae8d50ed   0.0s
+ =&gt; =&gt; naming to docker.io/library/test                                                        0.0s</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Docker CLI — Get list of images</div>
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="bash">docker image <span style="color: #d0d0d0;background-color: #151515">ls</span></code></pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>REPOSITORY             TAG               IMAGE ID       CREATED         SIZE
+test                   latest            1825da98372a   6 minutes ago   95.4MB</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Docker CLI — Run an image/container</div>
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="bash">docker container run <span style="color: #f4bf75">-d</span> <span style="color: #f4bf75">--name</span> web1 <span style="color: #f4bf75">--publish</span> 8080:8080 <span style="color: #d0d0d0;background-color: #151515">test</span>:latest</code></pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>63e334d59c7d937c99f6cbe6e5628c3b180ab26cb4b3f7e3d2cdd007cfd78f37</pre>
+</div>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="title">Docker CLI — Get list of running images/containers</div>
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="bash">docker ps</code></pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>CONTAINER ID   IMAGE         COMMAND           CREATED          STATUS          PORTS                                       NAMES
+63e334d59c7d   test:latest   &#34;node ./app.js&#34;   14 seconds ago   Up 13 seconds   0.0.0.0:8080-&gt;8080/tcp, :::8080-&gt;8080/tcp   web1</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_multi_stage_dockerfile">2. Multi-stage Dockerfile</h2>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
