@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "styles.css",
-	"sourceRoot": "/home/hossein/personal/blog/hos",
+	"sourceRoot": "/home/hos/dev/hossein-lap/blog/hos",
 	"sources": [
 		"themes/hugo-ficurinia/assets/scss/style.scss"
 	],
