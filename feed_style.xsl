@@ -9,7 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
         <meta charset="UTF-8"/>
         
-        <link type="text/css" rel="stylesheet" href="https://hossein-lap.github.io/css/styles.09576dc4634d64a40e98082ee89bb40217c156d6d97276ac1f4018dee15f3501a3ab7658a179746b43cf0e4f63fb55afcbe69d8b9f9a71e7357a7ba252542302.css" integrity="sha512-CVdtxGNNZKQOmAgu6Ju0AhfBVtbZcnasH0AY3uFfNQGjq3ZYoXl0a0PPDk9j+1Wvy+adi5+acec1enuiUlQjAg==" />
+        <link type="text/css" rel="stylesheet" href="https://hossein-lap.github.io/css/styles.1e5a1f56538e25c465555e44cb7a2dff7ff930abe032ba7108245aede0bb16031099101b4e7bb2c4ba274736a50b0b16726d92a5a93760dbbd40fcc81608d9c5.css" integrity="sha512-HlofVlOOJcRlVV5Ey3ot/3/5MKvgMrpxCCRa7eC7FgMQmRAbTnuyxLonRzalCwsWcm2Spak3YNu9QPzIFgjZxQ==" />
         <style>
           .aboutfeeds {
             margin: 24px 0; padding: 12px;

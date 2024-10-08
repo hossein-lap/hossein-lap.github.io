@@ -6,7 +6,115 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Hossein Esmail</copyright>
-    <lastBuildDate>Sat, 14 Sep 2024 15:53:26 +0330</lastBuildDate><atom:link href="https://hossein-lap.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><icon>https://hossein-lap.github.io/images/ed/foo.png</icon>
+    <lastBuildDate>Tue, 08 Oct 2024 09:41:28 +0330</lastBuildDate><atom:link href="https://hossein-lap.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><icon>https://hossein-lap.github.io/images/ed/foo.png</icon>
+    
+    
+    <item>
+      <title>Build System</title>
+      <link>https://hossein-lap.github.io/tags/build-system/</link>
+      <pubDate>Tue, 08 Oct 2024 09:41:28 +0330</pubDate>
+      
+      <guid>https://hossein-lap.github.io/tags/build-system/</guid>
+      <description><![CDATA[]]></description>
+      
+    </item>
+    
+    
+    
+    <item>
+      <title>Go</title>
+      <link>https://hossein-lap.github.io/tags/go/</link>
+      <pubDate>Tue, 08 Oct 2024 09:41:28 +0330</pubDate>
+      
+      <guid>https://hossein-lap.github.io/tags/go/</guid>
+      <description><![CDATA[]]></description>
+      
+    </item>
+    
+    
+    
+    <item>
+      <title>Golang</title>
+      <link>https://hossein-lap.github.io/tags/golang/</link>
+      <pubDate>Tue, 08 Oct 2024 09:41:28 +0330</pubDate>
+      
+      <guid>https://hossein-lap.github.io/tags/golang/</guid>
+      <description><![CDATA[]]></description>
+      
+    </item>
+    
+    
+    
+    <item>
+      <title>Makefile</title>
+      <link>https://hossein-lap.github.io/tags/makefile/</link>
+      <pubDate>Tue, 08 Oct 2024 09:41:28 +0330</pubDate>
+      
+      <guid>https://hossein-lap.github.io/tags/makefile/</guid>
+      <description><![CDATA[]]></description>
+      
+    </item>
+    
+    
+    
+    <item>
+      <title>Bash</title>
+      <link>https://hossein-lap.github.io/tags/bash/</link>
+      <pubDate>Mon, 07 Oct 2024 15:10:23 +0330</pubDate>
+      
+      <guid>https://hossein-lap.github.io/tags/bash/</guid>
+      <description><![CDATA[]]></description>
+      
+    </item>
+    
+    
+    
+    <item>
+      <title>Linux</title>
+      <link>https://hossein-lap.github.io/tags/linux/</link>
+      <pubDate>Mon, 07 Oct 2024 15:10:23 +0330</pubDate>
+      
+      <guid>https://hossein-lap.github.io/tags/linux/</guid>
+      <description><![CDATA[]]></description>
+      
+    </item>
+    
+    
+    
+    <item>
+      <title>Shell</title>
+      <link>https://hossein-lap.github.io/tags/shell/</link>
+      <pubDate>Mon, 07 Oct 2024 15:10:23 +0330</pubDate>
+      
+      <guid>https://hossein-lap.github.io/tags/shell/</guid>
+      <description><![CDATA[]]></description>
+      
+    </item>
+    
+    
+    
+    <item>
+      <title>Git</title>
+      <link>https://hossein-lap.github.io/tags/git/</link>
+      <pubDate>Thu, 26 Sep 2024 09:54:32 +0330</pubDate>
+      
+      <guid>https://hossein-lap.github.io/tags/git/</guid>
+      <description><![CDATA[]]></description>
+      
+    </item>
+    
+    
+    
+    <item>
+      <title>Vcs</title>
+      <link>https://hossein-lap.github.io/tags/vcs/</link>
+      <pubDate>Thu, 26 Sep 2024 09:54:32 +0330</pubDate>
+      
+      <guid>https://hossein-lap.github.io/tags/vcs/</guid>
+      <description><![CDATA[]]></description>
+      
+    </item>
+    
     
     
     <item>
@@ -219,18 +327,6 @@
       <pubDate>Fri, 31 May 2024 18:50:32 +0330</pubDate>
       
       <guid>https://hossein-lap.github.io/tags/nodeport/</guid>
-      <description><![CDATA[]]></description>
-      
-    </item>
-    
-    
-    
-    <item>
-      <title>Go</title>
-      <link>https://hossein-lap.github.io/tags/go/</link>
-      <pubDate>Fri, 31 May 2024 16:47:17 +0330</pubDate>
-      
-      <guid>https://hossein-lap.github.io/tags/go/</guid>
       <description><![CDATA[]]></description>
       
     </item>

@@ -276,7 +276,7 @@ language or system is operating correctly.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="lua"><span style="color: #d8d8d8;background-color: #181818">print</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">&#34;Hello World!&#34;</span><span style="color: #d8d8d8">)</span></code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;Hello World!&#34;</span><span style="color: #d0d0d0">)</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -309,11 +309,11 @@ that sets the value of variable to that expression.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="lua"><span style="color: #585858">-- Different types</span>
-<span style="color: #dc9656">local</span> <span style="color: #d8d8d8;background-color: #181818">x</span> <span style="color: #d8d8d8">=</span> <span style="color: #a1b56c">10</span> <span style="color: #585858">-- number</span>
-<span style="color: #dc9656">local</span> <span style="color: #d8d8d8;background-color: #181818">name</span> <span style="color: #d8d8d8">=</span> <span style="color: #a1b56c">&#34;Neo&#34;</span> <span style="color: #585858">-- string</span>
-<span style="color: #dc9656">local</span> <span style="color: #d8d8d8;background-color: #181818">is_alive</span> <span style="color: #d8d8d8">=</span> <span style="color: #dc9656">false</span> <span style="color: #585858">-- boolean</span>
-<span style="color: #dc9656">local</span> <span style="color: #d8d8d8;background-color: #181818">a</span> <span style="color: #d8d8d8">=</span> <span style="color: #dc9656">nil</span> <span style="color: #585858">-- no value or invalid value</span></code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #505050">-- Different types</span>
+<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">x</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">10</span> <span style="color: #505050">-- number</span>
+<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">name</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#34;Neo&#34;</span> <span style="color: #505050">-- string</span>
+<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">is_alive</span> <span style="color: #d0d0d0">=</span> <span style="color: #d28445">false</span> <span style="color: #505050">-- boolean</span>
+<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">=</span> <span style="color: #d28445">nil</span> <span style="color: #505050">-- no value or invalid value</span></code></pre>
 </div>
 </div>
 </div>
@@ -350,18 +350,18 @@ and prints its factorial:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="lua"><span style="color: #585858">-- defines a factorial function</span>
-<span style="color: #ba8baf">function</span> <span style="color: #d8d8d8;background-color: #181818">fact</span> <span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">n</span><span style="color: #d8d8d8">)</span>
-    <span style="color: #ba8baf">if</span> <span style="color: #d8d8d8;background-color: #181818">n</span> <span style="color: #d8d8d8">==</span> <span style="color: #a1b56c">0</span> <span style="color: #ba8baf">then</span>
-        <span style="color: #ba8baf">return</span> <span style="color: #a1b56c">1</span>
-    <span style="color: #ba8baf">else</span>
-        <span style="color: #ba8baf">return</span> <span style="color: #d8d8d8;background-color: #181818">n</span> <span style="color: #d8d8d8">*</span> <span style="color: #d8d8d8;background-color: #181818">fact</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">n</span> <span style="color: #d8d8d8">-</span> <span style="color: #a1b56c">1</span><span style="color: #d8d8d8">)</span>
-    <span style="color: #ba8baf">end</span>
-<span style="color: #ba8baf">end</span>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #505050">-- defines a factorial function</span>
+<span style="color: #aa759f">function</span> <span style="color: #d0d0d0;background-color: #151515">fact</span> <span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">n</span><span style="color: #d0d0d0">)</span>
+    <span style="color: #aa759f">if</span> <span style="color: #d0d0d0;background-color: #151515">n</span> <span style="color: #d0d0d0">==</span> <span style="color: #90a959">0</span> <span style="color: #aa759f">then</span>
+        <span style="color: #aa759f">return</span> <span style="color: #90a959">1</span>
+    <span style="color: #aa759f">else</span>
+        <span style="color: #aa759f">return</span> <span style="color: #d0d0d0;background-color: #151515">n</span> <span style="color: #d0d0d0">*</span> <span style="color: #d0d0d0;background-color: #151515">fact</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">n</span> <span style="color: #d0d0d0">-</span> <span style="color: #90a959">1</span><span style="color: #d0d0d0">)</span>
+    <span style="color: #aa759f">end</span>
+<span style="color: #aa759f">end</span>
 
-<span style="color: #d8d8d8;background-color: #181818">print</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">&#34;enter a number:&#34;</span><span style="color: #d8d8d8">)</span>
-<span style="color: #d8d8d8;background-color: #181818">a</span> <span style="color: #d8d8d8">=</span> <span style="color: #d8d8d8;background-color: #181818">io.read</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">&#34;*n&#34;</span><span style="color: #d8d8d8">)</span>       <span style="color: #585858">-- reads a number</span>
-<span style="color: #d8d8d8;background-color: #181818">print</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">fact</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">a</span><span style="color: #d8d8d8">))</span></code></pre>
+<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;enter a number:&#34;</span><span style="color: #d0d0d0">)</span>
+<span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">io.read</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;*n&#34;</span><span style="color: #d0d0d0">)</span>       <span style="color: #505050">-- reads a number</span>
+<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">fact</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">a</span><span style="color: #d0d0d0">))</span></code></pre>
 </div>
 </div>
 </div>
@@ -431,10 +431,10 @@ the expressions inside calls to <code>print</code>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="lua"><span style="color: #d8d8d8;background-color: #181818">print</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">math.pi</span> <span style="color: #d8d8d8">/</span> <span style="color: #a1b56c">4</span><span style="color: #d8d8d8">)</span>  <span style="color: #585858">--&gt; 0.78539816339745</span>
-<span style="color: #d8d8d8;background-color: #181818">a</span> <span style="color: #d8d8d8">=</span> <span style="color: #a1b56c">15</span>
-<span style="color: #d8d8d8;background-color: #181818">print</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">a</span> <span style="color: #d8d8d8">^</span> <span style="color: #a1b56c">2</span><span style="color: #d8d8d8">)</span>        <span style="color: #585858">--&gt; 225</span>
-<span style="color: #d8d8d8;background-color: #181818">print</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">a</span> <span style="color: #d8d8d8">+</span> <span style="color: #a1b56c">2</span><span style="color: #d8d8d8">)</span>        <span style="color: #585858">--&gt; 17</span></code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">math.pi</span> <span style="color: #d0d0d0">/</span> <span style="color: #90a959">4</span><span style="color: #d0d0d0">)</span>  <span style="color: #505050">--&gt; 0.78539816339745</span>
+<span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">15</span>
+<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">^</span> <span style="color: #90a959">2</span><span style="color: #d0d0d0">)</span>        <span style="color: #505050">--&gt; 225</span>
+<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">+</span> <span style="color: #90a959">2</span><span style="color: #d0d0d0">)</span>        <span style="color: #505050">--&gt; 17</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -469,13 +469,13 @@ a file. For instance, suppose we have a file <code>lib1.lua</code> with the foll
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="lua"><span style="color: #ba8baf">function</span> <span style="color: #d8d8d8;background-color: #181818">norm</span> <span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">x</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8;background-color: #181818">y</span><span style="color: #d8d8d8">)</span>
-    <span style="color: #ba8baf">return</span> <span style="color: #d8d8d8;background-color: #181818">math.sqrt</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">x</span><span style="color: #d8d8d8">^</span><span style="color: #a1b56c">2</span> <span style="color: #d8d8d8">+</span> <span style="color: #d8d8d8;background-color: #181818">y</span><span style="color: #d8d8d8">^</span><span style="color: #a1b56c">2</span><span style="color: #d8d8d8">)</span>
-<span style="color: #ba8baf">end</span>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #aa759f">function</span> <span style="color: #d0d0d0;background-color: #151515">norm</span> <span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">x</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">y</span><span style="color: #d0d0d0">)</span>
+    <span style="color: #aa759f">return</span> <span style="color: #d0d0d0;background-color: #151515">math.sqrt</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">x</span><span style="color: #d0d0d0">^</span><span style="color: #90a959">2</span> <span style="color: #d0d0d0">+</span> <span style="color: #d0d0d0;background-color: #151515">y</span><span style="color: #d0d0d0">^</span><span style="color: #90a959">2</span><span style="color: #d0d0d0">)</span>
+<span style="color: #aa759f">end</span>
 
-<span style="color: #ba8baf">function</span> <span style="color: #d8d8d8;background-color: #181818">twice</span> <span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">x</span><span style="color: #d8d8d8">)</span>
-    <span style="color: #ba8baf">return</span> <span style="color: #a1b56c">2</span><span style="color: #d8d8d8">.</span><span style="color: #a1b56c">0</span> <span style="color: #d8d8d8">*</span> <span style="color: #d8d8d8;background-color: #181818">x</span>
-<span style="color: #ba8baf">end</span></code></pre>
+<span style="color: #aa759f">function</span> <span style="color: #d0d0d0;background-color: #151515">twice</span> <span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">x</span><span style="color: #d0d0d0">)</span>
+    <span style="color: #aa759f">return</span> <span style="color: #90a959">2</span><span style="color: #d0d0d0">.</span><span style="color: #90a959">0</span> <span style="color: #d0d0d0">*</span> <span style="color: #d0d0d0;background-color: #151515">x</span>
+<span style="color: #aa759f">end</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -534,8 +534,8 @@ Usually, I reserve the identifier <code>_</code> (a single underscore) for dummy
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="lua"><span style="color: #d8d8d8">and</span> <span style="color: #ba8baf">end</span> <span style="color: #ba8baf">if</span> <span style="color: #d8d8d8">or</span> <span style="color: #ba8baf">until</span> <span style="color: #ba8baf">break</span> <span style="color: #dc9656">false</span> <span style="color: #ba8baf">in</span> <span style="color: #ba8baf">repeat</span> <span style="color: #ba8baf">while</span> <span style="color: #ba8baf">do</span> <span style="color: #ba8baf">for</span> <span style="color: #dc9656">local</span>
-<span style="color: #ba8baf">return</span> <span style="color: #ba8baf">else</span> <span style="color: #ba8baf">function</span> <span style="color: #d8d8d8;background-color: #181818">nil</span> <span style="color: #ba8baf">then</span> <span style="color: #ba8baf">elseif</span> <span style="color: #d8d8d8;background-color: #181818">goto</span> <span style="color: #d8d8d8">not</span> <span style="color: #dc9656">true</span></code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #d0d0d0">and</span> <span style="color: #aa759f">end</span> <span style="color: #aa759f">if</span> <span style="color: #d0d0d0">or</span> <span style="color: #aa759f">until</span> <span style="color: #aa759f">break</span> <span style="color: #d28445">false</span> <span style="color: #aa759f">in</span> <span style="color: #aa759f">repeat</span> <span style="color: #aa759f">while</span> <span style="color: #aa759f">do</span> <span style="color: #aa759f">for</span> <span style="color: #d28445">local</span>
+<span style="color: #aa759f">return</span> <span style="color: #aa759f">else</span> <span style="color: #aa759f">function</span> <span style="color: #d0d0d0;background-color: #151515">nil</span> <span style="color: #aa759f">then</span> <span style="color: #aa759f">elseif</span> <span style="color: #d0d0d0;background-color: #151515">goto</span> <span style="color: #d0d0d0">not</span> <span style="color: #d28445">true</span></code></pre>
 </div>
 </div>
 <div class="sidebarblock">
@@ -564,9 +564,9 @@ or at the end of another line:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="lua"><span style="color: #d8d8d8;background-color: #181818">print</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">&#34;This is normal code.&#34;</span><span style="color: #d8d8d8">)</span>
-<span style="color: #585858">-- This is a comment</span>
-<span style="color: #d8d8d8;background-color: #181818">print</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">&#34;This is still normal code.&#34;</span><span style="color: #d8d8d8">)</span> <span style="color: #585858">-- Comment at the end of a line of code.</span></code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;This is normal code.&#34;</span><span style="color: #d0d0d0">)</span>
+<span style="color: #505050">-- This is a comment</span>
+<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;This is still normal code.&#34;</span><span style="color: #d0d0d0">)</span> <span style="color: #505050">-- Comment at the end of a line of code.</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -575,8 +575,8 @@ which start with a long bracket and can continue on many lines:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="lua"><span style="color: #d8d8d8;background-color: #181818">print</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">&#34;This is normal code&#34;</span><span style="color: #d8d8d8">)</span>
-<span style="color: #585858">--[[Line 1
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;This is normal code&#34;</span><span style="color: #d0d0d0">)</span>
+<span style="color: #505050">--[[Line 1
 Line 2
 ]]</span></code></pre>
 </div>
@@ -594,7 +594,7 @@ It is often useful to do this when using comments to disable blocks of code.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="lua"><span style="color: #585858">--[==[
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #505050">--[==[
 This is a comment that contains a closing long bracket of level 0 which is here:
  ]]
 However, the closing double bracket doesn&#39;t make the comment end, because the
@@ -628,7 +628,7 @@ would be erroneous:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="lua"><span style="color: #a1b56c">3</span> <span style="color: #d8d8d8">+</span> <span style="color: #a1b56c">5</span></code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #90a959">3</span> <span style="color: #d0d0d0">+</span> <span style="color: #90a959">5</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -651,14 +651,14 @@ four chunks are all valid and equivalent:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="lua"><span style="color: #d8d8d8;background-color: #181818">a</span> <span style="color: #d8d8d8">=</span> <span style="color: #a1b56c">1</span>
-<span style="color: #d8d8d8;background-color: #181818">b</span> <span style="color: #d8d8d8">=</span> <span style="color: #d8d8d8;background-color: #181818">a</span> <span style="color: #d8d8d8">*</span> <span style="color: #a1b56c">2</span>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">1</span>
+<span style="color: #d0d0d0;background-color: #151515">b</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">*</span> <span style="color: #90a959">2</span>
 
-<span style="color: #d8d8d8;background-color: #181818">a</span> <span style="color: #d8d8d8">=</span> <span style="color: #a1b56c">1</span><span style="color: #d8d8d8">;</span>
-<span style="color: #d8d8d8;background-color: #181818">b</span> <span style="color: #d8d8d8">=</span> <span style="color: #d8d8d8;background-color: #181818">a</span> <span style="color: #d8d8d8">*</span> <span style="color: #a1b56c">2</span><span style="color: #d8d8d8">;</span>
+<span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">1</span><span style="color: #d0d0d0">;</span>
+<span style="color: #d0d0d0;background-color: #151515">b</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">*</span> <span style="color: #90a959">2</span><span style="color: #d0d0d0">;</span>
 
-<span style="color: #d8d8d8;background-color: #181818">a</span> <span style="color: #d8d8d8">=</span> <span style="color: #a1b56c">1</span><span style="color: #d8d8d8">;</span> <span style="color: #d8d8d8;background-color: #181818">b</span> <span style="color: #d8d8d8">=</span> <span style="color: #d8d8d8;background-color: #181818">a</span> <span style="color: #d8d8d8">*</span> <span style="color: #a1b56c">2</span>
-<span style="color: #d8d8d8;background-color: #181818">a</span> <span style="color: #d8d8d8">=</span> <span style="color: #a1b56c">1</span> <span style="color: #d8d8d8;background-color: #181818">b</span> <span style="color: #d8d8d8">=</span> <span style="color: #d8d8d8;background-color: #181818">a</span> <span style="color: #d8d8d8">*</span> <span style="color: #a1b56c">2</span> <span style="color: #585858">-- ugly, but valid</span></code></pre>
+<span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">1</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0;background-color: #151515">b</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">*</span> <span style="color: #90a959">2</span>
+<span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">1</span> <span style="color: #d0d0d0;background-color: #151515">b</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">*</span> <span style="color: #90a959">2</span> <span style="color: #505050">-- ugly, but valid</span></code></pre>
 </div>
 </div>
 </div>
@@ -889,7 +889,7 @@ not try to evaluate <code>a / i</code> when <code>i</code> is zero.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="lua"><span style="color: #ba8baf">if</span> <span style="color: #d8d8d8">not</span> <span style="color: #d8d8d8;background-color: #181818">x</span> <span style="color: #ba8baf">then</span> <span style="color: #d8d8d8;background-color: #181818">x</span> <span style="color: #d8d8d8">=</span> <span style="color: #d8d8d8;background-color: #181818">v</span> <span style="color: #ba8baf">end</span></code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #aa759f">if</span> <span style="color: #d0d0d0">not</span> <span style="color: #d0d0d0;background-color: #151515">x</span> <span style="color: #aa759f">then</span> <span style="color: #d0d0d0;background-color: #151515">x</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">v</span> <span style="color: #aa759f">end</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -962,11 +962,11 @@ and the <code>or</code> operator returns true if either of arguments is true and
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="lua"><span style="color: #dc9656">local</span> <span style="color: #d8d8d8;background-color: #181818">is_alive</span> <span style="color: #d8d8d8">=</span> <span style="color: #dc9656">true</span>
-<span style="color: #d8d8d8;background-color: #181818">print</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">is_alive</span><span style="color: #d8d8d8">)</span> <span style="color: #585858">-- true</span>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">is_alive</span> <span style="color: #d0d0d0">=</span> <span style="color: #d28445">true</span>
+<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">is_alive</span><span style="color: #d0d0d0">)</span> <span style="color: #505050">-- true</span>
 
-<span style="color: #dc9656">local</span> <span style="color: #d8d8d8;background-color: #181818">is_alive</span> <span style="color: #d8d8d8">=</span> <span style="color: #dc9656">false</span>
-<span style="color: #d8d8d8;background-color: #181818">print</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">is_alive</span><span style="color: #d8d8d8">)</span> <span style="color: #585858">-- false</span></code></pre>
+<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">is_alive</span> <span style="color: #d0d0d0">=</span> <span style="color: #d28445">false</span>
+<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">is_alive</span><span style="color: #d0d0d0">)</span> <span style="color: #505050">-- false</span></code></pre>
 </div>
 </div>
 </div>
@@ -1007,30 +1007,30 @@ even in hexadecimal. Here are some valid numbers:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="lua"><span style="color: #585858">-- The Lua</span>
-<span style="color: #dc9656">local</span> <span style="color: #d8d8d8;background-color: #181818">a</span> <span style="color: #d8d8d8">=</span> <span style="color: #a1b56c">1</span>
-<span style="color: #dc9656">local</span> <span style="color: #d8d8d8;background-color: #181818">b</span> <span style="color: #d8d8d8">=</span> <span style="color: #a1b56c">2</span>
-<span style="color: #dc9656">local</span> <span style="color: #d8d8d8;background-color: #181818">c</span> <span style="color: #d8d8d8">=</span> <span style="color: #d8d8d8;background-color: #181818">a</span> <span style="color: #d8d8d8">+</span> <span style="color: #d8d8d8;background-color: #181818">b</span>
-<span style="color: #d8d8d8;background-color: #181818">print</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">c</span><span style="color: #d8d8d8">)</span> <span style="color: #585858">-- 3</span>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #505050">-- The Lua</span>
+<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">1</span>
+<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">b</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">2</span>
+<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">c</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">a</span> <span style="color: #d0d0d0">+</span> <span style="color: #d0d0d0;background-color: #151515">b</span>
+<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">c</span><span style="color: #d0d0d0">)</span> <span style="color: #505050">-- 3</span>
 
-<span style="color: #dc9656">local</span> <span style="color: #d8d8d8;background-color: #181818">d</span> <span style="color: #d8d8d8">=</span> <span style="color: #d8d8d8;background-color: #181818">b</span> <span style="color: #d8d8d8">-</span> <span style="color: #d8d8d8;background-color: #181818">a</span>
-<span style="color: #d8d8d8;background-color: #181818">print</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">d</span><span style="color: #d8d8d8">)</span>
+<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">d</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">b</span> <span style="color: #d0d0d0">-</span> <span style="color: #d0d0d0;background-color: #151515">a</span>
+<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">d</span><span style="color: #d0d0d0">)</span>
 
-<span style="color: #dc9656">local</span> <span style="color: #d8d8d8;background-color: #181818">x</span> <span style="color: #d8d8d8">=</span> <span style="color: #a1b56c">1</span> <span style="color: #d8d8d8">*</span> <span style="color: #a1b56c">3</span> <span style="color: #d8d8d8">*</span> <span style="color: #a1b56c">4</span> <span style="color: #585858">-- 12</span>
-<span style="color: #d8d8d8;background-color: #181818">print</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">x</span><span style="color: #d8d8d8">)</span>
+<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">x</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">1</span> <span style="color: #d0d0d0">*</span> <span style="color: #90a959">3</span> <span style="color: #d0d0d0">*</span> <span style="color: #90a959">4</span> <span style="color: #505050">-- 12</span>
+<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">x</span><span style="color: #d0d0d0">)</span>
 
-<span style="color: #dc9656">local</span> <span style="color: #d8d8d8;background-color: #181818">y</span> <span style="color: #d8d8d8">=</span> <span style="color: #d8d8d8">(</span><span style="color: #a1b56c">1</span><span style="color: #d8d8d8">+</span><span style="color: #a1b56c">3</span><span style="color: #d8d8d8">)</span> <span style="color: #d8d8d8">*</span> <span style="color: #a1b56c">2</span> <span style="color: #585858">-- 8</span>
-<span style="color: #d8d8d8;background-color: #181818">print</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">y</span><span style="color: #d8d8d8">)</span>
+<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">y</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">(</span><span style="color: #90a959">1</span><span style="color: #d0d0d0">+</span><span style="color: #90a959">3</span><span style="color: #d0d0d0">)</span> <span style="color: #d0d0d0">*</span> <span style="color: #90a959">2</span> <span style="color: #505050">-- 8</span>
+<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">y</span><span style="color: #d0d0d0">)</span>
 
-<span style="color: #d8d8d8;background-color: #181818">print</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">10</span> <span style="color: #d8d8d8">/</span> <span style="color: #a1b56c">2</span><span style="color: #d8d8d8">)</span> <span style="color: #585858">-- 5</span>
-<span style="color: #d8d8d8;background-color: #181818">print</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">2</span> <span style="color: #d8d8d8">^</span> <span style="color: #a1b56c">2</span><span style="color: #d8d8d8">)</span> <span style="color: #585858">-- 4</span>
-<span style="color: #d8d8d8;background-color: #181818">print</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">5</span> <span style="color: #d8d8d8">%</span> <span style="color: #a1b56c">2</span><span style="color: #d8d8d8">)</span> <span style="color: #585858">-- 1</span>
-<span style="color: #d8d8d8;background-color: #181818">print</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8">-</span><span style="color: #d8d8d8;background-color: #181818">b</span><span style="color: #d8d8d8">)</span> <span style="color: #585858">-- -2</span>
+<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">10</span> <span style="color: #d0d0d0">/</span> <span style="color: #90a959">2</span><span style="color: #d0d0d0">)</span> <span style="color: #505050">-- 5</span>
+<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">2</span> <span style="color: #d0d0d0">^</span> <span style="color: #90a959">2</span><span style="color: #d0d0d0">)</span> <span style="color: #505050">-- 4</span>
+<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">5</span> <span style="color: #d0d0d0">%</span> <span style="color: #90a959">2</span><span style="color: #d0d0d0">)</span> <span style="color: #505050">-- 1</span>
+<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0">-</span><span style="color: #d0d0d0;background-color: #151515">b</span><span style="color: #d0d0d0">)</span> <span style="color: #505050">-- -2</span>
 
-<span style="color: #585858">-- Incerment</span>
-<span style="color: #dc9656">local</span> <span style="color: #d8d8d8;background-color: #181818">level</span> <span style="color: #d8d8d8">=</span> <span style="color: #a1b56c">1</span>
-<span style="color: #d8d8d8;background-color: #181818">level</span> <span style="color: #d8d8d8">=</span> <span style="color: #d8d8d8;background-color: #181818">level</span> <span style="color: #d8d8d8">+</span> <span style="color: #a1b56c">1</span>
-<span style="color: #d8d8d8;background-color: #181818">print</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">level</span><span style="color: #d8d8d8">)</span></code></pre>
+<span style="color: #505050">-- Incerment</span>
+<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">level</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">1</span>
+<span style="color: #d0d0d0;background-color: #151515">level</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">level</span> <span style="color: #d0d0d0">+</span> <span style="color: #90a959">1</span>
+<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">level</span><span style="color: #d0d0d0">)</span></code></pre>
 </div>
 </div>
 <div class="sect3">
@@ -1145,14 +1145,14 @@ is also the only way to insert single or double quotes in certain cases.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="lua"><span style="color: #dc9656">local</span> <span style="color: #d8d8d8;background-color: #181818">phrase</span> <span style="color: #d8d8d8">=</span> <span style="color: #a1b56c">[[My name is ]]</span>
-<span style="color: #dc9656">local</span> <span style="color: #d8d8d8;background-color: #181818">name</span> <span style="color: #d8d8d8">=</span> <span style="color: #a1b56c">&#39;P J&#39;</span>
-<span style="color: #d8d8d8;background-color: #181818">print</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">phrase</span> <span style="color: #d8d8d8">..</span> <span style="color: #d8d8d8;background-color: #181818">name</span><span style="color: #d8d8d8">)</span> <span style="color: #585858">-- My name is P J</span>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">phrase</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">[[My name is ]]</span>
+<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">name</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#39;P J&#39;</span>
+<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">phrase</span> <span style="color: #d0d0d0">..</span> <span style="color: #d0d0d0;background-color: #151515">name</span><span style="color: #d0d0d0">)</span> <span style="color: #505050">-- My name is P J</span>
 
-<span style="color: #585858">-- Strings and Numbers</span>
-<span style="color: #dc9656">local</span> <span style="color: #d8d8d8;background-color: #181818">age</span> <span style="color: #d8d8d8">=</span> <span style="color: #a1b56c">21</span>
-<span style="color: #dc9656">local</span> <span style="color: #d8d8d8;background-color: #181818">name</span> <span style="color: #d8d8d8">=</span> <span style="color: #a1b56c">&#34;Billy&#34;</span>
-<span style="color: #d8d8d8;background-color: #181818">print</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">name</span> <span style="color: #d8d8d8">..</span> <span style="color: #a1b56c">&#34; is &#34;</span> <span style="color: #d8d8d8">..</span> <span style="color: #d8d8d8;background-color: #181818">age</span> <span style="color: #d8d8d8">..</span> <span style="color: #a1b56c">&#34; Years old&#34;</span><span style="color: #d8d8d8">)</span></code></pre>
+<span style="color: #505050">-- Strings and Numbers</span>
+<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">age</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">21</span>
+<span style="color: #d28445">local</span> <span style="color: #d0d0d0;background-color: #151515">name</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#34;Billy&#34;</span>
+<span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">name</span> <span style="color: #d0d0d0">..</span> <span style="color: #90a959">&#34; is &#34;</span> <span style="color: #d0d0d0">..</span> <span style="color: #d0d0d0;background-color: #151515">age</span> <span style="color: #d0d0d0">..</span> <span style="color: #90a959">&#34; Years old&#34;</span><span style="color: #d0d0d0">)</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1280,7 +1280,7 @@ interpretation of characters.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="lua"><span style="color: #d8d8d8;background-color: #181818">print</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8">#</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">&#34;This is a string&#34;</span><span style="color: #d8d8d8">))</span> <span style="color: #585858">--&gt; 16</span></code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="lua"><span style="color: #d0d0d0;background-color: #151515">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0">#</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;This is a string&#34;</span><span style="color: #d0d0d0">))</span> <span style="color: #505050">--&gt; 16</span></code></pre>
 </div>
 </div>
 <div class="sect3">
@@ -1393,15 +1393,15 @@ Threads
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="go"><span style="color: #ba8baf">package</span> <span style="color: #d8d8d8;background-color: #181818">main</span>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">package</span> <span style="color: #d0d0d0;background-color: #151515">main</span>
 
-<span style="color: #ba8baf">import</span> <span style="color: #d8d8d8">(</span>
-    <span style="color: #a1b56c">&#34;fmt&#34;</span>
-<span style="color: #d8d8d8">)</span>
+<span style="color: #aa759f">import</span> <span style="color: #d0d0d0">(</span>
+    <span style="color: #90a959">&#34;fmt&#34;</span>
+<span style="color: #d0d0d0">)</span>
 
-<span style="color: #ba8baf">func</span> <span style="color: #d8d8d8;background-color: #181818">main</span><span style="color: #d8d8d8">()</span> <span style="color: #d8d8d8">{</span>
-    <span style="color: #d8d8d8;background-color: #181818">fmt</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Printf</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">&#34;This is a simple test!</span><span style="color: #a16946">\n</span><span style="color: #a1b56c">&#34;</span><span style="color: #d8d8d8">)</span>
-<span style="color: #d8d8d8">}</span></code></pre>
+<span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">main</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
+    <span style="color: #d0d0d0;background-color: #151515">fmt</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Printf</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;This is a simple test!</span><span style="color: #8f5536">\n</span><span style="color: #90a959">&#34;</span><span style="color: #d0d0d0">)</span>
+<span style="color: #d0d0d0">}</span></code></pre>
 </div>
 </div>
 </div>
@@ -1428,7 +1428,7 @@ Threads
 <div class="listingblock">
 <div class="title">Test</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="c"><span style="color: #585858">// include::{home}/.cache/wal/colors-wal-st.h[]</span></code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="c"><span style="color: #505050">// include::{home}/.cache/wal/colors-wal-st.h[]</span></code></pre>
 </div>
 </div>
 </div>
@@ -1442,7 +1442,7 @@ Threads
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">* level 1
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">* level 1
 ** level 2
 *** level 3
 **** level 4
@@ -1502,7 +1502,7 @@ Threads
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">. level 1
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">. level 1
 .. level 2
 ... level 3
 .... level 4
@@ -1562,7 +1562,7 @@ Threads
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">- [*] checked
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">- [*] checked
 - [x] also checked
 - [ ] not checked
 - normal list item</code></pre>
@@ -1598,7 +1598,7 @@ Threads
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">. Apples
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">. Apples
 . Oranges
 
 //-
@@ -1646,7 +1646,7 @@ Threads
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">first term:: definition of first term
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">first term:: definition of first term
 section term:: definition of second term</code></pre>
 </div>
 </div>
@@ -1676,7 +1676,7 @@ section term:: definition of second term</code></pre>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">[horizontal]
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">[horizontal]
 first term:: definition of first term
 section term:: definition of second term</code></pre>
 </div>
@@ -1715,7 +1715,7 @@ section term
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">first term::
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">first term::
 definition of first term
 section term::
 definition of second term</code></pre>
@@ -1747,7 +1747,7 @@ definition of second term</code></pre>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">[qanda]
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">[qanda]
 What is Asciidoctor?::
 An implementation of the AsciiDoc processor in Ruby.
 What is the answer to the Ultimate Question?:: 42</code></pre>
@@ -1779,7 +1779,7 @@ What is the answer to the Ultimate Question?:: 42</code></pre>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">Operating Systems::
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">Operating Systems::
     Linux:::
         . Fedora
             * Desktop
@@ -1911,7 +1911,7 @@ Note that the indentation is optional
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">* Every list item has at least one paragraph of content,
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">* Every list item has at least one paragraph of content,
   which may be wrapped, even using a hanging indent.
 +
 Additional paragraphs or blocks are adjoined by putting
@@ -2008,7 +2008,7 @@ a list continuation on a line adjacent to both blocks.</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">http://asciidoctor.org - automatic!
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">http://asciidoctor.org - automatic!
 
 http://asciidoctor.org[Asciidoctor]
 
@@ -2038,7 +2038,7 @@ https://github.com/asciidoctor[Asciidoctor @ *GitHub*]</code></pre>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">link:test.adoc[Docs]</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">link:test.adoc[Docs]</code></pre>
 </div>
 </div>
 <div class="exampleblock">
@@ -2058,7 +2058,7 @@ https://github.com/asciidoctor[Asciidoctor @ *GitHub*]</code></pre>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">devel@discuss.arquillian.org
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">devel@discuss.arquillian.org
 
 mailto:devel@discuss.arquillian.org[Discuss Arquillian]
 
@@ -2077,7 +2077,7 @@ irc://irc.freenode.org/#asciidoctor</code></pre>
 <p><a href="mailto:devel@discuss.arquillian.org">Discuss Arquillian</a></p>
 </div>
 <div class="paragraph">
-<p><a href="mailto:devel-join@discuss.arquillian.org?subject=Subscribe%20me&amp;body=I%20want%20to%20join%21">Subscribe</a></p>
+<p><a href="mailto:devel-join@discuss.arquillian.org?subject=Subscribe+me&amp;body=I+want+to+join%21">Subscribe</a></p>
 </div>
 <div class="paragraph">
 <p><a href="irc://irc.freenode.org/#asciidoctor" class="bare">irc://irc.freenode.org/#asciidoctor</a></p>
@@ -2093,7 +2093,7 @@ irc://irc.freenode.org/#asciidoctor</code></pre>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">[[bookmark-a]]Inline anchors make arbitrary content referenceable.
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">[[bookmark-a]]Inline anchors make arbitrary content referenceable.
 
 anchor:bookmark-b[]Use a cross reference to link to this location.</code></pre>
 </div>
@@ -2118,7 +2118,7 @@ anchor:bookmark-b[]Use a cross reference to link to this location.</code></pre>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">See &lt;&lt;paragraphs&gt;&gt; to learn how to write paragraphs.
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">See &lt;&lt;paragraphs&gt;&gt; to learn how to write paragraphs.
 
 Learn how to organize the document into &lt;&lt;section-titles,sections&gt;&gt;.</code></pre>
 </div>
@@ -2143,7 +2143,7 @@ Learn how to organize the document into &lt;&lt;section-titles,sections&gt;&gt;.
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">image::/images/asciidoc/rose.png[]
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">image::/images/asciidoc/rose.png[]
 
 image::/images/asciidoc/rose.png[Rose]
 
@@ -2194,7 +2194,7 @@ image::http://asciidoctor.org/images/octocat.jpg[GitHub mascot]</code></pre>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">NOTE: This is a NOTE!</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">NOTE: This is a NOTE!</code></pre>
 </div>
 </div>
 <div class="exampleblock">
@@ -2223,7 +2223,7 @@ This is a NOTE!
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">TIP: This is a TIP!</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">TIP: This is a TIP!</code></pre>
 </div>
 </div>
 <div class="exampleblock">
@@ -2252,7 +2252,7 @@ This is a TIP!
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">WARNING: This is a WARNING!</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">WARNING: This is a WARNING!</code></pre>
 </div>
 </div>
 <div class="exampleblock">
@@ -2281,7 +2281,7 @@ This is a WARNING!
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">CAUTION: This is a CAUTION!</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">CAUTION: This is a CAUTION!</code></pre>
 </div>
 </div>
 <div class="exampleblock">
@@ -2310,7 +2310,7 @@ This is a CAUTION!
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">IMPORTANT: This is a IMPORTANT!</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">IMPORTANT: This is a IMPORTANT!</code></pre>
 </div>
 </div>
 <div class="exampleblock">
@@ -2339,7 +2339,7 @@ This is a IMPORTANT!
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">[NOTE]
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">[NOTE]
 ====
 This is an example of an admonition block.
 Unlike an admonition paragraph, it may contain any AsciiDoc content.
@@ -2407,7 +2407,7 @@ The style can be any one of the admonition labels:</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">-----
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">-----
 This is a **_listing block_**
 -----</code></pre>
 </div>
@@ -2431,7 +2431,7 @@ This is a **_listing block_**
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">=====
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">=====
 This is a **_example block_**
 =====</code></pre>
 </div>
@@ -2457,7 +2457,7 @@ This is a **_example block_**
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">////
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">////
 This is a **_comment block_**
 ////</code></pre>
 </div>
@@ -2477,7 +2477,7 @@ This is a **_comment block_**
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">....
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">....
 This is a **_literal block_**
 ....</code></pre>
 </div>
@@ -2501,7 +2501,7 @@ This is a **_literal block_**
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">++++
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">++++
 == This is raw text
 ++++</code></pre>
 </div>
@@ -2521,7 +2521,7 @@ This is a **_literal block_**
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">____
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">____
 This is a very very simple quote
 ____</code></pre>
 </div>
@@ -2546,7 +2546,7 @@ ____</code></pre>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">.After landing the cloaked Klingon bird of prey in Golden Gate park:
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">.After landing the cloaked Klingon bird of prey in Golden Gate park:
 [quote,Captain James T. Kirk,Star Trek IV: The Voyage Home]
 Everybody remember where we parked.</code></pre>
 </div>
@@ -2576,7 +2576,7 @@ Everybody remember where we parked.
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">.Some Title
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">.Some Title
 ****
 This is a Sidebar block -- I have no idea why it&#39;s called `sidebar`
 ****</code></pre>
@@ -2604,7 +2604,7 @@ This is a Sidebar block -- I have no idea why it&#39;s called `sidebar`
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">.Gettysburg Address
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">.Gettysburg Address
 [[gettysburg]]
 [quote, Abraham Lincoln, Soldiers&#39; National Cemetery Dedication]
 ----
@@ -2672,7 +2672,7 @@ can long endure. ...</pre>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="bash"><span style="color: #d8d8d8;background-color: #181818">$ </span>iex</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="bash"><span style="color: #d0d0d0;background-color: #151515">$ </span>iex</code></pre>
 </div>
 </div>
 </div>
@@ -2683,8 +2683,8 @@ can long endure. ...</pre>
 <div class="listingblock">
 <div class="title">intro.exs</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="elixir"><span style="color: #585858">#!/bin/elixir</span>
-<span style="color: #f7ca88">IO</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">puts</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">&#34;Hello&#34;</span> <span style="color: #d8d8d8">&lt;&gt;</span> <span style="color: #a1b56c">&#34; Elixir!!&#34;</span><span style="color: #d8d8d8">)</span></code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="elixir"><span style="color: #505050">#!/bin/elixir</span>
+<span style="color: #f4bf75">IO</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">puts</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;Hello&#34;</span> <span style="color: #d0d0d0">&lt;&gt;</span> <span style="color: #90a959">&#34; Elixir!!&#34;</span><span style="color: #d0d0d0">)</span></code></pre>
 </div>
 </div>
 </div>
@@ -2704,7 +2704,7 @@ mix run</pre>
 <div class="listingblock">
 <div class="title">Create</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="bash">mix new example</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="bash">mix new example</code></pre>
 </div>
 </div>
 </div>
