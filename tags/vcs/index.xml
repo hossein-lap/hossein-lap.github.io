@@ -29,7 +29,7 @@
 <div class="listingblock">
 <div class="title">Clone bare repo</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="bash">git clone <span style="color: #f4bf75">--bare</span> git@github.com:hossein-lap/blog.git blog.git</code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="bash">git clone <span style="color: #f7ca88">--bare</span> git@github.com:hossein-lap/blog.git blog.git</code></pre>
 </div>
 </div>
 <div class="admonitionblock note">
@@ -54,14 +54,14 @@ merge-requests (pull-requests if you will) to my repositories :))</p>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="bash"><span style="color: #505050">#!/bin/sh</span>
-<span style="color: #d0d0d0;background-color: #151515">set</span> <span style="color: #f4bf75">-e</span>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="bash"><span style="color: #585858">#!/bin/sh</span>
+<span style="color: #d8d8d8;background-color: #181818">set</span> <span style="color: #f7ca88">-e</span>
 
-<span style="color: #505050"># help function</span>
-<span style="color: #d0d0d0;background-color: #151515">prompt</span><span style="color: #d0d0d0">=</span><span style="color: #8f5536">$(</span><span style="color: #d0d0d0;background-color: #151515">echo</span> <span style="color: #aa759f">${</span><span style="color: #d0d0d0;background-color: #151515">0</span><span style="color: #aa759f">}</span> | <span style="color: #d0d0d0;background-color: #151515">awk</span> <span style="color: #f4bf75">-F</span> <span style="color: #90a959">&#39;/&#39;</span> <span style="color: #90a959">&#39;{print $NF;}&#39;</span><span style="color: #8f5536">)</span>
-<span style="color: #d0d0d0;background-color: #151515">help</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
-<span style="color: #d0d0d0;background-color: #151515">cat</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #f4bf75">EOF</span><span style="color: #90a959">
-</span><span style="color: #aa759f">${</span><span style="color: #d0d0d0;background-color: #151515">prompt</span><span style="color: #aa759f">}</span><span style="color: #90a959">: setup git worktree and bare repo
+<span style="color: #585858"># help function</span>
+<span style="color: #d8d8d8;background-color: #181818">prompt</span><span style="color: #d8d8d8">=</span><span style="color: #a16946">$(</span><span style="color: #d8d8d8;background-color: #181818">echo</span> <span style="color: #ba8baf">${</span><span style="color: #d8d8d8;background-color: #181818">0</span><span style="color: #ba8baf">}</span> | <span style="color: #d8d8d8;background-color: #181818">awk</span> <span style="color: #f7ca88">-F</span> <span style="color: #a1b56c">&#39;/&#39;</span> <span style="color: #a1b56c">&#39;{print $NF;}&#39;</span><span style="color: #a16946">)</span>
+<span style="color: #d8d8d8;background-color: #181818">help</span><span style="color: #d8d8d8">()</span> <span style="color: #d8d8d8">{</span>
+<span style="color: #d8d8d8;background-color: #181818">cat</span> <span style="color: #d8d8d8">&lt;&lt;</span> <span style="color: #f7ca88">EOF</span><span style="color: #a1b56c">
+</span><span style="color: #ba8baf">${</span><span style="color: #d8d8d8;background-color: #181818">prompt</span><span style="color: #ba8baf">}</span><span style="color: #a1b56c">: setup git worktree and bare repo
 
 usage: [-h] [-u url] [-d directory] [-a extra_args]
 
@@ -72,74 +72,74 @@ usage: [-h] [-u url] [-d directory] [-a extra_args]
        -h --help     print this message
 
    • example:
-       </span><span style="color: #aa759f">${</span><span style="color: #d0d0d0;background-color: #151515">prompt</span><span style="color: #aa759f">}</span><span style="color: #90a959"> -u gitlab.com:hos-workflow/scripts -d test.git -a &#39;--depth 1&#39;
+       </span><span style="color: #ba8baf">${</span><span style="color: #d8d8d8;background-color: #181818">prompt</span><span style="color: #ba8baf">}</span><span style="color: #a1b56c"> -u gitlab.com:hos-workflow/scripts -d test.git -a &#39;--depth 1&#39;
 
    • running without any arguments will show this message
-</span><span style="color: #f4bf75">EOF
-</span><span style="color: #d0d0d0">}</span>
+</span><span style="color: #f7ca88">EOF
+</span><span style="color: #d8d8d8">}</span>
 
-<span style="color: #505050"># argument parsing</span>
-<span style="color: #aa759f">while</span> <span style="color: #d0d0d0">[</span> <span style="color: #90a959">&#34;</span><span style="color: #aa759f">${#}</span><span style="color: #90a959">&#34;</span> <span style="color: #f4bf75">-gt</span> 0 <span style="color: #d0d0d0">]</span><span style="color: #d0d0d0">;</span> <span style="color: #aa759f">do
-    case</span> <span style="color: #aa759f">${</span><span style="color: #d0d0d0;background-color: #151515">1</span><span style="color: #aa759f">}</span> <span style="color: #aa759f">in</span>
-        <span style="color: #f4bf75">-u</span><span style="color: #d0d0d0">|</span><span style="color: #f4bf75">--url</span><span style="color: #d0d0d0">)</span>
-            <span style="color: #d0d0d0;background-color: #151515">input</span><span style="color: #d0d0d0">=</span><span style="color: #90a959">&#34;</span><span style="color: #aa759f">${</span><span style="color: #d0d0d0;background-color: #151515">2</span><span style="color: #aa759f">}</span><span style="color: #90a959">&#34;</span>
-            <span style="color: #d0d0d0;background-color: #151515">shift</span>
-            <span style="color: #d0d0d0">;;</span>
-        <span style="color: #f4bf75">-d</span><span style="color: #d0d0d0">|</span><span style="color: #f4bf75">--directory</span><span style="color: #d0d0d0">)</span>
-            <span style="color: #d0d0d0;background-color: #151515">output</span><span style="color: #d0d0d0">=</span><span style="color: #90a959">&#34;</span><span style="color: #aa759f">${</span><span style="color: #d0d0d0;background-color: #151515">2</span><span style="color: #aa759f">}</span><span style="color: #90a959">&#34;</span>
-            <span style="color: #d0d0d0;background-color: #151515">shift</span>
-            <span style="color: #d0d0d0">;;</span>
-        <span style="color: #f4bf75">-h</span><span style="color: #d0d0d0">|</span><span style="color: #f4bf75">--help</span><span style="color: #d0d0d0">)</span>
-            <span style="color: #d0d0d0;background-color: #151515">help
+<span style="color: #585858"># argument parsing</span>
+<span style="color: #ba8baf">while</span> <span style="color: #d8d8d8">[</span> <span style="color: #a1b56c">&#34;</span><span style="color: #ba8baf">${#}</span><span style="color: #a1b56c">&#34;</span> <span style="color: #f7ca88">-gt</span> 0 <span style="color: #d8d8d8">]</span><span style="color: #d8d8d8">;</span> <span style="color: #ba8baf">do
+    case</span> <span style="color: #ba8baf">${</span><span style="color: #d8d8d8;background-color: #181818">1</span><span style="color: #ba8baf">}</span> <span style="color: #ba8baf">in</span>
+        <span style="color: #f7ca88">-u</span><span style="color: #d8d8d8">|</span><span style="color: #f7ca88">--url</span><span style="color: #d8d8d8">)</span>
+            <span style="color: #d8d8d8;background-color: #181818">input</span><span style="color: #d8d8d8">=</span><span style="color: #a1b56c">&#34;</span><span style="color: #ba8baf">${</span><span style="color: #d8d8d8;background-color: #181818">2</span><span style="color: #ba8baf">}</span><span style="color: #a1b56c">&#34;</span>
+            <span style="color: #d8d8d8;background-color: #181818">shift</span>
+            <span style="color: #d8d8d8">;;</span>
+        <span style="color: #f7ca88">-d</span><span style="color: #d8d8d8">|</span><span style="color: #f7ca88">--directory</span><span style="color: #d8d8d8">)</span>
+            <span style="color: #d8d8d8;background-color: #181818">output</span><span style="color: #d8d8d8">=</span><span style="color: #a1b56c">&#34;</span><span style="color: #ba8baf">${</span><span style="color: #d8d8d8;background-color: #181818">2</span><span style="color: #ba8baf">}</span><span style="color: #a1b56c">&#34;</span>
+            <span style="color: #d8d8d8;background-color: #181818">shift</span>
+            <span style="color: #d8d8d8">;;</span>
+        <span style="color: #f7ca88">-h</span><span style="color: #d8d8d8">|</span><span style="color: #f7ca88">--help</span><span style="color: #d8d8d8">)</span>
+            <span style="color: #d8d8d8;background-color: #181818">help
             exit </span>0
-            <span style="color: #d0d0d0">;;</span>
-        <span style="color: #f4bf75">-a</span><span style="color: #d0d0d0">|</span><span style="color: #f4bf75">--args</span><span style="color: #d0d0d0">)</span>
-            <span style="color: #d0d0d0;background-color: #151515">args</span><span style="color: #d0d0d0">=</span><span style="color: #90a959">&#34;</span><span style="color: #aa759f">${</span><span style="color: #d0d0d0;background-color: #151515">args</span><span style="color: #aa759f">}</span><span style="color: #90a959"> </span><span style="color: #aa759f">${</span><span style="color: #d0d0d0;background-color: #151515">2</span><span style="color: #aa759f">}</span><span style="color: #90a959">&#34;</span>
-            <span style="color: #d0d0d0;background-color: #151515">shift</span>
-            <span style="color: #d0d0d0">;;</span>
-        <span style="color: #aa759f">*</span><span style="color: #d0d0d0">)</span>
-            <span style="color: #d0d0d0;background-color: #151515">echo</span> <span style="color: #90a959">&#34;Unknown parameter passed: </span><span style="color: #aa759f">${</span><span style="color: #d0d0d0;background-color: #151515">1</span><span style="color: #aa759f">}</span><span style="color: #90a959">&#34;</span>
-            <span style="color: #d0d0d0;background-color: #151515">exit </span>1
-            <span style="color: #d0d0d0">;;</span>
-    <span style="color: #aa759f">esac</span>
-    <span style="color: #d0d0d0;background-color: #151515">shift
-</span><span style="color: #aa759f">done</span>
+            <span style="color: #d8d8d8">;;</span>
+        <span style="color: #f7ca88">-a</span><span style="color: #d8d8d8">|</span><span style="color: #f7ca88">--args</span><span style="color: #d8d8d8">)</span>
+            <span style="color: #d8d8d8;background-color: #181818">args</span><span style="color: #d8d8d8">=</span><span style="color: #a1b56c">&#34;</span><span style="color: #ba8baf">${</span><span style="color: #d8d8d8;background-color: #181818">args</span><span style="color: #ba8baf">}</span><span style="color: #a1b56c"> </span><span style="color: #ba8baf">${</span><span style="color: #d8d8d8;background-color: #181818">2</span><span style="color: #ba8baf">}</span><span style="color: #a1b56c">&#34;</span>
+            <span style="color: #d8d8d8;background-color: #181818">shift</span>
+            <span style="color: #d8d8d8">;;</span>
+        <span style="color: #ba8baf">*</span><span style="color: #d8d8d8">)</span>
+            <span style="color: #d8d8d8;background-color: #181818">echo</span> <span style="color: #a1b56c">&#34;Unknown parameter passed: </span><span style="color: #ba8baf">${</span><span style="color: #d8d8d8;background-color: #181818">1</span><span style="color: #ba8baf">}</span><span style="color: #a1b56c">&#34;</span>
+            <span style="color: #d8d8d8;background-color: #181818">exit </span>1
+            <span style="color: #d8d8d8">;;</span>
+    <span style="color: #ba8baf">esac</span>
+    <span style="color: #d8d8d8;background-color: #181818">shift
+</span><span style="color: #ba8baf">done</span>
 
-<span style="color: #505050"># checking args</span>
-<span style="color: #aa759f">if</span> <span style="color: #d0d0d0">[</span> <span style="color: #f4bf75">-z</span> <span style="color: #90a959">&#34;</span><span style="color: #aa759f">${</span><span style="color: #d0d0d0;background-color: #151515">input</span><span style="color: #aa759f">}</span><span style="color: #90a959">&#34;</span> <span style="color: #d0d0d0">]</span><span style="color: #d0d0d0">;</span> <span style="color: #aa759f">then
-    </span><span style="color: #d0d0d0;background-color: #151515">printf</span> <span style="color: #90a959">&#39;%s\n\n&#39;</span> <span style="color: #90a959">&#34;No url is specified&#34;</span> 1&gt;&amp;2
-    <span style="color: #d0d0d0;background-color: #151515">help
+<span style="color: #585858"># checking args</span>
+<span style="color: #ba8baf">if</span> <span style="color: #d8d8d8">[</span> <span style="color: #f7ca88">-z</span> <span style="color: #a1b56c">&#34;</span><span style="color: #ba8baf">${</span><span style="color: #d8d8d8;background-color: #181818">input</span><span style="color: #ba8baf">}</span><span style="color: #a1b56c">&#34;</span> <span style="color: #d8d8d8">]</span><span style="color: #d8d8d8">;</span> <span style="color: #ba8baf">then
+    </span><span style="color: #d8d8d8;background-color: #181818">printf</span> <span style="color: #a1b56c">&#39;%s\n\n&#39;</span> <span style="color: #a1b56c">&#34;No url is specified&#34;</span> 1&gt;&amp;2
+    <span style="color: #d8d8d8;background-color: #181818">help
     exit </span>1
-<span style="color: #aa759f">fi
+<span style="color: #ba8baf">fi
 
-if</span> <span style="color: #d0d0d0">[</span> <span style="color: #f4bf75">-z</span> <span style="color: #90a959">&#34;</span><span style="color: #aa759f">${</span><span style="color: #d0d0d0;background-color: #151515">output</span><span style="color: #aa759f">}</span><span style="color: #90a959">&#34;</span> <span style="color: #d0d0d0">]</span><span style="color: #d0d0d0">;</span> <span style="color: #aa759f">then
-    </span><span style="color: #d0d0d0;background-color: #151515">printf</span> <span style="color: #8f5536">\</span>
-        <span style="color: #90a959">&#34;No directory name is specified, &#34;</span> <span style="color: #8f5536">\</span>
-        <span style="color: #90a959">&#34;Using default directory name..</span><span style="color: #8f5536">\n</span><span style="color: #90a959">&#34;</span> <span style="color: #8f5536">\</span>
+if</span> <span style="color: #d8d8d8">[</span> <span style="color: #f7ca88">-z</span> <span style="color: #a1b56c">&#34;</span><span style="color: #ba8baf">${</span><span style="color: #d8d8d8;background-color: #181818">output</span><span style="color: #ba8baf">}</span><span style="color: #a1b56c">&#34;</span> <span style="color: #d8d8d8">]</span><span style="color: #d8d8d8">;</span> <span style="color: #ba8baf">then
+    </span><span style="color: #d8d8d8;background-color: #181818">printf</span> <span style="color: #a16946">\</span>
+        <span style="color: #a1b56c">&#34;No directory name is specified, &#34;</span> <span style="color: #a16946">\</span>
+        <span style="color: #a1b56c">&#34;Using default directory name..</span><span style="color: #a16946">\n</span><span style="color: #a1b56c">&#34;</span> <span style="color: #a16946">\</span>
         1&gt;&amp;2
-    <span style="color: #d0d0d0;background-color: #151515">output</span><span style="color: #d0d0d0">=</span><span style="color: #90a959">&#34;</span><span style="color: #8f5536">$(</span><span style="color: #d0d0d0;background-color: #151515">echo</span> <span style="color: #aa759f">${</span><span style="color: #d0d0d0;background-color: #151515">input</span><span style="color: #aa759f">}</span> | <span style="color: #d0d0d0;background-color: #151515">awk</span> <span style="color: #f4bf75">-F</span> <span style="color: #90a959">&#39;/&#39;</span> <span style="color: #90a959">&#39;{print $NF;}&#39;</span><span style="color: #8f5536">)</span><span style="color: #90a959">&#34;</span>
-<span style="color: #aa759f">fi</span>
+    <span style="color: #d8d8d8;background-color: #181818">output</span><span style="color: #d8d8d8">=</span><span style="color: #a1b56c">&#34;</span><span style="color: #a16946">$(</span><span style="color: #d8d8d8;background-color: #181818">echo</span> <span style="color: #ba8baf">${</span><span style="color: #d8d8d8;background-color: #181818">input</span><span style="color: #ba8baf">}</span> | <span style="color: #d8d8d8;background-color: #181818">awk</span> <span style="color: #f7ca88">-F</span> <span style="color: #a1b56c">&#39;/&#39;</span> <span style="color: #a1b56c">&#39;{print $NF;}&#39;</span><span style="color: #a16946">)</span><span style="color: #a1b56c">&#34;</span>
+<span style="color: #ba8baf">fi</span>
 
-<span style="color: #505050"># start</span>
-git clone <span style="color: #aa759f">${</span><span style="color: #d0d0d0;background-color: #151515">args</span><span style="color: #aa759f">}</span> <span style="color: #f4bf75">--bare</span> git@<span style="color: #aa759f">${</span><span style="color: #d0d0d0;background-color: #151515">input</span><span style="color: #aa759f">}</span> <span style="color: #aa759f">${</span><span style="color: #d0d0d0;background-color: #151515">output</span><span style="color: #aa759f">}</span>
-<span style="color: #d0d0d0;background-color: #151515">cd</span> <span style="color: #aa759f">${</span><span style="color: #d0d0d0;background-color: #151515">output</span><span style="color: #aa759f">}</span>
-<span style="color: #d0d0d0;background-color: #151515">mkdir</span> .bare
-<span style="color: #d0d0d0;background-color: #151515">mv</span> <span style="color: #aa759f">*</span> .bare
-<span style="color: #d0d0d0;background-color: #151515">echo</span> <span style="color: #90a959">&#34;gitdir: ./.bare&#34;</span> <span style="color: #d0d0d0">&gt;</span> .git
+<span style="color: #585858"># start</span>
+git clone <span style="color: #ba8baf">${</span><span style="color: #d8d8d8;background-color: #181818">args</span><span style="color: #ba8baf">}</span> <span style="color: #f7ca88">--bare</span> git@<span style="color: #ba8baf">${</span><span style="color: #d8d8d8;background-color: #181818">input</span><span style="color: #ba8baf">}</span> <span style="color: #ba8baf">${</span><span style="color: #d8d8d8;background-color: #181818">output</span><span style="color: #ba8baf">}</span>
+<span style="color: #d8d8d8;background-color: #181818">cd</span> <span style="color: #ba8baf">${</span><span style="color: #d8d8d8;background-color: #181818">output</span><span style="color: #ba8baf">}</span>
+<span style="color: #d8d8d8;background-color: #181818">mkdir</span> .bare
+<span style="color: #d8d8d8;background-color: #181818">mv</span> <span style="color: #ba8baf">*</span> .bare
+<span style="color: #d8d8d8;background-color: #181818">echo</span> <span style="color: #a1b56c">&#34;gitdir: ./.bare&#34;</span> <span style="color: #d8d8d8">&gt;</span> .git
 
-<span style="color: #d0d0d0;background-color: #151515">check_branch</span><span style="color: #d0d0d0">=</span><span style="color: #8f5536">$(</span>git <span style="color: #f4bf75">--no-pager</span> branch | <span style="color: #d0d0d0;background-color: #151515">grep</span> <span style="color: #f4bf75">-v</span> <span style="color: #90a959">&#39;*\|+&#39;</span> | <span style="color: #d0d0d0;background-color: #151515">awk</span> <span style="color: #90a959">&#39;{print $1;}&#39;</span> | <span style="color: #d0d0d0;background-color: #151515">wc</span> <span style="color: #f4bf75">-l</span><span style="color: #8f5536">)</span>
+<span style="color: #d8d8d8;background-color: #181818">check_branch</span><span style="color: #d8d8d8">=</span><span style="color: #a16946">$(</span>git <span style="color: #f7ca88">--no-pager</span> branch | <span style="color: #d8d8d8;background-color: #181818">grep</span> <span style="color: #f7ca88">-v</span> <span style="color: #a1b56c">&#39;*\|+&#39;</span> | <span style="color: #d8d8d8;background-color: #181818">awk</span> <span style="color: #a1b56c">&#39;{print $1;}&#39;</span> | <span style="color: #d8d8d8;background-color: #181818">wc</span> <span style="color: #f7ca88">-l</span><span style="color: #a16946">)</span>
 
-<span style="color: #aa759f">if</span> <span style="color: #d0d0d0">[</span> <span style="color: #90a959">&#34;</span><span style="color: #aa759f">${</span><span style="color: #d0d0d0;background-color: #151515">check_branch</span><span style="color: #aa759f">}</span><span style="color: #90a959">&#34;</span> <span style="color: #f4bf75">-gt</span> 0 <span style="color: #d0d0d0">]</span><span style="color: #d0d0d0">;</span> <span style="color: #aa759f">then
-    for </span>i <span style="color: #aa759f">in</span> <span style="color: #8f5536">$(</span>git <span style="color: #f4bf75">--no-pager</span> branch | <span style="color: #d0d0d0;background-color: #151515">sed</span> <span style="color: #90a959">&#39;s/^[*+]/ /&#39;</span> | <span style="color: #d0d0d0;background-color: #151515">awk</span> <span style="color: #90a959">&#39;{print $1;}&#39;</span><span style="color: #8f5536">)</span><span style="color: #d0d0d0">;</span> <span style="color: #aa759f">do
-        </span>git worktree add <span style="color: #90a959">&#34;</span><span style="color: #aa759f">${</span><span style="color: #d0d0d0;background-color: #151515">i</span><span style="color: #aa759f">}</span><span style="color: #90a959">&#34;</span> <span style="color: #90a959">&#34;</span><span style="color: #aa759f">${</span><span style="color: #d0d0d0;background-color: #151515">i</span><span style="color: #aa759f">}</span><span style="color: #90a959">&#34;</span>
-    <span style="color: #aa759f">done
+<span style="color: #ba8baf">if</span> <span style="color: #d8d8d8">[</span> <span style="color: #a1b56c">&#34;</span><span style="color: #ba8baf">${</span><span style="color: #d8d8d8;background-color: #181818">check_branch</span><span style="color: #ba8baf">}</span><span style="color: #a1b56c">&#34;</span> <span style="color: #f7ca88">-gt</span> 0 <span style="color: #d8d8d8">]</span><span style="color: #d8d8d8">;</span> <span style="color: #ba8baf">then
+    for </span>i <span style="color: #ba8baf">in</span> <span style="color: #a16946">$(</span>git <span style="color: #f7ca88">--no-pager</span> branch | <span style="color: #d8d8d8;background-color: #181818">sed</span> <span style="color: #a1b56c">&#39;s/^[*+]/ /&#39;</span> | <span style="color: #d8d8d8;background-color: #181818">awk</span> <span style="color: #a1b56c">&#39;{print $1;}&#39;</span><span style="color: #a16946">)</span><span style="color: #d8d8d8">;</span> <span style="color: #ba8baf">do
+        </span>git worktree add <span style="color: #a1b56c">&#34;</span><span style="color: #ba8baf">${</span><span style="color: #d8d8d8;background-color: #181818">i</span><span style="color: #ba8baf">}</span><span style="color: #a1b56c">&#34;</span> <span style="color: #a1b56c">&#34;</span><span style="color: #ba8baf">${</span><span style="color: #d8d8d8;background-color: #181818">i</span><span style="color: #ba8baf">}</span><span style="color: #a1b56c">&#34;</span>
+    <span style="color: #ba8baf">done
 else
-	</span><span style="color: #d0d0d0;background-color: #151515">i</span><span style="color: #d0d0d0">=</span><span style="color: #8f5536">$(</span>git <span style="color: #f4bf75">--no-pager</span> branch | <span style="color: #d0d0d0;background-color: #151515">awk</span> <span style="color: #90a959">&#39;{print $NF;}&#39;</span><span style="color: #8f5536">)</span>
-    git worktree add <span style="color: #90a959">&#34;</span><span style="color: #aa759f">${</span><span style="color: #d0d0d0;background-color: #151515">i</span><span style="color: #aa759f">}</span><span style="color: #90a959">&#34;</span> <span style="color: #90a959">&#34;</span><span style="color: #aa759f">${</span><span style="color: #d0d0d0;background-color: #151515">i</span><span style="color: #aa759f">}</span><span style="color: #90a959">&#34;</span>
-<span style="color: #aa759f">fi</span>
+	</span><span style="color: #d8d8d8;background-color: #181818">i</span><span style="color: #d8d8d8">=</span><span style="color: #a16946">$(</span>git <span style="color: #f7ca88">--no-pager</span> branch | <span style="color: #d8d8d8;background-color: #181818">awk</span> <span style="color: #a1b56c">&#39;{print $NF;}&#39;</span><span style="color: #a16946">)</span>
+    git worktree add <span style="color: #a1b56c">&#34;</span><span style="color: #ba8baf">${</span><span style="color: #d8d8d8;background-color: #181818">i</span><span style="color: #ba8baf">}</span><span style="color: #a1b56c">&#34;</span> <span style="color: #a1b56c">&#34;</span><span style="color: #ba8baf">${</span><span style="color: #d8d8d8;background-color: #181818">i</span><span style="color: #ba8baf">}</span><span style="color: #a1b56c">&#34;</span>
+<span style="color: #ba8baf">fi</span>
 
-<span style="color: #505050"># git config remote.origin.url &#34;git@${input}&#34;</span>
-git config remote.origin.fetch <span style="color: #90a959">&#39;+refs/heads/*:refs/remotes/origin/*&#39;</span>
+<span style="color: #585858"># git config remote.origin.url &#34;git@${input}&#34;</span>
+git config remote.origin.fetch <span style="color: #a1b56c">&#39;+refs/heads/*:refs/remotes/origin/*&#39;</span>
 git fetch</code></pre>
 </div>
 </div>

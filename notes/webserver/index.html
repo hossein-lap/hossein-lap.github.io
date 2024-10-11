@@ -43,7 +43,7 @@
 
     
     
-    <link type="text/css" rel="stylesheet" href=https://hossein-lap.github.io/css/styles.393b4cdec26fb55a617487446ace2ffd95e9e3ea91410c2e089b702adb146b752411e3fbb489f62a17f390aa16d9a9b9d901eac530175dfda19b036228ae8e69.css integrity="sha512-OTtM3sJvtVphdIdEas4v/ZXp4&#43;qRQQwuCJtwKtsUa3UkEeP7tIn2KhfzkKoW2am52QHqxTAXXf2hmwNiKK6OaQ==" />
+    <link type="text/css" rel="stylesheet" href=https://hossein-lap.github.io/css/styles.f9d8c8d9b5833ef98670b93cbbbc45b24e2661a9cb1aab60a8f680ffad8731ed0b2604339fac589d23808da4d99453e6d221102280eb8a035e803830d3de572f.css integrity="sha512-&#43;djI2bWDPvmGcLk8u7xFsk4mYanLGqtgqPaA/62HMe0LJgQzn6xYnSOAjaTZlFPm0iEQIoDrigNegDgw095XLw==" />
 <meta name="author" content="Hossein Esmailzadeh" />
 
     
@@ -268,7 +268,6 @@
     <div class="articleToc">
   
   
-  <hr/>
   <aside>
   <div class="tableofcontents">
     <ol>
@@ -303,7 +302,6 @@
   </aside>
   
   
-  <hr/>
 </div>
 
     <div>
@@ -329,9 +327,9 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">import</span> <span style="color: #d0d0d0">(</span>
-    <span style="color: #90a959">&#34;net/http&#34;</span>
-<span style="color: #d0d0d0">)</span></code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="go"><span style="color: #ba8baf">import</span> <span style="color: #d8d8d8">(</span>
+    <span style="color: #a1b56c">&#34;net/http&#34;</span>
+<span style="color: #d8d8d8">)</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -355,7 +353,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">type</span> <span style="color: #d0d0d0;background-color: #151515">RequestHandler</span> <span style="color: #aa759f">struct</span> <span style="color: #d0d0d0">{}</span></code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="go"><span style="color: #ba8baf">type</span> <span style="color: #d8d8d8;background-color: #181818">RequestHandler</span> <span style="color: #ba8baf">struct</span> <span style="color: #d8d8d8">{}</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -365,30 +363,30 @@ that needs to be handled (HTTP requests goes to the specified paths)</p>
 <div class="listingblock">
 <div class="title">main funcion</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">main</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #d0d0d0;background-color: #151515">mux</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">http</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">NewServeMx</span><span style="color: #d0d0d0">()</span>
-    <span style="color: #d0d0d0;background-color: #151515">mux</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Handle</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;/path1&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&amp;</span><span style="color: #d0d0d0;background-color: #151515">RequestHandler</span><span style="color: #d0d0d0">{})</span>
-    <span style="color: #d0d0d0;background-color: #151515">mux</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Handle</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;/path1/&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&amp;</span><span style="color: #d0d0d0;background-color: #151515">RequestHandler</span><span style="color: #d0d0d0">{})</span>
-    <span style="color: #d0d0d0;background-color: #151515">mux</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Handle</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;/path2&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&amp;</span><span style="color: #d0d0d0;background-color: #151515">RequestHandler</span><span style="color: #d0d0d0">{})</span>
-    <span style="color: #d0d0d0;background-color: #151515">mux</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Handle</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;/path2/&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&amp;</span><span style="color: #d0d0d0;background-color: #151515">RequestHandler</span><span style="color: #d0d0d0">{})</span>
-    <span style="color: #505050">/* continue */</span>
-    <span style="color: #d0d0d0;background-color: #151515">http</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">ListenAndServe</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;:8080&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">mux</span><span style="color: #d0d0d0">)</span>
-<span style="color: #d0d0d0">}</span></code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="go"><span style="color: #ba8baf">func</span> <span style="color: #d8d8d8;background-color: #181818">main</span><span style="color: #d8d8d8">()</span> <span style="color: #d8d8d8">{</span>
+    <span style="color: #d8d8d8;background-color: #181818">mux</span> <span style="color: #d8d8d8">:=</span> <span style="color: #d8d8d8;background-color: #181818">http</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">NewServeMx</span><span style="color: #d8d8d8">()</span>
+    <span style="color: #d8d8d8;background-color: #181818">mux</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Handle</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">&#34;/path1&#34;</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8">&amp;</span><span style="color: #d8d8d8;background-color: #181818">RequestHandler</span><span style="color: #d8d8d8">{})</span>
+    <span style="color: #d8d8d8;background-color: #181818">mux</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Handle</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">&#34;/path1/&#34;</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8">&amp;</span><span style="color: #d8d8d8;background-color: #181818">RequestHandler</span><span style="color: #d8d8d8">{})</span>
+    <span style="color: #d8d8d8;background-color: #181818">mux</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Handle</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">&#34;/path2&#34;</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8">&amp;</span><span style="color: #d8d8d8;background-color: #181818">RequestHandler</span><span style="color: #d8d8d8">{})</span>
+    <span style="color: #d8d8d8;background-color: #181818">mux</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Handle</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">&#34;/path2/&#34;</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8">&amp;</span><span style="color: #d8d8d8;background-color: #181818">RequestHandler</span><span style="color: #d8d8d8">{})</span>
+    <span style="color: #585858">/* continue */</span>
+    <span style="color: #d8d8d8;background-color: #181818">http</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">ListenAndServe</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">&#34;:8080&#34;</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8;background-color: #181818">mux</span><span style="color: #d8d8d8">)</span>
+<span style="color: #d8d8d8">}</span></code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="title">serve function</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">func</span> <span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">h</span> <span style="color: #d0d0d0">*</span><span style="color: #d0d0d0;background-color: #151515">RequestHandler</span><span style="color: #d0d0d0">)</span> <span style="color: #d0d0d0;background-color: #151515">ServeHTTP</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">w</span> <span style="color: #d0d0d0;background-color: #151515">http</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">ResponseWriter</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">r</span> <span style="color: #d0d0d0">*</span><span style="color: #d0d0d0;background-color: #151515">http</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Requset</span><span style="color: #d0d0d0">)</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #d0d0d0;background-color: #151515">request_type</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">r</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Method</span>
-    <span style="color: #d0d0d0;background-color: #151515">tmp</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">strings</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">SplitN</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">r</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">URL</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">String</span><span style="color: #d0d0d0">(),</span> <span style="color: #90a959">&#34;/&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #90a959">3</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #d0d0d0;background-color: #151515">section</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">tmp</span><span style="color: #d0d0d0">[</span><span style="color: #90a959">1</span><span style="color: #d0d0d0">]</span> <span style="color: #505050">// path</span>
-    <span style="color: #d0d0d0;background-color: #151515">key</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">tmp</span><span style="color: #d0d0d0">[</span><span style="color: #90a959">2</span><span style="color: #d0d0d0">]</span> <span style="color: #505050">// add data after the path</span>
-    <span style="color: #d0d0d0;background-color: #151515">params</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">r</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">URL</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Query</span><span style="color: #d0d0d0">()</span>
-    <span style="color: #d0d0d0;background-color: #151515">value</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">params</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Get</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">key</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #d0d0d0;background-color: #151515">body</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">io</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">ReadAll</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">r</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Body</span><span style="color: #d0d0d0">)</span> <span style="color: #505050">// values from curl&#39;s `--data` flag (spected to be JSON)</span>
-    <span style="color: #505050">/* continue */</span>
-<span style="color: #d0d0d0">}</span></code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="go"><span style="color: #ba8baf">func</span> <span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">h</span> <span style="color: #d8d8d8">*</span><span style="color: #d8d8d8;background-color: #181818">RequestHandler</span><span style="color: #d8d8d8">)</span> <span style="color: #d8d8d8;background-color: #181818">ServeHTTP</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">w</span> <span style="color: #d8d8d8;background-color: #181818">http</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">ResponseWriter</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8;background-color: #181818">r</span> <span style="color: #d8d8d8">*</span><span style="color: #d8d8d8;background-color: #181818">http</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Requset</span><span style="color: #d8d8d8">)</span> <span style="color: #d8d8d8">{</span>
+    <span style="color: #d8d8d8;background-color: #181818">request_type</span> <span style="color: #d8d8d8">:=</span> <span style="color: #d8d8d8;background-color: #181818">r</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Method</span>
+    <span style="color: #d8d8d8;background-color: #181818">tmp</span> <span style="color: #d8d8d8">:=</span> <span style="color: #d8d8d8;background-color: #181818">strings</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">SplitN</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">r</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">URL</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">String</span><span style="color: #d8d8d8">(),</span> <span style="color: #a1b56c">&#34;/&#34;</span><span style="color: #d8d8d8">,</span> <span style="color: #a1b56c">3</span><span style="color: #d8d8d8">)</span>
+    <span style="color: #d8d8d8;background-color: #181818">section</span> <span style="color: #d8d8d8">:=</span> <span style="color: #d8d8d8;background-color: #181818">tmp</span><span style="color: #d8d8d8">[</span><span style="color: #a1b56c">1</span><span style="color: #d8d8d8">]</span> <span style="color: #585858">// path</span>
+    <span style="color: #d8d8d8;background-color: #181818">key</span> <span style="color: #d8d8d8">:=</span> <span style="color: #d8d8d8;background-color: #181818">tmp</span><span style="color: #d8d8d8">[</span><span style="color: #a1b56c">2</span><span style="color: #d8d8d8">]</span> <span style="color: #585858">// add data after the path</span>
+    <span style="color: #d8d8d8;background-color: #181818">params</span> <span style="color: #d8d8d8">:=</span> <span style="color: #d8d8d8;background-color: #181818">r</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">URL</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Query</span><span style="color: #d8d8d8">()</span>
+    <span style="color: #d8d8d8;background-color: #181818">value</span> <span style="color: #d8d8d8">:=</span> <span style="color: #d8d8d8;background-color: #181818">params</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Get</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">key</span><span style="color: #d8d8d8">)</span>
+    <span style="color: #d8d8d8;background-color: #181818">body</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8;background-color: #181818">err</span> <span style="color: #d8d8d8">:=</span> <span style="color: #d8d8d8;background-color: #181818">io</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">ReadAll</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">r</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Body</span><span style="color: #d8d8d8">)</span> <span style="color: #585858">// values from curl&#39;s `--data` flag (spected to be JSON)</span>
+    <span style="color: #585858">/* continue */</span>
+<span style="color: #d8d8d8">}</span></code></pre>
 </div>
 </div>
 </div>
@@ -398,13 +396,13 @@ that needs to be handled (HTTP requests goes to the specified paths)</p>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">cache_handler</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #d0d0d0;background-color: #151515">client</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">redis</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">NewClient</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0">&amp;</span><span style="color: #d0d0d0;background-color: #151515">redis</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Options</span><span style="color: #d0d0d0">{</span>
-        <span style="color: #d0d0d0;background-color: #151515">Addr</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">&#34;localhost:6349&#34;</span>
-        <span style="color: #d0d0d0;background-color: #151515">Password</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">&#34;&#34;</span> <span style="color: #505050">// No password, to get it from env variables use: `os.Getenv(&#34;ENV&#34;)`</span>
-        <span style="color: #d0d0d0;background-color: #151515">DB</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">0</span> <span style="color: #505050">// default db</span>
-    <span style="color: #d0d0d0">})</span>
-<span style="color: #d0d0d0">}</span></code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="go"><span style="color: #ba8baf">func</span> <span style="color: #d8d8d8;background-color: #181818">cache_handler</span><span style="color: #d8d8d8">()</span> <span style="color: #d8d8d8">{</span>
+    <span style="color: #d8d8d8;background-color: #181818">client</span> <span style="color: #d8d8d8">:=</span> <span style="color: #d8d8d8;background-color: #181818">redis</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">NewClient</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8">&amp;</span><span style="color: #d8d8d8;background-color: #181818">redis</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Options</span><span style="color: #d8d8d8">{</span>
+        <span style="color: #d8d8d8;background-color: #181818">Addr</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">&#34;localhost:6349&#34;</span>
+        <span style="color: #d8d8d8;background-color: #181818">Password</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">&#34;&#34;</span> <span style="color: #585858">// No password, to get it from env variables use: `os.Getenv(&#34;ENV&#34;)`</span>
+        <span style="color: #d8d8d8;background-color: #181818">DB</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">0</span> <span style="color: #585858">// default db</span>
+    <span style="color: #d8d8d8">})</span>
+<span style="color: #d8d8d8">}</span></code></pre>
 </div>
 </div>
 </div>
@@ -414,15 +412,15 @@ that needs to be handled (HTTP requests goes to the specified paths)</p>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">database_handler</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #d0d0d0;background-color: #151515">sql_url</span> <span style="color: #d0d0d0">:=</span> <span style="color: #90a959">&#34;root@localhost:3360&#34;</span>
-    <span style="color: #d0d0d0;background-color: #151515">db</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">sql</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Open</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;mysql&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">sql_url</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #aa759f">if</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">!=</span> <span style="color: #f4bf75">nil</span> <span style="color: #d0d0d0">{</span>
-        <span style="color: #d0d0d0;background-color: #151515">pandic</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">err</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Error</span><span style="color: #d0d0d0">())</span>
-    <span style="color: #d0d0d0">}</span>
-    <span style="color: #aa759f">defer</span> <span style="color: #d0d0d0;background-color: #151515">db</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Close</span><span style="color: #d0d0d0">()</span>
-    <span style="color: #505050">/* continue */</span>
-<span style="color: #d0d0d0">}</span></code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="go"><span style="color: #ba8baf">func</span> <span style="color: #d8d8d8;background-color: #181818">database_handler</span><span style="color: #d8d8d8">()</span> <span style="color: #d8d8d8">{</span>
+    <span style="color: #d8d8d8;background-color: #181818">sql_url</span> <span style="color: #d8d8d8">:=</span> <span style="color: #a1b56c">&#34;root@localhost:3360&#34;</span>
+    <span style="color: #d8d8d8;background-color: #181818">db</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8;background-color: #181818">err</span> <span style="color: #d8d8d8">:=</span> <span style="color: #d8d8d8;background-color: #181818">sql</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Open</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">&#34;mysql&#34;</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8;background-color: #181818">sql_url</span><span style="color: #d8d8d8">)</span>
+    <span style="color: #ba8baf">if</span> <span style="color: #d8d8d8;background-color: #181818">err</span> <span style="color: #d8d8d8">!=</span> <span style="color: #f7ca88">nil</span> <span style="color: #d8d8d8">{</span>
+        <span style="color: #d8d8d8;background-color: #181818">pandic</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">err</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Error</span><span style="color: #d8d8d8">())</span>
+    <span style="color: #d8d8d8">}</span>
+    <span style="color: #ba8baf">defer</span> <span style="color: #d8d8d8;background-color: #181818">db</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Close</span><span style="color: #d8d8d8">()</span>
+    <span style="color: #585858">/* continue */</span>
+<span style="color: #d8d8d8">}</span></code></pre>
 </div>
 </div>
 </div>
@@ -432,37 +430,37 @@ that needs to be handled (HTTP requests goes to the specified paths)</p>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">type</span> <span style="color: #d0d0d0;background-color: #151515">Movie</span> <span style="color: #aa759f">struct</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #d0d0d0;background-color: #151515">Name</span> <span style="color: #d28445">string</span> <span style="color: #90a959">`json:&#34;name&#34;`</span>
-    <span style="color: #d0d0d0;background-color: #151515">Publisher</span> <span style="color: #d28445">string</span> <span style="color: #90a959">`json:&#34;publisher&#34;`</span>
-    <span style="color: #d0d0d0;background-color: #151515">Year</span> <span style="color: #d28445">int</span> <span style="color: #90a959">`json:&#34;year&#34;`</span>
-<span style="color: #d0d0d0">}</span>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="go"><span style="color: #ba8baf">type</span> <span style="color: #d8d8d8;background-color: #181818">Movie</span> <span style="color: #ba8baf">struct</span> <span style="color: #d8d8d8">{</span>
+    <span style="color: #d8d8d8;background-color: #181818">Name</span> <span style="color: #dc9656">string</span> <span style="color: #a1b56c">`json:&#34;name&#34;`</span>
+    <span style="color: #d8d8d8;background-color: #181818">Publisher</span> <span style="color: #dc9656">string</span> <span style="color: #a1b56c">`json:&#34;publisher&#34;`</span>
+    <span style="color: #d8d8d8;background-color: #181818">Year</span> <span style="color: #dc9656">int</span> <span style="color: #a1b56c">`json:&#34;year&#34;`</span>
+<span style="color: #d8d8d8">}</span>
 
-<span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">HandleMovie</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #505050">// var target map[string]any /* not optimal */</span>
-    <span style="color: #aa759f">var</span> <span style="color: #d0d0d0;background-color: #151515">movie</span> <span style="color: #d0d0d0;background-color: #151515">Movie</span>
+<span style="color: #ba8baf">func</span> <span style="color: #d8d8d8;background-color: #181818">HandleMovie</span><span style="color: #d8d8d8">()</span> <span style="color: #d8d8d8">{</span>
+    <span style="color: #585858">// var target map[string]any /* not optimal */</span>
+    <span style="color: #ba8baf">var</span> <span style="color: #d8d8d8;background-color: #181818">movie</span> <span style="color: #d8d8d8;background-color: #181818">Movie</span>
 
-    <span style="color: #d0d0d0;background-color: #151515">input</span> <span style="color: #d0d0d0">:=</span> <span style="color: #90a959">`{
+    <span style="color: #d8d8d8;background-color: #181818">input</span> <span style="color: #d8d8d8">:=</span> <span style="color: #a1b56c">`{
         &#34;name&#34;: &#34;Jocker&#34;,
         &#34;publisher&#34;: &#34;WB&#34;,
         &#34;year&#34;: 2019
     }`</span>
 
-    <span style="color: #505050">// err := json.Unmarshal([]byte(input), &amp;target) /* not optimal */</span>
-    <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">json</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Unmarshal</span><span style="color: #d0d0d0">([]</span><span style="color: #d28445">byte</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">input</span><span style="color: #d0d0d0">),</span> <span style="color: #d0d0d0">&amp;</span><span style="color: #d0d0d0;background-color: #151515">movie</span><span style="color: #d0d0d0">)</span> <span style="color: #505050">/* not optimal */</span>
-    <span style="color: #aa759f">if</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">!=</span> <span style="color: #f4bf75">nil</span> <span style="color: #d0d0d0">{</span>
-        <span style="color: #d0d0d0;background-color: #151515">log</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Fatalf</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;Unable to marshal JSON due to %s&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #d0d0d0">}</span>
+    <span style="color: #585858">// err := json.Unmarshal([]byte(input), &amp;target) /* not optimal */</span>
+    <span style="color: #d8d8d8;background-color: #181818">err</span> <span style="color: #d8d8d8">:=</span> <span style="color: #d8d8d8;background-color: #181818">json</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Unmarshal</span><span style="color: #d8d8d8">([]</span><span style="color: #dc9656">byte</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">input</span><span style="color: #d8d8d8">),</span> <span style="color: #d8d8d8">&amp;</span><span style="color: #d8d8d8;background-color: #181818">movie</span><span style="color: #d8d8d8">)</span> <span style="color: #585858">/* not optimal */</span>
+    <span style="color: #ba8baf">if</span> <span style="color: #d8d8d8;background-color: #181818">err</span> <span style="color: #d8d8d8">!=</span> <span style="color: #f7ca88">nil</span> <span style="color: #d8d8d8">{</span>
+        <span style="color: #d8d8d8;background-color: #181818">log</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Fatalf</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">&#34;Unable to marshal JSON due to %s&#34;</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8;background-color: #181818">err</span><span style="color: #d8d8d8">)</span>
+    <span style="color: #d8d8d8">}</span>
 
-    <span style="color: #505050">/* not optimal */</span>
-    <span style="color: #505050">// for k, v := range target {</span>
-    <span style="color: #505050">//    fmt.Printf(&#34;k: %s, v: %v\n&#34;, k, v)</span>
-    <span style="color: #505050">// }</span>
-    <span style="color: #d0d0d0;background-color: #151515">fmt</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Printf</span><span style="color: #d0d0d0">(</span>
-        <span style="color: #90a959">&#34;Name: %s, Publisher: %s, Year: %d</span><span style="color: #8f5536">\n</span><span style="color: #90a959">&#34;</span><span style="color: #d0d0d0">,</span>
-        <span style="color: #d0d0d0;background-color: #151515">movie</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Name</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">movie</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Publisher</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">movie</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Year</span><span style="color: #d0d0d0">,</span>
-    <span style="color: #d0d0d0">)</span>
-<span style="color: #d0d0d0">}</span></code></pre>
+    <span style="color: #585858">/* not optimal */</span>
+    <span style="color: #585858">// for k, v := range target {</span>
+    <span style="color: #585858">//    fmt.Printf(&#34;k: %s, v: %v\n&#34;, k, v)</span>
+    <span style="color: #585858">// }</span>
+    <span style="color: #d8d8d8;background-color: #181818">fmt</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Printf</span><span style="color: #d8d8d8">(</span>
+        <span style="color: #a1b56c">&#34;Name: %s, Publisher: %s, Year: %d</span><span style="color: #a16946">\n</span><span style="color: #a1b56c">&#34;</span><span style="color: #d8d8d8">,</span>
+        <span style="color: #d8d8d8;background-color: #181818">movie</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Name</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8;background-color: #181818">movie</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Publisher</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8;background-color: #181818">movie</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Year</span><span style="color: #d8d8d8">,</span>
+    <span style="color: #d8d8d8">)</span>
+<span style="color: #d8d8d8">}</span></code></pre>
 </div>
 </div>
 <div class="sect2">
@@ -470,72 +468,72 @@ that needs to be handled (HTTP requests goes to the specified paths)</p>
 <div class="listingblock">
 <div class="title"><code>assets/complex.json</code></div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="json"><span style="color: #d0d0d0">{</span><span style="color: #d0d0d0;background-color: #151515">
-  </span><span style="color: #d0d0d0;background-color: #151515">&#34;name&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">&#34;James Peterson&#34;</span><span style="color: #d0d0d0">,</span><span style="color: #d0d0d0;background-color: #151515">
-  </span><span style="color: #d0d0d0;background-color: #151515">&#34;age&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">37</span><span style="color: #d0d0d0">,</span><span style="color: #d0d0d0;background-color: #151515">
-  </span><span style="color: #d0d0d0;background-color: #151515">&#34;address&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #d0d0d0">{</span><span style="color: #d0d0d0;background-color: #151515">
-    </span><span style="color: #d0d0d0;background-color: #151515">&#34;line1&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">&#34;Block 78 Woodgrove Avenue 5&#34;</span><span style="color: #d0d0d0">,</span><span style="color: #d0d0d0;background-color: #151515">
-    </span><span style="color: #d0d0d0;background-color: #151515">&#34;line2&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">&#34;Unit #05-111&#34;</span><span style="color: #d0d0d0">,</span><span style="color: #d0d0d0;background-color: #151515">
-    </span><span style="color: #d0d0d0;background-color: #151515">&#34;postal&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">&#34;654378&#34;</span><span style="color: #d0d0d0;background-color: #151515">
-  </span><span style="color: #d0d0d0">},</span><span style="color: #d0d0d0;background-color: #151515">
-  </span><span style="color: #d0d0d0;background-color: #151515">&#34;pets&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #d0d0d0">[</span><span style="color: #d0d0d0;background-color: #151515">
-    </span><span style="color: #d0d0d0">{</span><span style="color: #d0d0d0;background-color: #151515">
-      </span><span style="color: #d0d0d0;background-color: #151515">&#34;name&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">&#34;Lex&#34;</span><span style="color: #d0d0d0">,</span><span style="color: #d0d0d0;background-color: #151515">
-      </span><span style="color: #d0d0d0;background-color: #151515">&#34;kind&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">&#34;Dog&#34;</span><span style="color: #d0d0d0">,</span><span style="color: #d0d0d0;background-color: #151515">
-      </span><span style="color: #d0d0d0;background-color: #151515">&#34;age&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">4</span><span style="color: #d0d0d0">,</span><span style="color: #d0d0d0;background-color: #151515">
-      </span><span style="color: #d0d0d0;background-color: #151515">&#34;color&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">&#34;Gray&#34;</span><span style="color: #d0d0d0;background-color: #151515">
-    </span><span style="color: #d0d0d0">},</span><span style="color: #d0d0d0;background-color: #151515">
-    </span><span style="color: #d0d0d0">{</span><span style="color: #d0d0d0;background-color: #151515">
-      </span><span style="color: #d0d0d0;background-color: #151515">&#34;name&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">&#34;Faye&#34;</span><span style="color: #d0d0d0">,</span><span style="color: #d0d0d0;background-color: #151515">
-      </span><span style="color: #d0d0d0;background-color: #151515">&#34;kind&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">&#34;Cat&#34;</span><span style="color: #d0d0d0">,</span><span style="color: #d0d0d0;background-color: #151515">
-      </span><span style="color: #d0d0d0;background-color: #151515">&#34;age&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">6</span><span style="color: #d0d0d0">,</span><span style="color: #d0d0d0;background-color: #151515">
-      </span><span style="color: #d0d0d0;background-color: #151515">&#34;color&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">&#34;Orange&#34;</span><span style="color: #d0d0d0;background-color: #151515">
-    </span><span style="color: #d0d0d0">}</span><span style="color: #d0d0d0;background-color: #151515">
-  </span><span style="color: #d0d0d0">]</span><span style="color: #d0d0d0;background-color: #151515">
-</span><span style="color: #d0d0d0">}</span></code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="json"><span style="color: #d8d8d8">{</span><span style="color: #d8d8d8;background-color: #181818">
+  </span><span style="color: #d8d8d8;background-color: #181818">&#34;name&#34;</span><span style="color: #d8d8d8">:</span><span style="color: #d8d8d8;background-color: #181818"> </span><span style="color: #a1b56c">&#34;James Peterson&#34;</span><span style="color: #d8d8d8">,</span><span style="color: #d8d8d8;background-color: #181818">
+  </span><span style="color: #d8d8d8;background-color: #181818">&#34;age&#34;</span><span style="color: #d8d8d8">:</span><span style="color: #d8d8d8;background-color: #181818"> </span><span style="color: #a1b56c">37</span><span style="color: #d8d8d8">,</span><span style="color: #d8d8d8;background-color: #181818">
+  </span><span style="color: #d8d8d8;background-color: #181818">&#34;address&#34;</span><span style="color: #d8d8d8">:</span><span style="color: #d8d8d8;background-color: #181818"> </span><span style="color: #d8d8d8">{</span><span style="color: #d8d8d8;background-color: #181818">
+    </span><span style="color: #d8d8d8;background-color: #181818">&#34;line1&#34;</span><span style="color: #d8d8d8">:</span><span style="color: #d8d8d8;background-color: #181818"> </span><span style="color: #a1b56c">&#34;Block 78 Woodgrove Avenue 5&#34;</span><span style="color: #d8d8d8">,</span><span style="color: #d8d8d8;background-color: #181818">
+    </span><span style="color: #d8d8d8;background-color: #181818">&#34;line2&#34;</span><span style="color: #d8d8d8">:</span><span style="color: #d8d8d8;background-color: #181818"> </span><span style="color: #a1b56c">&#34;Unit #05-111&#34;</span><span style="color: #d8d8d8">,</span><span style="color: #d8d8d8;background-color: #181818">
+    </span><span style="color: #d8d8d8;background-color: #181818">&#34;postal&#34;</span><span style="color: #d8d8d8">:</span><span style="color: #d8d8d8;background-color: #181818"> </span><span style="color: #a1b56c">&#34;654378&#34;</span><span style="color: #d8d8d8;background-color: #181818">
+  </span><span style="color: #d8d8d8">},</span><span style="color: #d8d8d8;background-color: #181818">
+  </span><span style="color: #d8d8d8;background-color: #181818">&#34;pets&#34;</span><span style="color: #d8d8d8">:</span><span style="color: #d8d8d8;background-color: #181818"> </span><span style="color: #d8d8d8">[</span><span style="color: #d8d8d8;background-color: #181818">
+    </span><span style="color: #d8d8d8">{</span><span style="color: #d8d8d8;background-color: #181818">
+      </span><span style="color: #d8d8d8;background-color: #181818">&#34;name&#34;</span><span style="color: #d8d8d8">:</span><span style="color: #d8d8d8;background-color: #181818"> </span><span style="color: #a1b56c">&#34;Lex&#34;</span><span style="color: #d8d8d8">,</span><span style="color: #d8d8d8;background-color: #181818">
+      </span><span style="color: #d8d8d8;background-color: #181818">&#34;kind&#34;</span><span style="color: #d8d8d8">:</span><span style="color: #d8d8d8;background-color: #181818"> </span><span style="color: #a1b56c">&#34;Dog&#34;</span><span style="color: #d8d8d8">,</span><span style="color: #d8d8d8;background-color: #181818">
+      </span><span style="color: #d8d8d8;background-color: #181818">&#34;age&#34;</span><span style="color: #d8d8d8">:</span><span style="color: #d8d8d8;background-color: #181818"> </span><span style="color: #a1b56c">4</span><span style="color: #d8d8d8">,</span><span style="color: #d8d8d8;background-color: #181818">
+      </span><span style="color: #d8d8d8;background-color: #181818">&#34;color&#34;</span><span style="color: #d8d8d8">:</span><span style="color: #d8d8d8;background-color: #181818"> </span><span style="color: #a1b56c">&#34;Gray&#34;</span><span style="color: #d8d8d8;background-color: #181818">
+    </span><span style="color: #d8d8d8">},</span><span style="color: #d8d8d8;background-color: #181818">
+    </span><span style="color: #d8d8d8">{</span><span style="color: #d8d8d8;background-color: #181818">
+      </span><span style="color: #d8d8d8;background-color: #181818">&#34;name&#34;</span><span style="color: #d8d8d8">:</span><span style="color: #d8d8d8;background-color: #181818"> </span><span style="color: #a1b56c">&#34;Faye&#34;</span><span style="color: #d8d8d8">,</span><span style="color: #d8d8d8;background-color: #181818">
+      </span><span style="color: #d8d8d8;background-color: #181818">&#34;kind&#34;</span><span style="color: #d8d8d8">:</span><span style="color: #d8d8d8;background-color: #181818"> </span><span style="color: #a1b56c">&#34;Cat&#34;</span><span style="color: #d8d8d8">,</span><span style="color: #d8d8d8;background-color: #181818">
+      </span><span style="color: #d8d8d8;background-color: #181818">&#34;age&#34;</span><span style="color: #d8d8d8">:</span><span style="color: #d8d8d8;background-color: #181818"> </span><span style="color: #a1b56c">6</span><span style="color: #d8d8d8">,</span><span style="color: #d8d8d8;background-color: #181818">
+      </span><span style="color: #d8d8d8;background-color: #181818">&#34;color&#34;</span><span style="color: #d8d8d8">:</span><span style="color: #d8d8d8;background-color: #181818"> </span><span style="color: #a1b56c">&#34;Orange&#34;</span><span style="color: #d8d8d8;background-color: #181818">
+    </span><span style="color: #d8d8d8">}</span><span style="color: #d8d8d8;background-color: #181818">
+  </span><span style="color: #d8d8d8">]</span><span style="color: #d8d8d8;background-color: #181818">
+</span><span style="color: #d8d8d8">}</span></code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="title"><code>examples/complex_json/main.go</code></div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">type</span> <span style="color: #d0d0d0">(</span>
-    <span style="color: #d0d0d0;background-color: #151515">FullPerson</span> <span style="color: #aa759f">struct</span> <span style="color: #d0d0d0">{</span>
-        <span style="color: #d0d0d0;background-color: #151515">Address</span> <span style="color: #d0d0d0;background-color: #151515">Address</span>
-        <span style="color: #d0d0d0;background-color: #151515">Name</span>    <span style="color: #d28445">string</span>
-        <span style="color: #d0d0d0;background-color: #151515">Pets</span>    <span style="color: #d0d0d0">[]</span><span style="color: #d0d0d0;background-color: #151515">Pet</span>
-        <span style="color: #d0d0d0;background-color: #151515">Age</span>     <span style="color: #d28445">int</span>
-    <span style="color: #d0d0d0">}</span>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="go"><span style="color: #ba8baf">type</span> <span style="color: #d8d8d8">(</span>
+    <span style="color: #d8d8d8;background-color: #181818">FullPerson</span> <span style="color: #ba8baf">struct</span> <span style="color: #d8d8d8">{</span>
+        <span style="color: #d8d8d8;background-color: #181818">Address</span> <span style="color: #d8d8d8;background-color: #181818">Address</span>
+        <span style="color: #d8d8d8;background-color: #181818">Name</span>    <span style="color: #dc9656">string</span>
+        <span style="color: #d8d8d8;background-color: #181818">Pets</span>    <span style="color: #d8d8d8">[]</span><span style="color: #d8d8d8;background-color: #181818">Pet</span>
+        <span style="color: #d8d8d8;background-color: #181818">Age</span>     <span style="color: #dc9656">int</span>
+    <span style="color: #d8d8d8">}</span>
 
-    <span style="color: #d0d0d0;background-color: #151515">Pet</span> <span style="color: #aa759f">struct</span> <span style="color: #d0d0d0">{</span>
-        <span style="color: #d0d0d0;background-color: #151515">Name</span>  <span style="color: #d28445">string</span>
-        <span style="color: #d0d0d0;background-color: #151515">Kind</span>  <span style="color: #d28445">string</span>
-        <span style="color: #d0d0d0;background-color: #151515">Color</span> <span style="color: #d28445">string</span>
-        <span style="color: #d0d0d0;background-color: #151515">Age</span>   <span style="color: #d28445">int</span>
-    <span style="color: #d0d0d0">}</span>
+    <span style="color: #d8d8d8;background-color: #181818">Pet</span> <span style="color: #ba8baf">struct</span> <span style="color: #d8d8d8">{</span>
+        <span style="color: #d8d8d8;background-color: #181818">Name</span>  <span style="color: #dc9656">string</span>
+        <span style="color: #d8d8d8;background-color: #181818">Kind</span>  <span style="color: #dc9656">string</span>
+        <span style="color: #d8d8d8;background-color: #181818">Color</span> <span style="color: #dc9656">string</span>
+        <span style="color: #d8d8d8;background-color: #181818">Age</span>   <span style="color: #dc9656">int</span>
+    <span style="color: #d8d8d8">}</span>
 
-    <span style="color: #d0d0d0;background-color: #151515">Address</span> <span style="color: #aa759f">struct</span> <span style="color: #d0d0d0">{</span>
-        <span style="color: #d0d0d0;background-color: #151515">Line1</span>  <span style="color: #d28445">string</span>
-        <span style="color: #d0d0d0;background-color: #151515">Line2</span>  <span style="color: #d28445">string</span>
-        <span style="color: #d0d0d0;background-color: #151515">Postal</span> <span style="color: #d28445">string</span>
-    <span style="color: #d0d0d0">}</span>
-<span style="color: #d0d0d0">)</span>
+    <span style="color: #d8d8d8;background-color: #181818">Address</span> <span style="color: #ba8baf">struct</span> <span style="color: #d8d8d8">{</span>
+        <span style="color: #d8d8d8;background-color: #181818">Line1</span>  <span style="color: #dc9656">string</span>
+        <span style="color: #d8d8d8;background-color: #181818">Line2</span>  <span style="color: #dc9656">string</span>
+        <span style="color: #d8d8d8;background-color: #181818">Postal</span> <span style="color: #dc9656">string</span>
+    <span style="color: #d8d8d8">}</span>
+<span style="color: #d8d8d8">)</span>
 
 
-<span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">main</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #d0d0d0;background-color: #151515">b</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">os</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">ReadFile</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;assets/complex.json&#34;</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #aa759f">if</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">!=</span> <span style="color: #f4bf75">nil</span> <span style="color: #d0d0d0">{</span>
-        <span style="color: #d0d0d0;background-color: #151515">log</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Fatalf</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;Unable to read file due to %s</span><span style="color: #8f5536">\n</span><span style="color: #90a959">&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #d0d0d0">}</span>
+<span style="color: #ba8baf">func</span> <span style="color: #d8d8d8;background-color: #181818">main</span><span style="color: #d8d8d8">()</span> <span style="color: #d8d8d8">{</span>
+    <span style="color: #d8d8d8;background-color: #181818">b</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8;background-color: #181818">err</span> <span style="color: #d8d8d8">:=</span> <span style="color: #d8d8d8;background-color: #181818">os</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">ReadFile</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">&#34;assets/complex.json&#34;</span><span style="color: #d8d8d8">)</span>
+    <span style="color: #ba8baf">if</span> <span style="color: #d8d8d8;background-color: #181818">err</span> <span style="color: #d8d8d8">!=</span> <span style="color: #f7ca88">nil</span> <span style="color: #d8d8d8">{</span>
+        <span style="color: #d8d8d8;background-color: #181818">log</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Fatalf</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">&#34;Unable to read file due to %s</span><span style="color: #a16946">\n</span><span style="color: #a1b56c">&#34;</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8;background-color: #181818">err</span><span style="color: #d8d8d8">)</span>
+    <span style="color: #d8d8d8">}</span>
 
-    <span style="color: #aa759f">var</span> <span style="color: #d0d0d0;background-color: #151515">person</span> <span style="color: #d0d0d0;background-color: #151515">FullPerson</span>
+    <span style="color: #ba8baf">var</span> <span style="color: #d8d8d8;background-color: #181818">person</span> <span style="color: #d8d8d8;background-color: #181818">FullPerson</span>
 
-    <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">json</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Unmarshal</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">b</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&amp;</span><span style="color: #d0d0d0;background-color: #151515">person</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #aa759f">if</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">!=</span> <span style="color: #f4bf75">nil</span> <span style="color: #d0d0d0">{</span>
-        <span style="color: #d0d0d0;background-color: #151515">log</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Fatalf</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;Unable to marshal JSON due to %s&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #d0d0d0">}</span>
+    <span style="color: #d8d8d8;background-color: #181818">err</span> <span style="color: #d8d8d8">=</span> <span style="color: #d8d8d8;background-color: #181818">json</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Unmarshal</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">b</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8">&amp;</span><span style="color: #d8d8d8;background-color: #181818">person</span><span style="color: #d8d8d8">)</span>
+    <span style="color: #ba8baf">if</span> <span style="color: #d8d8d8;background-color: #181818">err</span> <span style="color: #d8d8d8">!=</span> <span style="color: #f7ca88">nil</span> <span style="color: #d8d8d8">{</span>
+        <span style="color: #d8d8d8;background-color: #181818">log</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Fatalf</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">&#34;Unable to marshal JSON due to %s&#34;</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8;background-color: #181818">err</span><span style="color: #d8d8d8">)</span>
+    <span style="color: #d8d8d8">}</span>
 
-    <span style="color: #d0d0d0;background-color: #151515">litter</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Dump</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">person</span><span style="color: #d0d0d0">)</span>
-<span style="color: #d0d0d0">}</span></code></pre>
+    <span style="color: #d8d8d8;background-color: #181818">litter</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Dump</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">person</span><span style="color: #d8d8d8">)</span>
+<span style="color: #d8d8d8">}</span></code></pre>
 </div>
 </div>
 </div>
@@ -573,54 +571,54 @@ a given data structure into a JSON.</p>
 <div class="listingblock">
 <div class="title">examples/basic_marshal/main.go</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">marshal</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">in</span> <span style="color: #d0d0d0;background-color: #151515">any</span><span style="color: #d0d0d0">)</span> <span style="color: #d0d0d0">[]</span><span style="color: #d28445">byte</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #d0d0d0;background-color: #151515">out</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">json</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Marshal</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">in</span><span style="color: #d0d0d0">)</span>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="go"><span style="color: #ba8baf">func</span> <span style="color: #d8d8d8;background-color: #181818">marshal</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">in</span> <span style="color: #d8d8d8;background-color: #181818">any</span><span style="color: #d8d8d8">)</span> <span style="color: #d8d8d8">[]</span><span style="color: #dc9656">byte</span> <span style="color: #d8d8d8">{</span>
+    <span style="color: #d8d8d8;background-color: #181818">out</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8;background-color: #181818">err</span> <span style="color: #d8d8d8">:=</span> <span style="color: #d8d8d8;background-color: #181818">json</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Marshal</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">in</span><span style="color: #d8d8d8">)</span>
 
-    <span style="color: #aa759f">if</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">!=</span> <span style="color: #f4bf75">nil</span> <span style="color: #d0d0d0">{</span>
-        <span style="color: #d0d0d0;background-color: #151515">log</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Fatalf</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;Unable to marshal due to %s</span><span style="color: #8f5536">\n</span><span style="color: #90a959">&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #d0d0d0">}</span>
+    <span style="color: #ba8baf">if</span> <span style="color: #d8d8d8;background-color: #181818">err</span> <span style="color: #d8d8d8">!=</span> <span style="color: #f7ca88">nil</span> <span style="color: #d8d8d8">{</span>
+        <span style="color: #d8d8d8;background-color: #181818">log</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Fatalf</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">&#34;Unable to marshal due to %s</span><span style="color: #a16946">\n</span><span style="color: #a1b56c">&#34;</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8;background-color: #181818">err</span><span style="color: #d8d8d8">)</span>
+    <span style="color: #d8d8d8">}</span>
 
-    <span style="color: #aa759f">return</span> <span style="color: #d0d0d0;background-color: #151515">out</span>
-<span style="color: #d0d0d0">}</span>
+    <span style="color: #ba8baf">return</span> <span style="color: #d8d8d8;background-color: #181818">out</span>
+<span style="color: #d8d8d8">}</span>
 
-<span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">main</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #d0d0d0;background-color: #151515">first</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">marshal</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">14</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #d0d0d0;background-color: #151515">second</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">marshal</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;Hello world&#34;</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #d0d0d0;background-color: #151515">third</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">marshal</span><span style="color: #d0d0d0">([]</span><span style="color: #d28445">float32</span><span style="color: #d0d0d0">{</span><span style="color: #90a959">1.66</span><span style="color: #d0d0d0">,</span> <span style="color: #90a959">6.86</span><span style="color: #d0d0d0">,</span> <span style="color: #90a959">10.1</span><span style="color: #d0d0d0">})</span>
-    <span style="color: #d0d0d0;background-color: #151515">fourth</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">marshal</span><span style="color: #d0d0d0">(</span><span style="color: #aa759f">map</span><span style="color: #d0d0d0">[</span><span style="color: #d28445">string</span><span style="color: #d0d0d0">]</span><span style="color: #d28445">int</span><span style="color: #d0d0d0">{</span><span style="color: #90a959">&#34;num&#34;</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">15</span><span style="color: #d0d0d0">,</span> <span style="color: #90a959">&#34;other&#34;</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">17</span><span style="color: #d0d0d0">})</span>
-    <span style="color: #d0d0d0;background-color: #151515">fmt</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Printf</span><span style="color: #d0d0d0">(</span>
-        <span style="color: #90a959">&#34;first: %s</span><span style="color: #8f5536">\n</span><span style="color: #90a959">second: %s</span><span style="color: #8f5536">\n</span><span style="color: #90a959">third: %s</span><span style="color: #8f5536">\n</span><span style="color: #90a959">fourth: %s</span><span style="color: #8f5536">\n</span><span style="color: #90a959">&#34;</span><span style="color: #d0d0d0">,</span>
-        <span style="color: #d0d0d0;background-color: #151515">first</span><span style="color: #d0d0d0">,</span>
-        <span style="color: #d0d0d0;background-color: #151515">second</span><span style="color: #d0d0d0">,</span>
-        <span style="color: #d0d0d0;background-color: #151515">third</span><span style="color: #d0d0d0">,</span>
-        <span style="color: #d0d0d0;background-color: #151515">fourth</span><span style="color: #d0d0d0">,</span>
-    <span style="color: #d0d0d0">)</span>
-<span style="color: #d0d0d0">}</span></code></pre>
+<span style="color: #ba8baf">func</span> <span style="color: #d8d8d8;background-color: #181818">main</span><span style="color: #d8d8d8">()</span> <span style="color: #d8d8d8">{</span>
+    <span style="color: #d8d8d8;background-color: #181818">first</span> <span style="color: #d8d8d8">:=</span> <span style="color: #d8d8d8;background-color: #181818">marshal</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">14</span><span style="color: #d8d8d8">)</span>
+    <span style="color: #d8d8d8;background-color: #181818">second</span> <span style="color: #d8d8d8">:=</span> <span style="color: #d8d8d8;background-color: #181818">marshal</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">&#34;Hello world&#34;</span><span style="color: #d8d8d8">)</span>
+    <span style="color: #d8d8d8;background-color: #181818">third</span> <span style="color: #d8d8d8">:=</span> <span style="color: #d8d8d8;background-color: #181818">marshal</span><span style="color: #d8d8d8">([]</span><span style="color: #dc9656">float32</span><span style="color: #d8d8d8">{</span><span style="color: #a1b56c">1.66</span><span style="color: #d8d8d8">,</span> <span style="color: #a1b56c">6.86</span><span style="color: #d8d8d8">,</span> <span style="color: #a1b56c">10.1</span><span style="color: #d8d8d8">})</span>
+    <span style="color: #d8d8d8;background-color: #181818">fourth</span> <span style="color: #d8d8d8">:=</span> <span style="color: #d8d8d8;background-color: #181818">marshal</span><span style="color: #d8d8d8">(</span><span style="color: #ba8baf">map</span><span style="color: #d8d8d8">[</span><span style="color: #dc9656">string</span><span style="color: #d8d8d8">]</span><span style="color: #dc9656">int</span><span style="color: #d8d8d8">{</span><span style="color: #a1b56c">&#34;num&#34;</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">15</span><span style="color: #d8d8d8">,</span> <span style="color: #a1b56c">&#34;other&#34;</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">17</span><span style="color: #d8d8d8">})</span>
+    <span style="color: #d8d8d8;background-color: #181818">fmt</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Printf</span><span style="color: #d8d8d8">(</span>
+        <span style="color: #a1b56c">&#34;first: %s</span><span style="color: #a16946">\n</span><span style="color: #a1b56c">second: %s</span><span style="color: #a16946">\n</span><span style="color: #a1b56c">third: %s</span><span style="color: #a16946">\n</span><span style="color: #a1b56c">fourth: %s</span><span style="color: #a16946">\n</span><span style="color: #a1b56c">&#34;</span><span style="color: #d8d8d8">,</span>
+        <span style="color: #d8d8d8;background-color: #181818">first</span><span style="color: #d8d8d8">,</span>
+        <span style="color: #d8d8d8;background-color: #181818">second</span><span style="color: #d8d8d8">,</span>
+        <span style="color: #d8d8d8;background-color: #181818">third</span><span style="color: #d8d8d8">,</span>
+        <span style="color: #d8d8d8;background-color: #181818">fourth</span><span style="color: #d8d8d8">,</span>
+    <span style="color: #d8d8d8">)</span>
+<span style="color: #d8d8d8">}</span></code></pre>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_structs">4.1. structs</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">main</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #d0d0d0;background-color: #151515">p</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">Person</span><span style="color: #d0d0d0">{</span>
-        <span style="color: #d0d0d0;background-color: #151515">Name</span><span style="color: #d0d0d0">:</span>  <span style="color: #90a959">&#34;John Jones&#34;</span><span style="color: #d0d0d0">,</span>
-        <span style="color: #d0d0d0;background-color: #151515">Age</span><span style="color: #d0d0d0">:</span>   <span style="color: #90a959">26</span><span style="color: #d0d0d0">,</span>
-        <span style="color: #d0d0d0;background-color: #151515">Email</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">&#34;johnjones@email.com&#34;</span><span style="color: #d0d0d0">,</span>
-        <span style="color: #d0d0d0;background-color: #151515">Phone</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">&#34;89910119&#34;</span><span style="color: #d0d0d0">,</span>
-        <span style="color: #d0d0d0;background-color: #151515">Hobbies</span><span style="color: #d0d0d0">:</span> <span style="color: #d0d0d0">[]</span><span style="color: #d28445">string</span><span style="color: #d0d0d0">{</span>
-            <span style="color: #90a959">&#34;Swimming&#34;</span><span style="color: #d0d0d0">,</span>
-            <span style="color: #90a959">&#34;Badminton&#34;</span><span style="color: #d0d0d0">,</span>
-        <span style="color: #d0d0d0">},</span>
-    <span style="color: #d0d0d0">}</span>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="go"><span style="color: #ba8baf">func</span> <span style="color: #d8d8d8;background-color: #181818">main</span><span style="color: #d8d8d8">()</span> <span style="color: #d8d8d8">{</span>
+    <span style="color: #d8d8d8;background-color: #181818">p</span> <span style="color: #d8d8d8">:=</span> <span style="color: #d8d8d8;background-color: #181818">Person</span><span style="color: #d8d8d8">{</span>
+        <span style="color: #d8d8d8;background-color: #181818">Name</span><span style="color: #d8d8d8">:</span>  <span style="color: #a1b56c">&#34;John Jones&#34;</span><span style="color: #d8d8d8">,</span>
+        <span style="color: #d8d8d8;background-color: #181818">Age</span><span style="color: #d8d8d8">:</span>   <span style="color: #a1b56c">26</span><span style="color: #d8d8d8">,</span>
+        <span style="color: #d8d8d8;background-color: #181818">Email</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">&#34;johnjones@email.com&#34;</span><span style="color: #d8d8d8">,</span>
+        <span style="color: #d8d8d8;background-color: #181818">Phone</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">&#34;89910119&#34;</span><span style="color: #d8d8d8">,</span>
+        <span style="color: #d8d8d8;background-color: #181818">Hobbies</span><span style="color: #d8d8d8">:</span> <span style="color: #d8d8d8">[]</span><span style="color: #dc9656">string</span><span style="color: #d8d8d8">{</span>
+            <span style="color: #a1b56c">&#34;Swimming&#34;</span><span style="color: #d8d8d8">,</span>
+            <span style="color: #a1b56c">&#34;Badminton&#34;</span><span style="color: #d8d8d8">,</span>
+        <span style="color: #d8d8d8">},</span>
+    <span style="color: #d8d8d8">}</span>
 
-    <span style="color: #d0d0d0;background-color: #151515">b</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">json</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Marshal</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">p</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #aa759f">if</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">!=</span> <span style="color: #f4bf75">nil</span> <span style="color: #d0d0d0">{</span>
-        <span style="color: #d0d0d0;background-color: #151515">log</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Fatalf</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;Unable to marshal due to %s</span><span style="color: #8f5536">\n</span><span style="color: #90a959">&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #d0d0d0">}</span>
+    <span style="color: #d8d8d8;background-color: #181818">b</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8;background-color: #181818">err</span> <span style="color: #d8d8d8">:=</span> <span style="color: #d8d8d8;background-color: #181818">json</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Marshal</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">p</span><span style="color: #d8d8d8">)</span>
+    <span style="color: #ba8baf">if</span> <span style="color: #d8d8d8;background-color: #181818">err</span> <span style="color: #d8d8d8">!=</span> <span style="color: #f7ca88">nil</span> <span style="color: #d8d8d8">{</span>
+        <span style="color: #d8d8d8;background-color: #181818">log</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Fatalf</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">&#34;Unable to marshal due to %s</span><span style="color: #a16946">\n</span><span style="color: #a1b56c">&#34;</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8;background-color: #181818">err</span><span style="color: #d8d8d8">)</span>
+    <span style="color: #d8d8d8">}</span>
 
-    <span style="color: #d0d0d0;background-color: #151515">fmt</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Println</span><span style="color: #d0d0d0">(</span><span style="color: #d28445">string</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">b</span><span style="color: #d0d0d0">))</span>
-<span style="color: #d0d0d0">}</span></code></pre>
+    <span style="color: #d8d8d8;background-color: #181818">fmt</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Println</span><span style="color: #d8d8d8">(</span><span style="color: #dc9656">string</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">b</span><span style="color: #d8d8d8">))</span>
+<span style="color: #d8d8d8">}</span></code></pre>
 </div>
 </div>
 <div class="admonitionblock note">
@@ -642,50 +640,50 @@ format the output.
 <h3 id="_customizing_json_field_names_with_struct_tags">4.2. Customizing JSON field names with struct tags</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">type</span> <span style="color: #d0d0d0;background-color: #151515">Dog</span> <span style="color: #aa759f">struct</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #d0d0d0;background-color: #151515">Breed</span>         <span style="color: #d28445">string</span>
-    <span style="color: #d0d0d0;background-color: #151515">Name</span>          <span style="color: #d28445">string</span>
-    <span style="color: #d0d0d0;background-color: #151515">FavoriteTreat</span> <span style="color: #d28445">string</span>
-    <span style="color: #d0d0d0;background-color: #151515">Age</span>           <span style="color: #d28445">int</span>
-<span style="color: #d0d0d0">}</span>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="go"><span style="color: #ba8baf">type</span> <span style="color: #d8d8d8;background-color: #181818">Dog</span> <span style="color: #ba8baf">struct</span> <span style="color: #d8d8d8">{</span>
+    <span style="color: #d8d8d8;background-color: #181818">Breed</span>         <span style="color: #dc9656">string</span>
+    <span style="color: #d8d8d8;background-color: #181818">Name</span>          <span style="color: #dc9656">string</span>
+    <span style="color: #d8d8d8;background-color: #181818">FavoriteTreat</span> <span style="color: #dc9656">string</span>
+    <span style="color: #d8d8d8;background-color: #181818">Age</span>           <span style="color: #dc9656">int</span>
+<span style="color: #d8d8d8">}</span>
 
-<span style="color: #aa759f">var</span> <span style="color: #d0d0d0;background-color: #151515">dog</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">Dog</span><span style="color: #d0d0d0">{</span>
-  <span style="color: #d0d0d0;background-color: #151515">Breed</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">&#34;Golden Retriever&#34;</span><span style="color: #d0d0d0">,</span>
-  <span style="color: #d0d0d0;background-color: #151515">Age</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">8</span><span style="color: #d0d0d0">,</span>
-  <span style="color: #d0d0d0;background-color: #151515">Name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">&#34;Paws&#34;</span><span style="color: #d0d0d0">,</span>
-  <span style="color: #d0d0d0;background-color: #151515">FavoriteTreat</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">&#34;Kibble&#34;</span><span style="color: #d0d0d0">,</span>
-<span style="color: #d0d0d0">}</span></code></pre>
+<span style="color: #ba8baf">var</span> <span style="color: #d8d8d8;background-color: #181818">dog</span> <span style="color: #d8d8d8">=</span> <span style="color: #d8d8d8;background-color: #181818">Dog</span><span style="color: #d8d8d8">{</span>
+  <span style="color: #d8d8d8;background-color: #181818">Breed</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">&#34;Golden Retriever&#34;</span><span style="color: #d8d8d8">,</span>
+  <span style="color: #d8d8d8;background-color: #181818">Age</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">8</span><span style="color: #d8d8d8">,</span>
+  <span style="color: #d8d8d8;background-color: #181818">Name</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">&#34;Paws&#34;</span><span style="color: #d8d8d8">,</span>
+  <span style="color: #d8d8d8;background-color: #181818">FavoriteTreat</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">&#34;Kibble&#34;</span><span style="color: #d8d8d8">,</span>
+<span style="color: #d8d8d8">}</span></code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">type</span> <span style="color: #d0d0d0;background-color: #151515">Dog</span> <span style="color: #aa759f">struct</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #d0d0d0;background-color: #151515">Breed</span>         <span style="color: #d28445">string</span> <span style="color: #90a959">`json:&#34;breed&#34;`</span>
-    <span style="color: #d0d0d0;background-color: #151515">Name</span>          <span style="color: #d28445">string</span> <span style="color: #90a959">`json:&#34;name&#34;`</span>
-    <span style="color: #d0d0d0;background-color: #151515">FavoriteTreat</span> <span style="color: #d28445">string</span> <span style="color: #90a959">`json:&#34;favorite_treat&#34;`</span>
-    <span style="color: #d0d0d0;background-color: #151515">Age</span>           <span style="color: #d28445">int</span>    <span style="color: #90a959">`json:&#34;age&#34;`</span>
-<span style="color: #d0d0d0">}</span></code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="go"><span style="color: #ba8baf">type</span> <span style="color: #d8d8d8;background-color: #181818">Dog</span> <span style="color: #ba8baf">struct</span> <span style="color: #d8d8d8">{</span>
+    <span style="color: #d8d8d8;background-color: #181818">Breed</span>         <span style="color: #dc9656">string</span> <span style="color: #a1b56c">`json:&#34;breed&#34;`</span>
+    <span style="color: #d8d8d8;background-color: #181818">Name</span>          <span style="color: #dc9656">string</span> <span style="color: #a1b56c">`json:&#34;name&#34;`</span>
+    <span style="color: #d8d8d8;background-color: #181818">FavoriteTreat</span> <span style="color: #dc9656">string</span> <span style="color: #a1b56c">`json:&#34;favorite_treat&#34;`</span>
+    <span style="color: #d8d8d8;background-color: #181818">Age</span>           <span style="color: #dc9656">int</span>    <span style="color: #a1b56c">`json:&#34;age&#34;`</span>
+<span style="color: #d8d8d8">}</span></code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">main</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #d0d0d0;background-color: #151515">input</span> <span style="color: #d0d0d0">:=</span> <span style="color: #90a959">`{
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="go"><span style="color: #ba8baf">func</span> <span style="color: #d8d8d8;background-color: #181818">main</span><span style="color: #d8d8d8">()</span> <span style="color: #d8d8d8">{</span>
+    <span style="color: #d8d8d8;background-color: #181818">input</span> <span style="color: #d8d8d8">:=</span> <span style="color: #a1b56c">`{
       &#34;name&#34;: &#34;Coffee&#34;,
       &#34;breed&#34;: &#34;Toy Poodle&#34;,
       &#34;age&#34;: 5,
       &#34;favorite_treat&#34;: &#34;Kibble&#34;
     }`</span>
 
-    <span style="color: #aa759f">var</span> <span style="color: #d0d0d0;background-color: #151515">coffee</span> <span style="color: #d0d0d0;background-color: #151515">Dog</span>
+    <span style="color: #ba8baf">var</span> <span style="color: #d8d8d8;background-color: #181818">coffee</span> <span style="color: #d8d8d8;background-color: #181818">Dog</span>
 
-    <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">json</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Unmarshal</span><span style="color: #d0d0d0">([]</span><span style="color: #d28445">byte</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">input</span><span style="color: #d0d0d0">),</span> <span style="color: #d0d0d0">&amp;</span><span style="color: #d0d0d0;background-color: #151515">coffee</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #aa759f">if</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">!=</span> <span style="color: #f4bf75">nil</span> <span style="color: #d0d0d0">{</span>
-        <span style="color: #d0d0d0;background-color: #151515">log</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Fatalf</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;Unable to marshal JSON due to %s&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #d0d0d0">}</span>
+    <span style="color: #d8d8d8;background-color: #181818">err</span> <span style="color: #d8d8d8">:=</span> <span style="color: #d8d8d8;background-color: #181818">json</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Unmarshal</span><span style="color: #d8d8d8">([]</span><span style="color: #dc9656">byte</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">input</span><span style="color: #d8d8d8">),</span> <span style="color: #d8d8d8">&amp;</span><span style="color: #d8d8d8;background-color: #181818">coffee</span><span style="color: #d8d8d8">)</span>
+    <span style="color: #ba8baf">if</span> <span style="color: #d8d8d8;background-color: #181818">err</span> <span style="color: #d8d8d8">!=</span> <span style="color: #f7ca88">nil</span> <span style="color: #d8d8d8">{</span>
+        <span style="color: #d8d8d8;background-color: #181818">log</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Fatalf</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">&#34;Unable to marshal JSON due to %s&#34;</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8;background-color: #181818">err</span><span style="color: #d8d8d8">)</span>
+    <span style="color: #d8d8d8">}</span>
 
-    <span style="color: #d0d0d0;background-color: #151515">litter</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Dump</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">coffee</span><span style="color: #d0d0d0">)</span>
-<span style="color: #d0d0d0">}</span></code></pre>
+    <span style="color: #d8d8d8;background-color: #181818">litter</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Dump</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">coffee</span><span style="color: #d8d8d8">)</span>
+<span style="color: #d8d8d8">}</span></code></pre>
 </div>
 </div>
 </div>
@@ -694,13 +692,13 @@ format the output.
 <div class="listingblock">
 <div class="title">Omit an empty field (one with its zero value in Go)</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">type</span> <span style="color: #d0d0d0;background-color: #151515">User</span> <span style="color: #aa759f">struct</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #d0d0d0;background-color: #151515">Username</span> <span style="color: #d28445">string</span>   <span style="color: #90a959">`json:&#34;username&#34;`</span>
-    <span style="color: #d0d0d0;background-color: #151515">Password</span> <span style="color: #d28445">string</span>   <span style="color: #90a959">`json:&#34;-&#34;`</span>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="go"><span style="color: #ba8baf">type</span> <span style="color: #d8d8d8;background-color: #181818">User</span> <span style="color: #ba8baf">struct</span> <span style="color: #d8d8d8">{</span>
+    <span style="color: #d8d8d8;background-color: #181818">Username</span> <span style="color: #dc9656">string</span>   <span style="color: #a1b56c">`json:&#34;username&#34;`</span>
+    <span style="color: #d8d8d8;background-color: #181818">Password</span> <span style="color: #dc9656">string</span>   <span style="color: #a1b56c">`json:&#34;-&#34;`</span>
 
-    <span style="color: #d0d0d0;background-color: #151515">Email</span>    <span style="color: #d28445">string</span>   <span style="color: #90a959">`json:&#34;email&#34;`</span>
-    <span style="color: #d0d0d0;background-color: #151515">Hobbies</span>  <span style="color: #d0d0d0">[]</span><span style="color: #d28445">string</span> <span style="color: #90a959">`json:&#34;hobbies,omitempty&#34;`</span>
-<span style="color: #d0d0d0">}</span></code></pre>
+    <span style="color: #d8d8d8;background-color: #181818">Email</span>    <span style="color: #dc9656">string</span>   <span style="color: #a1b56c">`json:&#34;email&#34;`</span>
+    <span style="color: #d8d8d8;background-color: #181818">Hobbies</span>  <span style="color: #d8d8d8">[]</span><span style="color: #dc9656">string</span> <span style="color: #a1b56c">`json:&#34;hobbies,omitempty&#34;`</span>
+<span style="color: #d8d8d8">}</span></code></pre>
 </div>
 </div>
 </div>
@@ -711,13 +709,13 @@ format the output.
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">main</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #d0d0d0;background-color: #151515">good</span> <span style="color: #d0d0d0">:=</span> <span style="color: #90a959">`{&#34;name&#34;: &#34;John Doe&#34;}`</span>
-    <span style="color: #d0d0d0;background-color: #151515">bad</span> <span style="color: #d0d0d0">:=</span> <span style="color: #90a959">`{name: &#34;John Doe&#34;}`</span>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="go"><span style="color: #ba8baf">func</span> <span style="color: #d8d8d8;background-color: #181818">main</span><span style="color: #d8d8d8">()</span> <span style="color: #d8d8d8">{</span>
+    <span style="color: #d8d8d8;background-color: #181818">good</span> <span style="color: #d8d8d8">:=</span> <span style="color: #a1b56c">`{&#34;name&#34;: &#34;John Doe&#34;}`</span>
+    <span style="color: #d8d8d8;background-color: #181818">bad</span> <span style="color: #d8d8d8">:=</span> <span style="color: #a1b56c">`{name: &#34;John Doe&#34;}`</span>
 
-    <span style="color: #d0d0d0;background-color: #151515">fmt</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Println</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">json</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Valid</span><span style="color: #d0d0d0">([]</span><span style="color: #d28445">byte</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">good</span><span style="color: #d0d0d0">)))</span>
-    <span style="color: #d0d0d0;background-color: #151515">fmt</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Println</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">json</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Valid</span><span style="color: #d0d0d0">([]</span><span style="color: #d28445">byte</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">bad</span><span style="color: #d0d0d0">)))</span>
-<span style="color: #d0d0d0">}</span></code></pre>
+    <span style="color: #d8d8d8;background-color: #181818">fmt</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Println</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">json</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Valid</span><span style="color: #d8d8d8">([]</span><span style="color: #dc9656">byte</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">good</span><span style="color: #d8d8d8">)))</span>
+    <span style="color: #d8d8d8;background-color: #181818">fmt</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Println</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">json</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Valid</span><span style="color: #d8d8d8">([]</span><span style="color: #dc9656">byte</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">bad</span><span style="color: #d8d8d8">)))</span>
+<span style="color: #d8d8d8">}</span></code></pre>
 </div>
 </div>
 </div>
@@ -739,17 +737,17 @@ named <code>MarshalJSON()</code> that returns a byte slice and an error.</p>
 <div class="listingblock">
 <div class="title">examples/custom_timestamp/main.go</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">type</span> <span style="color: #d0d0d0">(</span>
-    <span style="color: #d0d0d0;background-color: #151515">CustomTime</span> <span style="color: #aa759f">struct</span> <span style="color: #d0d0d0">{</span>
-        <span style="color: #d0d0d0;background-color: #151515">time</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Time</span>
-    <span style="color: #d0d0d0">}</span>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="go"><span style="color: #ba8baf">type</span> <span style="color: #d8d8d8">(</span>
+    <span style="color: #d8d8d8;background-color: #181818">CustomTime</span> <span style="color: #ba8baf">struct</span> <span style="color: #d8d8d8">{</span>
+        <span style="color: #d8d8d8;background-color: #181818">time</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Time</span>
+    <span style="color: #d8d8d8">}</span>
 
-    <span style="color: #d0d0d0;background-color: #151515">Baby</span> <span style="color: #aa759f">struct</span> <span style="color: #d0d0d0">{</span>
-        <span style="color: #d0d0d0;background-color: #151515">BirthDate</span> <span style="color: #d0d0d0;background-color: #151515">CustomTime</span> <span style="color: #90a959">`json:&#34;birth_date&#34;`</span>
-        <span style="color: #d0d0d0;background-color: #151515">Name</span>      <span style="color: #d28445">string</span>    <span style="color: #90a959">`json:&#34;name&#34;`</span>
-        <span style="color: #d0d0d0;background-color: #151515">Gender</span>    <span style="color: #d28445">string</span>    <span style="color: #90a959">`json:&#34;gender&#34;`</span>
-    <span style="color: #d0d0d0">}</span>
-<span style="color: #d0d0d0">)</span></code></pre>
+    <span style="color: #d8d8d8;background-color: #181818">Baby</span> <span style="color: #ba8baf">struct</span> <span style="color: #d8d8d8">{</span>
+        <span style="color: #d8d8d8;background-color: #181818">BirthDate</span> <span style="color: #d8d8d8;background-color: #181818">CustomTime</span> <span style="color: #a1b56c">`json:&#34;birth_date&#34;`</span>
+        <span style="color: #d8d8d8;background-color: #181818">Name</span>      <span style="color: #dc9656">string</span>    <span style="color: #a1b56c">`json:&#34;name&#34;`</span>
+        <span style="color: #d8d8d8;background-color: #181818">Gender</span>    <span style="color: #dc9656">string</span>    <span style="color: #a1b56c">`json:&#34;gender&#34;`</span>
+    <span style="color: #d8d8d8">}</span>
+<span style="color: #d8d8d8">)</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -762,22 +760,22 @@ the <code>BirthDate</code> value.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">main</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #d0d0d0;background-color: #151515">baby</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">Baby</span><span style="color: #d0d0d0">{</span>
-        <span style="color: #d0d0d0;background-color: #151515">Name</span><span style="color: #d0d0d0">:</span>   <span style="color: #90a959">&#34;johnny&#34;</span><span style="color: #d0d0d0">,</span>
-        <span style="color: #d0d0d0;background-color: #151515">Gender</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">&#34;male&#34;</span><span style="color: #d0d0d0">,</span>
-        <span style="color: #d0d0d0;background-color: #151515">BirthDate</span><span style="color: #d0d0d0">:</span> <span style="color: #d0d0d0;background-color: #151515">CustomTime</span><span style="color: #d0d0d0">{</span>
-            <span style="color: #d0d0d0;background-color: #151515">time</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Date</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">2023</span><span style="color: #d0d0d0">,</span> <span style="color: #90a959">1</span><span style="color: #d0d0d0">,</span> <span style="color: #90a959">1</span><span style="color: #d0d0d0">,</span> <span style="color: #90a959">12</span><span style="color: #d0d0d0">,</span> <span style="color: #90a959">0</span><span style="color: #d0d0d0">,</span> <span style="color: #90a959">0</span><span style="color: #d0d0d0">,</span> <span style="color: #90a959">0</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">time</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Now</span><span style="color: #d0d0d0">()</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Location</span><span style="color: #d0d0d0">()),</span>
-        <span style="color: #d0d0d0">},</span>
-    <span style="color: #d0d0d0">}</span>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="go"><span style="color: #ba8baf">func</span> <span style="color: #d8d8d8;background-color: #181818">main</span><span style="color: #d8d8d8">()</span> <span style="color: #d8d8d8">{</span>
+    <span style="color: #d8d8d8;background-color: #181818">baby</span> <span style="color: #d8d8d8">:=</span> <span style="color: #d8d8d8;background-color: #181818">Baby</span><span style="color: #d8d8d8">{</span>
+        <span style="color: #d8d8d8;background-color: #181818">Name</span><span style="color: #d8d8d8">:</span>   <span style="color: #a1b56c">&#34;johnny&#34;</span><span style="color: #d8d8d8">,</span>
+        <span style="color: #d8d8d8;background-color: #181818">Gender</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">&#34;male&#34;</span><span style="color: #d8d8d8">,</span>
+        <span style="color: #d8d8d8;background-color: #181818">BirthDate</span><span style="color: #d8d8d8">:</span> <span style="color: #d8d8d8;background-color: #181818">CustomTime</span><span style="color: #d8d8d8">{</span>
+            <span style="color: #d8d8d8;background-color: #181818">time</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Date</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">2023</span><span style="color: #d8d8d8">,</span> <span style="color: #a1b56c">1</span><span style="color: #d8d8d8">,</span> <span style="color: #a1b56c">1</span><span style="color: #d8d8d8">,</span> <span style="color: #a1b56c">12</span><span style="color: #d8d8d8">,</span> <span style="color: #a1b56c">0</span><span style="color: #d8d8d8">,</span> <span style="color: #a1b56c">0</span><span style="color: #d8d8d8">,</span> <span style="color: #a1b56c">0</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8;background-color: #181818">time</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Now</span><span style="color: #d8d8d8">()</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Location</span><span style="color: #d8d8d8">()),</span>
+        <span style="color: #d8d8d8">},</span>
+    <span style="color: #d8d8d8">}</span>
 
-    <span style="color: #d0d0d0;background-color: #151515">b</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">json</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Marshal</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">baby</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #aa759f">if</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">!=</span> <span style="color: #f4bf75">nil</span> <span style="color: #d0d0d0">{</span>
-        <span style="color: #d0d0d0;background-color: #151515">log</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Fatalf</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;Unable to marshal due to %s</span><span style="color: #8f5536">\n</span><span style="color: #90a959">&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #d0d0d0">}</span>
+    <span style="color: #d8d8d8;background-color: #181818">b</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8;background-color: #181818">err</span> <span style="color: #d8d8d8">:=</span> <span style="color: #d8d8d8;background-color: #181818">json</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Marshal</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">baby</span><span style="color: #d8d8d8">)</span>
+    <span style="color: #ba8baf">if</span> <span style="color: #d8d8d8;background-color: #181818">err</span> <span style="color: #d8d8d8">!=</span> <span style="color: #f7ca88">nil</span> <span style="color: #d8d8d8">{</span>
+        <span style="color: #d8d8d8;background-color: #181818">log</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Fatalf</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">&#34;Unable to marshal due to %s</span><span style="color: #a16946">\n</span><span style="color: #a1b56c">&#34;</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8;background-color: #181818">err</span><span style="color: #d8d8d8">)</span>
+    <span style="color: #d8d8d8">}</span>
 
-    <span style="color: #d0d0d0;background-color: #151515">fmt</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Println</span><span style="color: #d0d0d0">(</span><span style="color: #d28445">string</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">b</span><span style="color: #d0d0d0">))</span>
-<span style="color: #d0d0d0">}</span></code></pre>
+    <span style="color: #d8d8d8;background-color: #181818">fmt</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Println</span><span style="color: #d8d8d8">(</span><span style="color: #dc9656">string</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">b</span><span style="color: #d8d8d8">))</span>
+<span style="color: #d8d8d8">}</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -792,9 +790,9 @@ timestamp format.</p>
 <div class="listingblock">
 <div class="title">examples/custom_timestamp/main.go</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">func</span> <span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">ct</span> <span style="color: #d0d0d0;background-color: #151515">CustomTime</span><span style="color: #d0d0d0">)</span> <span style="color: #d0d0d0;background-color: #151515">MarshalJSON</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">([]</span><span style="color: #d28445">byte</span><span style="color: #d0d0d0">,</span> <span style="color: #d28445">error</span><span style="color: #d0d0d0">)</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #aa759f">return</span> <span style="color: #d0d0d0">[]</span><span style="color: #d28445">byte</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">fmt</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Sprintf</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">`%q`</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">ct</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Time</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Format</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;02-01-2006&#34;</span><span style="color: #d0d0d0">))),</span> <span style="color: #f4bf75">nil</span>
-<span style="color: #d0d0d0">}</span></code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="go"><span style="color: #ba8baf">func</span> <span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">ct</span> <span style="color: #d8d8d8;background-color: #181818">CustomTime</span><span style="color: #d8d8d8">)</span> <span style="color: #d8d8d8;background-color: #181818">MarshalJSON</span><span style="color: #d8d8d8">()</span> <span style="color: #d8d8d8">([]</span><span style="color: #dc9656">byte</span><span style="color: #d8d8d8">,</span> <span style="color: #dc9656">error</span><span style="color: #d8d8d8">)</span> <span style="color: #d8d8d8">{</span>
+    <span style="color: #ba8baf">return</span> <span style="color: #d8d8d8">[]</span><span style="color: #dc9656">byte</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">fmt</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Sprintf</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">`%q`</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8;background-color: #181818">ct</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Time</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Format</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">&#34;02-01-2006&#34;</span><span style="color: #d8d8d8">))),</span> <span style="color: #f7ca88">nil</span>
+<span style="color: #d8d8d8">}</span></code></pre>
 </div>
 </div>
 </div>

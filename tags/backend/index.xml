@@ -36,15 +36,15 @@
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">package</span> <span style="color: #d0d0d0;background-color: #151515">main</span>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="go"><span style="color: #ba8baf">package</span> <span style="color: #d8d8d8;background-color: #181818">main</span>
 
-<span style="color: #aa759f">import</span> <span style="color: #d0d0d0">(</span>
-    <span style="color: #90a959">&#34;fmt&#34;</span>
-<span style="color: #d0d0d0">)</span>
+<span style="color: #ba8baf">import</span> <span style="color: #d8d8d8">(</span>
+    <span style="color: #a1b56c">&#34;fmt&#34;</span>
+<span style="color: #d8d8d8">)</span>
 
-<span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">main</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #d0d0d0;background-color: #151515">fmt</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Printf</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;This is a simple test!</span><span style="color: #8f5536">\n</span><span style="color: #90a959">&#34;</span><span style="color: #d0d0d0">)</span>
-<span style="color: #d0d0d0">}</span></code></pre>
+<span style="color: #ba8baf">func</span> <span style="color: #d8d8d8;background-color: #181818">main</span><span style="color: #d8d8d8">()</span> <span style="color: #d8d8d8">{</span>
+    <span style="color: #d8d8d8;background-color: #181818">fmt</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Printf</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">&#34;This is a simple test!</span><span style="color: #a16946">\n</span><span style="color: #a1b56c">&#34;</span><span style="color: #d8d8d8">)</span>
+<span style="color: #d8d8d8">}</span></code></pre>
 </div>
 </div>
 </div>
