@@ -22,7 +22,7 @@
 <table>
 <tbody><tr>
 <td class="icon">
-<div class="title">Warning</div>
+<img src="./images/icons/warning.fi" alt="Warning"/>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -232,7 +232,7 @@ ingest, parse, and store the data in a way that it can be used effectively.</p>
 <table>
 <tbody><tr>
 <td class="icon">
-<div class="title">Note</div>
+<img src="./images/icons/note.fi" alt="Note"/>
 </td>
 <td class="content">
 <div class="paragraph">

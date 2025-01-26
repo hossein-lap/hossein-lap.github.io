@@ -50,7 +50,7 @@
         <meta name="keywords" content='container, docker' />
     
     
-        <meta name="description" content="Personal notes about docker container manager
+        <meta name="description" content="Some notes about docker container manager
 " />
     
 
@@ -78,7 +78,7 @@
     <meta property="og:image"
         content="https://hossein-lap.github.io/images/ed/foo.png" />
     
-        <meta property="og:description" content="Personal notes about docker container manager
+        <meta property="og:description" content="Some notes about docker container manager
 " />
     
 
@@ -96,7 +96,7 @@
     <meta name="twitter:image"
         content="https://hossein-lap.github.io/images/ed/foo.png" />
     
-        <meta name="twitter:description" content="Personal notes about docker container manager
+        <meta name="twitter:description" content="Some notes about docker container manager
 " />
     
 
@@ -125,11 +125,13 @@
         <li><a href="/">Home</a></li>
         
         
+            <li><a href="/about/">About</a></li>
+        
             <li><a href="/docs/">Docs</a></li>
         
             <li><a href="/notes/">Notes</a></li>
         
-            <li><a href="/about/">About</a></li>
+            <li><a href="/oldschool/">Oldschool</a></li>
         
         
         
@@ -269,8 +271,23 @@
         </summary>
           <nav id="TableOfContents">
   <ul>
-    <li><a href="#_basics">1. Basics</a></li>
-    <li><a href="#_multi_stage_dockerfile">2. Multi-stage Dockerfile</a></li>
+    <li>
+      <ul>
+        <li><a href="#_intro">1. Intro</a>
+          <ul>
+            <li><a href="#_what_is_docker">1.1. What is Docker?</a></li>
+            <li><a href="#_what_is_a_container">1.2. What is a container</a></li>
+            <li><a href="#_containers_vs_virtual_machines">1.3. Containers VS. Virtual-Machines</a></li>
+            <li><a href="#_linux_containers">1.4. Linux containers</a></li>
+          </ul>
+        </li>
+        <li><a href="#_basics">2. Basics</a>
+          <ul>
+            <li><a href="#_dockerfile">2.1. Dockerfile</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
   </ul>
 </nav>
       </details>
@@ -282,27 +299,112 @@
 </div>
 
     <div>
-<div id="preamble">
+<div class="sect1">
+<h2 id="_intro">1. Intro</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>WIP</p>
+<p>Yeah I don’t like long intros either, but this one needs a little more digging.
+Let’s begin.</p>
+</div>
+<div class="sect2">
+<h3 id="_what_is_docker">1.1. What is Docker?</h3>
+<div class="paragraph">
+<p>Docker is a container management service. You may also hear it referred as
+<em>container engine</em>. All it can do is <strong>create</strong>, <strong>run</strong> and <strong>manage</strong> containers.
+Let’s go a little bit deeper.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_what_is_a_container">1.2. What is a container</h3>
+<div class="paragraph">
+<p>Let me put it this way, what you need to run a program? A computer (servers are
+also computers) and what a computer (beside hardware) has? Software.
+Now what software do you use to work with the computer’s hardware? <strong>Operating
+System</strong>. Containers are just a small isolated things that emulates a Operating
+System. In a different approach we can say: <strong>Using OS-level virtualization to
+deliver software in packages called <em>containers</em></strong>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_containers_vs_virtual_machines">1.3. Containers VS. Virtual-Machines</h3>
+<div class="paragraph">
+<p>Every VM requires its own dedicated operating system (OS) is a major flaw.
+Every OS consumes CPU, RAM and other resources that could otherwise be used to
+power more applications. Every OS needs patching and monitoring. And in some
+cases, every OS requires a license. All of this results in wasted time and
+resources.</p>
+</div>
+<div class="paragraph">
+<p>A major difference is that containers do not require their own full-blown OS.
+In fact, all containers on a single host share the host’s OS. This frees up
+huge amounts of system resources such as CPU, RAM, and storage. It also reduces
+potential licensing costs and reduces the overhead of OS patching and other
+maintenance.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/images/notes/docker/vm-vs-container.png" alt="vm vs container"/>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_linux_containers">1.4. Linux containers</h3>
+<div class="paragraph">
+<p>Modern containers started in the Linux world and are the product of an immense
+amount of work from a wide variety of people over a long period of time. Just
+as one example, Google LLC has contributed many container-related technologies
+to the Linux kernel. Without these, and other contributions, we wouldn’t have
+modern containers today.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tbody><tr>
+<td class="icon">
+<img src="./images/icons/note.fi" alt="Note"/>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>There are many operating system virtualization technologies similar to
+containers that pre-date Docker and modern containers. Some even date back to
+System/360 on the Mainframe. BSD Jails and Solaris Zones are some other
+well-known examples of Unix-type container technologies.</p>
+</div>
+</td>
+</tr>
+</tbody></table>
+</div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_basics">1. Basics</h2>
+<h2 id="_basics">2. Basics</h2>
 <div class="sectionbody">
+<div class="listingblock">
+<div class="title">Pulling an image</div>
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="bash">docker image pull ubuntu:latest</code></pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_dockerfile">2.1. Dockerfile</h3>
+<div class="paragraph">
+<p>You can create your own Docker image from a file called <code>Dockerfile</code>.
+This file includes instructions to build an application. Instructions like
+installing dependencies, copying files, running compile / build commands and
+so on. <em>Things that needs to be done for preparing the environment that you app
+will run in it</em>.</p>
+</div>
 <div class="listingblock">
 <div class="title">Dockerfile — Simple webapp</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="dockerfile"><span style="color: #ba8baf">FROM</span><span style="color: #a1b56c"> alpine</span>
-<span style="color: #ba8baf">LABEL</span><span style="color: #a1b56c"> maintainer=&#34;example@mail.com&#34;</span>
-<span style="color: #ba8baf">RUN </span>apk add <span style="color: #f7ca88">--update</span> nodejs nodejs-npm
-<span style="color: #ba8baf">COPY</span><span style="color: #a1b56c"> . /src</span>
-<span style="color: #ba8baf">WORKDIR</span><span style="color: #a1b56c"> /src</span>
-<span style="color: #ba8baf">RUN </span>npm <span style="color: #d8d8d8;background-color: #181818">install</span>
-<span style="color: #ba8baf">EXPOSE</span><span style="color: #a1b56c"> 8080</span>
-<span style="color: #ba8baf">ENTRYPOINT</span><span style="color: #a1b56c"> [&#34;node&#34;, &#34;./app.js&#34;]</span></code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="dockerfile"><span style="color: #aa759f">FROM</span><span style="color: #90a959"> alpine</span>
+<span style="color: #aa759f">LABEL</span><span style="color: #90a959"> maintainer=&#34;example@mail.com&#34;</span>
+<span style="color: #aa759f">RUN </span>apk add <span style="color: #f4bf75">--update</span> nodejs nodejs-npm
+<span style="color: #aa759f">COPY</span><span style="color: #90a959"> . /src</span>
+<span style="color: #aa759f">WORKDIR</span><span style="color: #90a959"> /src</span>
+<span style="color: #aa759f">RUN </span>npm <span style="color: #d0d0d0;background-color: #151515">install</span>
+<span style="color: #aa759f">EXPOSE</span><span style="color: #90a959"> 8080</span>
+<span style="color: #aa759f">ENTRYPOINT</span><span style="color: #90a959"> [&#34;node&#34;, &#34;./app.js&#34;]</span></code></pre>
 </div>
 </div>
 <div class="exampleblock">
@@ -347,7 +449,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p>The actual app; all the previous commands are just a preperation for this command/section</p>
+<p>The actual app; all the previous commands are just a preparation for this command/section</p>
 </li>
 </ul>
 </div>
@@ -359,7 +461,7 @@
 <div class="listingblock">
 <div class="title">Dockerfile — Build image</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="bash">docker buildx build <span style="color: #f7ca88">-f</span> Dockerfile <span style="color: #f7ca88">-t</span> test-name .</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="bash">docker buildx build <span style="color: #f4bf75">-f</span> Dockerfile <span style="color: #f4bf75">-t</span> test-name .</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -386,7 +488,7 @@
 <div class="listingblock">
 <div class="title">Docker CLI — Get list of images</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="bash">docker image <span style="color: #d8d8d8;background-color: #181818">ls</span></code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="bash">docker image <span style="color: #d0d0d0;background-color: #151515">ls</span></code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -398,7 +500,7 @@ test                   latest            1825da98372a   6 minutes ago   95.4MB</
 <div class="listingblock">
 <div class="title">Docker CLI — Run an image/container</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="bash">docker container run <span style="color: #f7ca88">-d</span> <span style="color: #f7ca88">--name</span> web1 <span style="color: #f7ca88">--publish</span> 8080:8080 <span style="color: #d8d8d8;background-color: #181818">test</span>:latest</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="bash">docker container run <span style="color: #f4bf75">-d</span> <span style="color: #f4bf75">--name</span> web1 <span style="color: #f4bf75">--publish</span> 8080:8080 <span style="color: #d0d0d0;background-color: #151515">test</span>:latest</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -411,7 +513,7 @@ test                   latest            1825da98372a   6 minutes ago   95.4MB</
 <div class="listingblock">
 <div class="title">Docker CLI — Get list of running images/containers</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="bash">docker ps</code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="bash">docker ps</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -422,34 +524,48 @@ test                   latest            1825da98372a   6 minutes ago   95.4MB</
 </div>
 </div>
 </div>
+<div class="paragraph">
+<p>You can also use multiple images inside one container:</p>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_multi_stage_dockerfile">2. Multi-stage Dockerfile</h2>
-<div class="sectionbody">
 <div class="listingblock">
+<div class="title">Multi-stage Dockerfile</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="docker"><span style="color: #ba8baf">FROM</span><span style="color: #d8d8d8;background-color: #181818"> </span><span style="color: #a1b56c">golang:alpine</span><span style="color: #d8d8d8;background-color: #181818"> </span><span style="color: #ba8baf">as</span><span style="color: #d8d8d8;background-color: #181818"> </span><span style="color: #a1b56c">builder</span>
-<span style="color: #ba8baf">LABEL</span><span style="color: #a1b56c"> maintainer=&#34;Hossein Esmailzadeh &lt;hosteam01@gmail.com&gt;&#34;</span>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="docker"><span style="color: #505050"># pull golang image to build the app</span>
+<span style="color: #aa759f">FROM</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">golang:alpine</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #aa759f">as</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">builder</span>
+<span style="color: #505050"># add a label</span>
+<span style="color: #aa759f">LABEL</span><span style="color: #90a959"> maintainer=&#34;Hossein Esmailzadeh &lt;hosteam01@gmail.com&gt;&#34;</span>
 
-<span style="color: #ba8baf">WORKDIR</span><span style="color: #a1b56c"> /app</span>
+<span style="color: #505050">## inside golang:alpine image</span>
+<span style="color: #505050"># change the working directory</span>
+<span style="color: #aa759f">WORKDIR</span><span style="color: #90a959"> /app</span>
 
-<span style="color: #ba8baf">COPY</span><span style="color: #a1b56c"> go.mod go.sum ./</span>
-<span style="color: #ba8baf">RUN </span>go mod download
-<span style="color: #ba8baf">COPY</span><span style="color: #a1b56c"> . .</span>
+<span style="color: #505050"># copy golang&#39;s related files (checksum and module files)</span>
+<span style="color: #aa759f">COPY</span><span style="color: #90a959"> go.mod go.sum ./</span>
+<span style="color: #505050"># get the needed modules</span>
+<span style="color: #aa759f">RUN </span>go mod download
+<span style="color: #505050"># copy the source code</span>
+<span style="color: #aa759f">COPY</span><span style="color: #90a959"> . .</span>
 
-<span style="color: #ba8baf">RUN </span><span style="color: #d8d8d8;background-color: #181818">CGO_ENABLED</span><span style="color: #d8d8d8">=</span>0 <span style="color: #d8d8d8;background-color: #181818">GOOS</span><span style="color: #d8d8d8">=</span>linux go build <span style="color: #f7ca88">-a</span> <span style="color: #f7ca88">-installsuffix</span> cgo <span style="color: #f7ca88">-o</span> main .
+<span style="color: #505050"># compile the app</span>
+<span style="color: #aa759f">RUN </span><span style="color: #d0d0d0;background-color: #151515">CGO_ENABLED</span><span style="color: #d0d0d0">=</span>0 <span style="color: #d0d0d0;background-color: #151515">GOOS</span><span style="color: #d0d0d0">=</span>linux go build <span style="color: #f4bf75">-a</span> <span style="color: #f4bf75">-installsuffix</span> cgo <span style="color: #f4bf75">-o</span> main .
 
-<span style="color: #585858">## runner</span>
-<span style="color: #ba8baf">FROM</span><span style="color: #a1b56c"> alpine:latest</span>
+<span style="color: #505050">## inside our image</span>
+<span style="color: #505050"># use a alpine (very small OS) image as base</span>
+<span style="color: #aa759f">FROM</span><span style="color: #90a959"> alpine:latest</span>
 
-<span style="color: #ba8baf">RUN </span>apk <span style="color: #f7ca88">--no-cache</span> add ca-certificates
-<span style="color: #ba8baf">WORKDIR</span><span style="color: #a1b56c"> /root/</span>
-<span style="color: #ba8baf">COPY</span><span style="color: #a1b56c"> --from=builder /app/main .</span>
+<span style="color: #505050"># install dependencies</span>
+<span style="color: #aa759f">RUN </span>apk <span style="color: #f4bf75">--no-cache</span> add ca-certificates
+<span style="color: #505050"># change the working directory</span>
+<span style="color: #aa759f">WORKDIR</span><span style="color: #90a959"> /root/</span>
+<span style="color: #505050"># copy the built binary from the golang:alpine image inside our container</span>
+<span style="color: #aa759f">COPY</span><span style="color: #90a959"> --from=builder /app/main .</span>
 
-<span style="color: #ba8baf">EXPOSE</span><span style="color: #a1b56c"> 9090</span>
+<span style="color: #505050"># let port 9090 to be accessible for others</span>
+<span style="color: #aa759f">EXPOSE</span><span style="color: #90a959"> 9090</span>
 
-<span style="color: #ba8baf">CMD</span><span style="color: #a1b56c"> [&#34;./main&#34;]</span></code></pre>
+<span style="color: #505050"># run the binary at the end</span>
+<span style="color: #aa759f">CMD</span><span style="color: #90a959"> [&#34;./main&#34;]</span></code></pre>
+</div>
 </div>
 </div>
 </div>
@@ -488,7 +604,7 @@ test                   latest            1825da98372a   6 minutes ago   95.4MB</
     <hr />
 
 <p><small>
-        2024 &copy; Hossein Esmail
+        2025 &copy; Hossein Esmail
     </small></p>
     <p><small>
         <a href='https://gitlab.com/gabmus/hugo-ficurinia'>Ficurinia theme</a> for <a href='https://gohugo.io'>Hugo</a> by <a href='https://gabmus.org'>Gabriele Musco</a>. Licensed under <a href='https://www.gnu.org/licenses/agpl-3.0.html'>GNU AGPLv3</a>.

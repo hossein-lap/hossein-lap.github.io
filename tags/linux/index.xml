@@ -21,25 +21,25 @@
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="bash"><span style="color: #585858">#!/bin/sh</span>
-<span style="color: #585858"># colors</span>
-<span style="color: #d8d8d8;background-color: #181818">blue</span><span style="color: #d8d8d8">=</span><span style="color: #a16946">$(</span>tput setaf 4<span style="color: #a16946">)</span>
-<span style="color: #d8d8d8;background-color: #181818">cyan</span><span style="color: #d8d8d8">=</span><span style="color: #a16946">$(</span>tput setaf 6<span style="color: #a16946">)</span>
-<span style="color: #d8d8d8;background-color: #181818">magenta</span><span style="color: #d8d8d8">=</span><span style="color: #a16946">$(</span>tput setaf 5<span style="color: #a16946">)</span>
-<span style="color: #d8d8d8;background-color: #181818">yellow</span><span style="color: #d8d8d8">=</span><span style="color: #a16946">$(</span>tput setaf 3<span style="color: #a16946">)</span>
-<span style="color: #d8d8d8;background-color: #181818">green</span><span style="color: #d8d8d8">=</span><span style="color: #a16946">$(</span>tput setaf 2<span style="color: #a16946">)</span>
-<span style="color: #d8d8d8;background-color: #181818">red</span><span style="color: #d8d8d8">=</span><span style="color: #a16946">$(</span>tput setaf 1<span style="color: #a16946">)</span>
-<span style="color: #d8d8d8;background-color: #181818">normal</span><span style="color: #d8d8d8">=</span><span style="color: #a16946">$(</span>tput sgr0<span style="color: #a16946">)</span>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="bash"><span style="color: #505050">#!/bin/sh</span>
+<span style="color: #505050"># colors</span>
+<span style="color: #d0d0d0;background-color: #151515">blue</span><span style="color: #d0d0d0">=</span><span style="color: #8f5536">$(</span>tput setaf 4<span style="color: #8f5536">)</span>
+<span style="color: #d0d0d0;background-color: #151515">cyan</span><span style="color: #d0d0d0">=</span><span style="color: #8f5536">$(</span>tput setaf 6<span style="color: #8f5536">)</span>
+<span style="color: #d0d0d0;background-color: #151515">magenta</span><span style="color: #d0d0d0">=</span><span style="color: #8f5536">$(</span>tput setaf 5<span style="color: #8f5536">)</span>
+<span style="color: #d0d0d0;background-color: #151515">yellow</span><span style="color: #d0d0d0">=</span><span style="color: #8f5536">$(</span>tput setaf 3<span style="color: #8f5536">)</span>
+<span style="color: #d0d0d0;background-color: #151515">green</span><span style="color: #d0d0d0">=</span><span style="color: #8f5536">$(</span>tput setaf 2<span style="color: #8f5536">)</span>
+<span style="color: #d0d0d0;background-color: #151515">red</span><span style="color: #d0d0d0">=</span><span style="color: #8f5536">$(</span>tput setaf 1<span style="color: #8f5536">)</span>
+<span style="color: #d0d0d0;background-color: #151515">normal</span><span style="color: #d0d0d0">=</span><span style="color: #8f5536">$(</span>tput sgr0<span style="color: #8f5536">)</span>
 
-check<span style="color: #d8d8d8">()</span> <span style="color: #d8d8d8">{</span>
-    <span style="color: #ba8baf">if</span> <span style="color: #d8d8d8">[</span> <span style="color: #a1b56c">&#34;</span><span style="color: #ba8baf">${</span><span style="color: #d8d8d8">?</span><span style="color: #ba8baf">}</span><span style="color: #a1b56c">&#34;</span> <span style="color: #d8d8d8">=</span> <span style="color: #a1b56c">&#39;0&#39;</span> <span style="color: #d8d8d8">]</span><span style="color: #d8d8d8">;</span> <span style="color: #ba8baf">then
-        </span><span style="color: #d8d8d8;background-color: #181818">printf</span> <span style="color: #a1b56c">&#34;</span><span style="color: #ba8baf">${</span><span style="color: #d8d8d8;background-color: #181818">green</span><span style="color: #ba8baf">}</span><span style="color: #a1b56c">Done</span><span style="color: #ba8baf">${</span><span style="color: #d8d8d8;background-color: #181818">normal</span><span style="color: #ba8baf">}</span><span style="color: #a1b56c">&#34;</span>
-        <span style="color: #d8d8d8;background-color: #181818">printf</span> <span style="color: #a1b56c">&#39;\n&#39;</span>
-    <span style="color: #ba8baf">else
-        </span><span style="color: #d8d8d8;background-color: #181818">printf</span> <span style="color: #a1b56c">&#34;</span><span style="color: #ba8baf">${</span><span style="color: #d8d8d8;background-color: #181818">red</span><span style="color: #ba8baf">}</span><span style="color: #a1b56c">Fail</span><span style="color: #ba8baf">${</span><span style="color: #d8d8d8;background-color: #181818">normal</span><span style="color: #ba8baf">}</span><span style="color: #a1b56c">&#34;</span>
-        <span style="color: #d8d8d8;background-color: #181818">printf</span> <span style="color: #a1b56c">&#39;\n&#39;</span>
-    <span style="color: #ba8baf">fi</span>
-<span style="color: #d8d8d8">}</span>
+check<span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
+    <span style="color: #aa759f">if</span> <span style="color: #d0d0d0">[</span> <span style="color: #90a959">&#34;</span><span style="color: #aa759f">${</span><span style="color: #d0d0d0">?</span><span style="color: #aa759f">}</span><span style="color: #90a959">&#34;</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#39;0&#39;</span> <span style="color: #d0d0d0">]</span><span style="color: #d0d0d0">;</span> <span style="color: #aa759f">then
+        </span><span style="color: #d0d0d0;background-color: #151515">printf</span> <span style="color: #90a959">&#34;</span><span style="color: #aa759f">${</span><span style="color: #d0d0d0;background-color: #151515">green</span><span style="color: #aa759f">}</span><span style="color: #90a959">Done</span><span style="color: #aa759f">${</span><span style="color: #d0d0d0;background-color: #151515">normal</span><span style="color: #aa759f">}</span><span style="color: #90a959">&#34;</span>
+        <span style="color: #d0d0d0;background-color: #151515">printf</span> <span style="color: #90a959">&#39;\n&#39;</span>
+    <span style="color: #aa759f">else
+        </span><span style="color: #d0d0d0;background-color: #151515">printf</span> <span style="color: #90a959">&#34;</span><span style="color: #aa759f">${</span><span style="color: #d0d0d0;background-color: #151515">red</span><span style="color: #aa759f">}</span><span style="color: #90a959">Fail</span><span style="color: #aa759f">${</span><span style="color: #d0d0d0;background-color: #151515">normal</span><span style="color: #aa759f">}</span><span style="color: #90a959">&#34;</span>
+        <span style="color: #d0d0d0;background-color: #151515">printf</span> <span style="color: #90a959">&#39;\n&#39;</span>
+    <span style="color: #aa759f">fi</span>
+<span style="color: #d0d0d0">}</span>
 
 check</code></pre>
 </div>
