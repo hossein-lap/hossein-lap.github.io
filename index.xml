@@ -9516,6 +9516,122 @@ mix run</pre>
       
       <guid>https://hossein-lap.github.io/about/</guid>
       <description><![CDATA[<div class="paragraph">
+<p>Hi I’m Hossein</p>
+</div>
+<div class="paragraph">
+<p>Yet another minimalist person with a passion about Open Source Software.</p>
+</div>
+<div class="paragraph">
+<p>I was a Computer guy from my early days back in my 1st and 2nd grade.
+But all I did was playing video games. Until my dad came to me and said:</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>Don’t just play video games kid, it can do much more than that. try to
+learn it.</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>And that was it. It became the goal of my life :)</p>
+</div>
+<div class="sect1">
+<h2 id="_programming">1. Programming</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>I have a solid background with writing and patching softwares in some
+programming languages (<code>C</code> <code>Lua</code> <code>Go</code> <code>Bash</code> <code>Python</code>) by <em>mostly</em> using some
+tools that required a little programming knowledge to modify / configure or
+extend.</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Let me give you an example:</div>
+<div class="paragraph">
+<p>I wanted to learn Python language so I needed to take some notes, I decided to
+use LaTeX for that matter and my notes were getting dirty, I was losing some of
+them, they’re getting out-of-hand, then I’ve decided to use git for managing
+them.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>I learned <code>C</code> by patching / configuring the <a href="https://suckless.org">suckless</a>
+tools, <code>Lua</code> by configuring <a href="https://neovim.io">neovim</a> and writing plugins for it, <code>Bash</code> by using
+it daily with &#34;Live inside terminal&#34; approach. of cource I’ve also read books
+and documentations for them eventually. <code>Python</code> and <code>Go</code> are the ones that I
+really sat-down and read books / docs about them from the beginning of the
+journey.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_workflow">2. Workflow</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A simple guy likes simplicity.</p>
+</div>
+<div class="paragraph">
+<p>I use <a href="https://st.suckless.org">st</a> as my terminal emulator.
+I have <a href="https://vim.org">vim</a> (or <a href="https://neovim.io">neovim</a> I’m fine with both)
+as my text editor in my pocket, <a href="https://github.com/tmux/tmux/wiki">tmux</a> as
+multiplexer / session-manager by my side, I have a home in any window manger
+(but I perfer it to be inside <a href="https://dwm.suckless.org">dwm</a> over the other).
+Also for some bidirectional papers and documents I’ve let the little evil in,
+<a href="https://github.com/doomemacs/doomemacs">(doom) emacs</a>.</p>
+</div>
+<div class="paragraph">
+<p>To be honest, I just need a POSIX-complaint shell, tmux, vim and git.
+All of these can be repleaced and I’m fine with their alternatives.</p>
+</div>
+<div class="sect2">
+<h3 id="_operating_system">2.1. Operating System</h3>
+<div class="paragraph">
+<p>Currently (as of June 21, 2024) I’m using NixOS as my daily-driver OS.</p>
+</div>
+<div class="paragraph">
+<p>I enjoy NixOS’s approach and its reproducability, just starting to like Nix
+language / packages manager. I’ve wanted to learn a functional programming
+language anyway (I still might go for Elixir) so, that’s might be it,
+who knows ;)</p>
+</div>
+<div class="paragraph">
+<p>Update (September 14, 2024): Back to my good old
+<a href="https://voidlinux.org">Void Linux</a> for a while now.</p>
+</div>
+<div class="paragraph">
+<p>I’m very fine and comfortable with most of other Linux Distributions out there.
+I’ve started using Linux with Ubuntu 18.04, shortly moved to Linux mint 18
+and used it about a 6 to 10 months, after that I went for Manjaro xfce,
+installed it, used it for about 3 or so months and then, I installed Manjaro i3.</p>
+</div>
+<div class="paragraph">
+<p>The emphasizing <strong>Manjaro i3</strong> is because it really changed the way I look at a
+GUI.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_wip">3. WIP</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+]]></description>
+      
+    </item>
+    
+    
+    
+    <item>
+      <title>About</title>
+      <link>https://hossein-lap.github.io/resume/</link>
+      <pubDate>Wed, 29 Mar 2023 22:14:09 +0330</pubDate>
+      
+      <guid>https://hossein-lap.github.io/resume/</guid>
+      <description><![CDATA[<div class="paragraph">
 <p>Welcome to my blog. I’m Hossein (aka &#34;pj&#34; or &#34;hos&#34;) and I’ll be posting my own
 notes, ideas, programs and other stuffs. I am a Programmer / DevOps Engineer
 with passions about open-source software and trees. Personally I enjoy
