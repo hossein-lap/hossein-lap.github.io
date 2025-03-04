@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/feed_style.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="https://www.rssboard.org/media-rss">
   <channel>
-    <title>Hossein Esmailzadeh</title>
+    <title>Hossein Esmail</title>
     <link>https://hossein-lap.github.io/</link>
-    <description>Recent content on Hossein Esmailzadeh</description>
+    <description>Recent content on Hossein Esmail</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Hossein Esmail</copyright>
@@ -459,7 +459,7 @@ git add &lt;path/to/file&gt;</code></pre>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/note.fi" alt="Note"/>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -524,7 +524,7 @@ no changes added to commit (use &#34;git add&#34; and/or &#34;git commit -a&#34;
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/note.fi" alt="Note"/>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="ulist">
@@ -617,7 +617,7 @@ git config user.email <span style="color: #90a959">&#39;you@email.com&#39;</span
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/note.fi" alt="Note"/>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -705,7 +705,7 @@ shall we? Okay, what about pointing at <strong>one previous position</strong> or
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/tip.fi" alt="Tip"/>
+<i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -769,7 +769,7 @@ the remote yourself</p>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/note.fi" alt="Note"/>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -799,7 +799,7 @@ authentication.</p>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/important.fi" alt="Important"/>
+<i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -888,7 +888,7 @@ git fetch <span style="color: #f4bf75">--unshallow</span>  <span style="color: #
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/caution.fi" alt="Caution"/>
+<i class="fa icon-caution" title="Caution"></i>
 </td>
 <td class="content">
 <div class="title">Forced push</div>
@@ -928,7 +928,7 @@ You must remove it from <strong>protected branches</strong> first.</p>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/caution.fi" alt="Caution"/>
+<i class="fa icon-caution" title="Caution"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -1112,7 +1112,7 @@ Dropped refs/stash@{0} (a5eec65b3011ad09cd73c9845646ea1b87659f9e)</pre>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/tip.fi" alt="Tip"/>
+<i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -1126,7 +1126,7 @@ Dropped refs/stash@{0} (a5eec65b3011ad09cd73c9845646ea1b87659f9e)</pre>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/note.fi" alt="Note"/>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -1174,7 +1174,7 @@ would be:
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/important.fi" alt="Important"/>
+<i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -1203,7 +1203,7 @@ man git-rebase</pre>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/caution.fi" alt="Caution"/>
+<i class="fa icon-caution" title="Caution"></i>
 </td>
 <td class="content">
 <div class="listingblock">
@@ -1236,7 +1236,7 @@ your commit history</strong>. Especially with the <code>--hard</code> flag.</p>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/warning.fi" alt="Warning"/>
+<i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
 <div class="listingblock">
@@ -1278,7 +1278,7 @@ patch <span style="color: #f4bf75">-p1</span> &lt; test-changes.diff</code></pre
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/important.fi" alt="Important"/>
+<i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -1305,7 +1305,7 @@ Reverts</p>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/note.fi" alt="Note"/>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -1319,7 +1319,7 @@ Reverts</p>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/tip.fi" alt="Tip"/>
+<i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -1421,7 +1421,7 @@ you need to change your current <strong>working directory</strong> (e.g
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/important.fi" alt="Important"/>
+<i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -1435,7 +1435,7 @@ you need to change your current <strong>working directory</strong> (e.g
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/caution.fi" alt="Caution"/>
+<i class="fa icon-caution" title="Caution"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -1616,7 +1616,7 @@ modern containers today.</p>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/note.fi" alt="Note"/>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -1853,7 +1853,7 @@ test                   latest            1825da98372a   6 minutes ago   95.4MB</
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/note.fi" alt="Note"/>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -2267,7 +2267,7 @@ instead of its name.</p>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/note.fi" alt="Note"/>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -2984,7 +2984,7 @@ new line character \n from the string that the user entered.</p>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/note.fi" alt="Note"/>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 The <code>&lt;STDIN&gt;</code> is used to get input from users.
@@ -3558,7 +3558,7 @@ over-written</strong>.</p>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/note.fi" alt="Note"/>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -3709,7 +3709,7 @@ take a look at the following example:</p>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/note.fi" alt="Note"/>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -3899,7 +3899,7 @@ use it properly.</p>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/note.fi" alt="Note"/>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -4133,7 +4133,7 @@ specify it.</p>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/note.fi" alt="Note"/>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="ulist">
@@ -4671,7 +4671,7 @@ keyboard.</p>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/note.fi" alt="Note"/>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -4917,7 +4917,7 @@ denote the set of valid keystrokes that can follow a command.</p>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/warning.fi" alt="Warning"/>
+<i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -5127,7 +5127,7 @@ ingest, parse, and store the data in a way that it can be used effectively.</p>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/note.fi" alt="Note"/>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -5568,7 +5568,7 @@ usual.</p>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/warning.fi" alt="Warning"/>
+<i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -6300,7 +6300,7 @@ requested, will be sent to the <code>kubia-nodeport</code> service on port <code
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/note.fi" alt="Note"/>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 Ingress controllers on cloud providers (in GKE, for example) require the
@@ -6334,7 +6334,7 @@ kubia     kubia.example.com    192.168.99.100     80          29m</pre>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/note.fi" alt="Note"/>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -6356,7 +6356,7 @@ because the Ingress controller provisions a load balancer behind the scenes.</p>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/tip.fi" alt="Tip"/>
+<i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -6437,7 +6437,7 @@ the pods.</p>
     
     
     <item>
-      <title>Golang stdlib - Webserver</title>
+      <title>Webserver</title>
       <link>https://hossein-lap.github.io/notes/webserver/</link>
       <pubDate>Fri, 31 May 2024 16:47:17 +0330</pubDate>
       
@@ -6449,7 +6449,7 @@ the pods.</p>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/warning.fi" alt="Warning"/>
+<i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -6763,7 +6763,7 @@ a given data structure into a JSON.</p>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/note.fi" alt="Note"/>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 If you wish to format the JSON object, you can use the <code>MarshalIndent()</code> method
@@ -7011,7 +7011,7 @@ software and trees.</p>
     
     
     <item>
-      <title>Lua Progamming Language</title>
+      <title>Lua</title>
       <link>https://hossein-lap.github.io/docs/lua/</link>
       <pubDate>Tue, 02 Apr 2024 22:30:09 +0330</pubDate>
       
@@ -8161,7 +8161,7 @@ Threads
     
     
     <item>
-      <title>Go Programming Language</title>
+      <title>Golang</title>
       <link>https://hossein-lap.github.io/docs/go/</link>
       <pubDate>Tue, 02 Apr 2024 22:30:03 +0330</pubDate>
       
@@ -8175,7 +8175,7 @@ Threads
 </div>
 </div>
 <div class="sect1">
-<h2 id="_new_stuff">New stuff</h2>
+<h2 id="_new_stuff">1. New stuff</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>very versile</p>
@@ -8183,7 +8183,7 @@ Threads
 </div>
 </div>
 <div class="sect1">
-<h2 id="_more_stuff">more stuff</h2>
+<h2 id="_more_stuff">2. more stuff</h2>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
@@ -8368,13 +8368,13 @@ Threads
 <div class="ulist checklist">
 <ul class="checklist">
 <li>
-<p>✓ checked</p>
+<p><i class="fa fa-check-square-o"></i> checked</p>
 </li>
 <li>
-<p>✓ also checked</p>
+<p><i class="fa fa-check-square-o"></i> also checked</p>
 </li>
 <li>
-<p>❏ not checked</p>
+<p><i class="fa fa-square-o"></i> not checked</p>
 </li>
 <li>
 <p>normal list item</p>
@@ -8690,7 +8690,7 @@ Cloud Providers::
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/note.fi" alt="Note"/>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 Note that the indentation is optional
@@ -8998,7 +8998,7 @@ image::http://asciidoctor.org/images/octocat.jpg[GitHub mascot]</code></pre>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/note.fi" alt="Note"/>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 This is a NOTE!
@@ -9027,7 +9027,7 @@ This is a NOTE!
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/tip.fi" alt="Tip"/>
+<i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
 This is a TIP!
@@ -9056,7 +9056,7 @@ This is a TIP!
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/warning.fi" alt="Warning"/>
+<i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
 This is a WARNING!
@@ -9085,7 +9085,7 @@ This is a WARNING!
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/caution.fi" alt="Caution"/>
+<i class="fa icon-caution" title="Caution"></i>
 </td>
 <td class="content">
 This is a CAUTION!
@@ -9114,7 +9114,7 @@ This is a CAUTION!
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/important.fi" alt="Important"/>
+<i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
 This is a IMPORTANT!
@@ -9154,7 +9154,7 @@ The style can be any one of the admonition labels:
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/note.fi" alt="Note"/>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -9449,7 +9449,7 @@ can long endure. ...</pre>
     
     
     <item>
-      <title>Elixir Programming Language</title>
+      <title>Elixir</title>
       <link>https://hossein-lap.github.io/docs/elixir/</link>
       <pubDate>Tue, 02 Apr 2024 22:09:44 +0330</pubDate>
       
@@ -9462,7 +9462,7 @@ can long endure. ...</pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_intractive_elixir_environment">Intractive elixir environment</h2>
+<h2 id="_intractive_elixir_environment">1. Intractive elixir environment</h2>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
@@ -9472,7 +9472,7 @@ can long endure. ...</pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_hello_world">Hello World!</h2>
+<h2 id="_hello_world">2. Hello World!</h2>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="title">intro.exs</div>
@@ -9484,7 +9484,7 @@ can long endure. ...</pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_build_tool">Build Tool</h2>
+<h2 id="_build_tool">3. Build Tool</h2>
 <div class="sectionbody">
 <div class="literalblock">
 <div class="content">
@@ -9516,9 +9516,42 @@ mix run</pre>
       
       <guid>https://hossein-lap.github.io/about/</guid>
       <description><![CDATA[<div class="paragraph">
-<p>Hi I’m Hossein,
-Yet another minimalist person with a passion about Open Source Software.</p>
+<p>Welcome to my blog. I’m Hossein (aka &#34;pj&#34; or &#34;hos&#34;) and I’ll be posting my own
+notes, ideas, programs and other stuffs. I am a Programmer / DevOps Engineer
+with passions about open-source software and trees. Personally I enjoy
+minimalism and simpleness of things.</p>
 </div>
+<div class="paragraph">
+<p>Also, I use vim btw ;)</p>
+</div>
+<div class="quoteblock">
+<div class="title"><strong>Bookshelf</strong></div>
+<blockquote>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Languages</dt>
+<dd>
+<p><code>Lua</code>, <code>Go</code>, <code>C</code>, <code>Bash</code>, <code>Perl</code></p>
+</dd>
+<dt class="hdlist1">Tools</dt>
+<dd>
+<p><code>Linux</code>, <code>Git</code>, <code>Docker</code>, <code>Kubernetes</code>, <code>Ansible</code>, <code>QEMU/KVM</code>, <code>Vim</code>, <code>tmux</code></p>
+</dd>
+<dt class="hdlist1">Writing</dt>
+<dd>
+<p><code>LaTeX</code>, <code>Groff</code>, <code>Asciidoc</code>, <code>Markdown</code></p>
+</dd>
+<dt class="hdlist1">Hobbies</dt>
+<dd>
+<p><code>Coding</code>, <code>Writing</code>, <code>Biking</code>, <code>Volleyball</code>, <code>Fishing</code>, <code>Music</code>, <code>Movies</code></p>
+</dd>
+</dl>
+</div>
+</blockquote>
+</div>
+<div class="sect1">
+<h2 id="_the_journey">1. The journey</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>I was a Computer guy from my early days back in my 1st and 2nd grade.
 But all I did was playing video games. Until my dad came to me and said:</p>
@@ -9534,9 +9567,8 @@ learn it.</p>
 <div class="paragraph">
 <p>And that was it. It became the goal of my life :)</p>
 </div>
-<div class="sect1">
-<h2 id="_programming">Programming</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_programming">1.1. Programming</h3>
 <div class="paragraph">
 <p>I have a solid background with writing and patching softwares in some
 programming languages (<code>C</code>, <code>Lua</code>, <code>Go</code>, <code>Bash</code>, <code>Python</code>) by <em>mostly</em> using some
@@ -9563,10 +9595,8 @@ really sat-down and read books / docs about them from the beginning of the
 journey.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_workflow">Workflow</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_workflow">1.2. Workflow</h3>
 <div class="paragraph">
 <p>A simple guy likes simplicity.</p>
 </div>
@@ -9583,8 +9613,8 @@ Also for some bidirectional papers and documents I’ve let the little evil in,
 <p>To be honest, I just need a POSIX-complaint shell, tmux, vim and git.
 All of these can be repleaced and I’m fine with their alternatives.</p>
 </div>
-<div class="sect2">
-<h3 id="_operating_system">Operating System</h3>
+<div class="sect3">
+<h4 id="_operating_system">1.2.1. Operating System</h4>
 <div class="paragraph">
 <p>Currently (as of June 21, 2024) I’m using NixOS as my daily-driver OS.</p>
 </div>
@@ -9594,17 +9624,19 @@ language / packages manager. I’ve wanted to learn a functional programming
 language anyway (I still might go for Elixir) so, that’s might be it,
 who knows ;)</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>Update 1 (September 14, 2024): Back to my good old
-<a href="https://voidlinux.org">Void Linux</a> for a while now.</p>
-</li>
-<li>
-<p>Update 2 (January 26, 2025): I moved back to Debian™ based distros.
-Currently running Linux Mint™ on my work machine and personal laptop.</p>
-</li>
-</ul>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Update 1 September 14, 2024</strong>:
+Back to my good old
+  <a href="https://voidlinux.org">Void Linux</a> for a while now.</p>
+</div>
+<div class="paragraph">
+<p><strong>Update 2 January 26, 2025</strong>:
+I moved back to Debian™ based distros.
+  Currently running Linux Mint™ on my work machine and personal laptop.</p>
+</div>
+</div>
 </div>
 <div class="paragraph">
 <p>I’m very fine and comfortable with most of other Linux® Distributions out there.
@@ -9618,11 +9650,10 @@ GUI.</p>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_wip">WIP</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_wip">1.3. WIP</h3>
 
+</div>
 </div>
 </div>
 ]]></description>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/feed_style.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="https://www.rssboard.org/media-rss">
   <channel>
-    <title>AsciiDoc on Hossein Esmailzadeh</title>
+    <title>AsciiDoc on Hossein Esmail</title>
     <link>https://hossein-lap.github.io/tags/asciidoc/</link>
-    <description>Recent content in AsciiDoc on Hossein Esmailzadeh</description>
+    <description>Recent content in AsciiDoc on Hossein Esmail</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Hossein Esmail</copyright>
@@ -171,13 +171,13 @@
 <div class="ulist checklist">
 <ul class="checklist">
 <li>
-<p>✓ checked</p>
+<p><i class="fa fa-check-square-o"></i> checked</p>
 </li>
 <li>
-<p>✓ also checked</p>
+<p><i class="fa fa-check-square-o"></i> also checked</p>
 </li>
 <li>
-<p>❏ not checked</p>
+<p><i class="fa fa-square-o"></i> not checked</p>
 </li>
 <li>
 <p>normal list item</p>
@@ -493,7 +493,7 @@ Cloud Providers::
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/note.fi" alt="Note"/>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 Note that the indentation is optional
@@ -801,7 +801,7 @@ image::http://asciidoctor.org/images/octocat.jpg[GitHub mascot]</code></pre>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/note.fi" alt="Note"/>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 This is a NOTE!
@@ -830,7 +830,7 @@ This is a NOTE!
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/tip.fi" alt="Tip"/>
+<i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
 This is a TIP!
@@ -859,7 +859,7 @@ This is a TIP!
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/warning.fi" alt="Warning"/>
+<i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
 This is a WARNING!
@@ -888,7 +888,7 @@ This is a WARNING!
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/caution.fi" alt="Caution"/>
+<i class="fa icon-caution" title="Caution"></i>
 </td>
 <td class="content">
 This is a CAUTION!
@@ -917,7 +917,7 @@ This is a CAUTION!
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/important.fi" alt="Important"/>
+<i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
 This is a IMPORTANT!
@@ -957,7 +957,7 @@ The style can be any one of the admonition labels:
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/note.fi" alt="Note"/>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="paragraph">

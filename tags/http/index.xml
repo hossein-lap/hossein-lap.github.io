@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/feed_style.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="https://www.rssboard.org/media-rss">
   <channel>
-    <title>HTTP on Hossein Esmailzadeh</title>
+    <title>HTTP on Hossein Esmail</title>
     <link>https://hossein-lap.github.io/tags/http/</link>
-    <description>Recent content in HTTP on Hossein Esmailzadeh</description>
+    <description>Recent content in HTTP on Hossein Esmail</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Hossein Esmail</copyright>
@@ -10,7 +10,7 @@
     
     
     <item>
-      <title>Golang stdlib - Webserver</title>
+      <title>Webserver</title>
       <link>https://hossein-lap.github.io/notes/webserver/</link>
       <pubDate>Fri, 31 May 2024 16:47:17 +0330</pubDate>
       
@@ -22,7 +22,7 @@
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/warning.fi" alt="Warning"/>
+<i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -336,7 +336,7 @@ a given data structure into a JSON.</p>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/note.fi" alt="Note"/>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 If you wish to format the JSON object, you can use the <code>MarshalIndent()</code> method

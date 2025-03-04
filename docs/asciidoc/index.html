@@ -34,7 +34,7 @@
         
             AsciiDoc(tor): Yo Dawg!  &ndash;
         
-        Hossein Esmailzadeh
+        Hossein Esmail
     </title>
 
     
@@ -43,7 +43,7 @@
 
     
     
-    <link type="text/css" rel="stylesheet" href=https://hossein-lap.github.io/css/styles.f9d8c8d9b5833ef98670b93cbbbc45b24e2661a9cb1aab60a8f680ffad8731ed0b2604339fac589d23808da4d99453e6d221102280eb8a035e803830d3de572f.css integrity="sha512-&#43;djI2bWDPvmGcLk8u7xFsk4mYanLGqtgqPaA/62HMe0LJgQzn6xYnSOAjaTZlFPm0iEQIoDrigNegDgw095XLw==" />
+    <link type="text/css" rel="stylesheet" href=https://hossein-lap.github.io/css/styles.18ea8ad3dbeb11bf17d60e4e256d03d858c80bfb2178df615dc2b2846f7d8dc6fb1f371dc42eaa71bbe2b2ca3ebc424fc901c7ae8358b3bb582062f4ba858383.css integrity="sha512-GOqK09vrEb8X1g5OJW0D2FjIC/sheN9hXcKyhG99jcb7HzcdxC6qcbvisso&#43;vEJPyQHHroNYs7tYIGL0uoWDgw==" />
 <meta name="author" content="Hossein Esmailzadeh" />
 
     
@@ -56,7 +56,7 @@ and with more features/elements.
     
 
 <meta property="og:site_name"
-    content='Hossein Esmailzadeh' />
+    content='Hossein Esmail' />
 
     <meta property="og:title" content="AsciiDoc(tor): Yo Dawg!" />
     <meta property="og:type" content="article" />
@@ -117,26 +117,28 @@ and with more features/elements.
             <div class="rightOfLogo">
                 <div class="titleAndHamburger">
                     <h1>
-                        <a class="unstyledLink" href="/">Hossein Esmailzadeh</a>
+                        <a class="unstyledLink" href="/">Hossein Esmail</a>
                         
                             <img src='/images/ed/foo.png' alt='Logo'/>
                         
                     </h1>
                     
+                        <label id="hamburger-menu" for="main-nav-toggler">
+                            &#xf85b;
+                        </label>
+                    
                 </div>
                 <div id="wide_nav"><nav>
+    
+        <input type="checkbox" id="main-nav-toggler" />
     
     <ul id="main-nav">
         <li><a href="/">Home</a></li>
         
         
-            <li><a href="/about/">About</a></li>
-        
             <li><a href="/docs/">Docs</a></li>
         
             <li><a href="/notes/">Notes</a></li>
-        
-            <li><a href="/oldschool/">Oldschool</a></li>
         
         
         
@@ -246,6 +248,92 @@ and with more features/elements.
 
     </div>
     
+        <div id="sidebar_nav"><nav>
+    
+        <input type="checkbox" id="main-nav-toggler" />
+    
+    <ul id="main-nav">
+        <li><a href="/">Home</a></li>
+        
+        
+            <li><a href="/docs/">Docs</a></li>
+        
+            <li><a href="/notes/">Notes</a></li>
+        
+        
+        
+        
+        
+        
+            <li><a href="/tags/">Tags</a></li>
+        
+        
+    </ul>
+</nav>
+</div>
+        
+            <div class="sidebarToc">
+                <hr />
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#_intro">1. Intro</a></li>
+    <li><a href="#_lists">2. Lists</a>
+      <ul>
+        <li><a href="#_unordered_lists">2.1. Unordered lists</a></li>
+        <li><a href="#_ordered_lists">2.2. Ordered lists</a></li>
+        <li><a href="#_todo_lists">2.3. TODO lists</a></li>
+        <li><a href="#_separating_lists">2.4. Separating lists</a></li>
+      </ul>
+    </li>
+    <li><a href="#_definitions">3. Definitions</a>
+      <ul>
+        <li><a href="#_normal_definition_list">3.1. Normal definition list</a></li>
+        <li><a href="#_horizontal_definition_list">3.2. Horizontal definition list</a></li>
+        <li><a href="#_multi_line_definition_list">3.3. Multi-line definition list</a></li>
+        <li><a href="#_qa">3.4. Q&amp;A</a></li>
+        <li><a href="#_mixed">3.5. Mixed</a></li>
+        <li><a href="#_complex_content_in_outline_lists">3.6. Complex content in outline lists</a></li>
+      </ul>
+    </li>
+    <li><a href="#_links">4. Links</a>
+      <ul>
+        <li><a href="#_external">4.1. External</a></li>
+        <li><a href="#_relative">4.2. Relative</a></li>
+        <li><a href="#_email_and_irc">4.3. Email and IRC</a></li>
+        <li><a href="#_inline_anchors">4.4. Inline anchors</a></li>
+        <li><a href="#_internal_cross_references">4.5. Internal cross references</a></li>
+        <li><a href="#_images">4.6. Images</a></li>
+      </ul>
+    </li>
+    <li><a href="#_admonition_paragraph">5. Admonition paragraph</a>
+      <ul>
+        <li><a href="#_note">5.1. NOTE</a></li>
+        <li><a href="#_tip">5.2. TIP</a></li>
+        <li><a href="#_warning">5.3. WARNING</a></li>
+        <li><a href="#_caution">5.4. CAUTION</a></li>
+        <li><a href="#_important">5.5. IMPORTANT</a></li>
+        <li><a href="#_admonition_blocks">5.6. Admonition blocks</a></li>
+      </ul>
+    </li>
+    <li><a href="#_blocks">6. Blocks</a>
+      <ul>
+        <li><a href="#_listing_block">6.1. Listing block</a></li>
+        <li><a href="#_example_block">6.2. Example block</a></li>
+        <li><a href="#_comment_block">6.3. Comment block</a></li>
+        <li><a href="#_literal_block">6.4. Literal block</a></li>
+        <li><a href="#_pass_block">6.5. Pass block</a></li>
+        <li><a href="#_quoteverse_block">6.6. Quote/Verse block</a></li>
+        <li><a href="#_sidebar_block">6.7. Sidebar block</a></li>
+        <li><a href="#_block_metadata">6.8. Block metadata</a></li>
+      </ul>
+    </li>
+    <li><a href="#_customization_wip">7. Customization (WIP)</a></li>
+    <li><a href="#_render_wip">8. Render (WIP)</a></li>
+  </ul>
+</nav>
+            </div>
+        
+    
 
 </header>
 <div id="contentContainer">
@@ -276,63 +364,59 @@ and with more features/elements.
         </summary>
           <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#_intro">1. Intro</a></li>
+    <li><a href="#_lists">2. Lists</a>
       <ul>
-        <li><a href="#_intro">1. Intro</a></li>
-        <li><a href="#_lists">2. Lists</a>
-          <ul>
-            <li><a href="#_unordered_lists">2.1. Unordered lists</a></li>
-            <li><a href="#_ordered_lists">2.2. Ordered lists</a></li>
-            <li><a href="#_todo_lists">2.3. TODO lists</a></li>
-            <li><a href="#_separating_lists">2.4. Separating lists</a></li>
-          </ul>
-        </li>
-        <li><a href="#_definitions">3. Definitions</a>
-          <ul>
-            <li><a href="#_normal_definition_list">3.1. Normal definition list</a></li>
-            <li><a href="#_horizontal_definition_list">3.2. Horizontal definition list</a></li>
-            <li><a href="#_multi_line_definition_list">3.3. Multi-line definition list</a></li>
-            <li><a href="#_qa">3.4. Q&amp;A</a></li>
-            <li><a href="#_mixed">3.5. Mixed</a></li>
-            <li><a href="#_complex_content_in_outline_lists">3.6. Complex content in outline lists</a></li>
-          </ul>
-        </li>
-        <li><a href="#_links">4. Links</a>
-          <ul>
-            <li><a href="#_external">4.1. External</a></li>
-            <li><a href="#_relative">4.2. Relative</a></li>
-            <li><a href="#_email_and_irc">4.3. Email and IRC</a></li>
-            <li><a href="#_inline_anchors">4.4. Inline anchors</a></li>
-            <li><a href="#_internal_cross_references">4.5. Internal cross references</a></li>
-            <li><a href="#_images">4.6. Images</a></li>
-          </ul>
-        </li>
-        <li><a href="#_admonition_paragraph">5. Admonition paragraph</a>
-          <ul>
-            <li><a href="#_note">5.1. NOTE</a></li>
-            <li><a href="#_tip">5.2. TIP</a></li>
-            <li><a href="#_warning">5.3. WARNING</a></li>
-            <li><a href="#_caution">5.4. CAUTION</a></li>
-            <li><a href="#_important">5.5. IMPORTANT</a></li>
-            <li><a href="#_admonition_blocks">5.6. Admonition blocks</a></li>
-          </ul>
-        </li>
-        <li><a href="#_blocks">6. Blocks</a>
-          <ul>
-            <li><a href="#_listing_block">6.1. Listing block</a></li>
-            <li><a href="#_example_block">6.2. Example block</a></li>
-            <li><a href="#_comment_block">6.3. Comment block</a></li>
-            <li><a href="#_literal_block">6.4. Literal block</a></li>
-            <li><a href="#_pass_block">6.5. Pass block</a></li>
-            <li><a href="#_quoteverse_block">6.6. Quote/Verse block</a></li>
-            <li><a href="#_sidebar_block">6.7. Sidebar block</a></li>
-            <li><a href="#_block_metadata">6.8. Block metadata</a></li>
-          </ul>
-        </li>
-        <li><a href="#_customization_wip">7. Customization (WIP)</a></li>
-        <li><a href="#_render_wip">8. Render (WIP)</a></li>
+        <li><a href="#_unordered_lists">2.1. Unordered lists</a></li>
+        <li><a href="#_ordered_lists">2.2. Ordered lists</a></li>
+        <li><a href="#_todo_lists">2.3. TODO lists</a></li>
+        <li><a href="#_separating_lists">2.4. Separating lists</a></li>
       </ul>
     </li>
+    <li><a href="#_definitions">3. Definitions</a>
+      <ul>
+        <li><a href="#_normal_definition_list">3.1. Normal definition list</a></li>
+        <li><a href="#_horizontal_definition_list">3.2. Horizontal definition list</a></li>
+        <li><a href="#_multi_line_definition_list">3.3. Multi-line definition list</a></li>
+        <li><a href="#_qa">3.4. Q&amp;A</a></li>
+        <li><a href="#_mixed">3.5. Mixed</a></li>
+        <li><a href="#_complex_content_in_outline_lists">3.6. Complex content in outline lists</a></li>
+      </ul>
+    </li>
+    <li><a href="#_links">4. Links</a>
+      <ul>
+        <li><a href="#_external">4.1. External</a></li>
+        <li><a href="#_relative">4.2. Relative</a></li>
+        <li><a href="#_email_and_irc">4.3. Email and IRC</a></li>
+        <li><a href="#_inline_anchors">4.4. Inline anchors</a></li>
+        <li><a href="#_internal_cross_references">4.5. Internal cross references</a></li>
+        <li><a href="#_images">4.6. Images</a></li>
+      </ul>
+    </li>
+    <li><a href="#_admonition_paragraph">5. Admonition paragraph</a>
+      <ul>
+        <li><a href="#_note">5.1. NOTE</a></li>
+        <li><a href="#_tip">5.2. TIP</a></li>
+        <li><a href="#_warning">5.3. WARNING</a></li>
+        <li><a href="#_caution">5.4. CAUTION</a></li>
+        <li><a href="#_important">5.5. IMPORTANT</a></li>
+        <li><a href="#_admonition_blocks">5.6. Admonition blocks</a></li>
+      </ul>
+    </li>
+    <li><a href="#_blocks">6. Blocks</a>
+      <ul>
+        <li><a href="#_listing_block">6.1. Listing block</a></li>
+        <li><a href="#_example_block">6.2. Example block</a></li>
+        <li><a href="#_comment_block">6.3. Comment block</a></li>
+        <li><a href="#_literal_block">6.4. Literal block</a></li>
+        <li><a href="#_pass_block">6.5. Pass block</a></li>
+        <li><a href="#_quoteverse_block">6.6. Quote/Verse block</a></li>
+        <li><a href="#_sidebar_block">6.7. Sidebar block</a></li>
+        <li><a href="#_block_metadata">6.8. Block metadata</a></li>
+      </ul>
+    </li>
+    <li><a href="#_customization_wip">7. Customization (WIP)</a></li>
+    <li><a href="#_render_wip">8. Render (WIP)</a></li>
   </ul>
 </nav>
       </details>
@@ -499,13 +583,13 @@ and with more features/elements.
 <div class="ulist checklist">
 <ul class="checklist">
 <li>
-<p>✓ checked</p>
+<p><i class="fa fa-check-square-o"></i> checked</p>
 </li>
 <li>
-<p>✓ also checked</p>
+<p><i class="fa fa-check-square-o"></i> also checked</p>
 </li>
 <li>
-<p>❏ not checked</p>
+<p><i class="fa fa-square-o"></i> not checked</p>
 </li>
 <li>
 <p>normal list item</p>
@@ -821,7 +905,7 @@ Cloud Providers::
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/note.fi" alt="Note"/>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 Note that the indentation is optional
@@ -1129,7 +1213,7 @@ image::http://asciidoctor.org/images/octocat.jpg[GitHub mascot]</code></pre>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/note.fi" alt="Note"/>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 This is a NOTE!
@@ -1158,7 +1242,7 @@ This is a NOTE!
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/tip.fi" alt="Tip"/>
+<i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
 This is a TIP!
@@ -1187,7 +1271,7 @@ This is a TIP!
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/warning.fi" alt="Warning"/>
+<i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
 This is a WARNING!
@@ -1216,7 +1300,7 @@ This is a WARNING!
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/caution.fi" alt="Caution"/>
+<i class="fa icon-caution" title="Caution"></i>
 </td>
 <td class="content">
 This is a CAUTION!
@@ -1245,7 +1329,7 @@ This is a CAUTION!
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/important.fi" alt="Important"/>
+<i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
 This is a IMPORTANT!
@@ -1285,7 +1369,7 @@ The style can be any one of the admonition labels:
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/note.fi" alt="Note"/>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="paragraph">

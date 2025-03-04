@@ -34,7 +34,7 @@
         
             Git  &ndash;
         
-        Hossein Esmailzadeh
+        Hossein Esmail
     </title>
 
     
@@ -43,7 +43,7 @@
 
     
     
-    <link type="text/css" rel="stylesheet" href=https://hossein-lap.github.io/css/styles.f9d8c8d9b5833ef98670b93cbbbc45b24e2661a9cb1aab60a8f680ffad8731ed0b2604339fac589d23808da4d99453e6d221102280eb8a035e803830d3de572f.css integrity="sha512-&#43;djI2bWDPvmGcLk8u7xFsk4mYanLGqtgqPaA/62HMe0LJgQzn6xYnSOAjaTZlFPm0iEQIoDrigNegDgw095XLw==" />
+    <link type="text/css" rel="stylesheet" href=https://hossein-lap.github.io/css/styles.18ea8ad3dbeb11bf17d60e4e256d03d858c80bfb2178df615dc2b2846f7d8dc6fb1f371dc42eaa71bbe2b2ca3ebc424fc901c7ae8358b3bb582062f4ba858383.css integrity="sha512-GOqK09vrEb8X1g5OJW0D2FjIC/sheN9hXcKyhG99jcb7HzcdxC6qcbvisso&#43;vEJPyQHHroNYs7tYIGL0uoWDgw==" />
 <meta name="author" content="Hossein Esmailzadeh" />
 
     
@@ -55,7 +55,7 @@
     
 
 <meta property="og:site_name"
-    content='Hossein Esmailzadeh' />
+    content='Hossein Esmail' />
 
     <meta property="og:title" content="Git" />
     <meta property="og:type" content="article" />
@@ -112,26 +112,28 @@
             <div class="rightOfLogo">
                 <div class="titleAndHamburger">
                     <h1>
-                        <a class="unstyledLink" href="/">Hossein Esmailzadeh</a>
+                        <a class="unstyledLink" href="/">Hossein Esmail</a>
                         
                             <img src='/images/ed/foo.png' alt='Logo'/>
                         
                     </h1>
                     
+                        <label id="hamburger-menu" for="main-nav-toggler">
+                            &#xf85b;
+                        </label>
+                    
                 </div>
                 <div id="wide_nav"><nav>
+    
+        <input type="checkbox" id="main-nav-toggler" />
     
     <ul id="main-nav">
         <li><a href="/">Home</a></li>
         
         
-            <li><a href="/about/">About</a></li>
-        
             <li><a href="/docs/">Docs</a></li>
         
             <li><a href="/notes/">Notes</a></li>
-        
-            <li><a href="/oldschool/">Oldschool</a></li>
         
         
         
@@ -241,6 +243,69 @@
 
     </div>
     
+        <div id="sidebar_nav"><nav>
+    
+        <input type="checkbox" id="main-nav-toggler" />
+    
+    <ul id="main-nav">
+        <li><a href="/">Home</a></li>
+        
+        
+            <li><a href="/docs/">Docs</a></li>
+        
+            <li><a href="/notes/">Notes</a></li>
+        
+        
+        
+        
+        
+        
+            <li><a href="/tags/">Tags</a></li>
+        
+        
+    </ul>
+</nav>
+</div>
+        
+            <div class="sidebarToc">
+                <hr />
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#_init">1. init</a></li>
+    <li><a href="#_config">2. config</a></li>
+    <li><a href="#_staging_area">3. staging area</a></li>
+    <li><a href="#_status">4. status</a></li>
+    <li><a href="#_commit">5. commit</a>
+      <ul>
+        <li><a href="#_authenticate">5.1. authenticate</a></li>
+      </ul>
+    </li>
+    <li><a href="#_log">6. log</a></li>
+    <li><a href="#_remotes">7. remotes</a>
+      <ul>
+        <li><a href="#_ssh_vs_https">7.1. ssh vs https</a></li>
+      </ul>
+    </li>
+    <li><a href="#_clone">8. clone</a></li>
+    <li><a href="#_fetch">9. fetch</a></li>
+    <li><a href="#_push">10. push</a></li>
+    <li><a href="#_pull">11. pull</a></li>
+    <li><a href="#_branch">12. branch</a></li>
+    <li><a href="#_stash">13. stash</a></li>
+    <li><a href="#_rebase">14. rebase</a></li>
+    <li><a href="#_restore">15. restore</a></li>
+    <li><a href="#_reset">16. reset</a></li>
+    <li><a href="#_patching">17. patching</a></li>
+    <li><a href="#_git_worktree_and_bare_repos">18. git worktree and bare repos</a>
+      <ul>
+        <li><a href="#_wrapper_script">18.1. Wrapper script</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+            </div>
+        
+    
 
 </header>
 <div id="contentContainer">
@@ -271,38 +336,34 @@
         </summary>
           <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#_init">1. init</a></li>
+    <li><a href="#_config">2. config</a></li>
+    <li><a href="#_staging_area">3. staging area</a></li>
+    <li><a href="#_status">4. status</a></li>
+    <li><a href="#_commit">5. commit</a>
       <ul>
-        <li><a href="#_init">1. init</a></li>
-        <li><a href="#_config">2. config</a></li>
-        <li><a href="#_staging_area">3. staging area</a></li>
-        <li><a href="#_status">4. status</a></li>
-        <li><a href="#_commit">5. commit</a>
-          <ul>
-            <li><a href="#_authenticate">5.1. authenticate</a></li>
-          </ul>
-        </li>
-        <li><a href="#_log">6. log</a></li>
-        <li><a href="#_remotes">7. remotes</a>
-          <ul>
-            <li><a href="#_ssh_vs_https">7.1. ssh vs https</a></li>
-          </ul>
-        </li>
-        <li><a href="#_clone">8. clone</a></li>
-        <li><a href="#_fetch">9. fetch</a></li>
-        <li><a href="#_push">10. push</a></li>
-        <li><a href="#_pull">11. pull</a></li>
-        <li><a href="#_branch">12. branch</a></li>
-        <li><a href="#_stash">13. stash</a></li>
-        <li><a href="#_rebase">14. rebase</a></li>
-        <li><a href="#_restore">15. restore</a></li>
-        <li><a href="#_reset">16. reset</a></li>
-        <li><a href="#_patching">17. patching</a></li>
-        <li><a href="#_git_worktree_and_bare_repos">18. git worktree and bare repos</a>
-          <ul>
-            <li><a href="#_wrapper_script">18.1. Wrapper script</a></li>
-          </ul>
-        </li>
+        <li><a href="#_authenticate">5.1. authenticate</a></li>
+      </ul>
+    </li>
+    <li><a href="#_log">6. log</a></li>
+    <li><a href="#_remotes">7. remotes</a>
+      <ul>
+        <li><a href="#_ssh_vs_https">7.1. ssh vs https</a></li>
+      </ul>
+    </li>
+    <li><a href="#_clone">8. clone</a></li>
+    <li><a href="#_fetch">9. fetch</a></li>
+    <li><a href="#_push">10. push</a></li>
+    <li><a href="#_pull">11. pull</a></li>
+    <li><a href="#_branch">12. branch</a></li>
+    <li><a href="#_stash">13. stash</a></li>
+    <li><a href="#_rebase">14. rebase</a></li>
+    <li><a href="#_restore">15. restore</a></li>
+    <li><a href="#_reset">16. reset</a></li>
+    <li><a href="#_patching">17. patching</a></li>
+    <li><a href="#_git_worktree_and_bare_repos">18. git worktree and bare repos</a>
+      <ul>
+        <li><a href="#_wrapper_script">18.1. Wrapper script</a></li>
       </ul>
     </li>
   </ul>
@@ -383,7 +444,7 @@ git add &lt;path/to/file&gt;</code></pre>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/note.fi" alt="Note"/>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -448,7 +509,7 @@ no changes added to commit (use &#34;git add&#34; and/or &#34;git commit -a&#34;
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/note.fi" alt="Note"/>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="ulist">
@@ -541,7 +602,7 @@ git config user.email <span style="color: #90a959">&#39;you@email.com&#39;</span
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/note.fi" alt="Note"/>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -629,7 +690,7 @@ shall we? Okay, what about pointing at <strong>one previous position</strong> or
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/tip.fi" alt="Tip"/>
+<i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -693,7 +754,7 @@ the remote yourself</p>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/note.fi" alt="Note"/>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -723,7 +784,7 @@ authentication.</p>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/important.fi" alt="Important"/>
+<i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -812,7 +873,7 @@ git fetch <span style="color: #f4bf75">--unshallow</span>  <span style="color: #
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/caution.fi" alt="Caution"/>
+<i class="fa icon-caution" title="Caution"></i>
 </td>
 <td class="content">
 <div class="title">Forced push</div>
@@ -852,7 +913,7 @@ You must remove it from <strong>protected branches</strong> first.</p>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/caution.fi" alt="Caution"/>
+<i class="fa icon-caution" title="Caution"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -1036,7 +1097,7 @@ Dropped refs/stash@{0} (a5eec65b3011ad09cd73c9845646ea1b87659f9e)</pre>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/tip.fi" alt="Tip"/>
+<i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -1050,7 +1111,7 @@ Dropped refs/stash@{0} (a5eec65b3011ad09cd73c9845646ea1b87659f9e)</pre>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/note.fi" alt="Note"/>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -1098,7 +1159,7 @@ would be:
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/important.fi" alt="Important"/>
+<i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -1127,7 +1188,7 @@ man git-rebase</pre>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/caution.fi" alt="Caution"/>
+<i class="fa icon-caution" title="Caution"></i>
 </td>
 <td class="content">
 <div class="listingblock">
@@ -1160,7 +1221,7 @@ your commit history</strong>. Especially with the <code>--hard</code> flag.</p>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/warning.fi" alt="Warning"/>
+<i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
 <div class="listingblock">
@@ -1202,7 +1263,7 @@ patch <span style="color: #f4bf75">-p1</span> &lt; test-changes.diff</code></pre
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/important.fi" alt="Important"/>
+<i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -1229,7 +1290,7 @@ Reverts</p>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/note.fi" alt="Note"/>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -1243,7 +1304,7 @@ Reverts</p>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/tip.fi" alt="Tip"/>
+<i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -1345,7 +1406,7 @@ you need to change your current <strong>working directory</strong> (e.g
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/important.fi" alt="Important"/>
+<i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -1359,7 +1420,7 @@ you need to change your current <strong>working directory</strong> (e.g
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/caution.fi" alt="Caution"/>
+<i class="fa icon-caution" title="Caution"></i>
 </td>
 <td class="content">
 <div class="paragraph">

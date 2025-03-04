@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/feed_style.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="https://www.rssboard.org/media-rss">
   <channel>
-    <title>Git on Hossein Esmailzadeh</title>
+    <title>Git on Hossein Esmail</title>
     <link>https://hossein-lap.github.io/tags/git/</link>
-    <description>Recent content in Git on Hossein Esmailzadeh</description>
+    <description>Recent content in Git on Hossein Esmail</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Hossein Esmail</copyright>
@@ -83,7 +83,7 @@ git add &lt;path/to/file&gt;</code></pre>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/note.fi" alt="Note"/>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -148,7 +148,7 @@ no changes added to commit (use &#34;git add&#34; and/or &#34;git commit -a&#34;
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/note.fi" alt="Note"/>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="ulist">
@@ -241,7 +241,7 @@ git config user.email <span style="color: #90a959">&#39;you@email.com&#39;</span
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/note.fi" alt="Note"/>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -329,7 +329,7 @@ shall we? Okay, what about pointing at <strong>one previous position</strong> or
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/tip.fi" alt="Tip"/>
+<i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -393,7 +393,7 @@ the remote yourself</p>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/note.fi" alt="Note"/>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -423,7 +423,7 @@ authentication.</p>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/important.fi" alt="Important"/>
+<i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -512,7 +512,7 @@ git fetch <span style="color: #f4bf75">--unshallow</span>  <span style="color: #
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/caution.fi" alt="Caution"/>
+<i class="fa icon-caution" title="Caution"></i>
 </td>
 <td class="content">
 <div class="title">Forced push</div>
@@ -552,7 +552,7 @@ You must remove it from <strong>protected branches</strong> first.</p>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/caution.fi" alt="Caution"/>
+<i class="fa icon-caution" title="Caution"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -736,7 +736,7 @@ Dropped refs/stash@{0} (a5eec65b3011ad09cd73c9845646ea1b87659f9e)</pre>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/tip.fi" alt="Tip"/>
+<i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -750,7 +750,7 @@ Dropped refs/stash@{0} (a5eec65b3011ad09cd73c9845646ea1b87659f9e)</pre>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/note.fi" alt="Note"/>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -798,7 +798,7 @@ would be:
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/important.fi" alt="Important"/>
+<i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -827,7 +827,7 @@ man git-rebase</pre>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/caution.fi" alt="Caution"/>
+<i class="fa icon-caution" title="Caution"></i>
 </td>
 <td class="content">
 <div class="listingblock">
@@ -860,7 +860,7 @@ your commit history</strong>. Especially with the <code>--hard</code> flag.</p>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/warning.fi" alt="Warning"/>
+<i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
 <div class="listingblock">
@@ -902,7 +902,7 @@ patch <span style="color: #f4bf75">-p1</span> &lt; test-changes.diff</code></pre
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/important.fi" alt="Important"/>
+<i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -929,7 +929,7 @@ Reverts</p>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/note.fi" alt="Note"/>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -943,7 +943,7 @@ Reverts</p>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/tip.fi" alt="Tip"/>
+<i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -1045,7 +1045,7 @@ you need to change your current <strong>working directory</strong> (e.g
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/important.fi" alt="Important"/>
+<i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -1059,7 +1059,7 @@ you need to change your current <strong>working directory</strong> (e.g
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/caution.fi" alt="Caution"/>
+<i class="fa icon-caution" title="Caution"></i>
 </td>
 <td class="content">
 <div class="paragraph">

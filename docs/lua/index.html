@@ -32,9 +32,9 @@
 
 <title>
         
-            Lua Progamming Language  &ndash;
+            Lua  &ndash;
         
-        Hossein Esmailzadeh
+        Hossein Esmail
     </title>
 
     
@@ -43,7 +43,7 @@
 
     
     
-    <link type="text/css" rel="stylesheet" href=https://hossein-lap.github.io/css/styles.f9d8c8d9b5833ef98670b93cbbbc45b24e2661a9cb1aab60a8f680ffad8731ed0b2604339fac589d23808da4d99453e6d221102280eb8a035e803830d3de572f.css integrity="sha512-&#43;djI2bWDPvmGcLk8u7xFsk4mYanLGqtgqPaA/62HMe0LJgQzn6xYnSOAjaTZlFPm0iEQIoDrigNegDgw095XLw==" />
+    <link type="text/css" rel="stylesheet" href=https://hossein-lap.github.io/css/styles.18ea8ad3dbeb11bf17d60e4e256d03d858c80bfb2178df615dc2b2846f7d8dc6fb1f371dc42eaa71bbe2b2ca3ebc424fc901c7ae8358b3bb582062f4ba858383.css integrity="sha512-GOqK09vrEb8X1g5OJW0D2FjIC/sheN9hXcKyhG99jcb7HzcdxC6qcbvisso&#43;vEJPyQHHroNYs7tYIGL0uoWDgw==" />
 <meta name="author" content="Hossein Esmailzadeh" />
 
     
@@ -56,9 +56,9 @@ It is used by many frameworks, games and other applications.
     
 
 <meta property="og:site_name"
-    content='Hossein Esmailzadeh' />
+    content='Hossein Esmail' />
 
-    <meta property="og:title" content="Lua Progamming Language" />
+    <meta property="og:title" content="Lua" />
     <meta property="og:type" content="article" />
     
     <meta
@@ -95,7 +95,7 @@ It is used by many frameworks, games and other applications.
 <meta property="twitter:url" content="https://hossein-lap.github.io/docs/lua/" />
 
 
-    <meta name="twitter:title" content="Lua Progamming Language" />
+    <meta name="twitter:title" content="Lua" />
     
     
     
@@ -119,26 +119,28 @@ It is used by many frameworks, games and other applications.
             <div class="rightOfLogo">
                 <div class="titleAndHamburger">
                     <h1>
-                        <a class="unstyledLink" href="/">Hossein Esmailzadeh</a>
+                        <a class="unstyledLink" href="/">Hossein Esmail</a>
                         
                             <img src='/images/ed/foo.png' alt='Logo'/>
                         
                     </h1>
                     
+                        <label id="hamburger-menu" for="main-nav-toggler">
+                            &#xf85b;
+                        </label>
+                    
                 </div>
                 <div id="wide_nav"><nav>
+    
+        <input type="checkbox" id="main-nav-toggler" />
     
     <ul id="main-nav">
         <li><a href="/">Home</a></li>
         
         
-            <li><a href="/about/">About</a></li>
-        
             <li><a href="/docs/">Docs</a></li>
         
             <li><a href="/notes/">Notes</a></li>
-        
-            <li><a href="/oldschool/">Oldschool</a></li>
         
         
         
@@ -248,6 +250,61 @@ It is used by many frameworks, games and other applications.
 
     </div>
     
+        <div id="sidebar_nav"><nav>
+    
+        <input type="checkbox" id="main-nav-toggler" />
+    
+    <ul id="main-nav">
+        <li><a href="/">Home</a></li>
+        
+        
+            <li><a href="/docs/">Docs</a></li>
+        
+            <li><a href="/notes/">Notes</a></li>
+        
+        
+        
+        
+        
+        
+            <li><a href="/tags/">Tags</a></li>
+        
+        
+    </ul>
+</nav>
+</div>
+        
+            <div class="sidebarToc">
+                <hr />
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#_hello_world">1. Hello World!</a></li>
+    <li><a href="#_syntax">2. Syntax</a></li>
+    <li><a href="#_obtaining_lua">3. Obtaining Lua</a></li>
+    <li><a href="#_basics">4. Basics</a></li>
+    <li><a href="#_chuncks">5. Chuncks</a>
+      <ul>
+        <li><a href="#_some_lexical_conventions">5.1. Some Lexical Conventions</a></li>
+      </ul>
+    </li>
+    <li><a href="#_comments">6. Comments</a></li>
+    <li><a href="#_expressions">7. Expressions</a></li>
+    <li><a href="#_global_variables">8. Global Variables</a></li>
+    <li><a href="#_types_and_values">9. Types and Values</a>
+      <ul>
+        <li><a href="#_nil">9.1. Nil</a></li>
+        <li><a href="#_booleans">9.2. Booleans</a></li>
+        <li><a href="#_numbers">9.3. Numbers</a></li>
+        <li><a href="#_strings">9.4. Strings</a></li>
+        <li><a href="#_other_types">9.5. Other types</a></li>
+      </ul>
+    </li>
+    <li><a href="#_literals">10. Literals</a></li>
+  </ul>
+</nav>
+            </div>
+        
+    
 
 </header>
 <div id="contentContainer">
@@ -255,7 +312,7 @@ It is used by many frameworks, games and other applications.
                     <main>
 <article class="card single">
     
-        <h1>Lua Progamming Language</h1>
+        <h1>Lua</h1>
     
     
         <p class="date">
@@ -278,32 +335,28 @@ It is used by many frameworks, games and other applications.
         </summary>
           <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#_hello_world">1. Hello World!</a></li>
+    <li><a href="#_syntax">2. Syntax</a></li>
+    <li><a href="#_obtaining_lua">3. Obtaining Lua</a></li>
+    <li><a href="#_basics">4. Basics</a></li>
+    <li><a href="#_chuncks">5. Chuncks</a>
       <ul>
-        <li><a href="#_hello_world">1. Hello World!</a></li>
-        <li><a href="#_syntax">2. Syntax</a></li>
-        <li><a href="#_obtaining_lua">3. Obtaining Lua</a></li>
-        <li><a href="#_basics">4. Basics</a></li>
-        <li><a href="#_chuncks">5. Chuncks</a>
-          <ul>
-            <li><a href="#_some_lexical_conventions">5.1. Some Lexical Conventions</a></li>
-          </ul>
-        </li>
-        <li><a href="#_comments">6. Comments</a></li>
-        <li><a href="#_expressions">7. Expressions</a></li>
-        <li><a href="#_global_variables">8. Global Variables</a></li>
-        <li><a href="#_types_and_values">9. Types and Values</a>
-          <ul>
-            <li><a href="#_nil">9.1. Nil</a></li>
-            <li><a href="#_booleans">9.2. Booleans</a></li>
-            <li><a href="#_numbers">9.3. Numbers</a></li>
-            <li><a href="#_strings">9.4. Strings</a></li>
-            <li><a href="#_other_types">9.5. Other types</a></li>
-          </ul>
-        </li>
-        <li><a href="#_literals">10. Literals</a></li>
+        <li><a href="#_some_lexical_conventions">5.1. Some Lexical Conventions</a></li>
       </ul>
     </li>
+    <li><a href="#_comments">6. Comments</a></li>
+    <li><a href="#_expressions">7. Expressions</a></li>
+    <li><a href="#_global_variables">8. Global Variables</a></li>
+    <li><a href="#_types_and_values">9. Types and Values</a>
+      <ul>
+        <li><a href="#_nil">9.1. Nil</a></li>
+        <li><a href="#_booleans">9.2. Booleans</a></li>
+        <li><a href="#_numbers">9.3. Numbers</a></li>
+        <li><a href="#_strings">9.4. Strings</a></li>
+        <li><a href="#_other_types">9.5. Other types</a></li>
+      </ul>
+    </li>
+    <li><a href="#_literals">10. Literals</a></li>
   </ul>
 </nav>
       </details>

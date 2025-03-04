@@ -34,7 +34,7 @@
         
             Grafana  &ndash;
         
-        Hossein Esmailzadeh
+        Hossein Esmail
     </title>
 
     
@@ -43,7 +43,7 @@
 
     
     
-    <link type="text/css" rel="stylesheet" href=https://hossein-lap.github.io/css/styles.f9d8c8d9b5833ef98670b93cbbbc45b24e2661a9cb1aab60a8f680ffad8731ed0b2604339fac589d23808da4d99453e6d221102280eb8a035e803830d3de572f.css integrity="sha512-&#43;djI2bWDPvmGcLk8u7xFsk4mYanLGqtgqPaA/62HMe0LJgQzn6xYnSOAjaTZlFPm0iEQIoDrigNegDgw095XLw==" />
+    <link type="text/css" rel="stylesheet" href=https://hossein-lap.github.io/css/styles.18ea8ad3dbeb11bf17d60e4e256d03d858c80bfb2178df615dc2b2846f7d8dc6fb1f371dc42eaa71bbe2b2ca3ebc424fc901c7ae8358b3bb582062f4ba858383.css integrity="sha512-GOqK09vrEb8X1g5OJW0D2FjIC/sheN9hXcKyhG99jcb7HzcdxC6qcbvisso&#43;vEJPyQHHroNYs7tYIGL0uoWDgw==" />
 <meta name="author" content="Hossein Esmailzadeh" />
 
     
@@ -55,7 +55,7 @@
     
 
 <meta property="og:site_name"
-    content='Hossein Esmailzadeh' />
+    content='Hossein Esmail' />
 
     <meta property="og:title" content="Grafana" />
     <meta property="og:type" content="article" />
@@ -118,26 +118,28 @@
             <div class="rightOfLogo">
                 <div class="titleAndHamburger">
                     <h1>
-                        <a class="unstyledLink" href="/">Hossein Esmailzadeh</a>
+                        <a class="unstyledLink" href="/">Hossein Esmail</a>
                         
                             <img src='/images/ed/foo.png' alt='Logo'/>
                         
                     </h1>
                     
+                        <label id="hamburger-menu" for="main-nav-toggler">
+                            &#xf85b;
+                        </label>
+                    
                 </div>
                 <div id="wide_nav"><nav>
+    
+        <input type="checkbox" id="main-nav-toggler" />
     
     <ul id="main-nav">
         <li><a href="/">Home</a></li>
         
         
-            <li><a href="/about/">About</a></li>
-        
             <li><a href="/docs/">Docs</a></li>
         
             <li><a href="/notes/">Notes</a></li>
-        
-            <li><a href="/oldschool/">Oldschool</a></li>
         
         
         
@@ -247,6 +249,58 @@
 
     </div>
     
+        <div id="sidebar_nav"><nav>
+    
+        <input type="checkbox" id="main-nav-toggler" />
+    
+    <ul id="main-nav">
+        <li><a href="/">Home</a></li>
+        
+        
+            <li><a href="/docs/">Docs</a></li>
+        
+            <li><a href="/notes/">Notes</a></li>
+        
+        
+        
+        
+        
+        
+            <li><a href="/tags/">Tags</a></li>
+        
+        
+    </ul>
+</nav>
+</div>
+        
+            <div class="sidebarToc">
+                <hr />
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#_grafana_stack">1. Grafana stack</a>
+      <ul>
+        <li><a href="#_the_core_grafana_stack">1.1. The core Grafana stack</a></li>
+        <li><a href="#_grafana_enterprise_plugins">1.2. Grafana Enterprise plugins</a></li>
+        <li><a href="#_grafana_incident_response_and_management">1.3. Grafana incident response and management</a></li>
+        <li><a href="#_other_grafana_tools">1.4. Other Grafana tools</a></li>
+      </ul>
+    </li>
+    <li><a href="#_common_log_formats">2. Common log formats</a>
+      <ul>
+        <li><a href="#_structured_semi_structured_and_unstructured_logging">2.1. Structured, semi-structured, and unstructured logging</a></li>
+        <li><a href="#_sample_log_formats">2.2. Sample log formats</a></li>
+      </ul>
+    </li>
+    <li><a href="#_exploring_metric_types_and_best_practices">3. Exploring metric types and best practices</a>
+      <ul>
+        <li><a href="#_wip">3.1. WIP</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+            </div>
+        
+    
 
 </header>
 <div id="contentContainer">
@@ -277,27 +331,23 @@
         </summary>
           <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#_grafana_stack">1. Grafana stack</a>
       <ul>
-        <li><a href="#_grafana_stack">1. Grafana stack</a>
-          <ul>
-            <li><a href="#_the_core_grafana_stack">1.1. The core Grafana stack</a></li>
-            <li><a href="#_grafana_enterprise_plugins">1.2. Grafana Enterprise plugins</a></li>
-            <li><a href="#_grafana_incident_response_and_management">1.3. Grafana incident response and management</a></li>
-            <li><a href="#_other_grafana_tools">1.4. Other Grafana tools</a></li>
-          </ul>
-        </li>
-        <li><a href="#_common_log_formats">2. Common log formats</a>
-          <ul>
-            <li><a href="#_structured_semi_structured_and_unstructured_logging">2.1. Structured, semi-structured, and unstructured logging</a></li>
-            <li><a href="#_sample_log_formats">2.2. Sample log formats</a></li>
-          </ul>
-        </li>
-        <li><a href="#_exploring_metric_types_and_best_practices">3. Exploring metric types and best practices</a>
-          <ul>
-            <li><a href="#_wip">3.1. WIP</a></li>
-          </ul>
-        </li>
+        <li><a href="#_the_core_grafana_stack">1.1. The core Grafana stack</a></li>
+        <li><a href="#_grafana_enterprise_plugins">1.2. Grafana Enterprise plugins</a></li>
+        <li><a href="#_grafana_incident_response_and_management">1.3. Grafana incident response and management</a></li>
+        <li><a href="#_other_grafana_tools">1.4. Other Grafana tools</a></li>
+      </ul>
+    </li>
+    <li><a href="#_common_log_formats">2. Common log formats</a>
+      <ul>
+        <li><a href="#_structured_semi_structured_and_unstructured_logging">2.1. Structured, semi-structured, and unstructured logging</a></li>
+        <li><a href="#_sample_log_formats">2.2. Sample log formats</a></li>
+      </ul>
+    </li>
+    <li><a href="#_exploring_metric_types_and_best_practices">3. Exploring metric types and best practices</a>
+      <ul>
+        <li><a href="#_wip">3.1. WIP</a></li>
       </ul>
     </li>
   </ul>
@@ -317,7 +367,7 @@
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/warning.fi" alt="Warning"/>
+<i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -527,7 +577,7 @@ ingest, parse, and store the data in a way that it can be used effectively.</p>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/note.fi" alt="Note"/>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -994,6 +1044,59 @@ usual.</p>
 
 
     
+    
+        
+            
+        
+        <div class="relatedArticlesContainer">
+            <hr />
+            <h2>More posts like this</h2>
+            <div class="postlist gridView">
+                <article class="card postlistitem">
+    <div>
+        <h2>
+            <a href="https://hossein-lap.github.io/notes/k8s-ingress-loadbalancer/">Accessing K8S pods</a>
+        </h2>
+        <p class="date">
+            <span title='Date'> </span>
+    2024-05-31
+
+
+                | 
+                <span title='Tags'> </span>
+                
+                    <a href="/tags/infrastructure">#Infrastructure</a>
+                
+                    <a href="/tags/ingress">#Ingress</a>
+                
+                    <a href="/tags/k8s">#K8S</a>
+                
+                    <a href="/tags/loadbalancer">#LoadBalancer</a>
+                
+                    <a href="/tags/nodeport">#NodePort</a>
+                
+            
+        </p>
+        
+            
+        
+        
+            <div class="articlePreview">
+                <p>
+                    
+                        Configure kubernetes infrastructure with NodePort, ClusterIP, Ingress, nginx load-balancer
+
+                    
+                </p>
+                <p><a href="https://hossein-lap.github.io/notes/k8s-ingress-loadbalancer/">Continue reading </a></p>
+            </div>
+        
+    </div>
+    <hr />
+</article>
+
+            </div>
+        </div>
     
 
 

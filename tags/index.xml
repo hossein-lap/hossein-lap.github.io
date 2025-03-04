@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/feed_style.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="https://www.rssboard.org/media-rss">
   <channel>
-    <title>Tags on Hossein Esmailzadeh</title>
+    <title>Tags on Hossein Esmail</title>
     <link>https://hossein-lap.github.io/tags/</link>
-    <description>Recent content in Tags on Hossein Esmailzadeh</description>
+    <description>Recent content in Tags on Hossein Esmail</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Hossein Esmail</copyright>
@@ -15,30 +15,6 @@
       <pubDate>Tue, 08 Oct 2024 09:41:28 +0330</pubDate>
       
       <guid>https://hossein-lap.github.io/tags/build-system/</guid>
-      <description><![CDATA[]]></description>
-      
-    </item>
-    
-    
-    
-    <item>
-      <title>Go</title>
-      <link>https://hossein-lap.github.io/tags/go/</link>
-      <pubDate>Tue, 08 Oct 2024 09:41:28 +0330</pubDate>
-      
-      <guid>https://hossein-lap.github.io/tags/go/</guid>
-      <description><![CDATA[]]></description>
-      
-    </item>
-    
-    
-    
-    <item>
-      <title>Golang</title>
-      <link>https://hossein-lap.github.io/tags/golang/</link>
-      <pubDate>Tue, 08 Oct 2024 09:41:28 +0330</pubDate>
-      
-      <guid>https://hossein-lap.github.io/tags/golang/</guid>
       <description><![CDATA[]]></description>
       
     </item>
@@ -70,11 +46,11 @@
     
     
     <item>
-      <title>Linux</title>
-      <link>https://hossein-lap.github.io/tags/linux/</link>
+      <title>CLI</title>
+      <link>https://hossein-lap.github.io/tags/cli/</link>
       <pubDate>Mon, 07 Oct 2024 15:10:23 +0330</pubDate>
       
-      <guid>https://hossein-lap.github.io/tags/linux/</guid>
+      <guid>https://hossein-lap.github.io/tags/cli/</guid>
       <description><![CDATA[]]></description>
       
     </item>
@@ -334,6 +310,18 @@
     
     
     <item>
+      <title>Go</title>
+      <link>https://hossein-lap.github.io/tags/go/</link>
+      <pubDate>Fri, 31 May 2024 16:47:17 +0330</pubDate>
+      
+      <guid>https://hossein-lap.github.io/tags/go/</guid>
+      <description><![CDATA[]]></description>
+      
+    </item>
+    
+    
+    
+    <item>
       <title>HTTP</title>
       <link>https://hossein-lap.github.io/tags/http/</link>
       <pubDate>Fri, 31 May 2024 16:47:17 +0330</pubDate>
@@ -363,18 +351,6 @@
       <pubDate>Fri, 31 May 2024 16:47:17 +0330</pubDate>
       
       <guid>https://hossein-lap.github.io/tags/redis/</guid>
-      <description><![CDATA[]]></description>
-      
-    </item>
-    
-    
-    
-    <item>
-      <title>RESTFul</title>
-      <link>https://hossein-lap.github.io/tags/restful/</link>
-      <pubDate>Fri, 31 May 2024 16:47:17 +0330</pubDate>
-      
-      <guid>https://hossein-lap.github.io/tags/restful/</guid>
       <description><![CDATA[]]></description>
       
     </item>
@@ -435,54 +411,6 @@
       <pubDate>Tue, 02 Apr 2024 22:30:09 +0330</pubDate>
       
       <guid>https://hossein-lap.github.io/tags/plugin/</guid>
-      <description><![CDATA[]]></description>
-      
-    </item>
-    
-    
-    
-    <item>
-      <title>Backend</title>
-      <link>https://hossein-lap.github.io/tags/backend/</link>
-      <pubDate>Tue, 02 Apr 2024 22:30:03 +0330</pubDate>
-      
-      <guid>https://hossein-lap.github.io/tags/backend/</guid>
-      <description><![CDATA[]]></description>
-      
-    </item>
-    
-    
-    
-    <item>
-      <title>CLI</title>
-      <link>https://hossein-lap.github.io/tags/cli/</link>
-      <pubDate>Tue, 02 Apr 2024 22:30:03 +0330</pubDate>
-      
-      <guid>https://hossein-lap.github.io/tags/cli/</guid>
-      <description><![CDATA[]]></description>
-      
-    </item>
-    
-    
-    
-    <item>
-      <title>Programming</title>
-      <link>https://hossein-lap.github.io/tags/programming/</link>
-      <pubDate>Tue, 02 Apr 2024 22:30:03 +0330</pubDate>
-      
-      <guid>https://hossein-lap.github.io/tags/programming/</guid>
-      <description><![CDATA[]]></description>
-      
-    </item>
-    
-    
-    
-    <item>
-      <title>Tools</title>
-      <link>https://hossein-lap.github.io/tags/tools/</link>
-      <pubDate>Tue, 02 Apr 2024 22:30:03 +0330</pubDate>
-      
-      <guid>https://hossein-lap.github.io/tags/tools/</guid>
       <description><![CDATA[]]></description>
       
     </item>

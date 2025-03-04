@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/feed_style.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="https://www.rssboard.org/media-rss">
   <channel>
-    <title>Documentations on Hossein Esmailzadeh</title>
+    <title>Documentations on Hossein Esmail</title>
     <link>https://hossein-lap.github.io/docs/</link>
-    <description>Recent content in Documentations on Hossein Esmailzadeh</description>
+    <description>Recent content in Documentations on Hossein Esmail</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Hossein Esmail</copyright>
@@ -217,7 +217,7 @@ denote the set of valid keystrokes that can follow a command.</p>
     
     
     <item>
-      <title>Lua Progamming Language</title>
+      <title>Lua</title>
       <link>https://hossein-lap.github.io/docs/lua/</link>
       <pubDate>Tue, 02 Apr 2024 22:30:09 +0330</pubDate>
       
@@ -1367,7 +1367,7 @@ Threads
     
     
     <item>
-      <title>Go Programming Language</title>
+      <title>Golang</title>
       <link>https://hossein-lap.github.io/docs/go/</link>
       <pubDate>Tue, 02 Apr 2024 22:30:03 +0330</pubDate>
       
@@ -1381,7 +1381,7 @@ Threads
 </div>
 </div>
 <div class="sect1">
-<h2 id="_new_stuff">New stuff</h2>
+<h2 id="_new_stuff">1. New stuff</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>very versile</p>
@@ -1389,7 +1389,7 @@ Threads
 </div>
 </div>
 <div class="sect1">
-<h2 id="_more_stuff">more stuff</h2>
+<h2 id="_more_stuff">2. more stuff</h2>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
@@ -1574,13 +1574,13 @@ Threads
 <div class="ulist checklist">
 <ul class="checklist">
 <li>
-<p>✓ checked</p>
+<p><i class="fa fa-check-square-o"></i> checked</p>
 </li>
 <li>
-<p>✓ also checked</p>
+<p><i class="fa fa-check-square-o"></i> also checked</p>
 </li>
 <li>
-<p>❏ not checked</p>
+<p><i class="fa fa-square-o"></i> not checked</p>
 </li>
 <li>
 <p>normal list item</p>
@@ -1896,7 +1896,7 @@ Cloud Providers::
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/note.fi" alt="Note"/>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 Note that the indentation is optional
@@ -2204,7 +2204,7 @@ image::http://asciidoctor.org/images/octocat.jpg[GitHub mascot]</code></pre>
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/note.fi" alt="Note"/>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 This is a NOTE!
@@ -2233,7 +2233,7 @@ This is a NOTE!
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/tip.fi" alt="Tip"/>
+<i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
 This is a TIP!
@@ -2262,7 +2262,7 @@ This is a TIP!
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/warning.fi" alt="Warning"/>
+<i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
 This is a WARNING!
@@ -2291,7 +2291,7 @@ This is a WARNING!
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/caution.fi" alt="Caution"/>
+<i class="fa icon-caution" title="Caution"></i>
 </td>
 <td class="content">
 This is a CAUTION!
@@ -2320,7 +2320,7 @@ This is a CAUTION!
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/important.fi" alt="Important"/>
+<i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
 This is a IMPORTANT!
@@ -2360,7 +2360,7 @@ The style can be any one of the admonition labels:
 <table>
 <tbody><tr>
 <td class="icon">
-<img src="./images/icons/note.fi" alt="Note"/>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -2655,7 +2655,7 @@ can long endure. ...</pre>
     
     
     <item>
-      <title>Elixir Programming Language</title>
+      <title>Elixir</title>
       <link>https://hossein-lap.github.io/docs/elixir/</link>
       <pubDate>Tue, 02 Apr 2024 22:09:44 +0330</pubDate>
       
@@ -2668,7 +2668,7 @@ can long endure. ...</pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_intractive_elixir_environment">Intractive elixir environment</h2>
+<h2 id="_intractive_elixir_environment">1. Intractive elixir environment</h2>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
@@ -2678,7 +2678,7 @@ can long endure. ...</pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_hello_world">Hello World!</h2>
+<h2 id="_hello_world">2. Hello World!</h2>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="title">intro.exs</div>
@@ -2690,7 +2690,7 @@ can long endure. ...</pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_build_tool">Build Tool</h2>
+<h2 id="_build_tool">3. Build Tool</h2>
 <div class="sectionbody">
 <div class="literalblock">
 <div class="content">
