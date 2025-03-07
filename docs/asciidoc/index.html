@@ -45,7 +45,7 @@
 
     
     
-    <link type="text/css" rel="stylesheet" href=https://hossein-lap.github.io/css/styles.f465d9333419a880da9e41c77c1d6d3da4a31225e6e6cd8845589d65fb8908d1a6bf619d66412d8ff14f9910b4f122b20472488110cf7d257f59a056b351da63.css integrity="sha512-9GXZMzQZqIDankHHfB1tPaSjEiXm5s2IRVidZfuJCNGmv2GdZkEtj/FPmRC08SKyBHJIgRDPfSV/WaBWs1HaYw==" />
+    <link type="text/css" rel="stylesheet" href=https://hossein-lap.github.io/css/styles.0fa8634402038f81271512d62b48f9b7292c41fb622dbe4de0742a46d5aed3613b67861e1986efd09beafeec88563fd5604af743dff6bf6d82c012a2de5e24d3.css integrity="sha512-D6hjRAIDj4EnFRLWK0j5tyksQftiLb5N4HQqRtWu02E7Z4YeGYbv0Jvq/uyIVj/VYEr3Q9/2v22CwBKi3l4k0w==" />
 <meta name="author" content="Hossein Esmailzadeh" />
 
     
@@ -359,12 +359,27 @@ and with more features/elements.
   
   <aside>
   <div class="tableofcontents">
-    <ol>
-      <details>
-        <summary>
-            <b>Table Of Contents</b>
-        </summary>
-          <nav id="TableOfContents">
+
+      
+      
+      
+      
+      
+      
+      
+      
+
+      
+      
+
+
+      <table>
+          <tr>
+              <th>Table Of Contents</th>
+          </tr>
+          <tr>
+              <td>
+                  <nav id="TableOfContents">
   <ul>
     <li><a href="#_intro">1. Intro</a></li>
     <li><a href="#_lists">2. Lists</a>
@@ -421,8 +436,12 @@ and with more features/elements.
     <li><a href="#_render_wip">8. Render (WIP)</a></li>
   </ul>
 </nav>
-      </details>
-    </ol>
+              </td>
+          </tr>
+      </table>
+
+      
+
   </div>
   </aside>
   
@@ -439,7 +458,40 @@ and with more features/elements.
 <div class="listingblock">
 <div class="title">Test</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="c"><span style="color: #505050">// include::{home}/.cache/wal/colors-wal-st.h[]</span></code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="c"><span style="color: #aa759f">const</span> <span style="color: #d28445">char</span> <span style="color: #d0d0d0">*</span><span style="color: #d0d0d0;background-color: #151515">colorname</span><span style="color: #d0d0d0">[]</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">{</span>
+
+  <span style="color: #505050">/* 8 normal colors */</span>
+  <span style="color: #d0d0d0">[</span><span style="color: #90a959">0</span><span style="color: #d0d0d0">]</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#34;#050D0D&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #505050">/* black   */</span>
+  <span style="color: #d0d0d0">[</span><span style="color: #90a959">1</span><span style="color: #d0d0d0">]</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#34;#546168&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #505050">/* red     */</span>
+  <span style="color: #d0d0d0">[</span><span style="color: #90a959">2</span><span style="color: #d0d0d0">]</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#34;#B94730&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #505050">/* green   */</span>
+  <span style="color: #d0d0d0">[</span><span style="color: #90a959">3</span><span style="color: #d0d0d0">]</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#34;#EC5727&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #505050">/* yellow  */</span>
+  <span style="color: #d0d0d0">[</span><span style="color: #90a959">4</span><span style="color: #d0d0d0">]</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#34;#F2AD59&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #505050">/* blue    */</span>
+  <span style="color: #d0d0d0">[</span><span style="color: #90a959">5</span><span style="color: #d0d0d0">]</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#34;#557886&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #505050">/* magenta */</span>
+  <span style="color: #d0d0d0">[</span><span style="color: #90a959">6</span><span style="color: #d0d0d0">]</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#34;#967D82&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #505050">/* cyan    */</span>
+  <span style="color: #d0d0d0">[</span><span style="color: #90a959">7</span><span style="color: #d0d0d0">]</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#34;#adbdc3&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #505050">/* white   */</span>
+
+  <span style="color: #505050">/* 8 bright colors */</span>
+  <span style="color: #d0d0d0">[</span><span style="color: #90a959">8</span><span style="color: #d0d0d0">]</span>  <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#34;#798488&#34;</span><span style="color: #d0d0d0">,</span>  <span style="color: #505050">/* black   */</span>
+  <span style="color: #d0d0d0">[</span><span style="color: #90a959">9</span><span style="color: #d0d0d0">]</span>  <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#34;#546168&#34;</span><span style="color: #d0d0d0">,</span>  <span style="color: #505050">/* red     */</span>
+  <span style="color: #d0d0d0">[</span><span style="color: #90a959">10</span><span style="color: #d0d0d0">]</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#34;#B94730&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #505050">/* green   */</span>
+  <span style="color: #d0d0d0">[</span><span style="color: #90a959">11</span><span style="color: #d0d0d0">]</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#34;#EC5727&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #505050">/* yellow  */</span>
+  <span style="color: #d0d0d0">[</span><span style="color: #90a959">12</span><span style="color: #d0d0d0">]</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#34;#F2AD59&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #505050">/* blue    */</span>
+  <span style="color: #d0d0d0">[</span><span style="color: #90a959">13</span><span style="color: #d0d0d0">]</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#34;#557886&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #505050">/* magenta */</span>
+  <span style="color: #d0d0d0">[</span><span style="color: #90a959">14</span><span style="color: #d0d0d0">]</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#34;#967D82&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #505050">/* cyan    */</span>
+  <span style="color: #d0d0d0">[</span><span style="color: #90a959">15</span><span style="color: #d0d0d0">]</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#34;#adbdc3&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #505050">/* white   */</span>
+
+  <span style="color: #505050">/* special colors */</span>
+  <span style="color: #d0d0d0">[</span><span style="color: #90a959">256</span><span style="color: #d0d0d0">]</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#34;#050D0D&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #505050">/* background */</span>
+  <span style="color: #d0d0d0">[</span><span style="color: #90a959">257</span><span style="color: #d0d0d0">]</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#34;#adbdc3&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #505050">/* foreground */</span>
+  <span style="color: #d0d0d0">[</span><span style="color: #90a959">258</span><span style="color: #d0d0d0">]</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#34;#adbdc3&#34;</span><span style="color: #d0d0d0">,</span>     <span style="color: #505050">/* cursor */</span>
+<span style="color: #d0d0d0">};</span>
+
+<span style="color: #505050">/* Default colors (colorname index)
+ * foreground, background, cursor */</span>
+ <span style="color: #d28445">unsigned</span> <span style="color: #d28445">int</span> <span style="color: #d0d0d0;background-color: #151515">defaultbg</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">0</span><span style="color: #d0d0d0">;</span>
+ <span style="color: #d28445">unsigned</span> <span style="color: #d28445">int</span> <span style="color: #d0d0d0;background-color: #151515">defaultfg</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">257</span><span style="color: #d0d0d0">;</span>
+ <span style="color: #d28445">unsigned</span> <span style="color: #d28445">int</span> <span style="color: #d0d0d0;background-color: #151515">defaultcs</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">258</span><span style="color: #d0d0d0">;</span>
+ <span style="color: #d28445">unsigned</span> <span style="color: #d28445">int</span> <span style="color: #d0d0d0;background-color: #151515">defaultrcs</span><span style="color: #d0d0d0">=</span> <span style="color: #90a959">258</span><span style="color: #d0d0d0">;</span></code></pre>
 </div>
 </div>
 </div>
@@ -699,7 +751,7 @@ section term:: definition of second term</code></pre>
 <table>
 <tbody><tr>
 <td class="hdlist1">
-first term
+ghis is a very very first term
 </td>
 <td class="hdlist2">
 <p>definition of first term</p>
@@ -1696,7 +1748,6 @@ can long endure. ...</pre>
 
 
                     </main><footer>
-    <hr />
 
 <p><small>
         2025 &copy; Hossein Esmail
