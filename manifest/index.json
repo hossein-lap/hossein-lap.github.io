@@ -7,8 +7,8 @@
   
   
   
-  "background_color": "#141516",
-  "theme_color": "#7dfdfe"
+  "background_color": "#0A1616",
+  "theme_color": "#C5FFFF"
   
     ,
     "description": "Personal blog"
@@ -17,13 +17,13 @@
     ,
     "icons": [
       {
-        "src": "/images/ed/foo.png",
+        "src": "/images/ed/bar.png",
         "sizes": "512x512",
         "type": "image/png",
         "purpose": "maskable"
       },
       {
-        "src": "/images/ed/foo.png",
+        "src": "/images/ed/bar.png",
         "sizes": "512x512",
         "type": "image/png",
         "purpose": "any"

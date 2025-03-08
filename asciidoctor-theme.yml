@@ -1,0 +1,108 @@
+extends: default
+page:
+  background-color: #ffffff
+  size: a4paper
+  layout: portrait
+  # margin: [0.75in, 1in, 0.75in, 1in]
+font:
+  catalog:
+    Noto Serif:
+      normal:      /usr/share/fonts/truetype/clear-sans/ClearSans-Regular.ttf
+      bold:        /usr/share/fonts/truetype/clear-sans/ClearSans-Bold.ttf
+      italic:      /usr/share/fonts/truetype/clear-sans/ClearSans-Italic.ttf
+      bold_italic: /usr/share/fonts/truetype/clear-sans/ClearSans-BoldItalic.ttf
+    M+ 1mn:
+      normal:      /home/hos/.local/share/fonts/noto/NotoSansMono-Regular.ttf
+      bold:        /home/hos/.local/share/fonts/noto/NotoSansMono-Bold.ttf
+      italic:      /home/hos/.local/share/fonts/noto/NotoSansMono-Medium.ttf
+      bold_italic: /home/hos/.local/share/fonts/noto/NotoSansMono-ExtraBold.ttf
+    Title Sans:
+      normal:      /usr/share/fonts/truetype/ubuntu/Ubuntu-R.ttf
+      bold:        /usr/share/fonts/truetype/ubuntu/Ubuntu-B.ttf
+      italic:      /usr/share/fonts/truetype/ubuntu/Ubuntu-RI.ttf
+      bold_italic: /usr/share/fonts/truetype/ubuntu/Ubuntu-BI.ttf
+base:
+  font-color: #000000
+  color: #ffffff
+  #font-family: ClearSans
+  font-size: 8.0
+link:
+  font-color: #428bca
+  # text-decoration: underline
+  text-decoration-color: #428bca
+kbd:
+  #font-family: NotoSansMono
+button:
+  #font-family: ClearSans
+prose:
+  text-indent-inner: 00 # previous: 18
+caption:
+  font-color: #7a2518
+  font-size: 9.5
+  font-style: bold # bold_italic
+example:
+  background-color: #dddddd
+  border-radius: 0.5
+  border-width: 0.0
+codespan:
+  #font-family: NotoSansMono
+  font-size: 6.5
+  font-color: #000000
+  border-color: #777777
+  border-offset: 1.5
+  border-radius: 1.5
+  background-color: #f0f0f0
+code:
+  #font-family: NotoSansMono
+  font-size: 7
+  background-color: #f0f0f0
+  border-color: #cecece
+  font-color: #000000
+sidebar:
+  background-color: #e5e5e5
+  border-color: #777777
+  border-radius: 1.0
+  border-width: 0.4
+  title:
+    font-color: #000000
+quote:
+  font-color: #222222
+  border-color: #eeeeee
+  border-width: 0.0
+table:
+  background-color: #ffffff
+  border-color: #DDDDDD
+  head:
+    background-color: #ffffff
+  body:
+    stripe-background-color: #f9f9f9
+admonition:
+  column-rule-style: dashed
+  border-style: double
+  label:
+    # font-color: #262626
+  icon:
+    note:
+      stroke-color: #235723
+    warning:
+      stroke-color: #f70500
+    caution:
+      stroke-color: #a70500
+    important:
+      stroke-color: #005577
+    tip:
+      stroke-color: #000000
+heading:
+  font-color: #000000
+  h1-font-family: "Title Sans"
+  h2-font-family: "Title Sans"
+  h3-font-family: "Title Sans"
+  h4-font-family: "Title Sans"
+  h5-font-family: "Title Sans"
+  h6-font-family: "Title Sans"
+  h1-font-size: floor($base_font_size * 2.6)
+  h2-font-size: floor($base_font_size * 2.15)
+  h3-font-size: round($base_font_size * 1.7)
+  h4-font-size: $base_font_size_large
+  h5-font-size: $base_font_size
+  h6-font-size: $base_font_size_small

@@ -6,15 +6,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Hossein Esmail</copyright>
-    <lastBuildDate>Sat, 06 Jul 2024 13:24:36 +0330</lastBuildDate><atom:link href="https://hossein-lap.github.io/tags/grafana/index.xml" rel="self" type="application/rss+xml" /><icon>https://hossein-lap.github.io/images/ed/foo.png</icon>
+    <lastBuildDate>Sat, 06 Jul 2024 13:24:36 +0330</lastBuildDate><atom:link href="https://hossein-lap.github.io/tags/grafana/index.xml" rel="self" type="application/rss+xml" /><icon>https://hossein-lap.github.io/images/ed/bar.png</icon>
     
     
     <item>
       <title>Grafana</title>
-      <link>https://hossein-lap.github.io/notes/grafana/</link>
+      <link>https://hossein-lap.github.io/docs/grafana/</link>
       <pubDate>Sat, 06 Jul 2024 13:24:36 +0330</pubDate>
       
-      <guid>https://hossein-lap.github.io/notes/grafana/</guid>
+      <guid>https://hossein-lap.github.io/docs/grafana/</guid>
       <description><![CDATA[
 <div id="preamble">
 <div class="sectionbody">

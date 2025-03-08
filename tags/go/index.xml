@@ -6,7 +6,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Hossein Esmail</copyright>
-    <lastBuildDate>Fri, 31 May 2024 16:47:17 +0330</lastBuildDate><atom:link href="https://hossein-lap.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" /><icon>https://hossein-lap.github.io/images/ed/foo.png</icon>
+    <lastBuildDate>Fri, 31 May 2024 16:47:17 +0330</lastBuildDate><atom:link href="https://hossein-lap.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" /><icon>https://hossein-lap.github.io/images/ed/bar.png</icon>
     
     
     <item>
@@ -529,7 +529,7 @@ timestamp format.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_new_stuff">1. New stuff</h2>
+<h2 id="_new_stuff">New stuff</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>very versile</p>
@@ -537,7 +537,7 @@ timestamp format.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_more_stuff">2. more stuff</h2>
+<h2 id="_more_stuff">more stuff</h2>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">

@@ -6,15 +6,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Hossein Esmail</copyright>
-    <lastBuildDate>Wed, 11 Sep 2024 15:04:10 +0330</lastBuildDate><atom:link href="https://hossein-lap.github.io/tags/perl/index.xml" rel="self" type="application/rss+xml" /><icon>https://hossein-lap.github.io/images/ed/foo.png</icon>
+    <lastBuildDate>Wed, 11 Sep 2024 15:04:10 +0330</lastBuildDate><atom:link href="https://hossein-lap.github.io/tags/perl/index.xml" rel="self" type="application/rss+xml" /><icon>https://hossein-lap.github.io/images/ed/bar.png</icon>
     
     
     <item>
       <title>Perl</title>
-      <link>https://hossein-lap.github.io/notes/perl/</link>
+      <link>https://hossein-lap.github.io/docs/perl/</link>
       <pubDate>Wed, 11 Sep 2024 15:04:10 +0330</pubDate>
       
-      <guid>https://hossein-lap.github.io/notes/perl/</guid>
+      <guid>https://hossein-lap.github.io/docs/perl/</guid>
       <description><![CDATA[
 <div id="preamble">
 <div class="sectionbody">

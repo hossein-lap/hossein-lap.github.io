@@ -6,7 +6,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Hossein Esmail</copyright>
-    <lastBuildDate>Tue, 08 Oct 2024 09:41:28 +0330</lastBuildDate><atom:link href="https://hossein-lap.github.io/index.xml" rel="self" type="application/rss+xml" /><icon>https://hossein-lap.github.io/images/ed/foo.png</icon>
+    <lastBuildDate>Tue, 08 Oct 2024 09:41:28 +0330</lastBuildDate><atom:link href="https://hossein-lap.github.io/index.xml" rel="self" type="application/rss+xml" /><icon>https://hossein-lap.github.io/images/ed/bar.png</icon>
     
     
     <item>
@@ -387,10 +387,10 @@ check</code></pre>
     
     <item>
       <title>Git</title>
-      <link>https://hossein-lap.github.io/notes/git/</link>
+      <link>https://hossein-lap.github.io/docs/git/</link>
       <pubDate>Thu, 26 Sep 2024 09:54:32 +0330</pubDate>
       
-      <guid>https://hossein-lap.github.io/notes/git/</guid>
+      <guid>https://hossein-lap.github.io/docs/git/</guid>
       <description><![CDATA[
 <div class="sect1">
 <h2 id="_init">1. init</h2>
@@ -1550,10 +1550,10 @@ git fetch</code></pre>
     
     <item>
       <title>Docker</title>
-      <link>https://hossein-lap.github.io/notes/docker/</link>
+      <link>https://hossein-lap.github.io/docs/docker/</link>
       <pubDate>Sat, 14 Sep 2024 15:53:26 +0330</pubDate>
       
-      <guid>https://hossein-lap.github.io/notes/docker/</guid>
+      <guid>https://hossein-lap.github.io/docs/docker/</guid>
       <description><![CDATA[
 <div class="sect1">
 <h2 id="_intro">1. Intro</h2>
@@ -1834,10 +1834,10 @@ test                   latest            1825da98372a   6 minutes ago   95.4MB</
     
     <item>
       <title>Perl</title>
-      <link>https://hossein-lap.github.io/notes/perl/</link>
+      <link>https://hossein-lap.github.io/docs/perl/</link>
       <pubDate>Wed, 11 Sep 2024 15:04:10 +0330</pubDate>
       
-      <guid>https://hossein-lap.github.io/notes/perl/</guid>
+      <guid>https://hossein-lap.github.io/docs/perl/</guid>
       <description><![CDATA[
 <div id="preamble">
 <div class="sectionbody">
@@ -4906,10 +4906,10 @@ denote the set of valid keystrokes that can follow a command.</p>
     
     <item>
       <title>Grafana</title>
-      <link>https://hossein-lap.github.io/notes/grafana/</link>
+      <link>https://hossein-lap.github.io/docs/grafana/</link>
       <pubDate>Sat, 06 Jul 2024 13:24:36 +0330</pubDate>
       
-      <guid>https://hossein-lap.github.io/notes/grafana/</guid>
+      <guid>https://hossein-lap.github.io/docs/grafana/</guid>
       <description><![CDATA[
 <div id="preamble">
 <div class="sectionbody">
@@ -8175,7 +8175,7 @@ Threads
 </div>
 </div>
 <div class="sect1">
-<h2 id="_new_stuff">1. New stuff</h2>
+<h2 id="_new_stuff">New stuff</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>very versile</p>
@@ -8183,7 +8183,7 @@ Threads
 </div>
 </div>
 <div class="sect1">
-<h2 id="_more_stuff">2. more stuff</h2>
+<h2 id="_more_stuff">more stuff</h2>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
@@ -8218,45 +8218,6 @@ Threads
 <div class="sectionbody">
 <div class="paragraph">
 <p>Okay, let’s do it.</p>
-</div>
-<div class="listingblock">
-<div class="title">Test</div>
-<div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="c"><span style="color: #aa759f">const</span> <span style="color: #d28445">char</span> <span style="color: #d0d0d0">*</span><span style="color: #d0d0d0;background-color: #151515">colorname</span><span style="color: #d0d0d0">[]</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">{</span>
-
-  <span style="color: #505050">/* 8 normal colors */</span>
-  <span style="color: #d0d0d0">[</span><span style="color: #90a959">0</span><span style="color: #d0d0d0">]</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#34;#050D0D&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #505050">/* black   */</span>
-  <span style="color: #d0d0d0">[</span><span style="color: #90a959">1</span><span style="color: #d0d0d0">]</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#34;#546168&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #505050">/* red     */</span>
-  <span style="color: #d0d0d0">[</span><span style="color: #90a959">2</span><span style="color: #d0d0d0">]</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#34;#B94730&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #505050">/* green   */</span>
-  <span style="color: #d0d0d0">[</span><span style="color: #90a959">3</span><span style="color: #d0d0d0">]</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#34;#EC5727&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #505050">/* yellow  */</span>
-  <span style="color: #d0d0d0">[</span><span style="color: #90a959">4</span><span style="color: #d0d0d0">]</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#34;#F2AD59&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #505050">/* blue    */</span>
-  <span style="color: #d0d0d0">[</span><span style="color: #90a959">5</span><span style="color: #d0d0d0">]</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#34;#557886&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #505050">/* magenta */</span>
-  <span style="color: #d0d0d0">[</span><span style="color: #90a959">6</span><span style="color: #d0d0d0">]</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#34;#967D82&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #505050">/* cyan    */</span>
-  <span style="color: #d0d0d0">[</span><span style="color: #90a959">7</span><span style="color: #d0d0d0">]</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#34;#adbdc3&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #505050">/* white   */</span>
-
-  <span style="color: #505050">/* 8 bright colors */</span>
-  <span style="color: #d0d0d0">[</span><span style="color: #90a959">8</span><span style="color: #d0d0d0">]</span>  <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#34;#798488&#34;</span><span style="color: #d0d0d0">,</span>  <span style="color: #505050">/* black   */</span>
-  <span style="color: #d0d0d0">[</span><span style="color: #90a959">9</span><span style="color: #d0d0d0">]</span>  <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#34;#546168&#34;</span><span style="color: #d0d0d0">,</span>  <span style="color: #505050">/* red     */</span>
-  <span style="color: #d0d0d0">[</span><span style="color: #90a959">10</span><span style="color: #d0d0d0">]</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#34;#B94730&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #505050">/* green   */</span>
-  <span style="color: #d0d0d0">[</span><span style="color: #90a959">11</span><span style="color: #d0d0d0">]</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#34;#EC5727&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #505050">/* yellow  */</span>
-  <span style="color: #d0d0d0">[</span><span style="color: #90a959">12</span><span style="color: #d0d0d0">]</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#34;#F2AD59&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #505050">/* blue    */</span>
-  <span style="color: #d0d0d0">[</span><span style="color: #90a959">13</span><span style="color: #d0d0d0">]</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#34;#557886&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #505050">/* magenta */</span>
-  <span style="color: #d0d0d0">[</span><span style="color: #90a959">14</span><span style="color: #d0d0d0">]</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#34;#967D82&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #505050">/* cyan    */</span>
-  <span style="color: #d0d0d0">[</span><span style="color: #90a959">15</span><span style="color: #d0d0d0">]</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#34;#adbdc3&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #505050">/* white   */</span>
-
-  <span style="color: #505050">/* special colors */</span>
-  <span style="color: #d0d0d0">[</span><span style="color: #90a959">256</span><span style="color: #d0d0d0">]</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#34;#050D0D&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #505050">/* background */</span>
-  <span style="color: #d0d0d0">[</span><span style="color: #90a959">257</span><span style="color: #d0d0d0">]</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#34;#adbdc3&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #505050">/* foreground */</span>
-  <span style="color: #d0d0d0">[</span><span style="color: #90a959">258</span><span style="color: #d0d0d0">]</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#34;#adbdc3&#34;</span><span style="color: #d0d0d0">,</span>     <span style="color: #505050">/* cursor */</span>
-<span style="color: #d0d0d0">};</span>
-
-<span style="color: #505050">/* Default colors (colorname index)
- * foreground, background, cursor */</span>
- <span style="color: #d28445">unsigned</span> <span style="color: #d28445">int</span> <span style="color: #d0d0d0;background-color: #151515">defaultbg</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">0</span><span style="color: #d0d0d0">;</span>
- <span style="color: #d28445">unsigned</span> <span style="color: #d28445">int</span> <span style="color: #d0d0d0;background-color: #151515">defaultfg</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">257</span><span style="color: #d0d0d0">;</span>
- <span style="color: #d28445">unsigned</span> <span style="color: #d28445">int</span> <span style="color: #d0d0d0;background-color: #151515">defaultcs</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">258</span><span style="color: #d0d0d0">;</span>
- <span style="color: #d28445">unsigned</span> <span style="color: #d28445">int</span> <span style="color: #d0d0d0;background-color: #151515">defaultrcs</span><span style="color: #d0d0d0">=</span> <span style="color: #90a959">258</span><span style="color: #d0d0d0">;</span></code></pre>
-</div>
 </div>
 </div>
 </div>
@@ -8515,7 +8476,7 @@ section term:: definition of second term</code></pre>
 <table>
 <tbody><tr>
 <td class="hdlist1">
-ghis is a very very first term
+first term
 </td>
 <td class="hdlist2">
 <p>definition of first term</p>
@@ -9251,6 +9212,12 @@ This is a **_listing block_**
 </div>
 </div>
 </div>
+<div class="listingblock">
+<div class="title">Include codeblock from a existing file on the file-system</div>
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="c"><span style="color: #505050">// include::/home/hos/.cache/wal/colors-wal-st.h[]</span></code></pre>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_example_block">6.2. Example block</h3>
@@ -9495,7 +9462,7 @@ can long endure. ...</pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_intractive_elixir_environment">1. Intractive elixir environment</h2>
+<h2 id="_intractive_elixir_environment">Intractive elixir environment</h2>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
@@ -9505,7 +9472,7 @@ can long endure. ...</pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_hello_world">2. Hello World!</h2>
+<h2 id="_hello_world">Hello World!</h2>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="title">intro.exs</div>
@@ -9517,7 +9484,7 @@ can long endure. ...</pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_build_tool">3. Build Tool</h2>
+<h2 id="_build_tool">Build Tool</h2>
 <div class="sectionbody">
 <div class="literalblock">
 <div class="content">
@@ -9549,122 +9516,6 @@ mix run</pre>
       
       <guid>https://hossein-lap.github.io/about/</guid>
       <description><![CDATA[<div class="paragraph">
-<p>Hi I’m Hossein</p>
-</div>
-<div class="paragraph">
-<p>Yet another minimalist person with a passion about Open Source Software.</p>
-</div>
-<div class="paragraph">
-<p>I was a Computer guy from my early days back in my 1st and 2nd grade.
-But all I did was playing video games. Until my dad came to me and said:</p>
-</div>
-<div class="quoteblock">
-<blockquote>
-<div class="paragraph">
-<p>Don’t just play video games kid, it can do much more than that. try to
-learn it.</p>
-</div>
-</blockquote>
-</div>
-<div class="paragraph">
-<p>And that was it. It became the goal of my life :)</p>
-</div>
-<div class="sect1">
-<h2 id="_programming">1. Programming</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>I have a solid background with writing and patching softwares in some
-programming languages (<code>C</code> <code>Lua</code> <code>Go</code> <code>Bash</code> <code>Python</code>) by <em>mostly</em> using some
-tools that required a little programming knowledge to modify / configure or
-extend.</p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="title">Let me give you an example:</div>
-<div class="paragraph">
-<p>I wanted to learn Python language so I needed to take some notes, I decided to
-use LaTeX for that matter and my notes were getting dirty, I was losing some of
-them, they’re getting out-of-hand, then I’ve decided to use git for managing
-them.</p>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>I learned <code>C</code> by patching / configuring the <a href="https://suckless.org">suckless</a>
-tools, <code>Lua</code> by configuring <a href="https://neovim.io">neovim</a> and writing plugins for it, <code>Bash</code> by using
-it daily with &#34;Live inside terminal&#34; approach. of cource I’ve also read books
-and documentations for them eventually. <code>Python</code> and <code>Go</code> are the ones that I
-really sat-down and read books / docs about them from the beginning of the
-journey.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_workflow">2. Workflow</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>A simple guy likes simplicity.</p>
-</div>
-<div class="paragraph">
-<p>I use <a href="https://st.suckless.org">st</a> as my terminal emulator.
-I have <a href="https://vim.org">vim</a> (or <a href="https://neovim.io">neovim</a> I’m fine with both)
-as my text editor in my pocket, <a href="https://github.com/tmux/tmux/wiki">tmux</a> as
-multiplexer / session-manager by my side, I have a home in any window manger
-(but I perfer it to be inside <a href="https://dwm.suckless.org">dwm</a> over the other).
-Also for some bidirectional papers and documents I’ve let the little evil in,
-<a href="https://github.com/doomemacs/doomemacs">(doom) emacs</a>.</p>
-</div>
-<div class="paragraph">
-<p>To be honest, I just need a POSIX-complaint shell, tmux, vim and git.
-All of these can be repleaced and I’m fine with their alternatives.</p>
-</div>
-<div class="sect2">
-<h3 id="_operating_system">2.1. Operating System</h3>
-<div class="paragraph">
-<p>Currently (as of June 21, 2024) I’m using NixOS as my daily-driver OS.</p>
-</div>
-<div class="paragraph">
-<p>I enjoy NixOS’s approach and its reproducability, just starting to like Nix
-language / packages manager. I’ve wanted to learn a functional programming
-language anyway (I still might go for Elixir) so, that’s might be it,
-who knows ;)</p>
-</div>
-<div class="paragraph">
-<p>Update (September 14, 2024): Back to my good old
-<a href="https://voidlinux.org">Void Linux</a> for a while now.</p>
-</div>
-<div class="paragraph">
-<p>I’m very fine and comfortable with most of other Linux Distributions out there.
-I’ve started using Linux with Ubuntu 18.04, shortly moved to Linux mint 18
-and used it about a 6 to 10 months, after that I went for Manjaro xfce,
-installed it, used it for about 3 or so months and then, I installed Manjaro i3.</p>
-</div>
-<div class="paragraph">
-<p>The emphasizing <strong>Manjaro i3</strong> is because it really changed the way I look at a
-GUI.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_wip">3. WIP</h2>
-<div class="sectionbody">
-
-</div>
-</div>
-]]></description>
-      
-    </item>
-    
-    
-    
-    <item>
-      <title>Resume</title>
-      <link>https://hossein-lap.github.io/resume/</link>
-      <pubDate>Wed, 29 Mar 2023 22:14:09 +0330</pubDate>
-      
-      <guid>https://hossein-lap.github.io/resume/</guid>
-      <description><![CDATA[<div class="paragraph">
 <p>Welcome to my blog. I’m Hossein (aka &#34;pj&#34; or &#34;hos&#34;) and I’ll be posting my own
 notes, ideas, programs and other stuffs. I am a Programmer / DevOps Engineer
 with passions about open-source software and trees. Personally I enjoy
@@ -9680,26 +9531,26 @@ minimalism and simpleness of things.</p>
 <dl>
 <dt class="hdlist1">Languages</dt>
 <dd>
-<p><code>Lua</code>, <code>Go</code>, <code>C</code>, <code>Bash</code>, <code>Perl</code></p>
+<p><code>Lua</code> <code>Go</code> <code>C</code> <code>Bash</code> <code>Perl</code></p>
 </dd>
 <dt class="hdlist1">Tools</dt>
 <dd>
-<p><code>Linux</code>, <code>Git</code>, <code>Docker</code>, <code>Kubernetes</code>, <code>Ansible</code>, <code>QEMU/KVM</code>, <code>Vim</code>, <code>tmux</code></p>
+<p><code>Linux</code> <code>Git</code> <code>Docker</code> <code>Kubernetes</code> <code>Ansible</code> <code>QEMU/KVM</code> <code>Vim</code> <code>tmux</code></p>
 </dd>
 <dt class="hdlist1">Writing</dt>
 <dd>
-<p><code>LaTeX</code>, <code>Groff</code>, <code>Asciidoc</code>, <code>Markdown</code></p>
+<p><code>LaTeX</code> <code>Groff</code> <code>Asciidoc</code> <code>Markdown</code></p>
 </dd>
 <dt class="hdlist1">Hobbies</dt>
 <dd>
-<p><code>Coding</code>, <code>Writing</code>, <code>Biking</code>, <code>Volleyball</code>, <code>Fishing</code>, <code>Music</code>, <code>Movies</code></p>
+<p><code>Coding</code> <code>Writing</code> <code>Biking</code> <code>Volleyball</code> <code>Fishing</code> <code>Music</code> <code>Movies</code></p>
 </dd>
 </dl>
 </div>
 </blockquote>
 </div>
 <div class="sect1">
-<h2 id="_the_journey">1. The journey</h2>
+<h2 id="_the_journey">The journey</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>I was a Computer guy from my early days back in my 1st and 2nd grade.
@@ -9717,7 +9568,7 @@ learn it.</p>
 <p>And that was it. It became the goal of my life :)</p>
 </div>
 <div class="sect2">
-<h3 id="_programming">1.1. Programming</h3>
+<h3 id="_programming">Programming</h3>
 <div class="paragraph">
 <p>I have a solid background with writing and patching softwares in some
 programming languages (<code>C</code>, <code>Lua</code>, <code>Go</code>, <code>Bash</code>, <code>Python</code>) by <em>mostly</em> using some
@@ -9745,7 +9596,7 @@ journey.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_workflow">1.2. Workflow</h3>
+<h3 id="_workflow">Workflow</h3>
 <div class="paragraph">
 <p>A simple guy likes simplicity.</p>
 </div>
@@ -9763,7 +9614,7 @@ Also for some bidirectional papers and documents I’ve let the little evil in,
 All of these can be repleaced and I’m fine with their alternatives.</p>
 </div>
 <div class="sect3">
-<h4 id="_operating_system">1.2.1. Operating System</h4>
+<h4 id="_operating_system">Operating System</h4>
 <div class="paragraph">
 <p>Currently (as of June 21, 2024) I’m using NixOS as my daily-driver OS.</p>
 </div>
@@ -9800,9 +9651,424 @@ GUI.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_wip">1.3. WIP</h3>
+<h3 id="_wip">WIP</h3>
 
 </div>
+</div>
+</div>
+]]></description>
+      
+    </item>
+    
+    
+    
+    <item>
+      <title>Resume</title>
+      <link>https://hossein-lap.github.io/resume/</link>
+      <pubDate>Wed, 29 Mar 2023 22:14:09 +0330</pubDate>
+      
+      <guid>https://hossein-lap.github.io/resume/</guid>
+      <description><![CDATA[<div class="sect2">
+<h3 id="_skills">Skills</h3>
+<div class="quoteblock">
+<blockquote>
+<div class="hdlist">
+<table>
+<tbody><tr>
+<td class="hdlist1">
+Programming Languages
+</td>
+<td class="hdlist2">
+<p><code>Bash</code>
+<code>C</code>
+<code>Go</code>
+<code>Lua</code>
+<code>Perl</code></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Tools / Technologies
+</td>
+<td class="hdlist2">
+<p><code>Ansible</code>
+<code>Docker</code>
+<code>Git / GitOps</code>
+<code>Gitlab CI</code>
+<code>Jenkins</code>
+<code>Jira</code>
+<code>Kubernetes</code>
+<code>Linux</code>
+<code>QEMU/KVM</code>
+<code>Vim</code>
+<code>proxmox</code>
+<code>tmux</code></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Documentation
+</td>
+<td class="hdlist2">
+<p><code>Asciidoc</code>
+<code>Groff</code>
+<code>LaTeX</code>
+<code>Markdown</code>
+<code>Typst</code></p>
+</td>
+</tr>
+</tbody></table>
+</div>
+</blockquote>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_experiences">Experiences</h3>
+<div class="paragraph">
+<p><strong>Linux System Administrator</strong></p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="hdlist">
+<table>
+<tbody><tr>
+<td class="hdlist1">
+Self-emplyed
+</td>
+<td class="hdlist2">
+<p>Hybrid</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Used Technologies
+</td>
+<td class="hdlist2">
+<p><code>Ansible</code>
+<code>Bash</code>
+<code>Docker</code>
+<code>Git</code>
+<code>Gitlab CI</code>
+<code>QEMU/KVM</code>
+<code>MySQL</code>
+<code>SQLite</code></p>
+</td>
+</tr>
+</tbody></table>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p><strong>Virtualization Specialist / Automation</strong></p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="sidebarblock">
+<div class="content">
+<div class="hdlist">
+<table>
+<tbody><tr>
+<td class="hdlist1">
+RPS Cloud
+</td>
+<td class="hdlist2">
+<p>Remote</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Used Technologies
+</td>
+<td class="hdlist2">
+<p><code>Ansible</code>
+<code>Bash</code>
+<code>Cloud-init</code>
+<code>IpTables</code>
+<code>Linux</code>
+<code>Nginx</code>
+<code>Proxmox</code></p>
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p><strong>DevOps Engineer</strong></p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="sidebarblock">
+<div class="content">
+<div class="hdlist">
+<table>
+<tbody><tr>
+<td class="hdlist1">
+Sina Com. Systems
+</td>
+<td class="hdlist2">
+<p>Full-time</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Used Technologies
+</td>
+<td class="hdlist2">
+<p><code>Ansible</code>
+<code>Bash</code>
+<code>Docker</code>
+<code>Git</code>
+<code>Golang</code>
+<code>Jenkins</code>
+<code>Linux</code>
+<code>Python</code>
+<code>QEMU/KVM</code>
+<code>LVM</code></p>
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+</div>
+</blockquote>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_projects">Projects</h3>
+<div class="paragraph">
+<p><strong>REST WebServer with fault tolerance</strong></p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="sidebarblock">
+<div class="content">
+<div class="hdlist">
+<table>
+<tbody><tr>
+<td class="hdlist1">
+Github
+</td>
+<td class="hdlist2">
+<p><a href="https://github.com/hossein-lap/example-test-project-day-01">hossein-lap/example-test-project-day-01</a></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Technologies
+</td>
+<td class="hdlist2">
+<p><code>Golang</code> <code>Docker</code> <code>Kubernetes</code> <code>Redis</code> <code>MySQL</code></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Description
+</td>
+<td class="hdlist2">
+<p>Simple web-app to have access the MySQL database, Redis cache and
+file system.</p>
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p><strong>Automated resume CI</strong></p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="sidebarblock">
+<div class="content">
+<div class="hdlist">
+<table>
+<tbody><tr>
+<td class="hdlist1">
+Gitlab
+</td>
+<td class="hdlist2">
+<p><a href="https://gitlab.com/hos-workflow/resume-lua-latex">hos-workflow/resume-lua-latex</a></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Technologies
+</td>
+<td class="hdlist2">
+<p><code>Lua</code> <code>LaTeX</code> <code>Gitlab CI</code></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Description
+</td>
+<td class="hdlist2">
+<p>Create my resume automatically using myown LaTeX template which
+is generated using the <strong>gen.lua</strong> script.</p>
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p><strong>Personal bash / perl scripts</strong></p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="sidebarblock">
+<div class="content">
+<div class="hdlist">
+<table>
+<tbody><tr>
+<td class="hdlist1">
+Gitlab
+</td>
+<td class="hdlist2">
+<p><a href="https://gitlab.com/hos-workflow/scripts">hos-workflow/scripts</a></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Technologies
+</td>
+<td class="hdlist2">
+<p><code>Bash</code> <code>dmenu</code> <code>fzf</code> <code>Perl</code> <code>ImageMagick</code></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Description
+</td>
+<td class="hdlist2">
+<p>Various automated tasks were done here:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Take screenshot using <strong>ImageMagick</strong>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Plus many more ImageMagick scripts (e.g add shadow border, round border, etc.)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Run headless <strong>QEMU/KVM</strong> virtua machines with VNC support.</p>
+</li>
+<li>
+<p>Using <strong>stow</strong> to manage symbolic-links.</p>
+</li>
+<li>
+<p>Ruby script to use <strong>Asciidoctor</strong> ruby API.</p>
+</li>
+<li>
+<p>Simple system monitor using <strong>ps</strong> command with <strong>dmenu</strong>.</p>
+</li>
+<li>
+<p>Manage <strong>block devices</strong> using <strong>lsblk</strong> and <strong>dmenu</strong>.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p><strong>Neovim plugin</strong></p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="hdlist">
+<table>
+<tbody><tr>
+<td class="hdlist1">
+Github
+</td>
+<td class="hdlist2">
+<p><a href="https://github.com/hossein-lap/colt">hossein-lap/colt</a></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Technologies
+</td>
+<td class="hdlist2">
+<p><code>Lua</code></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Description
+</td>
+<td class="hdlist2">
+<p>Simple wrapper funtion around neovim’s <strong>term</strong> funtionality and
+the CLI tools to run / compile current buffer.</p>
+</td>
+</tr>
+</tbody></table>
+</div>
+</blockquote>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_languages">Languages</h3>
+<div class="quoteblock">
+<blockquote>
+<div class="hdlist">
+<table>
+<tbody><tr>
+<td class="hdlist1">
+English
+</td>
+<td class="hdlist2">
+<p><code>Professional</code></p>
+</td>
+</tr>
+</tbody></table>
+</div>
+</blockquote>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_certifications">Certifications</h3>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p><strong>LPIC 3 - Virtualization and Containerization</strong>: <code>2022</code></p>
+</div>
+</blockquote>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_education">Education</h3>
+<div class="quoteblock">
+<blockquote>
+<div class="hdlist">
+<table>
+<tbody><tr>
+<td class="hdlist1">
+Computer Science
+</td>
+<td class="hdlist2">
+<p>Bachelors degree from <code>2020</code> to <code>2024</code></p>
+</td>
+</tr>
+</tbody></table>
+</div>
+</blockquote>
 </div>
 </div>
 ]]></description>
