@@ -973,8 +973,8 @@ index 16ab52b..db20550 100644
 </span><span style="color: #90a959">+++ b/Makefile
 </span><span style="color: #d0d0d0">@@ -1,6 +1,6 @@</span>
  NAME = ttr
-<span style="color: #151515;background-color: #ac4142">
-</span> all:
+
+ all:
 <span style="color: #ac4142">-	asciidoctor -a stylesheet=my-stylesheet.css ttr.adoc
 -	# asciidoctor -a linkcss -a copycss README.adoc
 </span><span style="color: #90a959">+	# asciidoctor -a stylesheet=my-stylesheet.css ttr.adoc
