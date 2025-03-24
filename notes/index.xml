@@ -215,37 +215,37 @@ migrations.</p>
 <pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="Makefile">## db/connect: create to the local database
 .PHONY: db/connect
 db/connect:
-	sqlite3 db.sqlite
+    sqlite3 db.sqlite
 
 ## db/migrations/new name=$1: create a new migration
 .PHONY: db/migrations/new
 db/migrations/new:
-	go run -tags &#39;sqlite3&#39; github.com/golang-migrate/migrate/v4/cmd/migrate@latest create -seq -ext=.sql -dir=./resources/migrations ${name}
+    go run -tags &#39;sqlite3&#39; github.com/golang-migrate/migrate/v4/cmd/migrate@latest create -seq -ext=.sql -dir=./resources/migrations ${name}
 
 ## db/migrations/up: apply all up migrations
 .PHONY: db/migrations/up
 db/migrations/up:
-	go run -tags &#39;sqlite3&#39; github.com/golang-migrate/migrate/v4/cmd/migrate@latest -path=./resources/migrations -database=&#34;sqlite3://db.sqlite&#34; up
+    go run -tags &#39;sqlite3&#39; github.com/golang-migrate/migrate/v4/cmd/migrate@latest -path=./resources/migrations -database=&#34;sqlite3://db.sqlite&#34; up
 
 ## db/migrations/down: apply all down migrations
 .PHONY: db/migrations/down
 db/migrations/down: confirm
-	go run -tags &#39;sqlite3&#39; github.com/golang-migrate/migrate/v4/cmd/migrate@latest -path=./resources/migrations -database=&#34;sqlite3://db.sqlite&#34; down
+    go run -tags &#39;sqlite3&#39; github.com/golang-migrate/migrate/v4/cmd/migrate@latest -path=./resources/migrations -database=&#34;sqlite3://db.sqlite&#34; down
 
 ## db/migrations/goto version=$1: migrate to a specific version number
 .PHONY: db/migrations/goto
 db/migrations/goto: confirm
-	go run -tags &#39;sqlite3&#39; github.com/golang-migrate/migrate/v4/cmd/migrate@latest -path=./resources/migrations -database=&#34;sqlite3://db.sqlite&#34; goto ${version}
+    go run -tags &#39;sqlite3&#39; github.com/golang-migrate/migrate/v4/cmd/migrate@latest -path=./resources/migrations -database=&#34;sqlite3://db.sqlite&#34; goto ${version}
 
 ## db/migrations/force version=$1: force database migration version number
 .PHONY: db/migrations/force
 db/migrations/force: confirm
-	go run -tags &#39;sqlite3&#39; github.com/golang-migrate/migrate/v4/cmd/migrate@latest -path=./resources/migrations -database=&#34;sqlite3://db.sqlite&#34; force ${version}
+    go run -tags &#39;sqlite3&#39; github.com/golang-migrate/migrate/v4/cmd/migrate@latest -path=./resources/migrations -database=&#34;sqlite3://db.sqlite&#34; force ${version}
 
 ## db/migrations/version: print the current migration version
 .PHONY: db/migrations/version
 db/migrations/version:
-	go run -tags &#39;sqlite3&#39; github.com/golang-migrate/migrate/v4/cmd/migrate@latest -path=./resources/migrations -database=&#34;sqlite3://db.sqlite&#34; version</code></pre>
+    go run -tags &#39;sqlite3&#39; github.com/golang-migrate/migrate/v4/cmd/migrate@latest -path=./resources/migrations -database=&#34;sqlite3://db.sqlite&#34; version</code></pre>
 </div>
 </div>
 </div>
@@ -1197,7 +1197,7 @@ kubia.example.com to that IP or you can setup hosts: add the following line to
 <div class="listingblock">
 <div class="title"><code>/etc/hosts</code></div>
 <div class="content">
-<pre>192.168.99.100		kubia.example.com</pre>
+<pre>192.168.99.100        kubia.example.com</pre>
 </div>
 </div>
 <div class="paragraph">

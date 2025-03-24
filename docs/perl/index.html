@@ -601,9 +601,9 @@ to organize statements in the program.</p>
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="perl"><span style="color: #d0d0d0">{</span>
-	<span style="color: #d0d0d0;background-color: #151515">$a</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">1</span><span style="color: #d0d0d0">;</span>
-	<span style="color: #d0d0d0;background-color: #151515">$a</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">$a</span> <span style="color: #d0d0d0">+</span> <span style="color: #90a959">1</span><span style="color: #d0d0d0">;</span>
-	<span style="color: #aa759f">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">$a</span><span style="color: #d0d0d0">);</span>
+    <span style="color: #d0d0d0;background-color: #151515">$a</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">1</span><span style="color: #d0d0d0">;</span>
+    <span style="color: #d0d0d0;background-color: #151515">$a</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">$a</span> <span style="color: #d0d0d0">+</span> <span style="color: #90a959">1</span><span style="color: #d0d0d0">;</span>
+    <span style="color: #aa759f">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">$a</span><span style="color: #d0d0d0">);</span>
 <span style="color: #d0d0d0">}</span></code></pre>
 </div>
 </div>
@@ -835,8 +835,8 @@ scopes.</p>
 <span style="color: #aa759f">print</span><span style="color: #d0d0d0">(&#34;</span><span style="color: #90a959">my favorite #1 color is </span><span style="color: #d0d0d0">&#34;</span> <span style="color: #d0d0d0">.</span> <span style="color: #d0d0d0;background-color: #151515">$color</span> <span style="color: #d0d0d0">.</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;);</span>
 <span style="color: #505050"># another block</span>
 <span style="color: #d0d0d0">{</span>
-	<span style="color: #aa759f">my</span> <span style="color: #d0d0d0;background-color: #151515">$color</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">&#39;</span><span style="color: #90a959">blue</span><span style="color: #d0d0d0">&#39;;</span>
-	<span style="color: #aa759f">print</span><span style="color: #d0d0d0">(&#34;</span><span style="color: #90a959">my favorite #2 color is </span><span style="color: #d0d0d0">&#34;</span> <span style="color: #d0d0d0">.</span> <span style="color: #d0d0d0;background-color: #151515">$color</span> <span style="color: #d0d0d0">.</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;);</span><span style="color: #151515;background-color: #ac4142">  </span>
+    <span style="color: #aa759f">my</span> <span style="color: #d0d0d0;background-color: #151515">$color</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">&#39;</span><span style="color: #90a959">blue</span><span style="color: #d0d0d0">&#39;;</span>
+    <span style="color: #aa759f">print</span><span style="color: #d0d0d0">(&#34;</span><span style="color: #90a959">my favorite #2 color is </span><span style="color: #d0d0d0">&#34;</span> <span style="color: #d0d0d0">.</span> <span style="color: #d0d0d0;background-color: #151515">$color</span> <span style="color: #d0d0d0">.</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;);</span><span style="color: #151515;background-color: #ac4142">  </span>
 <span style="color: #d0d0d0">}</span>
 <span style="color: #505050"># for checking</span>
 <span style="color: #aa759f">print</span><span style="color: #d0d0d0">(&#34;</span><span style="color: #90a959">my favorite #1 color is </span><span style="color: #d0d0d0">&#34;</span> <span style="color: #d0d0d0">.</span> <span style="color: #d0d0d0;background-color: #151515">$color</span> <span style="color: #d0d0d0">.</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;);</span></code></pre>
@@ -2475,7 +2475,7 @@ currencies are supported.</p>
 <span style="color: #505050"># print supported currencies</span>
 <span style="color: #aa759f">print</span><span style="color: #d0d0d0">(&#34;</span><span style="color: #90a959">Supported currency:</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;);</span>
 <span style="color: #aa759f">for</span> <span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">keys</span> <span style="color: #d0d0d0;background-color: #151515">%rates</span><span style="color: #d0d0d0">)</span> <span style="color: #d0d0d0">{</span>
-	<span style="color: #aa759f">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">uc</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">$_</span><span style="color: #d0d0d0">),&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;);</span>
+    <span style="color: #aa759f">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">uc</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">$_</span><span style="color: #d0d0d0">),&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;);</span>
 <span style="color: #d0d0d0">}</span>
 
 <span style="color: #505050"># get inputs from users:</span>

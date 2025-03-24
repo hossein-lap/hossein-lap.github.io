@@ -119,13 +119,13 @@ git diff <span style="color: #f4bf75">--cached</span> .</code></pre>
 Changes not staged for commit:
   (use &#34;git add &lt;file&gt;...&#34; to update what will be committed)
   (use &#34;git restore &lt;file&gt;...&#34; to discard changes in working directory)
-	modified:   git.adoc
+    modified:   git.adoc
 
 Untracked files:
   (use &#34;git add &lt;file&gt;...&#34; to include in what will be committed)
-	.session.vim/
-	asciidoctor-theme.yml
-	git.pdf
+    .session.vim/
+    asciidoctor-theme.yml
+    git.pdf
 
 no changes added to commit (use &#34;git add&#34; and/or &#34;git commit -a&#34;)</pre>
 </div>
@@ -366,8 +366,8 @@ called <strong>origin</strong> but remember, it’s just a name which points to 
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>origin	git@github.com:hossein-lap/blog.posts.git (fetch)
-origin	git@github.com:hossein-lap/blog.posts.git (push)</pre>
+<pre>origin    git@github.com:hossein-lap/blog.posts.git (fetch)
+origin    git@github.com:hossein-lap/blog.posts.git (push)</pre>
 </div>
 </div>
 <div class="listingblock">
@@ -437,15 +437,15 @@ your github/gitlab account. Look for a <code>*.pub</code> file in your <code>~/.
 <div class="literalblock">
 <div class="title">ssh remote URL:</div>
 <div class="content">
-<pre>origin	git@github.com:hossein-lap/blog.posts.git (fetch)
-origin	git@github.com:hossein-lap/blog.posts.git (push)</pre>
+<pre>origin    git@github.com:hossein-lap/blog.posts.git (fetch)
+origin    git@github.com:hossein-lap/blog.posts.git (push)</pre>
 </div>
 </div>
 <div class="literalblock">
 <div class="title">https remote URL:</div>
 <div class="content">
-<pre>origin	https://github.com/hossein-lap/blog.posts (fetch)
-origin	https://github.com/hossein-lap/blog.posts (push)</pre>
+<pre>origin    https://github.com/hossein-lap/blog.posts (fetch)
+origin    https://github.com/hossein-lap/blog.posts (push)</pre>
 </div>
 </div>
 </div>
@@ -975,11 +975,11 @@ index 16ab52b..db20550 100644
  NAME = ttr
 
  all:
-<span style="color: #ac4142">-	asciidoctor -a stylesheet=my-stylesheet.css ttr.adoc
--	# asciidoctor -a linkcss -a copycss README.adoc
-</span><span style="color: #90a959">+	# asciidoctor -a stylesheet=my-stylesheet.css ttr.adoc
-+	asciidoctor -a linkcss -a copycss ttr.adoc
-</span> 	asciidoctor-pdf ttr.adoc --theme hos.yml
+<span style="color: #ac4142">-    asciidoctor -a stylesheet=my-stylesheet.css ttr.adoc
+-    # asciidoctor -a linkcss -a copycss README.adoc
+</span><span style="color: #90a959">+    # asciidoctor -a stylesheet=my-stylesheet.css ttr.adoc
++    asciidoctor -a linkcss -a copycss ttr.adoc
+</span>     asciidoctor-pdf ttr.adoc --theme hos.yml
 <span style="color: #6a9fb5;background-color: #151515;font-weight: bold">diff --git a/default-theme.yml b/default-theme.yml
 index f23711b..889785a 100644
 </span><span style="color: #ac4142">--- a/default-theme.yml
@@ -1154,7 +1154,7 @@ git clone <span style="color: #aa759f">${</span><span style="color: #d0d0d0;back
         </span>git worktree add <span style="color: #90a959">&#34;</span><span style="color: #aa759f">${</span><span style="color: #d0d0d0;background-color: #151515">i</span><span style="color: #aa759f">}</span><span style="color: #90a959">&#34;</span> <span style="color: #90a959">&#34;</span><span style="color: #aa759f">${</span><span style="color: #d0d0d0;background-color: #151515">i</span><span style="color: #aa759f">}</span><span style="color: #90a959">&#34;</span>
     <span style="color: #aa759f">done
 else
-	</span><span style="color: #d0d0d0;background-color: #151515">i</span><span style="color: #d0d0d0">=</span><span style="color: #8f5536">$(</span>git <span style="color: #f4bf75">--no-pager</span> branch | <span style="color: #d0d0d0;background-color: #151515">awk</span> <span style="color: #90a959">&#39;{print $NF;}&#39;</span><span style="color: #8f5536">)</span>
+    </span><span style="color: #d0d0d0;background-color: #151515">i</span><span style="color: #d0d0d0">=</span><span style="color: #8f5536">$(</span>git <span style="color: #f4bf75">--no-pager</span> branch | <span style="color: #d0d0d0;background-color: #151515">awk</span> <span style="color: #90a959">&#39;{print $NF;}&#39;</span><span style="color: #8f5536">)</span>
     git worktree add <span style="color: #90a959">&#34;</span><span style="color: #aa759f">${</span><span style="color: #d0d0d0;background-color: #151515">i</span><span style="color: #aa759f">}</span><span style="color: #90a959">&#34;</span> <span style="color: #90a959">&#34;</span><span style="color: #aa759f">${</span><span style="color: #d0d0d0;background-color: #151515">i</span><span style="color: #aa759f">}</span><span style="color: #90a959">&#34;</span>
 <span style="color: #aa759f">fi</span>
 
@@ -1582,9 +1582,9 @@ to organize statements in the program.</p>
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="perl"><span style="color: #d0d0d0">{</span>
-	<span style="color: #d0d0d0;background-color: #151515">$a</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">1</span><span style="color: #d0d0d0">;</span>
-	<span style="color: #d0d0d0;background-color: #151515">$a</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">$a</span> <span style="color: #d0d0d0">+</span> <span style="color: #90a959">1</span><span style="color: #d0d0d0">;</span>
-	<span style="color: #aa759f">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">$a</span><span style="color: #d0d0d0">);</span>
+    <span style="color: #d0d0d0;background-color: #151515">$a</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">1</span><span style="color: #d0d0d0">;</span>
+    <span style="color: #d0d0d0;background-color: #151515">$a</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">$a</span> <span style="color: #d0d0d0">+</span> <span style="color: #90a959">1</span><span style="color: #d0d0d0">;</span>
+    <span style="color: #aa759f">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">$a</span><span style="color: #d0d0d0">);</span>
 <span style="color: #d0d0d0">}</span></code></pre>
 </div>
 </div>
@@ -1816,8 +1816,8 @@ scopes.</p>
 <span style="color: #aa759f">print</span><span style="color: #d0d0d0">(&#34;</span><span style="color: #90a959">my favorite #1 color is </span><span style="color: #d0d0d0">&#34;</span> <span style="color: #d0d0d0">.</span> <span style="color: #d0d0d0;background-color: #151515">$color</span> <span style="color: #d0d0d0">.</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;);</span>
 <span style="color: #505050"># another block</span>
 <span style="color: #d0d0d0">{</span>
-	<span style="color: #aa759f">my</span> <span style="color: #d0d0d0;background-color: #151515">$color</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">&#39;</span><span style="color: #90a959">blue</span><span style="color: #d0d0d0">&#39;;</span>
-	<span style="color: #aa759f">print</span><span style="color: #d0d0d0">(&#34;</span><span style="color: #90a959">my favorite #2 color is </span><span style="color: #d0d0d0">&#34;</span> <span style="color: #d0d0d0">.</span> <span style="color: #d0d0d0;background-color: #151515">$color</span> <span style="color: #d0d0d0">.</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;);</span><span style="color: #151515;background-color: #ac4142">  </span>
+    <span style="color: #aa759f">my</span> <span style="color: #d0d0d0;background-color: #151515">$color</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">&#39;</span><span style="color: #90a959">blue</span><span style="color: #d0d0d0">&#39;;</span>
+    <span style="color: #aa759f">print</span><span style="color: #d0d0d0">(&#34;</span><span style="color: #90a959">my favorite #2 color is </span><span style="color: #d0d0d0">&#34;</span> <span style="color: #d0d0d0">.</span> <span style="color: #d0d0d0;background-color: #151515">$color</span> <span style="color: #d0d0d0">.</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;);</span><span style="color: #151515;background-color: #ac4142">  </span>
 <span style="color: #d0d0d0">}</span>
 <span style="color: #505050"># for checking</span>
 <span style="color: #aa759f">print</span><span style="color: #d0d0d0">(&#34;</span><span style="color: #90a959">my favorite #1 color is </span><span style="color: #d0d0d0">&#34;</span> <span style="color: #d0d0d0">.</span> <span style="color: #d0d0d0;background-color: #151515">$color</span> <span style="color: #d0d0d0">.</span> <span style="color: #d0d0d0">&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;);</span></code></pre>
@@ -3456,7 +3456,7 @@ currencies are supported.</p>
 <span style="color: #505050"># print supported currencies</span>
 <span style="color: #aa759f">print</span><span style="color: #d0d0d0">(&#34;</span><span style="color: #90a959">Supported currency:</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;);</span>
 <span style="color: #aa759f">for</span> <span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">keys</span> <span style="color: #d0d0d0;background-color: #151515">%rates</span><span style="color: #d0d0d0">)</span> <span style="color: #d0d0d0">{</span>
-	<span style="color: #aa759f">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">uc</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">$_</span><span style="color: #d0d0d0">),&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;);</span>
+    <span style="color: #aa759f">print</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">uc</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">$_</span><span style="color: #d0d0d0">),&#34;</span><span style="color: #8f5536">\n</span><span style="color: #d0d0d0">&#34;);</span>
 <span style="color: #d0d0d0">}</span>
 
 <span style="color: #505050"># get inputs from users:</span>
