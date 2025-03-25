@@ -6425,11 +6425,7 @@ Threads
 <div class="content">
 <pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">[source,config]
 ----
-# voidlinux remote repositories (glibc)
-repository=https://repo-default.voidlinux.org/current/bootstrap
-repository=https://repo-default.voidlinux.org/current
-repository=https://repo-default.voidlinux.org/current/nonfree
-repository=https://repo-default.voidlinux.org/current/debug
+include::/home/hos/dev/hossein-lap/void-packages/etc/xbps.d/repos-remote.conf[]
 ----</code></pre>
 </div>
 </div>
