@@ -841,10 +841,8 @@ man git-rebase</pre>
 </div>
 <div class="paragraph">
 <p>The above command will remove all changes on the current working directory
-which are not in neither staging area nor have been committed.</p>
-</div>
-<div class="paragraph">
-<p>The <code>.</code> means <strong>current working directory</strong>. You can replace it with file name(s)
+which are not in neither staging area nor have been committed.
+The <code>.</code> means <strong>current working directory</strong>. You can replace it with file name(s)
 or (some) directory.</p>
 </div>
 </div>
@@ -948,10 +946,8 @@ Reverts</p>
 <td class="content">
 <div class="paragraph">
 <p>When you are applying patch(es), you must be at the <strong>exact directory</strong> that
-you’ve get the diff file from.</p>
-</div>
-<div class="paragraph">
-<p>On the other words, applying patches only works when
+you’ve get the diff file from.
+On the other words, applying patches only works when
 you are applying them at the same <strong>root directory</strong> of getting the patch (diff
 file).</p>
 </div>

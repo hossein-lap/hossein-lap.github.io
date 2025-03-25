@@ -45,7 +45,7 @@
 
     
     
-    <link type="text/css" rel="stylesheet" href=https://hossein-lap.github.io/css/styles.522883c89e34504318f6101161338a4a2af287a2243f9be51dd7c1fdd955aa98f78b172325b622242bf8d1cc7254cd878e73e2a01edc7b0551d0db15f40ee58c.css integrity="sha512-UiiDyJ40UEMY9hARYTOKSiryh6IkP5vlHdfB/dlVqpj3ixcjJbYiJCv40cxyVM2HjnPioB7cewVR0NsV9A7ljA==" />
+    <link type="text/css" rel="stylesheet" href=https://hossein-lap.github.io/css/styles.c8a491571f2a43ccafd6415deacd1124ef3c8857ef6e4f90ca7bd812e69792cda4750722d4f4bb373e7355724a71d148e868f2f6d3573a0cd87dba0dfc95276a.css integrity="sha512-yKSRVx8qQ8yv1kFd6s0RJO88iFfvbk&#43;QynvYEuaXks2kdQci1PS7Nz5zVXJKcdFI6Gjy9tNXOgzYfboN/JUnag==" />
 <meta name="author" content="Hossein Esmailzadeh" />
 
     
@@ -279,15 +279,15 @@
             <div class="tableofcontents">
             <div class="sidebar">
       <table>
-	      <thead>
-		      <tr>
-			      <td>Table Of Contents</td>
-		      </tr>
-	      </thead>
-	      <tbody>
-		      <tr>
-			      <td>
-				      <nav id="TableOfContents">
+          <thead>
+              <tr>
+                  <td>Table Of Contents</td>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>
+                      <nav id="TableOfContents">
   <ul>
     <li><a href="#_grafana_stack">1. Grafana stack</a>
       <ul>
@@ -310,9 +310,9 @@
     </li>
   </ul>
 </nav>
-			      </td>
-		      </tr>
-	      </tbody>
+                  </td>
+              </tr>
+          </tbody>
       </table>
             </div>
             </div>
@@ -344,15 +344,15 @@
   <div class="tableofcontents">
 
       <table>
-	      <thead>
-		      <tr>
-			      <td>Table Of Contents</td>
-		      </tr>
-	      </thead>
-	      <tbody>
-		      <tr>
-			      <td>
-				      <nav id="TableOfContents">
+          <thead>
+              <tr>
+                  <td>Table Of Contents</td>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>
+                      <nav id="TableOfContents">
   <ul>
     <li><a href="#_grafana_stack">1. Grafana stack</a>
       <ul>
@@ -375,9 +375,9 @@
     </li>
   </ul>
 </nav>
-			      </td>
-		      </tr>
-	      </tbody>
+                  </td>
+              </tr>
+          </tbody>
       </table>
 
 
@@ -435,54 +435,78 @@
 <p>The core Grafana stack consists of <strong>Mimir</strong>, <strong>Loki</strong>, <strong>Tempo</strong>, and <strong>Grafana</strong>; the
 acronym <strong>LGTM</strong> is often used to refer to this tech stack.</p>
 </div>
-<div class="paragraph">
+<div class="quoteblock">
 <div class="title">Mimir</div>
+<blockquote>
+<div class="paragraph">
 <p>Mimir is a <strong>Time Series Database</strong> (<strong>TSDB</strong>) for the storage of metric data. It
 uses low-cost object storage such as S3, GCS, or Azure Blob Storage.
 Mimir is a fully Prometheus-compatible solution that addresses the common
 scalability problems encountered with storing and searching huge quantities of
 metric data.</p>
 </div>
-<div class="exampleblock">
-<div class="content">
+<div class="admonitionblock tip">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
 <div class="paragraph">
 <p>An active time series is a metric with a value and unique labels that has
 reported a sample in the last 20 minutes.</p>
 </div>
+</td>
+</tr>
+</tbody></table>
 </div>
+</blockquote>
 </div>
-<div class="paragraph">
+<div class="quoteblock">
 <div class="title">Loki</div>
-<p>Loki is a set of components that offer a full feature logging stack. Loki uses
-lower-cost object storage such as S3 or GCS, and only indexes label metadata.</p>
-</div>
+<blockquote>
 <div class="paragraph">
-<p>Log aggregation tools typically use two data structures to store log data. An
+<p>Loki is a set of components that offer a full feature logging stack. Loki uses
+lower-cost object storage such as S3 or GCS, and only indexes label metadata.
+Log aggregation tools typically use two data structures to store log data. An
 index that contains references to the location of the raw data paired with
 searchable metadata, and the raw data itself stored in a compressed form.</p>
 </div>
-<div class="exampleblock">
-<div class="content">
+<div class="admonitionblock tip">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
 <div class="paragraph">
 <p>Loki differs from a lot of other log aggregation tools by keeping the index
 data relatively small and scaling the search functionality by using horizontal
 scaling of the querying component.</p>
 </div>
+</td>
+</tr>
+</tbody></table>
 </div>
+</blockquote>
 </div>
-<div class="paragraph">
+<div class="quoteblock">
 <div class="title">Tempo</div>
+<blockquote>
+<div class="paragraph">
 <p>Tempo is a storage backend for high-scale distributed trace telemetry, with the
 aim of sampling 100% of the read path. Like Loki and Mimir, it leverages
-lower-cost object storage such as S3, GCS, or Azure Blob Storage.</p>
-</div>
-<div class="paragraph">
-<p>Tempo also offers the ability to generate metrics from spans as they are
+lower-cost object storage such as S3, GCS, or Azure Blob Storage.
+Tempo also offers the ability to generate metrics from spans as they are
 ingested; these metrics can be written to any backend that supports Prometheus
 remote write.</p>
 </div>
-<div class="paragraph">
+</blockquote>
+</div>
+<div class="quoteblock">
 <div class="title">Grafana</div>
+<blockquote>
+<div class="paragraph">
 <p>Grafana has been a staple for fantastic visualization of data since 2014. It
 has targeted the ability to connect to a huge variety of data sources from
 TSDBs to relational databases and even other observability tools. Grafana has
@@ -491,11 +515,17 @@ for many different purposes. This community supports over 6,000 dashboards,
 which means there is a starting place for most available technologies with
 minimal time to value.</p>
 </div>
-<div class="paragraph">
+</blockquote>
+</div>
+<div class="quoteblock">
 <div class="title">Grafana Agent</div>
+<blockquote>
+<div class="paragraph">
 <p>Grafana Agent is a collection of tools for collecting logs, metrics, and
 traces. There are many other collection tools that Grafana integrates well
 with.</p>
+</div>
+</blockquote>
 </div>
 </div>
 <div class="sect2">
@@ -544,19 +574,23 @@ even manage the incident directly from a messaging service</p>
 companies in this space to release new products that complement the tools we’ve
 already discussed.</p>
 </div>
-<div class="paragraph">
+<div class="quoteblock">
 <div class="title">Faro</div>
+<blockquote>
+<div class="paragraph">
 <p><strong>Grafana Faro</strong> is a JavaScript agent that can be added to frontend web
 applications. The project allows for <strong>real user monitoring</strong> (<strong>RUM</strong>) by
-collecting telemetry from a browser.</p>
-</div>
-<div class="paragraph">
-<p>By adding RUM into an environment where backend applications and infrastructure
+collecting telemetry from a browser.
+By adding RUM into an environment where backend applications and infrastructure
 are instrumented, observers gain the ability to traverse data from the full
 application stack.</p>
 </div>
-<div class="paragraph">
+</blockquote>
+</div>
+<div class="quoteblock">
 <div class="title">k6</div>
+<blockquote>
+<div class="paragraph">
 <p><strong>k6</strong> is a load testing tool that provides both a packaged tool to run in your
 own infrastructure and a cloud <strong>Software as a Service</strong> (<strong>SaaS</strong>) offering. Load
 testing, especially as part of a CI/CD pipeline, really enables teams to see
@@ -565,13 +599,19 @@ refactoring. Paired with other detailed analysis tools such as Pyroscope, the
 level of visibility and accessibility to non-technical members of the team can
 be astounding.</p>
 </div>
-<div class="paragraph">
+</blockquote>
+</div>
+<div class="quoteblock">
 <div class="title">Pyroscope</div>
+<blockquote>
+<div class="paragraph">
 <p><strong>Pyroscope</strong> is a tool that enable teams to engage in the continuous profiling
 of system resource use by applications (CPU, memory, etc.). Pyroscope
 advertises that with a minimal overhead of ~2-5% of performance, they can
 collect samples as frequently as every 10 seconds. <strong>Phlare</strong> is a Grafana Labs
 project started in 2022, and the two projects have now merged.</p>
+</div>
+</blockquote>
 </div>
 </div>
 </div>
@@ -583,20 +623,16 @@ project started in 2022, and the two projects have now merged.</p>
 <p>Logs support performance and capacity monitoring in infrastructure, bug
 detection in software, root cause analysis, user behavior tracking, and more.
 Following certain guidelines will help your future self when you need to
-analyze logs.</p>
-</div>
-<div class="paragraph">
-<p>Log formats usually identify if they are structured or unstructured, the data
+analyze logs.
+Log formats usually identify if they are structured or unstructured, the data
 types used in them, and if any encoding or delimitation is being used.</p>
 </div>
 <div class="sect2">
 <h3 id="_structured_semi_structured_and_unstructured_logging">2.1. Structured, semi-structured, and unstructured logging</h3>
 <div class="paragraph">
 <p>It does not matter what your logs look like and they can come in structured,
-semi-structured, or unstructured formats.</p>
-</div>
-<div class="paragraph">
-<p>when designing and building observability solutions, it’s important to
+semi-structured, or unstructured formats.
+when designing and building observability solutions, it’s important to
 understand the log formats you are working with. This ensures that you can
 ingest, parse, and store the data in a way that it can be used effectively.</p>
 </div>

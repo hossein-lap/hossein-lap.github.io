@@ -45,7 +45,7 @@
 
     
     
-    <link type="text/css" rel="stylesheet" href=https://hossein-lap.github.io/css/styles.522883c89e34504318f6101161338a4a2af287a2243f9be51dd7c1fdd955aa98f78b172325b622242bf8d1cc7254cd878e73e2a01edc7b0551d0db15f40ee58c.css integrity="sha512-UiiDyJ40UEMY9hARYTOKSiryh6IkP5vlHdfB/dlVqpj3ixcjJbYiJCv40cxyVM2HjnPioB7cewVR0NsV9A7ljA==" />
+    <link type="text/css" rel="stylesheet" href=https://hossein-lap.github.io/css/styles.c8a491571f2a43ccafd6415deacd1124ef3c8857ef6e4f90ca7bd812e69792cda4750722d4f4bb373e7355724a71d148e868f2f6d3573a0cd87dba0dfc95276a.css integrity="sha512-yKSRVx8qQ8yv1kFd6s0RJO88iFfvbk&#43;QynvYEuaXks2kdQci1PS7Nz5zVXJKcdFI6Gjy9tNXOgzYfboN/JUnag==" />
 <meta name="author" content="Hossein Esmailzadeh" />
 
     
@@ -278,15 +278,15 @@ and with more features/elements.
             <div class="tableofcontents">
             <div class="sidebar">
       <table>
-	      <thead>
-		      <tr>
-			      <td>Table Of Contents</td>
-		      </tr>
-	      </thead>
-	      <tbody>
-		      <tr>
-			      <td>
-				      <nav id="TableOfContents">
+          <thead>
+              <tr>
+                  <td>Table Of Contents</td>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>
+                      <nav id="TableOfContents">
   <ul>
     <li><a href="#_intro">1. Intro</a></li>
     <li><a href="#_lists">2. Lists</a>
@@ -343,9 +343,9 @@ and with more features/elements.
     <li><a href="#_render_wip">8. Render (WIP)</a></li>
   </ul>
 </nav>
-			      </td>
-		      </tr>
-	      </tbody>
+                  </td>
+              </tr>
+          </tbody>
       </table>
             </div>
             </div>
@@ -377,15 +377,15 @@ and with more features/elements.
   <div class="tableofcontents">
 
       <table>
-	      <thead>
-		      <tr>
-			      <td>Table Of Contents</td>
-		      </tr>
-	      </thead>
-	      <tbody>
-		      <tr>
-			      <td>
-				      <nav id="TableOfContents">
+          <thead>
+              <tr>
+                  <td>Table Of Contents</td>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>
+                      <nav id="TableOfContents">
   <ul>
     <li><a href="#_intro">1. Intro</a></li>
     <li><a href="#_lists">2. Lists</a>
@@ -442,9 +442,9 @@ and with more features/elements.
     <li><a href="#_render_wip">8. Render (WIP)</a></li>
   </ul>
 </nav>
-			      </td>
-		      </tr>
-	      </tbody>
+                  </td>
+              </tr>
+          </tbody>
       </table>
 
 
@@ -462,9 +462,26 @@ and with more features/elements.
 <p>Okay, let’s do it.</p>
 </div>
 <div class="listingblock">
-<div class="title">Test</div>
+<div class="title">Testing <code>include::&lt;path&gt;[]</code> command</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="c"><span style="color: #d0d0d0;background-color: #151515">Unresolved</span> <span style="color: #d0d0d0;background-color: #151515">directive</span> <span style="color: #d0d0d0;background-color: #151515">in</span> <span style="color: #d0d0d0">&lt;</span><span style="color: #d0d0d0;background-color: #151515">stdin</span><span style="color: #d0d0d0">&gt;</span> <span style="color: #d0d0d0">-</span> <span style="color: #d0d0d0;background-color: #151515">include</span><span style="color: #d0d0d0">::/</span><span style="color: #d0d0d0;background-color: #151515">home</span><span style="color: #d0d0d0">/</span><span style="color: #d0d0d0;background-color: #151515">hos</span><span style="color: #d0d0d0">/</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">cache</span><span style="color: #d0d0d0">/</span><span style="color: #d0d0d0;background-color: #151515">wal</span><span style="color: #d0d0d0">/</span><span style="color: #d0d0d0;background-color: #151515">colors</span><span style="color: #d0d0d0">-</span><span style="color: #d0d0d0;background-color: #151515">wal</span><span style="color: #d0d0d0">-</span><span style="color: #d0d0d0;background-color: #151515">st</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">h</span><span style="color: #d0d0d0">[]</span></code></pre>
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">[source,config]
+----
+# voidlinux remote repositories (glibc)
+repository=https://repo-default.voidlinux.org/current/bootstrap
+repository=https://repo-default.voidlinux.org/current
+repository=https://repo-default.voidlinux.org/current/nonfree
+repository=https://repo-default.voidlinux.org/current/debug
+----</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Output</div>
+<div class="content">
+<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="config"><span style="color: #505050"># voidlinux remote repositories (glibc)
+</span><span style="color: #d0d0d0;background-color: #151515">repository</span>=<span style="color: #d0d0d0;background-color: #151515">https</span>://<span style="color: #d0d0d0;background-color: #151515">repo</span>-<span style="color: #d0d0d0;background-color: #151515">default</span>.<span style="color: #d0d0d0;background-color: #151515">voidlinux</span>.<span style="color: #d0d0d0;background-color: #151515">org</span>/<span style="color: #d0d0d0;background-color: #151515">current</span>/<span style="color: #d0d0d0;background-color: #151515">bootstrap</span>
+<span style="color: #d0d0d0;background-color: #151515">repository</span>=<span style="color: #d0d0d0;background-color: #151515">https</span>://<span style="color: #d0d0d0;background-color: #151515">repo</span>-<span style="color: #d0d0d0;background-color: #151515">default</span>.<span style="color: #d0d0d0;background-color: #151515">voidlinux</span>.<span style="color: #d0d0d0;background-color: #151515">org</span>/<span style="color: #d0d0d0;background-color: #151515">current</span>
+<span style="color: #d0d0d0;background-color: #151515">repository</span>=<span style="color: #d0d0d0;background-color: #151515">https</span>://<span style="color: #d0d0d0;background-color: #151515">repo</span>-<span style="color: #d0d0d0;background-color: #151515">default</span>.<span style="color: #d0d0d0;background-color: #151515">voidlinux</span>.<span style="color: #d0d0d0;background-color: #151515">org</span>/<span style="color: #d0d0d0;background-color: #151515">current</span>/<span style="color: #d0d0d0;background-color: #151515">nonfree</span>
+<span style="color: #d0d0d0;background-color: #151515">repository</span>=<span style="color: #d0d0d0;background-color: #151515">https</span>://<span style="color: #d0d0d0;background-color: #151515">repo</span>-<span style="color: #d0d0d0;background-color: #151515">default</span>.<span style="color: #d0d0d0;background-color: #151515">voidlinux</span>.<span style="color: #d0d0d0;background-color: #151515">org</span>/<span style="color: #d0d0d0;background-color: #151515">current</span>/<span style="color: #d0d0d0;background-color: #151515">debug</span></code></pre>
 </div>
 </div>
 </div>
@@ -474,8 +491,6 @@ and with more features/elements.
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_unordered_lists">2.1. Unordered lists</h3>
-<div class="sidebarblock">
-<div class="content">
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">* level 1
@@ -486,9 +501,9 @@ and with more features/elements.
 * level 1</code></pre>
 </div>
 </div>
-<div class="exampleblock">
-<div class="title">Example 1. Output</div>
+<div class="sidebarblock">
 <div class="content">
+<div class="title">Output</div>
 <div class="ulist">
 <ul>
 <li>
@@ -530,12 +545,8 @@ and with more features/elements.
 </div>
 </div>
 </div>
-</div>
-</div>
 <div class="sect2">
 <h3 id="_ordered_lists">2.2. Ordered lists</h3>
-<div class="sidebarblock">
-<div class="content">
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">. level 1
@@ -546,9 +557,9 @@ and with more features/elements.
 . level 1</code></pre>
 </div>
 </div>
-<div class="exampleblock">
-<div class="title">Example 2. Output</div>
+<div class="sidebarblock">
 <div class="content">
+<div class="title">Output</div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -590,12 +601,8 @@ and with more features/elements.
 </div>
 </div>
 </div>
-</div>
-</div>
 <div class="sect2">
 <h3 id="_todo_lists">2.3. TODO lists</h3>
-<div class="sidebarblock">
-<div class="content">
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">- [*] checked
@@ -604,9 +611,9 @@ and with more features/elements.
 - normal list item</code></pre>
 </div>
 </div>
-<div class="exampleblock">
-<div class="title">Example 3. Output</div>
+<div class="sidebarblock">
 <div class="content">
+<div class="title">Output</div>
 <div class="ulist checklist">
 <ul class="checklist">
 <li>
@@ -626,12 +633,8 @@ and with more features/elements.
 </div>
 </div>
 </div>
-</div>
-</div>
 <div class="sect2">
 <h3 id="_separating_lists">2.4. Separating lists</h3>
-<div class="sidebarblock">
-<div class="content">
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">. Apples
@@ -643,9 +646,9 @@ and with more features/elements.
 . Almonds</code></pre>
 </div>
 </div>
-<div class="exampleblock">
-<div class="title">Example 4. Output</div>
+<div class="sidebarblock">
 <div class="content">
+<div class="title">Output</div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -671,24 +674,20 @@ and with more features/elements.
 </div>
 </div>
 </div>
-</div>
-</div>
 <div class="sect1">
 <h2 id="_definitions">3. Definitions</h2>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_normal_definition_list">3.1. Normal definition list</h3>
-<div class="sidebarblock">
-<div class="content">
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">first term:: definition of first term
 section term:: definition of second term</code></pre>
 </div>
 </div>
-<div class="exampleblock">
-<div class="title">Example 5. Output</div>
+<div class="sidebarblock">
 <div class="content">
+<div class="title">Output</div>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">first term</dt>
@@ -704,12 +703,8 @@ section term:: definition of second term</code></pre>
 </div>
 </div>
 </div>
-</div>
-</div>
 <div class="sect2">
 <h3 id="_horizontal_definition_list">3.2. Horizontal definition list</h3>
-<div class="sidebarblock">
-<div class="content">
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">[horizontal]
@@ -717,9 +712,9 @@ first term:: definition of first term
 section term:: definition of second term</code></pre>
 </div>
 </div>
-<div class="exampleblock">
-<div class="title">Example 6. Output</div>
+<div class="sidebarblock">
 <div class="content">
+<div class="title">Output</div>
 <div class="hdlist">
 <table>
 <tbody><tr>
@@ -743,12 +738,8 @@ section term
 </div>
 </div>
 </div>
-</div>
-</div>
 <div class="sect2">
 <h3 id="_multi_line_definition_list">3.3. Multi-line definition list</h3>
-<div class="sidebarblock">
-<div class="content">
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">first term::
@@ -757,9 +748,9 @@ section term::
 definition of second term</code></pre>
 </div>
 </div>
-<div class="exampleblock">
-<div class="title">Example 7. Output</div>
+<div class="sidebarblock">
 <div class="content">
+<div class="title">Output</div>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">first term</dt>
@@ -775,12 +766,8 @@ definition of second term</code></pre>
 </div>
 </div>
 </div>
-</div>
-</div>
 <div class="sect2">
 <h3 id="_qa">3.4. Q&amp;A</h3>
-<div class="sidebarblock">
-<div class="content">
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">[qanda]
@@ -789,9 +776,9 @@ An implementation of the AsciiDoc processor in Ruby.
 What is the answer to the Ultimate Question?:: 42</code></pre>
 </div>
 </div>
-<div class="exampleblock">
-<div class="title">Example 8. Output</div>
+<div class="sidebarblock">
 <div class="content">
+<div class="title">Output</div>
 <div class="qlist qanda">
 <ol>
 <li>
@@ -807,12 +794,8 @@ What is the answer to the Ultimate Question?:: 42</code></pre>
 </div>
 </div>
 </div>
-</div>
-</div>
 <div class="sect2">
 <h3 id="_mixed">3.5. Mixed</h3>
-<div class="sidebarblock">
-<div class="content">
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">Operating Systems::
@@ -834,9 +817,9 @@ Cloud Providers::
         . Rackspace</code></pre>
 </div>
 </div>
-<div class="exampleblock">
-<div class="title">Example 9. Output</div>
+<div class="sidebarblock">
 <div class="content">
+<div class="title">Output</div>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Operating Systems</dt>
@@ -926,8 +909,6 @@ Cloud Providers::
 </div>
 </div>
 </div>
-</div>
-</div>
 <div class="admonitionblock note">
 <table>
 <tbody><tr>
@@ -943,8 +924,6 @@ Note that the indentation is optional
 </div>
 <div class="sect2">
 <h3 id="_complex_content_in_outline_lists">3.6. Complex content in outline lists</h3>
-<div class="sidebarblock">
-<div class="content">
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">* Every list item has at least one paragraph of content,
@@ -972,9 +951,9 @@ list continuation:: a plus sign (`{plus}`) on a line by itself
 |===</code></pre>
 </div>
 </div>
-<div class="exampleblock">
-<div class="title">Example 10. Output</div>
+<div class="sidebarblock">
 <div class="content">
+<div class="title">Output</div>
 <div class="ulist">
 <ul>
 <li>
@@ -1033,15 +1012,11 @@ a list continuation on a line adjacent to both blocks.</p>
 </div>
 </div>
 </div>
-</div>
-</div>
 <div class="sect1">
 <h2 id="_links">4. Links</h2>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_external">4.1. External</h3>
-<div class="sidebarblock">
-<div class="content">
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">http://asciidoctor.org - automatic!
@@ -1051,9 +1026,9 @@ http://asciidoctor.org[Asciidoctor]
 https://github.com/asciidoctor[Asciidoctor @ *GitHub*]</code></pre>
 </div>
 </div>
-<div class="exampleblock">
-<div class="title">Example 11. Output</div>
+<div class="sidebarblock">
 <div class="content">
+<div class="title">Output</div>
 <div class="paragraph">
 <p><a href="http://asciidoctor.org" class="bare">http://asciidoctor.org</a> - automatic!</p>
 </div>
@@ -1066,32 +1041,24 @@ https://github.com/asciidoctor[Asciidoctor @ *GitHub*]</code></pre>
 </div>
 </div>
 </div>
-</div>
-</div>
 <div class="sect2">
 <h3 id="_relative">4.2. Relative</h3>
-<div class="sidebarblock">
-<div class="content">
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">link:test.adoc[Docs]</code></pre>
 </div>
 </div>
-<div class="exampleblock">
-<div class="title">Example 12. Output</div>
+<div class="sidebarblock">
 <div class="content">
+<div class="title">Output</div>
 <div class="paragraph">
 <p><a href="test.adoc">Docs</a></p>
 </div>
 </div>
 </div>
 </div>
-</div>
-</div>
 <div class="sect2">
 <h3 id="_email_and_irc">4.3. Email and IRC</h3>
-<div class="sidebarblock">
-<div class="content">
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">devel@discuss.arquillian.org
@@ -1103,9 +1070,9 @@ mailto:devel-join@discuss.arquillian.org[Subscribe, Subscribe me, I want to join
 irc://irc.freenode.org/#asciidoctor</code></pre>
 </div>
 </div>
-<div class="exampleblock">
-<div class="title">Example 13. Output</div>
+<div class="sidebarblock">
 <div class="content">
+<div class="title">Output</div>
 <div class="paragraph">
 <p><a href="mailto:devel@discuss.arquillian.org">devel@discuss.arquillian.org</a></p>
 </div>
@@ -1121,12 +1088,8 @@ irc://irc.freenode.org/#asciidoctor</code></pre>
 </div>
 </div>
 </div>
-</div>
-</div>
 <div class="sect2">
 <h3 id="_inline_anchors">4.4. Inline anchors</h3>
-<div class="sidebarblock">
-<div class="content">
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">[[bookmark-a]]Inline anchors make arbitrary content referenceable.
@@ -1134,9 +1097,9 @@ irc://irc.freenode.org/#asciidoctor</code></pre>
 anchor:bookmark-b[]Use a cross reference to link to this location.</code></pre>
 </div>
 </div>
-<div class="exampleblock">
-<div class="title">Example 14. Output</div>
+<div class="sidebarblock">
 <div class="content">
+<div class="title">Output</div>
 <div class="paragraph">
 <p><a id="bookmark-a"></a>Inline anchors make arbitrary content referenceable.</p>
 </div>
@@ -1146,12 +1109,8 @@ anchor:bookmark-b[]Use a cross reference to link to this location.</code></pre>
 </div>
 </div>
 </div>
-</div>
-</div>
 <div class="sect2">
 <h3 id="_internal_cross_references">4.5. Internal cross references</h3>
-<div class="sidebarblock">
-<div class="content">
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">See &lt;&lt;paragraphs&gt;&gt; to learn how to write paragraphs.
@@ -1159,9 +1118,9 @@ anchor:bookmark-b[]Use a cross reference to link to this location.</code></pre>
 Learn how to organize the document into &lt;&lt;section-titles,sections&gt;&gt;.</code></pre>
 </div>
 </div>
-<div class="exampleblock">
-<div class="title">Example 15. Output</div>
+<div class="sidebarblock">
 <div class="content">
+<div class="title">Output</div>
 <div class="paragraph">
 <p>See <a href="#paragraphs">[paragraphs]</a> to learn how to write paragraphs.</p>
 </div>
@@ -1171,12 +1130,8 @@ Learn how to organize the document into &lt;&lt;section-titles,sections&gt;&gt;.
 </div>
 </div>
 </div>
-</div>
-</div>
 <div class="sect2">
 <h3 id="_images">4.6. Images</h3>
-<div class="sidebarblock">
-<div class="content">
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">image::/images/asciidoc/rose.png[]
@@ -1190,9 +1145,9 @@ image::/images/asciidoc/rose.png[caption=&#34;Figure 1: &#34;, title=&#34;A rose
 image::http://asciidoctor.org/images/octocat.jpg[GitHub mascot]</code></pre>
 </div>
 </div>
-<div class="exampleblock">
-<div class="title">Example 16. Output</div>
+<div class="sidebarblock">
 <div class="content">
+<div class="title">Output</div>
 <div class="imageblock">
 <div class="content">
 <img src="/images/asciidoc/rose.png" alt="rose"/>
@@ -1219,23 +1174,19 @@ image::http://asciidoctor.org/images/octocat.jpg[GitHub mascot]</code></pre>
 </div>
 </div>
 </div>
-</div>
-</div>
 <div class="sect1">
 <h2 id="_admonition_paragraph">5. Admonition paragraph</h2>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_note">5.1. NOTE</h3>
-<div class="sidebarblock">
-<div class="content">
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">NOTE: This is a NOTE!</code></pre>
 </div>
 </div>
-<div class="exampleblock">
-<div class="title">Example 17. Output</div>
+<div class="sidebarblock">
 <div class="content">
+<div class="title">Output</div>
 <div class="admonitionblock note">
 <table>
 <tbody><tr>
@@ -1251,20 +1202,16 @@ This is a NOTE!
 </div>
 </div>
 </div>
-</div>
-</div>
 <div class="sect2">
 <h3 id="_tip">5.2. TIP</h3>
-<div class="sidebarblock">
-<div class="content">
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">TIP: This is a TIP!</code></pre>
 </div>
 </div>
-<div class="exampleblock">
-<div class="title">Example 18. Output</div>
+<div class="sidebarblock">
 <div class="content">
+<div class="title">Output</div>
 <div class="admonitionblock tip">
 <table>
 <tbody><tr>
@@ -1280,20 +1227,16 @@ This is a TIP!
 </div>
 </div>
 </div>
-</div>
-</div>
 <div class="sect2">
 <h3 id="_warning">5.3. WARNING</h3>
-<div class="sidebarblock">
-<div class="content">
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">WARNING: This is a WARNING!</code></pre>
 </div>
 </div>
-<div class="exampleblock">
-<div class="title">Example 19. Output</div>
+<div class="sidebarblock">
 <div class="content">
+<div class="title">Output</div>
 <div class="admonitionblock warning">
 <table>
 <tbody><tr>
@@ -1309,20 +1252,16 @@ This is a WARNING!
 </div>
 </div>
 </div>
-</div>
-</div>
 <div class="sect2">
 <h3 id="_caution">5.4. CAUTION</h3>
-<div class="sidebarblock">
-<div class="content">
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">CAUTION: This is a CAUTION!</code></pre>
 </div>
 </div>
-<div class="exampleblock">
-<div class="title">Example 20. Output</div>
+<div class="sidebarblock">
 <div class="content">
+<div class="title">Output</div>
 <div class="admonitionblock caution">
 <table>
 <tbody><tr>
@@ -1338,20 +1277,16 @@ This is a CAUTION!
 </div>
 </div>
 </div>
-</div>
-</div>
 <div class="sect2">
 <h3 id="_important">5.5. IMPORTANT</h3>
-<div class="sidebarblock">
-<div class="content">
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">IMPORTANT: This is a IMPORTANT!</code></pre>
 </div>
 </div>
-<div class="exampleblock">
-<div class="title">Example 21. Output</div>
+<div class="sidebarblock">
 <div class="content">
+<div class="title">Output</div>
 <div class="admonitionblock important">
 <table>
 <tbody><tr>
@@ -1367,12 +1302,8 @@ This is a IMPORTANT!
 </div>
 </div>
 </div>
-</div>
-</div>
 <div class="sect2">
 <h3 id="_admonition_blocks">5.6. Admonition blocks</h3>
-<div class="sidebarblock">
-<div class="content">
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">[NOTE]
@@ -1389,9 +1320,9 @@ The style can be any one of the admonition labels:
 ====</code></pre>
 </div>
 </div>
-<div class="exampleblock">
-<div class="title">Example 22. Output</div>
+<div class="sidebarblock">
 <div class="content">
+<div class="title">Output</div>
 <div class="admonitionblock note">
 <table>
 <tbody><tr>
@@ -1432,15 +1363,11 @@ The style can be any one of the admonition labels:</p>
 </div>
 </div>
 </div>
-</div>
-</div>
 <div class="sect1">
 <h2 id="_blocks">6. Blocks</h2>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_listing_block">6.1. Listing block</h3>
-<div class="sidebarblock">
-<div class="content">
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">-----
@@ -1448,9 +1375,9 @@ This is a **_listing block_**
 -----</code></pre>
 </div>
 </div>
-<div class="exampleblock">
-<div class="title">Example 23. Output</div>
+<div class="sidebarblock">
 <div class="content">
+<div class="title">Output</div>
 <div class="listingblock">
 <div class="content">
 <pre>This is a **_listing block_**</pre>
@@ -1459,12 +1386,8 @@ This is a **_listing block_**
 </div>
 </div>
 </div>
-</div>
-</div>
 <div class="sect2">
 <h3 id="_example_block">6.2. Example block</h3>
-<div class="sidebarblock">
-<div class="content">
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">=====
@@ -1472,9 +1395,9 @@ This is a **_example block_**
 =====</code></pre>
 </div>
 </div>
-<div class="exampleblock">
-<div class="title">Example 24. Output</div>
+<div class="sidebarblock">
 <div class="content">
+<div class="title">Output</div>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
@@ -1485,12 +1408,8 @@ This is a **_example block_**
 </div>
 </div>
 </div>
-</div>
-</div>
 <div class="sect2">
 <h3 id="_comment_block">6.3. Comment block</h3>
-<div class="sidebarblock">
-<div class="content">
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">////
@@ -1498,19 +1417,15 @@ This is a **_comment block_**
 ////</code></pre>
 </div>
 </div>
-<div class="exampleblock">
-<div class="title">Example 25. Output</div>
+<div class="sidebarblock">
 <div class="content">
+<div class="title">Output</div>
 
-</div>
-</div>
 </div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_literal_block">6.4. Literal block</h3>
-<div class="sidebarblock">
-<div class="content">
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">....
@@ -1518,9 +1433,9 @@ This is a **_literal block_**
 ....</code></pre>
 </div>
 </div>
-<div class="exampleblock">
-<div class="title">Example 26. Output</div>
+<div class="sidebarblock">
 <div class="content">
+<div class="title">Output</div>
 <div class="literalblock">
 <div class="content">
 <pre>This is a **_literal block_**</pre>
@@ -1529,12 +1444,8 @@ This is a **_literal block_**
 </div>
 </div>
 </div>
-</div>
-</div>
 <div class="sect2">
 <h3 id="_pass_block">6.5. Pass block</h3>
-<div class="sidebarblock">
-<div class="content">
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">++++
@@ -1542,19 +1453,15 @@ This is a **_literal block_**
 ++++</code></pre>
 </div>
 </div>
-<div class="exampleblock">
-<div class="title">Example 27. Output</div>
+<div class="sidebarblock">
 <div class="content">
+<div class="title">Output</div>
 == This is raw text
-</div>
-</div>
 </div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_quoteverse_block">6.6. Quote/Verse block</h3>
-<div class="sidebarblock">
-<div class="content">
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">____
@@ -1562,9 +1469,9 @@ This is a very very simple quote
 ____</code></pre>
 </div>
 </div>
-<div class="exampleblock">
-<div class="title">Example 28. Output</div>
+<div class="sidebarblock">
 <div class="content">
+<div class="title">Output</div>
 <div class="quoteblock">
 <blockquote>
 <div class="paragraph">
@@ -1574,12 +1481,8 @@ ____</code></pre>
 </div>
 </div>
 </div>
-</div>
-</div>
 <div class="sect3">
 <h4 id="_blockqoutes">6.6.1. blockqoutes</h4>
-<div class="sidebarblock">
-<div class="content">
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">.After landing the cloaked Klingon bird of prey in Golden Gate park:
@@ -1587,9 +1490,9 @@ ____</code></pre>
 Everybody remember where we parked.</code></pre>
 </div>
 </div>
-<div class="exampleblock">
-<div class="title">Example 29. Output</div>
+<div class="sidebarblock">
 <div class="content">
+<div class="title">Output</div>
 <div class="quoteblock">
 <div class="title">After landing the cloaked Klingon bird of prey in Golden Gate park:</div>
 <blockquote>
@@ -1604,12 +1507,8 @@ Everybody remember where we parked.
 </div>
 </div>
 </div>
-</div>
-</div>
 <div class="sect2">
 <h3 id="_sidebar_block">6.7. Sidebar block</h3>
-<div class="sidebarblock">
-<div class="content">
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">.Some Title
@@ -1618,9 +1517,9 @@ This is a Sidebar block -- I have no idea why it&#39;s called `sidebar`
 ****</code></pre>
 </div>
 </div>
-<div class="exampleblock">
-<div class="title">Example 30. Output</div>
+<div class="sidebarblock">
 <div class="content">
+<div class="title">Output</div>
 <div class="sidebarblock">
 <div class="content">
 <div class="title">Some Title</div>
@@ -1632,12 +1531,8 @@ This is a Sidebar block -- I have no idea why it&#39;s called `sidebar`
 </div>
 </div>
 </div>
-</div>
-</div>
 <div class="sect2">
 <h3 id="_block_metadata">6.8. Block metadata</h3>
-<div class="sidebarblock">
-<div class="content">
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">.Gettysburg Address
@@ -1652,9 +1547,9 @@ can long endure. ...
 ----</code></pre>
 </div>
 </div>
-<div class="exampleblock">
-<div class="title">Example 31. Output</div>
+<div class="sidebarblock">
 <div class="content">
+<div class="title">Output</div>
 <div id="gettysburg" class="listingblock">
 <div class="title">Gettysburg Address</div>
 <div class="content">
@@ -1663,8 +1558,6 @@ on this continent a new nation...
 Now we are engaged in a great civil war, testing whether
 that nation, or any nation so conceived and so dedicated,
 can long endure. ...</pre>
-</div>
-</div>
 </div>
 </div>
 </div>
