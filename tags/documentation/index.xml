@@ -25,7 +25,7 @@
 <div class="listingblock">
 <div class="title">Testing <code>include::&lt;path&gt;[]</code> command</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">[source,config]
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">[source,config]
 ----
 include::/home/hos/dev/hossein-lap/void-packages/etc/xbps.d/repos-remote.conf[]
 ----</code></pre>
@@ -34,11 +34,11 @@ include::/home/hos/dev/hossein-lap/void-packages/etc/xbps.d/repos-remote.conf[]
 <div class="listingblock">
 <div class="title">Output</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="config"><span style="color: #505050"># voidlinux remote repositories (glibc)
-</span><span style="color: #d0d0d0;background-color: #151515">repository</span>=<span style="color: #d0d0d0;background-color: #151515">https</span>://<span style="color: #d0d0d0;background-color: #151515">repo</span>-<span style="color: #d0d0d0;background-color: #151515">default</span>.<span style="color: #d0d0d0;background-color: #151515">voidlinux</span>.<span style="color: #d0d0d0;background-color: #151515">org</span>/<span style="color: #d0d0d0;background-color: #151515">current</span>/<span style="color: #d0d0d0;background-color: #151515">bootstrap</span>
-<span style="color: #d0d0d0;background-color: #151515">repository</span>=<span style="color: #d0d0d0;background-color: #151515">https</span>://<span style="color: #d0d0d0;background-color: #151515">repo</span>-<span style="color: #d0d0d0;background-color: #151515">default</span>.<span style="color: #d0d0d0;background-color: #151515">voidlinux</span>.<span style="color: #d0d0d0;background-color: #151515">org</span>/<span style="color: #d0d0d0;background-color: #151515">current</span>
-<span style="color: #d0d0d0;background-color: #151515">repository</span>=<span style="color: #d0d0d0;background-color: #151515">https</span>://<span style="color: #d0d0d0;background-color: #151515">repo</span>-<span style="color: #d0d0d0;background-color: #151515">default</span>.<span style="color: #d0d0d0;background-color: #151515">voidlinux</span>.<span style="color: #d0d0d0;background-color: #151515">org</span>/<span style="color: #d0d0d0;background-color: #151515">current</span>/<span style="color: #d0d0d0;background-color: #151515">nonfree</span>
-<span style="color: #d0d0d0;background-color: #151515">repository</span>=<span style="color: #d0d0d0;background-color: #151515">https</span>://<span style="color: #d0d0d0;background-color: #151515">repo</span>-<span style="color: #d0d0d0;background-color: #151515">default</span>.<span style="color: #d0d0d0;background-color: #151515">voidlinux</span>.<span style="color: #d0d0d0;background-color: #151515">org</span>/<span style="color: #d0d0d0;background-color: #151515">current</span>/<span style="color: #d0d0d0;background-color: #151515">debug</span></code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="config"><span style="color: #585858"># voidlinux remote repositories (glibc)
+</span><span style="color: #d8d8d8;background-color: #181818">repository</span>=<span style="color: #d8d8d8;background-color: #181818">https</span>://<span style="color: #d8d8d8;background-color: #181818">repo</span>-<span style="color: #d8d8d8;background-color: #181818">default</span>.<span style="color: #d8d8d8;background-color: #181818">voidlinux</span>.<span style="color: #d8d8d8;background-color: #181818">org</span>/<span style="color: #d8d8d8;background-color: #181818">current</span>/<span style="color: #d8d8d8;background-color: #181818">bootstrap</span>
+<span style="color: #d8d8d8;background-color: #181818">repository</span>=<span style="color: #d8d8d8;background-color: #181818">https</span>://<span style="color: #d8d8d8;background-color: #181818">repo</span>-<span style="color: #d8d8d8;background-color: #181818">default</span>.<span style="color: #d8d8d8;background-color: #181818">voidlinux</span>.<span style="color: #d8d8d8;background-color: #181818">org</span>/<span style="color: #d8d8d8;background-color: #181818">current</span>
+<span style="color: #d8d8d8;background-color: #181818">repository</span>=<span style="color: #d8d8d8;background-color: #181818">https</span>://<span style="color: #d8d8d8;background-color: #181818">repo</span>-<span style="color: #d8d8d8;background-color: #181818">default</span>.<span style="color: #d8d8d8;background-color: #181818">voidlinux</span>.<span style="color: #d8d8d8;background-color: #181818">org</span>/<span style="color: #d8d8d8;background-color: #181818">current</span>/<span style="color: #d8d8d8;background-color: #181818">nonfree</span>
+<span style="color: #d8d8d8;background-color: #181818">repository</span>=<span style="color: #d8d8d8;background-color: #181818">https</span>://<span style="color: #d8d8d8;background-color: #181818">repo</span>-<span style="color: #d8d8d8;background-color: #181818">default</span>.<span style="color: #d8d8d8;background-color: #181818">voidlinux</span>.<span style="color: #d8d8d8;background-color: #181818">org</span>/<span style="color: #d8d8d8;background-color: #181818">current</span>/<span style="color: #d8d8d8;background-color: #181818">debug</span></code></pre>
 </div>
 </div>
 </div>
@@ -50,7 +50,7 @@ include::/home/hos/dev/hossein-lap/void-packages/etc/xbps.d/repos-remote.conf[]
 <h3 id="_unordered_lists">2.1. Unordered lists</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">* level 1
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">* level 1
 ** level 2
 *** level 3
 **** level 4
@@ -106,7 +106,7 @@ include::/home/hos/dev/hossein-lap/void-packages/etc/xbps.d/repos-remote.conf[]
 <h3 id="_ordered_lists">2.2. Ordered lists</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">. level 1
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">. level 1
 .. level 2
 ... level 3
 .... level 4
@@ -162,7 +162,7 @@ include::/home/hos/dev/hossein-lap/void-packages/etc/xbps.d/repos-remote.conf[]
 <h3 id="_todo_lists">2.3. TODO lists</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">- [*] checked
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">- [*] checked
 - [x] also checked
 - [ ] not checked
 - normal list item</code></pre>
@@ -194,7 +194,7 @@ include::/home/hos/dev/hossein-lap/void-packages/etc/xbps.d/repos-remote.conf[]
 <h3 id="_separating_lists">2.4. Separating lists</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">. Apples
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">. Apples
 . Oranges
 
 //-
@@ -238,7 +238,7 @@ include::/home/hos/dev/hossein-lap/void-packages/etc/xbps.d/repos-remote.conf[]
 <h3 id="_normal_definition_list">3.1. Normal definition list</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">first term:: definition of first term
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">first term:: definition of first term
 section term:: definition of second term</code></pre>
 </div>
 </div>
@@ -264,7 +264,7 @@ section term:: definition of second term</code></pre>
 <h3 id="_horizontal_definition_list">3.2. Horizontal definition list</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">[horizontal]
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">[horizontal]
 first term:: definition of first term
 section term:: definition of second term</code></pre>
 </div>
@@ -299,7 +299,7 @@ section term
 <h3 id="_multi_line_definition_list">3.3. Multi-line definition list</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">first term::
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">first term::
 definition of first term
 section term::
 definition of second term</code></pre>
@@ -327,7 +327,7 @@ definition of second term</code></pre>
 <h3 id="_qa">3.4. Q&amp;A</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">[qanda]
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">[qanda]
 What is Asciidoctor?::
 An implementation of the AsciiDoc processor in Ruby.
 What is the answer to the Ultimate Question?:: 42</code></pre>
@@ -355,7 +355,7 @@ What is the answer to the Ultimate Question?:: 42</code></pre>
 <h3 id="_mixed">3.5. Mixed</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">Operating Systems::
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">Operating Systems::
     Linux:::
         . Fedora
             * Desktop
@@ -483,7 +483,7 @@ Note that the indentation is optional
 <h3 id="_complex_content_in_outline_lists">3.6. Complex content in outline lists</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">* Every list item has at least one paragraph of content,
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">* Every list item has at least one paragraph of content,
   which may be wrapped, even using a hanging indent.
 +
 Additional paragraphs or blocks are adjoined by putting
@@ -576,7 +576,7 @@ a list continuation on a line adjacent to both blocks.</p>
 <h3 id="_external">4.1. External</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">http://asciidoctor.org - automatic!
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">http://asciidoctor.org - automatic!
 
 http://asciidoctor.org[Asciidoctor]
 
@@ -602,7 +602,7 @@ https://github.com/asciidoctor[Asciidoctor @ *GitHub*]</code></pre>
 <h3 id="_relative">4.2. Relative</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">link:test.adoc[Docs]</code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">link:test.adoc[Docs]</code></pre>
 </div>
 </div>
 <div class="sidebarblock">
@@ -618,7 +618,7 @@ https://github.com/asciidoctor[Asciidoctor @ *GitHub*]</code></pre>
 <h3 id="_email_and_irc">4.3. Email and IRC</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">devel@discuss.arquillian.org
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">devel@discuss.arquillian.org
 
 mailto:devel@discuss.arquillian.org[Discuss Arquillian]
 
@@ -649,7 +649,7 @@ irc://irc.freenode.org/#asciidoctor</code></pre>
 <h3 id="_inline_anchors">4.4. Inline anchors</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">[[bookmark-a]]Inline anchors make arbitrary content referenceable.
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">[[bookmark-a]]Inline anchors make arbitrary content referenceable.
 
 anchor:bookmark-b[]Use a cross reference to link to this location.</code></pre>
 </div>
@@ -670,7 +670,7 @@ anchor:bookmark-b[]Use a cross reference to link to this location.</code></pre>
 <h3 id="_internal_cross_references">4.5. Internal cross references</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">See &lt;&lt;paragraphs&gt;&gt; to learn how to write paragraphs.
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">See &lt;&lt;paragraphs&gt;&gt; to learn how to write paragraphs.
 
 Learn how to organize the document into &lt;&lt;section-titles,sections&gt;&gt;.</code></pre>
 </div>
@@ -691,7 +691,7 @@ Learn how to organize the document into &lt;&lt;section-titles,sections&gt;&gt;.
 <h3 id="_images">4.6. Images</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">image::/images/asciidoc/rose.png[]
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">image::/images/asciidoc/rose.png[]
 
 image::/images/asciidoc/rose.png[Rose]
 
@@ -738,7 +738,7 @@ image::http://asciidoctor.org/images/octocat.jpg[GitHub mascot]</code></pre>
 <h3 id="_note">5.1. NOTE</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">NOTE: This is a NOTE!</code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">NOTE: This is a NOTE!</code></pre>
 </div>
 </div>
 <div class="sidebarblock">
@@ -763,7 +763,7 @@ This is a NOTE!
 <h3 id="_tip">5.2. TIP</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">TIP: This is a TIP!</code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">TIP: This is a TIP!</code></pre>
 </div>
 </div>
 <div class="sidebarblock">
@@ -788,7 +788,7 @@ This is a TIP!
 <h3 id="_warning">5.3. WARNING</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">WARNING: This is a WARNING!</code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">WARNING: This is a WARNING!</code></pre>
 </div>
 </div>
 <div class="sidebarblock">
@@ -813,7 +813,7 @@ This is a WARNING!
 <h3 id="_caution">5.4. CAUTION</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">CAUTION: This is a CAUTION!</code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">CAUTION: This is a CAUTION!</code></pre>
 </div>
 </div>
 <div class="sidebarblock">
@@ -838,7 +838,7 @@ This is a CAUTION!
 <h3 id="_important">5.5. IMPORTANT</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">IMPORTANT: This is a IMPORTANT!</code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">IMPORTANT: This is a IMPORTANT!</code></pre>
 </div>
 </div>
 <div class="sidebarblock">
@@ -863,7 +863,7 @@ This is a IMPORTANT!
 <h3 id="_admonition_blocks">5.6. Admonition blocks</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">[NOTE]
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">[NOTE]
 ====
 This is an example of an admonition block.
 Unlike an admonition paragraph, it may contain any AsciiDoc content.
@@ -927,7 +927,7 @@ The style can be any one of the admonition labels:</p>
 <h3 id="_listing_block">6.1. Listing block</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">-----
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">-----
 This is a **_listing block_**
 -----</code></pre>
 </div>
@@ -947,7 +947,7 @@ This is a **_listing block_**
 <h3 id="_example_block">6.2. Example block</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">=====
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">=====
 This is a **_example block_**
 =====</code></pre>
 </div>
@@ -969,7 +969,7 @@ This is a **_example block_**
 <h3 id="_comment_block">6.3. Comment block</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">////
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">////
 This is a **_comment block_**
 ////</code></pre>
 </div>
@@ -985,7 +985,7 @@ This is a **_comment block_**
 <h3 id="_literal_block">6.4. Literal block</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">....
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">....
 This is a **_literal block_**
 ....</code></pre>
 </div>
@@ -1005,7 +1005,7 @@ This is a **_literal block_**
 <h3 id="_pass_block">6.5. Pass block</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">++++
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">++++
 == This is raw text
 ++++</code></pre>
 </div>
@@ -1021,7 +1021,7 @@ This is a **_literal block_**
 <h3 id="_quoteverse_block">6.6. Quote/Verse block</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">____
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">____
 This is a very very simple quote
 ____</code></pre>
 </div>
@@ -1042,7 +1042,7 @@ ____</code></pre>
 <h4 id="_blockqoutes">6.6.1. blockqoutes</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">.After landing the cloaked Klingon bird of prey in Golden Gate park:
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">.After landing the cloaked Klingon bird of prey in Golden Gate park:
 [quote,Captain James T. Kirk,Star Trek IV: The Voyage Home]
 Everybody remember where we parked.</code></pre>
 </div>
@@ -1068,7 +1068,7 @@ Everybody remember where we parked.
 <h3 id="_sidebar_block">6.7. Sidebar block</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">.Some Title
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">.Some Title
 ****
 This is a Sidebar block -- I have no idea why it&#39;s called `sidebar`
 ****</code></pre>
@@ -1092,7 +1092,7 @@ This is a Sidebar block -- I have no idea why it&#39;s called `sidebar`
 <h3 id="_block_metadata">6.8. Block metadata</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="asciidoc">.Gettysburg Address
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="asciidoc">.Gettysburg Address
 [[gettysburg]]
 [quote, Abraham Lincoln, Soldiers&#39; National Cemetery Dedication]
 ----

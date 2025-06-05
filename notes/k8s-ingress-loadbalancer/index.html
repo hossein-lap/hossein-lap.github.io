@@ -45,7 +45,7 @@
 
     
     
-    <link type="text/css" rel="stylesheet" href=https://hossein-lap.github.io/css/styles.c8a491571f2a43ccafd6415deacd1124ef3c8857ef6e4f90ca7bd812e69792cda4750722d4f4bb373e7355724a71d148e868f2f6d3573a0cd87dba0dfc95276a.css integrity="sha512-yKSRVx8qQ8yv1kFd6s0RJO88iFfvbk&#43;QynvYEuaXks2kdQci1PS7Nz5zVXJKcdFI6Gjy9tNXOgzYfboN/JUnag==" />
+    <link type="text/css" rel="stylesheet" href=https://hossein-lap.github.io/css/styles.f63e0782e18c15c9f54a9e84445be85f37b8bd620c1589ff4b52d771c8c0f2537163d411495a64d081b103ae16579891117c9395a5ff0c615d635289bb8032da.css integrity="sha512-9j4HguGMFcn1Sp6ERFvoXze4vWIMFYn/S1LXccjA8lNxY9QRSVpk0IGxA64WV5iREXyTlaX/DGFdY1KJu4Ay2g==" />
 <meta name="author" content="Hossein Esmailzadeh" />
 
     
@@ -452,7 +452,7 @@ e.g <code>kubia-manual</code> pod.</p>
 <div class="listingblock">
 <div class="title">Example:</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>kubectl port-forward kubia-manual 8888:8080</code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="console"><span style="color: #d8d8d8;background-color: #181818">$</span><span style="color: #d8d8d8;background-color: #181818"> </span>kubectl port-forward kubia-manual 8888:8080</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -471,7 +471,7 @@ through the <code>kubectl port-forward</code> proxy running on <code>localhost:8
 <div class="listingblock">
 <div class="title">Example:</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>curl localhost:8888</code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="console"><span style="color: #d8d8d8;background-color: #181818">$</span><span style="color: #d8d8d8;background-color: #181818"> </span>curl localhost:8888</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -508,22 +508,22 @@ created:</p>
 <div class="listingblock">
 <div class="title">Manifest:</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="yaml"><span style="color: #6a9fb5">apiVersion</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">v1</span>
-<span style="color: #6a9fb5">kind</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">Service</span>
-<span style="color: #6a9fb5">metadata</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">kubia</span>
-<span style="color: #6a9fb5">spec</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">ports</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">port</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">80</span> <span style="color: #505050"># service&#39;s port</span>
-    <span style="color: #6a9fb5">targetPort</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">8080</span> <span style="color: #505050"># the forward-to port by service</span>
-  <span style="color: #6a9fb5">selector</span><span style="color: #d0d0d0">:</span> <span style="color: #505050"># all pods labeled `kubia` will follow/select this service</span>
-    <span style="color: #6a9fb5">app</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">kubia</span></code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="yaml"><span style="color: #7cafc2">apiVersion</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">v1</span>
+<span style="color: #7cafc2">kind</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">Service</span>
+<span style="color: #7cafc2">metadata</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #7cafc2">name</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">kubia</span>
+<span style="color: #7cafc2">spec</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #7cafc2">ports</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #d8d8d8">-</span> <span style="color: #7cafc2">port</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">80</span> <span style="color: #585858"># service&#39;s port</span>
+    <span style="color: #7cafc2">targetPort</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">8080</span> <span style="color: #585858"># the forward-to port by service</span>
+  <span style="color: #7cafc2">selector</span><span style="color: #d8d8d8">:</span> <span style="color: #585858"># all pods labeled `kubia` will follow/select this service</span>
+    <span style="color: #7cafc2">app</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">kubia</span></code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="title">Apply the service:</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>kubectl create <span style="color: #f4bf75">-f</span> kubia-srv.yaml</code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="console"><span style="color: #d8d8d8;background-color: #181818">$</span><span style="color: #d8d8d8;background-color: #181818"> </span>kubectl create <span style="color: #f7ca88">-f</span> kubia-srv.yaml</code></pre>
 </div>
 </div>
 </div>
@@ -534,13 +534,13 @@ created:</p>
 <div class="listingblock">
 <div class="title">Template:</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>kubectl expose rc &lt;rep-controller-name&gt; <span style="color: #f4bf75">--type</span><span style="color: #d0d0d0">=</span>LoadBalancer <span style="color: #f4bf75">--name</span> &lt;lb-name&gt;</code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="console"><span style="color: #d8d8d8;background-color: #181818">$</span><span style="color: #d8d8d8;background-color: #181818"> </span>kubectl expose rc &lt;rep-controller-name&gt; <span style="color: #f7ca88">--type</span><span style="color: #d8d8d8">=</span>LoadBalancer <span style="color: #f7ca88">--name</span> &lt;lb-name&gt;</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="title">Expose:</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>kubectl expose rc kubia <span style="color: #f4bf75">--type</span><span style="color: #d0d0d0">=</span>LoadBalancer <span style="color: #f4bf75">--name</span> kubia-http</code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="console"><span style="color: #d8d8d8;background-color: #181818">$</span><span style="color: #d8d8d8;background-color: #181818"> </span>kubectl expose rc kubia <span style="color: #f7ca88">--type</span><span style="color: #d8d8d8">=</span>LoadBalancer <span style="color: #f7ca88">--name</span> kubia-http</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -562,7 +562,7 @@ created:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>kubectl <span style="color: #d0d0d0;background-color: #151515">exec </span>kubia-7nog1 <span style="color: #f4bf75">--</span> curl <span style="color: #f4bf75">-s</span> http://10.111.249.153</code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="console"><span style="color: #d8d8d8;background-color: #181818">$</span><span style="color: #d8d8d8;background-color: #181818"> </span>kubectl <span style="color: #d8d8d8;background-color: #181818">exec </span>kubia-7nog1 <span style="color: #f7ca88">--</span> curl <span style="color: #f7ca88">-s</span> http://10.111.249.153</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -589,11 +589,11 @@ default), as shown in the following listing.</p>
 <div class="listingblock">
 <div class="title">Service with <code>ClientIP</code> Session Affinity Manifest</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="yaml"><span style="color: #6a9fb5">apiVersion</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">v1</span>
-<span style="color: #6a9fb5">kind</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">Service</span>
-<span style="color: #6a9fb5">spec</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">sessionAffinity</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">ClientIP</span>
-  <span style="color: #90a959">...</span></code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="yaml"><span style="color: #7cafc2">apiVersion</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">v1</span>
+<span style="color: #7cafc2">kind</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">Service</span>
+<span style="color: #7cafc2">spec</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #7cafc2">sessionAffinity</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">ClientIP</span>
+  <span style="color: #a1b56c">...</span></code></pre>
 </div>
 </div>
 <div class="ulist">
@@ -616,20 +616,20 @@ explains why session affinity cannot be based on cookies.</p>
 <div class="listingblock">
 <div class="title">Manifest</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="yaml"><span style="color: #6a9fb5">apiVersion</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">v1</span>
-<span style="color: #6a9fb5">kind</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">Service</span>
-<span style="color: #6a9fb5">metadata</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">kubia</span>
-<span style="color: #6a9fb5">spec</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">ports</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">http</span>
-    <span style="color: #6a9fb5">port</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">80</span>
-    <span style="color: #6a9fb5">targetPort</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">8080</span>
-  <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">https</span>
-    <span style="color: #6a9fb5">port</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">443</span>
-    <span style="color: #6a9fb5">targetPort</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">8443</span>
-  <span style="color: #6a9fb5">selector</span><span style="color: #d0d0d0">:</span>
-    <span style="color: #6a9fb5">app</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">kubia</span></code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="yaml"><span style="color: #7cafc2">apiVersion</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">v1</span>
+<span style="color: #7cafc2">kind</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">Service</span>
+<span style="color: #7cafc2">metadata</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #7cafc2">name</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">kubia</span>
+<span style="color: #7cafc2">spec</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #7cafc2">ports</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #d8d8d8">-</span> <span style="color: #7cafc2">name</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">http</span>
+    <span style="color: #7cafc2">port</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">80</span>
+    <span style="color: #7cafc2">targetPort</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">8080</span>
+  <span style="color: #d8d8d8">-</span> <span style="color: #7cafc2">name</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">https</span>
+    <span style="color: #7cafc2">port</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">443</span>
+    <span style="color: #7cafc2">targetPort</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">8443</span>
+  <span style="color: #7cafc2">selector</span><span style="color: #d8d8d8">:</span>
+    <span style="color: #7cafc2">app</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">kubia</span></code></pre>
 </div>
 </div>
 </div>
@@ -641,30 +641,30 @@ explains why session affinity cannot be based on cookies.</p>
 <div class="listingblock">
 <div class="title">Specifying port names in a pod definition Manifest:</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="yaml"><span style="color: #6a9fb5">kind</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">Pod</span>
-<span style="color: #6a9fb5">spec</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">containers</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">kubia</span>
-    <span style="color: #6a9fb5">ports</span><span style="color: #d0d0d0">:</span>
-    <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">http</span>
-      <span style="color: #6a9fb5">containerPort</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">8080</span>
-    <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">https</span>
-      <span style="color: #6a9fb5">containerPort</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">8443</span></code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="yaml"><span style="color: #7cafc2">kind</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">Pod</span>
+<span style="color: #7cafc2">spec</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #7cafc2">containers</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #d8d8d8">-</span> <span style="color: #7cafc2">name</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">kubia</span>
+    <span style="color: #7cafc2">ports</span><span style="color: #d8d8d8">:</span>
+    <span style="color: #d8d8d8">-</span> <span style="color: #7cafc2">name</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">http</span>
+      <span style="color: #7cafc2">containerPort</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">8080</span>
+    <span style="color: #d8d8d8">-</span> <span style="color: #7cafc2">name</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">https</span>
+      <span style="color: #7cafc2">containerPort</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">8443</span></code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="title">Referring to named ports in a service Manifest:</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="yaml"><span style="color: #6a9fb5">apiVersion</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">v1</span>
-<span style="color: #6a9fb5">kind</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">Service</span>
-<span style="color: #6a9fb5">spec</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">ports</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">http</span>
-    <span style="color: #6a9fb5">port</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">80</span>
-    <span style="color: #6a9fb5">targetPort</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">http</span>
-  <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">https</span>
-    <span style="color: #6a9fb5">port</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">443</span>
-    <span style="color: #6a9fb5">targetPort</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">https</span></code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="yaml"><span style="color: #7cafc2">apiVersion</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">v1</span>
+<span style="color: #7cafc2">kind</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">Service</span>
+<span style="color: #7cafc2">spec</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #7cafc2">ports</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #d8d8d8">-</span> <span style="color: #7cafc2">name</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">http</span>
+    <span style="color: #7cafc2">port</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">80</span>
+    <span style="color: #7cafc2">targetPort</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">http</span>
+  <span style="color: #d8d8d8">-</span> <span style="color: #7cafc2">name</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">https</span>
+    <span style="color: #7cafc2">port</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">443</span>
+    <span style="color: #7cafc2">targetPort</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">https</span></code></pre>
 </div>
 </div>
 </div>
@@ -692,7 +692,7 @@ Endpoints resource. You may have already noticed endpoints if you used the
 <div class="listingblock">
 <div class="title">Full details of a service:</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>kubectl describe svc kubia</code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="console"><span style="color: #d8d8d8;background-color: #181818">$</span><span style="color: #d8d8d8;background-color: #181818"> </span>kubectl describe svc kubia</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -717,7 +717,7 @@ resource, so you can display its basic info with kubectl get.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>kubectl get endpoints kubia</code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="console"><span style="color: #d8d8d8;background-color: #181818">$</span><span style="color: #d8d8d8;background-color: #181818"> </span>kubectl get endpoints kubia</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -757,13 +757,13 @@ a Service and an Endpoints resource</p>
 <div class="listingblock">
 <div class="title">A service without a pod selector: <code>external-service.yaml</code></div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="yaml"><span style="color: #6a9fb5">apiVersion</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">v1</span>
-<span style="color: #6a9fb5">kind</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">Service</span>
-<span style="color: #6a9fb5">metadata</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">external-service</span> <span style="color: #505050"># must match the endpoints name</span>
-<span style="color: #6a9fb5">spec</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">ports</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">port</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">80</span></code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="yaml"><span style="color: #7cafc2">apiVersion</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">v1</span>
+<span style="color: #7cafc2">kind</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">Service</span>
+<span style="color: #7cafc2">metadata</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #7cafc2">name</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">external-service</span> <span style="color: #585858"># must match the endpoints name</span>
+<span style="color: #7cafc2">spec</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #7cafc2">ports</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #d8d8d8">-</span> <span style="color: #7cafc2">port</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">80</span></code></pre>
 </div>
 </div>
 <div class="ulist">
@@ -780,16 +780,16 @@ Endpoints resource hasn’t been created automatically</p>
 <div class="listingblock">
 <div class="title">A manually created Endpoints resource: <code>external-service-endpoints.yaml</code></div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="yaml"><span style="color: #6a9fb5">apiVersion</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">v1</span>
-<span style="color: #6a9fb5">kind</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">Endpoints</span>
-<span style="color: #6a9fb5">metadata</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">external-service</span> <span style="color: #505050"># must match the service name</span>
-<span style="color: #6a9fb5">subsets</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">addresses</span><span style="color: #d0d0d0">:</span>
-    <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">ip</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">11.11.11.11</span>
-    <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">ip</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">22.22.22.22</span>
-    <span style="color: #6a9fb5">ports</span><span style="color: #d0d0d0">:</span>
-    <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">port</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">80</span> <span style="color: #505050"># target port of endpoints</span></code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="yaml"><span style="color: #7cafc2">apiVersion</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">v1</span>
+<span style="color: #7cafc2">kind</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">Endpoints</span>
+<span style="color: #7cafc2">metadata</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #7cafc2">name</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">external-service</span> <span style="color: #585858"># must match the service name</span>
+<span style="color: #7cafc2">subsets</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #d8d8d8">-</span> <span style="color: #7cafc2">addresses</span><span style="color: #d8d8d8">:</span>
+    <span style="color: #d8d8d8">-</span> <span style="color: #7cafc2">ip</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">11.11.11.11</span>
+    <span style="color: #d8d8d8">-</span> <span style="color: #7cafc2">ip</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">22.22.22.22</span>
+    <span style="color: #7cafc2">ports</span><span style="color: #d8d8d8">:</span>
+    <span style="color: #d8d8d8">-</span> <span style="color: #7cafc2">port</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">80</span> <span style="color: #585858"># target port of endpoints</span></code></pre>
 </div>
 </div>
 </div>
@@ -867,24 +867,24 @@ cluster IP, but also through any node’s IP and the reserved node port.</p>
 <div class="listingblock">
 <div class="title">A NodePort service definition: <code>kubia-svc-nodeport.yaml</code></div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="yaml"><span style="color: #6a9fb5">apiVersion</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">v1</span>
-<span style="color: #6a9fb5">kind</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">Service</span>
-<span style="color: #6a9fb5">metadata</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">kubia-nodeport</span>
-<span style="color: #6a9fb5">spec</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">type</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">NodePort</span> <span style="color: #505050"># service type</span>
-  <span style="color: #6a9fb5">ports</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">port</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">80</span> <span style="color: #505050"># service&#39;s internal cluster IP port</span>
-    <span style="color: #6a9fb5">targetPort</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">8080</span> <span style="color: #505050"># target port of the backing pods</span>
-    <span style="color: #6a9fb5">nodePort</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">30123</span> <span style="color: #505050"># service will listen on port 30123, each cluster nodes</span>
-  <span style="color: #6a9fb5">selector</span><span style="color: #d0d0d0">:</span>
-    <span style="color: #6a9fb5">app</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">kubia</span></code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="yaml"><span style="color: #7cafc2">apiVersion</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">v1</span>
+<span style="color: #7cafc2">kind</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">Service</span>
+<span style="color: #7cafc2">metadata</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #7cafc2">name</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">kubia-nodeport</span>
+<span style="color: #7cafc2">spec</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #7cafc2">type</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">NodePort</span> <span style="color: #585858"># service type</span>
+  <span style="color: #7cafc2">ports</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #d8d8d8">-</span> <span style="color: #7cafc2">port</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">80</span> <span style="color: #585858"># service&#39;s internal cluster IP port</span>
+    <span style="color: #7cafc2">targetPort</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">8080</span> <span style="color: #585858"># target port of the backing pods</span>
+    <span style="color: #7cafc2">nodePort</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">30123</span> <span style="color: #585858"># service will listen on port 30123, each cluster nodes</span>
+  <span style="color: #7cafc2">selector</span><span style="color: #d8d8d8">:</span>
+    <span style="color: #7cafc2">app</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">kubia</span></code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="title">Examine the NodePort Service:</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>kubectl get svc kubia-nodeport</code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="console"><span style="color: #d8d8d8;background-color: #181818">$</span><span style="color: #d8d8d8;background-color: #181818"> </span>kubectl get svc kubia-nodeport</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -924,8 +924,8 @@ out only the node IP instead of the whole service definition</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>kubectl get nodes <span style="color: #f4bf75">-o</span> <span style="color: #8f5536">\</span>
-<span style="color: #d0d0d0;background-color: #151515">  jsonpath=&#39;{.items[*].status.addresses[?(@.type==&#34;ExternalIP&#34;)].address}&#39;</span></code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="console"><span style="color: #d8d8d8;background-color: #181818">$</span><span style="color: #d8d8d8;background-color: #181818"> </span>kubectl get nodes <span style="color: #f7ca88">-o</span> <span style="color: #a16946">\</span>
+<span style="color: #d8d8d8;background-color: #181818">  jsonpath=&#39;{.items[*].status.addresses[?(@.type==&#34;ExternalIP&#34;)].address}&#39;</span></code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -940,7 +940,7 @@ them.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>curl http://130.211.97.55:30123</code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="console"><span style="color: #d8d8d8;background-color: #181818">$</span><span style="color: #d8d8d8;background-color: #181818"> </span>curl http://130.211.97.55:30123</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -951,7 +951,7 @@ them.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>curl http://130.211.99.206:30123</code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="console"><span style="color: #d8d8d8;background-color: #181818">$</span><span style="color: #d8d8d8;background-color: #181818"> </span>curl http://130.211.99.206:30123</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -985,17 +985,17 @@ as of this writing.</p>
 <div class="listingblock">
 <div class="title">A LoadBalancer-type service: <code>kubia-svc-loadbalancer.yaml</code></div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="yaml"><span style="color: #6a9fb5">apiVersion</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">v1</span>
-<span style="color: #6a9fb5">kind</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">Service</span>
-<span style="color: #6a9fb5">metadata</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">kubia-loadbalancer</span>
-<span style="color: #6a9fb5">spec</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">type</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">LoadBalancer</span>
-  <span style="color: #6a9fb5">ports</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">port</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">80</span>
-    <span style="color: #6a9fb5">targetPort</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">8080</span>
-  <span style="color: #6a9fb5">selector</span><span style="color: #d0d0d0">:</span>
-    <span style="color: #6a9fb5">app</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">kubia</span></code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="yaml"><span style="color: #7cafc2">apiVersion</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">v1</span>
+<span style="color: #7cafc2">kind</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">Service</span>
+<span style="color: #7cafc2">metadata</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #7cafc2">name</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">kubia-loadbalancer</span>
+<span style="color: #7cafc2">spec</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #7cafc2">type</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">LoadBalancer</span>
+  <span style="color: #7cafc2">ports</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #d8d8d8">-</span> <span style="color: #7cafc2">port</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">80</span>
+    <span style="color: #7cafc2">targetPort</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">8080</span>
+  <span style="color: #7cafc2">selector</span><span style="color: #d8d8d8">:</span>
+    <span style="color: #7cafc2">app</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">kubia</span></code></pre>
 </div>
 </div>
 <div class="ulist">
@@ -1010,7 +1010,7 @@ Kubernetes choose one instead).</p>
 <div class="listingblock">
 <div class="title">Connecting to the Service Through the Load Balancer</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>kubectl get svc kubia-loadbalancer</code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="console"><span style="color: #d8d8d8;background-color: #181818">$</span><span style="color: #d8d8d8;background-color: #181818"> </span>kubectl get svc kubia-loadbalancer</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -1066,9 +1066,9 @@ setting the <code>externalTrafficPolicy</code> field in the service’s <code>sp
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="yaml"><span style="color: #6a9fb5">spec</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">externalTrafficPolicy</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">Local</span>
-  <span style="color: #90a959">...</span></code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="yaml"><span style="color: #7cafc2">spec</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #7cafc2">externalTrafficPolicy</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">Local</span>
+  <span style="color: #a1b56c">...</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1128,19 +1128,19 @@ the cluster.</p>
 <div class="listingblock">
 <div class="title">An Ingress resource definition: <code>kubia-ingress.yaml</code></div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="yaml"><span style="color: #6a9fb5">apiVersion</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">extensions/v1beta1</span>
-<span style="color: #6a9fb5">kind</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">Ingress</span>
-<span style="color: #6a9fb5">metadata</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">kubia</span>
-<span style="color: #6a9fb5">spec</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">rules</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">host</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">kubia.example.com</span> <span style="color: #505050">#  maps the domain name to your service</span>
-  <span style="color: #6a9fb5">http</span><span style="color: #d0d0d0">:</span>
-    <span style="color: #6a9fb5">paths</span><span style="color: #d0d0d0">:</span>
-    <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">path</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">/</span>                        <span style="color: #505050"># All requests will be sent to port 80</span>
-      <span style="color: #6a9fb5">backend</span><span style="color: #d0d0d0">:</span>                       <span style="color: #505050"># of the kubia-nodeport service.</span>
-        <span style="color: #6a9fb5">serviceName</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">kubia-nodeport</span>  <span style="color: #505050">#</span>
-        <span style="color: #6a9fb5">servicePort</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">80</span>              <span style="color: #505050">#</span></code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="yaml"><span style="color: #7cafc2">apiVersion</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">extensions/v1beta1</span>
+<span style="color: #7cafc2">kind</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">Ingress</span>
+<span style="color: #7cafc2">metadata</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #7cafc2">name</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">kubia</span>
+<span style="color: #7cafc2">spec</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #7cafc2">rules</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #d8d8d8">-</span> <span style="color: #7cafc2">host</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">kubia.example.com</span> <span style="color: #585858">#  maps the domain name to your service</span>
+  <span style="color: #7cafc2">http</span><span style="color: #d8d8d8">:</span>
+    <span style="color: #7cafc2">paths</span><span style="color: #d8d8d8">:</span>
+    <span style="color: #d8d8d8">-</span> <span style="color: #7cafc2">path</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">/</span>                        <span style="color: #585858"># All requests will be sent to port 80</span>
+      <span style="color: #7cafc2">backend</span><span style="color: #d8d8d8">:</span>                       <span style="color: #585858"># of the kubia-nodeport service.</span>
+        <span style="color: #7cafc2">serviceName</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">kubia-nodeport</span>  <span style="color: #585858">#</span>
+        <span style="color: #7cafc2">servicePort</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">80</span>              <span style="color: #585858">#</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1172,7 +1172,7 @@ the domain name resolves to the IP of the Ingress controller</p>
 <div class="listingblock">
 <div class="title">Obtaining the ip Address of the Ingress:</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>kubectl get ingresses</code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="console"><span style="color: #d8d8d8;background-color: #181818">$</span><span style="color: #d8d8d8;background-color: #181818"> </span>kubectl get ingresses</code></pre>
 </div>
 </div>
 <div class="literalblock">

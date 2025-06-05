@@ -99,7 +99,7 @@ well-known examples of Unix-type container technologies.</p>
 <div class="listingblock">
 <div class="title">Pulling an image</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="bash">docker image pull ubuntu:latest</code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="bash">docker image pull ubuntu:latest</code></pre>
 </div>
 </div>
 <div class="sect2">
@@ -114,14 +114,14 @@ will run in it</em>.</p>
 <div class="listingblock">
 <div class="title">Dockerfile — Simple webapp</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="dockerfile"><span style="color: #aa759f">FROM</span><span style="color: #90a959"> alpine</span>
-<span style="color: #aa759f">LABEL</span><span style="color: #90a959"> maintainer=&#34;example@mail.com&#34;</span>
-<span style="color: #aa759f">RUN </span>apk add <span style="color: #f4bf75">--update</span> nodejs nodejs-npm
-<span style="color: #aa759f">COPY</span><span style="color: #90a959"> . /src</span>
-<span style="color: #aa759f">WORKDIR</span><span style="color: #90a959"> /src</span>
-<span style="color: #aa759f">RUN </span>npm <span style="color: #d0d0d0;background-color: #151515">install</span>
-<span style="color: #aa759f">EXPOSE</span><span style="color: #90a959"> 8080</span>
-<span style="color: #aa759f">ENTRYPOINT</span><span style="color: #90a959"> [&#34;node&#34;, &#34;./app.js&#34;]</span></code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="dockerfile"><span style="color: #ba8baf">FROM</span><span style="color: #a1b56c"> alpine</span>
+<span style="color: #ba8baf">LABEL</span><span style="color: #a1b56c"> maintainer=&#34;example@mail.com&#34;</span>
+<span style="color: #ba8baf">RUN </span>apk add <span style="color: #f7ca88">--update</span> nodejs nodejs-npm
+<span style="color: #ba8baf">COPY</span><span style="color: #a1b56c"> . /src</span>
+<span style="color: #ba8baf">WORKDIR</span><span style="color: #a1b56c"> /src</span>
+<span style="color: #ba8baf">RUN </span>npm <span style="color: #d8d8d8;background-color: #181818">install</span>
+<span style="color: #ba8baf">EXPOSE</span><span style="color: #a1b56c"> 8080</span>
+<span style="color: #ba8baf">ENTRYPOINT</span><span style="color: #a1b56c"> [&#34;node&#34;, &#34;./app.js&#34;]</span></code></pre>
 </div>
 </div>
 <div class="exampleblock">
@@ -178,7 +178,7 @@ will run in it</em>.</p>
 <div class="listingblock">
 <div class="title">Dockerfile — Build image</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="bash">docker buildx build <span style="color: #f4bf75">-f</span> Dockerfile <span style="color: #f4bf75">-t</span> test-name .</code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="bash">docker buildx build <span style="color: #f7ca88">-f</span> Dockerfile <span style="color: #f7ca88">-t</span> test-name .</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -205,7 +205,7 @@ will run in it</em>.</p>
 <div class="listingblock">
 <div class="title">Docker CLI — Get list of images</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="bash">docker image <span style="color: #d0d0d0;background-color: #151515">ls</span></code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="bash">docker image <span style="color: #d8d8d8;background-color: #181818">ls</span></code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -217,7 +217,7 @@ test                   latest            1825da98372a   6 minutes ago   95.4MB</
 <div class="listingblock">
 <div class="title">Docker CLI — Run an image/container</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="bash">docker container run <span style="color: #f4bf75">-d</span> <span style="color: #f4bf75">--name</span> web1 <span style="color: #f4bf75">--publish</span> 8080:8080 <span style="color: #d0d0d0;background-color: #151515">test</span>:latest</code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="bash">docker container run <span style="color: #f7ca88">-d</span> <span style="color: #f7ca88">--name</span> web1 <span style="color: #f7ca88">--publish</span> 8080:8080 <span style="color: #d8d8d8;background-color: #181818">test</span>:latest</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -230,7 +230,7 @@ test                   latest            1825da98372a   6 minutes ago   95.4MB</
 <div class="listingblock">
 <div class="title">Docker CLI — Get list of running images/containers</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="bash">docker ps</code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="bash">docker ps</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -247,41 +247,41 @@ test                   latest            1825da98372a   6 minutes ago   95.4MB</
 <div class="listingblock">
 <div class="title">Multi-stage Dockerfile</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="docker"><span style="color: #505050"># pull golang image to build the app</span>
-<span style="color: #aa759f">FROM</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">golang:alpine</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #aa759f">as</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">builder</span>
-<span style="color: #505050"># add a label</span>
-<span style="color: #aa759f">LABEL</span><span style="color: #90a959"> maintainer=&#34;Hossein Esmailzadeh &lt;hosteam01@gmail.com&gt;&#34;</span>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="docker"><span style="color: #585858"># pull golang image to build the app</span>
+<span style="color: #ba8baf">FROM</span><span style="color: #d8d8d8;background-color: #181818"> </span><span style="color: #a1b56c">golang:alpine</span><span style="color: #d8d8d8;background-color: #181818"> </span><span style="color: #ba8baf">as</span><span style="color: #d8d8d8;background-color: #181818"> </span><span style="color: #a1b56c">builder</span>
+<span style="color: #585858"># add a label</span>
+<span style="color: #ba8baf">LABEL</span><span style="color: #a1b56c"> maintainer=&#34;Hossein Esmailzadeh &lt;hosteam01@gmail.com&gt;&#34;</span>
 
-<span style="color: #505050">## inside golang:alpine image</span>
-<span style="color: #505050"># change the working directory</span>
-<span style="color: #aa759f">WORKDIR</span><span style="color: #90a959"> /app</span>
+<span style="color: #585858">## inside golang:alpine image</span>
+<span style="color: #585858"># change the working directory</span>
+<span style="color: #ba8baf">WORKDIR</span><span style="color: #a1b56c"> /app</span>
 
-<span style="color: #505050"># copy golang&#39;s related files (checksum and module files)</span>
-<span style="color: #aa759f">COPY</span><span style="color: #90a959"> go.mod go.sum ./</span>
-<span style="color: #505050"># get the needed modules</span>
-<span style="color: #aa759f">RUN </span>go mod download
-<span style="color: #505050"># copy the source code</span>
-<span style="color: #aa759f">COPY</span><span style="color: #90a959"> . .</span>
+<span style="color: #585858"># copy golang&#39;s related files (checksum and module files)</span>
+<span style="color: #ba8baf">COPY</span><span style="color: #a1b56c"> go.mod go.sum ./</span>
+<span style="color: #585858"># get the needed modules</span>
+<span style="color: #ba8baf">RUN </span>go mod download
+<span style="color: #585858"># copy the source code</span>
+<span style="color: #ba8baf">COPY</span><span style="color: #a1b56c"> . .</span>
 
-<span style="color: #505050"># compile the app</span>
-<span style="color: #aa759f">RUN </span><span style="color: #d0d0d0;background-color: #151515">CGO_ENABLED</span><span style="color: #d0d0d0">=</span>0 <span style="color: #d0d0d0;background-color: #151515">GOOS</span><span style="color: #d0d0d0">=</span>linux go build <span style="color: #f4bf75">-a</span> <span style="color: #f4bf75">-installsuffix</span> cgo <span style="color: #f4bf75">-o</span> main .
+<span style="color: #585858"># compile the app</span>
+<span style="color: #ba8baf">RUN </span><span style="color: #d8d8d8;background-color: #181818">CGO_ENABLED</span><span style="color: #d8d8d8">=</span>0 <span style="color: #d8d8d8;background-color: #181818">GOOS</span><span style="color: #d8d8d8">=</span>linux go build <span style="color: #f7ca88">-a</span> <span style="color: #f7ca88">-installsuffix</span> cgo <span style="color: #f7ca88">-o</span> main .
 
-<span style="color: #505050">## inside our image</span>
-<span style="color: #505050"># use a alpine (very small OS) image as base</span>
-<span style="color: #aa759f">FROM</span><span style="color: #90a959"> alpine:latest</span>
+<span style="color: #585858">## inside our image</span>
+<span style="color: #585858"># use a alpine (very small OS) image as base</span>
+<span style="color: #ba8baf">FROM</span><span style="color: #a1b56c"> alpine:latest</span>
 
-<span style="color: #505050"># install dependencies</span>
-<span style="color: #aa759f">RUN </span>apk <span style="color: #f4bf75">--no-cache</span> add ca-certificates
-<span style="color: #505050"># change the working directory</span>
-<span style="color: #aa759f">WORKDIR</span><span style="color: #90a959"> /root/</span>
-<span style="color: #505050"># copy the built binary from the golang:alpine image inside our container</span>
-<span style="color: #aa759f">COPY</span><span style="color: #90a959"> --from=builder /app/main .</span>
+<span style="color: #585858"># install dependencies</span>
+<span style="color: #ba8baf">RUN </span>apk <span style="color: #f7ca88">--no-cache</span> add ca-certificates
+<span style="color: #585858"># change the working directory</span>
+<span style="color: #ba8baf">WORKDIR</span><span style="color: #a1b56c"> /root/</span>
+<span style="color: #585858"># copy the built binary from the golang:alpine image inside our container</span>
+<span style="color: #ba8baf">COPY</span><span style="color: #a1b56c"> --from=builder /app/main .</span>
 
-<span style="color: #505050"># let port 9090 to be accessible for others</span>
-<span style="color: #aa759f">EXPOSE</span><span style="color: #90a959"> 9090</span>
+<span style="color: #585858"># let port 9090 to be accessible for others</span>
+<span style="color: #ba8baf">EXPOSE</span><span style="color: #a1b56c"> 9090</span>
 
-<span style="color: #505050"># run the binary at the end</span>
-<span style="color: #aa759f">CMD</span><span style="color: #90a959"> [&#34;./main&#34;]</span></code></pre>
+<span style="color: #585858"># run the binary at the end</span>
+<span style="color: #ba8baf">CMD</span><span style="color: #a1b56c"> [&#34;./main&#34;]</span></code></pre>
 </div>
 </div>
 </div>

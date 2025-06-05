@@ -212,7 +212,7 @@ migrations.</p>
 <div class="title">Example: Makefile targets for working with sqlite</div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="Makefile">## db/connect: create to the local database
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="Makefile">## db/connect: create to the local database
 .PHONY: db/connect
 db/connect:
     sqlite3 db.sqlite
@@ -289,7 +289,7 @@ name in your terminal. For example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="bash">make tidy</code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="bash">make tidy</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -304,7 +304,7 @@ target) then you’ll get a description of the available targets.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="bash">make <span style="color: #d0d0d0;background-color: #151515">help</span></code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="bash">make <span style="color: #d8d8d8;background-color: #181818">help</span></code></pre>
 </div>
 </div>
 <div class="literalblock">

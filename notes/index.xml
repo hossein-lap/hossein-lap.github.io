@@ -212,7 +212,7 @@ migrations.</p>
 <div class="title">Example: Makefile targets for working with sqlite</div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="Makefile">## db/connect: create to the local database
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="Makefile">## db/connect: create to the local database
 .PHONY: db/connect
 db/connect:
     sqlite3 db.sqlite
@@ -289,7 +289,7 @@ name in your terminal. For example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="bash">make tidy</code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="bash">make tidy</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -304,7 +304,7 @@ target) then you’ll get a description of the available targets.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="bash">make <span style="color: #d0d0d0;background-color: #151515">help</span></code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="bash">make <span style="color: #d8d8d8;background-color: #181818">help</span></code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -354,25 +354,25 @@ target) then you’ll get a description of the available targets.</p>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="bash"><span style="color: #505050">#!/bin/sh</span>
-<span style="color: #505050"># colors</span>
-<span style="color: #d0d0d0;background-color: #151515">blue</span><span style="color: #d0d0d0">=</span><span style="color: #8f5536">$(</span>tput setaf 4<span style="color: #8f5536">)</span>
-<span style="color: #d0d0d0;background-color: #151515">cyan</span><span style="color: #d0d0d0">=</span><span style="color: #8f5536">$(</span>tput setaf 6<span style="color: #8f5536">)</span>
-<span style="color: #d0d0d0;background-color: #151515">magenta</span><span style="color: #d0d0d0">=</span><span style="color: #8f5536">$(</span>tput setaf 5<span style="color: #8f5536">)</span>
-<span style="color: #d0d0d0;background-color: #151515">yellow</span><span style="color: #d0d0d0">=</span><span style="color: #8f5536">$(</span>tput setaf 3<span style="color: #8f5536">)</span>
-<span style="color: #d0d0d0;background-color: #151515">green</span><span style="color: #d0d0d0">=</span><span style="color: #8f5536">$(</span>tput setaf 2<span style="color: #8f5536">)</span>
-<span style="color: #d0d0d0;background-color: #151515">red</span><span style="color: #d0d0d0">=</span><span style="color: #8f5536">$(</span>tput setaf 1<span style="color: #8f5536">)</span>
-<span style="color: #d0d0d0;background-color: #151515">normal</span><span style="color: #d0d0d0">=</span><span style="color: #8f5536">$(</span>tput sgr0<span style="color: #8f5536">)</span>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="bash"><span style="color: #585858">#!/bin/sh</span>
+<span style="color: #585858"># colors</span>
+<span style="color: #d8d8d8;background-color: #181818">blue</span><span style="color: #d8d8d8">=</span><span style="color: #a16946">$(</span>tput setaf 4<span style="color: #a16946">)</span>
+<span style="color: #d8d8d8;background-color: #181818">cyan</span><span style="color: #d8d8d8">=</span><span style="color: #a16946">$(</span>tput setaf 6<span style="color: #a16946">)</span>
+<span style="color: #d8d8d8;background-color: #181818">magenta</span><span style="color: #d8d8d8">=</span><span style="color: #a16946">$(</span>tput setaf 5<span style="color: #a16946">)</span>
+<span style="color: #d8d8d8;background-color: #181818">yellow</span><span style="color: #d8d8d8">=</span><span style="color: #a16946">$(</span>tput setaf 3<span style="color: #a16946">)</span>
+<span style="color: #d8d8d8;background-color: #181818">green</span><span style="color: #d8d8d8">=</span><span style="color: #a16946">$(</span>tput setaf 2<span style="color: #a16946">)</span>
+<span style="color: #d8d8d8;background-color: #181818">red</span><span style="color: #d8d8d8">=</span><span style="color: #a16946">$(</span>tput setaf 1<span style="color: #a16946">)</span>
+<span style="color: #d8d8d8;background-color: #181818">normal</span><span style="color: #d8d8d8">=</span><span style="color: #a16946">$(</span>tput sgr0<span style="color: #a16946">)</span>
 
-check<span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #aa759f">if</span> <span style="color: #d0d0d0">[</span> <span style="color: #90a959">&#34;</span><span style="color: #aa759f">${</span><span style="color: #d0d0d0">?</span><span style="color: #aa759f">}</span><span style="color: #90a959">&#34;</span> <span style="color: #d0d0d0">=</span> <span style="color: #90a959">&#39;0&#39;</span> <span style="color: #d0d0d0">]</span><span style="color: #d0d0d0">;</span> <span style="color: #aa759f">then
-        </span><span style="color: #d0d0d0;background-color: #151515">printf</span> <span style="color: #90a959">&#34;</span><span style="color: #aa759f">${</span><span style="color: #d0d0d0;background-color: #151515">green</span><span style="color: #aa759f">}</span><span style="color: #90a959">Done</span><span style="color: #aa759f">${</span><span style="color: #d0d0d0;background-color: #151515">normal</span><span style="color: #aa759f">}</span><span style="color: #90a959">&#34;</span>
-        <span style="color: #d0d0d0;background-color: #151515">printf</span> <span style="color: #90a959">&#39;\n&#39;</span>
-    <span style="color: #aa759f">else
-        </span><span style="color: #d0d0d0;background-color: #151515">printf</span> <span style="color: #90a959">&#34;</span><span style="color: #aa759f">${</span><span style="color: #d0d0d0;background-color: #151515">red</span><span style="color: #aa759f">}</span><span style="color: #90a959">Fail</span><span style="color: #aa759f">${</span><span style="color: #d0d0d0;background-color: #151515">normal</span><span style="color: #aa759f">}</span><span style="color: #90a959">&#34;</span>
-        <span style="color: #d0d0d0;background-color: #151515">printf</span> <span style="color: #90a959">&#39;\n&#39;</span>
-    <span style="color: #aa759f">fi</span>
-<span style="color: #d0d0d0">}</span>
+check<span style="color: #d8d8d8">()</span> <span style="color: #d8d8d8">{</span>
+    <span style="color: #ba8baf">if</span> <span style="color: #d8d8d8">[</span> <span style="color: #a1b56c">&#34;</span><span style="color: #ba8baf">${</span><span style="color: #d8d8d8">?</span><span style="color: #ba8baf">}</span><span style="color: #a1b56c">&#34;</span> <span style="color: #d8d8d8">=</span> <span style="color: #a1b56c">&#39;0&#39;</span> <span style="color: #d8d8d8">]</span><span style="color: #d8d8d8">;</span> <span style="color: #ba8baf">then
+        </span><span style="color: #d8d8d8;background-color: #181818">printf</span> <span style="color: #a1b56c">&#34;</span><span style="color: #ba8baf">${</span><span style="color: #d8d8d8;background-color: #181818">green</span><span style="color: #ba8baf">}</span><span style="color: #a1b56c">Done</span><span style="color: #ba8baf">${</span><span style="color: #d8d8d8;background-color: #181818">normal</span><span style="color: #ba8baf">}</span><span style="color: #a1b56c">&#34;</span>
+        <span style="color: #d8d8d8;background-color: #181818">printf</span> <span style="color: #a1b56c">&#39;\n&#39;</span>
+    <span style="color: #ba8baf">else
+        </span><span style="color: #d8d8d8;background-color: #181818">printf</span> <span style="color: #a1b56c">&#34;</span><span style="color: #ba8baf">${</span><span style="color: #d8d8d8;background-color: #181818">red</span><span style="color: #ba8baf">}</span><span style="color: #a1b56c">Fail</span><span style="color: #ba8baf">${</span><span style="color: #d8d8d8;background-color: #181818">normal</span><span style="color: #ba8baf">}</span><span style="color: #a1b56c">&#34;</span>
+        <span style="color: #d8d8d8;background-color: #181818">printf</span> <span style="color: #a1b56c">&#39;\n&#39;</span>
+    <span style="color: #ba8baf">fi</span>
+<span style="color: #d8d8d8">}</span>
 
 check</code></pre>
 </div>
@@ -430,7 +430,7 @@ e.g <code>kubia-manual</code> pod.</p>
 <div class="listingblock">
 <div class="title">Example:</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>kubectl port-forward kubia-manual 8888:8080</code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="console"><span style="color: #d8d8d8;background-color: #181818">$</span><span style="color: #d8d8d8;background-color: #181818"> </span>kubectl port-forward kubia-manual 8888:8080</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -449,7 +449,7 @@ through the <code>kubectl port-forward</code> proxy running on <code>localhost:8
 <div class="listingblock">
 <div class="title">Example:</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>curl localhost:8888</code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="console"><span style="color: #d8d8d8;background-color: #181818">$</span><span style="color: #d8d8d8;background-color: #181818"> </span>curl localhost:8888</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -486,22 +486,22 @@ created:</p>
 <div class="listingblock">
 <div class="title">Manifest:</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="yaml"><span style="color: #6a9fb5">apiVersion</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">v1</span>
-<span style="color: #6a9fb5">kind</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">Service</span>
-<span style="color: #6a9fb5">metadata</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">kubia</span>
-<span style="color: #6a9fb5">spec</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">ports</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">port</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">80</span> <span style="color: #505050"># service&#39;s port</span>
-    <span style="color: #6a9fb5">targetPort</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">8080</span> <span style="color: #505050"># the forward-to port by service</span>
-  <span style="color: #6a9fb5">selector</span><span style="color: #d0d0d0">:</span> <span style="color: #505050"># all pods labeled `kubia` will follow/select this service</span>
-    <span style="color: #6a9fb5">app</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">kubia</span></code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="yaml"><span style="color: #7cafc2">apiVersion</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">v1</span>
+<span style="color: #7cafc2">kind</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">Service</span>
+<span style="color: #7cafc2">metadata</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #7cafc2">name</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">kubia</span>
+<span style="color: #7cafc2">spec</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #7cafc2">ports</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #d8d8d8">-</span> <span style="color: #7cafc2">port</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">80</span> <span style="color: #585858"># service&#39;s port</span>
+    <span style="color: #7cafc2">targetPort</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">8080</span> <span style="color: #585858"># the forward-to port by service</span>
+  <span style="color: #7cafc2">selector</span><span style="color: #d8d8d8">:</span> <span style="color: #585858"># all pods labeled `kubia` will follow/select this service</span>
+    <span style="color: #7cafc2">app</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">kubia</span></code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="title">Apply the service:</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>kubectl create <span style="color: #f4bf75">-f</span> kubia-srv.yaml</code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="console"><span style="color: #d8d8d8;background-color: #181818">$</span><span style="color: #d8d8d8;background-color: #181818"> </span>kubectl create <span style="color: #f7ca88">-f</span> kubia-srv.yaml</code></pre>
 </div>
 </div>
 </div>
@@ -512,13 +512,13 @@ created:</p>
 <div class="listingblock">
 <div class="title">Template:</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>kubectl expose rc &lt;rep-controller-name&gt; <span style="color: #f4bf75">--type</span><span style="color: #d0d0d0">=</span>LoadBalancer <span style="color: #f4bf75">--name</span> &lt;lb-name&gt;</code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="console"><span style="color: #d8d8d8;background-color: #181818">$</span><span style="color: #d8d8d8;background-color: #181818"> </span>kubectl expose rc &lt;rep-controller-name&gt; <span style="color: #f7ca88">--type</span><span style="color: #d8d8d8">=</span>LoadBalancer <span style="color: #f7ca88">--name</span> &lt;lb-name&gt;</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="title">Expose:</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>kubectl expose rc kubia <span style="color: #f4bf75">--type</span><span style="color: #d0d0d0">=</span>LoadBalancer <span style="color: #f4bf75">--name</span> kubia-http</code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="console"><span style="color: #d8d8d8;background-color: #181818">$</span><span style="color: #d8d8d8;background-color: #181818"> </span>kubectl expose rc kubia <span style="color: #f7ca88">--type</span><span style="color: #d8d8d8">=</span>LoadBalancer <span style="color: #f7ca88">--name</span> kubia-http</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -540,7 +540,7 @@ created:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>kubectl <span style="color: #d0d0d0;background-color: #151515">exec </span>kubia-7nog1 <span style="color: #f4bf75">--</span> curl <span style="color: #f4bf75">-s</span> http://10.111.249.153</code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="console"><span style="color: #d8d8d8;background-color: #181818">$</span><span style="color: #d8d8d8;background-color: #181818"> </span>kubectl <span style="color: #d8d8d8;background-color: #181818">exec </span>kubia-7nog1 <span style="color: #f7ca88">--</span> curl <span style="color: #f7ca88">-s</span> http://10.111.249.153</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -567,11 +567,11 @@ default), as shown in the following listing.</p>
 <div class="listingblock">
 <div class="title">Service with <code>ClientIP</code> Session Affinity Manifest</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="yaml"><span style="color: #6a9fb5">apiVersion</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">v1</span>
-<span style="color: #6a9fb5">kind</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">Service</span>
-<span style="color: #6a9fb5">spec</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">sessionAffinity</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">ClientIP</span>
-  <span style="color: #90a959">...</span></code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="yaml"><span style="color: #7cafc2">apiVersion</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">v1</span>
+<span style="color: #7cafc2">kind</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">Service</span>
+<span style="color: #7cafc2">spec</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #7cafc2">sessionAffinity</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">ClientIP</span>
+  <span style="color: #a1b56c">...</span></code></pre>
 </div>
 </div>
 <div class="ulist">
@@ -594,20 +594,20 @@ explains why session affinity cannot be based on cookies.</p>
 <div class="listingblock">
 <div class="title">Manifest</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="yaml"><span style="color: #6a9fb5">apiVersion</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">v1</span>
-<span style="color: #6a9fb5">kind</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">Service</span>
-<span style="color: #6a9fb5">metadata</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">kubia</span>
-<span style="color: #6a9fb5">spec</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">ports</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">http</span>
-    <span style="color: #6a9fb5">port</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">80</span>
-    <span style="color: #6a9fb5">targetPort</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">8080</span>
-  <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">https</span>
-    <span style="color: #6a9fb5">port</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">443</span>
-    <span style="color: #6a9fb5">targetPort</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">8443</span>
-  <span style="color: #6a9fb5">selector</span><span style="color: #d0d0d0">:</span>
-    <span style="color: #6a9fb5">app</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">kubia</span></code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="yaml"><span style="color: #7cafc2">apiVersion</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">v1</span>
+<span style="color: #7cafc2">kind</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">Service</span>
+<span style="color: #7cafc2">metadata</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #7cafc2">name</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">kubia</span>
+<span style="color: #7cafc2">spec</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #7cafc2">ports</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #d8d8d8">-</span> <span style="color: #7cafc2">name</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">http</span>
+    <span style="color: #7cafc2">port</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">80</span>
+    <span style="color: #7cafc2">targetPort</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">8080</span>
+  <span style="color: #d8d8d8">-</span> <span style="color: #7cafc2">name</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">https</span>
+    <span style="color: #7cafc2">port</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">443</span>
+    <span style="color: #7cafc2">targetPort</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">8443</span>
+  <span style="color: #7cafc2">selector</span><span style="color: #d8d8d8">:</span>
+    <span style="color: #7cafc2">app</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">kubia</span></code></pre>
 </div>
 </div>
 </div>
@@ -619,30 +619,30 @@ explains why session affinity cannot be based on cookies.</p>
 <div class="listingblock">
 <div class="title">Specifying port names in a pod definition Manifest:</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="yaml"><span style="color: #6a9fb5">kind</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">Pod</span>
-<span style="color: #6a9fb5">spec</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">containers</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">kubia</span>
-    <span style="color: #6a9fb5">ports</span><span style="color: #d0d0d0">:</span>
-    <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">http</span>
-      <span style="color: #6a9fb5">containerPort</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">8080</span>
-    <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">https</span>
-      <span style="color: #6a9fb5">containerPort</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">8443</span></code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="yaml"><span style="color: #7cafc2">kind</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">Pod</span>
+<span style="color: #7cafc2">spec</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #7cafc2">containers</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #d8d8d8">-</span> <span style="color: #7cafc2">name</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">kubia</span>
+    <span style="color: #7cafc2">ports</span><span style="color: #d8d8d8">:</span>
+    <span style="color: #d8d8d8">-</span> <span style="color: #7cafc2">name</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">http</span>
+      <span style="color: #7cafc2">containerPort</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">8080</span>
+    <span style="color: #d8d8d8">-</span> <span style="color: #7cafc2">name</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">https</span>
+      <span style="color: #7cafc2">containerPort</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">8443</span></code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="title">Referring to named ports in a service Manifest:</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="yaml"><span style="color: #6a9fb5">apiVersion</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">v1</span>
-<span style="color: #6a9fb5">kind</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">Service</span>
-<span style="color: #6a9fb5">spec</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">ports</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">http</span>
-    <span style="color: #6a9fb5">port</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">80</span>
-    <span style="color: #6a9fb5">targetPort</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">http</span>
-  <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">https</span>
-    <span style="color: #6a9fb5">port</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">443</span>
-    <span style="color: #6a9fb5">targetPort</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">https</span></code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="yaml"><span style="color: #7cafc2">apiVersion</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">v1</span>
+<span style="color: #7cafc2">kind</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">Service</span>
+<span style="color: #7cafc2">spec</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #7cafc2">ports</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #d8d8d8">-</span> <span style="color: #7cafc2">name</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">http</span>
+    <span style="color: #7cafc2">port</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">80</span>
+    <span style="color: #7cafc2">targetPort</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">http</span>
+  <span style="color: #d8d8d8">-</span> <span style="color: #7cafc2">name</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">https</span>
+    <span style="color: #7cafc2">port</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">443</span>
+    <span style="color: #7cafc2">targetPort</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">https</span></code></pre>
 </div>
 </div>
 </div>
@@ -670,7 +670,7 @@ Endpoints resource. You may have already noticed endpoints if you used the
 <div class="listingblock">
 <div class="title">Full details of a service:</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>kubectl describe svc kubia</code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="console"><span style="color: #d8d8d8;background-color: #181818">$</span><span style="color: #d8d8d8;background-color: #181818"> </span>kubectl describe svc kubia</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -695,7 +695,7 @@ resource, so you can display its basic info with kubectl get.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>kubectl get endpoints kubia</code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="console"><span style="color: #d8d8d8;background-color: #181818">$</span><span style="color: #d8d8d8;background-color: #181818"> </span>kubectl get endpoints kubia</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -735,13 +735,13 @@ a Service and an Endpoints resource</p>
 <div class="listingblock">
 <div class="title">A service without a pod selector: <code>external-service.yaml</code></div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="yaml"><span style="color: #6a9fb5">apiVersion</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">v1</span>
-<span style="color: #6a9fb5">kind</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">Service</span>
-<span style="color: #6a9fb5">metadata</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">external-service</span> <span style="color: #505050"># must match the endpoints name</span>
-<span style="color: #6a9fb5">spec</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">ports</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">port</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">80</span></code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="yaml"><span style="color: #7cafc2">apiVersion</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">v1</span>
+<span style="color: #7cafc2">kind</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">Service</span>
+<span style="color: #7cafc2">metadata</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #7cafc2">name</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">external-service</span> <span style="color: #585858"># must match the endpoints name</span>
+<span style="color: #7cafc2">spec</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #7cafc2">ports</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #d8d8d8">-</span> <span style="color: #7cafc2">port</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">80</span></code></pre>
 </div>
 </div>
 <div class="ulist">
@@ -758,16 +758,16 @@ Endpoints resource hasn’t been created automatically</p>
 <div class="listingblock">
 <div class="title">A manually created Endpoints resource: <code>external-service-endpoints.yaml</code></div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="yaml"><span style="color: #6a9fb5">apiVersion</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">v1</span>
-<span style="color: #6a9fb5">kind</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">Endpoints</span>
-<span style="color: #6a9fb5">metadata</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">external-service</span> <span style="color: #505050"># must match the service name</span>
-<span style="color: #6a9fb5">subsets</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">addresses</span><span style="color: #d0d0d0">:</span>
-    <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">ip</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">11.11.11.11</span>
-    <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">ip</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">22.22.22.22</span>
-    <span style="color: #6a9fb5">ports</span><span style="color: #d0d0d0">:</span>
-    <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">port</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">80</span> <span style="color: #505050"># target port of endpoints</span></code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="yaml"><span style="color: #7cafc2">apiVersion</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">v1</span>
+<span style="color: #7cafc2">kind</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">Endpoints</span>
+<span style="color: #7cafc2">metadata</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #7cafc2">name</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">external-service</span> <span style="color: #585858"># must match the service name</span>
+<span style="color: #7cafc2">subsets</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #d8d8d8">-</span> <span style="color: #7cafc2">addresses</span><span style="color: #d8d8d8">:</span>
+    <span style="color: #d8d8d8">-</span> <span style="color: #7cafc2">ip</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">11.11.11.11</span>
+    <span style="color: #d8d8d8">-</span> <span style="color: #7cafc2">ip</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">22.22.22.22</span>
+    <span style="color: #7cafc2">ports</span><span style="color: #d8d8d8">:</span>
+    <span style="color: #d8d8d8">-</span> <span style="color: #7cafc2">port</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">80</span> <span style="color: #585858"># target port of endpoints</span></code></pre>
 </div>
 </div>
 </div>
@@ -845,24 +845,24 @@ cluster IP, but also through any node’s IP and the reserved node port.</p>
 <div class="listingblock">
 <div class="title">A NodePort service definition: <code>kubia-svc-nodeport.yaml</code></div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="yaml"><span style="color: #6a9fb5">apiVersion</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">v1</span>
-<span style="color: #6a9fb5">kind</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">Service</span>
-<span style="color: #6a9fb5">metadata</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">kubia-nodeport</span>
-<span style="color: #6a9fb5">spec</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">type</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">NodePort</span> <span style="color: #505050"># service type</span>
-  <span style="color: #6a9fb5">ports</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">port</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">80</span> <span style="color: #505050"># service&#39;s internal cluster IP port</span>
-    <span style="color: #6a9fb5">targetPort</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">8080</span> <span style="color: #505050"># target port of the backing pods</span>
-    <span style="color: #6a9fb5">nodePort</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">30123</span> <span style="color: #505050"># service will listen on port 30123, each cluster nodes</span>
-  <span style="color: #6a9fb5">selector</span><span style="color: #d0d0d0">:</span>
-    <span style="color: #6a9fb5">app</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">kubia</span></code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="yaml"><span style="color: #7cafc2">apiVersion</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">v1</span>
+<span style="color: #7cafc2">kind</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">Service</span>
+<span style="color: #7cafc2">metadata</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #7cafc2">name</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">kubia-nodeport</span>
+<span style="color: #7cafc2">spec</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #7cafc2">type</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">NodePort</span> <span style="color: #585858"># service type</span>
+  <span style="color: #7cafc2">ports</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #d8d8d8">-</span> <span style="color: #7cafc2">port</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">80</span> <span style="color: #585858"># service&#39;s internal cluster IP port</span>
+    <span style="color: #7cafc2">targetPort</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">8080</span> <span style="color: #585858"># target port of the backing pods</span>
+    <span style="color: #7cafc2">nodePort</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">30123</span> <span style="color: #585858"># service will listen on port 30123, each cluster nodes</span>
+  <span style="color: #7cafc2">selector</span><span style="color: #d8d8d8">:</span>
+    <span style="color: #7cafc2">app</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">kubia</span></code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="title">Examine the NodePort Service:</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>kubectl get svc kubia-nodeport</code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="console"><span style="color: #d8d8d8;background-color: #181818">$</span><span style="color: #d8d8d8;background-color: #181818"> </span>kubectl get svc kubia-nodeport</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -902,8 +902,8 @@ out only the node IP instead of the whole service definition</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>kubectl get nodes <span style="color: #f4bf75">-o</span> <span style="color: #8f5536">\</span>
-<span style="color: #d0d0d0;background-color: #151515">  jsonpath=&#39;{.items[*].status.addresses[?(@.type==&#34;ExternalIP&#34;)].address}&#39;</span></code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="console"><span style="color: #d8d8d8;background-color: #181818">$</span><span style="color: #d8d8d8;background-color: #181818"> </span>kubectl get nodes <span style="color: #f7ca88">-o</span> <span style="color: #a16946">\</span>
+<span style="color: #d8d8d8;background-color: #181818">  jsonpath=&#39;{.items[*].status.addresses[?(@.type==&#34;ExternalIP&#34;)].address}&#39;</span></code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -918,7 +918,7 @@ them.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>curl http://130.211.97.55:30123</code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="console"><span style="color: #d8d8d8;background-color: #181818">$</span><span style="color: #d8d8d8;background-color: #181818"> </span>curl http://130.211.97.55:30123</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -929,7 +929,7 @@ them.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>curl http://130.211.99.206:30123</code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="console"><span style="color: #d8d8d8;background-color: #181818">$</span><span style="color: #d8d8d8;background-color: #181818"> </span>curl http://130.211.99.206:30123</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -963,17 +963,17 @@ as of this writing.</p>
 <div class="listingblock">
 <div class="title">A LoadBalancer-type service: <code>kubia-svc-loadbalancer.yaml</code></div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="yaml"><span style="color: #6a9fb5">apiVersion</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">v1</span>
-<span style="color: #6a9fb5">kind</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">Service</span>
-<span style="color: #6a9fb5">metadata</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">kubia-loadbalancer</span>
-<span style="color: #6a9fb5">spec</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">type</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">LoadBalancer</span>
-  <span style="color: #6a9fb5">ports</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">port</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">80</span>
-    <span style="color: #6a9fb5">targetPort</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">8080</span>
-  <span style="color: #6a9fb5">selector</span><span style="color: #d0d0d0">:</span>
-    <span style="color: #6a9fb5">app</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">kubia</span></code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="yaml"><span style="color: #7cafc2">apiVersion</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">v1</span>
+<span style="color: #7cafc2">kind</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">Service</span>
+<span style="color: #7cafc2">metadata</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #7cafc2">name</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">kubia-loadbalancer</span>
+<span style="color: #7cafc2">spec</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #7cafc2">type</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">LoadBalancer</span>
+  <span style="color: #7cafc2">ports</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #d8d8d8">-</span> <span style="color: #7cafc2">port</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">80</span>
+    <span style="color: #7cafc2">targetPort</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">8080</span>
+  <span style="color: #7cafc2">selector</span><span style="color: #d8d8d8">:</span>
+    <span style="color: #7cafc2">app</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">kubia</span></code></pre>
 </div>
 </div>
 <div class="ulist">
@@ -988,7 +988,7 @@ Kubernetes choose one instead).</p>
 <div class="listingblock">
 <div class="title">Connecting to the Service Through the Load Balancer</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>kubectl get svc kubia-loadbalancer</code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="console"><span style="color: #d8d8d8;background-color: #181818">$</span><span style="color: #d8d8d8;background-color: #181818"> </span>kubectl get svc kubia-loadbalancer</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -1044,9 +1044,9 @@ setting the <code>externalTrafficPolicy</code> field in the service’s <code>sp
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="yaml"><span style="color: #6a9fb5">spec</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">externalTrafficPolicy</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">Local</span>
-  <span style="color: #90a959">...</span></code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="yaml"><span style="color: #7cafc2">spec</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #7cafc2">externalTrafficPolicy</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">Local</span>
+  <span style="color: #a1b56c">...</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1106,19 +1106,19 @@ the cluster.</p>
 <div class="listingblock">
 <div class="title">An Ingress resource definition: <code>kubia-ingress.yaml</code></div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="yaml"><span style="color: #6a9fb5">apiVersion</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">extensions/v1beta1</span>
-<span style="color: #6a9fb5">kind</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">Ingress</span>
-<span style="color: #6a9fb5">metadata</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">kubia</span>
-<span style="color: #6a9fb5">spec</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #6a9fb5">rules</span><span style="color: #d0d0d0">:</span>
-  <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">host</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">kubia.example.com</span> <span style="color: #505050">#  maps the domain name to your service</span>
-  <span style="color: #6a9fb5">http</span><span style="color: #d0d0d0">:</span>
-    <span style="color: #6a9fb5">paths</span><span style="color: #d0d0d0">:</span>
-    <span style="color: #d0d0d0">-</span> <span style="color: #6a9fb5">path</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">/</span>                        <span style="color: #505050"># All requests will be sent to port 80</span>
-      <span style="color: #6a9fb5">backend</span><span style="color: #d0d0d0">:</span>                       <span style="color: #505050"># of the kubia-nodeport service.</span>
-        <span style="color: #6a9fb5">serviceName</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">kubia-nodeport</span>  <span style="color: #505050">#</span>
-        <span style="color: #6a9fb5">servicePort</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">80</span>              <span style="color: #505050">#</span></code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="yaml"><span style="color: #7cafc2">apiVersion</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">extensions/v1beta1</span>
+<span style="color: #7cafc2">kind</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">Ingress</span>
+<span style="color: #7cafc2">metadata</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #7cafc2">name</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">kubia</span>
+<span style="color: #7cafc2">spec</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #7cafc2">rules</span><span style="color: #d8d8d8">:</span>
+  <span style="color: #d8d8d8">-</span> <span style="color: #7cafc2">host</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">kubia.example.com</span> <span style="color: #585858">#  maps the domain name to your service</span>
+  <span style="color: #7cafc2">http</span><span style="color: #d8d8d8">:</span>
+    <span style="color: #7cafc2">paths</span><span style="color: #d8d8d8">:</span>
+    <span style="color: #d8d8d8">-</span> <span style="color: #7cafc2">path</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">/</span>                        <span style="color: #585858"># All requests will be sent to port 80</span>
+      <span style="color: #7cafc2">backend</span><span style="color: #d8d8d8">:</span>                       <span style="color: #585858"># of the kubia-nodeport service.</span>
+        <span style="color: #7cafc2">serviceName</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">kubia-nodeport</span>  <span style="color: #585858">#</span>
+        <span style="color: #7cafc2">servicePort</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">80</span>              <span style="color: #585858">#</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1150,7 +1150,7 @@ the domain name resolves to the IP of the Ingress controller</p>
 <div class="listingblock">
 <div class="title">Obtaining the ip Address of the Ingress:</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="console"><span style="color: #d0d0d0;background-color: #151515">$</span><span style="color: #d0d0d0;background-color: #151515"> </span>kubectl get ingresses</code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="console"><span style="color: #d8d8d8;background-color: #181818">$</span><span style="color: #d8d8d8;background-color: #181818"> </span>kubectl get ingresses</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -1295,9 +1295,9 @@ the pods.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">import</span> <span style="color: #d0d0d0">(</span>
-    <span style="color: #90a959">&#34;net/http&#34;</span>
-<span style="color: #d0d0d0">)</span></code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="go"><span style="color: #ba8baf">import</span> <span style="color: #d8d8d8">(</span>
+    <span style="color: #a1b56c">&#34;net/http&#34;</span>
+<span style="color: #d8d8d8">)</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1321,7 +1321,7 @@ the pods.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">type</span> <span style="color: #d0d0d0;background-color: #151515">RequestHandler</span> <span style="color: #aa759f">struct</span> <span style="color: #d0d0d0">{}</span></code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="go"><span style="color: #ba8baf">type</span> <span style="color: #d8d8d8;background-color: #181818">RequestHandler</span> <span style="color: #ba8baf">struct</span> <span style="color: #d8d8d8">{}</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1331,30 +1331,30 @@ that needs to be handled (HTTP requests goes to the specified paths)</p>
 <div class="listingblock">
 <div class="title">main funcion</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">main</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #d0d0d0;background-color: #151515">mux</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">http</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">NewServeMx</span><span style="color: #d0d0d0">()</span>
-    <span style="color: #d0d0d0;background-color: #151515">mux</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Handle</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;/path1&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&amp;</span><span style="color: #d0d0d0;background-color: #151515">RequestHandler</span><span style="color: #d0d0d0">{})</span>
-    <span style="color: #d0d0d0;background-color: #151515">mux</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Handle</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;/path1/&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&amp;</span><span style="color: #d0d0d0;background-color: #151515">RequestHandler</span><span style="color: #d0d0d0">{})</span>
-    <span style="color: #d0d0d0;background-color: #151515">mux</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Handle</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;/path2&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&amp;</span><span style="color: #d0d0d0;background-color: #151515">RequestHandler</span><span style="color: #d0d0d0">{})</span>
-    <span style="color: #d0d0d0;background-color: #151515">mux</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Handle</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;/path2/&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&amp;</span><span style="color: #d0d0d0;background-color: #151515">RequestHandler</span><span style="color: #d0d0d0">{})</span>
-    <span style="color: #505050">/* continue */</span>
-    <span style="color: #d0d0d0;background-color: #151515">http</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">ListenAndServe</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;:8080&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">mux</span><span style="color: #d0d0d0">)</span>
-<span style="color: #d0d0d0">}</span></code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="go"><span style="color: #ba8baf">func</span> <span style="color: #d8d8d8;background-color: #181818">main</span><span style="color: #d8d8d8">()</span> <span style="color: #d8d8d8">{</span>
+    <span style="color: #d8d8d8;background-color: #181818">mux</span> <span style="color: #d8d8d8">:=</span> <span style="color: #d8d8d8;background-color: #181818">http</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">NewServeMx</span><span style="color: #d8d8d8">()</span>
+    <span style="color: #d8d8d8;background-color: #181818">mux</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Handle</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">&#34;/path1&#34;</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8">&amp;</span><span style="color: #d8d8d8;background-color: #181818">RequestHandler</span><span style="color: #d8d8d8">{})</span>
+    <span style="color: #d8d8d8;background-color: #181818">mux</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Handle</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">&#34;/path1/&#34;</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8">&amp;</span><span style="color: #d8d8d8;background-color: #181818">RequestHandler</span><span style="color: #d8d8d8">{})</span>
+    <span style="color: #d8d8d8;background-color: #181818">mux</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Handle</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">&#34;/path2&#34;</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8">&amp;</span><span style="color: #d8d8d8;background-color: #181818">RequestHandler</span><span style="color: #d8d8d8">{})</span>
+    <span style="color: #d8d8d8;background-color: #181818">mux</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Handle</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">&#34;/path2/&#34;</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8">&amp;</span><span style="color: #d8d8d8;background-color: #181818">RequestHandler</span><span style="color: #d8d8d8">{})</span>
+    <span style="color: #585858">/* continue */</span>
+    <span style="color: #d8d8d8;background-color: #181818">http</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">ListenAndServe</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">&#34;:8080&#34;</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8;background-color: #181818">mux</span><span style="color: #d8d8d8">)</span>
+<span style="color: #d8d8d8">}</span></code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="title">serve function</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">func</span> <span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">h</span> <span style="color: #d0d0d0">*</span><span style="color: #d0d0d0;background-color: #151515">RequestHandler</span><span style="color: #d0d0d0">)</span> <span style="color: #d0d0d0;background-color: #151515">ServeHTTP</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">w</span> <span style="color: #d0d0d0;background-color: #151515">http</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">ResponseWriter</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">r</span> <span style="color: #d0d0d0">*</span><span style="color: #d0d0d0;background-color: #151515">http</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Requset</span><span style="color: #d0d0d0">)</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #d0d0d0;background-color: #151515">request_type</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">r</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Method</span>
-    <span style="color: #d0d0d0;background-color: #151515">tmp</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">strings</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">SplitN</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">r</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">URL</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">String</span><span style="color: #d0d0d0">(),</span> <span style="color: #90a959">&#34;/&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #90a959">3</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #d0d0d0;background-color: #151515">section</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">tmp</span><span style="color: #d0d0d0">[</span><span style="color: #90a959">1</span><span style="color: #d0d0d0">]</span> <span style="color: #505050">// path</span>
-    <span style="color: #d0d0d0;background-color: #151515">key</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">tmp</span><span style="color: #d0d0d0">[</span><span style="color: #90a959">2</span><span style="color: #d0d0d0">]</span> <span style="color: #505050">// add data after the path</span>
-    <span style="color: #d0d0d0;background-color: #151515">params</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">r</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">URL</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Query</span><span style="color: #d0d0d0">()</span>
-    <span style="color: #d0d0d0;background-color: #151515">value</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">params</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Get</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">key</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #d0d0d0;background-color: #151515">body</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">io</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">ReadAll</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">r</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Body</span><span style="color: #d0d0d0">)</span> <span style="color: #505050">// values from curl&#39;s `--data` flag (spected to be JSON)</span>
-    <span style="color: #505050">/* continue */</span>
-<span style="color: #d0d0d0">}</span></code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="go"><span style="color: #ba8baf">func</span> <span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">h</span> <span style="color: #d8d8d8">*</span><span style="color: #d8d8d8;background-color: #181818">RequestHandler</span><span style="color: #d8d8d8">)</span> <span style="color: #d8d8d8;background-color: #181818">ServeHTTP</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">w</span> <span style="color: #d8d8d8;background-color: #181818">http</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">ResponseWriter</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8;background-color: #181818">r</span> <span style="color: #d8d8d8">*</span><span style="color: #d8d8d8;background-color: #181818">http</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Requset</span><span style="color: #d8d8d8">)</span> <span style="color: #d8d8d8">{</span>
+    <span style="color: #d8d8d8;background-color: #181818">request_type</span> <span style="color: #d8d8d8">:=</span> <span style="color: #d8d8d8;background-color: #181818">r</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Method</span>
+    <span style="color: #d8d8d8;background-color: #181818">tmp</span> <span style="color: #d8d8d8">:=</span> <span style="color: #d8d8d8;background-color: #181818">strings</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">SplitN</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">r</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">URL</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">String</span><span style="color: #d8d8d8">(),</span> <span style="color: #a1b56c">&#34;/&#34;</span><span style="color: #d8d8d8">,</span> <span style="color: #a1b56c">3</span><span style="color: #d8d8d8">)</span>
+    <span style="color: #d8d8d8;background-color: #181818">section</span> <span style="color: #d8d8d8">:=</span> <span style="color: #d8d8d8;background-color: #181818">tmp</span><span style="color: #d8d8d8">[</span><span style="color: #a1b56c">1</span><span style="color: #d8d8d8">]</span> <span style="color: #585858">// path</span>
+    <span style="color: #d8d8d8;background-color: #181818">key</span> <span style="color: #d8d8d8">:=</span> <span style="color: #d8d8d8;background-color: #181818">tmp</span><span style="color: #d8d8d8">[</span><span style="color: #a1b56c">2</span><span style="color: #d8d8d8">]</span> <span style="color: #585858">// add data after the path</span>
+    <span style="color: #d8d8d8;background-color: #181818">params</span> <span style="color: #d8d8d8">:=</span> <span style="color: #d8d8d8;background-color: #181818">r</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">URL</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Query</span><span style="color: #d8d8d8">()</span>
+    <span style="color: #d8d8d8;background-color: #181818">value</span> <span style="color: #d8d8d8">:=</span> <span style="color: #d8d8d8;background-color: #181818">params</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Get</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">key</span><span style="color: #d8d8d8">)</span>
+    <span style="color: #d8d8d8;background-color: #181818">body</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8;background-color: #181818">err</span> <span style="color: #d8d8d8">:=</span> <span style="color: #d8d8d8;background-color: #181818">io</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">ReadAll</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">r</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Body</span><span style="color: #d8d8d8">)</span> <span style="color: #585858">// values from curl&#39;s `--data` flag (spected to be JSON)</span>
+    <span style="color: #585858">/* continue */</span>
+<span style="color: #d8d8d8">}</span></code></pre>
 </div>
 </div>
 </div>
@@ -1364,13 +1364,13 @@ that needs to be handled (HTTP requests goes to the specified paths)</p>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">cache_handler</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #d0d0d0;background-color: #151515">client</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">redis</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">NewClient</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0">&amp;</span><span style="color: #d0d0d0;background-color: #151515">redis</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Options</span><span style="color: #d0d0d0">{</span>
-        <span style="color: #d0d0d0;background-color: #151515">Addr</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">&#34;localhost:6349&#34;</span>
-        <span style="color: #d0d0d0;background-color: #151515">Password</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">&#34;&#34;</span> <span style="color: #505050">// No password, to get it from env variables use: `os.Getenv(&#34;ENV&#34;)`</span>
-        <span style="color: #d0d0d0;background-color: #151515">DB</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">0</span> <span style="color: #505050">// default db</span>
-    <span style="color: #d0d0d0">})</span>
-<span style="color: #d0d0d0">}</span></code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="go"><span style="color: #ba8baf">func</span> <span style="color: #d8d8d8;background-color: #181818">cache_handler</span><span style="color: #d8d8d8">()</span> <span style="color: #d8d8d8">{</span>
+    <span style="color: #d8d8d8;background-color: #181818">client</span> <span style="color: #d8d8d8">:=</span> <span style="color: #d8d8d8;background-color: #181818">redis</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">NewClient</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8">&amp;</span><span style="color: #d8d8d8;background-color: #181818">redis</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Options</span><span style="color: #d8d8d8">{</span>
+        <span style="color: #d8d8d8;background-color: #181818">Addr</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">&#34;localhost:6349&#34;</span>
+        <span style="color: #d8d8d8;background-color: #181818">Password</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">&#34;&#34;</span> <span style="color: #585858">// No password, to get it from env variables use: `os.Getenv(&#34;ENV&#34;)`</span>
+        <span style="color: #d8d8d8;background-color: #181818">DB</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">0</span> <span style="color: #585858">// default db</span>
+    <span style="color: #d8d8d8">})</span>
+<span style="color: #d8d8d8">}</span></code></pre>
 </div>
 </div>
 </div>
@@ -1380,15 +1380,15 @@ that needs to be handled (HTTP requests goes to the specified paths)</p>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">database_handler</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #d0d0d0;background-color: #151515">sql_url</span> <span style="color: #d0d0d0">:=</span> <span style="color: #90a959">&#34;root@localhost:3360&#34;</span>
-    <span style="color: #d0d0d0;background-color: #151515">db</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">sql</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Open</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;mysql&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">sql_url</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #aa759f">if</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">!=</span> <span style="color: #f4bf75">nil</span> <span style="color: #d0d0d0">{</span>
-        <span style="color: #d0d0d0;background-color: #151515">pandic</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">err</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Error</span><span style="color: #d0d0d0">())</span>
-    <span style="color: #d0d0d0">}</span>
-    <span style="color: #aa759f">defer</span> <span style="color: #d0d0d0;background-color: #151515">db</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Close</span><span style="color: #d0d0d0">()</span>
-    <span style="color: #505050">/* continue */</span>
-<span style="color: #d0d0d0">}</span></code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="go"><span style="color: #ba8baf">func</span> <span style="color: #d8d8d8;background-color: #181818">database_handler</span><span style="color: #d8d8d8">()</span> <span style="color: #d8d8d8">{</span>
+    <span style="color: #d8d8d8;background-color: #181818">sql_url</span> <span style="color: #d8d8d8">:=</span> <span style="color: #a1b56c">&#34;root@localhost:3360&#34;</span>
+    <span style="color: #d8d8d8;background-color: #181818">db</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8;background-color: #181818">err</span> <span style="color: #d8d8d8">:=</span> <span style="color: #d8d8d8;background-color: #181818">sql</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Open</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">&#34;mysql&#34;</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8;background-color: #181818">sql_url</span><span style="color: #d8d8d8">)</span>
+    <span style="color: #ba8baf">if</span> <span style="color: #d8d8d8;background-color: #181818">err</span> <span style="color: #d8d8d8">!=</span> <span style="color: #f7ca88">nil</span> <span style="color: #d8d8d8">{</span>
+        <span style="color: #d8d8d8;background-color: #181818">pandic</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">err</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Error</span><span style="color: #d8d8d8">())</span>
+    <span style="color: #d8d8d8">}</span>
+    <span style="color: #ba8baf">defer</span> <span style="color: #d8d8d8;background-color: #181818">db</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Close</span><span style="color: #d8d8d8">()</span>
+    <span style="color: #585858">/* continue */</span>
+<span style="color: #d8d8d8">}</span></code></pre>
 </div>
 </div>
 </div>
@@ -1398,37 +1398,37 @@ that needs to be handled (HTTP requests goes to the specified paths)</p>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">type</span> <span style="color: #d0d0d0;background-color: #151515">Movie</span> <span style="color: #aa759f">struct</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #d0d0d0;background-color: #151515">Name</span> <span style="color: #d28445">string</span> <span style="color: #90a959">`json:&#34;name&#34;`</span>
-    <span style="color: #d0d0d0;background-color: #151515">Publisher</span> <span style="color: #d28445">string</span> <span style="color: #90a959">`json:&#34;publisher&#34;`</span>
-    <span style="color: #d0d0d0;background-color: #151515">Year</span> <span style="color: #d28445">int</span> <span style="color: #90a959">`json:&#34;year&#34;`</span>
-<span style="color: #d0d0d0">}</span>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="go"><span style="color: #ba8baf">type</span> <span style="color: #d8d8d8;background-color: #181818">Movie</span> <span style="color: #ba8baf">struct</span> <span style="color: #d8d8d8">{</span>
+    <span style="color: #d8d8d8;background-color: #181818">Name</span> <span style="color: #dc9656">string</span> <span style="color: #a1b56c">`json:&#34;name&#34;`</span>
+    <span style="color: #d8d8d8;background-color: #181818">Publisher</span> <span style="color: #dc9656">string</span> <span style="color: #a1b56c">`json:&#34;publisher&#34;`</span>
+    <span style="color: #d8d8d8;background-color: #181818">Year</span> <span style="color: #dc9656">int</span> <span style="color: #a1b56c">`json:&#34;year&#34;`</span>
+<span style="color: #d8d8d8">}</span>
 
-<span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">HandleMovie</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #505050">// var target map[string]any /* not optimal */</span>
-    <span style="color: #aa759f">var</span> <span style="color: #d0d0d0;background-color: #151515">movie</span> <span style="color: #d0d0d0;background-color: #151515">Movie</span>
+<span style="color: #ba8baf">func</span> <span style="color: #d8d8d8;background-color: #181818">HandleMovie</span><span style="color: #d8d8d8">()</span> <span style="color: #d8d8d8">{</span>
+    <span style="color: #585858">// var target map[string]any /* not optimal */</span>
+    <span style="color: #ba8baf">var</span> <span style="color: #d8d8d8;background-color: #181818">movie</span> <span style="color: #d8d8d8;background-color: #181818">Movie</span>
 
-    <span style="color: #d0d0d0;background-color: #151515">input</span> <span style="color: #d0d0d0">:=</span> <span style="color: #90a959">`{
+    <span style="color: #d8d8d8;background-color: #181818">input</span> <span style="color: #d8d8d8">:=</span> <span style="color: #a1b56c">`{
         &#34;name&#34;: &#34;Jocker&#34;,
         &#34;publisher&#34;: &#34;WB&#34;,
         &#34;year&#34;: 2019
     }`</span>
 
-    <span style="color: #505050">// err := json.Unmarshal([]byte(input), &amp;target) /* not optimal */</span>
-    <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">json</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Unmarshal</span><span style="color: #d0d0d0">([]</span><span style="color: #d28445">byte</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">input</span><span style="color: #d0d0d0">),</span> <span style="color: #d0d0d0">&amp;</span><span style="color: #d0d0d0;background-color: #151515">movie</span><span style="color: #d0d0d0">)</span> <span style="color: #505050">/* not optimal */</span>
-    <span style="color: #aa759f">if</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">!=</span> <span style="color: #f4bf75">nil</span> <span style="color: #d0d0d0">{</span>
-        <span style="color: #d0d0d0;background-color: #151515">log</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Fatalf</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;Unable to marshal JSON due to %s&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #d0d0d0">}</span>
+    <span style="color: #585858">// err := json.Unmarshal([]byte(input), &amp;target) /* not optimal */</span>
+    <span style="color: #d8d8d8;background-color: #181818">err</span> <span style="color: #d8d8d8">:=</span> <span style="color: #d8d8d8;background-color: #181818">json</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Unmarshal</span><span style="color: #d8d8d8">([]</span><span style="color: #dc9656">byte</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">input</span><span style="color: #d8d8d8">),</span> <span style="color: #d8d8d8">&amp;</span><span style="color: #d8d8d8;background-color: #181818">movie</span><span style="color: #d8d8d8">)</span> <span style="color: #585858">/* not optimal */</span>
+    <span style="color: #ba8baf">if</span> <span style="color: #d8d8d8;background-color: #181818">err</span> <span style="color: #d8d8d8">!=</span> <span style="color: #f7ca88">nil</span> <span style="color: #d8d8d8">{</span>
+        <span style="color: #d8d8d8;background-color: #181818">log</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Fatalf</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">&#34;Unable to marshal JSON due to %s&#34;</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8;background-color: #181818">err</span><span style="color: #d8d8d8">)</span>
+    <span style="color: #d8d8d8">}</span>
 
-    <span style="color: #505050">/* not optimal */</span>
-    <span style="color: #505050">// for k, v := range target {</span>
-    <span style="color: #505050">//    fmt.Printf(&#34;k: %s, v: %v\n&#34;, k, v)</span>
-    <span style="color: #505050">// }</span>
-    <span style="color: #d0d0d0;background-color: #151515">fmt</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Printf</span><span style="color: #d0d0d0">(</span>
-        <span style="color: #90a959">&#34;Name: %s, Publisher: %s, Year: %d</span><span style="color: #8f5536">\n</span><span style="color: #90a959">&#34;</span><span style="color: #d0d0d0">,</span>
-        <span style="color: #d0d0d0;background-color: #151515">movie</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Name</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">movie</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Publisher</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">movie</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Year</span><span style="color: #d0d0d0">,</span>
-    <span style="color: #d0d0d0">)</span>
-<span style="color: #d0d0d0">}</span></code></pre>
+    <span style="color: #585858">/* not optimal */</span>
+    <span style="color: #585858">// for k, v := range target {</span>
+    <span style="color: #585858">//    fmt.Printf(&#34;k: %s, v: %v\n&#34;, k, v)</span>
+    <span style="color: #585858">// }</span>
+    <span style="color: #d8d8d8;background-color: #181818">fmt</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Printf</span><span style="color: #d8d8d8">(</span>
+        <span style="color: #a1b56c">&#34;Name: %s, Publisher: %s, Year: %d</span><span style="color: #a16946">\n</span><span style="color: #a1b56c">&#34;</span><span style="color: #d8d8d8">,</span>
+        <span style="color: #d8d8d8;background-color: #181818">movie</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Name</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8;background-color: #181818">movie</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Publisher</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8;background-color: #181818">movie</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Year</span><span style="color: #d8d8d8">,</span>
+    <span style="color: #d8d8d8">)</span>
+<span style="color: #d8d8d8">}</span></code></pre>
 </div>
 </div>
 <div class="sect2">
@@ -1436,72 +1436,72 @@ that needs to be handled (HTTP requests goes to the specified paths)</p>
 <div class="listingblock">
 <div class="title"><code>assets/complex.json</code></div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="json"><span style="color: #d0d0d0">{</span><span style="color: #d0d0d0;background-color: #151515">
-  </span><span style="color: #d0d0d0;background-color: #151515">&#34;name&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">&#34;James Peterson&#34;</span><span style="color: #d0d0d0">,</span><span style="color: #d0d0d0;background-color: #151515">
-  </span><span style="color: #d0d0d0;background-color: #151515">&#34;age&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">37</span><span style="color: #d0d0d0">,</span><span style="color: #d0d0d0;background-color: #151515">
-  </span><span style="color: #d0d0d0;background-color: #151515">&#34;address&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #d0d0d0">{</span><span style="color: #d0d0d0;background-color: #151515">
-    </span><span style="color: #d0d0d0;background-color: #151515">&#34;line1&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">&#34;Block 78 Woodgrove Avenue 5&#34;</span><span style="color: #d0d0d0">,</span><span style="color: #d0d0d0;background-color: #151515">
-    </span><span style="color: #d0d0d0;background-color: #151515">&#34;line2&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">&#34;Unit #05-111&#34;</span><span style="color: #d0d0d0">,</span><span style="color: #d0d0d0;background-color: #151515">
-    </span><span style="color: #d0d0d0;background-color: #151515">&#34;postal&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">&#34;654378&#34;</span><span style="color: #d0d0d0;background-color: #151515">
-  </span><span style="color: #d0d0d0">},</span><span style="color: #d0d0d0;background-color: #151515">
-  </span><span style="color: #d0d0d0;background-color: #151515">&#34;pets&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #d0d0d0">[</span><span style="color: #d0d0d0;background-color: #151515">
-    </span><span style="color: #d0d0d0">{</span><span style="color: #d0d0d0;background-color: #151515">
-      </span><span style="color: #d0d0d0;background-color: #151515">&#34;name&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">&#34;Lex&#34;</span><span style="color: #d0d0d0">,</span><span style="color: #d0d0d0;background-color: #151515">
-      </span><span style="color: #d0d0d0;background-color: #151515">&#34;kind&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">&#34;Dog&#34;</span><span style="color: #d0d0d0">,</span><span style="color: #d0d0d0;background-color: #151515">
-      </span><span style="color: #d0d0d0;background-color: #151515">&#34;age&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">4</span><span style="color: #d0d0d0">,</span><span style="color: #d0d0d0;background-color: #151515">
-      </span><span style="color: #d0d0d0;background-color: #151515">&#34;color&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">&#34;Gray&#34;</span><span style="color: #d0d0d0;background-color: #151515">
-    </span><span style="color: #d0d0d0">},</span><span style="color: #d0d0d0;background-color: #151515">
-    </span><span style="color: #d0d0d0">{</span><span style="color: #d0d0d0;background-color: #151515">
-      </span><span style="color: #d0d0d0;background-color: #151515">&#34;name&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">&#34;Faye&#34;</span><span style="color: #d0d0d0">,</span><span style="color: #d0d0d0;background-color: #151515">
-      </span><span style="color: #d0d0d0;background-color: #151515">&#34;kind&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">&#34;Cat&#34;</span><span style="color: #d0d0d0">,</span><span style="color: #d0d0d0;background-color: #151515">
-      </span><span style="color: #d0d0d0;background-color: #151515">&#34;age&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">6</span><span style="color: #d0d0d0">,</span><span style="color: #d0d0d0;background-color: #151515">
-      </span><span style="color: #d0d0d0;background-color: #151515">&#34;color&#34;</span><span style="color: #d0d0d0">:</span><span style="color: #d0d0d0;background-color: #151515"> </span><span style="color: #90a959">&#34;Orange&#34;</span><span style="color: #d0d0d0;background-color: #151515">
-    </span><span style="color: #d0d0d0">}</span><span style="color: #d0d0d0;background-color: #151515">
-  </span><span style="color: #d0d0d0">]</span><span style="color: #d0d0d0;background-color: #151515">
-</span><span style="color: #d0d0d0">}</span></code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="json"><span style="color: #d8d8d8">{</span><span style="color: #d8d8d8;background-color: #181818">
+  </span><span style="color: #d8d8d8;background-color: #181818">&#34;name&#34;</span><span style="color: #d8d8d8">:</span><span style="color: #d8d8d8;background-color: #181818"> </span><span style="color: #a1b56c">&#34;James Peterson&#34;</span><span style="color: #d8d8d8">,</span><span style="color: #d8d8d8;background-color: #181818">
+  </span><span style="color: #d8d8d8;background-color: #181818">&#34;age&#34;</span><span style="color: #d8d8d8">:</span><span style="color: #d8d8d8;background-color: #181818"> </span><span style="color: #a1b56c">37</span><span style="color: #d8d8d8">,</span><span style="color: #d8d8d8;background-color: #181818">
+  </span><span style="color: #d8d8d8;background-color: #181818">&#34;address&#34;</span><span style="color: #d8d8d8">:</span><span style="color: #d8d8d8;background-color: #181818"> </span><span style="color: #d8d8d8">{</span><span style="color: #d8d8d8;background-color: #181818">
+    </span><span style="color: #d8d8d8;background-color: #181818">&#34;line1&#34;</span><span style="color: #d8d8d8">:</span><span style="color: #d8d8d8;background-color: #181818"> </span><span style="color: #a1b56c">&#34;Block 78 Woodgrove Avenue 5&#34;</span><span style="color: #d8d8d8">,</span><span style="color: #d8d8d8;background-color: #181818">
+    </span><span style="color: #d8d8d8;background-color: #181818">&#34;line2&#34;</span><span style="color: #d8d8d8">:</span><span style="color: #d8d8d8;background-color: #181818"> </span><span style="color: #a1b56c">&#34;Unit #05-111&#34;</span><span style="color: #d8d8d8">,</span><span style="color: #d8d8d8;background-color: #181818">
+    </span><span style="color: #d8d8d8;background-color: #181818">&#34;postal&#34;</span><span style="color: #d8d8d8">:</span><span style="color: #d8d8d8;background-color: #181818"> </span><span style="color: #a1b56c">&#34;654378&#34;</span><span style="color: #d8d8d8;background-color: #181818">
+  </span><span style="color: #d8d8d8">},</span><span style="color: #d8d8d8;background-color: #181818">
+  </span><span style="color: #d8d8d8;background-color: #181818">&#34;pets&#34;</span><span style="color: #d8d8d8">:</span><span style="color: #d8d8d8;background-color: #181818"> </span><span style="color: #d8d8d8">[</span><span style="color: #d8d8d8;background-color: #181818">
+    </span><span style="color: #d8d8d8">{</span><span style="color: #d8d8d8;background-color: #181818">
+      </span><span style="color: #d8d8d8;background-color: #181818">&#34;name&#34;</span><span style="color: #d8d8d8">:</span><span style="color: #d8d8d8;background-color: #181818"> </span><span style="color: #a1b56c">&#34;Lex&#34;</span><span style="color: #d8d8d8">,</span><span style="color: #d8d8d8;background-color: #181818">
+      </span><span style="color: #d8d8d8;background-color: #181818">&#34;kind&#34;</span><span style="color: #d8d8d8">:</span><span style="color: #d8d8d8;background-color: #181818"> </span><span style="color: #a1b56c">&#34;Dog&#34;</span><span style="color: #d8d8d8">,</span><span style="color: #d8d8d8;background-color: #181818">
+      </span><span style="color: #d8d8d8;background-color: #181818">&#34;age&#34;</span><span style="color: #d8d8d8">:</span><span style="color: #d8d8d8;background-color: #181818"> </span><span style="color: #a1b56c">4</span><span style="color: #d8d8d8">,</span><span style="color: #d8d8d8;background-color: #181818">
+      </span><span style="color: #d8d8d8;background-color: #181818">&#34;color&#34;</span><span style="color: #d8d8d8">:</span><span style="color: #d8d8d8;background-color: #181818"> </span><span style="color: #a1b56c">&#34;Gray&#34;</span><span style="color: #d8d8d8;background-color: #181818">
+    </span><span style="color: #d8d8d8">},</span><span style="color: #d8d8d8;background-color: #181818">
+    </span><span style="color: #d8d8d8">{</span><span style="color: #d8d8d8;background-color: #181818">
+      </span><span style="color: #d8d8d8;background-color: #181818">&#34;name&#34;</span><span style="color: #d8d8d8">:</span><span style="color: #d8d8d8;background-color: #181818"> </span><span style="color: #a1b56c">&#34;Faye&#34;</span><span style="color: #d8d8d8">,</span><span style="color: #d8d8d8;background-color: #181818">
+      </span><span style="color: #d8d8d8;background-color: #181818">&#34;kind&#34;</span><span style="color: #d8d8d8">:</span><span style="color: #d8d8d8;background-color: #181818"> </span><span style="color: #a1b56c">&#34;Cat&#34;</span><span style="color: #d8d8d8">,</span><span style="color: #d8d8d8;background-color: #181818">
+      </span><span style="color: #d8d8d8;background-color: #181818">&#34;age&#34;</span><span style="color: #d8d8d8">:</span><span style="color: #d8d8d8;background-color: #181818"> </span><span style="color: #a1b56c">6</span><span style="color: #d8d8d8">,</span><span style="color: #d8d8d8;background-color: #181818">
+      </span><span style="color: #d8d8d8;background-color: #181818">&#34;color&#34;</span><span style="color: #d8d8d8">:</span><span style="color: #d8d8d8;background-color: #181818"> </span><span style="color: #a1b56c">&#34;Orange&#34;</span><span style="color: #d8d8d8;background-color: #181818">
+    </span><span style="color: #d8d8d8">}</span><span style="color: #d8d8d8;background-color: #181818">
+  </span><span style="color: #d8d8d8">]</span><span style="color: #d8d8d8;background-color: #181818">
+</span><span style="color: #d8d8d8">}</span></code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="title"><code>examples/complex_json/main.go</code></div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">type</span> <span style="color: #d0d0d0">(</span>
-    <span style="color: #d0d0d0;background-color: #151515">FullPerson</span> <span style="color: #aa759f">struct</span> <span style="color: #d0d0d0">{</span>
-        <span style="color: #d0d0d0;background-color: #151515">Address</span> <span style="color: #d0d0d0;background-color: #151515">Address</span>
-        <span style="color: #d0d0d0;background-color: #151515">Name</span>    <span style="color: #d28445">string</span>
-        <span style="color: #d0d0d0;background-color: #151515">Pets</span>    <span style="color: #d0d0d0">[]</span><span style="color: #d0d0d0;background-color: #151515">Pet</span>
-        <span style="color: #d0d0d0;background-color: #151515">Age</span>     <span style="color: #d28445">int</span>
-    <span style="color: #d0d0d0">}</span>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="go"><span style="color: #ba8baf">type</span> <span style="color: #d8d8d8">(</span>
+    <span style="color: #d8d8d8;background-color: #181818">FullPerson</span> <span style="color: #ba8baf">struct</span> <span style="color: #d8d8d8">{</span>
+        <span style="color: #d8d8d8;background-color: #181818">Address</span> <span style="color: #d8d8d8;background-color: #181818">Address</span>
+        <span style="color: #d8d8d8;background-color: #181818">Name</span>    <span style="color: #dc9656">string</span>
+        <span style="color: #d8d8d8;background-color: #181818">Pets</span>    <span style="color: #d8d8d8">[]</span><span style="color: #d8d8d8;background-color: #181818">Pet</span>
+        <span style="color: #d8d8d8;background-color: #181818">Age</span>     <span style="color: #dc9656">int</span>
+    <span style="color: #d8d8d8">}</span>
 
-    <span style="color: #d0d0d0;background-color: #151515">Pet</span> <span style="color: #aa759f">struct</span> <span style="color: #d0d0d0">{</span>
-        <span style="color: #d0d0d0;background-color: #151515">Name</span>  <span style="color: #d28445">string</span>
-        <span style="color: #d0d0d0;background-color: #151515">Kind</span>  <span style="color: #d28445">string</span>
-        <span style="color: #d0d0d0;background-color: #151515">Color</span> <span style="color: #d28445">string</span>
-        <span style="color: #d0d0d0;background-color: #151515">Age</span>   <span style="color: #d28445">int</span>
-    <span style="color: #d0d0d0">}</span>
+    <span style="color: #d8d8d8;background-color: #181818">Pet</span> <span style="color: #ba8baf">struct</span> <span style="color: #d8d8d8">{</span>
+        <span style="color: #d8d8d8;background-color: #181818">Name</span>  <span style="color: #dc9656">string</span>
+        <span style="color: #d8d8d8;background-color: #181818">Kind</span>  <span style="color: #dc9656">string</span>
+        <span style="color: #d8d8d8;background-color: #181818">Color</span> <span style="color: #dc9656">string</span>
+        <span style="color: #d8d8d8;background-color: #181818">Age</span>   <span style="color: #dc9656">int</span>
+    <span style="color: #d8d8d8">}</span>
 
-    <span style="color: #d0d0d0;background-color: #151515">Address</span> <span style="color: #aa759f">struct</span> <span style="color: #d0d0d0">{</span>
-        <span style="color: #d0d0d0;background-color: #151515">Line1</span>  <span style="color: #d28445">string</span>
-        <span style="color: #d0d0d0;background-color: #151515">Line2</span>  <span style="color: #d28445">string</span>
-        <span style="color: #d0d0d0;background-color: #151515">Postal</span> <span style="color: #d28445">string</span>
-    <span style="color: #d0d0d0">}</span>
-<span style="color: #d0d0d0">)</span>
+    <span style="color: #d8d8d8;background-color: #181818">Address</span> <span style="color: #ba8baf">struct</span> <span style="color: #d8d8d8">{</span>
+        <span style="color: #d8d8d8;background-color: #181818">Line1</span>  <span style="color: #dc9656">string</span>
+        <span style="color: #d8d8d8;background-color: #181818">Line2</span>  <span style="color: #dc9656">string</span>
+        <span style="color: #d8d8d8;background-color: #181818">Postal</span> <span style="color: #dc9656">string</span>
+    <span style="color: #d8d8d8">}</span>
+<span style="color: #d8d8d8">)</span>
 
 
-<span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">main</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #d0d0d0;background-color: #151515">b</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">os</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">ReadFile</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;assets/complex.json&#34;</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #aa759f">if</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">!=</span> <span style="color: #f4bf75">nil</span> <span style="color: #d0d0d0">{</span>
-        <span style="color: #d0d0d0;background-color: #151515">log</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Fatalf</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;Unable to read file due to %s</span><span style="color: #8f5536">\n</span><span style="color: #90a959">&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #d0d0d0">}</span>
+<span style="color: #ba8baf">func</span> <span style="color: #d8d8d8;background-color: #181818">main</span><span style="color: #d8d8d8">()</span> <span style="color: #d8d8d8">{</span>
+    <span style="color: #d8d8d8;background-color: #181818">b</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8;background-color: #181818">err</span> <span style="color: #d8d8d8">:=</span> <span style="color: #d8d8d8;background-color: #181818">os</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">ReadFile</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">&#34;assets/complex.json&#34;</span><span style="color: #d8d8d8">)</span>
+    <span style="color: #ba8baf">if</span> <span style="color: #d8d8d8;background-color: #181818">err</span> <span style="color: #d8d8d8">!=</span> <span style="color: #f7ca88">nil</span> <span style="color: #d8d8d8">{</span>
+        <span style="color: #d8d8d8;background-color: #181818">log</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Fatalf</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">&#34;Unable to read file due to %s</span><span style="color: #a16946">\n</span><span style="color: #a1b56c">&#34;</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8;background-color: #181818">err</span><span style="color: #d8d8d8">)</span>
+    <span style="color: #d8d8d8">}</span>
 
-    <span style="color: #aa759f">var</span> <span style="color: #d0d0d0;background-color: #151515">person</span> <span style="color: #d0d0d0;background-color: #151515">FullPerson</span>
+    <span style="color: #ba8baf">var</span> <span style="color: #d8d8d8;background-color: #181818">person</span> <span style="color: #d8d8d8;background-color: #181818">FullPerson</span>
 
-    <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">json</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Unmarshal</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">b</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&amp;</span><span style="color: #d0d0d0;background-color: #151515">person</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #aa759f">if</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">!=</span> <span style="color: #f4bf75">nil</span> <span style="color: #d0d0d0">{</span>
-        <span style="color: #d0d0d0;background-color: #151515">log</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Fatalf</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;Unable to marshal JSON due to %s&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #d0d0d0">}</span>
+    <span style="color: #d8d8d8;background-color: #181818">err</span> <span style="color: #d8d8d8">=</span> <span style="color: #d8d8d8;background-color: #181818">json</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Unmarshal</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">b</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8">&amp;</span><span style="color: #d8d8d8;background-color: #181818">person</span><span style="color: #d8d8d8">)</span>
+    <span style="color: #ba8baf">if</span> <span style="color: #d8d8d8;background-color: #181818">err</span> <span style="color: #d8d8d8">!=</span> <span style="color: #f7ca88">nil</span> <span style="color: #d8d8d8">{</span>
+        <span style="color: #d8d8d8;background-color: #181818">log</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Fatalf</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">&#34;Unable to marshal JSON due to %s&#34;</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8;background-color: #181818">err</span><span style="color: #d8d8d8">)</span>
+    <span style="color: #d8d8d8">}</span>
 
-    <span style="color: #d0d0d0;background-color: #151515">litter</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Dump</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">person</span><span style="color: #d0d0d0">)</span>
-<span style="color: #d0d0d0">}</span></code></pre>
+    <span style="color: #d8d8d8;background-color: #181818">litter</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Dump</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">person</span><span style="color: #d8d8d8">)</span>
+<span style="color: #d8d8d8">}</span></code></pre>
 </div>
 </div>
 </div>
@@ -1539,54 +1539,54 @@ a given data structure into a JSON.</p>
 <div class="listingblock">
 <div class="title">examples/basic_marshal/main.go</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">marshal</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">in</span> <span style="color: #d0d0d0;background-color: #151515">any</span><span style="color: #d0d0d0">)</span> <span style="color: #d0d0d0">[]</span><span style="color: #d28445">byte</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #d0d0d0;background-color: #151515">out</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">json</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Marshal</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">in</span><span style="color: #d0d0d0">)</span>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="go"><span style="color: #ba8baf">func</span> <span style="color: #d8d8d8;background-color: #181818">marshal</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">in</span> <span style="color: #d8d8d8;background-color: #181818">any</span><span style="color: #d8d8d8">)</span> <span style="color: #d8d8d8">[]</span><span style="color: #dc9656">byte</span> <span style="color: #d8d8d8">{</span>
+    <span style="color: #d8d8d8;background-color: #181818">out</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8;background-color: #181818">err</span> <span style="color: #d8d8d8">:=</span> <span style="color: #d8d8d8;background-color: #181818">json</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Marshal</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">in</span><span style="color: #d8d8d8">)</span>
 
-    <span style="color: #aa759f">if</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">!=</span> <span style="color: #f4bf75">nil</span> <span style="color: #d0d0d0">{</span>
-        <span style="color: #d0d0d0;background-color: #151515">log</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Fatalf</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;Unable to marshal due to %s</span><span style="color: #8f5536">\n</span><span style="color: #90a959">&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #d0d0d0">}</span>
+    <span style="color: #ba8baf">if</span> <span style="color: #d8d8d8;background-color: #181818">err</span> <span style="color: #d8d8d8">!=</span> <span style="color: #f7ca88">nil</span> <span style="color: #d8d8d8">{</span>
+        <span style="color: #d8d8d8;background-color: #181818">log</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Fatalf</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">&#34;Unable to marshal due to %s</span><span style="color: #a16946">\n</span><span style="color: #a1b56c">&#34;</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8;background-color: #181818">err</span><span style="color: #d8d8d8">)</span>
+    <span style="color: #d8d8d8">}</span>
 
-    <span style="color: #aa759f">return</span> <span style="color: #d0d0d0;background-color: #151515">out</span>
-<span style="color: #d0d0d0">}</span>
+    <span style="color: #ba8baf">return</span> <span style="color: #d8d8d8;background-color: #181818">out</span>
+<span style="color: #d8d8d8">}</span>
 
-<span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">main</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #d0d0d0;background-color: #151515">first</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">marshal</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">14</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #d0d0d0;background-color: #151515">second</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">marshal</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;Hello world&#34;</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #d0d0d0;background-color: #151515">third</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">marshal</span><span style="color: #d0d0d0">([]</span><span style="color: #d28445">float32</span><span style="color: #d0d0d0">{</span><span style="color: #90a959">1.66</span><span style="color: #d0d0d0">,</span> <span style="color: #90a959">6.86</span><span style="color: #d0d0d0">,</span> <span style="color: #90a959">10.1</span><span style="color: #d0d0d0">})</span>
-    <span style="color: #d0d0d0;background-color: #151515">fourth</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">marshal</span><span style="color: #d0d0d0">(</span><span style="color: #aa759f">map</span><span style="color: #d0d0d0">[</span><span style="color: #d28445">string</span><span style="color: #d0d0d0">]</span><span style="color: #d28445">int</span><span style="color: #d0d0d0">{</span><span style="color: #90a959">&#34;num&#34;</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">15</span><span style="color: #d0d0d0">,</span> <span style="color: #90a959">&#34;other&#34;</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">17</span><span style="color: #d0d0d0">})</span>
-    <span style="color: #d0d0d0;background-color: #151515">fmt</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Printf</span><span style="color: #d0d0d0">(</span>
-        <span style="color: #90a959">&#34;first: %s</span><span style="color: #8f5536">\n</span><span style="color: #90a959">second: %s</span><span style="color: #8f5536">\n</span><span style="color: #90a959">third: %s</span><span style="color: #8f5536">\n</span><span style="color: #90a959">fourth: %s</span><span style="color: #8f5536">\n</span><span style="color: #90a959">&#34;</span><span style="color: #d0d0d0">,</span>
-        <span style="color: #d0d0d0;background-color: #151515">first</span><span style="color: #d0d0d0">,</span>
-        <span style="color: #d0d0d0;background-color: #151515">second</span><span style="color: #d0d0d0">,</span>
-        <span style="color: #d0d0d0;background-color: #151515">third</span><span style="color: #d0d0d0">,</span>
-        <span style="color: #d0d0d0;background-color: #151515">fourth</span><span style="color: #d0d0d0">,</span>
-    <span style="color: #d0d0d0">)</span>
-<span style="color: #d0d0d0">}</span></code></pre>
+<span style="color: #ba8baf">func</span> <span style="color: #d8d8d8;background-color: #181818">main</span><span style="color: #d8d8d8">()</span> <span style="color: #d8d8d8">{</span>
+    <span style="color: #d8d8d8;background-color: #181818">first</span> <span style="color: #d8d8d8">:=</span> <span style="color: #d8d8d8;background-color: #181818">marshal</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">14</span><span style="color: #d8d8d8">)</span>
+    <span style="color: #d8d8d8;background-color: #181818">second</span> <span style="color: #d8d8d8">:=</span> <span style="color: #d8d8d8;background-color: #181818">marshal</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">&#34;Hello world&#34;</span><span style="color: #d8d8d8">)</span>
+    <span style="color: #d8d8d8;background-color: #181818">third</span> <span style="color: #d8d8d8">:=</span> <span style="color: #d8d8d8;background-color: #181818">marshal</span><span style="color: #d8d8d8">([]</span><span style="color: #dc9656">float32</span><span style="color: #d8d8d8">{</span><span style="color: #a1b56c">1.66</span><span style="color: #d8d8d8">,</span> <span style="color: #a1b56c">6.86</span><span style="color: #d8d8d8">,</span> <span style="color: #a1b56c">10.1</span><span style="color: #d8d8d8">})</span>
+    <span style="color: #d8d8d8;background-color: #181818">fourth</span> <span style="color: #d8d8d8">:=</span> <span style="color: #d8d8d8;background-color: #181818">marshal</span><span style="color: #d8d8d8">(</span><span style="color: #ba8baf">map</span><span style="color: #d8d8d8">[</span><span style="color: #dc9656">string</span><span style="color: #d8d8d8">]</span><span style="color: #dc9656">int</span><span style="color: #d8d8d8">{</span><span style="color: #a1b56c">&#34;num&#34;</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">15</span><span style="color: #d8d8d8">,</span> <span style="color: #a1b56c">&#34;other&#34;</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">17</span><span style="color: #d8d8d8">})</span>
+    <span style="color: #d8d8d8;background-color: #181818">fmt</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Printf</span><span style="color: #d8d8d8">(</span>
+        <span style="color: #a1b56c">&#34;first: %s</span><span style="color: #a16946">\n</span><span style="color: #a1b56c">second: %s</span><span style="color: #a16946">\n</span><span style="color: #a1b56c">third: %s</span><span style="color: #a16946">\n</span><span style="color: #a1b56c">fourth: %s</span><span style="color: #a16946">\n</span><span style="color: #a1b56c">&#34;</span><span style="color: #d8d8d8">,</span>
+        <span style="color: #d8d8d8;background-color: #181818">first</span><span style="color: #d8d8d8">,</span>
+        <span style="color: #d8d8d8;background-color: #181818">second</span><span style="color: #d8d8d8">,</span>
+        <span style="color: #d8d8d8;background-color: #181818">third</span><span style="color: #d8d8d8">,</span>
+        <span style="color: #d8d8d8;background-color: #181818">fourth</span><span style="color: #d8d8d8">,</span>
+    <span style="color: #d8d8d8">)</span>
+<span style="color: #d8d8d8">}</span></code></pre>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_structs">4.1. structs</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">main</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #d0d0d0;background-color: #151515">p</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">Person</span><span style="color: #d0d0d0">{</span>
-        <span style="color: #d0d0d0;background-color: #151515">Name</span><span style="color: #d0d0d0">:</span>  <span style="color: #90a959">&#34;John Jones&#34;</span><span style="color: #d0d0d0">,</span>
-        <span style="color: #d0d0d0;background-color: #151515">Age</span><span style="color: #d0d0d0">:</span>   <span style="color: #90a959">26</span><span style="color: #d0d0d0">,</span>
-        <span style="color: #d0d0d0;background-color: #151515">Email</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">&#34;johnjones@email.com&#34;</span><span style="color: #d0d0d0">,</span>
-        <span style="color: #d0d0d0;background-color: #151515">Phone</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">&#34;89910119&#34;</span><span style="color: #d0d0d0">,</span>
-        <span style="color: #d0d0d0;background-color: #151515">Hobbies</span><span style="color: #d0d0d0">:</span> <span style="color: #d0d0d0">[]</span><span style="color: #d28445">string</span><span style="color: #d0d0d0">{</span>
-            <span style="color: #90a959">&#34;Swimming&#34;</span><span style="color: #d0d0d0">,</span>
-            <span style="color: #90a959">&#34;Badminton&#34;</span><span style="color: #d0d0d0">,</span>
-        <span style="color: #d0d0d0">},</span>
-    <span style="color: #d0d0d0">}</span>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="go"><span style="color: #ba8baf">func</span> <span style="color: #d8d8d8;background-color: #181818">main</span><span style="color: #d8d8d8">()</span> <span style="color: #d8d8d8">{</span>
+    <span style="color: #d8d8d8;background-color: #181818">p</span> <span style="color: #d8d8d8">:=</span> <span style="color: #d8d8d8;background-color: #181818">Person</span><span style="color: #d8d8d8">{</span>
+        <span style="color: #d8d8d8;background-color: #181818">Name</span><span style="color: #d8d8d8">:</span>  <span style="color: #a1b56c">&#34;John Jones&#34;</span><span style="color: #d8d8d8">,</span>
+        <span style="color: #d8d8d8;background-color: #181818">Age</span><span style="color: #d8d8d8">:</span>   <span style="color: #a1b56c">26</span><span style="color: #d8d8d8">,</span>
+        <span style="color: #d8d8d8;background-color: #181818">Email</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">&#34;johnjones@email.com&#34;</span><span style="color: #d8d8d8">,</span>
+        <span style="color: #d8d8d8;background-color: #181818">Phone</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">&#34;89910119&#34;</span><span style="color: #d8d8d8">,</span>
+        <span style="color: #d8d8d8;background-color: #181818">Hobbies</span><span style="color: #d8d8d8">:</span> <span style="color: #d8d8d8">[]</span><span style="color: #dc9656">string</span><span style="color: #d8d8d8">{</span>
+            <span style="color: #a1b56c">&#34;Swimming&#34;</span><span style="color: #d8d8d8">,</span>
+            <span style="color: #a1b56c">&#34;Badminton&#34;</span><span style="color: #d8d8d8">,</span>
+        <span style="color: #d8d8d8">},</span>
+    <span style="color: #d8d8d8">}</span>
 
-    <span style="color: #d0d0d0;background-color: #151515">b</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">json</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Marshal</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">p</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #aa759f">if</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">!=</span> <span style="color: #f4bf75">nil</span> <span style="color: #d0d0d0">{</span>
-        <span style="color: #d0d0d0;background-color: #151515">log</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Fatalf</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;Unable to marshal due to %s</span><span style="color: #8f5536">\n</span><span style="color: #90a959">&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #d0d0d0">}</span>
+    <span style="color: #d8d8d8;background-color: #181818">b</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8;background-color: #181818">err</span> <span style="color: #d8d8d8">:=</span> <span style="color: #d8d8d8;background-color: #181818">json</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Marshal</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">p</span><span style="color: #d8d8d8">)</span>
+    <span style="color: #ba8baf">if</span> <span style="color: #d8d8d8;background-color: #181818">err</span> <span style="color: #d8d8d8">!=</span> <span style="color: #f7ca88">nil</span> <span style="color: #d8d8d8">{</span>
+        <span style="color: #d8d8d8;background-color: #181818">log</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Fatalf</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">&#34;Unable to marshal due to %s</span><span style="color: #a16946">\n</span><span style="color: #a1b56c">&#34;</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8;background-color: #181818">err</span><span style="color: #d8d8d8">)</span>
+    <span style="color: #d8d8d8">}</span>
 
-    <span style="color: #d0d0d0;background-color: #151515">fmt</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Println</span><span style="color: #d0d0d0">(</span><span style="color: #d28445">string</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">b</span><span style="color: #d0d0d0">))</span>
-<span style="color: #d0d0d0">}</span></code></pre>
+    <span style="color: #d8d8d8;background-color: #181818">fmt</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Println</span><span style="color: #d8d8d8">(</span><span style="color: #dc9656">string</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">b</span><span style="color: #d8d8d8">))</span>
+<span style="color: #d8d8d8">}</span></code></pre>
 </div>
 </div>
 <div class="admonitionblock note">
@@ -1608,50 +1608,50 @@ format the output.
 <h3 id="_customizing_json_field_names_with_struct_tags">4.2. Customizing JSON field names with struct tags</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">type</span> <span style="color: #d0d0d0;background-color: #151515">Dog</span> <span style="color: #aa759f">struct</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #d0d0d0;background-color: #151515">Breed</span>         <span style="color: #d28445">string</span>
-    <span style="color: #d0d0d0;background-color: #151515">Name</span>          <span style="color: #d28445">string</span>
-    <span style="color: #d0d0d0;background-color: #151515">FavoriteTreat</span> <span style="color: #d28445">string</span>
-    <span style="color: #d0d0d0;background-color: #151515">Age</span>           <span style="color: #d28445">int</span>
-<span style="color: #d0d0d0">}</span>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="go"><span style="color: #ba8baf">type</span> <span style="color: #d8d8d8;background-color: #181818">Dog</span> <span style="color: #ba8baf">struct</span> <span style="color: #d8d8d8">{</span>
+    <span style="color: #d8d8d8;background-color: #181818">Breed</span>         <span style="color: #dc9656">string</span>
+    <span style="color: #d8d8d8;background-color: #181818">Name</span>          <span style="color: #dc9656">string</span>
+    <span style="color: #d8d8d8;background-color: #181818">FavoriteTreat</span> <span style="color: #dc9656">string</span>
+    <span style="color: #d8d8d8;background-color: #181818">Age</span>           <span style="color: #dc9656">int</span>
+<span style="color: #d8d8d8">}</span>
 
-<span style="color: #aa759f">var</span> <span style="color: #d0d0d0;background-color: #151515">dog</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0;background-color: #151515">Dog</span><span style="color: #d0d0d0">{</span>
-  <span style="color: #d0d0d0;background-color: #151515">Breed</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">&#34;Golden Retriever&#34;</span><span style="color: #d0d0d0">,</span>
-  <span style="color: #d0d0d0;background-color: #151515">Age</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">8</span><span style="color: #d0d0d0">,</span>
-  <span style="color: #d0d0d0;background-color: #151515">Name</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">&#34;Paws&#34;</span><span style="color: #d0d0d0">,</span>
-  <span style="color: #d0d0d0;background-color: #151515">FavoriteTreat</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">&#34;Kibble&#34;</span><span style="color: #d0d0d0">,</span>
-<span style="color: #d0d0d0">}</span></code></pre>
+<span style="color: #ba8baf">var</span> <span style="color: #d8d8d8;background-color: #181818">dog</span> <span style="color: #d8d8d8">=</span> <span style="color: #d8d8d8;background-color: #181818">Dog</span><span style="color: #d8d8d8">{</span>
+  <span style="color: #d8d8d8;background-color: #181818">Breed</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">&#34;Golden Retriever&#34;</span><span style="color: #d8d8d8">,</span>
+  <span style="color: #d8d8d8;background-color: #181818">Age</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">8</span><span style="color: #d8d8d8">,</span>
+  <span style="color: #d8d8d8;background-color: #181818">Name</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">&#34;Paws&#34;</span><span style="color: #d8d8d8">,</span>
+  <span style="color: #d8d8d8;background-color: #181818">FavoriteTreat</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">&#34;Kibble&#34;</span><span style="color: #d8d8d8">,</span>
+<span style="color: #d8d8d8">}</span></code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">type</span> <span style="color: #d0d0d0;background-color: #151515">Dog</span> <span style="color: #aa759f">struct</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #d0d0d0;background-color: #151515">Breed</span>         <span style="color: #d28445">string</span> <span style="color: #90a959">`json:&#34;breed&#34;`</span>
-    <span style="color: #d0d0d0;background-color: #151515">Name</span>          <span style="color: #d28445">string</span> <span style="color: #90a959">`json:&#34;name&#34;`</span>
-    <span style="color: #d0d0d0;background-color: #151515">FavoriteTreat</span> <span style="color: #d28445">string</span> <span style="color: #90a959">`json:&#34;favorite_treat&#34;`</span>
-    <span style="color: #d0d0d0;background-color: #151515">Age</span>           <span style="color: #d28445">int</span>    <span style="color: #90a959">`json:&#34;age&#34;`</span>
-<span style="color: #d0d0d0">}</span></code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="go"><span style="color: #ba8baf">type</span> <span style="color: #d8d8d8;background-color: #181818">Dog</span> <span style="color: #ba8baf">struct</span> <span style="color: #d8d8d8">{</span>
+    <span style="color: #d8d8d8;background-color: #181818">Breed</span>         <span style="color: #dc9656">string</span> <span style="color: #a1b56c">`json:&#34;breed&#34;`</span>
+    <span style="color: #d8d8d8;background-color: #181818">Name</span>          <span style="color: #dc9656">string</span> <span style="color: #a1b56c">`json:&#34;name&#34;`</span>
+    <span style="color: #d8d8d8;background-color: #181818">FavoriteTreat</span> <span style="color: #dc9656">string</span> <span style="color: #a1b56c">`json:&#34;favorite_treat&#34;`</span>
+    <span style="color: #d8d8d8;background-color: #181818">Age</span>           <span style="color: #dc9656">int</span>    <span style="color: #a1b56c">`json:&#34;age&#34;`</span>
+<span style="color: #d8d8d8">}</span></code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">main</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #d0d0d0;background-color: #151515">input</span> <span style="color: #d0d0d0">:=</span> <span style="color: #90a959">`{
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="go"><span style="color: #ba8baf">func</span> <span style="color: #d8d8d8;background-color: #181818">main</span><span style="color: #d8d8d8">()</span> <span style="color: #d8d8d8">{</span>
+    <span style="color: #d8d8d8;background-color: #181818">input</span> <span style="color: #d8d8d8">:=</span> <span style="color: #a1b56c">`{
       &#34;name&#34;: &#34;Coffee&#34;,
       &#34;breed&#34;: &#34;Toy Poodle&#34;,
       &#34;age&#34;: 5,
       &#34;favorite_treat&#34;: &#34;Kibble&#34;
     }`</span>
 
-    <span style="color: #aa759f">var</span> <span style="color: #d0d0d0;background-color: #151515">coffee</span> <span style="color: #d0d0d0;background-color: #151515">Dog</span>
+    <span style="color: #ba8baf">var</span> <span style="color: #d8d8d8;background-color: #181818">coffee</span> <span style="color: #d8d8d8;background-color: #181818">Dog</span>
 
-    <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">json</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Unmarshal</span><span style="color: #d0d0d0">([]</span><span style="color: #d28445">byte</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">input</span><span style="color: #d0d0d0">),</span> <span style="color: #d0d0d0">&amp;</span><span style="color: #d0d0d0;background-color: #151515">coffee</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #aa759f">if</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">!=</span> <span style="color: #f4bf75">nil</span> <span style="color: #d0d0d0">{</span>
-        <span style="color: #d0d0d0;background-color: #151515">log</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Fatalf</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;Unable to marshal JSON due to %s&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #d0d0d0">}</span>
+    <span style="color: #d8d8d8;background-color: #181818">err</span> <span style="color: #d8d8d8">:=</span> <span style="color: #d8d8d8;background-color: #181818">json</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Unmarshal</span><span style="color: #d8d8d8">([]</span><span style="color: #dc9656">byte</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">input</span><span style="color: #d8d8d8">),</span> <span style="color: #d8d8d8">&amp;</span><span style="color: #d8d8d8;background-color: #181818">coffee</span><span style="color: #d8d8d8">)</span>
+    <span style="color: #ba8baf">if</span> <span style="color: #d8d8d8;background-color: #181818">err</span> <span style="color: #d8d8d8">!=</span> <span style="color: #f7ca88">nil</span> <span style="color: #d8d8d8">{</span>
+        <span style="color: #d8d8d8;background-color: #181818">log</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Fatalf</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">&#34;Unable to marshal JSON due to %s&#34;</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8;background-color: #181818">err</span><span style="color: #d8d8d8">)</span>
+    <span style="color: #d8d8d8">}</span>
 
-    <span style="color: #d0d0d0;background-color: #151515">litter</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Dump</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">coffee</span><span style="color: #d0d0d0">)</span>
-<span style="color: #d0d0d0">}</span></code></pre>
+    <span style="color: #d8d8d8;background-color: #181818">litter</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Dump</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">coffee</span><span style="color: #d8d8d8">)</span>
+<span style="color: #d8d8d8">}</span></code></pre>
 </div>
 </div>
 </div>
@@ -1660,13 +1660,13 @@ format the output.
 <div class="listingblock">
 <div class="title">Omit an empty field (one with its zero value in Go)</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">type</span> <span style="color: #d0d0d0;background-color: #151515">User</span> <span style="color: #aa759f">struct</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #d0d0d0;background-color: #151515">Username</span> <span style="color: #d28445">string</span>   <span style="color: #90a959">`json:&#34;username&#34;`</span>
-    <span style="color: #d0d0d0;background-color: #151515">Password</span> <span style="color: #d28445">string</span>   <span style="color: #90a959">`json:&#34;-&#34;`</span>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="go"><span style="color: #ba8baf">type</span> <span style="color: #d8d8d8;background-color: #181818">User</span> <span style="color: #ba8baf">struct</span> <span style="color: #d8d8d8">{</span>
+    <span style="color: #d8d8d8;background-color: #181818">Username</span> <span style="color: #dc9656">string</span>   <span style="color: #a1b56c">`json:&#34;username&#34;`</span>
+    <span style="color: #d8d8d8;background-color: #181818">Password</span> <span style="color: #dc9656">string</span>   <span style="color: #a1b56c">`json:&#34;-&#34;`</span>
 
-    <span style="color: #d0d0d0;background-color: #151515">Email</span>    <span style="color: #d28445">string</span>   <span style="color: #90a959">`json:&#34;email&#34;`</span>
-    <span style="color: #d0d0d0;background-color: #151515">Hobbies</span>  <span style="color: #d0d0d0">[]</span><span style="color: #d28445">string</span> <span style="color: #90a959">`json:&#34;hobbies,omitempty&#34;`</span>
-<span style="color: #d0d0d0">}</span></code></pre>
+    <span style="color: #d8d8d8;background-color: #181818">Email</span>    <span style="color: #dc9656">string</span>   <span style="color: #a1b56c">`json:&#34;email&#34;`</span>
+    <span style="color: #d8d8d8;background-color: #181818">Hobbies</span>  <span style="color: #d8d8d8">[]</span><span style="color: #dc9656">string</span> <span style="color: #a1b56c">`json:&#34;hobbies,omitempty&#34;`</span>
+<span style="color: #d8d8d8">}</span></code></pre>
 </div>
 </div>
 </div>
@@ -1677,13 +1677,13 @@ format the output.
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">main</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #d0d0d0;background-color: #151515">good</span> <span style="color: #d0d0d0">:=</span> <span style="color: #90a959">`{&#34;name&#34;: &#34;John Doe&#34;}`</span>
-    <span style="color: #d0d0d0;background-color: #151515">bad</span> <span style="color: #d0d0d0">:=</span> <span style="color: #90a959">`{name: &#34;John Doe&#34;}`</span>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="go"><span style="color: #ba8baf">func</span> <span style="color: #d8d8d8;background-color: #181818">main</span><span style="color: #d8d8d8">()</span> <span style="color: #d8d8d8">{</span>
+    <span style="color: #d8d8d8;background-color: #181818">good</span> <span style="color: #d8d8d8">:=</span> <span style="color: #a1b56c">`{&#34;name&#34;: &#34;John Doe&#34;}`</span>
+    <span style="color: #d8d8d8;background-color: #181818">bad</span> <span style="color: #d8d8d8">:=</span> <span style="color: #a1b56c">`{name: &#34;John Doe&#34;}`</span>
 
-    <span style="color: #d0d0d0;background-color: #151515">fmt</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Println</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">json</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Valid</span><span style="color: #d0d0d0">([]</span><span style="color: #d28445">byte</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">good</span><span style="color: #d0d0d0">)))</span>
-    <span style="color: #d0d0d0;background-color: #151515">fmt</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Println</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">json</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Valid</span><span style="color: #d0d0d0">([]</span><span style="color: #d28445">byte</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">bad</span><span style="color: #d0d0d0">)))</span>
-<span style="color: #d0d0d0">}</span></code></pre>
+    <span style="color: #d8d8d8;background-color: #181818">fmt</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Println</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">json</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Valid</span><span style="color: #d8d8d8">([]</span><span style="color: #dc9656">byte</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">good</span><span style="color: #d8d8d8">)))</span>
+    <span style="color: #d8d8d8;background-color: #181818">fmt</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Println</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">json</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Valid</span><span style="color: #d8d8d8">([]</span><span style="color: #dc9656">byte</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">bad</span><span style="color: #d8d8d8">)))</span>
+<span style="color: #d8d8d8">}</span></code></pre>
 </div>
 </div>
 </div>
@@ -1705,17 +1705,17 @@ named <code>MarshalJSON()</code> that returns a byte slice and an error.</p>
 <div class="listingblock">
 <div class="title">examples/custom_timestamp/main.go</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">type</span> <span style="color: #d0d0d0">(</span>
-    <span style="color: #d0d0d0;background-color: #151515">CustomTime</span> <span style="color: #aa759f">struct</span> <span style="color: #d0d0d0">{</span>
-        <span style="color: #d0d0d0;background-color: #151515">time</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Time</span>
-    <span style="color: #d0d0d0">}</span>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="go"><span style="color: #ba8baf">type</span> <span style="color: #d8d8d8">(</span>
+    <span style="color: #d8d8d8;background-color: #181818">CustomTime</span> <span style="color: #ba8baf">struct</span> <span style="color: #d8d8d8">{</span>
+        <span style="color: #d8d8d8;background-color: #181818">time</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Time</span>
+    <span style="color: #d8d8d8">}</span>
 
-    <span style="color: #d0d0d0;background-color: #151515">Baby</span> <span style="color: #aa759f">struct</span> <span style="color: #d0d0d0">{</span>
-        <span style="color: #d0d0d0;background-color: #151515">BirthDate</span> <span style="color: #d0d0d0;background-color: #151515">CustomTime</span> <span style="color: #90a959">`json:&#34;birth_date&#34;`</span>
-        <span style="color: #d0d0d0;background-color: #151515">Name</span>      <span style="color: #d28445">string</span>    <span style="color: #90a959">`json:&#34;name&#34;`</span>
-        <span style="color: #d0d0d0;background-color: #151515">Gender</span>    <span style="color: #d28445">string</span>    <span style="color: #90a959">`json:&#34;gender&#34;`</span>
-    <span style="color: #d0d0d0">}</span>
-<span style="color: #d0d0d0">)</span></code></pre>
+    <span style="color: #d8d8d8;background-color: #181818">Baby</span> <span style="color: #ba8baf">struct</span> <span style="color: #d8d8d8">{</span>
+        <span style="color: #d8d8d8;background-color: #181818">BirthDate</span> <span style="color: #d8d8d8;background-color: #181818">CustomTime</span> <span style="color: #a1b56c">`json:&#34;birth_date&#34;`</span>
+        <span style="color: #d8d8d8;background-color: #181818">Name</span>      <span style="color: #dc9656">string</span>    <span style="color: #a1b56c">`json:&#34;name&#34;`</span>
+        <span style="color: #d8d8d8;background-color: #181818">Gender</span>    <span style="color: #dc9656">string</span>    <span style="color: #a1b56c">`json:&#34;gender&#34;`</span>
+    <span style="color: #d8d8d8">}</span>
+<span style="color: #d8d8d8">)</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1728,22 +1728,22 @@ the <code>BirthDate</code> value.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">func</span> <span style="color: #d0d0d0;background-color: #151515">main</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #d0d0d0;background-color: #151515">baby</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">Baby</span><span style="color: #d0d0d0">{</span>
-        <span style="color: #d0d0d0;background-color: #151515">Name</span><span style="color: #d0d0d0">:</span>   <span style="color: #90a959">&#34;johnny&#34;</span><span style="color: #d0d0d0">,</span>
-        <span style="color: #d0d0d0;background-color: #151515">Gender</span><span style="color: #d0d0d0">:</span> <span style="color: #90a959">&#34;male&#34;</span><span style="color: #d0d0d0">,</span>
-        <span style="color: #d0d0d0;background-color: #151515">BirthDate</span><span style="color: #d0d0d0">:</span> <span style="color: #d0d0d0;background-color: #151515">CustomTime</span><span style="color: #d0d0d0">{</span>
-            <span style="color: #d0d0d0;background-color: #151515">time</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Date</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">2023</span><span style="color: #d0d0d0">,</span> <span style="color: #90a959">1</span><span style="color: #d0d0d0">,</span> <span style="color: #90a959">1</span><span style="color: #d0d0d0">,</span> <span style="color: #90a959">12</span><span style="color: #d0d0d0">,</span> <span style="color: #90a959">0</span><span style="color: #d0d0d0">,</span> <span style="color: #90a959">0</span><span style="color: #d0d0d0">,</span> <span style="color: #90a959">0</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">time</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Now</span><span style="color: #d0d0d0">()</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Location</span><span style="color: #d0d0d0">()),</span>
-        <span style="color: #d0d0d0">},</span>
-    <span style="color: #d0d0d0">}</span>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="go"><span style="color: #ba8baf">func</span> <span style="color: #d8d8d8;background-color: #181818">main</span><span style="color: #d8d8d8">()</span> <span style="color: #d8d8d8">{</span>
+    <span style="color: #d8d8d8;background-color: #181818">baby</span> <span style="color: #d8d8d8">:=</span> <span style="color: #d8d8d8;background-color: #181818">Baby</span><span style="color: #d8d8d8">{</span>
+        <span style="color: #d8d8d8;background-color: #181818">Name</span><span style="color: #d8d8d8">:</span>   <span style="color: #a1b56c">&#34;johnny&#34;</span><span style="color: #d8d8d8">,</span>
+        <span style="color: #d8d8d8;background-color: #181818">Gender</span><span style="color: #d8d8d8">:</span> <span style="color: #a1b56c">&#34;male&#34;</span><span style="color: #d8d8d8">,</span>
+        <span style="color: #d8d8d8;background-color: #181818">BirthDate</span><span style="color: #d8d8d8">:</span> <span style="color: #d8d8d8;background-color: #181818">CustomTime</span><span style="color: #d8d8d8">{</span>
+            <span style="color: #d8d8d8;background-color: #181818">time</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Date</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">2023</span><span style="color: #d8d8d8">,</span> <span style="color: #a1b56c">1</span><span style="color: #d8d8d8">,</span> <span style="color: #a1b56c">1</span><span style="color: #d8d8d8">,</span> <span style="color: #a1b56c">12</span><span style="color: #d8d8d8">,</span> <span style="color: #a1b56c">0</span><span style="color: #d8d8d8">,</span> <span style="color: #a1b56c">0</span><span style="color: #d8d8d8">,</span> <span style="color: #a1b56c">0</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8;background-color: #181818">time</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Now</span><span style="color: #d8d8d8">()</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Location</span><span style="color: #d8d8d8">()),</span>
+        <span style="color: #d8d8d8">},</span>
+    <span style="color: #d8d8d8">}</span>
 
-    <span style="color: #d0d0d0;background-color: #151515">b</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">:=</span> <span style="color: #d0d0d0;background-color: #151515">json</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Marshal</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">baby</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #aa759f">if</span> <span style="color: #d0d0d0;background-color: #151515">err</span> <span style="color: #d0d0d0">!=</span> <span style="color: #f4bf75">nil</span> <span style="color: #d0d0d0">{</span>
-        <span style="color: #d0d0d0;background-color: #151515">log</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Fatalf</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;Unable to marshal due to %s</span><span style="color: #8f5536">\n</span><span style="color: #90a959">&#34;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">err</span><span style="color: #d0d0d0">)</span>
-    <span style="color: #d0d0d0">}</span>
+    <span style="color: #d8d8d8;background-color: #181818">b</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8;background-color: #181818">err</span> <span style="color: #d8d8d8">:=</span> <span style="color: #d8d8d8;background-color: #181818">json</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Marshal</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">baby</span><span style="color: #d8d8d8">)</span>
+    <span style="color: #ba8baf">if</span> <span style="color: #d8d8d8;background-color: #181818">err</span> <span style="color: #d8d8d8">!=</span> <span style="color: #f7ca88">nil</span> <span style="color: #d8d8d8">{</span>
+        <span style="color: #d8d8d8;background-color: #181818">log</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Fatalf</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">&#34;Unable to marshal due to %s</span><span style="color: #a16946">\n</span><span style="color: #a1b56c">&#34;</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8;background-color: #181818">err</span><span style="color: #d8d8d8">)</span>
+    <span style="color: #d8d8d8">}</span>
 
-    <span style="color: #d0d0d0;background-color: #151515">fmt</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Println</span><span style="color: #d0d0d0">(</span><span style="color: #d28445">string</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">b</span><span style="color: #d0d0d0">))</span>
-<span style="color: #d0d0d0">}</span></code></pre>
+    <span style="color: #d8d8d8;background-color: #181818">fmt</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Println</span><span style="color: #d8d8d8">(</span><span style="color: #dc9656">string</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">b</span><span style="color: #d8d8d8">))</span>
+<span style="color: #d8d8d8">}</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1758,9 +1758,9 @@ timestamp format.</p>
 <div class="listingblock">
 <div class="title">examples/custom_timestamp/main.go</div>
 <div class="content">
-<pre class="rouge highlight" style="color: #d0d0d0;background-color: #151515"><code data-lang="go"><span style="color: #aa759f">func</span> <span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">ct</span> <span style="color: #d0d0d0;background-color: #151515">CustomTime</span><span style="color: #d0d0d0">)</span> <span style="color: #d0d0d0;background-color: #151515">MarshalJSON</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">([]</span><span style="color: #d28445">byte</span><span style="color: #d0d0d0">,</span> <span style="color: #d28445">error</span><span style="color: #d0d0d0">)</span> <span style="color: #d0d0d0">{</span>
-    <span style="color: #aa759f">return</span> <span style="color: #d0d0d0">[]</span><span style="color: #d28445">byte</span><span style="color: #d0d0d0">(</span><span style="color: #d0d0d0;background-color: #151515">fmt</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Sprintf</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">`%q`</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0;background-color: #151515">ct</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Time</span><span style="color: #d0d0d0">.</span><span style="color: #d0d0d0;background-color: #151515">Format</span><span style="color: #d0d0d0">(</span><span style="color: #90a959">&#34;02-01-2006&#34;</span><span style="color: #d0d0d0">))),</span> <span style="color: #f4bf75">nil</span>
-<span style="color: #d0d0d0">}</span></code></pre>
+<pre class="rouge highlight" style="color: #d8d8d8;background-color: #181818"><code data-lang="go"><span style="color: #ba8baf">func</span> <span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">ct</span> <span style="color: #d8d8d8;background-color: #181818">CustomTime</span><span style="color: #d8d8d8">)</span> <span style="color: #d8d8d8;background-color: #181818">MarshalJSON</span><span style="color: #d8d8d8">()</span> <span style="color: #d8d8d8">([]</span><span style="color: #dc9656">byte</span><span style="color: #d8d8d8">,</span> <span style="color: #dc9656">error</span><span style="color: #d8d8d8">)</span> <span style="color: #d8d8d8">{</span>
+    <span style="color: #ba8baf">return</span> <span style="color: #d8d8d8">[]</span><span style="color: #dc9656">byte</span><span style="color: #d8d8d8">(</span><span style="color: #d8d8d8;background-color: #181818">fmt</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Sprintf</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">`%q`</span><span style="color: #d8d8d8">,</span> <span style="color: #d8d8d8;background-color: #181818">ct</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Time</span><span style="color: #d8d8d8">.</span><span style="color: #d8d8d8;background-color: #181818">Format</span><span style="color: #d8d8d8">(</span><span style="color: #a1b56c">&#34;02-01-2006&#34;</span><span style="color: #d8d8d8">))),</span> <span style="color: #f7ca88">nil</span>
+<span style="color: #d8d8d8">}</span></code></pre>
 </div>
 </div>
 </div>
