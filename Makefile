@@ -1,2 +1,8 @@
-CC = ./asciidoc-tor.rb
-DIR = ../content
+all:
+	@make build
+
+tidy:
+	@go mod tidy
+
+build:
+	@go build .

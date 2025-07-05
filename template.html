@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/style.css" />
+    <title>{{.Contacts.Name}}'s Resume</title>
+</head>
+<body>
+    <h1>{{.Contacts.Name}}</h1>
+    <div class="subtitle">
+    <h2>{{.Position}}</h2>
+    </div>
+    <!-- <hr> -->
+    <div class="row">
+        <div class="column">
+            <div class="innercolumn">
+                <h3>About</h3>
+                <div class="container">
+                <div class="contabout">
+                    <ul>
+                        {{range .Tagline}}
+                        <!-- <li>{{.}}</li> -->
+                        {{.}}
+                        {{end}}
+                    </ul>
+                </div>
+                </div>
+            </div>
+            <div class="innercolumn">
+                <h3>Contact</h3>
+                <div class="container">
+                    <table>
+                        <tr> <td>Email</td> <td><a href="mailto://{{.Contacts.Email}}">{{.Contacts.Email}}</a></td> </tr>
+                        <tr> <td>LinkedIn</td> <td><a href="{{.Contacts.LinkedIn.URL}}">{{.Contacts.LinkedIn.Text}}</a></td> </tr>
+                        <tr> <td>Github</td> <td><a href="{{.Contacts.GitHub.URL}}">{{.Contacts.GitHub.Text}}</a></td> </tr>
+                        <!-- <tr> <td>Phone</td> <td><a href="">{{.Contacts.Phone}}</a></td> </tr> -->
+                        <!-- <tr> <td>Location</td> <td><a href="">{{.Contacts.Location}}</a></td> </tr> -->
+                        <!-- <tr> <td>GitLab</td> <td><a href="{{.Contacts.GitLab.URL}}">{{.Contacts.GitLab.Text}}</a></td> </tr> -->
+                        <!-- <tr> <td>Website</td> <td><a href="{{.Contacts.Website.URL}}">{{.Contacts.Website.Text}}</a></td> </tr> -->
+                    </table>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <div class="innercolumn">
+                        <h3>Education</h3>
+                        <div class="container">
+                            {{range .Education}}
+                            <ul>
+                                <li>{{.Degree}} in {{.Major}}</li>
+                            </ul>
+                            <!-- <h4>{{.Degree}} in {{.Major}} from {{.Place.Name}}</h4> -->
+                            <!-- <p><strong>From:</strong> {{.From}} <strong>To:</strong> {{.To}}</p> -->
+                            {{end}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+            </div>
+        </div>
+        <div class="column">
+            <div class="innercolumn">
+                <h3>Skills</h3>
+                <div class="container">
+                <div class="contaitem">
+                    <ul>
+                        {{range .Skills}}
+                        <span class="hl">{{.}}</span>
+                        {{end}}
+                    </ul>
+                </div>
+                </div>
+            </div>
+            <!-- <div class="row"> -->
+            <!--     <div class="column"> -->
+                    <div class="innercolumn">
+                        <h3>Tools</h3>
+                        <div class="container">
+                        <div class="contaitem">
+                            <ul>
+                                {{range .Tools}}
+                                <span class="hl">{{.}}</span>
+                                {{end}}
+                            </ul>
+                        </div>
+                        </div>
+                    </div>
+                <!-- </div> -->
+                <!-- <div class="column"> -->
+                    <div class="innercolumn">
+                        <h3>Programming</h3>
+                        <div class="container">
+                        <div class="contaitem">
+                            <ul>
+                                {{range .Programming}}
+                                <span class="hl">{{.}}</span>
+                                {{end}}
+                            </ul>
+                        </div>
+                        </div>
+                    <!-- </div> -->
+                </div>
+                <div class="innercolumn">
+                    <h3>Languages</h3>
+                    <div class="container">
+                        <ul>
+                            {{range .Languages}}
+                            <span class="hl">{{.}}</span>
+                            {{end}}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="column">
+            <div class="innercolumn">
+                <details>
+                <summary>Work Experiences</summary>
+                <p>
+                    <div class="container">
+                        {{range .Jobs}}
+                        <div class="innermostcolumn">
+                            <h4>{{.Position}}</h4>
+                            <!-- <h4>{{.Position}} at {{.Company.Name}}</h4> -->
+                            <div class="container">
+                            <p><strong>From:</strong> {{.From}} <strong>To:</strong> {{.To}}</p>
+                            <p><strong>Description:</strong></p>
+                            <div class="container">
+                                <ul>
+                                    {{range .Description}}
+                                    <li>{{.}}</li>
+                                    {{end}}
+                                </ul>
+                            </div>
+                            </div>
+                        </div>
+                        <!-- <hr> -->
+                        {{end}}
+                    </div>
+                </p>
+                </details>
+            </div>
+        </div>
+        <div class="column">
+            <div class="innercolumn">
+                <details>
+                    <summary>Projects</summary>
+                    <p>
+                        <div class="container">
+                            {{range .Projects}}
+                            <div class="innermostcolumn">
+                                <h4>{{.Name}}</h4>
+                                <div class="container">
+                                    <p><strong>Description:</strong></p>
+                                    <ul>
+                                        {{range .Description}}
+                                        <li>{{.}}</li>
+                                        {{end}}
+                                    </ul>
+                                    <p><a href="{{.URL}}">View Project</a></p>
+                                </div>
+                            </div>
+                            {{end}}
+                        </div>
+                    </p>
+                </details>
+            </div>
+        </div>
+    </div>
+    <!-- <hr> -->
+    <div class="row">
+        <div class="column">
+            <div class="innercolumn">
+                <!-- <details> -->
+                <!--     <summary>Certifications</summary> -->
+                <!--     <p> -->
+                <!--         <div class="container"> -->
+                <!--             <ul> -->
+                <!--                 {{range .Achievements}} -->
+                <!--                 <li><strong>{{.Name}}</strong> {{.Description}}</li> -->
+                <!--                 {{end}} -->
+                <!--             </ul> -->
+                <!--         </div> -->
+                <!--     </p> -->
+                <!-- </details> -->
+                <!-- norm -->
+                <!--     <h3>Certifications</h3> -->
+                <!--     <div class="container"> -->
+                <!--         <ul> -->
+                <!--             {{range .Achievements}} -->
+                <!--             <li><strong>{{.Name}}</strong> {{.Description}}</li> -->
+                <!--             {{end}} -->
+                <!--         </ul> -->
+                <!--     </div> -->
+                <!-- </div> -->
+            </div>
+        <div class="column">
+        </div>
+    </div>
+</body>
+</html>
