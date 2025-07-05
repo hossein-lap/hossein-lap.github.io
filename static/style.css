@@ -5,8 +5,8 @@
 @font-face {
     font-family: 'ibm-false';
     font-weight: bold;
-    src: url('./font/flexi-ibm-vga-true.regular.ttf') format('truetype');
-    /* src: url('./font/terminal-grotesque.ttf') format('truetype'); */
+    /* src: url('./font/flexi-ibm-vga-true.regular.ttf') format('truetype'); */
+    src: url('./font/terminal-grotesque.ttf') format('truetype');
     /* src: url('./font/flexi-ibm-vga-false.regular.ttf') format('truetype'); */
 }
 @font-face {
@@ -16,7 +16,7 @@
 * {
     color: #bbbbbb;
     font-family: "ibm-false", sans-serif; 
-    font-size: 105%;
+    /* font-size: 105%; */
 }
 hr {
     border: none;
