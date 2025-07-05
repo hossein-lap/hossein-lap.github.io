@@ -3,18 +3,20 @@
     src: url('./font/flexi-ibm-vga-true.regular.ttf') format('truetype');
 }
 @font-face {
+    font-family: 'ibm-false';
+    font-weight: bold;
+    src: url('./font/flexi-ibm-vga-true.regular.ttf') format('truetype');
+    /* src: url('./font/terminal-grotesque.ttf') format('truetype'); */
+    /* src: url('./font/flexi-ibm-vga-false.regular.ttf') format('truetype'); */
+}
+@font-face {
     font-family: 'ibm-true';
     src: url('./font/VT323-Regular.ttf') format('truetype');
 }
-@font-face {
-    font-family: 'ibm-false';
-    font-weight: bold;
-    src: url('./font/terminal-grotesque.ttf') format('truetype');
-    /* src: url('./font/flexi-ibm-vga-false.regular.ttf') format('truetype'); */
-}
 * {
-    color: #dddddd;
+    color: #bbbbbb;
     font-family: "ibm-false", sans-serif; 
+    font-size: 105%;
 }
 hr {
     border: none;
@@ -40,33 +42,56 @@ h1, h2, h3 {
 /* h3 { */
 /*     text-transform: uppercase; */
 /* } */
-h1 { font-size: 2em; }
-h2 { font-size: 1.7em; }
-h3, details > summary {
+h1 { font-size: 2.2em; }
+h2 { font-size: 1.9em; }
+/* h3, details > summary { */
+h3 {
     font-family: "ibm-true", sans-serif; 
     text-transform: uppercase;
-    font-size: 1.5em;
-    padding: 10px;
-    color: #C5FFFF; 
+    font-size: 1.7em;
     font-weight: bold;
+    padding: 10px;
+    margin: 20px;
+    color: #C5FFFF; 
+}
+.innercolumn:hover {
+    /* h3, details > summary { */
+    h3 {
+        color: #08090D; 
+        background-color: #C5FFFF;
+        /* border: 1px solid #C5FFFF; */
+        /* padding: 10px; */
+    }
 }
 h4 {
-    font-size: 1.2em;
-    background-color: #0c141f; 
+    font-size: 1.5em;
+    /* background-color: #0c141f;  */
+    /* background-color: #C5FFFF; */
     color: #8BAFC5;
     padding: 10px;
 }
-.innercolumn:hover {
-    h3, details > summary {
-        color: #08090D; 
-        background-color: #C5FFFF;
-        padding: 10px;
+.innermostcolumn {
+    h4, details > p, details > summary {
+        padding: 5px;
+    }
+    details > .container {
+        padding: 5px;
+        font-size: 1.0em;
     }
 }
 .innermostcolumn:hover {
-    h4 {
+    h4, details > p, details > summary {
         color: #0c141f; 
         background-color: #8BAFC5;
+        padding: 5px;
+        /* border: 1px solid #8BAFC5; */
+    }
+    details > .container {
+        padding: 5px;
+        color: #ffffff;
+        font-size: 1.0em;
+        background-color: #0c141f; 
+        /* background-color: #8BAFC5; */
     }
 }
 .hl {
@@ -89,6 +114,15 @@ h4 {
     padding-left: 20px;
     padding-right: 20px;
 }
+/* table { */
+/*     border-spacing: 0; */
+/* } */
+/* th, td { */
+/*     border: 0px solid #ddd; */
+/*     padding: 0px; */
+/*     gap: 0px; */
+/*     margin: 0px; */
+/* } */
 .contabout {
     line-height: 1.5;
 }
@@ -104,6 +138,10 @@ td {
     flex-wrap: wrap;
 }
 .innercolumn {
+}
+.scrollcolumn {
+    overflow: visible; /* auto or scroll */
+    height: 230px;
 }
 .column {
     flex: 1;
@@ -136,15 +174,40 @@ a:hover {
     padding: 10px;
     /* text-decoration: underline;  */
 }
+/* details > p { */
+/*     list-style-type: ' '; */
+/*     font-size: 1.2em; */
+/* } */
 details > summary {
-    list-style-type: '#';
+    list-style-type: '>> ';
+    font-size: 1.0em;
 }
 details[open] > summary {
-    list-style-type: '=';
+    list-style-type: '>> ';
+}
+details > summary::after {
+    content: ' ';
+}
+details[open] > summary::after {
+    content: ' ';
 }
 details > summary::before {
     content: ' ';
 }
 details[open] > summary::before {
     content: ' ';
+}
+ul  {
+    padding-left: 20px;
+    list-style: " > ";
+}
+ul li {
+    padding: 5px;
+    margin-left: 15px;
+}
+q {
+    quotes: none; /* Remove default quotation marks */
+    padding-left: 20px; /* Add left padding */
+    margin-left: 20px; /* Add left padding */
+    display: inline-block; /* Ensure padding is applied correctly */
 }

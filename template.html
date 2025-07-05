@@ -19,16 +19,19 @@
                 <div class="container">
                 <div class="contabout">
                     <ul>
+                        <p>
                         {{range .Tagline}}
                         <!-- <li>{{.}}</li> -->
                         {{.}}
                         {{end}}
+                        </p>
                     </ul>
                 </div>
                 </div>
             </div>
             <div class="innercolumn">
                 <h3>Contact</h3>
+                <q>
                 <div class="container">
                     <table>
                         <tr> <td>Email</td> <td><a href="mailto://{{.Contacts.Email}}">{{.Contacts.Email}}</a></td> </tr>
@@ -41,20 +44,25 @@
                     </table>
                     </ul>
                 </div>
+                </q>
             </div>
             <div class="row">
                 <div class="column">
                     <div class="innercolumn">
                         <h3>Education</h3>
-                        <div class="container">
                             {{range .Education}}
-                            <ul>
-                                <li>{{.Degree}} in {{.Major}}</li>
-                            </ul>
+                            <!-- <ul> -->
+                            <!--     <li>{{.Degree}} in {{.Major}}</li> -->
+                            <!-- </ul> -->
                             <!-- <h4>{{.Degree}} in {{.Major}} from {{.Place.Name}}</h4> -->
                             <!-- <p><strong>From:</strong> {{.From}} <strong>To:</strong> {{.To}}</p> -->
-                            {{end}}
+                        <div class="container">
+                            <q>
+                                {{.Degree}} in {{.Major}} &mdash;
+                                <strong>From:</strong> {{.From}} <strong>To:</strong> {{.To}}
+                            </q>
                         </div>
+                            {{end}}
                     </div>
                 </div>
             </div>
@@ -120,42 +128,48 @@
     <div class="row">
         <div class="column">
             <div class="innercolumn">
-                <details>
-                <summary>Work Experiences</summary>
-                <p>
+                <h3>Work Experiences</h3>
+                <div class="scrollcolumn">
                     <div class="container">
                         {{range .Jobs}}
                         <div class="innermostcolumn">
-                            <h4>{{.Position}}</h4>
+                            <!-- <h4>{{.Position}}</h4> -->
                             <!-- <h4>{{.Position}} at {{.Company.Name}}</h4> -->
-                            <div class="container">
-                            <p><strong>From:</strong> {{.From}} <strong>To:</strong> {{.To}}</p>
-                            <p><strong>Description:</strong></p>
-                            <div class="container">
-                                <ul>
-                                    {{range .Description}}
-                                    <li>{{.}}</li>
-                                    {{end}}
-                                </ul>
-                            </div>
-                            </div>
+                            <p>
+                            <details>
+                                <summary>{{.Position}}</summary>
+                                <p>
+                                <div class="container">
+                                <p><strong>From:</strong> {{.From}} <strong>To:</strong> {{.To}}</p>
+                                <p><strong>Description:</strong></p>
+                                <div class="container">
+                                    <ul>
+                                        {{range .Description}}
+                                        <li>{{.}}</li>
+                                        {{end}}
+                                    </ul>
+                                </div>
+                                </div>
+                                </p>
+                            </details>
+                            </p>
                         </div>
                         <!-- <hr> -->
                         {{end}}
                     </div>
-                </p>
-                </details>
+                </div>
             </div>
         </div>
         <div class="column">
             <div class="innercolumn">
-                <details>
-                    <summary>Projects</summary>
-                    <p>
-                        <div class="container">
-                            {{range .Projects}}
-                            <div class="innermostcolumn">
-                                <h4>{{.Name}}</h4>
+                <h3>Projects</h3>
+                <div class="scrollcolumn">
+                    <div class="container">
+                        {{range .Projects}}
+                        <div class="innermostcolumn">
+                            <p>
+                            <details>
+                                <summary>{{.Name}}</summary>
                                 <div class="container">
                                     <p><strong>Description:</strong></p>
                                     <ul>
@@ -165,11 +179,12 @@
                                     </ul>
                                     <p><a href="{{.URL}}">View Project</a></p>
                                 </div>
-                            </div>
-                            {{end}}
+                            </details>
+                            </p>
                         </div>
-                    </p>
-                </details>
+                        {{end}}
+                    </div>
+                </div>
             </div>
         </div>
     </div>
