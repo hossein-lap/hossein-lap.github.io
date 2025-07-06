@@ -129,16 +129,14 @@
         <div class="column">
             <div class="innercolumn">
                 <h3>Work Experiences</h3>
-                <div class="scrollcolumn">
+                <!-- <div class="scrollcolumn"> -->
                     <div class="container">
                         {{range .Jobs}}
                         <div class="innermostcolumn">
                             <!-- <h4>{{.Position}}</h4> -->
                             <!-- <h4>{{.Position}} at {{.Company.Name}}</h4> -->
-                            <p>
                             <details>
                                 <summary>{{.Position}}</summary>
-                                <p>
                                 <div class="container">
                                 <p><strong>From:</strong> {{.From}} <strong>To:</strong> {{.To}}</p>
                                 <p><strong>Description:</strong></p>
@@ -150,41 +148,37 @@
                                     </ul>
                                 </div>
                                 </div>
-                                </p>
                             </details>
-                            </p>
                         </div>
                         <!-- <hr> -->
                         {{end}}
                     </div>
-                </div>
+                <!-- </div> -->
             </div>
         </div>
         <div class="column">
             <div class="innercolumn">
                 <h3>Projects</h3>
-                <div class="scrollcolumn">
+                <!-- <div class="scrollcolumn"> -->
                     <div class="container">
                         {{range .Projects}}
                         <div class="innermostcolumn">
-                            <p>
                             <details>
                                 <summary>{{.Name}}</summary>
                                 <div class="container">
-                                    <p><strong>Description:</strong></p>
+                                    <strong>Description:</strong>
                                     <ul>
                                         {{range .Description}}
                                         <li>{{.}}</li>
                                         {{end}}
                                     </ul>
-                                    <p><a href="{{.URL}}">View Project</a></p>
+                                    <a href="{{.URL}}">View Project</a>
                                 </div>
                             </details>
-                            </p>
                         </div>
                         {{end}}
                     </div>
-                </div>
+                <!-- </div> -->
             </div>
         </div>
     </div>

@@ -181,6 +181,7 @@ a:hover {
 details > summary {
     list-style-type: '>> ';
     font-size: 1.0em;
+    cursor: pointer;
 }
 details[open] > summary {
     list-style-type: '>> ';
