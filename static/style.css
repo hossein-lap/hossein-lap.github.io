@@ -1,21 +1,21 @@
 @font-face {
-    font-family: 'ibm-null';
-    src: url('./font/flexi-ibm-vga-true.regular.ttf') format('truetype');
+    font-family: 'custom-mono';
+    src: url('./font/NotoSansMono-R.ttf') format('truetype');
 }
 @font-face {
-    font-family: 'ibm-false';
+    font-family: 'custom-sans';
     font-weight: bold;
     /* src: url('./font/flexi-ibm-vga-true.regular.ttf') format('truetype'); */
-    src: url('./font/terminal-grotesque.ttf') format('truetype');
+    src: url('./font/LiberationSans-R.ttf') format('truetype');
     /* src: url('./font/flexi-ibm-vga-false.regular.ttf') format('truetype'); */
 }
 @font-face {
-    font-family: 'ibm-true';
-    src: url('./font/VT323-Regular.ttf') format('truetype');
+    font-family: 'custom-serif';
+    src: url('./font/LibertinusSans-R.ttf') format('truetype');
 }
 * {
     color: #bbbbbb;
-    font-family: "ibm-false", sans-serif; 
+    font-family: "custom-sans", sans-serif; 
     /* font-size: 105%; */
 }
 hr {
@@ -26,12 +26,12 @@ hr {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Shadow effect */
 }
 h1, h2, h3, h4, h5, h6 {
-    font-family: "ibm-true", sans-serif; 
+    font-family: "custom-serif", sans-serif; 
     text-transform: uppercase;
 }
 body { 
     /* font-family: 'Courier New', Courier, monospace;  */
-    /* font-family: "ibm-false", sans-serif;  */
+    /* font-family: "custom-sans", sans-serif;  */
     margin: 20px; 
     background-color: #08090D; 
     color: #EAF7F7; 
@@ -46,7 +46,7 @@ h1 { font-size: 2.2em; }
 h2 { font-size: 1.9em; }
 /* h3, details > summary { */
 h3 {
-    font-family: "ibm-true", sans-serif; 
+    font-family: "custom-serif", sans-serif; 
     text-transform: uppercase;
     font-size: 1.7em;
     font-weight: bold;
@@ -95,7 +95,7 @@ h4 {
     }
 }
 .hl {
-    font-family: "ibm-null", monospace; 
+    font-family: "custom-mono", monospace; 
     background-color: #0c141f; 
     border: 1px solid #17262D;
     padding: 5px;
@@ -162,7 +162,7 @@ li {
     border-radius: 0px; 
 }
 a {
-    font-family: "ibm-null", monospace; 
+    font-family: "custom-mono", monospace; 
     color: #6ee2ff; 
     text-decoration: none; 
     padding: 10px;
