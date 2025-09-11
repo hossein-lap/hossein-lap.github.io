@@ -131,27 +131,33 @@
                 <h3>Work Experiences</h3>
                 <!-- <div class="scrollcolumn"> -->
                     <div class="container">
-                        {{range .Jobs}}
+
+                        <ul>
+                        {{range $i, $job := .Jobs}}
                         <div class="innermostcolumn">
-                            <!-- <h4>{{.Position}}</h4> -->
-                            <!-- <h4>{{.Position}} at {{.Company.Name}}</h4> -->
-                            <details>
-                                <summary>{{.Position}}</summary>
-                                <div class="container">
-                                <p><strong>From:</strong> {{.From}} <strong>To:</strong> {{.To}}</p>
-                                <p><strong>Description:</strong></p>
-                                <div class="container">
+                            <li>
+                                {{ $job.Position }}
+                                <button class="popup-btn" data-popup="job-{{$i}}">
+                                    Details
+                                </button>
+                            </li>
+                            <div id="job-{{$i}}" class="popup">
+                                <div class="popup-content">
+                                    <span class="close" data-popup="job-{{$i}}">&times;</span>
+                                    <h4>{{ $job.Position }}</h4>
+                                    <p><strong>From:</strong> {{ $job.From }} <strong>To:</strong> {{ $job.To }}</p>
+                                    <p><strong>Description:</strong></p>
                                     <ul>
-                                        {{range .Description}}
+                                        {{range $job.Description}}
                                         <li>{{.}}</li>
                                         {{end}}
                                     </ul>
                                 </div>
-                                </div>
-                            </details>
+                            </div>
                         </div>
-                        <!-- <hr> -->
                         {{end}}
+                        </ul>
+
                     </div>
                 <!-- </div> -->
             </div>
@@ -161,6 +167,7 @@
                 <h3>Projects</h3>
                 <!-- <div class="scrollcolumn"> -->
                     <div class="container">
+
                         {{range .Projects}}
                         <div class="innermostcolumn">
                             <details>
@@ -177,6 +184,7 @@
                             </details>
                         </div>
                         {{end}}
+
                     </div>
                 <!-- </div> -->
             </div>
@@ -212,5 +220,6 @@
         <div class="column">
         </div>
     </div>
+    <script src="./static/popup.js"></script> 
 </body>
 </html>
