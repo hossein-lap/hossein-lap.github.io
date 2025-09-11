@@ -3,7 +3,7 @@ package main
 // imports {{{
 import (
 	"os"
-	// "fmt"
+	"fmt"
 	"log"
 	"gopkg.in/yaml.v3"
 	"html/template"
@@ -13,6 +13,7 @@ import (
 // yaml structure {{{
 
 type ContactLinks struct {
+	Name string `yaml:"name"`
 	URL  string `yaml:"url"`
 	Text string `yaml:"text"`
 }
@@ -23,16 +24,13 @@ type JobLinks struct {
 }
 
 type Contact struct {
-	Name     string        `yaml:"name"`
-	Title    string        `yaml:"title"`
-	Email    string        `yaml:"email"`
-	Address  string        `yaml:"address"`
-	Location string        `yaml:"location"`
-	Phone    string        `yaml:"phone"`
-	LinkedIn ContactLinks   `yaml:"linkedin"`
-	GitLab   ContactLinks   `yaml:"gitlab"`
-	GitHub   ContactLinks   `yaml:"github"`
-	Website  ContactLinks   `yaml:"website"`
+	Name     string         `yaml:"name"`
+	Title    string         `yaml:"title"`
+	Email    string         `yaml:"email"`
+	Address  string         `yaml:"address"`
+	Location string         `yaml:"location"`
+	Phone    string         `yaml:"phone"`
+    Links    []ContactLinks `yaml:"links"`
 }
 
 type Job struct {
@@ -126,28 +124,83 @@ func main() {
 	// Read the YAML file
 	data, err := os.ReadFile("configuration.yml")
 	if err != nil {
-		log.Fatalf("error: %v", err)
+		log.Fatalf("// error: %v", err)
 	}
 
 	// Unmarshal the YAML data into the Blog struct
 	var blog Blog
 	err = yaml.Unmarshal(data, &blog)
 	if err != nil {
-		log.Fatalf("error: %v", err)
+		log.Fatalf("// error: %v", err)
 	}
 
-	// // Print the parsed data (for demonstration purposes)
-	// fmt.Printf("Name: %s\n", blog.Contacts.Name)
-	// fmt.Printf("Position: %s\n", blog.Position)
-	// fmt.Printf("Tagline: %s\n", blog.Tagline)
-	// fmt.Printf("Jobs: %+v\n", blog.Jobs)
-	// fmt.Printf("Projects: %+v\n", blog.Projects)
-	// fmt.Printf("Education: %+v\n", blog.Education)
-	// fmt.Printf("Skills: %+v\n", blog.Skills)
-	// fmt.Printf("Tools: %+v\n", blog.Tools)
-	// fmt.Printf("Programming: %+v\n", blog.Programming)
-	// fmt.Printf("Languages: %+v\n", blog.Languages)
-	// fmt.Printf("Achievements: %+v\n", blog.Achievements)
+
+	// Print the parsed data (for demonstration purposes)
+	fmt.Println("= Blog Summary\n")
+	fmt.Println("== Contacts\n")
+	fmt.Printf("* Name: %s\n", blog.Contacts.Name)
+	fmt.Printf("* Title: %s\n", blog.Contacts.Title)
+	fmt.Printf("* Email: %s\n", blog.Contacts.Email)
+	fmt.Printf("* Phone: %s\n", blog.Contacts.Phone)
+	fmt.Printf("* Address: %s\n", blog.Contacts.Address)
+	fmt.Printf("* Location: %s\n", blog.Contacts.Location)
+	fmt.Println("\n=== Links\n")
+	for _, link := range blog.Contacts.Links {
+		fmt.Printf("* %s: %s (%s)\n", link.Name, link.Text, link.URL)
+	}
+
+	fmt.Println("\n== Tagline\n")
+	for _, tagline := range blog.Tagline {
+		fmt.Printf("* %s\n", tagline)
+	}
+
+	fmt.Println("\n== Jobs\n")
+	for _, job := range blog.Jobs {
+		fmt.Printf("* %s at %s (%s -> %s)\n", job.Position, job.Company.Name, job.From, job.To)
+		for _, desc := range job.Description {
+			fmt.Printf("** %s\n", desc)
+		}
+	}
+
+	fmt.Println("\n== Projects\n")
+	for _, project := range blog.Projects {
+		fmt.Printf("* %s (%s)\n", project.Name, project.URL)
+		for _, desc := range project.Description {
+			fmt.Printf("** %s\n", desc)
+		}
+	}
+
+	fmt.Println("\n== Education\n")
+	for _, edu := range blog.Education {
+		fmt.Printf("* %s, %s in %s (%s -> %s, %s)\n", edu.Place.Name, edu.Degree, edu.Major, edu.From, edu.To, edu.Location)
+	}
+
+	fmt.Println("\n== Skills\n")
+	for _, skill := range blog.Skills {
+		fmt.Printf("* %s\n", skill)
+	}
+
+	fmt.Println("\n== Tools\n")
+	for _, tool := range blog.Tools {
+		fmt.Printf("* %s\n", tool)
+	}
+
+	fmt.Println("\n== Programming\n")
+	for _, lang := range blog.Programming {
+		fmt.Printf("* %s\n", lang)
+	}
+
+	fmt.Println("\n== Languages\n")
+	for _, lang := range blog.Languages {
+		fmt.Printf("* %s\n", lang)
+	}
+
+	fmt.Println("\n== Achievements\n")
+	for _, ach := range blog.Achievements {
+		fmt.Printf("* %s: %s\n", ach.Name, ach.Description)
+	}
+	fmt.Println("\n// HTML generation completed successfully!")
+
 
 	GenerateHTML(blog)
 
