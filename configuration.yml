@@ -33,7 +33,6 @@ tagline:
 
 # jobs {{{
 jobs:
-
   - position: DevOps Mentoring
     company:
       name: Devonix Team
@@ -53,7 +52,6 @@ jobs:
     tags:
       - ''
     location: Remote
-
   - position: DevOps Engineer
     company:
       name: Sina Communication Systems Co
@@ -71,8 +69,7 @@ jobs:
     to: "Present"
     tags:
       - ''
-    location: Tehran, Iran
-
+    location: On-site
   - position: NixOS System Administrator
     company:
       name: Self-employed
@@ -83,13 +80,12 @@ jobs:
     description:
       - Write and manage custom Nix package(s) and overlay(s)
       - Boot-time (specialities) configuration and setup
-      - Create and manage isolated (test, deploy and develompent) environtment
+      - Create and manage isolated (test, deploy and development) environment
     from: "Sep 2023"
     to: "May 2025"
     tags:
       - ''
     location: Remote
-
   - position: DevOps Engineer
     company:
       name: Self-employed
@@ -98,7 +94,7 @@ jobs:
       name: Hybrid
       link: ''
     description:
-      - Deploying RESTfull web-apps on docker-compose and Kubernetes
+      - Deploying RESTful web-apps on docker-compose and Kubernetes
       - Custom nginx load-balancer
       - Redis cache storage
       - Storage volumes
@@ -107,7 +103,6 @@ jobs:
     tags:
       - ''
     location: Remote
-
   - position: DevOps Mentoring
     company:
       name: Devonix Team
@@ -125,7 +120,6 @@ jobs:
     tags:
       - ''
     location: Remote
-
   - position: Automation and Virtualization Specialist
     company:
       name: RPS Cloud
@@ -134,15 +128,14 @@ jobs:
       name: Remote
       link: ''
     description:
-      - Manage multi-node (clustering) proxmox hypervisor
-      - Port-forwarding using IPTables
+      - Manage Multi-Node (clustering) proxmox hypervisor
+      - Port-Forwarding using IPtables
       - Automated shell script to use proxmox's API
     from: "Jun 2022"
     to: "Sep 2022"
     tags:
       - ''
     location: Remote
-
   - position: Linux System Administrator
     company:
       name: Self-employed
@@ -170,25 +163,23 @@ projects:
     description: 
     - Add, Remove and Edit (projects, remotes, etc.) gerrit manifest file
     - Simple Terminal User Interface (TUI)
-
   - name: "Git bare-repo and worktree manager"
     text: gitlab.com/hos-tools/git-worktree.git
     url: https://gitlab.com/hos-tools/git-worktree.git
     description: 
     - Clone a git repository in bare
     - Activate worktrees for each branch
-    # - Move bare repositories safely on filesystem
-
+    - Run bulk-action on all worktree/branches
+    # - Move bare repositories safely on Filesystem
   - name: "Simple QEMU wrapper"
     text: gitlab.com/hos-tools/virtual-manager.git
     url: https://gitlab.com/hos-tools/virtual-manager
     description: 
-    - Wrapper around type-2 QEMU hypervisor (with KVM acceleration enabled)
+    - Wrapper around Type-2 QEMU hypervisor (with KVM acceleration enabled)
     - Handle shared-folder
-    - Port-forwarding
+    - Port-Forwarding
     - VNC (headless) mode
-    - Can save VM's config to be run again
-
+    - Save config in yaml format
   - name: "Git GPG key handler"
     text: gitlab.com/hos-tools/git-config.git
     url: https://gitlab.com/hos-tools/git-config.git
@@ -196,22 +187,20 @@ projects:
     - Manage GPG keys in a per-repo basis
     - Optional commit message template and ssh-key settings
     - Simple TUI
-
   - name: "Resume Template"
     text: gitlab.com/primejade/hos-resume.git
     url: https://gitlab.com/primejade/hos-resume.git
     description: 
-    - Automated CI/CD pipeline usin Gitlab CI
-    - Pipline triggers on new tags and not commits
-
-  - name: "RESTfull web-app with Database and Cache"
+    - Automated CI/CD pipeline using Gitlab CI
+    - Pipeline triggers on new tags and not commits
+  - name: "RESTful web-app with Database and Cache"
     text: github.com/hossein-lap/example-test-project-day-01.git
     url: https://github.com/hossein-lap/example-test-project-day-01.git
     description: 
-    - Simple RESTfull web app written in golang
+    - Simple RESTful web app written in golang
     - Database (mysql) deployment with secret management in K8S cluster
-    - Redis cache with auto-scaler based on CPU usage and ConfigMap
-    - File-storage (persistant volume)
+    - Redis cache with Autoscaler based on CPU usage and ConfigMap
+    - File-storage (persistent volume)
 # }}}
 
 # education {{{
@@ -260,7 +249,6 @@ skills:
 
 # tools {{{
 tools:
-
   - Ansible
   - Awk
   - Docker
@@ -300,9 +288,9 @@ programming:
 # languages {{{
 languages:
   - English
+  # - German
   # - Japanese
   # - Russian
-  # - German
 # }}}
 
 # achivement {{{
