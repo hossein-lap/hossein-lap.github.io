@@ -295,11 +295,11 @@ languages:
 
 # achivement {{{
 achievements:
-  - name: "LPIC - 3"
+  - name: "LPIC 3"
     description: "Virtualization and Containerization"
-  - name: "LPIC - 3"
-    description: "Security"
-  - name: "LPIC - 3"
+  # - name: "LPIC 3"
+  #   description: "Security"
+  - name: "LPIC 3"
     description: "High Availability and Storage Cluster"
   - name: "RedHat Certified Engineer"
     description: ""
@@ -307,9 +307,9 @@ achievements:
     description: ""
   - name: "SUSE Certified Administrator"
     description: ""
-  - name: "LPIC - 2"
+  - name: "LPIC 2"
     description: ""
-  - name: "LPIC - 1"
+  - name: "LPIC 1"
     description: ""
 # }}}
 

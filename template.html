@@ -5,151 +5,139 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./static/style.css" />
         <title>{{.Contacts.Name}}'s Resume</title>
-        <style>
-            /* body { */
-            /* } */
-            .headcontainer {
-                display: flex;
-                justify-content: space-between; /* Space between the two elements */
-                width: 100%; /* Full width for the container */
-            }
-        </style>
+        <script src="./static/popup.js"></script>
     </head>
     <body>
-        <div class="headcontainer">
-            <div class="title">
-                <h1>{{.Contacts.Name}}</h1>
-                <div class="subtitle">
-                    <h2>{{.Position}}</h2>
-                </div>
-            </div>
-            <div class="getpdf">
-                <div class="hl">
-                    <p><a href="resume.pdf">
-                        Get the PDF version
-                    </a></p>
-                </div>
-            </div>
-        </div>
-        <!-- <hr> -->
-        <div class="row">
-            <div class="column">
-                <div class="innercolumn">
-                    <h3>About</h3>
-                    <div class="container">
-                        <div class="contabout">
-                            <ul>
-                                <p>
-                                {{range .Tagline}}
-                                <!-- <li>{{.}}</li> -->
-                                {{.}}
-                                {{end}}
-                                </p>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="innercolumn">
-                    <h3>Contacts</h3>
-                    <q>
-                        <div class="container">
-                            <table>
-                                {{ range .Contacts.Links }}
-                                <tr>
-                                    <td>{{ .Name }}</td>
-                                    <td><a href="{{ .URL }}">{{ .Text }}</a></td>
-                                </tr>
-                                {{ end }}
-                            </table>
-                        </div>
-                    </q>
-                </div>
-                <div class="row">
-                    <div class="column">
-                        <div class="innercolumn">
-                            <h3>Education</h3>
-                            <div class="container">
-                                <div class="containerbox">
-                                    {{range .Education}}
-                                    <!-- <ul> -->
-                                    <!--     <li>{{.Degree}} in {{.Major}}</li> -->
-                                    <!-- </ul> -->
-                                    <!-- <h4>{{.Degree}} in {{.Major}} from {{.Place.Name}}</h4> -->
-                                    <!-- <p><strong>From:</strong> {{.From}} <strong>To:</strong> {{.To}}</p> -->
-                                    <q>
-                                        <span class="hl">{{.Degree}}</span>
-                                        in
-                                        <span class="hl">{{.Major}}</span>
-                                        <ul>
-                                            <li>
-                                                <strong>From:</strong>
-                                                <span class="hl">{{.From}}</span>
-                                                <strong>To:</strong>
-                                                <span class="hl">{{.To}}</span>
-                                            </li>
-                                        </ul>
-                                    </q>
-                                    {{end}}
-                                </div>
-                            </div>
-                        </div>
+        <div class="mainmain">
+            <div class="row">
+                <div class="column">
+                    <h1>{{.Contacts.Name}}</h1>
+                    <div class="subtitle">
+                        <h2>{{.Position}}</h2>
                     </div>
                 </div>
                 <div class="column">
+                    <div class="getpdf">
+                        <p><a href="resume.pdf">
+                            Get the PDF version
+                        </a></p>
+                    </div>
                 </div>
             </div>
-            <div class="column">
-                <div class="innercolumn">
-                    <h3>Skills</h3>
-                    <div class="container">
-                        <div class="contaitem">
-                            <ul>
-                                {{range .Skills}}
-                                <span class="hl">{{.}}</span>
-                                {{end}}
-                            </ul>
+            <!-- <hr> -->
+            <div class="row">
+                <div class="column">
+                    <div class="innercolumn">
+                        <h3>About</h3>
+                        <div class="container">
+                            <div class="contabout">
+                                <ul>
+                                    <p>
+                                    {{range .Tagline}}
+                                    <!-- <li>{{.}}</li> -->
+                                    {{.}}
+                                    {{end}}
+                                    </p>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!-- <div class="row"> -->
-                <!--     <div class="column"> -->
-                <div class="innercolumn">
-                    <h3>Tools</h3>
-                    <div class="container">
-                        <div class="contaitem">
-                            <ul>
-                                {{range .Tools}}
-                                <span class="hl">{{.}}</span>
-                                {{end}}
-                            </ul>
+                    <div class="innercolumn">
+                        <h3>Contacts</h3>
+                        <div class="container">
+                            <div class="innertable">
+                                <table>
+                                    {{ range .Contacts.Links }}
+                                    <tr>
+                                        <td>{{ .Name }}</td>
+                                        <td><a href="{{ .URL }}">{{ .Text }}</a></td>
+                                    </tr>
+                                    {{ end }}
+                                </table>
+                            </div>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="column">
+                            <div class="innercolumn">
+                                <h3>Education</h3>
+                                <ul>
+                                <div class="container">
+                                    <div class="containerbox">
+                                        {{range .Education}}
+                                        <!-- <ul> -->
+                                        <!--     <li>{{.Degree}} in {{.Major}}</li> -->
+                                        <!-- </ul> -->
+                                        <!-- <h4>{{.Degree}} in {{.Major}} from {{.Place.Name}}</h4> -->
+                                        <!-- <p><strong>From:</strong> {{.From}} <strong>To:</strong> {{.To}}</p> -->
+                                            {{.Degree}} in {{.Major}}
+                                            <ul>
+                                                <li>
+                                                    <strong>From:</strong> {{.From}} <strong>To:</strong> {{.To}}
+                                                </li>
+                                            </ul>
+                                        {{end}}
+                                    </div>
+                                </div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                    </div>
                 </div>
-                <!-- </div> -->
-                <!-- <div class="column"> -->
-                <div class="innercolumn">
-                    <h3>Programming</h3>
-                    <div class="container">
-                        <div class="contaitem">
-                            <ul>
-                                {{range .Programming}}
-                                <span class="hl">{{.}}</span>
-                                {{end}}
-                            </ul>
+                <div class="column">
+                    <div class="innercolumn">
+                        <h3>Skills</h3>
+                        <div class="container">
+                            <div class="contaitem">
+                                <ul>
+                                    {{range .Skills}}
+                                    <span class="hl">{{.}}</span>
+                                    {{end}}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="row"> -->
+                    <!--     <div class="column"> -->
+                    <div class="innercolumn">
+                        <h3>Tools</h3>
+                        <div class="container">
+                            <div class="contaitem">
+                                <ul>
+                                    {{range .Tools}}
+                                    <span class="hl">{{.}}</span>
+                                    {{end}}
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <!-- </div> -->
-                </div>
-                <div class="innercolumn">
-                    <h3>Languages</h3>
-                    <div class="container">
-                        <ul>
-                            {{range .Languages}}
-                            <span class="hl">{{.}}</span>
-                            {{end}}
-                        </ul>
+                    <!-- <div class="column"> -->
+                    <div class="innercolumn">
+                        <h3>Programming</h3>
+                        <div class="container">
+                            <div class="contaitem">
+                                <ul>
+                                    {{range .Programming}}
+                                    <span class="hl">{{.}}</span>
+                                    {{end}}
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- </div> -->
                     </div>
-                </div>
+                    <div class="innercolumn">
+                        <h3>Languages</h3>
+                        <div class="container">
+                            <ul>
+                                {{range .Languages}}
+                                <span class="hl">{{.}}</span>
+                                {{end}}
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
             <hr>
@@ -175,7 +163,6 @@
                                             </h4>
                                             <div class="popup-inner-content">
                                                 <p><strong>From:</strong> {{ $job.From }} &mdash; <strong>To:</strong> {{ $job.To }}</p>
-                                                <p><strong>Description:</strong></p>
                                                 <ul>
                                                     {{range $job.Description}}
                                                     <li>{{.}}</li>
@@ -211,17 +198,14 @@
                                                 <!-- <span class="close" data-popup="project-{{$i}}">&times;</span> -->
                                                 <span class="close" data-popup="project-{{$i}}">&times;</span>
                                             </h4>
-
                                             <div class="popup-inner-content">
-                                                <p><strong>Description:</strong></p>
                                                 <ul>
                                                     {{range $project.Description}}
                                                     <li>{{.}}</li>
                                                     {{end}}
                                                 </ul>
-                                                <a class="project-link" href="{{ $project.URL }}">View Project</a>
                                             </div>
-
+                                            <a class="project-link" href="{{ $project.URL }}">View Project</a>
                                         </div>
                                     </div>
                                 </div>
@@ -232,39 +216,39 @@
                     </div>
                 </div>
             </div>
-        <!-- <hr> -->
-        <div class="row">
-            <div class="column">
-                <div class="innercolumn">
-                    <!-- <details> -->
-                    <!--     <summary>Certifications</summary> -->
-                    <!--     <p> -->
-                    <!--         <div class="container"> -->
-                    <!--             <ul> -->
-                    <!--                 {{range .Achievements}} -->
-                    <!--                 <li><strong>{{.Name}}</strong> {{.Description}}</li> -->
-                    <!--                 {{end}} -->
-                    <!--             </ul> -->
-                    <!--         </div> -->
-                    <!--     </p> -->
-                    <!-- </details> -->
+            <hr>
 
-                <!-- norm -->
+            <!-- <div class="row"> -->
+            <!--     <div class="column"> -->
+            <!--     </div> -->
+            <!--     <div class="column"> -->
+            <!--     </div> -->
+            <!-- </div> -->
 
-                <!--     <h3>Certifications</h3> -->
-                <!--     <div class="container"> -->
-                <!--         <ul> -->
-                <!--             {{range .Achievements}} -->
-                <!--             <li><strong>{{.Name}}</strong> {{.Description}}</li> -->
-                <!--             {{end}} -->
-                <!--         </ul> -->
-                <!--     </div> -->
-                <!-- </div> -->
+            <!-- <div class="innercolumn"> -->
+            <!--     <h3>Certifications</h3> -->
+            <!--     <div class="container"> -->
+            <!--         <ul> -->
+            <!--             {{range .Achievements}} -->
+            <!--             <p> -->
+            <!--             <span class="hl"><strong>{{.Name}}</strong></span> {{.Description}} -->
+            <!--             </p> -->
+            <!--             {{end}} -->
+            <!--         </ul> -->
+            <!--     </div> -->
+            <!-- </div> -->
 
+            <div class="innercolumn">
+                <h3>Certifications</h3>
+                <div class="certcontainer">
+                    {{range .Achievements}}
+                    <div class="certcolumn">
+                        <p><span class="hl"><strong>{{.Name}}</strong>{{ if .Description }} &mdash;  {{.Description}} {{ end }}</span></p>
+                    </div>
+                    {{end}}
+                </div>
             </div>
-        <div class="column">
+
         </div>
-    </div>
-    <script src="./static/popup.js"></script> 
-</body>
+    </body>
 </html>
