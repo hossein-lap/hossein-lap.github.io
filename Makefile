@@ -6,3 +6,5 @@ tidy:
 
 build:
 	@go build .
+	@typst compile resume.typ
+	@./octave

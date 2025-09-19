@@ -122,7 +122,7 @@ func GenerateHTML(blog Blog) error {
 // main {{{
 func main() {
 	// Read the YAML file
-	data, err := os.ReadFile("configuration.yml")
+	data, err := os.ReadFile("resume.yml")
 	if err != nil {
 		log.Fatalf("// error: %v", err)
 	}

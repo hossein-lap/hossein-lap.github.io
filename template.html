@@ -5,11 +5,31 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./static/style.css" />
         <title>{{.Contacts.Name}}'s Resume</title>
+        <style>
+            /* body { */
+            /* } */
+            .headcontainer {
+                display: flex;
+                justify-content: space-between; /* Space between the two elements */
+                width: 100%; /* Full width for the container */
+            }
+        </style>
     </head>
     <body>
-        <h1>{{.Contacts.Name}}</h1>
-        <div class="subtitle">
-            <h2>{{.Position}}</h2>
+        <div class="headcontainer">
+            <div class="title">
+                <h1>{{.Contacts.Name}}</h1>
+                <div class="subtitle">
+                    <h2>{{.Position}}</h2>
+                </div>
+            </div>
+            <div class="getpdf">
+                <div class="hl">
+                    <p><a href="resume.pdf">
+                        Get the PDF version
+                    </a></p>
+                </div>
+            </div>
         </div>
         <!-- <hr> -->
         <div class="row">
