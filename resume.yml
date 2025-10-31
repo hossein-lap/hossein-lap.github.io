@@ -15,12 +15,15 @@ contacts:
   - name: Github
     text: "hossein-lap"
     url: https://github.com/hossein-lap/
-  - name: Resume
-    text: hossein-lap.github.io
-    url: https://hossein-lap.github.io
   - name: Blog
-    text: primejade.github.io
-    url: https://primejade.github.io
+    text: hossein-lap.github.io
+    url: https://hossein-lap.github.io/blog
+  # - name: Resume
+  #   text: hossein-lap.github.io
+  #   url: https://hossein-lap.github.io
+  # - name: Blog
+  #   text: primejade.github.io
+  #   url: https://primejade.github.io
 
 position: DevOps Engineer
 
